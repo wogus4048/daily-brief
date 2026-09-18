@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generatedAt": "2026-09-18T15:20:00+09:00",
+  "generatedAt": "2026-09-18T15:35:00+09:00",
   "contests": [
     {
       "id": "wanted-ai-championship-2026",
@@ -248,6 +248,239 @@
           "url": "https://www.dacon.io/competitions/official/236754/overview/schedule"
         }
       ]
+    },
+    {
+      "id": "daytona-hacksprint-seoul-2026",
+      "categoryLabel": "공모전 · 해커톤",
+      "icon": "⚡",
+      "title": "Daytona HackSprint Seoul",
+      "summary": "Daytona 샌드박스와 스폰서 인프라를 활용해 하루 안에 프로덕션급 AI 애플리케이션 MVP를 만드는 서울 현장 해커톤",
+      "description": "AI Builders와 Daytona가 서울에서 진행하는 하루짜리 실전형 해커톤입니다. 개발자·AI 엔지니어·창업가·학생이 참여할 수 있고, 혼자 참가하거나 최대 6명 팀으로 빌드할 수 있습니다. 등록은 현재 열려 있으며 호스트 승인 방식입니다.",
+      "dDay": "접수중",
+      "deadlineText": "정원 마감 전 · 09.19 개최",
+      "tags": [
+        "AI Agent",
+        "MCP",
+        "서울",
+        "혼자 참가 가능",
+        "크레딧"
+      ],
+      "period": "2026.09.19 · 13:00~18:00 KST",
+      "reward": "우승팀 스폰서 크레딧 제공. 모든 참가자에게 Daytona·Nosana 크레딧 제공",
+      "participation": "개발자·AI 엔지니어·창업가·학생. 혼자 참가 또는 최대 6인 팀",
+      "preStartup": "사업자등록 여부 제한 명시 없음",
+      "employment": "재직자 제한 명시 없음",
+      "businessRegistration": "신청 시 사업자등록 요구 없음",
+      "evaluation": "완성도 · 혁신성 · 실제 문제 해결 · 스폰서 제품 활용",
+      "aiSupport": "Daytona 샌드박스, Nosana GPU 등 스폰서 크레딧 제공",
+      "ideas": [
+        "MCP 도구를 안전한 Daytona 샌드박스에서 실행하는 사내 코딩 에이전트",
+        "실시간 장애 로그를 수집해 원인 분석과 수정 PR까지 만드는 운영 에이전트",
+        "브라우저·코드 실행·배포를 격리 환경에서 처리하는 자동화 에이전트"
+      ],
+      "links": [
+        {
+          "label": "공식 참가 페이지",
+          "url": "https://luma.com/daytonaseoul?locale=ko"
+        }
+      ]
+    },
+    {
+      "id": "habsida-hackathon-2026",
+      "categoryLabel": "공모전 · 해커톤",
+      "icon": "🛠️",
+      "title": "Habsida Hackathon 2026",
+      "summary": "직장인·프리랜서도 참가해 주말 동안 스타트업 아이디어를 검증하고 실제 제품을 만든 뒤 피칭하는 인천 해커톤",
+      "description": "학생뿐 아니라 직장인과 프리랜서도 참가 가능합니다. 혼자 신청한 경우 현장 팀빌딩 세션에서 팀을 구성하며 최종 팀은 3~5인입니다. 참가비는 1인 2만원이고 등록은 현재 열려 있습니다.",
+      "dDay": "접수중",
+      "deadlineText": "정원 마감 전 · 09.24 시작",
+      "tags": [
+        "스타트업",
+        "Vibe Coding",
+        "직장인 가능",
+        "혼자 신청 가능",
+        "인천"
+      ],
+      "period": "2026.09.24 11:00 ~ 09.25 15:00 KST",
+      "reward": "총 상금 250만원 · 1위 150만원 · 2위 70만원 · 3위 30만원",
+      "participation": "학생·직장인·프리랜서 등. 혼자 신청 가능, 현장에서 3~5인 팀 구성",
+      "preStartup": "사업자등록 요구 없음",
+      "employment": "직장인 참가 가능 명시",
+      "businessRegistration": "신청 시 사업자등록 요구 없음",
+      "evaluation": "스타트업 프로젝트 개발 후 최종 피칭",
+      "aiSupport": "Vibe Coding 강의와 현업 멘토링 제공",
+      "ideas": [
+        "현장 매칭·커뮤니티 문제를 빠르게 검증하는 모바일 MVP",
+        "개발자 업무의 반복 작업을 줄이는 소형 AI SaaS",
+        "실사용자 인터뷰를 바로 반영하는 주말형 B2B 자동화 도구"
+      ],
+      "links": [
+        {
+          "label": "공식 참가 페이지",
+          "url": "https://luma.com/cwaixvls"
+        }
+      ]
+    },
+    {
+      "id": "nebius-nvidia-global-ai-hackathon-2026",
+      "categoryLabel": "공모전 · 해커톤",
+      "icon": "🧠",
+      "title": "Nebius × NVIDIA Global AI Hackathon",
+      "summary": "NVIDIA 오픈소스 모델과 Nebius 인프라로 코딩 에이전트·앱·개인 AI·Physical AI를 만드는 글로벌 온라인 해커톤",
+      "description": "성년 개인 참가가 명시적으로 허용된 글로벌 온라인 해커톤입니다. 프로젝트는 Nebius Token Factory 또는 AI Cloud에서 실행되고 NVIDIA 오픈소스 모델을 사용해야 합니다.",
+      "dDay": "D-43",
+      "deadlineText": "10.31 02:00 KST",
+      "tags": [
+        "NVIDIA",
+        "Nemotron",
+        "AI Agent",
+        "개인 참가",
+        "온라인"
+      ],
+      "period": "제출 2026.08.26 ~ 10.30 10:00 PDT (한국시간 10.31 02:00)",
+      "reward": "총 현금 상금 $50,000",
+      "participation": "거주지 기준 성년 개인, 팀, 조직 참가 가능. 개인 단독 제출 가능",
+      "preStartup": "사업자등록과 무관한 개인 참가 가능",
+      "employment": "일반 재직자 제한 없음. 주최·운영 관련자 등 이해상충 대상 제외",
+      "businessRegistration": "개인 참가 시 사업자등록 요구 없음",
+      "evaluation": "기술 구현 · 디자인 · 잠재 영향 · 아이디어 품질 중심",
+      "aiSupport": "Nebius Builder Program을 통한 Token Factory·Tavily 등 크레딧 및 교육/오피스아워 제공",
+      "ideas": [
+        "Spring Boot 장애 로그를 분석하고 샌드박스에서 재현·패치까지 수행하는 코딩 에이전트",
+        "개인 메모·일정·문서를 연결해 장기 메모리와 도구 실행을 제공하는 Personal AI",
+        "Nemotron 기반 에이전트 워크플로우 관측·평가 대시보드"
+      ],
+      "links": [
+        {
+          "label": "Devpost 공식 페이지",
+          "url": "https://nebiusglobalaihackathon.devpost.com/"
+        },
+        {
+          "label": "공식 규칙",
+          "url": "https://nebiusglobalaihackathon.devpost.com/rules"
+        }
+      ]
+    },
+    {
+      "id": "amazon-developer-hackathon-2026",
+      "categoryLabel": "공모전 · 해커톤",
+      "icon": "📦",
+      "title": "Build, Ship, Shape: Amazon Developer Hackathon",
+      "summary": "Alexa+·Bee·Ring·Fire TV와 AWS를 활용해 실제 동작하는 앱·에이전트·MCP 서버를 만드는 글로벌 온라인 해커톤",
+      "description": "성년 개인 참가가 허용되는 글로벌 Devpost 해커톤입니다. Alexa+ 트랙에서는 MCP 서버를 직접 구현할 수 있고, AWS Builder 미니 챌린지는 Bedrock·AgentCore·Strands SDK·Kiro Crew 등도 활용할 수 있습니다.",
+      "dDay": "D-36",
+      "deadlineText": "10.24 04:00 KST",
+      "tags": [
+        "Amazon",
+        "AWS",
+        "MCP",
+        "AI Agent",
+        "개인 참가",
+        "온라인"
+      ],
+      "period": "제출 2026.08.31 ~ 10.23 12:00 PDT (한국시간 10.24 04:00)",
+      "reward": "현금 상금 $138,000 규모. AWS 크레딧 포함 전체 보상 가치는 약 $190K",
+      "participation": "거주지 기준 성년 개인, 팀, 조직 참가 가능. 개인 단독 제출 가능",
+      "preStartup": "사업자등록과 무관한 개인 참가 가능",
+      "employment": "일반 재직자 제한 없음. 주최·운영 관련자 등 제외",
+      "businessRegistration": "개인 참가 시 사업자등록 요구 없음",
+      "evaluation": "트랙별 구현 완성도·제품성·피드백·데모 등을 평가",
+      "aiSupport": "등록 참가자는 소진 전까지 $150 AWS Promotional Credits 신청 가능",
+      "ideas": [
+        "Alexa+에서 호출 가능한 개인 일정·업무 MCP 서버",
+        "AgentCore + Spring Boot API로 구성한 장기 실행 백엔드 에이전트",
+        "Kiro Crew를 활용해 테스트·문서·PR을 자동화하는 개발자 워크플로우"
+      ],
+      "links": [
+        {
+          "label": "Devpost 공식 페이지",
+          "url": "https://amazonappdev2026.devpost.com/"
+        },
+        {
+          "label": "공식 규칙",
+          "url": "https://amazonappdev2026.devpost.com/rules"
+        }
+      ]
+    },
+    {
+      "id": "opencv-ai-competition-2026",
+      "categoryLabel": "AI 경진대회",
+      "icon": "👁️",
+      "title": "OpenCV AI Competition 2026, powered by AWS",
+      "summary": "OpenCV 5와 AWS를 사용해 시각 정보를 이해하고 판단·행동하는 컴퓨터비전/Agentic Vision 시스템을 만드는 글로벌 온라인 대회",
+      "description": "OpenCV 5를 실질적으로 사용하고 AWS에서 의미 있는 구성요소를 실행하는 비전 AI 프로젝트를 제출하는 대회입니다. Agentic Vision 특별상 트랙도 별도로 운영됩니다.",
+      "dDay": "D-39",
+      "deadlineText": "10.27 15:45 KST",
+      "tags": [
+        "OpenCV",
+        "AWS",
+        "Computer Vision",
+        "Agentic Vision",
+        "온라인"
+      ],
+      "period": "최종 제출 2026.10.26 23:45 PDT (한국시간 10.27 15:45)",
+      "reward": "Overall·Special Awards 현금 최대 $12,000 + 클라우드 컴퓨트 지원 등",
+      "participation": "13세 이상 참가 가능. 팀 참가 시 대표자를 지정하며 개인 엔트리도 가능한 공개 Devpost 대회",
+      "preStartup": "사업자등록 요구 없음",
+      "employment": "주최·심사 직접 관련자 외 일반 재직자 제한 명시 없음",
+      "businessRegistration": "사업자등록 요구 없음",
+      "evaluation": "기술 구현 30% · 혁신 20% · 실사용 영향 20% · UX 10% · 문서/발표 10% · 클라우드/재현성 10%",
+      "aiSupport": "50개 팀에 팀당 $150 상당 AWS 클라우드 컴퓨트 지원",
+      "ideas": [
+        "TCG 카드·보드 상태를 카메라로 인식해 경기 진행을 보조하는 비전 에이전트",
+        "블랙박스/매장 CCTV 장면에서 이벤트를 탐지하고 설명하는 Agentic Vision",
+        "OpenCV + AWS로 모바일 카메라 입력을 분석하는 현장 점검 서비스"
+      ],
+      "links": [
+        {
+          "label": "Devpost 공식 페이지",
+          "url": "https://opencv26.devpost.com/"
+        },
+        {
+          "label": "공식 규칙",
+          "url": "https://opencv26.devpost.com/rules"
+        }
+      ]
+    },
+    {
+      "id": "busan-ai-startup-competition-2026",
+      "categoryLabel": "공모전 · 창업경진대회",
+      "icon": "🚀",
+      "title": "2026 AI 창업 경진대회",
+      "summary": "전국 예비·신규 창업팀이 부산 9대 전략산업 분야에서 AI 창업 아이디어를 제안하고 사업화 지원까지 받을 수 있는 경진대회",
+      "description": "전국 예비창업자와 설립 2년 이내 신규창업자가 2~4인 팀으로 참가할 수 있습니다. 예비창업자는 공고일 기준 사업자등록이 없어야 하며, 수상팀 중 협약 요건 충족팀에는 후속 사업화 지원이 제공됩니다.",
+      "dDay": "D-12",
+      "deadlineText": "09.30 18:00",
+      "tags": [
+        "AI 창업",
+        "예비창업자",
+        "전국",
+        "2~4인 팀",
+        "사업화"
+      ],
+      "period": "접수 2026.09.07 ~ 09.30 18:00 / 본선·시상 10.31",
+      "reward": "총 700만원 상당 생성형 AI 이용권 + 수상 6팀 대상 총 1억원 규모 사업화 지원(최대 3,000만원)",
+      "participation": "전국 예비·신규창업자 2~4인 팀. 팀원 전원이 요건 충족 필요",
+      "preStartup": "예비창업자는 공고일 기준 개인·법인 사업자등록이 없어야 함",
+      "employment": "공식 안내에서 재직자 제한은 별도 확인 필요",
+      "businessRegistration": "예비창업자는 공고일 기준 미보유. 후속 사업화 협약은 별도 요건 충족 필요",
+      "evaluation": "예선 서류평가 → 오리엔테이션 → 본선 발표평가 및 시상",
+      "aiSupport": "수상 상금이 생성형 AI 이용권 형태이며, 후속 시제품·서비스 제작 사업화 지원 가능",
+      "ideas": [
+        "AI 기반 금융 규정·상품 설명 자동화 서비스",
+        "지역 관광·문화 데이터를 결합한 개인화 AI 일정 생성 서비스",
+        "산업 현장 문서·장애 로그를 검색하고 조치안을 제시하는 RAG 서비스"
+      ],
+      "links": [
+        {
+          "label": "부산정보산업진흥원 공식 공고",
+          "url": "https://bipa.kr/board/business/view?seq=85338"
+        },
+        {
+          "label": "접수 홈페이지",
+          "url": "https://ai-startup-competition.kr"
+        }
+      ]
     }
   ],
   "aiNews": [
@@ -327,52 +560,144 @@
       ]
     },
     {
-      "id": "chatgpt-images-2-5-2026-09",
+      "id": "anthropic-rd-automation-metrics-2026-09-17",
       "categoryLabel": "AI 뉴스",
-      "icon": "🎨",
-      "title": "ChatGPT Images 2.5 출시",
-      "summary": "OpenAI가 참조 이미지와 스케치를 더 잘 반영하고 결과물을 더 정교하게 다듬는 ChatGPT Images 2.5를 공개했습니다.",
-      "description": "아이디어, 스케치, 레퍼런스 사진을 바탕으로 더 개인화되고 완성도 높은 이미지를 만들도록 개선된 이미지 생성 모델입니다. 디자인 목업이나 비주얼 탐색 작업에서 반복 수정 품질이 중요한 업데이트입니다.",
-      "why": "앱·웹 디자인 초기 단계에서 와이어프레임과 무드보드를 빠르게 시각화하고, 같은 스타일을 유지하며 반복 수정하는 작업에 활용하기 좋습니다.",
-      "updatedAgo": "지난주",
+      "icon": "📊",
+      "title": "Anthropic, 내부 AI R&D 자동화 수준과 3만 개 에이전트 운영 지표 공개",
+      "summary": "Anthropic이 Claude가 AI R&D 업무의 26%를 주도하고, 내부 주요 플랫폼에서 약 3만 개의 에이전트가 동시에 연구·엔지니어링 작업을 수행한다고 공개했습니다.",
+      "description": "Anthropic은 AI가 차세대 AI 개발에 얼마나 관여하는지 측정하는 R&D Automation Index와 에이전트 감시 지표를 공개했습니다. 2026년 8월 기준 Claude가 R&D 업무의 26%를 'lead' 수준으로 수행하며, 90% 이상은 최소 협업 수준입니다. 내부 에이전트 행동은 온라인/오프라인 모니터를 거치도록 설계되어 있습니다.",
+      "why": "멀티에이전트를 실제 조직에 배치할 때 단순 성공률보다 에이전트별 ID, 행동 모니터링 커버리지, 검토 지연시간, 차단·에스컬레이션 비율을 운영지표로 삼는 접근이 구체적으로 공개됐습니다.",
+      "updatedAgo": "어제",
       "tags": [
-        "OpenAI",
-        "Image",
-        "Design"
+        "Anthropic",
+        "Multi-Agent",
+        "Observability",
+        "AI R&D"
       ],
       "ideas": [
-        "앱 홈 화면 시안을 여러 해상도로 빠르게 비교하는 디자인 실험",
-        "서비스 카드뉴스·썸네일의 스타일 가이드 후보를 이미지로 먼저 검증"
+        "에이전트마다 영구 ID를 부여하고 모든 도구 호출·메시지를 연결하는 실행 이력 설계",
+        "온라인 차단 규칙과 사후 오프라인 리뷰를 분리한 에이전트 관측 시스템",
+        "MCP 도구별 호출량·차단률·에스컬레이션률 대시보드 만들기"
       ],
       "links": [
         {
-          "label": "OpenAI 공식 발표",
-          "url": "https://openai.com/index/introducing-chatgpt-images-2-5/"
+          "label": "Anthropic 공식 글",
+          "url": "https://www.anthropic.com/institute/measuring-pace-of-ai-development"
         }
       ]
     },
     {
-      "id": "anthropic-threat-intelligence-2026-09",
+      "id": "paper2agent-nature-2026-09-16",
       "categoryLabel": "AI 뉴스",
-      "icon": "🔐",
-      "title": "Anthropic, 2026년 9월 AI 악용 위협 보고서 공개",
-      "summary": "Claude가 사이버공격·감시·사기·불법 증류 등에 악용된 실제 사례와 대응 내용을 정리한 최신 위협 인텔리전스 보고서가 공개됐습니다.",
-      "description": "Anthropic은 2025년 말부터 2026년 8월까지 탐지·차단한 악용 사례를 여러 범주로 공개했습니다. 특히 AI가 단순 코드 보조를 넘어 공격 도구 제작과 장기 작업 조율에 사용되는 흐름을 설명합니다.",
-      "why": "AI 에이전트를 서비스에 넣는 개발자라면 프롬프트 필터만으로 충분하지 않고 계정·도구 권한·행동 로그·비정상 사용 탐지가 함께 필요하다는 점을 보여줍니다.",
-      "updatedAgo": "이번 주",
+      "icon": "📄",
+      "title": "Stanford Paper2Agent, 논문을 실행 가능한 MCP 에이전트로 변환",
+      "summary": "Paper2Agent가 논문·코드·데이터를 분석해 검증된 MCP 서버와 AI 에이전트로 자동 변환하는 방식을 Nature에 공개했고 코드도 오픈소스로 제공했습니다.",
+      "description": "Paper2Agent는 여러 서브에이전트가 논문과 코드베이스를 분석하고 실행환경을 만들며, 원 논문의 결과를 재현하는 테스트를 통과한 기능만 MCP 도구로 패키징합니다. 이렇게 만든 MCP는 Claude Code나 Gemini CLI 같은 에이전트에서 자연어로 호출할 수 있습니다.",
+      "why": "단순 PDF RAG가 아니라 문서 속 '방법' 자체를 실행 가능한 도구로 바꾼다는 점이 핵심입니다. 사내 운영문서·분석 파이프라인·연구 코드를 agent-native 도구로 바꾸는 설계에 직접 참고할 만합니다.",
+      "updatedAgo": "2일 전",
       "tags": [
-        "Claude",
-        "Cybersecurity",
-        "Threat Intel"
+        "MCP",
+        "Open Source",
+        "Agent",
+        "Stanford",
+        "Research"
       ],
       "ideas": [
-        "AI 기능의 고위험 도구 호출을 별도 승인하도록 만드는 권한 계층",
-        "비정상 반복 요청과 대량 자동화를 탐지하는 사용량 기반 차단 규칙"
+        "사내 장애 대응 런북과 스크립트를 MCP 도구로 변환해 운영 에이전트에 연결",
+        "논문/오픈소스 저장소의 예제를 자동 실행·검증한 뒤 RAG 답변이 아니라 실제 함수를 호출",
+        "GitHub 프로젝트 문서와 샘플 코드를 읽어 재현 가능한 MCP 서버를 생성하는 PoC"
       ],
       "links": [
         {
-          "label": "Anthropic 공식 보고서",
-          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+          "label": "Stanford Medicine 공식 소개",
+          "url": "https://med.stanford.edu/news/all-news/2026/09/ai-agents-talk.html"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/jmiao24/Paper2Agent"
+        }
+      ]
+    },
+    {
+      "id": "ibm-engineering-ai-hub-1-4-2026-09-17",
+      "categoryLabel": "AI 뉴스",
+      "icon": "🧪",
+      "title": "IBM Engineering AI Hub 1.4, 요구사항에서 테스트 케이스를 만드는 AI 에이전트 추가",
+      "summary": "IBM이 Engineering AI Hub 1.4를 출시하며 요구사항에서 테스트 케이스·스크립트를 생성하는 에이전트와 확장된 MCP 도구 카탈로그를 추가했습니다.",
+      "description": "새 버전은 엔지니어링 요구사항을 기반으로 사전조건·사후조건을 포함한 테스트 초안을 생성하고, 기존 MCP 도구가 프로젝트 구성 정보를 이해하도록 확장했습니다. 모델 제공자 선택 폭과 관리·배포 제어도 강화했습니다.",
+      "why": "코딩 에이전트가 코드를 쓰는 단계에서 더 나아가 요구사항→테스트→검증으로 이어지는 소프트웨어 생명주기 전체를 연결하는 방향이 뚜렷합니다.",
+      "updatedAgo": "어제",
+      "tags": [
+        "IBM",
+        "MCP",
+        "Testing",
+        "Engineering",
+        "Agent"
+      ],
+      "ideas": [
+        "API 요구사항 문서에서 REST 테스트 시나리오와 엣지케이스 자동 생성",
+        "Jira/문서 요구사항과 GitHub 테스트 코드를 MCP로 연결해 추적성 확보",
+        "변경된 요구사항이 어떤 테스트에 영향을 주는지 자동 분석하는 백엔드 도구"
+      ],
+      "links": [
+        {
+          "label": "IBM 공식 발표",
+          "url": "https://www.ibm.com/new/announcements/ibm-engineering-ai-hub-1-4-expands-ai-assisted-engineering"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-biomolecular-modeling-2026-09-17",
+      "categoryLabel": "AI 뉴스",
+      "icon": "🧬",
+      "title": "Claude, 오픈소스 바이오 모델 30여 개를 평균 약 4배 최적화",
+      "summary": "Anthropic이 Claude를 이용해 과학자들이 쓰는 오픈소스 생체분자 모델 30여 개의 속도·메모리를 개선하고 최적화 코드를 공개했습니다.",
+      "description": "Claude가 약 4주 동안 30개가 넘는 오픈소스 모델을 최적화해 평균 약 4배 속도를 높였고, 1개 NVIDIA GPU 노드에서 1만 토큰이 넘는 대형 생체분자 시스템을 처리하는 저메모리 모드도 만들었습니다.",
+      "why": "AI 코딩 에이전트가 단순 기능 구현이 아니라 실제 고성능 과학 코드 최적화와 메모리 절감까지 수행한 구체적 사례입니다.",
+      "updatedAgo": "어제",
+      "tags": [
+        "Anthropic",
+        "Coding Agent",
+        "Optimization",
+        "Open Source",
+        "Science"
+      ],
+      "ideas": [
+        "오픈소스 라이브러리의 병목 구간을 에이전트가 프로파일링하고 성능 패치까지 제안하는 실험",
+        "백엔드 배치 작업의 CPU·메모리 병목을 자동 탐색하고 벤치마크 PR 생성",
+        "성능 개선 전후를 재현 가능한 benchmark suite로 자동 검증"
+      ],
+      "links": [
+        {
+          "label": "Anthropic 공식 연구",
+          "url": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling"
+        }
+      ]
+    },
+    {
+      "id": "mcpa-certification-2026-09-14",
+      "categoryLabel": "AI 뉴스",
+      "icon": "🔌",
+      "title": "Linux Foundation, 첫 공식 MCP 자격증 MCPA 공개",
+      "summary": "Agentic AI Foundation이 MCP의 구조·보안·구현 역량을 검증하는 벤더 중립 자격증 Model Context Protocol Associate를 공개했습니다.",
+      "description": "MCPA는 MCP Fundamentals, Architecture & Components, Interactions & Execution, Security & Governance, Use Cases & Ecosystem의 다섯 영역을 다루는 첫 공식 MCP 자격 인증입니다.",
+      "why": "MCP가 실험적 연결 규격을 넘어 플랫폼 엔지니어링과 AI 거버넌스 영역의 정식 기술 스택으로 자리잡고 있다는 신호입니다.",
+      "updatedAgo": "4일 전",
+      "tags": [
+        "MCP",
+        "Linux Foundation",
+        "Agentic AI",
+        "Security"
+      ],
+      "ideas": [
+        "MCPA 시험 범위를 기준으로 사내 MCP 서버 보안 체크리스트 만들기",
+        "인증·권한·도구 실행·감사로그를 포함한 MCP 서버 샘플 구현",
+        "기존 Spring Boot API를 MCP 도구로 노출할 때 필요한 보안 경계 정리"
+      ],
+      "links": [
+        {
+          "label": "Linux Foundation 공식 발표",
+          "url": "https://www.linuxfoundation.org/press/agentic-ai-foundation-launches-mcpa-certification-to-validate-mcp-expertise"
         }
       ]
     }
