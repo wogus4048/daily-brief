@@ -29,6 +29,14 @@ function isWithinWeek(item) {
   return n !== null && n >= 0 && n <= 7;
 }
 
+function urgencyClass(item) {
+  const n = ddayNumber(item);
+  if (n === 0) return "today";
+  if (n !== null && n <= 3) return "urgent";
+  if (n !== null && n <= 7) return "soon";
+  return "normal";
+}
+
 async function loadData() {
   const date = requestedDate();
   const path = date ? "data/archive/" + date + ".json" : "data/latest.json";
@@ -116,9 +124,10 @@ function renderOpportunityList(sel, items, type) {
   }
 
   el.innerHTML = items.map((item) => {
-    const status = item.dDay ? '<span class="status-badge">' + esc(item.dDay) + '</span>' : "";
-    const category = '<span class="soft-badge">' + esc(item.categoryLabel || (type === "support" ? "지원사업" : "공모전·해커톤")) + "</span>";
-    const deadline = item.deadlineText ? '<span class="soft-badge">마감 ' + esc(item.deadlineText) + "</span>" : "";
+    const urgency = urgencyClass(item);
+    const status = item.dDay ? '<span class="status-badge status-' + urgency + '">' + esc(item.dDay) + '</span>' : "";
+    const category = '<span class="soft-badge category-badge category-' + type + '">' + esc(item.categoryLabel || (type === "support" ? "지원사업" : "공모전·해커톤")) + "</span>";
+    const deadline = item.deadlineText ? '<span class="soft-badge deadline-badge">마감 ' + esc(item.deadlineText) + "</span>" : "";
     const rewardLabel = type === "support" ? "지원 / 혜택" : "상금 / 보상";
     const participationLabel = type === "support" ? "지원대상" : "참가";
     const conditionLabel = type === "support" ? "핵심 조건" : "예비창업자";
@@ -127,15 +136,15 @@ function renderOpportunityList(sel, items, type) {
     const condition = cut(item.preStartup || item.businessRegistration || "확인 필요", 46);
     const tags = (item.tags || []).slice(0, 3).map((t) => '<span class="tag">' + esc(t) + "</span>").join("");
 
-    return '<article class="opportunity-card" data-id="' + esc(item.id) + '">' +
+    return '<article class="opportunity-card type-' + type + ' tone-' + urgency + '" data-id="' + esc(item.id) + '">' +
       '<div class="opportunity-top"><div class="opportunity-badges">' + status + category + deadline + "</div>" +
       "<h3>" + esc(item.title) + "</h3>" +
       '<p class="opportunity-summary">' + esc(item.summary || "") + "</p></div>" +
       '<div class="key-facts">' +
-      '<div class="fact"><b>마감</b><span>' + esc(item.deadlineText || item.dDay || "확인 필요") + "</span></div>" +
-      '<div class="fact"><b>' + rewardLabel + "</b><span>" + esc(reward) + "</span></div>" +
-      '<div class="fact"><b>' + participationLabel + "</b><span>" + esc(participation) + "</span></div>" +
-      '<div class="fact"><b>' + conditionLabel + "</b><span>" + esc(condition) + "</span></div>" +
+      '<div class="fact fact-deadline"><b>마감</b><span>' + esc(item.deadlineText || item.dDay || "확인 필요") + "</span></div>" +
+      '<div class="fact fact-reward"><b>' + rewardLabel + "</b><span>" + esc(reward) + "</span></div>" +
+      '<div class="fact fact-participation"><b>' + participationLabel + "</b><span>" + esc(participation) + "</span></div>" +
+      '<div class="fact fact-condition"><b>' + conditionLabel + "</b><span>" + esc(condition) + "</span></div>" +
       "</div>" +
       '<div class="card-footer"><div class="tag-row">' + tags + '</div><button type="button" class="detail-button">상세 보기</button></div>' +
       "</article>";
@@ -156,7 +165,7 @@ function renderNewsList(sel, items) {
   el.innerHTML = items.map((item) => {
     const why = item.description ? '<div class="news-why"><b>왜 봐야 해?</b><br>' + esc(cut(item.description, 120)) + "</div>" : "";
     const tags = (item.tags || []).slice(0, 3).map((t) => '<span class="tag">' + esc(t) + "</span>").join("");
-    return '<article class="news-card" data-id="' + esc(item.id) + '">' +
+    return '<article class="news-card type-ai" data-id="' + esc(item.id) + '">' +
       '<span class="news-time">' + esc(item.updatedAgo || "오늘") + "</span>" +
       "<h3>" + esc(item.title) + "</h3>" +
       "<p>" + esc(item.summary || "") + "</p>" +
@@ -216,8 +225,8 @@ function openNewsDetail(item) {
   ).join("");
 
   $("#dialogContent").innerHTML =
-    '<div class="detail-shell">' +
-    '<section class="detail-hero"><div class="detail-badges"><span class="soft-badge">AI NEWS</span>' +
+    '<div class="detail-shell detail-ai">' +
+    '<section class="detail-hero"><div class="detail-badges"><span class="soft-badge category-badge category-ai">AI NEWS</span>' +
     (item.updatedAgo ? '<span class="soft-badge">' + esc(item.updatedAgo) + "</span>" : "") +
     "</div><h2>" + esc(item.title) + '</h2><p class="detail-summary">' + esc(item.summary || "") + "</p></section>" +
     '<section class="detail-section"><h3>무슨 일이야?</h3><div class="detail-box"><span>' + esc(item.description || item.summary || "") + "</span></div></section>" +
@@ -242,6 +251,8 @@ function openOpportunityDetail(item) {
 
   const ideas = item.ideas || [];
   const links = item.links || [];
+  const urgency = urgencyClass(item);
+  const itemType = String(item.categoryLabel || "").includes("지원사업") ? "support" : "contest";
 
   const eligibilityHtml = eligibility.length
     ? eligibility.map((x) => '<div class="detail-box"><b>' + esc(x[0]) + "</b><span>" + esc(x[1]) + "</span></div>").join("")
@@ -262,17 +273,17 @@ function openOpportunityDetail(item) {
   ).join("");
 
   $("#dialogContent").innerHTML =
-    '<div class="detail-shell">' +
+    '<div class="detail-shell detail-' + itemType + ' tone-' + urgency + '">' +
     '<section class="detail-hero"><div class="detail-badges">' +
-    (item.dDay ? '<span class="status-badge">' + esc(item.dDay) + "</span>" : "") +
-    '<span class="soft-badge">' + esc(item.categoryLabel || "브리핑") + "</span>" +
+    (item.dDay ? '<span class="status-badge status-' + urgency + '">' + esc(item.dDay) + "</span>" : "") +
+    '<span class="soft-badge category-badge category-' + itemType + '">' + esc(item.categoryLabel || "브리핑") + "</span>" +
     (item.deadlineText ? '<span class="soft-badge">마감 ' + esc(item.deadlineText) + "</span>" : "") +
     "</div><h2>" + esc(item.title) + '</h2><p class="detail-summary">' + esc(item.description || item.summary || "") + "</p>" +
     '<div class="decision-grid">' +
-    '<div class="decision-card"><b>마감</b><span>' + esc(item.deadlineText || item.dDay || "확인 필요") + "</span></div>" +
-    '<div class="decision-card"><b>상금 / 지원</b><span>' + esc(cut(item.reward || "확인 필요", 64)) + "</span></div>" +
-    '<div class="decision-card"><b>참가 / 대상</b><span>' + esc(cut(item.participation || "확인 필요", 54)) + "</span></div>" +
-    '<div class="decision-card"><b>핵심 자격</b><span>' + esc(cut(item.preStartup || item.businessRegistration || "확인 필요", 54)) + "</span></div>" +
+    '<div class="decision-card decision-deadline"><b>마감</b><span>' + esc(item.deadlineText || item.dDay || "확인 필요") + "</span></div>" +
+    '<div class="decision-card decision-reward"><b>상금 / 지원</b><span>' + esc(cut(item.reward || "확인 필요", 64)) + "</span></div>" +
+    '<div class="decision-card decision-participation"><b>참가 / 대상</b><span>' + esc(cut(item.participation || "확인 필요", 54)) + "</span></div>" +
+    '<div class="decision-card decision-condition"><b>핵심 자격</b><span>' + esc(cut(item.preStartup || item.businessRegistration || "확인 필요", 54)) + "</span></div>" +
     "</div></section>" +
     '<section class="detail-section"><h3>내가 지원 가능한지</h3><p class="section-note">재직·겸업과 사업자 조건을 먼저 확인하세요.</p><div class="detail-grid">' + eligibilityHtml + "</div></section>" +
     '<section class="detail-section"><h3>진행 방식과 지원</h3><div class="detail-grid">' + processHtml + "</div></section>" +
