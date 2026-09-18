@@ -755,3 +755,321 @@ dialog::backdrop{
   .section-heading{display:block}
   .section-count{display:inline-block;margin-top:12px}
 }
+
+
+/* semantic color system — stronger hierarchy */
+:root{
+  --purple-strong:#6757f5;
+  --purple-border:#d9d3ff;
+  --purple-tint:#f5f2ff;
+  --red-strong:#f0445e;
+  --red-border:#ffcbd3;
+  --red-tint:#fff2f4;
+  --orange-strong:#f08a2b;
+  --orange-border:#ffd7b0;
+  --orange-tint:#fff6ec;
+  --amber-strong:#d99a1e;
+  --amber-border:#f5dfaa;
+  --amber-tint:#fff9ea;
+  --blue-strong:#2f7eea;
+  --blue-border:#cfe2ff;
+  --blue-tint:#f1f7ff;
+  --green-strong:#1fa768;
+  --green-border:#c7ead8;
+  --green-tint:#f0fbf5;
+  --cyan-strong:#158aa3;
+  --cyan-tint:#eefbfe;
+}
+
+/* section identity */
+#contests .section-kicker{color:var(--purple-strong)}
+#support .section-kicker{color:var(--green-strong)}
+#ai-news .section-kicker{color:var(--blue-strong)}
+#contests .section-heading h2{color:#30266d}
+#support .section-heading h2{color:#175d41}
+#ai-news .section-heading h2{color:#174f98}
+
+/* cards: stronger separation */
+.opportunity-card{
+  position:relative;
+  border:1px solid #e4e8f1;
+  box-shadow:0 8px 24px rgba(37,50,92,.07);
+}
+.opportunity-card::before{
+  content:"";
+  display:block;
+  height:6px;
+  background:var(--purple-strong);
+}
+.opportunity-card.type-support::before{background:var(--green-strong)}
+.opportunity-card.type-contest .opportunity-top{
+  background:linear-gradient(180deg,#fbfaff 0%,#fff 100%);
+}
+.opportunity-card.type-support .opportunity-top{
+  background:linear-gradient(180deg,#f6fdf9 0%,#fff 100%);
+}
+.opportunity-card.tone-today{
+  border-color:var(--red-border);
+  box-shadow:0 10px 28px rgba(240,68,94,.12);
+}
+.opportunity-card.tone-today::before{background:var(--red-strong)}
+.opportunity-card.tone-urgent{
+  border-color:var(--orange-border);
+  box-shadow:0 10px 26px rgba(240,138,43,.10);
+}
+.opportunity-card.tone-urgent::before{background:var(--orange-strong)}
+.opportunity-card.tone-soon{
+  border-color:var(--amber-border);
+}
+.opportunity-card.tone-soon::before{background:var(--amber-strong)}
+
+/* badges */
+.status-badge{
+  box-shadow:inset 0 0 0 1px currentColor;
+  background:#fff;
+}
+.status-today{
+  background:var(--red-strong);
+  color:#fff;
+  box-shadow:none;
+}
+.status-urgent{
+  background:var(--orange-strong);
+  color:#fff;
+  box-shadow:none;
+}
+.status-soon{
+  background:var(--amber-tint);
+  color:#a86f00;
+  box-shadow:inset 0 0 0 1px #efd18d;
+}
+.status-normal{
+  background:var(--purple-tint);
+  color:#6552d9;
+  box-shadow:inset 0 0 0 1px var(--purple-border);
+}
+.category-badge{
+  font-weight:900;
+  box-shadow:inset 0 0 0 1px transparent;
+}
+.category-contest{
+  background:var(--purple-tint);
+  color:#5c4bd2;
+  box-shadow:inset 0 0 0 1px var(--purple-border);
+}
+.category-support{
+  background:var(--green-tint);
+  color:#188655;
+  box-shadow:inset 0 0 0 1px var(--green-border);
+}
+.category-ai{
+  background:var(--blue-tint);
+  color:#2668c7;
+  box-shadow:inset 0 0 0 1px var(--blue-border);
+}
+.deadline-badge{
+  background:#f3f5f9;
+  color:#56627a;
+  box-shadow:inset 0 0 0 1px #e3e7ef;
+}
+
+/* fact boxes: meaning by color */
+.fact{
+  border:1px solid transparent;
+  transition:.15s ease;
+}
+.fact-deadline{
+  background:var(--red-tint);
+  border-color:#ffe0e5;
+}
+.fact-deadline b{color:#d93d55}
+.fact-deadline span{color:#8e2637}
+.fact-reward{
+  background:var(--purple-tint);
+  border-color:#e7e0ff;
+}
+.fact-reward b{color:#6955d8}
+.fact-reward span{color:#3b2d82}
+.fact-participation{
+  background:var(--blue-tint);
+  border-color:#dceaff;
+}
+.fact-participation b{color:#2d73d5}
+.fact-participation span{color:#214f91}
+.fact-condition{
+  background:var(--green-tint);
+  border-color:#d9f0e4;
+}
+.fact-condition b{color:#21945f}
+.fact-condition span{color:#1c6547}
+.type-support .fact-reward{
+  background:#ecfbf4;
+  border-color:#d0efdf;
+}
+.type-support .fact-reward b{color:#1b9660}
+.type-support .fact-reward span{color:#175f43}
+
+/* card typography and actions */
+.opportunity-card h3{color:#101d3f}
+.opportunity-summary{color:#60708f}
+.detail-button{
+  background:linear-gradient(135deg,#6557f2,#7b67ff);
+  box-shadow:0 7px 16px rgba(89,72,221,.22);
+}
+.type-support .detail-button{
+  background:linear-gradient(135deg,#20a568,#2cba79);
+  box-shadow:0 7px 16px rgba(32,165,104,.20);
+}
+.tag{
+  background:#eef1f7;
+  color:#4f607e;
+  border:1px solid #e2e7f0;
+}
+.type-contest .tag:nth-child(1){
+  background:#f1eeff;color:#5e4dd0;border-color:#ddd6ff;
+}
+.type-support .tag:nth-child(1){
+  background:#eefaf4;color:#198657;border-color:#d3eddf;
+}
+
+/* AI cards */
+.news-card{
+  position:relative;
+  overflow:hidden;
+  border-color:#dce8f8;
+  background:linear-gradient(180deg,#fff 0%,#f8fbff 100%);
+  box-shadow:0 8px 22px rgba(47,126,234,.07);
+}
+.news-card::before{
+  content:"";
+  position:absolute;
+  left:0;top:0;right:0;
+  height:5px;
+  background:linear-gradient(90deg,#2f7eea,#55a6ff);
+}
+.news-card .news-time{
+  color:#2d72cb;
+  font-weight:900;
+}
+.news-card h3{color:#123c74}
+.news-card .news-why{
+  background:linear-gradient(135deg,#edf5ff,#f4f9ff);
+  border:1px solid #d8e8ff;
+  color:#34577f;
+}
+.news-card .news-why b{color:#2168bb}
+.news-card .tag{
+  background:#edf5ff;
+  color:#2f6bb6;
+  border-color:#d9e8fb;
+}
+
+/* detail modal: same visual language */
+.detail-shell.detail-contest .detail-hero{
+  background:linear-gradient(145deg,#fff 0%,#f5f2ff 100%);
+  border-top:7px solid var(--purple-strong);
+}
+.detail-shell.detail-support .detail-hero{
+  background:linear-gradient(145deg,#fff 0%,#effbf5 100%);
+  border-top:7px solid var(--green-strong);
+}
+.detail-shell.detail-ai .detail-hero{
+  background:linear-gradient(145deg,#fff 0%,#eef6ff 100%);
+  border-top:7px solid var(--blue-strong);
+}
+.detail-shell.tone-today .detail-hero{border-top-color:var(--red-strong)}
+.detail-shell.tone-urgent .detail-hero{border-top-color:var(--orange-strong)}
+.detail-shell.tone-soon .detail-hero{border-top-color:var(--amber-strong)}
+
+.decision-card{
+  border-width:1px;
+  box-shadow:0 4px 12px rgba(37,50,92,.04);
+}
+.decision-deadline{
+  background:var(--red-tint);
+  border-color:#ffe0e5;
+}
+.decision-deadline b{color:#d53e55}
+.decision-deadline span{color:#8d2637}
+.decision-reward{
+  background:var(--purple-tint);
+  border-color:#e4ddff;
+}
+.decision-reward b{color:#6854d5}
+.decision-reward span{color:#3b2d82}
+.decision-participation{
+  background:var(--blue-tint);
+  border-color:#dbe9ff;
+}
+.decision-participation b{color:#2b72d2}
+.decision-participation span{color:#204e8d}
+.decision-condition{
+  background:var(--green-tint);
+  border-color:#d8efE3;
+}
+.decision-condition b{color:#1f925d}
+.decision-condition span{color:#1b6445}
+
+.detail-support .decision-reward{
+  background:#ecfbf4;
+  border-color:#cfeede;
+}
+.detail-support .decision-reward b{color:#1a955e}
+.detail-support .decision-reward span{color:#165d40}
+
+.detail-box{
+  background:#fbfcff;
+  border-color:#e3e8f1;
+}
+.detail-box b{color:#4f5f7d}
+.idea-card{
+  background:linear-gradient(145deg,#f2efff,#faf9ff);
+  border-color:#ddd6ff;
+}
+.idea-card strong{color:#5e4bd3}
+.detail-support .idea-card{
+  background:linear-gradient(145deg,#eefaf4,#fbfffd);
+  border-color:#d3eddf;
+}
+.detail-support .idea-card strong{color:#198657}
+.detail-ai .idea-card{
+  background:linear-gradient(145deg,#eef6ff,#fbfdff);
+  border-color:#d8e8ff;
+}
+.detail-ai .idea-card strong{color:#246bc2}
+
+/* summary cards more vivid */
+.summary-card{
+  border-width:1px;
+  box-shadow:0 7px 20px rgba(34,49,91,.06);
+}
+.summary-card.urgent{
+  background:linear-gradient(145deg,#fff7f8,#ffeef1);
+  border-color:#ffd6dd;
+}
+.summary-card.week{
+  background:linear-gradient(145deg,#fffaf3,#fff1dd);
+  border-color:#ffe0b7;
+}
+.summary-card.opportunity{
+  background:linear-gradient(145deg,#faf8ff,#efebff);
+  border-color:#ddd6ff;
+}
+.summary-card.support-summary{
+  background:linear-gradient(145deg,#f7fdf9,#eaf9f1);
+  border-color:#d1eedf;
+}
+.summary-card .summary-label{color:#465675}
+.summary-card small{color:#65728d}
+
+/* hover clarity */
+.opportunity-card:hover .fact,
+.news-card:hover .news-why{
+  filter:saturate(1.08);
+}
+.opportunity-card:hover h3,
+.news-card:hover h3{
+  color:#4d43c6;
+}
+.type-support:hover h3{color:#158153}
+.type-ai:hover h3{color:#2069bd}
