@@ -42,3 +42,20 @@ The single active `daily-brief 매일 갱신` automation owns the full daily dat
 - Commit the completed snapshot to `main` using `Update daily brief for YYYY-MM-DD` or another clear daily-refresh message.
 - Every push to `main` triggers `.github/workflows/pages.yml`, which validates and redeploys GitHub Pages.
 - Do not send Slack messages for normal refreshes. Report only refresh/deployment failures when user attention is required.
+
+
+## Continuity and safety
+- Preserve a stable `id` for the same opportunity/news item across days.
+- Every item may carry `firstSeenDate` (`YYYY-MM-DD`). Set it only when the item is first added; never reset it on later days.
+- Existing valid opportunities/support items must survive a day where discovery/search misses them. Re-verify them against the official source and remove only when registration is closed, the deadline has passed, or eligibility no longer matches.
+- If broad web research partially fails, official pages are unavailable, or a connector/search step errors, do not replace a healthy existing section with an empty or obviously incomplete section. Preserve previously verified active items, retry what can be retried, and fail safely.
+- AI news is allowed to rotate more aggressively because freshness matters, but duplicate stories should retain a stable id when they are genuine continuations of the same release/topic.
+
+## Today counts
+- Home section labels such as "오늘 신규 N건" count items whose `firstSeenDate` equals the snapshot `date`.
+- Total active items and newly discovered-today items are different concepts; do not derive "오늘 신규" from the whole active array length.
+
+## Deployment verification
+- After committing the final snapshot, verify that the GitHub Pages workflow validates and deploys successfully when tool access permits.
+- A successful commit alone is not equivalent to a successful site refresh.
+- If validation or deployment fails, keep the committed data intact, identify the failing stage, and report the failure rather than claiming the site is updated.
