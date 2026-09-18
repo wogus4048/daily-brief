@@ -1188,3 +1188,29 @@ body{
     font-size:14px;
   }
 }
+
+
+/* Section counts live next to the section title */
+.section-title-line{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.section-title-line h2{
+  margin:0;
+}
+.section-today-count{
+  color:#7a7f89;
+  font-size:15px;
+  font-weight:800;
+  white-space:nowrap;
+}
+@media(max-width:620px){
+  .section-title-line{
+    gap:8px;
+  }
+  .section-today-count{
+    font-size:14px;
+  }
+}
