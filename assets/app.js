@@ -50,6 +50,59 @@ function briefNames(items, emptyText, max = 2) {
   const rest = items.length - labels.length;
   return labels.join(" / ") + (rest > 0 ? " 외 " + rest + "건" : "");
 }
+
+function shortDate(s) {
+  if (!s) return "";
+  const m = String(s).match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  return m ? m[2] + "." + m[3] : String(s);
+}
+
+function isOpenItem(item) {
+  return String(item.status || "OPEN").toUpperCase() !== "CLOSED";
+}
+
+function isNewToday(item) {
+  return item && item.firstSeenDate === state.data.date;
+}
+
+function isUpdatedToday(item) {
+  return item && item.lastUpdatedDate === state.data.date && item.firstSeenDate !== state.data.date;
+}
+
+function latestDateValue(item) {
+  return item.lastUpdatedDate || item.firstSeenDate || "";
+}
+
+function opportunityPriority(items) {
+  return items.slice().sort((a,b) => {
+    const na = isNewToday(a) ? 0 : 1;
+    const nb = isNewToday(b) ? 0 : 1;
+    if (na !== nb) return na - nb;
+    const da = ddayNumber(a), db = ddayNumber(b);
+    if (da !== null || db !== null) {
+      if (da === null) return 1;
+      if (db === null) return -1;
+      if (da !== db) return da - db;
+    }
+    return String(b.firstSeenDate || "").localeCompare(String(a.firstSeenDate || ""));
+  });
+}
+
+function newsPriority(items) {
+  return items.slice().sort((a,b) => {
+    const pa = isUpdatedToday(a) ? 0 : isNewToday(a) ? 1 : 2;
+    const pb = isUpdatedToday(b) ? 0 : isNewToday(b) ? 1 : 2;
+    if (pa !== pb) return pa - pb;
+    return latestDateValue(b).localeCompare(latestDateValue(a));
+  });
+}
+
+function changeBadge(item, kind) {
+  if (isNewToday(item)) return '<span class="change-badge new">오늘 신규</span>';
+  if (kind === "ai" && isUpdatedToday(item)) return '<span class="change-badge updated">오늘 업데이트</span>';
+  return "";
+}
+
 function dangerClass(item) { return isToday(item) ? "danger" : ""; }
 
 function itemKind(item) {
@@ -175,17 +228,19 @@ function renderHome() {
   const news = state.data.aiNews || [];
   const support = state.data.support || [];
 
-  const today = state.data.date;
-  const newToday = items => items.filter(item => item.firstSeenDate === today).length;
+  const openContests = contests.filter(isOpenItem);
+  const openSupport = support.filter(isOpenItem);
+  const newToday = items => items.filter(isNewToday).length;
+  const updatedToday = items => items.filter(isUpdatedToday).length;
 
-  $("#homeContestCount").textContent = "오늘 신규 " + newToday(contests) + "건";
-  $("#homeAiCount").textContent = "오늘 신규 " + newToday(news) + "건";
-  $("#homeSupportCount").textContent = "오늘 신규 " + newToday(support) + "건";
+  $("#homeContestCount").textContent = "신규 " + newToday(contests) + " · 진행중 " + openContests.length;
+  $("#homeAiCount").textContent = "신규 " + newToday(news) + " · 업데이트 " + updatedToday(news);
+  $("#homeSupportCount").textContent = "신규 " + newToday(support) + " · 진행중 " + openSupport.length;
 
-  renderFeatured(contests, support);
-  renderCompact("#homeContestList", contests.slice(0, 3), "contest");
-  renderCompact("#homeAiList", news.slice(0, 4), "ai");
-  renderCompact("#homeSupportList", support.slice(0, 3), "support");
+  renderFeatured(openContests, openSupport);
+  renderCompact("#homeContestList", opportunityPriority(openContests).slice(0, 4), "contest");
+  renderCompact("#homeAiList", newsPriority(news).slice(0, 5), "ai");
+  renderCompact("#homeSupportList", opportunityPriority(openSupport).slice(0, 4), "support");
   renderArchiveStrip("#homeArchiveDays", state.data.archive || []);
 
   $("#homeSupportPanel").hidden = support.length === 0;
@@ -240,14 +295,17 @@ function renderCompact(sel, items, kind) {
   }
 
   el.innerHTML = items.map(item => {
-    const status = kind === "ai" ? (item.updatedAgo || "오늘") : (item.dDay || "진행중");
-    const category = kind === "ai" ? "AI NEWS" : kind === "support" ? "지원사업" : "공모전 · 해커톤";
-    const foot = kind === "ai"
-      ? ((item.tags || []).slice(0,2).join(" · ") || "AI")
-      : "마감 " + txt(item.deadlineText || item.dDay);
+    const isAi = kind === "ai";
+    const status = isAi
+      ? (isNewToday(item) ? "오늘 신규" : isUpdatedToday(item) ? "오늘 업데이트" : "누적 이슈")
+      : (!isOpenItem(item) ? "종료" : (item.dDay || "접수중"));
+    const category = isAi ? "AI NEWS" : kind === "support" ? "지원사업" : "공모전 · 해커톤";
+    const foot = isAi
+      ? "처음 " + shortDate(item.firstSeenDate) + " · 업데이트 " + shortDate(item.lastUpdatedDate || item.firstSeenDate)
+      : "처음 " + shortDate(item.firstSeenDate) + " · 마지막 확인 " + shortDate(item.lastVerifiedDate || item.firstSeenDate);
 
     return '<article class="compact-item compact-flow" data-id="' + esc(item.id) + '">' +
-      '<div class="compact-meta"><span class="compact-status ' + (kind !== "ai" ? dangerClass(item) : "") + '">' + esc(status) + '</span><span class="compact-category">' + category + '</span></div>' +
+      '<div class="compact-meta"><span class="compact-status ' + (!isAi ? dangerClass(item) : "") + '">' + esc(status) + '</span><span class="compact-category">' + category + '</span>' + changeBadge(item, kind) + '</div>' +
       '<h3>' + esc(item.title) + '</h3>' +
       '<p>' + esc(item.summary || "") + '</p>' +
       '<div class="compact-foot">' + esc(foot) + ' <span>→</span></div>' +
@@ -277,24 +335,24 @@ function renderArchiveStrip(sel, days) {
 }
 
 function renderCategory(type) {
-  state.categoryFilter = "all";
-  state.categorySort = type === "ai-news" ? "default" : "deadline";
+  state.categoryFilter = type === "ai-news" ? "all" : "open";
+  state.categorySort = type === "ai-news" ? "updated" : "deadline";
 
   const configs = {
     contests: {
       eyebrow:"OPPORTUNITIES",
       title:"공모전 · 해커톤",
-      description:"홈보다 더 자세하게 비교하고, 조건에 맞는 공고만 골라볼 수 있습니다."
+      description:"한번 찾은 공고는 누적해 관리합니다. 진행중·신규·마감 임박·종료 이력을 한곳에서 볼 수 있습니다."
     },
     "ai-news": {
       eyebrow:"AI SIGNALS",
       title:"AI 뉴스",
-      description:"새 모델·에이전트·코딩AI·멀티모달·보안 흐름을 주제별로 탐색합니다."
+      description:"같은 이슈를 새 카드로 반복하지 않고 하나의 이슈에 후속 내용을 계속 쌓아갑니다."
     },
     support: {
       eyebrow:"SUPPORT",
       title:"지원사업",
-      description:"현재 조건에서 실제 신청 가능한 지원사업만 모아봅니다."
+      description:"발견한 지원사업을 누적 관리하고, 신청 가능 상태와 변경 이력을 계속 확인합니다."
     }
   };
 
@@ -305,9 +363,9 @@ function renderCategory(type) {
 
   const sort = $("#categorySort");
   if (type === "ai-news") {
-    sort.innerHTML = '<option value="default">최신 브리핑순</option>';
+    sort.innerHTML = '<option value="updated">최근 업데이트순</option><option value="discovered">최근 발견순</option>';
   } else {
-    sort.innerHTML = '<option value="deadline">마감 임박순</option><option value="default">기본순</option>';
+    sort.innerHTML = '<option value="deadline">마감 임박순</option><option value="discovered">최근 발견순</option><option value="updated">최근 변경순</option>';
   }
   sort.value = state.categorySort;
 
@@ -317,26 +375,29 @@ function renderCategory(type) {
 
 function filterDefs(type) {
   if (type === "contests") return [
-    ["all","전체"],
+    ["open","진행중"],
+    ["new","오늘 신규"],
     ["urgent","7일 이내"],
-    ["individual","개인·1인 가능"],
-    ["prestart","예비창업자"],
-    ["ai","AI"]
+    ["individual","개인·1인"],
+    ["closed","종료"],
+    ["all","전체 누적"]
   ];
   if (type === "ai-news") return [
-    ["all","전체"],
+    ["all","전체 이슈"],
+    ["new","오늘 신규"],
+    ["updated","오늘 업데이트"],
     ["agent","에이전트"],
     ["coding","코딩 AI"],
-    ["multimodal","멀티모달"],
-    ["security","보안"],
-    ["open","오픈소스"]
+    ["opensource","MCP·오픈소스"],
+    ["security","보안"]
   ];
   return [
-    ["all","전체"],
+    ["open","진행중"],
+    ["new","오늘 신규"],
     ["urgent","7일 이내"],
     ["prestart","예비창업"],
-    ["credit","크레딧·클라우드"],
-    ["cash","지원금"]
+    ["closed","종료"],
+    ["all","전체 누적"]
   ];
 }
 
@@ -364,39 +425,54 @@ function sourceFor(type) {
 function matchesFilter(item, type, filter) {
   if (filter === "all") return true;
 
-  const hay = [item.title,item.summary,item.description,item.participation,item.preStartup,item.aiSupport]
-    .concat(item.tags || []).join(" ").toLowerCase();
+  const hay = [item.title,item.summary,item.description,item.participation,item.preStartup,item.aiSupport,item.why]
+    .concat(item.tags || [])
+    .concat((item.updates || []).map(u => [u.label,u.text].join(" ")))
+    .join(" ").toLowerCase();
 
-  if (filter === "urgent") return withinWeek(item);
-  if (filter === "individual") return /개인|1인/.test(hay);
+  if (filter === "open") return type === "ai-news" ? true : isOpenItem(item);
+  if (filter === "closed") return type !== "ai-news" && !isOpenItem(item);
+  if (filter === "new") return isNewToday(item);
+  if (filter === "updated") return type === "ai-news" && isUpdatedToday(item);
+  if (filter === "urgent") return isOpenItem(item) && withinWeek(item);
+  if (filter === "individual") return /개인|1인|혼자/.test(hay);
   if (filter === "prestart") return /예비창업/.test(hay) && !/대상 아님/.test(hay);
-  if (filter === "ai") return /\bai\b|생성형|llm|rag|gpt|인공지능/i.test(hay);
   if (filter === "agent") return /agent|에이전트/i.test(hay);
-  if (filter === "coding") return /coding|코딩|개발자/i.test(hay);
-  if (filter === "multimodal") return /multimodal|멀티모달|vision|voice|음성|이미지/i.test(hay);
-  if (filter === "security") return /security|보안|threat|위협|anomaly/i.test(hay);
-  if (filter === "open") return /open.?source|오픈소스|github|hugging face/i.test(hay);
-  if (filter === "credit") return /크레딧|cloud|클라우드|gpu|api/i.test(hay);
-  if (filter === "cash") return /만원|억원|지원금|바우처/i.test(hay);
+  if (filter === "coding") return /coding|코딩|개발자|engineering/i.test(hay);
+  if (filter === "security") return /security|보안|threat|위협|anomaly|관측/i.test(hay);
+  if (filter === "opensource") return /open.?source|오픈소스|github|hugging face|mcp/i.test(hay);
   return true;
 }
 
 function renderCategoryList(type) {
-  let items = sourceFor(type).filter(item => matchesFilter(item, type, state.categoryFilter));
+  const source = sourceFor(type);
+  let items = source.filter(item => matchesFilter(item, type, state.categoryFilter));
 
   if (state.categorySort === "deadline") {
     items = items.slice().sort((a,b) => {
+      if (isOpenItem(a) !== isOpenItem(b)) return isOpenItem(a) ? -1 : 1;
       const da = ddayNumber(a), db = ddayNumber(b);
-      if (da === null && db === null) return 0;
+      if (da === null && db === null) return String(b.firstSeenDate || "").localeCompare(String(a.firstSeenDate || ""));
       if (da === null) return 1;
       if (db === null) return -1;
       return da - db;
     });
+  } else if (state.categorySort === "updated") {
+    items = newsPriority(items);
+  } else if (state.categorySort === "discovered") {
+    items = items.slice().sort((a,b) => String(b.firstSeenDate || "").localeCompare(String(a.firstSeenDate || "")));
   }
 
-  $("#categoryCount").textContent = items.length + "건";
-  const el = $("#categoryList");
+  const newCount = source.filter(isNewToday).length;
+  const updatedCount = source.filter(isUpdatedToday).length;
+  if (type === "ai-news") {
+    $("#categoryCount").textContent = "표시 " + items.length + " · 신규 " + newCount + " · 업데이트 " + updatedCount + " · 누적 " + source.length;
+  } else {
+    const openCount = source.filter(isOpenItem).length;
+    $("#categoryCount").textContent = "표시 " + items.length + " · 진행중 " + openCount + " · 신규 " + newCount + " · 누적 " + source.length;
+  }
 
+  const el = $("#categoryList");
   if (!items.length) {
     el.innerHTML = '<div class="empty-state">이 조건에 해당하는 정보가 없습니다.</div>';
     return;
@@ -405,21 +481,29 @@ function renderCategoryList(type) {
   if (type === "ai-news") {
     el.innerHTML = items.map(item =>
       '<article class="category-card ai-category-card" data-id="' + esc(item.id) + '">' +
-        '<div class="category-item-meta"><span class="meta-label">AI NEWS</span><span class="meta-label">' + esc(item.updatedAgo || "오늘") + '</span></div>' +
+        '<div class="category-item-meta">' +
+          changeBadge(item, "ai") +
+          '<span class="meta-label">AI NEWS</span>' +
+          '<span class="meta-label">처음 ' + esc(shortDate(item.firstSeenDate)) + '</span>' +
+          '<span class="meta-label">최근 ' + esc(shortDate(item.lastUpdatedDate || item.firstSeenDate)) + '</span>' +
+        '</div>' +
         '<h3 class="category-item-title">' + esc(item.title) + '</h3>' +
         '<p class="category-item-summary">' + esc(item.summary || "") + '</p>' +
         tagsHtml(item.tags) +
         '<div class="category-explainer"><span>왜 볼까?</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
-        '<div class="category-action">자세히 보기 <span>→</span></div>' +
+        '<div class="category-action">업데이트 기록 보기 <span>→</span></div>' +
       '</article>'
     ).join("");
   } else {
     const kind = type === "support" ? "support" : "contest";
     el.innerHTML = items.map(item =>
-      '<article class="category-card" data-id="' + esc(item.id) + '">' +
+      '<article class="category-card ' + (!isOpenItem(item) ? "is-closed" : "") + '" data-id="' + esc(item.id) + '">' +
         '<div class="category-item-meta">' +
-          (item.dDay ? '<span class="meta-status ' + dangerClass(item) + '">' + esc(item.dDay) + '</span>' : '') +
+          changeBadge(item, kind) +
+          '<span class="meta-status ' + dangerClass(item) + '">' + esc(!isOpenItem(item) ? "종료" : (item.dDay || "접수중")) + '</span>' +
           '<span class="meta-label">' + (kind === "support" ? "지원사업" : "공모전 · 해커톤") + '</span>' +
+          '<span class="meta-label">처음 ' + esc(shortDate(item.firstSeenDate)) + '</span>' +
+          '<span class="meta-label">확인 ' + esc(shortDate(item.lastVerifiedDate || item.firstSeenDate)) + '</span>' +
         '</div>' +
         '<h3 class="category-item-title">' + esc(item.title) + '</h3>' +
         '<p class="category-item-summary">' + esc(item.summary || "") + '</p>' +
@@ -487,13 +571,21 @@ function renderOpportunityDetail(item, kind) {
 
   $("#detailHeader").innerHTML =
     '<div class="detail-kicker">' +
-      (item.dDay ? '<span class="detail-pill ' + dangerClass(item) + '">' + esc(item.dDay) + '</span>' : '') +
+      changeBadge(item, kind) +
+      '<span class="detail-pill">' + esc(isOpenItem(item) ? (item.dDay || "진행중") : "종료") + '</span>' +
       '<span class="detail-pill">' + category + '</span>' +
     '</div><h1>' + esc(item.title) + '</h1><p>' + esc(item.description || item.summary || "") + '</p>';
 
   $("#detailTopActions").innerHTML = links.slice(0,2).map((l,i) =>
     '<a class="' + (i === 0 ? "primary-link" : "secondary-link") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + ' ↗</a>'
   ).join("");
+
+  const tracking = [
+    ["상태", isOpenItem(item) ? "진행중" : "종료"],
+    ["처음 발견", item.firstSeenDate],
+    ["마지막 공식 확인", item.lastVerifiedDate],
+    ["내용 마지막 변경", item.lastUpdatedDate]
+  ].filter(x => x[1]);
 
   const core = [
     ["마감", item.deadlineText || item.dDay],
@@ -514,6 +606,7 @@ function renderOpportunityDetail(item, kind) {
   ].filter(x => x[1]);
 
   $("#detailContent").innerHTML =
+    infoBlock("추적 정보","처음 발견한 뒤 같은 공고를 계속 재검증합니다.",tracking) +
     infoBlock("핵심 정보","신청 전에 가장 먼저 확인할 내용입니다.",core) +
     infoBlock("지원 자격","내가 실제로 신청 가능한지 확인합니다.",eligible) +
     infoBlock("진행 방식","",process) +
@@ -528,8 +621,11 @@ function renderNewsDetail(item) {
   const ideas = item.ideas || [];
 
   $("#detailHeader").innerHTML =
-    '<div class="detail-kicker"><span class="detail-pill">AI NEWS</span>' +
-    (item.updatedAgo ? '<span class="detail-pill">' + esc(item.updatedAgo) + '</span>' : '') +
+    '<div class="detail-kicker">' +
+      changeBadge(item, "ai") +
+      '<span class="detail-pill">AI NEWS</span>' +
+      '<span class="detail-pill">처음 ' + esc(shortDate(item.firstSeenDate)) + '</span>' +
+      '<span class="detail-pill">최근 ' + esc(shortDate(item.lastUpdatedDate || item.firstSeenDate)) + '</span>' +
     '</div><h1>' + esc(item.title) + '</h1><p>' + esc(item.summary || "") + '</p>';
 
   $("#detailTopActions").innerHTML = links.slice(0,2).map((l,i) =>
@@ -537,7 +633,8 @@ function renderNewsDetail(item) {
   ).join("");
 
   $("#detailContent").innerHTML =
-    infoBlock("무슨 일이야?","",[["핵심",item.description || item.summary]]) +
+    updateTimeline(item.updates || []) +
+    infoBlock("현재 핵심","",[["내용",item.description || item.summary]]) +
     infoBlock("왜 봐야 해?","",[["의미",item.why || item.description || item.summary]]) +
     (ideas.length ? ideaBlock("어떻게 써볼까?",ideas) : "") +
     (links.length ? '<section class="detail-block"><h2>공식 링크</h2><div class="official-link-list">' + links.map(l => '<a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer"><span>' + esc(l.label) + '</span><span>↗</span></a>').join("") + '</div></section>' : '');
@@ -550,6 +647,14 @@ function infoBlock(title,desc,rows) {
   return '<section class="detail-block"><h2>' + esc(title) + '</h2>' +
     (desc ? '<p class="block-desc">' + esc(desc) + '</p>' : '') +
     '<div class="info-table">' + rows.map(r => '<dl class="info-row"><dt>' + esc(r[0]) + '</dt><dd>' + esc(txt(r[1])) + '</dd></dl>').join("") + '</div></section>';
+}
+
+function updateTimeline(updates) {
+  if (!updates.length) return "";
+  const sorted = updates.slice().sort((a,b) => String(b.date || "").localeCompare(String(a.date || "")));
+  return '<section class="detail-block update-history"><div class="update-history-head"><h2>업데이트 기록</h2><span>' + sorted.length + '회</span></div><div class="timeline-list">' +
+    sorted.map(u => '<div class="timeline-item"><div class="timeline-date">' + esc(shortDate(u.date)) + '</div><div class="timeline-body"><strong>' + esc(u.label || "업데이트") + '</strong><p>' + esc(u.text || "") + '</p></div></div>').join("") +
+    '</div></section>';
 }
 
 function ideaBlock(title,ideas) {
@@ -608,7 +713,10 @@ function setupInteractions() {
   input.addEventListener("input", e => {
     const q = e.target.value.trim().toLowerCase();
     const results = !q ? [] : state.all.filter(x =>
-      [x.title,x.summary,x.description].concat(x.tags || []).join(" ").toLowerCase().includes(q)
+      [x.title,x.summary,x.description,x.why]
+        .concat(x.tags || [])
+        .concat((x.updates || []).map(u => [u.label,u.text].join(" ")))
+        .join(" ").toLowerCase().includes(q)
     ).slice(0,12);
 
     $("#searchResults").innerHTML = results.length
