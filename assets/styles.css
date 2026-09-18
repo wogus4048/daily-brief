@@ -352,3 +352,213 @@ footer{
   .info-row{grid-template-columns:1fr;gap:7px}
   footer{padding:24px 16px 32px}
 }
+
+/* Vertical reading flow: every content unit reads top -> bottom */
+.dashboard-grid{
+  grid-template-columns:1fr;
+  gap:46px;
+}
+.featured-card{
+  min-height:auto;
+}
+.featured-flow{
+  position:relative;
+  z-index:1;
+  max-width:940px;
+}
+.featured-facts{
+  margin-top:26px;
+  border-top:1px solid rgba(255,255,255,.16);
+  border-bottom:1px solid rgba(255,255,255,.16);
+}
+.featured-facts .flow-fact{
+  display:grid;
+  grid-template-columns:120px minmax(0,1fr);
+  gap:18px;
+  padding:13px 0;
+  border-bottom:1px solid rgba(255,255,255,.10);
+}
+.featured-facts .flow-fact:last-child{border-bottom:0}
+.featured-facts .flow-fact span{
+  color:#8f96a3;
+  font-size:12px;
+  font-weight:800;
+}
+.featured-facts .flow-fact strong{
+  color:#f4f4f5;
+  font-size:14px;
+  line-height:1.6;
+  font-weight:750;
+}
+.featured-card:after{
+  opacity:.6;
+}
+.featured-side{display:none}
+
+.compact-item.compact-flow{
+  display:block;
+  padding:20px 0;
+}
+.compact-item.compact-flow h3{
+  margin:0;
+  font-size:18px;
+  line-height:1.45;
+}
+.compact-item.compact-flow p{
+  margin:7px 0 0;
+}
+.compact-foot{
+  margin-top:11px;
+  color:#7b808a;
+  font-size:12px;
+  font-weight:750;
+}
+.compact-foot span{
+  margin-left:5px;
+  color:#aaaeb6;
+}
+
+.category-list{
+  max-width:980px;
+  border-top:1px solid var(--line-strong);
+}
+.category-card{
+  padding:30px 2px 31px;
+  border-bottom:1px solid var(--line);
+  cursor:pointer;
+}
+.category-card:hover .category-item-title{
+  color:var(--accent);
+}
+.category-card .category-item-title{
+  margin:0;
+  max-width:850px;
+  font-size:25px;
+  line-height:1.38;
+  letter-spacing:-.045em;
+}
+.category-card .category-item-summary{
+  margin:8px 0 0;
+  max-width:850px;
+  color:var(--text-2);
+  font-size:15px;
+  line-height:1.68;
+}
+.category-card .category-tags{
+  margin-top:12px;
+}
+.category-facts-flow{
+  margin-top:21px;
+  border-top:1px solid #ececef;
+}
+.category-facts-flow .flow-fact{
+  display:grid;
+  grid-template-columns:105px minmax(0,1fr);
+  gap:18px;
+  padding:13px 0;
+  border-bottom:1px solid #ececef;
+}
+.category-facts-flow .flow-fact span{
+  color:var(--text-3);
+  font-size:12px;
+  font-weight:800;
+}
+.category-facts-flow .flow-fact strong{
+  color:#3b4049;
+  font-size:14px;
+  line-height:1.62;
+  font-weight:720;
+}
+.category-explainer{
+  max-width:850px;
+  margin-top:20px;
+  padding:17px 18px;
+  border-left:2px solid #d8d4fb;
+  background:#fbfaff;
+}
+.category-explainer span{
+  display:block;
+  color:#6e67bf;
+  font-size:12px;
+  font-weight:850;
+}
+.category-explainer p{
+  margin:7px 0 0;
+  color:#565d69;
+  font-size:14px;
+  line-height:1.7;
+}
+.category-action{
+  margin-top:17px;
+  color:#5c54bf;
+  font-size:13px;
+  font-weight:850;
+}
+.category-action span{
+  margin-left:4px;
+}
+.category-item,
+.category-item.ai-item,
+.category-item-side,
+.ai-side-note,
+.category-arrow{
+  display:none;
+}
+
+.detail-page-head{
+  grid-template-columns:1fr;
+  max-width:960px;
+}
+.detail-actions-top{
+  justify-content:flex-start;
+  margin-top:2px;
+}
+.detail-layout{
+  grid-template-columns:1fr;
+  gap:0;
+  max-width:960px;
+}
+.detail-content{
+  min-width:0;
+}
+.detail-aside{
+  display:none;
+}
+.info-row{
+  grid-template-columns:150px minmax(0,1fr);
+}
+.official-link-list{
+  border-top:1px solid var(--line-strong);
+}
+.official-link-list a{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:15px 0;
+  border-bottom:1px solid var(--line);
+  color:#5149b4;
+  font-size:14px;
+  font-weight:800;
+}
+.official-link-list a span:last-child{
+  color:#a5a1d9;
+}
+
+@media(max-width:760px){
+  .featured-facts .flow-fact,
+  .category-facts-flow .flow-fact,
+  .info-row{
+    grid-template-columns:1fr;
+    gap:5px;
+  }
+  .category-list{
+    max-width:none;
+  }
+  .category-card{
+    padding:24px 0;
+  }
+  .category-card .category-item-title{
+    font-size:22px;
+  }
+}
