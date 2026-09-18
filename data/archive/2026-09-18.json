@@ -36,7 +36,10 @@
           "url": "https://static.wanted.co.kr/ai-championship/2026/landing.html"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "status": "OPEN",
+      "lastVerifiedDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18"
     },
     {
       "id": "govtech-2026",
@@ -76,7 +79,10 @@
           "url": "https://nipa.kr/home/2-1/16908"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "status": "OPEN",
+      "lastVerifiedDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18"
     },
     {
       "id": "digital-solveup-2026",
@@ -120,7 +126,10 @@
           "url": "https://www.devcontest-digitalsolveup.kr/notice/18"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "status": "OPEN",
+      "lastVerifiedDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18"
     },
     {
       "id": "dacon-deepvoice-236749",
@@ -164,7 +173,10 @@
           "url": "https://www.dacon.io/competitions/official/236749/overview/schedule"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "status": "OPEN",
+      "lastVerifiedDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18"
     },
     {
       "id": "dacon-blackbox-236753",
@@ -208,7 +220,10 @@
           "url": "https://www.dacon.io/competitions/official/236753/overview/schedule"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "status": "OPEN",
+      "lastVerifiedDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18"
     },
     {
       "id": "dacon-koneps-236754",
@@ -253,7 +268,10 @@
           "url": "https://www.dacon.io/competitions/official/236754/overview/schedule"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "status": "OPEN",
+      "lastVerifiedDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18"
     },
     {
       "id": "daytona-hacksprint-seoul-2026",
@@ -290,7 +308,10 @@
           "url": "https://luma.com/daytonaseoul?locale=ko"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "status": "OPEN",
+      "lastVerifiedDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18"
     },
     {
       "id": "habsida-hackathon-2026",
@@ -327,7 +348,10 @@
           "url": "https://luma.com/cwaixvls"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "status": "OPEN",
+      "lastVerifiedDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18"
     },
     {
       "id": "nebius-nvidia-global-ai-hackathon-2026",
@@ -368,7 +392,10 @@
           "url": "https://nebiusglobalaihackathon.devpost.com/rules"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "status": "OPEN",
+      "lastVerifiedDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18"
     },
     {
       "id": "amazon-developer-hackathon-2026",
@@ -410,7 +437,10 @@
           "url": "https://amazonappdev2026.devpost.com/rules"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "status": "OPEN",
+      "lastVerifiedDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18"
     },
     {
       "id": "opencv-ai-competition-2026",
@@ -451,7 +481,10 @@
           "url": "https://opencv26.devpost.com/rules"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "status": "OPEN",
+      "lastVerifiedDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18"
     },
     {
       "id": "busan-ai-startup-competition-2026",
@@ -492,7 +525,10 @@
           "url": "https://ai-startup-competition.kr"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "status": "OPEN",
+      "lastVerifiedDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18"
     }
   ],
   "aiNews": [
@@ -520,7 +556,15 @@
           "url": "https://openai.com/index/model-misalignment-reporting-framework/"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18",
+      "updates": [
+        {
+          "date": "2026-09-18",
+          "label": "처음 발견",
+          "text": "AI가 예상과 다르게 행동한 사례를 추적·조사·공개하는 새 프레임워크와 실제 사례 6건을 공개했습니다."
+        }
+      ]
     },
     {
       "id": "gemini-3-8-live-2026-09",
@@ -546,7 +590,15 @@
           "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18",
+      "updates": [
+        {
+          "date": "2026-09-18",
+          "label": "처음 발견",
+          "text": "실시간 음성 대화와 시각적 맥락 이해를 강화한 Gemini 3.8 Live와 Extended Thinking이 Gemini API와 AI Studio에 배포되고 있습니다."
+        }
+      ]
     },
     {
       "id": "google-agent-anomaly-detection-2026-09",
@@ -572,7 +624,15 @@
           "url": "https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18",
+      "updates": [
+        {
+          "date": "2026-09-18",
+          "label": "처음 발견",
+          "text": "기업용 AI 에이전트가 평소와 다른 행동을 보일 때 탐지하는 Agent Anomaly Detection 기능이 비공개 프리뷰로 공개됐습니다."
+        }
+      ]
     },
     {
       "id": "anthropic-rd-automation-metrics-2026-09-17",
@@ -600,7 +660,15 @@
           "url": "https://www.anthropic.com/institute/measuring-pace-of-ai-development"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18",
+      "updates": [
+        {
+          "date": "2026-09-18",
+          "label": "처음 발견",
+          "text": "Anthropic이 Claude가 AI R&D 업무의 26%를 주도하고, 내부 주요 플랫폼에서 약 3만 개의 에이전트가 동시에 연구·엔지니어링 작업을 수행한다고 공개했습니다."
+        }
+      ]
     },
     {
       "id": "paper2agent-nature-2026-09-16",
@@ -633,7 +701,15 @@
           "url": "https://github.com/jmiao24/Paper2Agent"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18",
+      "updates": [
+        {
+          "date": "2026-09-18",
+          "label": "처음 발견",
+          "text": "Paper2Agent가 논문·코드·데이터를 분석해 검증된 MCP 서버와 AI 에이전트로 자동 변환하는 방식을 Nature에 공개했고 코드도 오픈소스로 제공했습니다."
+        }
+      ]
     },
     {
       "id": "ibm-engineering-ai-hub-1-4-2026-09-17",
@@ -662,7 +738,15 @@
           "url": "https://www.ibm.com/new/announcements/ibm-engineering-ai-hub-1-4-expands-ai-assisted-engineering"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18",
+      "updates": [
+        {
+          "date": "2026-09-18",
+          "label": "처음 발견",
+          "text": "IBM이 Engineering AI Hub 1.4를 출시하며 요구사항에서 테스트 케이스·스크립트를 생성하는 에이전트와 확장된 MCP 도구 카탈로그를 추가했습니다."
+        }
+      ]
     },
     {
       "id": "anthropic-biomolecular-modeling-2026-09-17",
@@ -691,7 +775,15 @@
           "url": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18",
+      "updates": [
+        {
+          "date": "2026-09-18",
+          "label": "처음 발견",
+          "text": "Anthropic이 Claude를 이용해 과학자들이 쓰는 오픈소스 생체분자 모델 30여 개의 속도·메모리를 개선하고 최적화 코드를 공개했습니다."
+        }
+      ]
     },
     {
       "id": "mcpa-certification-2026-09-14",
@@ -719,7 +811,15 @@
           "url": "https://www.linuxfoundation.org/press/agentic-ai-foundation-launches-mcpa-certification-to-validate-mcp-expertise"
         }
       ],
-      "firstSeenDate": "2026-09-18"
+      "firstSeenDate": "2026-09-18",
+      "lastUpdatedDate": "2026-09-18",
+      "updates": [
+        {
+          "date": "2026-09-18",
+          "label": "처음 발견",
+          "text": "Agentic AI Foundation이 MCP의 구조·보안·구현 역량을 검증하는 벤더 중립 자격증 Model Context Protocol Associate를 공개했습니다."
+        }
+      ]
     }
   ],
   "support": [],
