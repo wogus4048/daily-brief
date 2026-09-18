@@ -3,153 +3,165 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="공모전, AI 뉴스, 지원사업을 매일 한눈에 보는 자동화 브리핑" />
-  <meta name="theme-color" content="#f7f8fc" />
+  <meta name="description" content="공모전, AI 뉴스, 지원사업을 매일 선별해 보여주는 개인 브리핑" />
+  <meta name="theme-color" content="#f7f7f8" />
   <title>daily-brief</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="#home" aria-label="daily-brief 홈">
-      <span class="brand-mark" aria-hidden="true">☀️</span>
-      <span>
-        <strong>daily-brief</strong>
-        <small>매일 필요한 정보만 빠르게</small>
-      </span>
-    </a>
-    <nav class="nav" aria-label="주요 메뉴">
-      <a href="#home" class="active">홈</a>
-      <a href="#contests">공모전·해커톤</a>
-      <a href="#support">지원사업</a>
-      <a href="#ai-news">AI 뉴스</a>
-      <a href="#archive">아카이브</a>
-    </nav>
-    <div class="header-actions">
-      <button class="search-button" id="searchButton" type="button" aria-label="검색">⌕ <span>검색</span></button>
-      <span class="today-chip" id="todayChip">불러오는 중</span>
-    </div>
-  </header>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="daily-brief 홈">
+        <span class="brand-dot"></span>
+        <span>
+          <strong>daily-brief</strong>
+          <small>personal signal desk</small>
+        </span>
+      </a>
 
-  <main id="home">
-    <section class="hero">
-      <div class="hero-main">
-        <span class="eyebrow">DAILY BRIEF</span>
-        <h1>오늘 확인할 정보,<br><em>한눈에 먼저 판단하세요.</em></h1>
-        <p>공모전·지원사업은 마감과 조건부터, AI 뉴스는 왜 중요한지부터 보여줍니다.</p>
-        <div class="hero-actions">
-          <a class="primary-action" href="#contests">오늘 공모전 보기</a>
-          <a class="secondary-action" href="#support">지원사업 보기</a>
+      <nav class="side-nav" aria-label="메인 메뉴">
+        <button class="nav-item active" data-jump="top">
+          <span class="nav-icon">⌂</span><span>오늘</span>
+        </button>
+        <button class="nav-item" data-jump="contests">
+          <span class="nav-icon">◇</span><span>공모전 · 해커톤</span>
+        </button>
+        <button class="nav-item" data-jump="ai-news">
+          <span class="nav-icon">✦</span><span>AI 뉴스</span>
+        </button>
+        <button class="nav-item" data-jump="support" id="supportNav">
+          <span class="nav-icon">○</span><span>지원사업</span>
+        </button>
+        <button class="nav-item" data-jump="archive">
+          <span class="nav-icon">□</span><span>아카이브</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-foot">
+        <span class="live-dot"></span>
+        <span>자동 업데이트</span>
+      </div>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="메뉴">☰</button>
+        <div class="topbar-search" id="searchButton" role="button" tabindex="0">
+          <span>⌕</span>
+          <span>브리핑 검색</span>
+          <kbd>⌘ K</kbd>
         </div>
-      </div>
-      <aside class="hero-spotlight" id="heroSpotlight">
-        <span class="spotlight-label">오늘 먼저 볼 것</span>
-        <strong>브리핑을 불러오는 중입니다.</strong>
-      </aside>
-    </section>
+        <div class="topbar-date" id="topbarDate">불러오는 중</div>
+      </header>
 
-    <section class="section summary-section" aria-labelledby="summaryTitle">
-      <div class="section-heading compact">
-        <div>
-          <span class="date-line" id="dateLine">오늘</span>
-          <h2 id="summaryTitle">오늘의 핵심 현황</h2>
-          <p>숫자만 봐도 지금 무엇부터 볼지 알 수 있게 정리했어요.</p>
-        </div>
-      </div>
-      <div class="summary-grid">
-        <article class="summary-card urgent">
-          <span class="summary-label">오늘 마감</span>
-          <strong id="todayDeadlineCount">0</strong>
-          <small>오늘 안에 확인할 공고</small>
-        </article>
-        <article class="summary-card week">
-          <span class="summary-label">7일 이내 마감</span>
-          <strong id="weekDeadlineCount">0</strong>
-          <small>이번 주 확인할 공고</small>
-        </article>
-        <article class="summary-card opportunity">
-          <span class="summary-label">공모전 · 해커톤</span>
-          <strong id="contestCount">0</strong>
-          <small>현재 신청 가능한 기회</small>
-        </article>
-        <article class="summary-card support-summary">
-          <span class="summary-label">지원사업</span>
-          <strong id="supportCount">0</strong>
-          <small>현재 신청 가능한 지원</small>
-        </article>
-      </div>
-    </section>
+      <main>
+        <section class="view" id="homeView">
+          <section class="brief-hero" id="top">
+            <div class="brief-hero-copy">
+              <p class="overline">DAILY BRIEF</p>
+              <h1>오늘 볼 것만,<br>빠르게 정리했습니다.</h1>
+              <p class="hero-sub">지원 가능 여부와 마감이 명확한 정보만 남기고, 나머지는 과감히 버립니다.</p>
+            </div>
+            <div class="hero-stats" aria-label="오늘의 요약">
+              <div><span>오늘 마감</span><strong id="todayDeadlineCount">0</strong></div>
+              <div><span>7일 이내</span><strong id="weekDeadlineCount">0</strong></div>
+              <div><span>공모전</span><strong id="contestCount">0</strong></div>
+              <div><span>AI 뉴스</span><strong id="aiCount">0</strong></div>
+            </div>
+          </section>
 
-    <section class="section opportunity-section" id="contests">
-      <div class="section-heading">
-        <div>
-          <span class="section-kicker">OPPORTUNITIES</span>
-          <h2>공모전 · 해커톤</h2>
-          <p>마감, 상금, 참가 조건부터 바로 비교하세요.</p>
-        </div>
-        <span class="section-count" id="contestCountLabel">0건</span>
-      </div>
-      <div class="opportunity-grid" id="contestList"></div>
-    </section>
+          <section class="featured-wrap">
+            <div class="section-head">
+              <div>
+                <p class="section-eyebrow">EDITOR'S PICK</p>
+                <h2>오늘 먼저 볼 것</h2>
+              </div>
+            </div>
+            <article class="featured-card" id="featuredOpportunity">
+              <div class="skeleton-line wide"></div>
+              <div class="skeleton-line"></div>
+            </article>
+          </section>
 
-    <section class="section opportunity-section alt-section" id="support">
-      <div class="section-heading">
-        <div>
-          <span class="section-kicker">SUPPORT</span>
-          <h2>지원사업</h2>
-          <p>지원금·대상·사업자 조건을 먼저 확인하세요.</p>
-        </div>
-        <span class="section-count green" id="supportCountLabel">0건</span>
-      </div>
-      <div class="opportunity-grid" id="supportList"></div>
-    </section>
+          <div class="content-columns">
+            <section class="feed-section" id="contests">
+              <div class="section-head">
+                <div>
+                  <p class="section-eyebrow">OPPORTUNITIES</p>
+                  <h2>공모전 · 해커톤</h2>
+                  <p>홈에서는 결정에 필요한 정보만 보여줍니다.</p>
+                </div>
+                <span class="count-label" id="contestCountLabel">0건</span>
+              </div>
+              <div class="feed-list" id="contestList"></div>
+            </section>
 
-    <section class="section news-section" id="ai-news">
-      <div class="section-heading">
-        <div>
-          <span class="section-kicker">AI UPDATE</span>
-          <h2>AI 뉴스</h2>
-          <p>개발 일반 소식은 제외하고, 직접 써볼 만한 AI 변화만 모읍니다.</p>
-        </div>
-        <span class="section-count blue" id="aiCountLabel">0건</span>
-      </div>
-      <div class="news-grid" id="aiList"></div>
-    </section>
-
-    <section class="section archive-section" id="archive">
-      <div class="archive-card">
-        <div class="section-heading compact">
-          <div>
-            <span class="section-kicker">ARCHIVE</span>
-            <h2>지난 브리핑</h2>
-            <p>날짜를 선택하면 그날의 정보로 돌아갑니다.</p>
+            <section class="news-section" id="ai-news">
+              <div class="section-head compact">
+                <div>
+                  <p class="section-eyebrow">AI SIGNALS</p>
+                  <h2>AI 뉴스</h2>
+                  <p>직접 써볼 만한 변화만.</p>
+                </div>
+                <span class="count-label" id="aiCountLabel">0건</span>
+              </div>
+              <div class="news-list" id="aiList"></div>
+            </section>
           </div>
-        </div>
-        <div class="archive-days" id="archiveDays"></div>
-      </div>
-    </section>
-  </main>
 
-  <dialog id="detailDialog" class="detail-dialog">
-    <button class="dialog-close" aria-label="닫기">×</button>
-    <div id="dialogContent"></div>
-  </dialog>
+          <section class="feed-section support-section" id="support">
+            <div class="section-head">
+              <div>
+                <p class="section-eyebrow">SUPPORT</p>
+                <h2>지원사업</h2>
+                <p>현재 조건으로 실제 신청 가능한 것만 표시합니다.</p>
+              </div>
+              <span class="count-label" id="supportCountLabel">0건</span>
+            </div>
+            <div class="feed-list" id="supportList"></div>
+          </section>
+
+          <section class="archive-section" id="archive">
+            <div class="section-head">
+              <div>
+                <p class="section-eyebrow">ARCHIVE</p>
+                <h2>지난 브리핑</h2>
+              </div>
+            </div>
+            <div class="archive-strip" id="archiveDays"></div>
+          </section>
+        </section>
+
+        <section class="view detail-view" id="detailView" hidden>
+          <button class="back-link" id="backButton">← 오늘 브리핑으로</button>
+
+          <header class="detail-page-head">
+            <div class="detail-page-title" id="detailHeader"></div>
+            <div class="detail-actions-top" id="detailTopActions"></div>
+          </header>
+
+          <div class="detail-layout">
+            <article class="detail-content" id="detailContent"></article>
+            <aside class="detail-aside" id="detailAside"></aside>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <span>daily-brief</span>
+        <span>© <span id="year"></span></span>
+      </footer>
+    </div>
+  </div>
 
   <dialog id="searchDialog" class="search-dialog">
-    <button class="dialog-close" aria-label="닫기">×</button>
-    <h2>브리핑 검색</h2>
-    <p>공모전명, AI 키워드, 지원사업명을 검색하세요.</p>
-    <input type="search" id="searchInput" placeholder="예: RAG, AI, 예비창업자" autocomplete="off" />
+    <div class="search-head">
+      <input type="search" id="searchInput" placeholder="공모전, AI, 키워드 검색" autocomplete="off" />
+      <button class="search-close" id="searchClose" aria-label="닫기">Esc</button>
+    </div>
     <div id="searchResults" class="search-results"></div>
   </dialog>
-
-  <footer>
-    <div class="footer-brand">
-      <strong>daily-brief</strong>
-      <span>중요한 정보부터, 하루 한 번.</span>
-    </div>
-    <div class="copyright">© <span id="year"></span> daily-brief</div>
-  </footer>
 
   <script src="assets/app.js" defer></script>
 </body>
