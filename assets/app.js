@@ -90,8 +90,8 @@ function opportunityPriority(items) {
 
 function newsPriority(items) {
   return items.slice().sort((a,b) => {
-    const pa = isUpdatedToday(a) ? 0 : isNewToday(a) ? 1 : 2;
-    const pb = isUpdatedToday(b) ? 0 : isNewToday(b) ? 1 : 2;
+    const pa = isNewToday(a) ? 0 : isUpdatedToday(a) ? 1 : 2;
+    const pb = isNewToday(b) ? 0 : isUpdatedToday(b) ? 1 : 2;
     if (pa !== pb) return pa - pb;
     return latestDateValue(b).localeCompare(latestDateValue(a));
   });
