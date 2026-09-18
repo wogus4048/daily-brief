@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generatedAt": "2026-09-18T13:54:00+09:00",
+  "generatedAt": "2026-09-18T14:00:00+09:00",
   "contests": [
     {
       "id": "wanted-ai-championship-2026",
@@ -247,98 +247,7 @@
       ]
     }
   ],
-  "support": [
-    {
-      "id": "busan-ax-clinic-2026-2",
-      "categoryLabel": "지원사업 · 부산",
-      "icon": "🏭",
-      "title": "2026 부산 AX클리닉 지원기업 2차 모집",
-      "summary": "부산 소재 AI 솔루션 기업과 제조기업을 대상으로 AI 도입 사전진단·맞춤 컨설팅·기술매칭을 지원합니다.",
-      "description": "부산 제조업 AI융합 기반 조성 사업의 일환으로 AI 솔루션 공급기업 또는 제조 수요기업을 대상으로 기업별 맞춤형 AX 컨설팅을 제공합니다.",
-      "dDay": "오늘 마감",
-      "deadlineText": "09.18",
-      "tags": [
-        "부산",
-        "AI",
-        "제조업",
-        "컨설팅"
-      ],
-      "period": "2026.09.09 ~ 09.18",
-      "reward": "AI 도입 사전진단 + 분야별 전문가 1:1 맞춤 컨설팅 최대 2회 + 기술매칭데이 참여",
-      "participation": "사업공고일 기준 부산 소재 AI솔루션 개발기업 또는 제조공장 등",
-      "preStartup": "기업 대상 사업으로 예비창업자 개인 신청 대상은 아님",
-      "employment": "기업 단위 신청",
-      "businessRegistration": "부산 소재 기업 요건 확인 필요",
-      "evaluation": "공고문 및 수행기관 확인 필요",
-      "aiSupport": "AI 도입 사전진단, 솔루션 현장 적용 컨설팅, 기술 매칭",
-      "links": [
-        {
-          "label": "기업마당 공식 공고",
-          "url": "https://bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126365"
-        }
-      ]
-    },
-    {
-      "id": "gwangyang-ai-manufacturing-2026",
-      "categoryLabel": "지원사업 · 광양",
-      "icon": "⚙️",
-      "title": "광양 제조 산업 AI융합 실증 지원",
-      "summary": "광양 제조기업의 AI 전환을 위해 제조 데이터·IoT·공정 최적화·디지털트윈 실증을 지원합니다.",
-      "description": "광양 지역 중소·중견 제조기업 중 AI 전환을 희망하는 기업을 대상으로 실시간 데이터 연계와 제조혁신 실증을 지원하는 사업입니다.",
-      "dDay": "D-3",
-      "deadlineText": "09.21",
-      "tags": [
-        "광양",
-        "AX",
-        "IoT",
-        "디지털트윈"
-      ],
-      "period": "2026.09.08 ~ 09.21",
-      "reward": "MES·IoT 데이터 수집 인프라, 공정 최적화·디지털트윈 플랫폼, 품질 이상 패턴 분석 지원",
-      "participation": "광양 내 제조기업 중 AI 전환을 희망하는 기업",
-      "preStartup": "기업 대상 사업. 개인 예비창업자 대상 아님",
-      "employment": "기업 단위 신청",
-      "businessRegistration": "광양 내 제조기업 요건 필요",
-      "evaluation": "공고문 및 수행기관 확인 필요",
-      "aiSupport": "제조 데이터 플랫폼·IoT·공정 최적화·품질 이상 분석 실증",
-      "links": [
-        {
-          "label": "기업마당 공식 공고",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126347"
-        }
-      ]
-    },
-    {
-      "id": "gyeongbuk-tips-candidate-2026-3",
-      "categoryLabel": "지원사업 · 경북",
-      "icon": "🚀",
-      "title": "2026 경북 TIPS 후보기업 3차 모집",
-      "summary": "기술창업기업을 대상으로 1,000만원 상당 바우처·컨설팅·TIPS 운영사 추천 연계를 지원합니다.",
-      "description": "경북창조경제혁신센터가 7년 미만 창업기업을 중심으로 TIPS 후보기업을 발굴하는 프로그램입니다. 신산업 분야는 창업 10년 이내까지 인정됩니다.",
-      "dDay": "D-10",
-      "deadlineText": "09.28",
-      "tags": [
-        "경북",
-        "TIPS",
-        "스타트업",
-        "ICT"
-      ],
-      "period": "2026.09.08 ~ 09.28",
-      "reward": "기업당 1,000만원 상당 바우처 + 후보기업 컨설팅 + TIPS 운영사 추천 TO 연계",
-      "participation": "7년 미만 창업기업(신산업 10년 이내), 경북 소재 또는 경북 이전·설립 예정기업",
-      "preStartup": "이미 창업한 기업 대상. 순수 예비창업자는 대상 아님",
-      "employment": "기업 단위 신청",
-      "businessRegistration": "창업기업 요건 및 경북 소재·이전 예정 조건 필요",
-      "evaluation": "공고문 세부 선발 절차 확인 필요",
-      "aiSupport": "ICT 서비스·플랫폼 등 4차 산업 분야 포함, TIPS 연계 지원",
-      "links": [
-        {
-          "label": "기업마당 공식 공고",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126317"
-        }
-      ]
-    }
-  ],
+  "support": [],
   "archive": [
     "2026-09-18"
   ]
