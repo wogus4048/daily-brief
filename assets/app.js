@@ -73,6 +73,9 @@ function renderShared() {
   $("#navContestCount").textContent = (data.contests || []).length;
   $("#navAiCount").textContent = (data.aiNews || []).length;
   $("#navSupportCount").textContent = (data.support || []).length;
+  const hasSupport = (data.support || []).length > 0;
+  $("#supportNav").hidden = !hasSupport;
+  $("#mobileSupportNav").hidden = !hasSupport;
 }
 
 function hideAllViews() {
@@ -80,7 +83,7 @@ function hideAllViews() {
 }
 
 function setActiveNav(routeName) {
-  document.querySelectorAll(".nav-item").forEach(el => {
+  document.querySelectorAll(".nav-item, .mobile-tab").forEach(el => {
     el.classList.toggle("active", el.dataset.route === routeName);
   });
 }
@@ -170,6 +173,7 @@ function renderHome() {
 
   $("#homeSupportPanel").hidden = support.length === 0;
   $("#supportNav").hidden = support.length === 0;
+  $("#mobileSupportNav").hidden = support.length === 0;
 }
 
 function renderFeatured(contests, support) {
