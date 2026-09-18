@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generatedAt": "2026-09-18T14:00:00+09:00",
+  "generatedAt": "2026-09-18T15:20:00+09:00",
   "contests": [
     {
       "id": "wanted-ai-championship-2026",
@@ -116,6 +116,136 @@
         {
           "label": "FAQ",
           "url": "https://www.devcontest-digitalsolveup.kr/notice/18"
+        }
+      ]
+    },
+    {
+      "id": "dacon-deepvoice-236749",
+      "categoryLabel": "AI 경진대회 · DACON",
+      "icon": "🎧",
+      "title": "딥보이스 범죄 대응을 위한 AI 탐지 모델 경진대회",
+      "summary": "음성·음악의 존재 여부와 AI 생성·변조 여부를 판별하는 오디오 AI 모델 경진대회",
+      "description": "보이스피싱 등 신종 음성 범죄 대응을 위해 오디오에 포함된 음성·음악의 존재 여부와 AI 생성 여부를 탐지하는 모델을 개발합니다. 코드 제출 방식으로 진행됩니다.",
+      "dDay": "D-11",
+      "deadlineText": "09.29 10:00",
+      "tags": [
+        "DACON",
+        "오디오 AI",
+        "딥보이스",
+        "개인 참가"
+      ],
+      "period": "참가 신청 2026.08.18 10:00 ~ 09.29 10:00 / 대회 종료 09.30 10:00",
+      "reward": "총 상금 4,200만원",
+      "participation": "대한민국 국민 누구나. 개인 또는 최대 5인 팀",
+      "preStartup": "사업자등록 여부와 무관하게 참가 가능 여부가 안내되어 있으며 참가 자격은 대한민국 국민 누구나",
+      "employment": "재직자 제한 별도 명시 없음",
+      "businessRegistration": "참가 신청 시 사업자등록 요구 명시 없음",
+      "evaluation": "1차 Private 리더보드 → 상위 15팀 2차 평가 → 최종 상위 7팀 수상",
+      "aiSupport": "사전학습 모델·API·외부 데이터 등은 규칙 범위 내 활용 가능. 평가 서버는 오프라인 실행",
+      "ideas": [
+        "사전학습 오디오 임베딩 + 경량 분류기로 딥보이스 여부 탐지",
+        "음성/음악 존재 여부와 fake 확률을 멀티태스크로 예측하는 모델",
+        "전화채널·압축 포맷 변형에 강한 오디오 전처리 파이프라인"
+      ],
+      "links": [
+        {
+          "label": "DACON 대회 안내",
+          "url": "https://www.dacon.io/competitions/official/236749/overview/description"
+        },
+        {
+          "label": "참가 규칙",
+          "url": "https://www.dacon.io/competitions/official/236749/overview/rules"
+        },
+        {
+          "label": "일정",
+          "url": "https://www.dacon.io/competitions/official/236749/overview/schedule"
+        }
+      ]
+    },
+    {
+      "id": "dacon-blackbox-236753",
+      "categoryLabel": "AI 경진대회 · DACON",
+      "icon": "🚗",
+      "title": "블랙박스 영상 기반 지능형 고의사고 분석 모델 AI 경진대회",
+      "summary": "블랙박스 영상으로 재녹화 여부, 사고 주요시점, 차량 거동을 분석하는 컴퓨터비전 경진대회",
+      "description": "블랙박스 영상만을 입력으로 사용해 사고의 주요시점과 상황, 차량의 가감속·조향 특성 등을 자동 산출하는 AI 모델을 개발합니다.",
+      "dDay": "D-11",
+      "deadlineText": "09.29 10:00",
+      "tags": [
+        "DACON",
+        "컴퓨터비전",
+        "영상 AI",
+        "개인 참가"
+      ],
+      "period": "참가 신청 2026.08.18 10:00 ~ 09.29 10:00 / 대회 종료 09.30 10:00",
+      "reward": "총 상금 4,200만원",
+      "participation": "대한민국 국민 누구나. 개인 또는 최대 5인 팀",
+      "preStartup": "사업자등록 여부와 무관하게 참가 가능 여부가 안내되어 있으며 참가 자격은 대한민국 국민 누구나",
+      "employment": "재직자 제한 별도 명시 없음",
+      "businessRegistration": "참가 신청 시 사업자등록 요구 명시 없음",
+      "evaluation": "1차 Private 리더보드 → 상위 15팀 2차 평가 → 최종 상위 7팀 수상",
+      "aiSupport": "사전학습 모델, API, 외부 데이터 수집·생성 등 규칙 범위 내 활용 가능",
+      "ideas": [
+        "영상 재녹화 탐지 + 사고 시점 탐지를 분리한 2단계 파이프라인",
+        "비디오 특징 추출 후 사고 구간·차량 거동을 시계열 분류",
+        "프레임 샘플링과 경량 비디오 모델을 조합해 추론시간 최적화"
+      ],
+      "links": [
+        {
+          "label": "DACON 대회 안내",
+          "url": "https://www.dacon.io/competitions/official/236753/overview/description"
+        },
+        {
+          "label": "참가 규칙",
+          "url": "https://www.dacon.io/competitions/official/236753/overview/rules"
+        },
+        {
+          "label": "일정",
+          "url": "https://www.dacon.io/competitions/official/236753/overview/schedule"
+        }
+      ]
+    },
+    {
+      "id": "dacon-koneps-236754",
+      "categoryLabel": "AI 경진대회 · DACON",
+      "icon": "📑",
+      "title": "나라장터 자체입찰 공고 법령 위반사항 모니터링 AI 경진대회",
+      "summary": "나라장터 공고문·첨부문서·메타데이터를 분석해 법령 위반 여부와 근거를 찾는 LLM 파이프라인 경진대회",
+      "description": "고정 LLM 기반으로 공고문과 첨부문서, 나라장터 메타데이터를 분석해 24개 검토 항목의 법령 위반 여부와 판단 근거 문구를 출력하는 추론 파이프라인을 개발합니다.",
+      "dDay": "D-11",
+      "deadlineText": "09.29 10:00",
+      "tags": [
+        "DACON",
+        "LLM",
+        "BGE-M3",
+        "법령",
+        "개인 참가"
+      ],
+      "period": "참가 신청 2026.08.18 10:00 ~ 09.29 10:00 / 대회 종료 09.30 10:00",
+      "reward": "총 상금 4,200만원",
+      "participation": "대한민국 국민 누구나. 개인 또는 최대 5인 팀",
+      "preStartup": "사업자등록 여부와 무관하게 참가 가능 여부가 안내되어 있으며 참가 자격은 대한민국 국민 누구나",
+      "employment": "재직자 제한 별도 명시 없음",
+      "businessRegistration": "참가 신청 시 사업자등록 요구 명시 없음",
+      "evaluation": "Macro F1 기반 1차 평가 + 상위 15팀 2차 재현 검증·정성평가",
+      "aiSupport": "평가 서버에 고정 LLM google/gemma-4-26B-A4B-it와 BAAI/bge-m3 제공. 파인튜닝/LoRA는 허용되지 않음",
+      "ideas": [
+        "법령 조항 검색용 BGE-M3 임베딩 + 고정 LLM 추론 파이프라인",
+        "24개 위반 항목별 검색 쿼리·프롬프트를 분리해 근거 문구 정확도 개선",
+        "첨부문서·공고문·메타데이터를 단계별로 정규화하는 전처리 파이프라인"
+      ],
+      "links": [
+        {
+          "label": "DACON 대회 안내",
+          "url": "https://www.dacon.io/competitions/official/236754/overview/description"
+        },
+        {
+          "label": "참가 규칙",
+          "url": "https://www.dacon.io/competitions/official/236754/overview/rules"
+        },
+        {
+          "label": "일정",
+          "url": "https://www.dacon.io/competitions/official/236754/overview/schedule"
         }
       ]
     }
