@@ -1214,3 +1214,121 @@ body{
     font-size:14px;
   }
 }
+
+
+/* 2026-09-18 readability pass — everything except the main hero headline */
+body{font-size:18px}
+
+.topbar-search{font-size:15px}
+.topbar-date{font-size:14px}
+.overline,.section-eyebrow{font-size:13px}
+.hero-sub{font-size:18px}
+
+.section-head h2,.panel-head h2{font-size:29px}
+.view-all{font-size:15px}
+.section-today-count{font-size:16px}
+
+.featured-badge,.featured-meta{font-size:13px}
+.featured-title{font-size:35px}
+.featured-summary{font-size:17px}
+.featured-facts .flow-fact span{font-size:14px}
+.featured-facts .flow-fact strong{font-size:16px}
+.featured-cta{font-size:16px}
+
+.compact-status,.compact-category{font-size:13px}
+.compact-item.compact-flow h3{font-size:21px}
+.compact-item.compact-flow p{font-size:16px;line-height:1.7}
+.compact-foot{font-size:14px}
+
+.category-head h1{font-size:42px}
+.category-head p:not(.section-eyebrow){font-size:17px}
+.category-count{font-size:16px}
+.filter-chip{font-size:14px}
+.sort-select{font-size:14px}
+
+.meta-status,.meta-label{font-size:14px}
+.category-card .category-item-title{font-size:28px}
+.category-card .category-item-summary{font-size:17px;line-height:1.75}
+.category-tag{font-size:13px}
+.category-facts-flow .flow-fact span{font-size:14px}
+.category-facts-flow .flow-fact strong{font-size:16px}
+.category-explainer span{font-size:14px}
+.category-explainer p{font-size:16px}
+.category-action{font-size:15px}
+
+.back-link{font-size:15px}
+.detail-pill{font-size:13px}
+.detail-page-title h1{font-size:44px}
+.detail-page-title p{font-size:19px}
+.primary-link,.secondary-link{font-size:15px}
+.detail-block h2{font-size:27px}
+.block-desc{font-size:15px}
+.info-row dt{font-size:15px}
+.info-row dd{font-size:17px}
+.idea-index{font-size:12px}
+.idea-item p{font-size:17px}
+.official-link-list a{font-size:16px}
+
+.archive-day small{font-size:12px}
+.archive-day strong{font-size:24px}
+.archive-card small{font-size:13px}
+.archive-card strong{font-size:23px}
+.archive-card span{font-size:14px}
+
+.search-head input{font-size:17px}
+.search-result b{font-size:16px}
+.search-result span{font-size:14px}
+
+.mobile-tab small{font-size:11px}
+
+@media(max-width:620px){
+  body{font-size:17px}
+  .topbar-search{font-size:14px}
+  .overline,.section-eyebrow{font-size:12px}
+  .hero-sub{font-size:17px}
+
+  .section-head h2,.panel-head h2{font-size:27px}
+  .view-all{font-size:14px}
+  .section-today-count{font-size:15px}
+
+  .featured-badge,.featured-meta{font-size:12px}
+  .featured-title{font-size:31px}
+  .featured-summary{font-size:16px}
+  .featured-facts .flow-fact span{font-size:13px}
+  .featured-facts .flow-fact strong{font-size:15px}
+  .featured-cta{font-size:15px}
+
+  .compact-status,.compact-category{font-size:12px}
+  .compact-item.compact-flow h3{font-size:20px}
+  .compact-item.compact-flow p{font-size:15px}
+  .compact-foot{font-size:14px}
+
+  .category-head h1{font-size:34px}
+  .category-head p:not(.section-eyebrow){font-size:16px}
+  .filter-chip,.sort-select{font-size:14px}
+  .meta-status,.meta-label{font-size:13px}
+  .category-card .category-item-title{font-size:25px}
+  .category-card .category-item-summary{font-size:16px}
+  .category-tag{font-size:12px}
+  .category-facts-flow .flow-fact span{font-size:13px}
+  .category-facts-flow .flow-fact strong{font-size:15px}
+  .category-explainer span{font-size:13px}
+  .category-explainer p{font-size:15px}
+  .category-action{font-size:14px}
+
+  .back-link{font-size:14px}
+  .detail-page-title h1{font-size:36px}
+  .detail-page-title p{font-size:17px}
+  .detail-pill{font-size:12px}
+  .primary-link,.secondary-link{font-size:14px}
+  .detail-block h2{font-size:24px}
+  .block-desc{font-size:14px}
+  .info-row dt{font-size:14px}
+  .info-row dd{font-size:16px}
+  .idea-item p{font-size:16px}
+  .official-link-list a{font-size:15px}
+
+  .search-head input{font-size:16px}
+  .search-result b{font-size:15px}
+  .search-result span{font-size:13px}
+}
