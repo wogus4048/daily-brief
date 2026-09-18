@@ -138,9 +138,9 @@ function renderShared() {
   const data = state.data;
   $("#topbarDate").textContent = formatDate(data.date);
   $("#year").textContent = new Date().getFullYear();
-  $("#navContestCount").textContent = (data.contests || []).length;
+  $("#navContestCount").textContent = (data.contests || []).filter(isOpenItem).length;
   $("#navAiCount").textContent = (data.aiNews || []).length;
-  $("#navSupportCount").textContent = (data.support || []).length;
+  $("#navSupportCount").textContent = (data.support || []).filter(isOpenItem).length;
   const hasSupport = (data.support || []).length > 0;
   $("#supportNav").hidden = !hasSupport;
   $("#mobileSupportNav").hidden = !hasSupport;
@@ -243,7 +243,7 @@ function renderHome() {
   renderCompact("#homeSupportList", opportunityPriority(openSupport).slice(0, 4), "support");
   renderArchiveStrip("#homeArchiveDays", state.data.archive || []);
 
-  $("#homeSupportPanel").hidden = support.length === 0;
+  $("#homeSupportPanel").hidden = openSupport.length === 0;
   $("#supportNav").hidden = support.length === 0;
   $("#mobileSupportNav").hidden = support.length === 0;
 }
