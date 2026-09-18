@@ -297,7 +297,7 @@ function renderCompact(sel, items, kind) {
   el.innerHTML = items.map(item => {
     const isAi = kind === "ai";
     const status = isAi
-      ? (isNewToday(item) ? "오늘 신규" : isUpdatedToday(item) ? "오늘 업데이트" : "누적 이슈")
+      ? ("최근 " + shortDate(item.lastUpdatedDate || item.firstSeenDate))
       : (!isOpenItem(item) ? "종료" : (item.dDay || "접수중"));
     const category = isAi ? "AI NEWS" : kind === "support" ? "지원사업" : "공모전 · 해커톤";
     const foot = isAi
@@ -500,7 +500,7 @@ function renderCategoryList(type) {
       '<article class="category-card ' + (!isOpenItem(item) ? "is-closed" : "") + '" data-id="' + esc(item.id) + '">' +
         '<div class="category-item-meta">' +
           changeBadge(item, kind) +
-          '<span class="meta-status ' + dangerClass(item) + '">' + esc(!isOpenItem(item) ? "종료" : (item.dDay || "접수중")) + '</span>' +
+          '<span class="meta-status ' + (isOpenItem(item) ? dangerClass(item) : "") + '">' + esc(!isOpenItem(item) ? "종료" : (item.dDay || "접수중")) + '</span>' +
           '<span class="meta-label">' + (kind === "support" ? "지원사업" : "공모전 · 해커톤") + '</span>' +
           '<span class="meta-label">처음 ' + esc(shortDate(item.firstSeenDate)) + '</span>' +
           '<span class="meta-label">확인 ' + esc(shortDate(item.lastVerifiedDate || item.firstSeenDate)) + '</span>' +
