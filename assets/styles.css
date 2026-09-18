@@ -890,3 +890,76 @@ footer{
     margin-top:10vh;
   }
 }
+
+
+/* Dashboard summary should explain, not just count */
+.home-summary{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  width:100%;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+}
+.home-summary-row{
+  position:relative;
+  display:block;
+  padding:17px 46px 17px 17px;
+  border-bottom:1px solid var(--line);
+  background:#fff;
+}
+.home-summary-row:last-child{border-bottom:0}
+.home-summary-row:hover{background:#fafafa}
+.summary-heading{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:14px;
+}
+.summary-heading span{
+  color:#555c67;
+  font-size:13px;
+  font-weight:850;
+}
+.summary-heading strong{
+  color:#17191f;
+  font-size:18px;
+  white-space:nowrap;
+}
+.home-summary-row.urgent .summary-heading span,
+.home-summary-row.urgent .summary-heading strong{
+  color:var(--danger);
+}
+.home-summary-row p{
+  margin:6px 0 0;
+  color:#747b86;
+  font-size:13px;
+  line-height:1.5;
+}
+.summary-arrow{
+  position:absolute;
+  right:17px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#a8adb5;
+  font-size:17px;
+}
+.hero-stats{display:none!important}
+
+@media(max-width:620px){
+  .home-summary-row{
+    padding:15px 42px 15px 15px;
+  }
+  .summary-heading span{
+    font-size:12px;
+  }
+  .summary-heading strong{
+    font-size:16px;
+  }
+  .home-summary-row p{
+    font-size:12px;
+    line-height:1.55;
+  }
+}
