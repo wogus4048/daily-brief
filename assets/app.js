@@ -103,6 +103,19 @@ function changeBadge(item, kind) {
   return "";
 }
 
+function dateMetaHtml(item, kind) {
+  const first = shortDate(item.firstSeenDate);
+  const second = kind === "ai"
+    ? shortDate(item.lastUpdatedDate || item.firstSeenDate)
+    : shortDate(item.lastVerifiedDate || item.firstSeenDate);
+  const secondLabel = kind === "ai" ? "최종 업데이트" : "최종 확인";
+
+  return '<div class="card-date-meta">' +
+    (first ? '<span><b>발견일</b> ' + esc(first) + '</span>' : '') +
+    (second ? '<span><b>' + secondLabel + '</b> ' + esc(second) + '</span>' : '') +
+  '</div>';
+}
+
 function dangerClass(item) { return isToday(item) ? "danger" : ""; }
 
 function itemKind(item) {
@@ -296,16 +309,24 @@ function renderCompact(sel, items, kind) {
 
   el.innerHTML = items.map(item => {
     const isAi = kind === "ai";
-    const status = isAi
-      ? ("최근 " + shortDate(item.lastUpdatedDate || item.firstSeenDate))
-      : (!isOpenItem(item) ? "종료" : (item.dDay || "접수중"));
-    const category = isAi ? "AI NEWS" : kind === "support" ? "지원사업" : "공모전 · 해커톤";
+    const category = isAi ? "AI 뉴스" : kind === "support" ? "지원사업" : "공모전 · 해커톤";
+    const primaryStatus = isAi
+      ? ""
+      : '<span class="compact-status ' + dangerClass(item) + '">' + esc(!isOpenItem(item) ? "종료" : (item.dDay || "접수중")) + '</span>';
+
     const foot = isAi
-      ? "처음 " + shortDate(item.firstSeenDate) + " · 업데이트 " + shortDate(item.lastUpdatedDate || item.firstSeenDate)
-      : "처음 " + shortDate(item.firstSeenDate) + " · 마지막 확인 " + shortDate(item.lastVerifiedDate || item.firstSeenDate);
+      ? ((item.tags || []).slice(0,3).join(" · ") || "AI")
+      : "마감 " + txt(item.deadlineText || item.dDay);
 
     return '<article class="compact-item compact-flow" data-id="' + esc(item.id) + '">' +
-      '<div class="compact-meta"><span class="compact-status ' + (!isAi ? dangerClass(item) : "") + '">' + esc(status) + '</span><span class="compact-category">' + category + '</span>' + changeBadge(item, kind) + '</div>' +
+      '<div class="card-meta-row">' +
+        '<div class="card-status-group">' +
+          changeBadge(item, kind) +
+          primaryStatus +
+          '<span class="compact-category">' + category + '</span>' +
+        '</div>' +
+        dateMetaHtml(item, kind) +
+      '</div>' +
       '<h3>' + esc(item.title) + '</h3>' +
       '<p>' + esc(item.summary || "") + '</p>' +
       '<div class="compact-foot">' + esc(foot) + ' <span>→</span></div>' +
@@ -340,19 +361,19 @@ function renderCategory(type) {
 
   const configs = {
     contests: {
-      eyebrow:"OPPORTUNITIES",
+      eyebrow:"현재 신청 가능",
       title:"공모전 · 해커톤",
-      description:"한번 찾은 공고는 누적해 관리합니다. 진행중·신규·마감 임박·종료 이력을 한곳에서 볼 수 있습니다."
+      description:"진행 중인 공고를 기본으로 보여드립니다. 새로 발견한 공고와 마감이 가까운 공고를 먼저 확인하세요."
     },
     "ai-news": {
-      eyebrow:"AI SIGNALS",
+      eyebrow:"새 이슈 · 후속 업데이트",
       title:"AI 뉴스",
-      description:"같은 이슈를 새 카드로 반복하지 않고 하나의 이슈에 후속 내용을 계속 쌓아갑니다."
+      description:"완전히 새로운 이슈는 추가하고, 같은 이슈의 후속 소식은 기존 항목에 업데이트로 이어서 기록합니다."
     },
     support: {
-      eyebrow:"SUPPORT",
+      eyebrow:"현재 신청 가능",
       title:"지원사업",
-      description:"발견한 지원사업을 누적 관리하고, 신청 가능 상태와 변경 이력을 계속 확인합니다."
+      description:"실제로 신청 가능한 지원사업을 기본으로 보여드리고, 종료된 공고도 이력으로 보관합니다."
     }
   };
 
@@ -466,10 +487,10 @@ function renderCategoryList(type) {
   const newCount = source.filter(isNewToday).length;
   const updatedCount = source.filter(isUpdatedToday).length;
   if (type === "ai-news") {
-    $("#categoryCount").textContent = "표시 " + items.length + " · 신규 " + newCount + " · 업데이트 " + updatedCount + " · 누적 " + source.length;
+    $("#categoryCount").textContent = "전체 " + source.length + " · 오늘 신규 " + newCount + " · 업데이트 " + updatedCount;
   } else {
     const openCount = source.filter(isOpenItem).length;
-    $("#categoryCount").textContent = "표시 " + items.length + " · 진행중 " + openCount + " · 신규 " + newCount + " · 누적 " + source.length;
+    $("#categoryCount").textContent = "진행중 " + openCount + " · 오늘 신규 " + newCount + " · 전체 " + source.length;
   }
 
   const el = $("#categoryList");
@@ -481,29 +502,31 @@ function renderCategoryList(type) {
   if (type === "ai-news") {
     el.innerHTML = items.map(item =>
       '<article class="category-card ai-category-card" data-id="' + esc(item.id) + '">' +
-        '<div class="category-item-meta">' +
-          changeBadge(item, "ai") +
-          '<span class="meta-label">AI NEWS</span>' +
-          '<span class="meta-label">처음 ' + esc(shortDate(item.firstSeenDate)) + '</span>' +
-          '<span class="meta-label">최근 ' + esc(shortDate(item.lastUpdatedDate || item.firstSeenDate)) + '</span>' +
+        '<div class="card-meta-row">' +
+          '<div class="card-status-group">' +
+            changeBadge(item, "ai") +
+            '<span class="meta-label">AI 뉴스</span>' +
+          '</div>' +
+          dateMetaHtml(item, "ai") +
         '</div>' +
         '<h3 class="category-item-title">' + esc(item.title) + '</h3>' +
         '<p class="category-item-summary">' + esc(item.summary || "") + '</p>' +
         tagsHtml(item.tags) +
-        '<div class="category-explainer"><span>왜 볼까?</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
-        '<div class="category-action">업데이트 기록 보기 <span>→</span></div>' +
+        '<div class="category-explainer"><span>왜 중요한가</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
+        '<div class="category-action">업데이트 기록과 상세 내용 보기 <span>→</span></div>' +
       '</article>'
     ).join("");
   } else {
     const kind = type === "support" ? "support" : "contest";
     el.innerHTML = items.map(item =>
       '<article class="category-card ' + (!isOpenItem(item) ? "is-closed" : "") + '" data-id="' + esc(item.id) + '">' +
-        '<div class="category-item-meta">' +
-          changeBadge(item, kind) +
-          '<span class="meta-status ' + (isOpenItem(item) ? dangerClass(item) : "") + '">' + esc(!isOpenItem(item) ? "종료" : (item.dDay || "접수중")) + '</span>' +
-          '<span class="meta-label">' + (kind === "support" ? "지원사업" : "공모전 · 해커톤") + '</span>' +
-          '<span class="meta-label">처음 ' + esc(shortDate(item.firstSeenDate)) + '</span>' +
-          '<span class="meta-label">확인 ' + esc(shortDate(item.lastVerifiedDate || item.firstSeenDate)) + '</span>' +
+        '<div class="card-meta-row">' +
+          '<div class="card-status-group">' +
+            changeBadge(item, kind) +
+            '<span class="meta-status ' + (isOpenItem(item) ? dangerClass(item) : "") + '">' + esc(!isOpenItem(item) ? "종료" : (item.dDay || "접수중")) + '</span>' +
+            '<span class="meta-label">' + (kind === "support" ? "지원사업" : "공모전 · 해커톤") + '</span>' +
+          '</div>' +
+          dateMetaHtml(item, kind) +
         '</div>' +
         '<h3 class="category-item-title">' + esc(item.title) + '</h3>' +
         '<p class="category-item-summary">' + esc(item.summary || "") + '</p>' +
@@ -511,9 +534,9 @@ function renderCategoryList(type) {
         '<div class="category-facts-flow">' +
           '<div class="flow-fact"><span>마감</span><strong>' + esc(txt(item.deadlineText || item.dDay)) + '</strong></div>' +
           '<div class="flow-fact"><span>' + (kind === "support" ? "지원 / 혜택" : "상금 / 보상") + '</span><strong>' + esc(txt(item.reward || item.aiSupport)) + '</strong></div>' +
-          '<div class="flow-fact"><span>' + (kind === "support" ? "지원 대상" : "참가") + '</span><strong>' + esc(txt(item.participation)) + '</strong></div>' +
+          '<div class="flow-fact"><span>' + (kind === "support" ? "지원 대상" : "참가 조건") + '</span><strong>' + esc(txt(item.participation)) + '</strong></div>' +
         '</div>' +
-        '<div class="category-action">상세 보기 <span>→</span></div>' +
+        '<div class="category-action">상세 내용 보기 <span>→</span></div>' +
       '</article>'
     ).join("");
   }
@@ -574,23 +597,18 @@ function renderOpportunityDetail(item, kind) {
       changeBadge(item, kind) +
       '<span class="detail-pill">' + esc(isOpenItem(item) ? (item.dDay || "진행중") : "종료") + '</span>' +
       '<span class="detail-pill">' + category + '</span>' +
-    '</div><h1>' + esc(item.title) + '</h1><p>' + esc(item.description || item.summary || "") + '</p>';
+    '</div><h1>' + esc(item.title) + '</h1><p>' + esc(item.description || item.summary || "") + '</p>' +
+    '<div class="detail-date-line"><span><b>발견일</b> ' + esc(shortDate(item.firstSeenDate)) + '</span><span><b>최종 확인</b> ' + esc(shortDate(item.lastVerifiedDate || item.firstSeenDate)) + '</span>' +
+    (item.lastUpdatedDate ? '<span><b>정보 수정</b> ' + esc(shortDate(item.lastUpdatedDate)) + '</span>' : '') + '</div>';
 
   $("#detailTopActions").innerHTML = links.slice(0,2).map((l,i) =>
     '<a class="' + (i === 0 ? "primary-link" : "secondary-link") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + ' ↗</a>'
   ).join("");
 
-  const tracking = [
-    ["상태", isOpenItem(item) ? "진행중" : "종료"],
-    ["처음 발견", item.firstSeenDate],
-    ["마지막 공식 확인", item.lastVerifiedDate],
-    ["내용 마지막 변경", item.lastUpdatedDate]
-  ].filter(x => x[1]);
-
   const core = [
     ["마감", item.deadlineText || item.dDay],
     ["접수 / 일정", item.period],
-    ["참가 / 대상", item.participation],
+    ["참가 조건", item.participation],
     ["상금 / 지원", item.reward]
   ].filter(x => x[1]);
 
@@ -606,11 +624,10 @@ function renderOpportunityDetail(item, kind) {
   ].filter(x => x[1]);
 
   $("#detailContent").innerHTML =
-    infoBlock("추적 정보","처음 발견한 뒤 같은 공고를 계속 재검증합니다.",tracking) +
-    infoBlock("핵심 정보","신청 전에 가장 먼저 확인할 내용입니다.",core) +
-    infoBlock("지원 자격","내가 실제로 신청 가능한지 확인합니다.",eligible) +
+    infoBlock("핵심 정보","신청 여부를 판단할 때 먼저 볼 내용입니다.",core) +
+    infoBlock("신청 자격","실제로 참여 가능한지 확인합니다.",eligible) +
     infoBlock("진행 방식","",process) +
-    (ideas.length ? ideaBlock(kind === "support" ? "어떻게 활용할까?" : "뭘 만들어볼까?", ideas) : "") +
+    (ideas.length ? ideaBlock(kind === "support" ? "활용 아이디어" : "만들어볼 아이디어", ideas) : "") +
     (links.length ? '<section class="detail-block"><h2>공식 링크</h2><div class="official-link-list">' + links.map(l => '<a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer"><span>' + esc(l.label) + '</span><span>↗</span></a>').join("") + '</div></section>' : '');
 
   $("#detailAside").innerHTML = "";
@@ -623,10 +640,9 @@ function renderNewsDetail(item) {
   $("#detailHeader").innerHTML =
     '<div class="detail-kicker">' +
       changeBadge(item, "ai") +
-      '<span class="detail-pill">AI NEWS</span>' +
-      '<span class="detail-pill">처음 ' + esc(shortDate(item.firstSeenDate)) + '</span>' +
-      '<span class="detail-pill">최근 ' + esc(shortDate(item.lastUpdatedDate || item.firstSeenDate)) + '</span>' +
-    '</div><h1>' + esc(item.title) + '</h1><p>' + esc(item.summary || "") + '</p>';
+      '<span class="detail-pill">AI 뉴스</span>' +
+    '</div><h1>' + esc(item.title) + '</h1><p>' + esc(item.summary || "") + '</p>' +
+    '<div class="detail-date-line"><span><b>발견일</b> ' + esc(shortDate(item.firstSeenDate)) + '</span><span><b>최종 업데이트</b> ' + esc(shortDate(item.lastUpdatedDate || item.firstSeenDate)) + '</span></div>';
 
   $("#detailTopActions").innerHTML = links.slice(0,2).map((l,i) =>
     '<a class="' + (i === 0 ? "primary-link" : "secondary-link") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + ' ↗</a>'
@@ -635,8 +651,8 @@ function renderNewsDetail(item) {
   $("#detailContent").innerHTML =
     updateTimeline(item.updates || []) +
     infoBlock("현재 핵심","",[["내용",item.description || item.summary]]) +
-    infoBlock("왜 봐야 해?","",[["의미",item.why || item.description || item.summary]]) +
-    (ideas.length ? ideaBlock("어떻게 써볼까?",ideas) : "") +
+    infoBlock("왜 중요한가","",[["의미",item.why || item.description || item.summary]]) +
+    (ideas.length ? ideaBlock("직접 써볼 방법",ideas) : "") +
     (links.length ? '<section class="detail-block"><h2>공식 링크</h2><div class="official-link-list">' + links.map(l => '<a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer"><span>' + esc(l.label) + '</span><span>↗</span></a>').join("") + '</div></section>' : '');
 
   $("#detailAside").innerHTML = "";
