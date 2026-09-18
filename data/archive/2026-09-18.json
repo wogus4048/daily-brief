@@ -35,7 +35,8 @@
           "label": "공식 안내 / 참가",
           "url": "https://static.wanted.co.kr/ai-championship/2026/landing.html"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     },
     {
       "id": "govtech-2026",
@@ -74,7 +75,8 @@
           "label": "NIPA 공식 공고",
           "url": "https://nipa.kr/home/2-1/16908"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     },
     {
       "id": "digital-solveup-2026",
@@ -117,7 +119,8 @@
           "label": "FAQ",
           "url": "https://www.devcontest-digitalsolveup.kr/notice/18"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     },
     {
       "id": "dacon-deepvoice-236749",
@@ -160,7 +163,8 @@
           "label": "일정",
           "url": "https://www.dacon.io/competitions/official/236749/overview/schedule"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     },
     {
       "id": "dacon-blackbox-236753",
@@ -203,7 +207,8 @@
           "label": "일정",
           "url": "https://www.dacon.io/competitions/official/236753/overview/schedule"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     },
     {
       "id": "dacon-koneps-236754",
@@ -247,7 +252,8 @@
           "label": "일정",
           "url": "https://www.dacon.io/competitions/official/236754/overview/schedule"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     },
     {
       "id": "daytona-hacksprint-seoul-2026",
@@ -283,7 +289,8 @@
           "label": "공식 참가 페이지",
           "url": "https://luma.com/daytonaseoul?locale=ko"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     },
     {
       "id": "habsida-hackathon-2026",
@@ -319,7 +326,8 @@
           "label": "공식 참가 페이지",
           "url": "https://luma.com/cwaixvls"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     },
     {
       "id": "nebius-nvidia-global-ai-hackathon-2026",
@@ -359,7 +367,8 @@
           "label": "공식 규칙",
           "url": "https://nebiusglobalaihackathon.devpost.com/rules"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     },
     {
       "id": "amazon-developer-hackathon-2026",
@@ -400,7 +409,8 @@
           "label": "공식 규칙",
           "url": "https://amazonappdev2026.devpost.com/rules"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     },
     {
       "id": "opencv-ai-competition-2026",
@@ -440,7 +450,8 @@
           "label": "공식 규칙",
           "url": "https://opencv26.devpost.com/rules"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     },
     {
       "id": "busan-ai-startup-competition-2026",
@@ -480,7 +491,8 @@
           "label": "접수 홈페이지",
           "url": "https://ai-startup-competition.kr"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     }
   ],
   "aiNews": [
@@ -507,7 +519,8 @@
           "label": "OpenAI 공식 글",
           "url": "https://openai.com/index/model-misalignment-reporting-framework/"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     },
     {
       "id": "gemini-3-8-live-2026-09",
@@ -532,7 +545,8 @@
           "label": "Google 공식 발표",
           "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     },
     {
       "id": "google-agent-anomaly-detection-2026-09",
@@ -557,7 +571,8 @@
           "label": "Google Developers 공식 글",
           "url": "https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     },
     {
       "id": "anthropic-rd-automation-metrics-2026-09-17",
@@ -584,7 +599,8 @@
           "label": "Anthropic 공식 글",
           "url": "https://www.anthropic.com/institute/measuring-pace-of-ai-development"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     },
     {
       "id": "paper2agent-nature-2026-09-16",
@@ -616,7 +632,8 @@
           "label": "GitHub",
           "url": "https://github.com/jmiao24/Paper2Agent"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     },
     {
       "id": "ibm-engineering-ai-hub-1-4-2026-09-17",
@@ -644,7 +661,8 @@
           "label": "IBM 공식 발표",
           "url": "https://www.ibm.com/new/announcements/ibm-engineering-ai-hub-1-4-expands-ai-assisted-engineering"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     },
     {
       "id": "anthropic-biomolecular-modeling-2026-09-17",
@@ -672,7 +690,8 @@
           "label": "Anthropic 공식 연구",
           "url": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     },
     {
       "id": "mcpa-certification-2026-09-14",
@@ -699,7 +718,8 @@
           "label": "Linux Foundation 공식 발표",
           "url": "https://www.linuxfoundation.org/press/agentic-ai-foundation-launches-mcpa-certification-to-validate-mcp-expertise"
         }
-      ]
+      ],
+      "firstSeenDate": "2026-09-18"
     }
   ],
   "support": [],
