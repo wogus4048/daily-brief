@@ -35,6 +35,21 @@ function withinWeek(item) {
   const n = ddayNumber(item);
   return n !== null && n >= 0 && n <= 7;
 }
+
+function upcomingWeek(item) {
+  const n = ddayNumber(item);
+  return n !== null && n >= 1 && n <= 7;
+}
+
+function briefNames(items, emptyText, max = 2) {
+  if (!items.length) return emptyText;
+  const labels = items.slice(0, max).map(item => {
+    const suffix = item.deadlineText ? " · " + item.deadlineText : item.dDay ? " · " + item.dDay : "";
+    return item.title + suffix;
+  });
+  const rest = items.length - labels.length;
+  return labels.join(" / ") + (rest > 0 ? " 외 " + rest + "건" : "");
+}
 function dangerClass(item) { return isToday(item) ? "danger" : ""; }
 
 function itemKind(item) {
@@ -160,10 +175,23 @@ function renderHome() {
   const news = state.data.aiNews || [];
   const support = state.data.support || [];
 
-  $("#todayDeadlineCount").textContent = contests.filter(isToday).length + support.filter(isToday).length;
-  $("#weekDeadlineCount").textContent = contests.filter(withinWeek).length + support.filter(withinWeek).length;
-  $("#contestCount").textContent = contests.length;
-  $("#aiCount").textContent = news.length;
+  const deadlinePool = [].concat(contests, support);
+  const todayItems = deadlinePool.filter(isToday);
+  const weekItems = deadlinePool.filter(upcomingWeek);
+
+  $("#todayDeadlineCount").textContent = todayItems.length + "건";
+  $("#weekDeadlineCount").textContent = weekItems.length + "건";
+  $("#contestCount").textContent = contests.length + "건";
+  $("#aiCount").textContent = news.length + "건";
+
+  $("#todayDeadlineText").textContent = briefNames(todayItems, "오늘 마감되는 공고가 없습니다.");
+  $("#weekDeadlineText").textContent = briefNames(weekItems, "앞으로 1~7일 안에 마감되는 공고가 없습니다.");
+  $("#contestSummaryText").textContent = contests.length
+    ? briefNames(contests, "", 2)
+    : "현재 조건에 맞는 공모전이 없습니다.";
+  $("#aiSummaryText").textContent = news.length
+    ? briefNames(news, "", 1)
+    : "오늘 선별한 AI 뉴스가 없습니다.";
 
   renderFeatured(contests, support);
   renderCompact("#homeContestList", contests.slice(0, 3), "contest");
