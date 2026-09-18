@@ -175,9 +175,12 @@ function renderHome() {
   const news = state.data.aiNews || [];
   const support = state.data.support || [];
 
-  $("#homeContestCount").textContent = "오늘 " + contests.length + "건";
-  $("#homeAiCount").textContent = "오늘 " + news.length + "건";
-  $("#homeSupportCount").textContent = "오늘 " + support.length + "건";
+  const today = state.data.date;
+  const newToday = items => items.filter(item => item.firstSeenDate === today).length;
+
+  $("#homeContestCount").textContent = "오늘 신규 " + newToday(contests) + "건";
+  $("#homeAiCount").textContent = "오늘 신규 " + newToday(news) + "건";
+  $("#homeSupportCount").textContent = "오늘 신규 " + newToday(support) + "건";
 
   renderFeatured(contests, support);
   renderCompact("#homeContestList", contests.slice(0, 3), "contest");
