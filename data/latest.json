@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generatedAt": "2026-09-18T13:00:00+09:00",
+  "generatedAt": "2026-09-18T13:54:00+09:00",
   "contests": [
     {
       "id": "wanted-ai-championship-2026",
@@ -11,7 +11,12 @@
       "description": "만 19세 이상 개인 또는 최대 5인 팀이 참여할 수 있으며, 아이디어만 제출하는 방식이 아니라 실제 작동하는 서비스를 구현하고 배포 링크를 제출해야 합니다.",
       "dDay": "오늘 마감",
       "deadlineText": "09.18 23:59",
-      "tags": ["AI", "서비스 MVP", "개인 가능", "최대 5인"],
+      "tags": [
+        "AI",
+        "서비스 MVP",
+        "개인 가능",
+        "최대 5인"
+      ],
       "period": "참가 접수 2026.08.24 ~ 09.18 23:59:59 / 과제 제출 09.20 23:59:59",
       "reward": "대상 1,000만원 · 최우수 300만원 · 우수 3팀 각 100만원 · 인기상 100만원",
       "participation": "만 19세 이상 개인 또는 팀, 팀은 최대 5인",
@@ -26,7 +31,10 @@
         "실시간 데이터와 LLM 설명을 결합한 개인 대시보드"
       ],
       "links": [
-        {"label": "공식 안내 / 참가", "url": "https://static.wanted.co.kr/ai-championship/2026/landing.html"}
+        {
+          "label": "공식 안내 / 참가",
+          "url": "https://static.wanted.co.kr/ai-championship/2026/landing.html"
+        }
       ]
     },
     {
@@ -38,7 +46,12 @@
       "description": "아이디어 기획 분야와 제품·서비스 개발 분야로 나뉘며 예비창업자와 초기창업기업을 대상으로 합니다.",
       "dDay": "D-3",
       "deadlineText": "09.21 10:00",
-      "tags": ["GovTech", "예비창업자", "공공서비스", "AI·데이터"],
+      "tags": [
+        "GovTech",
+        "예비창업자",
+        "공공서비스",
+        "AI·데이터"
+      ],
       "period": "2026.08.20 ~ 09.21 오전 10:00",
       "reward": "아이디어 기획 7개작 + 제품·서비스 개발 7개작 선정. 세부 상금은 모집공고문 확인",
       "participation": "예비창업자 개인 또는 팀, 초기창업기업",
@@ -53,8 +66,14 @@
         "공공지원사업 자격조건을 자동 판별하고 필요한 서류를 안내하는 서비스"
       ],
       "links": [
-        {"label": "공식 홈페이지", "url": "https://k-govtech.kr/common/main"},
-        {"label": "NIPA 공식 공고", "url": "https://nipa.kr/home/2-1/16908"}
+        {
+          "label": "공식 홈페이지",
+          "url": "https://k-govtech.kr/common/main"
+        },
+        {
+          "label": "NIPA 공식 공고",
+          "url": "https://nipa.kr/home/2-1/16908"
+        }
       ]
     },
     {
@@ -66,7 +85,12 @@
       "description": "개인 또는 4인 이하 팀이 참가할 수 있고, 9월 30일에는 완성 작품이 아니라 참가신청서 중심으로 접수한 뒤 약 2개월간 결과물을 고도화할 수 있습니다.",
       "dDay": "D-12",
       "deadlineText": "09.30",
-      "tags": ["AI", "공공데이터", "클라우드", "개인 가능"],
+      "tags": [
+        "AI",
+        "공공데이터",
+        "클라우드",
+        "개인 가능"
+      ],
       "period": "2026.08.21 ~ 09.30",
       "reward": "사회현안 해결 서비스 개발 대상팀에 글로벌 시빅테크 행사 참여 지원금 최대 200만원 등. 세부 시상은 공식 페이지 확인",
       "participation": "개인 또는 팀, 팀 구성 시 4인 이하",
@@ -81,13 +105,241 @@
         "사회문제 신고·민원 데이터를 분류해 반복 패턴을 찾는 분석 도구"
       ],
       "links": [
-        {"label": "공식 홈페이지", "url": "https://www.devcontest-digitalsolveup.kr/"},
-        {"label": "공모전 주요 내용", "url": "https://devcontest-digitalsolveup.kr/index.php/summary?c=1"},
-        {"label": "FAQ", "url": "https://www.devcontest-digitalsolveup.kr/notice/18"}
+        {
+          "label": "공식 홈페이지",
+          "url": "https://www.devcontest-digitalsolveup.kr/"
+        },
+        {
+          "label": "공모전 주요 내용",
+          "url": "https://devcontest-digitalsolveup.kr/index.php/summary?c=1"
+        },
+        {
+          "label": "FAQ",
+          "url": "https://www.devcontest-digitalsolveup.kr/notice/18"
+        }
       ]
     }
   ],
-  "aiNews": [],
-  "support": [],
-  "archive": ["2026-09-18"]
+  "aiNews": [
+    {
+      "id": "openai-misalignment-framework-2026-09",
+      "categoryLabel": "AI 뉴스",
+      "icon": "🧭",
+      "title": "OpenAI, 모델 오정렬 보고 프레임워크 공개",
+      "summary": "AI가 예상과 다르게 행동한 사례를 추적·조사·공개하는 새 프레임워크와 실제 사례 6건을 공개했습니다.",
+      "description": "OpenAI가 모델의 예상 밖 행동을 단순한 일회성 사고로 보지 않고, 공통 기준으로 기록하고 분석하기 위한 보고 체계를 공개했습니다. 최근 6개월 동안 관찰된 사례 6건도 함께 공개했습니다.",
+      "why": "에이전트와 자동화가 강해질수록 정상 응답률만 보는 것보다 실패 패턴을 구조적으로 기록하는 운영 체계가 중요해집니다. 서비스에 AI를 붙일 때 평가 로그와 사고 분류 체계를 어떻게 만들지 참고할 만합니다.",
+      "updatedAgo": "어제",
+      "tags": [
+        "OpenAI",
+        "AI Safety",
+        "Evaluation"
+      ],
+      "ideas": [
+        "사내 AI 기능의 실패 사례를 유형별로 저장하는 평가 로그 대시보드 만들기",
+        "LLM 응답에서 정책 위반·도구 오사용·근거 누락을 자동 분류하는 검증 파이프라인 만들기"
+      ],
+      "links": [
+        {
+          "label": "OpenAI 공식 글",
+          "url": "https://openai.com/index/model-misalignment-reporting-framework/"
+        }
+      ]
+    },
+    {
+      "id": "gemini-3-8-live-2026-09",
+      "categoryLabel": "AI 뉴스",
+      "icon": "🎙️",
+      "title": "Google, Gemini 3.8 Live 공개",
+      "summary": "실시간 음성 대화와 시각적 맥락 이해를 강화한 Gemini 3.8 Live와 Extended Thinking이 Gemini API와 AI Studio에 배포되고 있습니다.",
+      "description": "Gemini 3.8 Live는 낮은 지연의 대화형 음성 에이전트를 위한 모델이고, Extended Thinking은 더 복잡한 다단계 추론을 겨냥합니다. 개발자는 Gemini API와 Google AI Studio에서 사용할 수 있습니다.",
+      "why": "텍스트 챗봇을 넘어서 실제 통화형·현장형 음성 에이전트를 만들 때 필요한 실시간 대화, 시각 정보 연결, 다단계 추론이 한 모델 계열로 묶이고 있습니다.",
+      "updatedAgo": "3일 전",
+      "tags": [
+        "Gemini",
+        "Voice Agent",
+        "Multimodal"
+      ],
+      "ideas": [
+        "모바일 앱에서 음성으로 화면 기능을 안내하는 실시간 도우미 프로토타입",
+        "카메라 화면을 보면서 상태를 설명하는 현장 점검용 멀티모달 에이전트"
+      ],
+      "links": [
+        {
+          "label": "Google 공식 발표",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/"
+        }
+      ]
+    },
+    {
+      "id": "google-agent-anomaly-detection-2026-09",
+      "categoryLabel": "AI 뉴스",
+      "icon": "🛡️",
+      "title": "Google, AI Agent Anomaly Detection 프리뷰",
+      "summary": "기업용 AI 에이전트가 평소와 다른 행동을 보일 때 탐지하는 Agent Anomaly Detection 기능이 비공개 프리뷰로 공개됐습니다.",
+      "description": "에이전트가 더 많은 도구와 권한을 갖게 되면서 단순 오류 로그만으로는 위험 행동을 찾기 어려워졌습니다. Google은 에이전트 행동 패턴을 기준으로 이상 징후를 탐지하는 기능을 Gemini Enterprise Agent Platform에 추가하고 있습니다.",
+      "why": "MCP나 사내 자동화 에이전트를 운영할 때 '정상 요청인지'뿐 아니라 '평소와 다른 행동인지'를 감시해야 한다는 흐름이 본격화되고 있습니다.",
+      "updatedAgo": "어제",
+      "tags": [
+        "Agent",
+        "Security",
+        "Observability"
+      ],
+      "ideas": [
+        "MCP 도구 호출 횟수·대상·시간대를 기준으로 이상 호출을 감지하는 간단한 룰 엔진",
+        "에이전트 실행 로그를 저장하고 평소 패턴과 달라진 세션만 표시하는 관리자 화면"
+      ],
+      "links": [
+        {
+          "label": "Google Developers 공식 글",
+          "url": "https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/"
+        }
+      ]
+    },
+    {
+      "id": "chatgpt-images-2-5-2026-09",
+      "categoryLabel": "AI 뉴스",
+      "icon": "🎨",
+      "title": "ChatGPT Images 2.5 출시",
+      "summary": "OpenAI가 참조 이미지와 스케치를 더 잘 반영하고 결과물을 더 정교하게 다듬는 ChatGPT Images 2.5를 공개했습니다.",
+      "description": "아이디어, 스케치, 레퍼런스 사진을 바탕으로 더 개인화되고 완성도 높은 이미지를 만들도록 개선된 이미지 생성 모델입니다. 디자인 목업이나 비주얼 탐색 작업에서 반복 수정 품질이 중요한 업데이트입니다.",
+      "why": "앱·웹 디자인 초기 단계에서 와이어프레임과 무드보드를 빠르게 시각화하고, 같은 스타일을 유지하며 반복 수정하는 작업에 활용하기 좋습니다.",
+      "updatedAgo": "지난주",
+      "tags": [
+        "OpenAI",
+        "Image",
+        "Design"
+      ],
+      "ideas": [
+        "앱 홈 화면 시안을 여러 해상도로 빠르게 비교하는 디자인 실험",
+        "서비스 카드뉴스·썸네일의 스타일 가이드 후보를 이미지로 먼저 검증"
+      ],
+      "links": [
+        {
+          "label": "OpenAI 공식 발표",
+          "url": "https://openai.com/index/introducing-chatgpt-images-2-5/"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-threat-intelligence-2026-09",
+      "categoryLabel": "AI 뉴스",
+      "icon": "🔐",
+      "title": "Anthropic, 2026년 9월 AI 악용 위협 보고서 공개",
+      "summary": "Claude가 사이버공격·감시·사기·불법 증류 등에 악용된 실제 사례와 대응 내용을 정리한 최신 위협 인텔리전스 보고서가 공개됐습니다.",
+      "description": "Anthropic은 2025년 말부터 2026년 8월까지 탐지·차단한 악용 사례를 여러 범주로 공개했습니다. 특히 AI가 단순 코드 보조를 넘어 공격 도구 제작과 장기 작업 조율에 사용되는 흐름을 설명합니다.",
+      "why": "AI 에이전트를 서비스에 넣는 개발자라면 프롬프트 필터만으로 충분하지 않고 계정·도구 권한·행동 로그·비정상 사용 탐지가 함께 필요하다는 점을 보여줍니다.",
+      "updatedAgo": "이번 주",
+      "tags": [
+        "Claude",
+        "Cybersecurity",
+        "Threat Intel"
+      ],
+      "ideas": [
+        "AI 기능의 고위험 도구 호출을 별도 승인하도록 만드는 권한 계층",
+        "비정상 반복 요청과 대량 자동화를 탐지하는 사용량 기반 차단 규칙"
+      ],
+      "links": [
+        {
+          "label": "Anthropic 공식 보고서",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      ]
+    }
+  ],
+  "support": [
+    {
+      "id": "busan-ax-clinic-2026-2",
+      "categoryLabel": "지원사업 · 부산",
+      "icon": "🏭",
+      "title": "2026 부산 AX클리닉 지원기업 2차 모집",
+      "summary": "부산 소재 AI 솔루션 기업과 제조기업을 대상으로 AI 도입 사전진단·맞춤 컨설팅·기술매칭을 지원합니다.",
+      "description": "부산 제조업 AI융합 기반 조성 사업의 일환으로 AI 솔루션 공급기업 또는 제조 수요기업을 대상으로 기업별 맞춤형 AX 컨설팅을 제공합니다.",
+      "dDay": "오늘 마감",
+      "deadlineText": "09.18",
+      "tags": [
+        "부산",
+        "AI",
+        "제조업",
+        "컨설팅"
+      ],
+      "period": "2026.09.09 ~ 09.18",
+      "reward": "AI 도입 사전진단 + 분야별 전문가 1:1 맞춤 컨설팅 최대 2회 + 기술매칭데이 참여",
+      "participation": "사업공고일 기준 부산 소재 AI솔루션 개발기업 또는 제조공장 등",
+      "preStartup": "기업 대상 사업으로 예비창업자 개인 신청 대상은 아님",
+      "employment": "기업 단위 신청",
+      "businessRegistration": "부산 소재 기업 요건 확인 필요",
+      "evaluation": "공고문 및 수행기관 확인 필요",
+      "aiSupport": "AI 도입 사전진단, 솔루션 현장 적용 컨설팅, 기술 매칭",
+      "links": [
+        {
+          "label": "기업마당 공식 공고",
+          "url": "https://bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126365"
+        }
+      ]
+    },
+    {
+      "id": "gwangyang-ai-manufacturing-2026",
+      "categoryLabel": "지원사업 · 광양",
+      "icon": "⚙️",
+      "title": "광양 제조 산업 AI융합 실증 지원",
+      "summary": "광양 제조기업의 AI 전환을 위해 제조 데이터·IoT·공정 최적화·디지털트윈 실증을 지원합니다.",
+      "description": "광양 지역 중소·중견 제조기업 중 AI 전환을 희망하는 기업을 대상으로 실시간 데이터 연계와 제조혁신 실증을 지원하는 사업입니다.",
+      "dDay": "D-3",
+      "deadlineText": "09.21",
+      "tags": [
+        "광양",
+        "AX",
+        "IoT",
+        "디지털트윈"
+      ],
+      "period": "2026.09.08 ~ 09.21",
+      "reward": "MES·IoT 데이터 수집 인프라, 공정 최적화·디지털트윈 플랫폼, 품질 이상 패턴 분석 지원",
+      "participation": "광양 내 제조기업 중 AI 전환을 희망하는 기업",
+      "preStartup": "기업 대상 사업. 개인 예비창업자 대상 아님",
+      "employment": "기업 단위 신청",
+      "businessRegistration": "광양 내 제조기업 요건 필요",
+      "evaluation": "공고문 및 수행기관 확인 필요",
+      "aiSupport": "제조 데이터 플랫폼·IoT·공정 최적화·품질 이상 분석 실증",
+      "links": [
+        {
+          "label": "기업마당 공식 공고",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126347"
+        }
+      ]
+    },
+    {
+      "id": "gyeongbuk-tips-candidate-2026-3",
+      "categoryLabel": "지원사업 · 경북",
+      "icon": "🚀",
+      "title": "2026 경북 TIPS 후보기업 3차 모집",
+      "summary": "기술창업기업을 대상으로 1,000만원 상당 바우처·컨설팅·TIPS 운영사 추천 연계를 지원합니다.",
+      "description": "경북창조경제혁신센터가 7년 미만 창업기업을 중심으로 TIPS 후보기업을 발굴하는 프로그램입니다. 신산업 분야는 창업 10년 이내까지 인정됩니다.",
+      "dDay": "D-10",
+      "deadlineText": "09.28",
+      "tags": [
+        "경북",
+        "TIPS",
+        "스타트업",
+        "ICT"
+      ],
+      "period": "2026.09.08 ~ 09.28",
+      "reward": "기업당 1,000만원 상당 바우처 + 후보기업 컨설팅 + TIPS 운영사 추천 TO 연계",
+      "participation": "7년 미만 창업기업(신산업 10년 이내), 경북 소재 또는 경북 이전·설립 예정기업",
+      "preStartup": "이미 창업한 기업 대상. 순수 예비창업자는 대상 아님",
+      "employment": "기업 단위 신청",
+      "businessRegistration": "창업기업 요건 및 경북 소재·이전 예정 조건 필요",
+      "evaluation": "공고문 세부 선발 절차 확인 필요",
+      "aiSupport": "ICT 서비스·플랫폼 등 4차 산업 분야 포함, TIPS 연계 지원",
+      "links": [
+        {
+          "label": "기업마당 공식 공고",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126317"
+        }
+      ]
+    }
+  ],
+  "archive": [
+    "2026-09-18"
+  ]
 }
