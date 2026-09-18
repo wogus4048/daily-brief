@@ -125,33 +125,33 @@ function renderOpportunityList(sel, items, type) {
 
   el.innerHTML = items.map((item) => {
     const urgency = urgencyClass(item);
-    const status = item.dDay ? '<span class="status-badge status-' + urgency + '">' + esc(item.dDay) + '</span>' : "";
-    const category = '<span class="soft-badge category-badge category-' + type + '">' + esc(item.categoryLabel || (type === "support" ? "지원사업" : "공모전·해커톤")) + "</span>";
-    const deadline = item.deadlineText ? '<span class="soft-badge deadline-badge">마감 ' + esc(item.deadlineText) + "</span>" : "";
-    const rewardLabel = type === "support" ? "지원 / 혜택" : "상금 / 보상";
-    const participationLabel = type === "support" ? "지원대상" : "참가";
-    const conditionLabel = type === "support" ? "핵심 조건" : "예비창업자";
-    const reward = cut(item.reward || item.aiSupport || "확인 필요", 52);
-    const participation = cut(item.participation || "확인 필요", 46);
-    const condition = cut(item.preStartup || item.businessRegistration || "확인 필요", 46);
-    const tags = (item.tags || []).slice(0, 3).map((t) => '<span class="tag">' + esc(t) + "</span>").join("");
+    const status = item.dDay ? '<span class="status-pill status-' + urgency + '">' + esc(item.dDay) + '</span>' : "";
+    const category = '<span class="meta-pill">' + esc(item.categoryLabel || (type === "support" ? "지원사업" : "공모전·해커톤")) + '</span>';
+    const reward = cut(item.reward || item.aiSupport || "확인 필요", 42);
+    const participation = cut(item.participation || "확인 필요", 38);
+    const tags = (item.tags || []).slice(0, 3).map((t) => '<span class="tag">' + esc(t) + '</span>').join("");
 
-    return '<article class="opportunity-card type-' + type + ' tone-' + urgency + '" data-id="' + esc(item.id) + '">' +
-      '<div class="opportunity-top"><div class="opportunity-badges">' + status + category + deadline + "</div>" +
-      "<h3>" + esc(item.title) + "</h3>" +
-      '<p class="opportunity-summary">' + esc(item.summary || "") + "</p></div>" +
-      '<div class="key-facts">' +
-      '<div class="fact fact-deadline"><b>마감</b><span>' + esc(item.deadlineText || item.dDay || "확인 필요") + "</span></div>" +
-      '<div class="fact fact-reward"><b>' + rewardLabel + "</b><span>" + esc(reward) + "</span></div>" +
-      '<div class="fact fact-participation"><b>' + participationLabel + "</b><span>" + esc(participation) + "</span></div>" +
-      '<div class="fact fact-condition"><b>' + conditionLabel + "</b><span>" + esc(condition) + "</span></div>" +
-      "</div>" +
-      '<div class="card-footer"><div class="tag-row">' + tags + '</div><button type="button" class="detail-button">상세 보기</button></div>' +
-      "</article>";
+    return '<article class="brief-row type-' + type + '" data-id="' + esc(item.id) + '">' +
+      '<div class="brief-row-main">' +
+        '<div class="brief-row-meta">' + status + category + '</div>' +
+        '<h3>' + esc(item.title) + '</h3>' +
+        '<p class="brief-row-summary">' + esc(item.summary || "") + '</p>' +
+        '<div class="tag-row">' + tags + '</div>' +
+      '</div>' +
+      '<div class="brief-row-facts">' +
+        '<div class="brief-fact"><span>마감</span><strong>' + esc(item.deadlineText || item.dDay || "확인 필요") + '</strong></div>' +
+        '<div class="brief-fact"><span>' + (type === "support" ? "지원 / 혜택" : "상금 / 보상") + '</span><strong>' + esc(reward) + '</strong></div>' +
+        '<div class="brief-fact"><span>' + (type === "support" ? "지원 대상" : "참가") + '</span><strong>' + esc(participation) + '</strong></div>' +
+        '<button type="button" class="detail-button">상세 보기</button>' +
+      '</div>' +
+    '</article>';
   }).join("");
 
-  el.querySelectorAll(".opportunity-card").forEach((card) => {
-    card.addEventListener("click", () => openDetail(card.dataset.id));
+  el.querySelectorAll(".brief-row").forEach((row) => {
+    row.addEventListener("click", (e) => {
+      if (e.target.closest("a")) return;
+      openDetail(row.dataset.id);
+    });
   });
 }
 
@@ -163,19 +163,24 @@ function renderNewsList(sel, items) {
   }
 
   el.innerHTML = items.map((item) => {
-    const why = item.description ? '<div class="news-why"><b>왜 봐야 해?</b><br>' + esc(cut(item.description, 120)) + "</div>" : "";
-    const tags = (item.tags || []).slice(0, 3).map((t) => '<span class="tag">' + esc(t) + "</span>").join("");
-    return '<article class="news-card type-ai" data-id="' + esc(item.id) + '">' +
-      '<span class="news-time">' + esc(item.updatedAgo || "오늘") + "</span>" +
-      "<h3>" + esc(item.title) + "</h3>" +
-      "<p>" + esc(item.summary || "") + "</p>" +
-      why +
-      '<div class="card-footer"><div class="tag-row">' + tags + '</div><button type="button" class="detail-button">자세히</button></div>' +
-      "</article>";
+    const tags = (item.tags || []).slice(0, 3).map((t) => '<span class="tag">' + esc(t) + '</span>').join("");
+    return '<article class="news-row" data-id="' + esc(item.id) + '">' +
+      '<div class="news-row-main">' +
+        '<div class="brief-row-meta"><span class="meta-pill">AI NEWS</span><span class="news-time">' + esc(item.updatedAgo || "오늘") + '</span></div>' +
+        '<h3>' + esc(item.title) + '</h3>' +
+        '<p>' + esc(item.summary || "") + '</p>' +
+        '<div class="tag-row">' + tags + '</div>' +
+      '</div>' +
+      '<div class="news-row-side">' +
+        '<span>왜 봐야 해?</span>' +
+        '<p>' + esc(cut(item.why || item.description || item.summary || "", 90)) + '</p>' +
+        '<button type="button" class="detail-button">자세히</button>' +
+      '</div>' +
+    '</article>';
   }).join("");
 
-  el.querySelectorAll(".news-card").forEach((card) => {
-    card.addEventListener("click", () => openDetail(card.dataset.id));
+  el.querySelectorAll(".news-row").forEach((row) => {
+    row.addEventListener("click", () => openDetail(row.dataset.id));
   });
 }
 
@@ -238,57 +243,57 @@ function openNewsDetail(item) {
 }
 
 function openOpportunityDetail(item) {
+  const links = item.links || [];
+  const ideas = item.ideas || [];
+  const urgency = urgencyClass(item);
+
   const eligibility = [
+    ["참가 / 대상", item.participation],
+    ["예비창업자", item.preStartup],
     ["재직자 · 겸업", item.employment],
     ["사업자등록", item.businessRegistration]
   ].filter((x) => x[1]);
 
   const process = [
     ["접수 / 진행 일정", item.period],
+    ["상금 / 지원", item.reward],
     ["평가방식", item.evaluation],
     ["AI / 클라우드 지원", item.aiSupport]
   ].filter((x) => x[1]);
 
-  const ideas = item.ideas || [];
-  const links = item.links || [];
-  const urgency = urgencyClass(item);
-  const itemType = String(item.categoryLabel || "").includes("지원사업") ? "support" : "contest";
-
-  const eligibilityHtml = eligibility.length
-    ? eligibility.map((x) => '<div class="detail-box"><b>' + esc(x[0]) + "</b><span>" + esc(x[1]) + "</span></div>").join("")
-    : '<div class="detail-box"><b>조건</b><span>공식 공고에서 추가 확인이 필요합니다.</span></div>';
-
-  const processHtml = process.length
-    ? process.map((x) => '<div class="detail-box"><b>' + esc(x[0]) + "</b><span>" + esc(x[1]) + "</span></div>").join("")
-    : '<div class="detail-box"><b>진행 방식</b><span>공식 공고에서 추가 확인이 필요합니다.</span></div>';
+  const rows = (arr) => arr.map((x) =>
+    '<div class="detail-line"><span>' + esc(x[0]) + '</span><strong>' + esc(x[1]) + '</strong></div>'
+  ).join("");
 
   const ideaHtml = ideas.length
-    ? '<section class="detail-section"><h3>이 공고로 바로 만들 수 있는 MVP</h3><p class="section-note">큰 기획보다 주말에 시작할 수 있는 크기로 정리했습니다.</p><div class="idea-grid">' +
-      ideas.map((idea, i) => '<article class="idea-card"><strong>아이디어 ' + (i + 1) + "</strong><p>" + esc(idea) + "</p></article>").join("") +
-      "</div></section>"
+    ? '<section class="detail-section"><h3>이 공고로 뭘 해볼까?</h3><div class="idea-list">' +
+      ideas.map((idea, i) => '<div class="idea-line"><span>' + (i + 1) + '</span><p>' + esc(idea) + '</p></div>').join("") +
+      '</div></section>'
     : "";
 
   const linkHtml = links.map((l, i) =>
-    '<a class="' + (i > 0 ? "secondary-link" : "") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + " ↗</a>"
+    '<a class="' + (i > 0 ? "secondary-link" : "") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + ' ↗</a>'
   ).join("");
 
   $("#dialogContent").innerHTML =
-    '<div class="detail-shell detail-' + itemType + ' tone-' + urgency + '">' +
-    '<section class="detail-hero"><div class="detail-badges">' +
-    (item.dDay ? '<span class="status-badge status-' + urgency + '">' + esc(item.dDay) + "</span>" : "") +
-    '<span class="soft-badge category-badge category-' + itemType + '">' + esc(item.categoryLabel || "브리핑") + "</span>" +
-    (item.deadlineText ? '<span class="soft-badge">마감 ' + esc(item.deadlineText) + "</span>" : "") +
-    "</div><h2>" + esc(item.title) + '</h2><p class="detail-summary">' + esc(item.description || item.summary || "") + "</p>" +
-    '<div class="decision-grid">' +
-    '<div class="decision-card decision-deadline"><b>마감</b><span>' + esc(item.deadlineText || item.dDay || "확인 필요") + "</span></div>" +
-    '<div class="decision-card decision-reward"><b>상금 / 지원</b><span>' + esc(cut(item.reward || "확인 필요", 64)) + "</span></div>" +
-    '<div class="decision-card decision-participation"><b>참가 / 대상</b><span>' + esc(cut(item.participation || "확인 필요", 54)) + "</span></div>" +
-    '<div class="decision-card decision-condition"><b>핵심 자격</b><span>' + esc(cut(item.preStartup || item.businessRegistration || "확인 필요", 54)) + "</span></div>" +
-    "</div></section>" +
-    '<section class="detail-section"><h3>내가 지원 가능한지</h3><p class="section-note">재직·겸업과 사업자 조건을 먼저 확인하세요.</p><div class="detail-grid">' + eligibilityHtml + "</div></section>" +
-    '<section class="detail-section"><h3>진행 방식과 지원</h3><div class="detail-grid">' + processHtml + "</div></section>" +
-    ideaHtml +
-    '<div class="detail-actions">' + linkHtml + "</div></div>";
+    '<div class="detail-shell">' +
+      '<section class="detail-hero clean-detail">' +
+        '<div class="detail-badges">' +
+          (item.dDay ? '<span class="status-pill status-' + urgency + '">' + esc(item.dDay) + '</span>' : "") +
+          '<span class="meta-pill">' + esc(item.categoryLabel || "브리핑") + '</span>' +
+        '</div>' +
+        '<h2>' + esc(item.title) + '</h2>' +
+        '<p class="detail-summary">' + esc(item.description || item.summary || "") + '</p>' +
+        '<div class="detail-keybar">' +
+          '<div><span>마감</span><strong>' + esc(item.deadlineText || item.dDay || "확인 필요") + '</strong></div>' +
+          '<div><span>상금 / 지원</span><strong>' + esc(cut(item.reward || "확인 필요", 70)) + '</strong></div>' +
+        '</div>' +
+      '</section>' +
+      '<section class="detail-section"><h3>지원 조건</h3><div class="detail-lines">' + rows(eligibility) + '</div></section>' +
+      '<section class="detail-section"><h3>진행 방식</h3><div class="detail-lines">' + rows(process) + '</div></section>' +
+      ideaHtml +
+      '<div class="detail-actions">' + linkHtml + '</div>' +
+    '</div>';
 
   $("#detailDialog").showModal();
 }
