@@ -2,9 +2,22 @@ const state = { data: null, all: [] };
 const $ = (s) => document.querySelector(s);
 const esc = (s='') => String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 
+function requestedDate() {
+  const value = new URLSearchParams(location.search).get('date');
+  return /^\d{4}-\d{2}-\d{2}$/.test(value || '') ? value : null;
+}
+
 async function loadData() {
-  const res = await fetch(`data/latest.json?v=${Date.now()}`);
-  if (!res.ok) throw new Error('브리핑 데이터를 불러오지 못했습니다.');
+  const date = requestedDate();
+  const path = date ? `data/archive/${date}.json` : 'data/latest.json';
+  const res = await fetch(`${path}?v=${Date.now()}`);
+  if (!res.ok) {
+    if (date) {
+      history.replaceState({}, '', location.pathname);
+      return loadData();
+    }
+    throw new Error('브리핑 데이터를 불러오지 못했습니다.');
+  }
   const data = await res.json();
   state.data = data;
   state.all = [...(data.contests||[]), ...(data.aiNews||[]), ...(data.support||[])];
@@ -54,12 +67,17 @@ function iconFor(type, idx) {
 
 function renderArchive(days) {
   const el = $('#archiveDays');
-  el.innerHTML = days.slice(0,8).map((d,i) => {
+  const current = state.data?.date;
+  el.innerHTML = days.slice(0,8).map(d => {
     const date = new Date(`${d}T00:00:00+09:00`);
     const weekday = ['일','월','화','수','목','금','토'][date.getDay()];
-    return `<button class="archive-day ${i===0?'active':''}" data-date="${d}"><small>${date.getMonth()+1}월</small><strong>${date.getDate()}</strong><small>${weekday}</small></button>`;
+    return `<button class="archive-day ${d===current?'active':''}" data-date="${d}"><small>${date.getMonth()+1}월</small><strong>${date.getDate()}</strong><small>${weekday}</small></button>`;
   }).join('') || '<span class="empty-state">아카이브가 쌓이면 여기에 표시됩니다.</span>';
-  el.querySelectorAll('.archive-day').forEach(btn=>btn.addEventListener('click',()=>location.href=`?date=${btn.dataset.date}`));
+  el.querySelectorAll('.archive-day').forEach(btn=>btn.addEventListener('click',()=>{
+    const next = new URL(location.href);
+    next.searchParams.set('date', btn.dataset.date);
+    location.href = next.toString();
+  }));
 }
 
 function openDetail(id) {
