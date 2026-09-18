@@ -193,21 +193,19 @@ function renderFeatured(contests, support) {
   const category = kind === "support" ? "지원사업" : "공모전 · 해커톤";
 
   el.innerHTML =
-    '<div class="featured-inner">' +
-      '<div>' +
-        '<div class="featured-kicker">' +
-          (item.dDay ? '<span class="featured-badge ' + dangerClass(item) + '">' + esc(item.dDay) + '</span>' : '') +
-          '<span class="featured-meta">' + category + '</span>' +
-        '</div>' +
-        '<h3 class="featured-title">' + esc(item.title) + '</h3>' +
-        '<p class="featured-summary">' + esc(item.summary || "") + '</p>' +
-        '<span class="featured-cta">상세 보기 →</span>' +
+    '<div class="featured-flow">' +
+      '<div class="featured-kicker">' +
+        (item.dDay ? '<span class="featured-badge ' + dangerClass(item) + '">' + esc(item.dDay) + '</span>' : '') +
+        '<span class="featured-meta">' + category + '</span>' +
       '</div>' +
-      '<div class="featured-side"><dl>' +
-        '<div><dt>마감</dt><dd>' + esc(txt(item.deadlineText || item.dDay)) + '</dd></div>' +
-        '<div><dt>' + (kind === "support" ? "지원 / 혜택" : "상금 / 보상") + '</dt><dd>' + esc(cut(item.reward || item.aiSupport, 64)) + '</dd></div>' +
-        '<div><dt>' + (kind === "support" ? "지원 대상" : "참가") + '</dt><dd>' + esc(cut(item.participation, 58)) + '</dd></div>' +
-      '</dl></div>' +
+      '<h3 class="featured-title">' + esc(item.title) + '</h3>' +
+      '<p class="featured-summary">' + esc(item.summary || "") + '</p>' +
+      '<div class="featured-facts">' +
+        '<div class="flow-fact"><span>마감</span><strong>' + esc(txt(item.deadlineText || item.dDay)) + '</strong></div>' +
+        '<div class="flow-fact"><span>' + (kind === "support" ? "지원 / 혜택" : "상금 / 보상") + '</span><strong>' + esc(cut(item.reward || item.aiSupport, 90)) + '</strong></div>' +
+        '<div class="flow-fact"><span>' + (kind === "support" ? "지원 대상" : "참가") + '</span><strong>' + esc(cut(item.participation, 90)) + '</strong></div>' +
+      '</div>' +
+      '<span class="featured-cta">상세 보기 →</span>' +
     '</div>';
 
   el.onclick = () => location.hash = itemRoute(item);
@@ -223,11 +221,16 @@ function renderCompact(sel, items, kind) {
   el.innerHTML = items.map(item => {
     const status = kind === "ai" ? (item.updatedAgo || "오늘") : (item.dDay || "진행중");
     const category = kind === "ai" ? "AI NEWS" : kind === "support" ? "지원사업" : "공모전 · 해커톤";
-    const side = kind === "ai" ? ((item.tags || []).slice(0,2).join(" · ") || "AI") : txt(item.deadlineText || item.dDay);
-    return '<article class="compact-item" data-id="' + esc(item.id) + '">' +
-      '<div><div class="compact-meta"><span class="compact-status ' + (kind !== "ai" ? dangerClass(item) : "") + '">' + esc(status) + '</span><span class="compact-category">' + category + '</span></div>' +
-      '<h3>' + esc(item.title) + '</h3><p>' + esc(item.summary || "") + '</p></div>' +
-      '<div class="compact-side">' + esc(side) + '</div></article>';
+    const foot = kind === "ai"
+      ? ((item.tags || []).slice(0,2).join(" · ") || "AI")
+      : "마감 " + txt(item.deadlineText || item.dDay);
+
+    return '<article class="compact-item compact-flow" data-id="' + esc(item.id) + '">' +
+      '<div class="compact-meta"><span class="compact-status ' + (kind !== "ai" ? dangerClass(item) : "") + '">' + esc(status) + '</span><span class="compact-category">' + category + '</span></div>' +
+      '<h3>' + esc(item.title) + '</h3>' +
+      '<p>' + esc(item.summary || "") + '</p>' +
+      '<div class="compact-foot">' + esc(foot) + ' <span>→</span></div>' +
+    '</article>';
   }).join("");
 
   el.querySelectorAll(".compact-item").forEach(row => {
@@ -380,33 +383,37 @@ function renderCategoryList(type) {
 
   if (type === "ai-news") {
     el.innerHTML = items.map(item =>
-      '<article class="category-item ai-item" data-id="' + esc(item.id) + '">' +
-        '<div><div class="category-item-meta"><span class="meta-label">AI NEWS</span><span class="meta-label">' + esc(item.updatedAgo || "오늘") + '</span></div>' +
-        '<h3 class="category-item-title">' + esc(item.title) + '</h3><p class="category-item-summary">' + esc(item.summary || "") + '</p>' +
-        tagsHtml(item.tags) + '</div>' +
-        '<div class="ai-side-note"><span>왜 볼까?</span><p>' + esc(cut(item.why || item.description || item.summary, 105)) + '</p></div>' +
-        '<div class="category-arrow">→</div>' +
+      '<article class="category-card ai-category-card" data-id="' + esc(item.id) + '">' +
+        '<div class="category-item-meta"><span class="meta-label">AI NEWS</span><span class="meta-label">' + esc(item.updatedAgo || "오늘") + '</span></div>' +
+        '<h3 class="category-item-title">' + esc(item.title) + '</h3>' +
+        '<p class="category-item-summary">' + esc(item.summary || "") + '</p>' +
+        tagsHtml(item.tags) +
+        '<div class="category-explainer"><span>왜 볼까?</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
+        '<div class="category-action">자세히 보기 <span>→</span></div>' +
       '</article>'
     ).join("");
   } else {
     const kind = type === "support" ? "support" : "contest";
     el.innerHTML = items.map(item =>
-      '<article class="category-item" data-id="' + esc(item.id) + '">' +
-        '<div><div class="category-item-meta">' +
+      '<article class="category-card" data-id="' + esc(item.id) + '">' +
+        '<div class="category-item-meta">' +
           (item.dDay ? '<span class="meta-status ' + dangerClass(item) + '">' + esc(item.dDay) + '</span>' : '') +
-          '<span class="meta-label">' + (kind === "support" ? "지원사업" : "공모전 · 해커톤") + '</span></div>' +
-        '<h3 class="category-item-title">' + esc(item.title) + '</h3><p class="category-item-summary">' + esc(item.summary || "") + '</p>' +
-        tagsHtml(item.tags) + '</div>' +
-        '<div class="category-item-side">' +
-          '<div class="category-fact"><span>마감</span><strong>' + esc(txt(item.deadlineText || item.dDay)) + '</strong></div>' +
-          '<div class="category-fact"><span>' + (kind === "support" ? "지원" : "상금") + '</span><strong>' + esc(cut(item.reward || item.aiSupport, 52)) + '</strong></div>' +
-          '<div class="category-fact"><span>' + (kind === "support" ? "대상" : "참가") + '</span><strong>' + esc(cut(item.participation, 52)) + '</strong></div>' +
-        '</div><div class="category-arrow">→</div>' +
+          '<span class="meta-label">' + (kind === "support" ? "지원사업" : "공모전 · 해커톤") + '</span>' +
+        '</div>' +
+        '<h3 class="category-item-title">' + esc(item.title) + '</h3>' +
+        '<p class="category-item-summary">' + esc(item.summary || "") + '</p>' +
+        tagsHtml(item.tags) +
+        '<div class="category-facts-flow">' +
+          '<div class="flow-fact"><span>마감</span><strong>' + esc(txt(item.deadlineText || item.dDay)) + '</strong></div>' +
+          '<div class="flow-fact"><span>' + (kind === "support" ? "지원 / 혜택" : "상금 / 보상") + '</span><strong>' + esc(txt(item.reward || item.aiSupport)) + '</strong></div>' +
+          '<div class="flow-fact"><span>' + (kind === "support" ? "지원 대상" : "참가") + '</span><strong>' + esc(txt(item.participation)) + '</strong></div>' +
+        '</div>' +
+        '<div class="category-action">상세 보기 <span>→</span></div>' +
       '</article>'
     ).join("");
   }
 
-  el.querySelectorAll(".category-item").forEach(row => {
+  el.querySelectorAll(".category-card").forEach(row => {
     row.addEventListener("click", () => {
       state.lastRoute = location.hash;
       const item = state.all.find(x => x.id === row.dataset.id);
@@ -468,6 +475,7 @@ function renderOpportunityDetail(item, kind) {
   ).join("");
 
   const core = [
+    ["마감", item.deadlineText || item.dDay],
     ["접수 / 일정", item.period],
     ["참가 / 대상", item.participation],
     ["상금 / 지원", item.reward]
@@ -488,17 +496,10 @@ function renderOpportunityDetail(item, kind) {
     infoBlock("핵심 정보","신청 전에 가장 먼저 확인할 내용입니다.",core) +
     infoBlock("지원 자격","내가 실제로 신청 가능한지 확인합니다.",eligible) +
     infoBlock("진행 방식","",process) +
-    (ideas.length ? ideaBlock(kind === "support" ? "어떻게 활용할까?" : "뭘 만들어볼까?", ideas) : "");
+    (ideas.length ? ideaBlock(kind === "support" ? "어떻게 활용할까?" : "뭘 만들어볼까?", ideas) : "") +
+    (links.length ? '<section class="detail-block"><h2>공식 링크</h2><div class="official-link-list">' + links.map(l => '<a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer"><span>' + esc(l.label) + '</span><span>↗</span></a>').join("") + '</div></section>' : '');
 
-  $("#detailAside").innerHTML =
-    '<div class="aside-card"><div class="aside-status"><strong class="' + dangerClass(item) + '">' + esc(item.dDay || "Open") + '</strong><span>마감 ' + esc(txt(item.deadlineText || item.period)) + '</span></div>' +
-      '<div class="aside-facts">' +
-        asideFact("분류",category) +
-        asideFact(kind === "support" ? "지원 / 혜택" : "상금 / 보상",cut(item.reward || item.aiSupport,74)) +
-        asideFact(kind === "support" ? "지원 대상" : "참가",cut(item.participation,74)) +
-      '</div>' +
-      (links.length ? '<div class="aside-links">' + links.map(l => '<a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer"><span>' + esc(l.label) + '</span><span>↗</span></a>').join("") + '</div>' : '') +
-    '</div>';
+  $("#detailAside").innerHTML = "";
 }
 
 function renderNewsDetail(item) {
@@ -517,13 +518,10 @@ function renderNewsDetail(item) {
   $("#detailContent").innerHTML =
     infoBlock("무슨 일이야?","",[["핵심",item.description || item.summary]]) +
     infoBlock("왜 봐야 해?","",[["의미",item.why || item.description || item.summary]]) +
-    (ideas.length ? ideaBlock("어떻게 써볼까?",ideas) : "");
+    (ideas.length ? ideaBlock("어떻게 써볼까?",ideas) : "") +
+    (links.length ? '<section class="detail-block"><h2>공식 링크</h2><div class="official-link-list">' + links.map(l => '<a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer"><span>' + esc(l.label) + '</span><span>↗</span></a>').join("") + '</div></section>' : '');
 
-  $("#detailAside").innerHTML =
-    '<div class="aside-card"><div class="aside-status"><strong>AI</strong><span>' + esc(item.updatedAgo || "오늘") + '</span></div>' +
-    '<div class="aside-facts">' + asideFact("분류",(item.tags || []).slice(0,3).join(" · ") || "AI 뉴스") + '</div>' +
-    (links.length ? '<div class="aside-links">' + links.map(l => '<a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer"><span>' + esc(l.label) + '</span><span>↗</span></a>').join("") + '</div>' : '') +
-    '</div>';
+  $("#detailAside").innerHTML = "";
 }
 
 function infoBlock(title,desc,rows) {
