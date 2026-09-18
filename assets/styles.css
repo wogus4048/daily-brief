@@ -963,3 +963,228 @@ footer{
     line-height:1.55;
   }
 }
+
+
+/* Typography scale-up — keep main hero headline unchanged */
+body{
+  font-size:17px;
+}
+.topbar-search{
+  font-size:14px;
+}
+.overline,.section-eyebrow{
+  font-size:12px;
+}
+.hero-sub{
+  font-size:17px;
+}
+.summary-heading span{
+  font-size:15px;
+}
+.summary-heading strong{
+  font-size:20px;
+}
+.home-summary-row p{
+  font-size:15px;
+  line-height:1.6;
+}
+.section-head h2,.panel-head h2{
+  font-size:27px;
+}
+.view-all{
+  font-size:14px;
+}
+.featured-title{
+  font-size:33px;
+}
+.featured-summary{
+  font-size:16px;
+}
+.featured-facts .flow-fact span{
+  font-size:13px;
+}
+.featured-facts .flow-fact strong{
+  font-size:15px;
+}
+.featured-cta{
+  font-size:15px;
+}
+.compact-status,.compact-category{
+  font-size:12px;
+}
+.compact-item.compact-flow h3{
+  font-size:20px;
+}
+.compact-item.compact-flow p{
+  font-size:15px;
+  line-height:1.65;
+}
+.compact-foot{
+  font-size:13px;
+}
+.category-head p:not(.section-eyebrow){
+  font-size:16px;
+}
+.category-count{
+  font-size:15px;
+}
+.filter-chip{
+  font-size:13px;
+}
+.sort-select{
+  font-size:13px;
+}
+.meta-status,.meta-label{
+  font-size:13px;
+}
+.category-card .category-item-title{
+  font-size:26px;
+}
+.category-card .category-item-summary{
+  font-size:16px;
+  line-height:1.72;
+}
+.category-tag{
+  font-size:12px;
+}
+.category-facts-flow .flow-fact span{
+  font-size:13px;
+}
+.category-facts-flow .flow-fact strong{
+  font-size:15px;
+}
+.category-explainer span{
+  font-size:13px;
+}
+.category-explainer p{
+  font-size:15px;
+}
+.category-action{
+  font-size:14px;
+}
+.detail-page-title h1{
+  font-size:42px;
+}
+.detail-page-title p{
+  font-size:18px;
+}
+.detail-pill{
+  font-size:12px;
+}
+.primary-link,.secondary-link{
+  font-size:14px;
+}
+.back-link{
+  font-size:14px;
+}
+.detail-block h2{
+  font-size:25px;
+}
+.block-desc{
+  font-size:14px;
+}
+.info-row dt{
+  font-size:14px;
+}
+.info-row dd{
+  font-size:16px;
+}
+.idea-item p{
+  font-size:16px;
+}
+.official-link-list a{
+  font-size:15px;
+}
+.archive-day small{
+  font-size:11px;
+}
+.archive-day strong{
+  font-size:23px;
+}
+.archive-card small{
+  font-size:12px;
+}
+.archive-card strong{
+  font-size:21px;
+}
+.archive-card span{
+  font-size:13px;
+}
+
+@media(max-width:620px){
+  .hero-sub{
+    font-size:16px;
+  }
+  .summary-heading span{
+    font-size:14px;
+  }
+  .summary-heading strong{
+    font-size:18px;
+  }
+  .home-summary-row p{
+    font-size:14px;
+  }
+  .section-head h2,.panel-head h2{
+    font-size:25px;
+  }
+  .featured-title{
+    font-size:29px;
+  }
+  .featured-summary{
+    font-size:15px;
+  }
+  .featured-facts .flow-fact span{
+    font-size:12px;
+  }
+  .featured-facts .flow-fact strong{
+    font-size:14px;
+  }
+  .compact-item.compact-flow h3{
+    font-size:19px;
+  }
+  .compact-item.compact-flow p{
+    font-size:14px;
+  }
+  .compact-foot{
+    font-size:13px;
+  }
+  .category-head p:not(.section-eyebrow){
+    font-size:15px;
+  }
+  .filter-chip,.sort-select{
+    font-size:13px;
+  }
+  .category-card .category-item-title{
+    font-size:23px;
+  }
+  .category-card .category-item-summary{
+    font-size:15px;
+  }
+  .category-facts-flow .flow-fact strong{
+    font-size:14px;
+  }
+  .category-explainer p{
+    font-size:14px;
+  }
+  .detail-page-title h1{
+    font-size:34px;
+  }
+  .detail-page-title p{
+    font-size:16px;
+  }
+  .detail-block h2{
+    font-size:23px;
+  }
+  .info-row dt{
+    font-size:13px;
+  }
+  .info-row dd{
+    font-size:15px;
+  }
+  .idea-item p{
+    font-size:15px;
+  }
+  .official-link-list a{
+    font-size:14px;
+  }
+}
