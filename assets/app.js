@@ -175,23 +175,9 @@ function renderHome() {
   const news = state.data.aiNews || [];
   const support = state.data.support || [];
 
-  const deadlinePool = [].concat(contests, support);
-  const todayItems = deadlinePool.filter(isToday);
-  const weekItems = deadlinePool.filter(upcomingWeek);
-
-  $("#todayDeadlineCount").textContent = todayItems.length + "건";
-  $("#weekDeadlineCount").textContent = weekItems.length + "건";
-  $("#contestCount").textContent = contests.length + "건";
-  $("#aiCount").textContent = news.length + "건";
-
-  $("#todayDeadlineText").textContent = briefNames(todayItems, "오늘 마감되는 공고가 없습니다.");
-  $("#weekDeadlineText").textContent = briefNames(weekItems, "앞으로 1~7일 안에 마감되는 공고가 없습니다.");
-  $("#contestSummaryText").textContent = contests.length
-    ? briefNames(contests, "", 2)
-    : "현재 조건에 맞는 공모전이 없습니다.";
-  $("#aiSummaryText").textContent = news.length
-    ? briefNames(news, "", 1)
-    : "오늘 선별한 AI 뉴스가 없습니다.";
+  $("#homeContestCount").textContent = "오늘 " + contests.length + "건";
+  $("#homeAiCount").textContent = "오늘 " + news.length + "건";
+  $("#homeSupportCount").textContent = "오늘 " + support.length + "건";
 
   renderFeatured(contests, support);
   renderCompact("#homeContestList", contests.slice(0, 3), "contest");
