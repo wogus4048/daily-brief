@@ -481,27 +481,32 @@ function enableHorizontalDragScroll(el) {
   if (!el || el.dataset.dragScrollReady === "1") return;
   el.dataset.dragScrollReady = "1";
 
+  const DRAG_THRESHOLD = 10;
   let startX = 0;
   let startScrollLeft = 0;
   let pointerId = null;
-  let moved = false;
-  let suppressClick = false;
+  let dragging = false;
+  let suppressNextClick = false;
 
   el.addEventListener("pointerdown", e => {
-    if (e.pointerType === "touch") return;
+    if (e.pointerType === "touch" || e.button !== 0) return;
     pointerId = e.pointerId;
     startX = e.clientX;
     startScrollLeft = el.scrollLeft;
-    moved = false;
-    el.classList.add("dragging");
-    el.setPointerCapture?.(pointerId);
+    dragging = false;
   });
 
   el.addEventListener("pointermove", e => {
     if (pointerId !== e.pointerId) return;
     const delta = e.clientX - startX;
-    if (Math.abs(delta) > 4) moved = true;
-    if (moved) {
+
+    if (!dragging && Math.abs(delta) >= DRAG_THRESHOLD) {
+      dragging = true;
+      el.classList.add("dragging");
+      el.setPointerCapture?.(pointerId);
+    }
+
+    if (dragging) {
       e.preventDefault();
       el.scrollLeft = startScrollLeft - delta;
     }
@@ -509,23 +514,23 @@ function enableHorizontalDragScroll(el) {
 
   const finish = e => {
     if (pointerId !== e.pointerId) return;
-    if (moved) {
-      suppressClick = true;
-      setTimeout(() => { suppressClick = false; }, 0);
-    }
+
+    if (dragging) suppressNextClick = true;
+
     try { el.releasePointerCapture?.(pointerId); } catch (_) {}
     pointerId = null;
-    moved = false;
+    dragging = false;
     el.classList.remove("dragging");
   };
 
   el.addEventListener("pointerup", finish);
   el.addEventListener("pointercancel", finish);
+
   el.addEventListener("click", e => {
-    if (suppressClick) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
+    if (!suppressNextClick) return;
+    suppressNextClick = false;
+    e.preventDefault();
+    e.stopPropagation();
   }, true);
 }
 
