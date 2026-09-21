@@ -135,7 +135,16 @@
           </header>
 
           <div class="category-toolbar">
-            <div class="filter-row" id="categoryFilters"></div>
+            <div class="category-filter-stack">
+              <div class="filter-line">
+                <span class="filter-label">상태</span>
+                <div class="filter-row" id="categoryFilters"></div>
+              </div>
+              <div class="filter-line" id="categoryTopicRow" hidden>
+                <span class="filter-label">분야</span>
+                <div class="filter-row" id="categoryTopicFilters"></div>
+              </div>
+            </div>
             <select id="categorySort" class="sort-select" aria-label="정렬">
               <option value="deadline">마감 임박순</option>
               <option value="default">기본순</option>
