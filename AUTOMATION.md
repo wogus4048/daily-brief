@@ -167,6 +167,13 @@ Do not finish the opportunity refresh until all applicable gates pass:
 - If a major source family could not be checked because of a tool/site failure, preserve existing verified data and record the gap rather than silently treating it as empty.
 - Do not satisfy a raw-candidate quota by counting obvious duplicates; candidate counts refer to materially distinct opportunities.
 
+### Multi-deadline display rule
+- Never combine different deadline states into one `dDay` string such as `오늘 마감 / D-15`.
+- For opportunities with multiple tracks/topics/deadlines, `dDay` must represent only the nearest currently actionable deadline and include its scope when needed, e.g. `주제1·2 오늘 마감`.
+- Keep all track/topic deadlines in `deadlineText` and `period`.
+- After the nearest deadline passes, advance `dDay` to the next still-open deadline instead of leaving a stale mixed status.
+- Keep the overall opportunity `OPEN` while at least one eligible track/topic is still accepting submissions.
+
 ### 9. Final consistency check
 Before writing data:
 - confirm every new item has a primary official link when available
