@@ -186,6 +186,21 @@ main{width:min(1480px,100%);margin:0 auto;padding:48px 48px 64px}
 }
 .filter-row{display:flex;gap:7px;flex-wrap:wrap}
 .filter-line .filter-row{flex:1;min-width:0}
+#categoryTopicFilters{
+  flex-wrap:nowrap;
+  overflow-x:auto;
+  overflow-y:hidden;
+  padding-bottom:3px;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior-inline:contain;
+  cursor:grab;
+  user-select:none;
+  touch-action:pan-x pan-y;
+}
+#categoryTopicFilters::-webkit-scrollbar{display:none}
+#categoryTopicFilters.dragging{cursor:grabbing}
+#categoryTopicFilters .filter-chip{flex:0 0 auto}
 .filter-chip{
   min-height:34px;padding:0 11px;border:1px solid var(--line);background:#fff;border-radius:999px;
   color:#676d78;font-size:12px;font-weight:800
