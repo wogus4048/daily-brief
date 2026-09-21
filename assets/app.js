@@ -477,9 +477,62 @@ function topicDefs(type) {
   ];
 }
 
+function enableHorizontalDragScroll(el) {
+  if (!el || el.dataset.dragScrollReady === "1") return;
+  el.dataset.dragScrollReady = "1";
+
+  let startX = 0;
+  let startScrollLeft = 0;
+  let pointerId = null;
+  let moved = false;
+  let suppressClick = false;
+
+  el.addEventListener("pointerdown", e => {
+    if (e.pointerType === "touch") return;
+    pointerId = e.pointerId;
+    startX = e.clientX;
+    startScrollLeft = el.scrollLeft;
+    moved = false;
+    el.classList.add("dragging");
+    el.setPointerCapture?.(pointerId);
+  });
+
+  el.addEventListener("pointermove", e => {
+    if (pointerId !== e.pointerId) return;
+    const delta = e.clientX - startX;
+    if (Math.abs(delta) > 4) moved = true;
+    if (moved) {
+      e.preventDefault();
+      el.scrollLeft = startScrollLeft - delta;
+    }
+  });
+
+  const finish = e => {
+    if (pointerId !== e.pointerId) return;
+    if (moved) {
+      suppressClick = true;
+      setTimeout(() => { suppressClick = false; }, 0);
+    }
+    try { el.releasePointerCapture?.(pointerId); } catch (_) {}
+    pointerId = null;
+    moved = false;
+    el.classList.remove("dragging");
+  };
+
+  el.addEventListener("pointerup", finish);
+  el.addEventListener("pointercancel", finish);
+  el.addEventListener("click", e => {
+    if (suppressClick) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  }, true);
+}
+
 function renderTopicChips(type) {
   const row = $("#categoryTopicRow");
   const el = $("#categoryTopicFilters");
+  enableHorizontalDragScroll(el);
   const defs = topicDefs(type);
   row.hidden = defs.length === 0;
   if (!defs.length) {
