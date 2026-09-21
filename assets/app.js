@@ -3,6 +3,7 @@ const state = {
   all: [],
   lastRoute: "#/",
   categoryFilter: "all",
+  categoryTopicFilter: "all",
   categorySort: "deadline"
 };
 
@@ -154,9 +155,6 @@ function renderShared() {
   $("#navContestCount").textContent = (data.contests || []).filter(isOpenItem).length;
   $("#navAiCount").textContent = (data.aiNews || []).length;
   $("#navSupportCount").textContent = (data.support || []).filter(isOpenItem).length;
-  const hasSupport = (data.support || []).length > 0;
-  $("#supportNav").hidden = !hasSupport;
-  $("#mobileSupportNav").hidden = !hasSupport;
 }
 
 function hideAllViews() {
@@ -256,9 +254,6 @@ function renderHome() {
   renderCompact("#homeSupportList", opportunityPriority(openSupport).slice(0, 4), "support");
   renderArchiveStrip("#homeArchiveDays", state.data.archive || []);
 
-  $("#homeSupportPanel").hidden = openSupport.length === 0;
-  $("#supportNav").hidden = support.length === 0;
-  $("#mobileSupportNav").hidden = support.length === 0;
 }
 
 function renderFeatured(contests, support) {
@@ -279,7 +274,7 @@ function renderFeatured(contests, support) {
   })[0];
 
   const kind = itemKind(item);
-  const category = kind === "support" ? "지원사업" : "공모전 · 해커톤";
+  const category = kind === "support" ? "창업 · 지원사업" : "공모전 · 해커톤";
 
   el.innerHTML =
     '<div class="featured-flow">' +
@@ -309,7 +304,7 @@ function renderCompact(sel, items, kind) {
 
   el.innerHTML = items.map(item => {
     const isAi = kind === "ai";
-    const category = isAi ? "AI 뉴스" : kind === "support" ? "지원사업" : "공모전 · 해커톤";
+    const category = isAi ? "AI 뉴스" : kind === "support" ? "창업 · 지원사업" : "공모전 · 해커톤";
     const primaryStatus = isAi
       ? ""
       : '<span class="compact-status ' + dangerClass(item) + '">' + esc(!isOpenItem(item) ? "종료" : (item.dDay || "접수중")) + '</span>';
@@ -357,6 +352,7 @@ function renderArchiveStrip(sel, days) {
 
 function renderCategory(type) {
   state.categoryFilter = type === "ai-news" ? "all" : "open";
+  state.categoryTopicFilter = "all";
   state.categorySort = type === "ai-news" ? "updated" : "deadline";
 
   const configs = {
@@ -372,8 +368,8 @@ function renderCategory(type) {
     },
     support: {
       eyebrow:"현재 신청 가능",
-      title:"지원사업",
-      description:"실제로 신청 가능한 지원사업을 기본으로 보여드리고, 종료된 공고도 이력으로 보관합니다."
+      title:"창업 · 지원사업",
+      description:"사업자등록 전 예비창업자도 검토할 수 있는 사업화·보육·실증·크레딧·개발지원 기회를 모읍니다. 종료된 공고도 이력으로 보관합니다."
     }
   };
 
@@ -391,6 +387,7 @@ function renderCategory(type) {
   sort.value = state.categorySort;
 
   renderFilterChips(type);
+  renderTopicChips(type);
   renderCategoryList(type);
 }
 
@@ -437,6 +434,72 @@ function renderFilterChips(type) {
   });
 }
 
+const CONTEST_TOPIC_LABELS = {
+  "ai-data": "AI · 데이터",
+  "software": "소프트웨어 개발",
+  "app-web": "앱 · 웹 서비스",
+  "security": "보안",
+  "fintech": "핀테크",
+  "public-data": "공공데이터",
+  "startup-product": "스타트업 · 프로덕트"
+};
+
+function contestTopic(item) {
+  const explicit = String(item.contestCategory || item.categoryLabel || "").toLowerCase();
+  const hay = [
+    item.title,item.summary,item.description,item.evaluation,item.participation,item.categoryLabel
+  ].concat(item.tags || []).join(" ").toLowerCase();
+
+  if (/보안|security|cyber|사이버|취약점|해킹/.test(explicit + " " + hay)) return "security";
+  if (/핀테크|fintech|금융|은행|결제|payment|보험/.test(explicit + " " + hay)) return "fintech";
+  if (/공공데이터|govtech|공공서비스|공공 인프라|정부|지자체/.test(explicit + " " + hay)) return "public-data";
+  if (/스타트업|startup|프로덕트|product|vibe coding|창업 해커톤/.test(explicit + " " + hay)) return "startup-product";
+  if (/\bai\b|llm|rag|생성형|머신러닝|machine learning|딥러닝|deep learning|데이터 분석|컴퓨터비전|딥보이스|음성 ai/.test(explicit + " " + hay)) return "ai-data";
+  if (/앱|모바일|android|ios|웹서비스|웹 서비스|web service|frontend|프론트엔드/.test(explicit + " " + hay)) return "app-web";
+  return "software";
+}
+
+function contestTopicLabel(item) {
+  return CONTEST_TOPIC_LABELS[contestTopic(item)] || "소프트웨어 개발";
+}
+
+function topicDefs(type) {
+  if (type !== "contests") return [];
+  return [
+    ["all","전체 분야"],
+    ["ai-data","AI · 데이터"],
+    ["software","소프트웨어 개발"],
+    ["app-web","앱 · 웹 서비스"],
+    ["security","보안"],
+    ["fintech","핀테크"],
+    ["public-data","공공데이터"],
+    ["startup-product","스타트업 · 프로덕트"]
+  ];
+}
+
+function renderTopicChips(type) {
+  const row = $("#categoryTopicRow");
+  const el = $("#categoryTopicFilters");
+  const defs = topicDefs(type);
+  row.hidden = defs.length === 0;
+  if (!defs.length) {
+    el.innerHTML = "";
+    return;
+  }
+
+  el.innerHTML = defs.map(([key,label]) =>
+    '<button class="filter-chip topic-chip ' + (key === state.categoryTopicFilter ? "active" : "") + '" data-topic="' + key + '">' + label + '</button>'
+  ).join("");
+
+  el.querySelectorAll(".topic-chip").forEach(btn => {
+    btn.addEventListener("click", () => {
+      state.categoryTopicFilter = btn.dataset.topic;
+      renderTopicChips(type);
+      renderCategoryList(type);
+    });
+  });
+}
+
 function sourceFor(type) {
   if (type === "contests") return state.data.contests || [];
   if (type === "ai-news") return state.data.aiNews || [];
@@ -468,6 +531,9 @@ function matchesFilter(item, type, filter) {
 function renderCategoryList(type) {
   const source = sourceFor(type);
   let items = source.filter(item => matchesFilter(item, type, state.categoryFilter));
+  if (type === "contests" && state.categoryTopicFilter !== "all") {
+    items = items.filter(item => contestTopic(item) === state.categoryTopicFilter);
+  }
 
   if (state.categorySort === "deadline") {
     items = items.slice().sort((a,b) => {
@@ -524,7 +590,7 @@ function renderCategoryList(type) {
           '<div class="card-status-group">' +
             changeBadge(item, kind) +
             '<span class="meta-status ' + (isOpenItem(item) ? dangerClass(item) : "") + '">' + esc(!isOpenItem(item) ? "종료" : (item.dDay || "접수중")) + '</span>' +
-            '<span class="meta-label">' + (kind === "support" ? "지원사업" : "공모전 · 해커톤") + '</span>' +
+            '<span class="meta-label">' + (kind === "support" ? "창업 · 지원사업" : contestTopicLabel(item)) + '</span>' +
           '</div>' +
           dateMetaHtml(item, kind) +
         '</div>' +
@@ -588,7 +654,7 @@ function renderDetail(item) {
 }
 
 function renderOpportunityDetail(item, kind) {
-  const category = kind === "support" ? "지원사업" : "공모전 · 해커톤";
+  const category = kind === "support" ? "창업 · 지원사업" : contestTopicLabel(item);
   const links = item.links || [];
   const ideas = item.ideas || [];
 
