@@ -4,7 +4,9 @@ const state = {
   lastRoute: "#/",
   categoryFilter: "all",
   categoryTopicFilter: "all",
-  categorySort: "deadline"
+  categorySort: "deadline",
+  activeRoute: null,
+  viewStates: {}
 };
 
 const $ = (s) => document.querySelector(s);
@@ -17,6 +19,59 @@ const cut = (s, n) => {
   const v = txt(s, "");
   return v.length > n ? v.slice(0, n - 1) + "…" : v;
 };
+
+const VIEW_STATE_KEY = "daily-brief:view-state:" + location.pathname + location.search;
+
+function hydrateViewStates() {
+  try {
+    const saved = JSON.parse(sessionStorage.getItem(VIEW_STATE_KEY) || "{}");
+    if (saved && typeof saved === "object") state.viewStates = saved;
+  } catch (_) {
+    state.viewStates = {};
+  }
+}
+
+function persistViewStates() {
+  try {
+    sessionStorage.setItem(VIEW_STATE_KEY, JSON.stringify(state.viewStates));
+  } catch (_) {}
+}
+
+function saveViewState(route = state.activeRoute) {
+  if (!route) return;
+
+  const snapshot = {
+    ...(state.viewStates[route] || {}),
+    scrollY: Math.max(0, Math.round(window.scrollY || 0))
+  };
+
+  if (route === "#/contests" || route === "#/ai-news" || route === "#/support") {
+    snapshot.categoryFilter = state.categoryFilter;
+    snapshot.categoryTopicFilter = state.categoryTopicFilter;
+    snapshot.categorySort = state.categorySort;
+  }
+
+  state.viewStates[route] = snapshot;
+  persistViewStates();
+}
+
+function restoreViewState(route) {
+  const snapshot = state.viewStates[route];
+  const targetY = snapshot && Number.isFinite(Number(snapshot.scrollY))
+    ? Math.max(0, Number(snapshot.scrollY))
+    : 0;
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      window.scrollTo({top: targetY, left: 0, behavior: "instant"});
+    });
+  });
+}
+
+function completeRoute(route) {
+  state.activeRoute = route;
+  restoreViewState(route);
+}
 
 function requestedDate() {
   const v = new URLSearchParams(location.search).get("date");
@@ -179,6 +234,7 @@ function route() {
     $("#homeView").hidden = false;
     renderHome();
     document.title = "오늘 | daily-brief";
+    completeRoute("#/");
     return;
   }
 
@@ -188,6 +244,7 @@ function route() {
     renderCategory("contests");
     document.title = "공모전 · 해커톤 | daily-brief";
     state.lastRoute = hash;
+    completeRoute(hash);
     return;
   }
 
@@ -197,6 +254,7 @@ function route() {
     renderCategory("ai-news");
     document.title = "AI 뉴스 | daily-brief";
     state.lastRoute = hash;
+    completeRoute(hash);
     return;
   }
 
@@ -206,6 +264,7 @@ function route() {
     renderCategory("support");
     document.title = "지원사업 | daily-brief";
     state.lastRoute = hash;
+    completeRoute(hash);
     return;
   }
 
@@ -215,6 +274,7 @@ function route() {
     renderArchivePage();
     document.title = "아카이브 | daily-brief";
     state.lastRoute = hash;
+    completeRoute(hash);
     return;
   }
 
@@ -227,6 +287,7 @@ function route() {
       $("#detailView").hidden = false;
       renderDetail(item);
       document.title = item.title + " | daily-brief";
+      completeRoute(hash);
       return;
     }
   }
@@ -351,9 +412,12 @@ function renderArchiveStrip(sel, days) {
 }
 
 function renderCategory(type) {
-  state.categoryFilter = type === "ai-news" ? "all" : "open";
-  state.categoryTopicFilter = "all";
-  state.categorySort = type === "ai-news" ? "updated" : "deadline";
+  const routeKey = type === "contests" ? "#/contests" : type === "ai-news" ? "#/ai-news" : "#/support";
+  const savedView = state.viewStates[routeKey] || {};
+
+  state.categoryFilter = savedView.categoryFilter || (type === "ai-news" ? "all" : "open");
+  state.categoryTopicFilter = savedView.categoryTopicFilter || "all";
+  state.categorySort = savedView.categorySort || (type === "ai-news" ? "updated" : "deadline");
 
   const configs = {
     contests: {
@@ -708,7 +772,6 @@ function renderDetail(item) {
   const kind = itemKind(item);
   if (kind === "ai") renderNewsDetail(item);
   else renderOpportunityDetail(item, kind);
-  window.scrollTo({top:0,behavior:"instant"});
 }
 
 function renderOpportunityDetail(item, kind) {
@@ -813,7 +876,15 @@ function goBack() {
 }
 
 function setupInteractions() {
-  window.addEventListener("hashchange", route);
+  hydrateViewStates();
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+
+  window.addEventListener("hashchange", () => {
+    saveViewState(state.activeRoute);
+    route();
+  });
+
+  window.addEventListener("pagehide", () => saveViewState(state.activeRoute));
 
   $("#mobileMenu").addEventListener("click", () => document.body.classList.toggle("menu-open"));
   document.querySelectorAll(".nav-item").forEach(a => a.addEventListener("click", () => document.body.classList.remove("menu-open")));
