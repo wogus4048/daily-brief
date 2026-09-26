@@ -76,6 +76,24 @@ For all opportunity tracks:
 - Also check DACON, Hackathon Korea, Grantly, 링커리어, 요즘것들, ContestKorea, K-Startup, 기업마당, Luma/EventUs/온오프믹스/Devpost/Meetup and official organizer pages.
 - Gather a broad raw candidate pool before applying filters.
 
+
+### Mandatory Seoul northeast district-source track
+Treat the following local-government sources as mandatory daily checks, not optional discovery leads:
+- 노원구청 (nowon.kr): 공지사항, 고시공고, 온라인접수/통합접수, 청년정책 and 노원청년포털/청년시설소식
+- 도봉구청 (dobong.go.kr): 행사모집/공지, 청년정책, 청년미래과, 청년창업센터, 도봉복지로의 신청형 프로그램
+- 강북구청 (gangbuk.go.kr): 새소식, 고시공고, 일자리청년과, 지역경제과, 청년일자리센터 and 신청/모집 공고
+
+Search these three districts independently every refresh even when unrestricted web search found enough candidates elsewhere. For each district, look specifically for:
+- 청년·취업·직무역량·자격증·AI/개발/디지털 교육
+- 예비창업·초기창업·창업공간·점포·사무실·사업화·멘토링·컨설팅
+- 개인/1인팀이 참여 가능한 공모전, 아이디어 경진대회, 해커톤, 마켓/셀러 기회
+- 현금·바우처·응시료·주거/공간·교육비 등 실질 지원
+- 서울시/유관기관 사업을 구청이 재공고한 경우에도 현재 신청 가능하면 후보로 수집
+
+Do not publish generic festivals, leisure classes, children-only programs, or unrelated welfare notices merely because they are open. Publish only items that materially fit the user's opportunity profile. If a district has no relevant OPEN item after checking its official pages, record that the district was checked rather than silently skipping it.
+
+Adjacent Seoul district sites may be explored when broad discovery surfaces a relevant opportunity, but 노원·도봉·강북 remain the mandatory local baseline.
+
 For AI news:
 - Search broadly across the web, GitHub releases/repos, Hugging Face, arXiv/research labs, official product updates, and developer communities.
 - Do not limit discovery to major AI vendors.
@@ -115,6 +133,8 @@ After broad search, separately inspect the known source families instead of trea
 - NIPA, KISA and other ICT/public agencies
 - fintech/financial-industry startup and developer programs
 - organizer/developer pages of companies, universities, foundations, associations and public institutions
+
+- Mandatory local pass: 노원구청/노원청년포털, 도봉구청/청년정책·청년창업센터, 강북구청/일자리청년과·청년일자리센터. Each must be checked independently for current 모집/접수중 items.
 
 ### 4. Expand from newly discovered organizers
 For every credible new organizer/domain discovered through search:
