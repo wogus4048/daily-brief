@@ -90,7 +90,7 @@ Search these three districts independently every refresh even when unrestricted 
 - 현금·바우처·응시료·주거/공간·교육비 등 실질 지원
 - 서울시/유관기관 사업을 구청이 재공고한 경우에도 현재 신청 가능하면 후보로 수집
 
-Do not publish generic festivals, leisure classes, children-only programs, or unrelated welfare notices merely because they are open. Publish only items that materially fit the user's opportunity profile. If a district has no relevant OPEN item after checking its official pages, record that the district was checked rather than silently skipping it.
+Do not publish generic festivals, leisure classes, children-only programs, unrelated welfare notices, or generic language/certification exam-fee reimbursements merely because they are open. Publish only items that materially fit the user's opportunity profile. Prefer opportunities that materially advance software/AI skills, job access, portfolio building, startup execution, workspace access, commercialization, funding, PoC, or product-building. If a district has no relevant OPEN item after checking its official pages, record that the district was checked rather than silently skipping it.
 
 Adjacent Seoul district sites may be explored when broad discovery surfaces a relevant opportunity, but 노원·도봉·강북 remain the mandatory local baseline.
 
