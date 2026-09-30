@@ -20,7 +20,8 @@ Keep an item once discovered. Use a stable `id` across days.
 
 Required tracking fields:
 - `firstSeenDate`: first day the item was added. Never reset it.
-- `status`: `OPEN` or `CLOSED`.
+- `status`: `UPCOMING`, `OPEN`, or `CLOSED`.
+- `openingAt`: required for `UPCOMING`; exact scheduled application opening time in ISO 8601 with timezone when officially known.
 - `lastVerifiedDate`: last day the official source was checked.
 - `lastUpdatedDate`: change only when meaningful content changes.
 
@@ -30,7 +31,7 @@ Classification:
 - Do not label a general software/app/web hackathon as AI just because AI could optionally be used.
 - `support` is a separate catalog for startup/support opportunities such as pre-startup programs, commercialization funding, incubation/education, accelerators, PoC/validation, office/space support, cloud/GPU/API credits, and developer/startup benefit programs.
 
-Do not delete an opportunity just because today's search did not surface it. Re-check the official source. When registration closes or the deadline passes, set `status: CLOSED` and keep it in the cumulative catalog so history remains searchable.
+Do not delete an opportunity just because today's search did not surface it. Re-check the official source. Use `UPCOMING` when an officially announced opportunity is not accepting applications yet but has a known future opening time/date and is relevant to act on in advance, especially same-day/next-24-hour or first-come openings. Change `UPCOMING` to `OPEN` after the official opening time is reached and the application page is available. When registration closes or the deadline passes, set `status: CLOSED` and keep it in the cumulative catalog so history remains searchable.
 
 ### AI news
 
@@ -74,6 +75,7 @@ For startup/support programs:
 For all opportunity tracks:
 - Start with unrestricted web search and inspect new domains.
 - Also check DACON, Hackathon Korea, Grantly, 링커리어, 요즘것들, ContestKorea, K-Startup, 기업마당, Luma/EventUs/온오프믹스/Devpost/Meetup and official organizer pages.
+- Treat recurring high-value organizer/event sites as a watchlist even before applications open. At minimum, check `aitop100.org` (AI_TOP_100), Kakao Impact, and Brian Impact for newly announced AI competitions or application-opening countdowns.
 - Gather a broad raw candidate pool before applying filters.
 
 
@@ -105,15 +107,16 @@ Discovery/community sources are for finding leads. Final published facts should 
 
 This checklist is a completion gate, not a suggestion. A daily refresh is incomplete until every applicable step below is performed or explicitly exhausted.
 
-### 1. Re-verify existing OPEN opportunities first
-- Re-open every currently OPEN contest/support item's primary official source.
-- Confirm registration is still open, deadline/date/time, eligibility, prize/support details, and official links.
+### 1. Re-verify existing OPEN and UPCOMING opportunities first
+- Re-open every currently OPEN or UPCOMING contest/support item's primary official source.
+- For `OPEN`, confirm registration is still open, deadline/date/time, eligibility, prize/support details, and official links.
+- For `UPCOMING`, confirm the announced opening date/time, whether capacity is first-come or limited, deadline, eligibility, rewards, and official application/login prerequisites. Promote it to `OPEN` once the opening time arrives and the official application path is live.
 - If an official source proves registration ended, keep the item but set `status: CLOSED`.
 - Do not close or delete an item merely because today's search does not surface it.
 
 ### 2. Run broad unrestricted web discovery before fixed-source checks
 Search the open web first so discovery is not limited to known platforms. Run independent query groups for:
-- AI / LLM / data competitions and hackathons
+- AI / LLM / data competitions and hackathons, including announced-but-not-yet-open registration, countdown pages, first-come applications, and recurring branded competitions
 - general software-development contests and hackathons
 - app / web / mobile / backend / API / cloud / DevOps
 - security / cybersecurity
@@ -128,6 +131,7 @@ Use multiple Korean and English query variants and inspect unfamiliar domains re
 ### 3. Check fixed sources as a second safety net
 After broad search, separately inspect the known source families instead of treating them as the whole universe:
 - DACON, Hackathon Korea, Grantly, 링커리어, 요즘것들, ContestKorea
+- AI_TOP_100 (`aitop100.org`), Kakao Impact and Brian Impact competition/program announcements
 - EventUs, Luma, 온오프믹스, Devpost, Meetup
 - K-Startup, 기업마당, SBA and Seoul startup programs
 - NIPA, KISA and other ICT/public agencies
@@ -184,6 +188,7 @@ Do not finish the opportunity refresh until all applicable gates pass:
 - If `support` has zero OPEN items, rerun startup/support discovery with new query variants and re-check K-Startup, 기업마당, SBA, NIPA/KISA and fintech/startup sources.
 - If OPEN contests are mostly AI/data, rerun the non-AI software-development track.
 - If there are no OPEN general-software/app/web/security/fintech/public-data opportunities, run another broad search across those categories before concluding none were found.
+- Search separately for imminent application openings (`접수 예정`, `신청 시작`, `오픈 예정`, `선착순`, countdown pages) in the next 7 days. Any relevant same-day/next-24-hour or limited-capacity opening must not be omitted merely because registration is not open yet; publish it as `UPCOMING` with `openingAt`.
 - If a major source family could not be checked because of a tool/site failure, preserve existing verified data and record the gap rather than silently treating it as empty.
 - Do not satisfy a raw-candidate quota by counting obvious duplicates; candidate counts refer to materially distinct opportunities.
 
@@ -198,6 +203,7 @@ Do not finish the opportunity refresh until all applicable gates pass:
 Before writing data:
 - confirm every new item has a primary official link when available
 - confirm no expired opportunity remains OPEN solely because of stale data
+- confirm no `UPCOMING` item whose opening time has passed remains UPCOMING without re-checking the official application page
 - confirm `firstSeenDate` was not reset
 - confirm routine re-checks changed only `lastVerifiedDate`
 - confirm meaningful changes advanced `lastUpdatedDate`
