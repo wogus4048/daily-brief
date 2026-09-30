@@ -205,9 +205,12 @@ Before writing data:
 
 ### 10. Save, validate and verify deployment
 - Write one final snapshot to both `data/latest.json` and today's `data/archive/YYYY-MM-DD.json`.
-- Run `scripts/validate_data.py`.
-- Commit to `main` using `Update daily brief for YYYY-MM-DD`.
-- Verify GitHub Actions validation and Pages deployment, not just commit success.
+- Run `scripts/validate_data.py` against the final snapshot before publishing it.
+- Scheduled automation MUST NOT write directly to `main`. Publish only the two data files to a staging branch named `automation/daily-brief-YYYY-MM-DD-data`, based on the current `main`.
+- The staging branch must contain no UI or unrelated changes.
+- Prefer one staging commit containing both data files so the branch represents one complete snapshot.
+- `.github/workflows/promote-daily-brief.yml` re-validates the candidate, confirms the archive is byte-for-byte identical to `data/latest.json`, enforces data-only changes, promotes the snapshot to `main` with commit message `Update daily brief for YYYY-MM-DD`, dispatches `.github/workflows/pages.yml`, and waits for its result.
+- The refresh is complete only after both the promotion workflow and the dispatched Pages workflow succeed for the promoted commit. A staging commit alone is not success.
 - Normal successful refreshes stay silent; report only failures that require user attention.
 
 
@@ -248,7 +251,8 @@ If broad discovery, official pages, or a tool partially fails:
 ## Validation and deployment
 
 - Validate with `scripts/validate_data.py`.
-- Commit the completed snapshot to `main`.
-- Every push triggers `.github/workflows/pages.yml`.
-- A successful commit is not the same as a successful site refresh; verify both validate and deploy jobs when possible.
+- The scheduled automation writes the completed snapshot only to `automation/daily-brief-YYYY-MM-DD-data`; it does not update `main` directly.
+- `.github/workflows/promote-daily-brief.yml` is the promotion path from the automation staging branch to `main`. It validates the candidate, enforces data-only changes, creates the required `Update daily brief for YYYY-MM-DD` commit on `main`, dispatches `.github/workflows/pages.yml`, and waits for that workflow to succeed.
+- A staging commit or a successful `main` push is not the same as a successful site refresh. Verify the promotion run and the Pages validate/deploy run for the promoted commit.
+- If promotion cannot push to `main`, validation fails, the archive differs from `latest`, or Pages fails, treat the refresh as failed and report the concrete error.
 - Do not send Slack messages for normal refreshes. Report only failures needing user attention.
