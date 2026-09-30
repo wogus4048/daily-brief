@@ -1,0 +1,144 @@
+name: Promote daily brief staging snapshot
+
+on:
+  push:
+    branches:
+      - 'automation/daily-brief-*-data'
+  workflow_dispatch:
+    inputs:
+      candidate_ref:
+        description: 'Staging branch to promote'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: daily-brief-promote
+  cancel-in-progress: false
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Resolve candidate ref
+        id: candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            ref="${{ inputs.candidate_ref }}"
+          else
+            ref="${{ github.ref_name }}"
+          fi
+          if [[ ! "$ref" =~ ^automation/daily-brief-([0-9]{4}-[0-9]{2}-[0-9]{2})-data$ ]]; then
+            echo "Unexpected candidate ref: $ref" >&2
+            exit 1
+          fi
+          date="${BASH_REMATCH[1]}"
+          echo "ref=$ref" >> "$GITHUB_OUTPUT"
+          echo "date=$date" >> "$GITHUB_OUTPUT"
+
+      - name: Check out candidate
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.candidate.outputs.ref }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate candidate snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          date='${{ steps.candidate.outputs.date }}'
+          python scripts/validate_data.py data/latest.json
+          test -f "data/archive/$date.json"
+          cmp --silent data/latest.json "data/archive/$date.json"
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          expected = os.environ["EXPECTED_DATE"]
+          data = json.loads(Path("data/latest.json").read_text(encoding="utf-8"))
+          actual = data.get("date")
+          if actual != expected:
+              raise SystemExit(f"snapshot date {actual!r} does not match branch date {expected!r}")
+          PY
+        env:
+          EXPECTED_DATE: ${{ steps.candidate.outputs.date }}
+
+      - name: Enforce data-only candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          date='${{ steps.candidate.outputs.date }}'
+          git fetch origin main
+          mapfile -t changed < <(git diff --name-only origin/main...HEAD)
+          if (( ${#changed[@]} == 0 )); then
+            echo "Candidate has no changes relative to main."
+          fi
+          for path in "${changed[@]}"; do
+            if [[ "$path" != "data/latest.json" && "$path" != "data/archive/$date.json" ]]; then
+              echo "Candidate changed forbidden path: $path" >&2
+              exit 1
+            fi
+          done
+
+      - name: Promote snapshot to main
+        id: promote
+        shell: bash
+        run: |
+          set -euo pipefail
+          candidate='${{ steps.candidate.outputs.ref }}'
+          date='${{ steps.candidate.outputs.date }}'
+          git fetch origin "$candidate" main
+          git checkout -B main origin/main
+          git checkout "origin/$candidate" -- data/latest.json "data/archive/$date.json"
+          python scripts/validate_data.py data/latest.json
+          cmp --silent data/latest.json "data/archive/$date.json"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet -- data/latest.json "data/archive/$date.json"; then
+            echo "No data changes to promote."
+            sha="$(git rev-parse HEAD)"
+          else
+            git add data/latest.json "data/archive/$date.json"
+            git commit -m "Update daily brief for $date"
+            git push origin HEAD:main
+            sha="$(git rev-parse HEAD)"
+          fi
+          echo "sha=$sha" >> "$GITHUB_OUTPUT"
+
+      - name: Dispatch Pages validation and deployment
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh workflow run pages.yml --ref main
+
+      - name: Wait for Pages workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          target='${{ steps.promote.outputs.sha }}'
+          run_id=""
+          for _ in {1..30}; do
+            run_id="$(gh run list               --workflow pages.yml               --branch main               --event workflow_dispatch               --limit 20               --json databaseId,headSha,createdAt               --jq ".[] | select(.headSha == \"$target\") | .databaseId"               | head -n1)"
+            if [[ -n "$run_id" ]]; then
+              break
+            fi
+            sleep 2
+          done
+          if [[ -z "$run_id" ]]; then
+            echo "Could not find dispatched Pages run for $target" >&2
+            exit 1
+          fi
+          gh run watch "$run_id" --exit-status
