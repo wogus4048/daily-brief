@@ -107,7 +107,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          if git diff --quiet -- data/latest.json "data/archive/$date.json"; then
+          if git diff --cached --quiet -- data/latest.json "data/archive/$date.json"; then
             echo "No data changes to promote."
             sha="$(git rev-parse HEAD)"
           else
