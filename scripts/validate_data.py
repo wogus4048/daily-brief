@@ -23,7 +23,9 @@ for group in ('contests', 'support'):
         assert_date(item['lastVerifiedDate'], f"{group}.{item['id']}.lastVerifiedDate")
         if item.get('lastUpdatedDate'):
             assert_date(item['lastUpdatedDate'], f"{group}.{item['id']}.lastUpdatedDate")
-        assert item['status'] in ('OPEN', 'CLOSED'), f"{group}.{item['id']}.status must be OPEN or CLOSED"
+        assert item['status'] in ('UPCOMING', 'OPEN', 'CLOSED'), f"{group}.{item['id']}.status must be UPCOMING, OPEN or CLOSED"
+        if item['status'] == 'UPCOMING':
+            assert item.get('openingAt'), f"{group}.{item['id']}.UPCOMING item missing openingAt"
         ids.append(item['id'])
 
 for item in data['aiNews']:
