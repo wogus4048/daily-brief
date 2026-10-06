@@ -180,15 +180,19 @@ async function collectAnchorsSafe(page, hrefSelector, source) {
     const a = locator.nth(i);
     const hrefAttr = await a.getAttribute("href").catch(() => null);
     const text = await a.textContent().catch(() => "");
+    const context = await a.evaluate((el) => {
+      const parent = el.closest("article, li, [class*='card'], [class*='item'], [class*='list'], tr, section");
+      return parent?.innerText || "";
+    }).catch(() => "");
     if (!hrefAttr) continue;
 
     let url;
     try { url = normalizeUrl(new URL(hrefAttr, page.url()).toString()); } catch { continue; }
-    const rawText = cleanText(text || "");
+    const rawText = cleanText(context || text || "");
     if (!rawText) continue;
     byUrl.set(url, {
       source,
-      title: chooseTitle(rawText, url, source),
+      title: chooseTitle(context || text || rawText, url, source),
       url,
       rawText,
       statusHints: statusHints(rawText),
