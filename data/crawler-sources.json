@@ -25,7 +25,7 @@
     {
       "key": "sotong24Contests",
       "name": "소통24 공모전",
-      "url": "https://sotong.go.kr/front/epilogue/epilogueBbsListPage.do?menu_id=519",
+      "url": "https://sotong.go.kr/front/epilogue/epilogueNewListPage.do?menu_id=527&pagetype=bbs&date_range=all&date_range_cnddt=all",
       "role": "government/public idea contests",
       "required": false
     },
