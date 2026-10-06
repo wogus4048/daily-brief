@@ -2,9 +2,7 @@
 import json
 import pathlib
 import sys
-import urllib.request
-import urllib.parse
-from html.parser import HTMLParser
+from urllib.parse import urlsplit, urlunsplit
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
@@ -20,86 +18,20 @@ if len(sys.argv) > 3:
     baseline_path = pathlib.Path(sys.argv[3])
     baseline = json.loads(baseline_path.read_text(encoding="utf-8"))
 
+cache_path = ROOT / f"data/source-cache/{snapshot_date}.json"
+assert cache_path.exists(), f"missing Playwright source cache: {cache_path}"
+source_cache = json.loads(cache_path.read_text(encoding="utf-8"))
+
 assert audit.get("date") == snapshot_date, "research audit date must match snapshot date"
 assert audit.get("completedAt"), "research audit missing completedAt"
-
-class _LinkInventoryParser(HTMLParser):
-    def __init__(self, base_url, matcher):
-        super().__init__()
-        self.base_url = base_url
-        self.matcher = matcher
-        self.anchor = None
-        self.items = []
-
-    def handle_starttag(self, tag, attrs):
-        if tag == "a":
-            attrs = dict(attrs)
-            self.anchor = {"href": attrs.get("href", ""), "text": []}
-
-    def handle_data(self, data):
-        if self.anchor is not None:
-            self.anchor["text"].append(data)
-
-    def handle_endtag(self, tag):
-        if tag != "a" or self.anchor is None:
-            return
-        href = self.anchor["href"]
-        text = " ".join("".join(self.anchor["text"]).split())
-        self.anchor = None
-        if not href or not text:
-            return
-        absolute = urllib.parse.urljoin(self.base_url, href)
-        parsed = urllib.parse.urlsplit(absolute)
-        normalized = urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, parsed.path, "", ""))
-        if self.matcher(normalized):
-            self.items.append({"url": normalized, "title": text})
+assert source_cache.get("date") == snapshot_date, "source cache date must match snapshot date"
+assert source_cache.get("crawler", {}).get("engine") == "playwright-chromium", "source cache must come from Playwright crawler"
 
 
-def _fetch_html(url):
-    req = urllib.request.Request(
-        url,
-        headers={"User-Agent": "daily-brief-coverage-check/1.0"},
-    )
-    with urllib.request.urlopen(req, timeout=20) as resp:
-        return resp.read().decode("utf-8", errors="replace")
-
-
-def _dedupe_inventory(items):
-    seen = {}
-    for item in items:
-        seen[item["url"]] = item
-    return list(seen.values())
-
-
-def fetch_dacon_competitions_inventory():
-    url = "https://www.dacon.io/competitions"
-    html = _fetch_html(url)
-    parser = _LinkInventoryParser(
-        url,
-        lambda u: urllib.parse.urlsplit(u).netloc.lower().endswith("dacon.io")
-        and "/competitions/official/" in urllib.parse.urlsplit(u).path,
-    )
-    parser.feed(html)
-    inventory = _dedupe_inventory(parser.items)
-    if not inventory:
-        raise AssertionError("DACON competitions page extraction returned zero competition links")
-    return inventory
-
-
-def fetch_daker_hackathons_inventory():
-    url = "https://daker.ai/public/hackathons"
-    html = _fetch_html(url)
-    parser = _LinkInventoryParser(
-        url,
-        lambda u: urllib.parse.urlsplit(u).netloc.lower().endswith("daker.ai")
-        and urllib.parse.urlsplit(u).path.startswith("/public/hackathons/")
-        and urllib.parse.urlsplit(u).path != "/public/hackathons/",
-    )
-    parser.feed(html)
-    inventory = _dedupe_inventory(parser.items)
-    if not inventory:
-        raise AssertionError("DAKER hackathons page extraction returned zero hackathon links")
-    return inventory
+def normalize_url(value):
+    parsed = urlsplit(value)
+    path = parsed.path[:-1] if len(parsed.path) > 1 and parsed.path.endswith("/") else parsed.path
+    return urlunsplit((parsed.scheme, parsed.netloc, path, "", ""))
 
 
 TRACKS = {
@@ -157,7 +89,7 @@ for track_id, rule in TRACKS.items():
         assert disposition in ("PUBLISHED", "EXISTING", "DUPLICATE", "INELIGIBLE", "CLOSED", "NOT_RELEVANT"), (
             f"{track_id}.rawCandidates[{i}] invalid disposition"
         )
-        distinct.add((candidate["title"].strip().lower(), candidate["url"].strip()))
+        distinct.add((candidate["title"].strip().lower(), normalize_url(candidate["url"])))
         if candidate.get("id"):
             all_candidate_ids.add(candidate["id"])
 
@@ -203,35 +135,41 @@ for source in REQUIRED_SOURCES:
         assert isinstance(reason, str) and reason.strip(), f"{source} FAILED requires reason"
 
 dacon = sources["DACON"]
-if dacon.get("status") == "CHECKED":
-    allowed_dispositions = {"PUBLISHED", "EXISTING", "DUPLICATE", "INELIGIBLE", "CLOSED", "NOT_RELEVANT"}
+assert dacon.get("status") == "CHECKED", "DACON must be CHECKED using the Playwright source cache"
+checked_urls = {normalize_url(url) for url in dacon.get("urls", [])}
+assert normalize_url("https://www.dacon.io/competitions") in checked_urls, "DACON evidence must include competitions page"
+assert normalize_url("https://daker.ai/public/hackathons") in checked_urls, "DACON evidence must include DAKER hackathons page"
 
-    page_specs = [
-        ("competitionsInventory", "https://www.dacon.io/competitions", fetch_dacon_competitions_inventory),
-        ("dakerInventory", "https://daker.ai/public/hackathons", fetch_daker_hackathons_inventory),
-    ]
+allowed_dispositions = {"PUBLISHED", "EXISTING", "DUPLICATE", "INELIGIBLE", "CLOSED", "NOT_RELEVANT"}
+inventory_specs = [
+    (
+        "competitionsInventory",
+        source_cache.get("sources", {}).get("daconCompetitions", {}).get("items", []),
+        "DACON competitions",
+    ),
+    (
+        "dakerInventory",
+        source_cache.get("sources", {}).get("dakerHackathons", {}).get("items", []),
+        "DAKER hackathons",
+    ),
+]
 
-    for field, expected_page, fetch_live in page_specs:
-        inventory = dacon.get(field)
-        assert isinstance(inventory, list) and inventory, f"DACON CHECKED requires {field}"
-        audit_urls = set()
-        for i, item in enumerate(inventory):
-            assert isinstance(item, dict), f"DACON.{field}[{i}] must be an object"
-            assert item.get("title"), f"DACON.{field}[{i}] missing title"
-            assert item.get("url"), f"DACON.{field}[{i}] missing url"
-            assert item.get("disposition") in allowed_dispositions, f"DACON.{field}[{i}] invalid disposition"
-            parsed = urllib.parse.urlsplit(item["url"])
-            normalized = urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, parsed.path, "", ""))
-            audit_urls.add(normalized)
+for field, cached_items, label in inventory_specs:
+    assert isinstance(cached_items, list) and cached_items, f"source cache missing {label} inventory"
+    audit_inventory = dacon.get(field)
+    assert isinstance(audit_inventory, list) and audit_inventory, f"DACON CHECKED requires {field}"
 
-        live_inventory = fetch_live()
-        live_urls = {item["url"] for item in live_inventory}
-        missing = live_urls - audit_urls
-        assert not missing, f"{expected_page} live inventory not fully reviewed: {sorted(missing)}"
+    audit_urls = set()
+    for i, item in enumerate(audit_inventory):
+        assert isinstance(item, dict), f"DACON.{field}[{i}] must be an object"
+        assert item.get("title"), f"DACON.{field}[{i}] missing title"
+        assert item.get("url"), f"DACON.{field}[{i}] missing url"
+        assert item.get("disposition") in allowed_dispositions, f"DACON.{field}[{i}] invalid disposition"
+        audit_urls.add(normalize_url(item["url"]))
 
-    checked_urls = set(dacon.get("urls", []))
-    assert "https://www.dacon.io/competitions" in checked_urls, "DACON evidence must include competitions page"
-    assert "https://daker.ai/public/hackathons" in checked_urls, "DACON evidence must include DAKER hackathons page"
+    cache_urls = {normalize_url(item["url"]) for item in cached_items if item.get("url")}
+    missing = cache_urls - audit_urls
+    assert not missing, f"{label} crawler inventory not fully reviewed: {sorted(missing)}"
 
 districts = audit.get("districts")
 assert isinstance(districts, dict), "research audit districts must be an object"
@@ -290,5 +228,6 @@ assert set(published_ids).issubset(all_candidate_ids), "every published id must 
 
 print(
     f"OK: {audit_path} "
-    f"({len(published_ids)} published, {len(audit.get('reverifiedIds', []))} reverified)"
+    f"({len(published_ids)} published, {len(audit.get('reverifiedIds', []))} reverified, "
+    f"DACON cache {source_cache['totals']['daconCompetitions']}, DAKER cache {source_cache['totals']['dakerHackathons']})"
 )
