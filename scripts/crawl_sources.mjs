@@ -138,24 +138,19 @@ async function scrollListing(page, selector, rounds = 20) {
 }
 
 async function collectAnchors(page, hrefSelector, source) {
-  const locator = page.locator(hrefSelector);
-  const count = await locator.count();
-  const rows = [];
-
-  for (let i = 0; i < count; i += 1) {
-    const a = locator.nth(i);
-    const hrefAttr = await a.getAttribute("href").catch(() => null);
-    const text = await a.textContent().catch(() => "");
-    if (!hrefAttr) continue;
-    rows.push({
-      href: new URL(hrefAttr, page.url()).toString(),
-      text: text || "",
-      context: text || "",
-    });
-  }
+  const rows = await page.evaluate((selector) =>
+    [...document.querySelectorAll(selector)].map((a) => {
+      const parentText = a.closest("article, li, [class*='card'], [class*='item'], [class*='contest'], [class*='hackathon'], tr, section")?.innerText;
+      return {
+        href: a.href,
+        text: a.innerText || a.textContent || "",
+        context: parentText || "",
+      };
+    }), hrefSelector
+  );
 
   const byUrl = new Map();
-  for (const row of rows) {
+  for (const row of rows || []) {
     if (!row.href) continue;
     let url;
     try { url = normalizeUrl(row.href); } catch { continue; }
@@ -171,6 +166,32 @@ async function collectAnchors(page, hrefSelector, source) {
         statusHints: statusHints(rawText),
       });
     }
+  }
+  return [...byUrl.values()].sort((a, b) => a.url.localeCompare(b.url));
+}
+
+async function collectAnchorsSafe(page, hrefSelector, source) {
+  const locator = page.locator(hrefSelector);
+  const count = await locator.count();
+  const byUrl = new Map();
+
+  for (let i = 0; i < count; i += 1) {
+    const a = locator.nth(i);
+    const hrefAttr = await a.getAttribute("href").catch(() => null);
+    const text = await a.textContent().catch(() => "");
+    if (!hrefAttr) continue;
+
+    let url;
+    try { url = normalizeUrl(new URL(hrefAttr, page.url()).toString()); } catch { continue; }
+    const rawText = cleanText(text || "");
+    if (!rawText) continue;
+    byUrl.set(url, {
+      source,
+      title: chooseTitle(rawText, url, source),
+      url,
+      rawText,
+      statusHints: statusHints(rawText),
+    });
   }
 
   return [...byUrl.values()].sort((a, b) => a.url.localeCompare(b.url));
@@ -254,7 +275,7 @@ async function crawlSotong24(page) {
   await page.waitForTimeout(1500);
   const selector = 'a[href*="epilogueNewViewPage.do"]';
   await expandListing(page, selector, "소통24 공모전");
-  const items = (await collectAnchors(page, selector, "소통24"))
+  const items = (await collectAnchorsSafe(page, selector, "소통24"))
     .filter(item => item.url.includes("sotong.go.kr/front/epilogue/epilogueNewViewPage.do"));
   if (!items.length) throw new Error("소통24 crawler returned zero contest items");
   return withActionable({ key: "sotong24Contests", status: "OK", url, items }, () => true);
