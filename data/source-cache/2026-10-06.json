@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generatedAt": "2026-10-06T08:28:24.016Z",
+  "generatedAt": "2026-10-06T08:30:53.890Z",
   "timezone": "Asia/Seoul",
   "crawler": {
     "engine": "playwright-chromium",
@@ -2552,7 +2552,7 @@
           "source": "DAKER",
           "title": "2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래",
           "url": "https://daker.ai/public/hackathons/2026-finance-ai-challenge",
-          "rawText": "진행중 심사 D-1 금 금융보안원 프리미엄 2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래 총 상금 3,500만원 1,388팀 참가 153,253 진행중",
+          "rawText": "진행중 심사 D-1 금 금융보안원 프리미엄 2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래 총 상금 3,500만원 1,388팀 참가 153,255 진행중",
           "statusHints": [
             "진행중"
           ]
@@ -2607,7 +2607,7 @@
           "source": "DAKER",
           "title": "2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge",
           "url": "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims",
-          "rawText": "모집중 D-18 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 59팀 참가 3,033 참가 신청하기",
+          "rawText": "모집중 D-18 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 59팀 참가 3,035 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2653,7 +2653,7 @@
           "source": "DAKER",
           "title": "국부펀드 KIC, AI 에이전트 공모전",
           "url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
-          "rawText": "모집중 D-36 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 173팀 참가 8,630 참가 신청하기",
+          "rawText": "모집중 D-36 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 173팀 참가 8,646 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2690,7 +2690,7 @@
           "source": "DAKER",
           "title": "합성 미세구조 기반 재료 물성 예측 AI 경진대회",
           "url": "https://daker.ai/public/hackathons/synthetic-microstructure-property-prediction-ai",
-          "rawText": "모집중 알고리즘 D-12 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 236팀 참가 11,286 참가 신청하기",
+          "rawText": "모집중 알고리즘 D-12 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 236팀 참가 11,289 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2716,7 +2716,7 @@
           "source": "DAKER",
           "title": "2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge",
           "url": "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims",
-          "rawText": "모집중 D-18 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 59팀 참가 3,033 참가 신청하기",
+          "rawText": "모집중 D-18 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 59팀 참가 3,035 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2725,7 +2725,7 @@
           "source": "DAKER",
           "title": "국부펀드 KIC, AI 에이전트 공모전",
           "url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
-          "rawText": "모집중 D-36 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 173팀 참가 8,630 참가 신청하기",
+          "rawText": "모집중 D-36 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 173팀 참가 8,646 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2734,7 +2734,7 @@
           "source": "DAKER",
           "title": "합성 미세구조 기반 재료 물성 예측 AI 경진대회",
           "url": "https://daker.ai/public/hackathons/synthetic-microstructure-property-prediction-ai",
-          "rawText": "모집중 알고리즘 D-12 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 236팀 참가 11,286 참가 신청하기",
+          "rawText": "모집중 알고리즘 D-12 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 236팀 참가 11,289 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2752,7 +2752,7 @@
           "source": "Devpost",
           "title": "Build, Ship, Shape: Amazon Developer Hackathon",
           "url": "https://amazonappdev2026.devpost.com/",
-          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 17 days left Online $138,000 in prizes 46424 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
+          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 17 days left Online $138,000 in prizes 46426 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
           "statusHints": [
             "days left"
           ]
@@ -2840,7 +2840,7 @@
           "source": "Devpost",
           "title": "Nebius x NVIDIA Global AI Hackathon",
           "url": "https://nebiusglobalaihackathon.devpost.com/",
-          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 18636 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
+          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 18640 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
           "statusHints": [
             "days left"
           ]
@@ -2911,7 +2911,7 @@
           "source": "Devpost",
           "title": "Build, Ship, Shape: Amazon Developer Hackathon",
           "url": "https://amazonappdev2026.devpost.com/",
-          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 17 days left Online $138,000 in prizes 46424 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
+          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 17 days left Online $138,000 in prizes 46426 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
           "statusHints": [
             "days left"
           ]
@@ -2999,7 +2999,7 @@
           "source": "Devpost",
           "title": "Nebius x NVIDIA Global AI Hackathon",
           "url": "https://nebiusglobalaihackathon.devpost.com/",
-          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 18636 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
+          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 18640 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
           "statusHints": [
             "days left"
           ]
@@ -3560,105 +3560,12 @@
     },
     "sotong24Contests": {
       "key": "sotong24Contests",
-      "status": "OK",
-      "url": "https://sotong.go.kr/front/epilogue/epilogueBbsList.do",
-      "items": [
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 09:00 ~ 2026-10-31 18:00] 【해양경찰청】 소형레저기구 표류사고 예방 퀴즈 이벤트 해양경찰청 서해지방해양경찰청 여수해양경찰서 기획운영과 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=0020670e346c42a6b0dc993b34bfe876&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 09:00 ~ 2026-10-31 18:00] 【해양경찰청】 소형레저기구 표류사고 예방 퀴즈 이벤트 해양경찰청 서해지방해양경찰청 여수해양경찰서 기획운영과 의견 작성 수0 공유 수0",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 00:00 ~ 2026-11-10 17:00] 【서울특별시】 제12회 서울 29초 영화제 서울특별시 홍보기획관 홍보담당관 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=1bd7e2dabb80469fa1597d4cae85f6bd&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 00:00 ~ 2026-11-10 17:00] 【서울특별시】 제12회 서울 29초 영화제 서울특별시 홍보기획관 홍보담당관 의견 작성 수0 공유 수0",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【감사원】 국민제안 감사 아이디어 공모 감사원 대변인 홍보담당관 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=2d5934930c3e4b9a8a9fe40cdb81bdf9&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【감사원】 국민제안 감사 아이디어 공모 감사원 대변인 홍보담당관 의견 작성 수0 공유 수0",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【행정안전부】 제7차 열린정부 실행계획 국민제안공모 행정안전부 참여혁신조직실 참여혁신국 혁신기획과 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=5657d4f1636f406182359c88f0847e49&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【행정안전부】 제7차 열린정부 실행계획 국민제안공모 행정안전부 참여혁신조직실 참여혁신국 혁신기획과 의견 작성 수0 공유 수0",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【행정안전부】 2026 모바일신분증 아이디어 공모전 행정안전부 인공지능정부실 인공지능정부서비스국 국민맞춤서비스과 의견 작성 수0 공유 수1",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=567b5562322d43f0b806794dfc27bdd9&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【행정안전부】 2026 모바일신분증 아이디어 공모전 행정안전부 인공지능정부실 인공지능정부서비스국 국민맞춤서비스과 의견 작성 수0 공유 수1",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-09-30 10:00 ~ 2026-10-27 17:00] 【서울특별시】 2026 서울영상공모전 <서울 밤로그> 서울특별시 홍보기획관 콘텐츠담당관 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=7e4fe7c5d65f483f819e35ad1abcd608&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-09-30 10:00 ~ 2026-10-27 17:00] 【서울특별시】 2026 서울영상공모전 <서울 밤로그> 서울특별시 홍보기획관 콘텐츠담당관 의견 작성 수0 공유 수0",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【동두천시】 2026 영상공모전 ‘PLAY 동두천!’ 경기도 동두천시 홍보미래담당관 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=81a73915bb7a4fd4b2412af97bb2c0fb&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【동두천시】 2026 영상공모전 ‘PLAY 동두천!’ 경기도 동두천시 홍보미래담당관 의견 작성 수0 공유 수0",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-09-29 15:00 ~ 2026-10-14 19:00] 【국가철도공단】 철도산업 규제ㆍ애로 개선제안 공모 국가철도공단 기획본부 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=c24f5002e9424991bdfe52e3bd4e10ae&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-09-29 15:00 ~ 2026-10-14 19:00] 【국가철도공단】 철도산업 규제ㆍ애로 개선제안 공모 국가철도공단 기획본부 의견 작성 수0 공유 수0",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 09:00 ~ 2026-10-14 23:59] 【서울특별시】 제3회 서울특별시 강서구 캐릭터 새로미 굿즈 공모전(연장) 서울특별시 강서구 기획재정국 홍보소통과 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=d544637c156442d8b12e646941fd6f7d&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 09:00 ~ 2026-10-14 23:59] 【서울특별시】 제3회 서울특별시 강서구 캐릭터 새로미 굿즈 공모전(연장) 서울특별시 강서구 기획재정국 홍보소통과 의견 작성 수0 공유 수0",
-          "statusHints": []
-        }
-      ],
-      "count": 9,
-      "actionableItems": [
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【감사원】 국민제안 감사 아이디어 공모 감사원 대변인 홍보담당관 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=2d5934930c3e4b9a8a9fe40cdb81bdf9&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【감사원】 국민제안 감사 아이디어 공모 감사원 대변인 홍보담당관 의견 작성 수0 공유 수0",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【행정안전부】 제7차 열린정부 실행계획 국민제안공모 행정안전부 참여혁신조직실 참여혁신국 혁신기획과 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=5657d4f1636f406182359c88f0847e49&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【행정안전부】 제7차 열린정부 실행계획 국민제안공모 행정안전부 참여혁신조직실 참여혁신국 혁신기획과 의견 작성 수0 공유 수0",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【행정안전부】 2026 모바일신분증 아이디어 공모전 행정안전부 인공지능정부실 인공지능정부서비스국 국민맞춤서비스과 의견 작성 수0 공유 수1",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=567b5562322d43f0b806794dfc27bdd9&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【행정안전부】 2026 모바일신분증 아이디어 공모전 행정안전부 인공지능정부실 인공지능정부서비스국 국민맞춤서비스과 의견 작성 수0 공유 수1",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-09-29 15:00 ~ 2026-10-14 19:00] 【국가철도공단】 철도산업 규제ㆍ애로 개선제안 공모 국가철도공단 기획본부 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=c24f5002e9424991bdfe52e3bd4e10ae&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-09-29 15:00 ~ 2026-10-14 19:00] 【국가철도공단】 철도산업 규제ㆍ애로 개선제안 공모 국가철도공단 기획본부 의견 작성 수0 공유 수0",
-          "statusHints": []
-        }
-      ],
-      "actionableCount": 4,
+      "status": "FAILED",
+      "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://sotong.go.kr/front/epilogue/epilogueBbsList.do\", waiting until \"domcontentloaded\"\n\n    at crawlSotong24 (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:285:14)\n    at /home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:489:31\n    at safeCrawl (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:218:18)\n    at runEntry (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:488:30)\n    at async main (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:500:27)",
+      "items": [],
+      "count": 0,
+      "actionableItems": [],
+      "actionableCount": 0,
       "shadow": false
     }
   },
@@ -3670,499 +3577,340 @@
       "items": [
         {
           "source": "창업진흥원 사업공고",
-          "title": "창업기업 확인시스템",
-          "url": "https://cert.k-startup.go.kr/",
-          "rawText": "창업기업 확인시스템",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "창업공간플랫폼",
-          "url": "https://slp.k-startup.go.kr/",
-          "rawText": "창업공간플랫폼",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "K-Startup",
-          "url": "https://www.k-startup.go.kr/",
-          "rawText": "K-Startup",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "창업에듀",
-          "url": "https://www.k-startup.go.kr/edu",
-          "rawText": "창업에듀",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "[Startup Korea Special Visa] Announcement on Application for Recommendations for the “Startup Korea Special Visa”",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=171419&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "[Startup Korea Special Visa] Announcement on Application for Recommendations for the “Startup Korea Special Visa” 기관명 : 창업진흥원 마감일자 : 2026-12-31 00:00:00 진행중 D-86 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026년 중앙부처 및 지자체 창업지원사업 통합공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=175783&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "2026년 중앙부처 및 지자체 창업지원사업 통합공고 기관명 : 창업진흥원 마감일자 : 2026-12-31 23:59:00 진행중 D-86 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026년 팁스(TIPS) 창업기업 지원계획 수정 공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=176076&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "2026년 팁스(TIPS) 창업기업 지원계획 수정 공고 기관명 : 창업진흥원 마감일자 : 2026-12-31 18:00:00 진행중 D-86 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "민간기업 분야 우수인재 특별귀화 추천 신청 모집 공고 (Announcement on the Call for Applications for Recommendation for Special Naturalization of Outstanding Private-Sector Talent)",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=176286&schM=view",
-          "rawText": "자세히 보기",
+          "rawText": "민간기업 분야 우수인재 특별귀화 추천 신청 모집 공고 (Announcement on the Call for Applications for Recommendation for Special Naturalization of Outstanding Private-Sector Talent) 기관명 : 창업진흥원 마감일자 : 2026-10-01 18:00:00 종료 자세히 보기",
           "statusHints": []
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "창업지원사업 예비위원단 재모집 (신산업분야)",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=176391&schM=view",
-          "rawText": "자세히 보기",
+          "rawText": "창업지원사업 예비위원단 재모집 (신산업분야) 기관명 : 창업진흥원 마감일자 : 2026-08-31 18:00:00 종료 자세히 보기",
           "statusHints": []
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026년 스타트업 법률지원사업 참여기업 모집공고(수정)",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=176938&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "2026년 스타트업 법률지원사업 참여기업 모집공고(수정) 기관명 : 창업진흥원 마감일자 : 2026-12-31 18:00:00 진행중 D-86 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026년 스타트업 원스톱 지원센터 참여기업 모집공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=177328&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "2026년 스타트업 원스톱 지원센터 참여기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-12-31 18:00:00 진행중 D-86 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026년 재창업 활성화 유공포상 공고(재창업기업, 재창업 지원 부문)",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178506&schM=view",
-          "rawText": "자세히 보기",
+          "rawText": "2026년 재창업 활성화 유공포상 공고(재창업기업, 재창업 지원 부문) 기관명 : 창업진흥원 마감일자 : 2026-08-26 16:00:00 종료 자세히 보기",
           "statusHints": []
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026년 창업진흥원 정책 아이디어 공모전",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178709&schM=view",
-          "rawText": "자세히 보기",
+          "rawText": "2026년 창업진흥원 정책 아이디어 공모전 기관명 : 창업진흥원 마감일자 : 2026-09-03 16:00:00 종료 자세히 보기",
           "statusHints": []
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026 SVC Seoul 멤버십(확장형) 모집공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178802&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "2026 SVC Seoul 멤버십(확장형) 모집공고 기관명 : 창업진흥원 마감일자 : 2026-12-11 17:00:00 진행중 D-66 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026 SVC Seoul Membership(Global) Recruitment Announcement",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178803&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "2026 SVC Seoul Membership(Global) Recruitment Announcement 기관명 : 창업진흥원 마감일자 : 2026-12-11 17:00:00 진행중 D-66 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "「민관협력 오픈이노베이션 지원」2026년 '성과기업 후속 지원' 창업기업 모집 수정공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178821&schM=view",
-          "rawText": "자세히 보기",
+          "rawText": "「민관협력 오픈이노베이션 지원」2026년 '성과기업 후속 지원' 창업기업 모집 수정공고 기관명 : 창업진흥원 마감일자 : 2026-08-26 16:00:00 종료 자세히 보기",
           "statusHints": []
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "모두의 창업 프로젝트 2기 AI 솔루션 공급기업 모집공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178856&schM=view",
-          "rawText": "자세히 보기",
+          "rawText": "모두의 창업 프로젝트 2기 AI 솔루션 공급기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-08-27 15:00:00 종료 자세히 보기",
           "statusHints": []
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "「민관협력 오픈이노베이션 지원」'공공데이터 활용 지원' 공공기관 제안 협업 과제(Top-Down) 모집공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178873&schM=view",
-          "rawText": "자세히 보기",
+          "rawText": "「민관협력 오픈이노베이션 지원」'공공데이터 활용 지원' 공공기관 제안 협업 과제(Top-Down) 모집공고 기관명 : 창업진흥원 마감일자 : 2026-08-31 16:00:00 종료 자세히 보기",
           "statusHints": []
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "「민관협력 오픈이노베이션 지원」 '공공데이터 활용 지원' 창업기업 제안 협업 과제(Bottom-Up) 모집공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178875&schM=view",
-          "rawText": "자세히 보기",
+          "rawText": "「민관협력 오픈이노베이션 지원」 '공공데이터 활용 지원' 창업기업 제안 협업 과제(Bottom-Up) 모집공고 기관명 : 창업진흥원 마감일자 : 2026-08-31 16:00:00 종료 자세히 보기",
           "statusHints": []
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026 대전 팁스타운 팁스 링크 일본 파트너 초청 상담회",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178892&schM=view",
-          "rawText": "자세히 보기",
+          "rawText": "2026 대전 팁스타운 팁스 링크 일본 파트너 초청 상담회 기관명 : 창업진흥원 마감일자 : 2026-08-31 18:00:00 종료 자세히 보기",
           "statusHints": []
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026년 모두의 창업 글로벌 재외국민 프로그램 참여자 모집 공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178896&schM=view",
-          "rawText": "자세히 보기",
+          "rawText": "2026년 모두의 창업 글로벌 재외국민 프로그램 참여자 모집 공고 기관명 : 창업진흥원 마감일자 : 2026-09-28 18:00:00 종료 자세히 보기",
           "statusHints": []
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "「모두의 창업 프로젝트」통합 모집공고 2차",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178952&schM=view",
-          "rawText": "자세히 보기",
+          "rawText": "「모두의 창업 프로젝트」통합 모집공고 2차 기관명 : 창업진흥원 마감일자 : 2026-09-17 16:00:00 종료 자세히 보기",
           "statusHints": []
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026년 Tokyo PMF·GTM 프로그램 창업기업 모집 공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178953&schM=view",
-          "rawText": "자세히 보기",
+          "rawText": "2026년 Tokyo PMF·GTM 프로그램 창업기업 모집 공고 기관명 : 창업진흥원 마감일자 : 2026-09-03 18:00:00 종료 자세히 보기",
           "statusHints": []
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "「민관협력 오픈이노베이션 지원」2026년 '규제자유특구 지원' 창업기업 모집공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178975&schM=view",
-          "rawText": "자세히 보기",
+          "rawText": "「민관협력 오픈이노베이션 지원」2026년 '규제자유특구 지원' 창업기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-09-09 16:00:00 종료 자세히 보기",
           "statusHints": []
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026년 제3차 대전 팁스타운 입주기업 모집 공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178981&schM=view",
-          "rawText": "자세히 보기",
+          "rawText": "2026년 제3차 대전 팁스타운 입주기업 모집 공고 기관명 : 창업진흥원 마감일자 : 2026-09-28 16:00:00 종료 자세히 보기",
           "statusHints": []
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026년도 딥테크 특화 창업중심대학 추천형 창업기업 모집공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178985&schM=view",
-          "rawText": "자세히 보기",
+          "rawText": "2026년도 딥테크 특화 창업중심대학 추천형 창업기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-09-04 16:00:00 종료 자세히 보기",
           "statusHints": []
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "베트남 테크페스트(TECHFEST 2026) K-스타트업 통합관 참가기업 모집공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179192&schM=view",
-          "rawText": "자세히 보기",
+          "rawText": "베트남 테크페스트(TECHFEST 2026) K-스타트업 통합관 참가기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-09-17 16:00:00 종료 자세히 보기",
           "statusHints": []
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "「2026년 스타트업 법률지원사업 대구광역시 법률상담회」 참여기업 모집 안내",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179197&schM=view",
-          "rawText": "자세히 보기",
+          "rawText": "「2026년 스타트업 법률지원사업 대구광역시 법률상담회」 참여기업 모집 안내 기관명 : 창업진흥원 마감일자 : 2026-09-15 17:00:00 종료 자세히 보기",
           "statusHints": []
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026년 SVC Seoul 인턴십 프로그램 학생인턴 모집공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179200&schM=view",
-          "rawText": "자세히 보기",
+          "rawText": "2026년 SVC Seoul 인턴십 프로그램 학생인턴 모집공고 기관명 : 창업진흥원 마감일자 : 2026-09-17 17:00:00 종료 자세히 보기",
           "statusHints": []
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "「민관협력 오픈이노베이션 지원」 '공공데이터 활용 지원' 공공기관 제안형(Top-Down) 창업기업 모집공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179232&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "「민관협력 오픈이노베이션 지원」 '공공데이터 활용 지원' 공공기관 제안형(Top-Down) 창업기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-10-06 16:00:00 진행중 D-0 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2027년도 초격차 스타트업 프로젝트 기술 사업화 및 투자유치 주관기관 모집 공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179287&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "2027년도 초격차 스타트업 프로젝트 기술 사업화 및 투자유치 주관기관 모집 공고 기관명 : 창업진흥원 마감일자 : 2026-10-12 15:00:00 진행중 D-6 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026 Silicon Valley GTM(Go-To-Market) Program - Public Announcement for Service Provider",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179293&schM=view",
-          "rawText": "자세히 보기",
+          "rawText": "2026 Silicon Valley GTM(Go-To-Market) Program - Public Announcement for Service Provider 기관명 : 창업진흥원 마감일자 : 2026-10-01 18:00:00 종료 자세히 보기",
           "statusHints": []
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026년 실리콘밸리 GTM(Go-To-Market) 프로그램 창업기업 모집공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179294&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "2026년 실리콘밸리 GTM(Go-To-Market) 프로그램 창업기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-10-09 18:00:00 진행중 D-3 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "「민관협력 오픈이노베이션 지원」2026년 제2차 상호 자율탐색형(바이오 분야) 참여기업 모집공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179408&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "사업 및 기타문의",
-          "url": "https://www.k-startup.go.kr/web/contents/webDSCSN_MNG.do",
-          "rawText": "사업 및 기타문의",
-          "statusHints": []
+          "rawText": "「민관협력 오픈이노베이션 지원」2026년 제2차 상호 자율탐색형(바이오 분야) 참여기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-11-02 16:00:00 진행중 D-27 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         }
       ],
-      "count": 35,
+      "count": 30,
       "actionableItems": [
         {
           "source": "창업진흥원 사업공고",
-          "title": "창업기업 확인시스템",
-          "url": "https://cert.k-startup.go.kr/",
-          "rawText": "창업기업 확인시스템",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "창업공간플랫폼",
-          "url": "https://slp.k-startup.go.kr/",
-          "rawText": "창업공간플랫폼",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "K-Startup",
-          "url": "https://www.k-startup.go.kr/",
-          "rawText": "K-Startup",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "창업에듀",
-          "url": "https://www.k-startup.go.kr/edu",
-          "rawText": "창업에듀",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "[Startup Korea Special Visa] Announcement on Application for Recommendations for the “Startup Korea Special Visa”",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=171419&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "[Startup Korea Special Visa] Announcement on Application for Recommendations for the “Startup Korea Special Visa” 기관명 : 창업진흥원 마감일자 : 2026-12-31 00:00:00 진행중 D-86 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026년 중앙부처 및 지자체 창업지원사업 통합공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=175783&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "2026년 중앙부처 및 지자체 창업지원사업 통합공고 기관명 : 창업진흥원 마감일자 : 2026-12-31 23:59:00 진행중 D-86 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026년 팁스(TIPS) 창업기업 지원계획 수정 공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=176076&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "2026년 팁스(TIPS) 창업기업 지원계획 수정 공고 기관명 : 창업진흥원 마감일자 : 2026-12-31 18:00:00 진행중 D-86 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=176286&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=176391&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026년 스타트업 법률지원사업 참여기업 모집공고(수정)",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=176938&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "2026년 스타트업 법률지원사업 참여기업 모집공고(수정) 기관명 : 창업진흥원 마감일자 : 2026-12-31 18:00:00 진행중 D-86 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026년 스타트업 원스톱 지원센터 참여기업 모집공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=177328&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "2026년 스타트업 원스톱 지원센터 참여기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-12-31 18:00:00 진행중 D-86 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178506&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178709&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026 SVC Seoul 멤버십(확장형) 모집공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178802&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "2026 SVC Seoul 멤버십(확장형) 모집공고 기관명 : 창업진흥원 마감일자 : 2026-12-11 17:00:00 진행중 D-66 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026 SVC Seoul Membership(Global) Recruitment Announcement",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178803&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "2026 SVC Seoul Membership(Global) Recruitment Announcement 기관명 : 창업진흥원 마감일자 : 2026-12-11 17:00:00 진행중 D-66 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178821&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178856&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178873&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178875&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178892&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178896&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178952&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178953&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178975&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178981&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178985&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179192&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179197&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179200&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "「민관협력 오픈이노베이션 지원」 '공공데이터 활용 지원' 공공기관 제안형(Top-Down) 창업기업 모집공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179232&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "「민관협력 오픈이노베이션 지원」 '공공데이터 활용 지원' 공공기관 제안형(Top-Down) 창업기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-10-06 16:00:00 진행중 D-0 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2027년도 초격차 스타트업 프로젝트 기술 사업화 및 투자유치 주관기관 모집 공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179287&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "2027년도 초격차 스타트업 프로젝트 기술 사업화 및 투자유치 주관기관 모집 공고 기관명 : 창업진흥원 마감일자 : 2026-10-12 15:00:00 진행중 D-6 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179293&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "2026년 실리콘밸리 GTM(Go-To-Market) 프로그램 창업기업 모집공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179294&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
+          "rawText": "2026년 실리콘밸리 GTM(Go-To-Market) 프로그램 창업기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-10-09 18:00:00 진행중 D-3 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         },
         {
           "source": "창업진흥원 사업공고",
-          "title": "자세히 보기",
+          "title": "「민관협력 오픈이노베이션 지원」2026년 제2차 상호 자율탐색형(바이오 분야) 참여기업 모집공고",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179408&schM=view",
-          "rawText": "자세히 보기",
-          "statusHints": []
-        },
-        {
-          "source": "창업진흥원 사업공고",
-          "title": "사업 및 기타문의",
-          "url": "https://www.k-startup.go.kr/web/contents/webDSCSN_MNG.do",
-          "rawText": "사업 및 기타문의",
-          "statusHints": []
+          "rawText": "「민관협력 오픈이노베이션 지원」2026년 제2차 상호 자율탐색형(바이오 분야) 참여기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-11-02 16:00:00 진행중 D-27 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
         }
       ],
-      "actionableCount": 35,
+      "actionableCount": 11,
       "shadow": true
     }
   },
@@ -4181,7 +3929,7 @@
     "hackathonKoreaActionable": 5,
     "kStartupHighlights": 10,
     "kStartupHighlightsActionable": 3,
-    "sotong24Contests": 9,
-    "sotong24ContestsActionable": 4
+    "sotong24Contests": 0,
+    "sotong24ContestsActionable": 0
   }
 }
