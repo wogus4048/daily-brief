@@ -1,0 +1,86 @@
+name: Crawl daily-brief source inventories
+
+on:
+  push:
+    branches:
+      - 'automation/source-crawl-trigger'
+    paths:
+      - '.automation/source-crawl-trigger.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-brief-source-crawl
+  cancel-in-progress: true
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install crawler dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Crawl source inventories
+        run: npm run crawl:sources
+
+      - name: Validate source cache
+        shell: bash
+        run: |
+          set -euo pipefail
+          date="$(TZ=Asia/Seoul date +%F)"
+          test -f "data/source-cache/latest.json"
+          test -f "data/source-cache/$date.json"
+          cmp --silent "data/source-cache/latest.json" "data/source-cache/$date.json"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path("data/source-cache/latest.json").read_text(encoding="utf-8"))
+          assert data["sources"]["daconCompetitions"]["count"] > 0
+          assert data["sources"]["dakerHackathons"]["count"] > 0
+          assert data["totals"]["daconCompetitions"] == len(data["sources"]["daconCompetitions"]["items"])
+          assert data["totals"]["dakerHackathons"] == len(data["sources"]["dakerHackathons"]["items"])
+          print(
+              "OK:",
+              data["date"],
+              data["totals"]["daconCompetitions"],
+              data["totals"]["dakerHackathons"],
+          )
+          PY
+
+      - name: Commit source cache to main
+        shell: bash
+        run: |
+          set -euo pipefail
+          date="$(TZ=Asia/Seoul date +%F)"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/source-cache/latest.json "data/source-cache/$date.json"
+
+          if git diff --cached --quiet; then
+            echo "Source cache already current."
+            exit 0
+          fi
+
+          git commit -m "Refresh source cache for $date"
+          git pull --rebase origin main
+          git push origin HEAD:main
