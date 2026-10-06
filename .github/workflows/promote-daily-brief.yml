@@ -149,3 +149,35 @@ jobs:
             exit 1
           fi
           gh run watch "$run_id" --exit-status
+
+      - name: Dispatch crawler source evolution
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh workflow run evolve-crawler-sources.yml --ref main
+
+      - name: Wait for crawler source evolution
+        shell: bash
+        run: |
+          set -euo pipefail
+          target='${{ steps.promote.outputs.sha }}'
+          run_id=""
+          for _ in {1..30}; do
+            run_id="$(gh run list \
+              --workflow evolve-crawler-sources.yml \
+              --branch main \
+              --event workflow_dispatch \
+              --limit 20 \
+              --json databaseId,headSha,createdAt \
+              --jq ".[] | select(.headSha == \"$target\") | .databaseId" \
+              | head -n1)"
+            if [[ -n "$run_id" ]]; then
+              break
+            fi
+            sleep 2
+          done
+          if [[ -z "$run_id" ]]; then
+            echo "Could not find dispatched crawler evolution run for $target" >&2
+            exit 1
+          fi
+          gh run watch "$run_id" --exit-status
