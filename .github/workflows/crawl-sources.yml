@@ -1,6 +1,9 @@
 name: Crawl daily-brief source inventories
 
 on:
+  schedule:
+    # 08:50 Asia/Seoul (UTC+9), ten minutes before the 09:00 ChatGPT refresh.
+    - cron: '50 23 * * *'
   push:
     branches:
       - 'automation/source-crawl-trigger'
