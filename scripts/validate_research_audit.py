@@ -171,6 +171,33 @@ for field, cached_items, label in inventory_specs:
     missing = cache_urls - audit_urls
     assert not missing, f"{label} crawler inventory not fully reviewed: {sorted(missing)}"
 
+machine_sources = audit.get("machineSources")
+assert isinstance(machine_sources, dict), "research audit machineSources must be an object"
+
+for key, cached_source in source_cache.get("sources", {}).items():
+    if key in ("daconCompetitions", "dakerHackathons"):
+        continue
+    if cached_source.get("status") == "FAILED":
+        continue
+
+    cached_items = cached_source.get("actionableItems", [])
+    assert isinstance(cached_items, list), f"source cache {key}.actionableItems must be a list"
+
+    audit_items = machine_sources.get(key)
+    assert isinstance(audit_items, list), f"research audit missing machineSources.{key}"
+
+    audit_urls = set()
+    for i, item in enumerate(audit_items):
+        assert isinstance(item, dict), f"machineSources.{key}[{i}] must be an object"
+        assert item.get("title"), f"machineSources.{key}[{i}] missing title"
+        assert item.get("url"), f"machineSources.{key}[{i}] missing url"
+        assert item.get("disposition") in allowed_dispositions, f"machineSources.{key}[{i}] invalid disposition"
+        audit_urls.add(normalize_url(item["url"]))
+
+    cache_urls = {normalize_url(item["url"]) for item in cached_items if item.get("url")}
+    missing = cache_urls - audit_urls
+    assert not missing, f"{key} crawler inventory not fully reviewed: {sorted(missing)}"
+
 districts = audit.get("districts")
 assert isinstance(districts, dict), "research audit districts must be an object"
 for district in ("nowon", "dobong", "gangbuk"):
