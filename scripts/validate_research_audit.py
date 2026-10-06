@@ -324,8 +324,35 @@ if baseline is not None:
     }
     reverified = audit.get("reverifiedIds")
     assert isinstance(reverified, list), "research audit reverifiedIds must be a list"
-    missing = baseline_due - set(reverified)
-    assert not missing, f"research audit did not re-verify due OPEN/UPCOMING ids: {sorted(missing)}"
+    assert len(reverified) == len(set(reverified)), "research audit reverifiedIds contains duplicates"
+    reverified_set = set(reverified)
+
+    unexpected_reverified = reverified_set - baseline_due
+    assert not unexpected_reverified, (
+        f"research audit reverifiedIds contains non-due ids: {sorted(unexpected_reverified)}"
+    )
+
+    failures = audit.get("reverificationFailures", [])
+    assert isinstance(failures, list), "research audit reverificationFailures must be a list"
+    failed_ids = set()
+    for i, failure in enumerate(failures):
+        assert isinstance(failure, dict), f"reverificationFailures[{i}] must be an object"
+        item_id = failure.get("id")
+        assert item_id in baseline_due, f"reverificationFailures[{i}] id is not due: {item_id!r}"
+        assert item_id not in failed_ids, f"duplicate reverification failure id: {item_id}"
+        assert failure.get("primarySourceUrl"), f"reverificationFailures[{i}] missing primarySourceUrl"
+        reason = failure.get("reason")
+        assert isinstance(reason, str) and reason.strip(), f"reverificationFailures[{i}] missing reason"
+        failed_ids.add(item_id)
+
+    overlap = reverified_set & failed_ids
+    assert not overlap, f"ids cannot be both reverified and failed: {sorted(overlap)}"
+
+    missing = baseline_due - reverified_set
+    assert not missing, (
+        f"research audit did not re-verify due OPEN/UPCOMING ids: {sorted(missing)}; "
+        f"recorded failures={sorted(failed_ids)}"
+    )
 
     current_by_id = {
         item["id"]: item
@@ -339,6 +366,24 @@ if baseline is not None:
         if current_by_id.get(item_id, {}).get("lastVerifiedDate") != snapshot_date
     ]
     assert not stale, f"due reverified items must set lastVerifiedDate to snapshot date: {sorted(stale)}"
+
+    baseline_by_id = {
+        item["id"]: item
+        for group in ("contests", "support")
+        for item in baseline.get(group, [])
+        if item.get("id")
+    }
+    falsely_advanced = [
+        item_id
+        for item_id, current in current_by_id.items()
+        if item_id in baseline_by_id
+        and current.get("lastVerifiedDate") == snapshot_date
+        and baseline_by_id[item_id].get("lastVerifiedDate") != snapshot_date
+        and item_id not in reverified_set
+    ]
+    assert not falsely_advanced, (
+        f"lastVerifiedDate advanced without reverifiedIds evidence: {sorted(falsely_advanced)}"
+    )
 
 assert set(published_ids).issubset(candidate_ids), "research audit publishedIds includes ids absent from snapshot"
 assert set(published_ids).issubset(all_candidate_ids), "every published id must appear in rawCandidates evidence"
