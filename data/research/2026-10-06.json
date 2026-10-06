@@ -1101,47 +1101,7 @@
     }
   },
   "reverifiedIds": [
-    "nebius-nvidia-global-ai-hackathon-2026",
-    "amazon-developer-hackathon-2026",
-    "opencv-ai-competition-2026",
-    "knps-satellite-ai-challenge-2026",
-    "banana-hacks-2026",
-    "data-ai-innovation-challenge-2026",
-    "public-web-illegal-ad-detector-2026",
-    "fintech-idea-contest-2026",
-    "space-hackathon-2026",
-    "maplestory-worlds-global-dev-contest-2026",
-    "employment24-ai-service-hackathon-2026",
-    "at-agri-price-ai-hackathon-2026",
-    "build-with-ai-basics-devpost-2026",
-    "dacon-port-ai-236771",
-    "gitlab-life-after-code-2026",
-    "blaybus-uyeon-table-mvp-2026",
-    "kisti-data-ai-analysis-2026",
-    "qloo-agentic-hackathon-2026",
-    "paypal-ai-hackathon-2026",
-    "pqc-transition-challenge-hackathon-2026",
-    "hack-apertus-online-2026",
-    "youcam-api-skin-ai-ecommerce-2026",
-    "galuxium-nexus-v2-2026",
-    "cursor-hackathon-seoul-4-2026",
-    "dmc-innovation-camp-2026",
-    "mobile-id-idea-contest-2026",
-    "gyeonggi-sports-industry-contest-2026",
-    "aviation-weather-ideaup-2026",
-    "kinfa-public-innovation-idea-2026",
-    "pola-public-innovation-idea-2026",
-    "uijeongbu-ai-innovation-idea-2026",
-    "seoul-climatetech-mentoring-2026",
-    "seoul-fintechlab2-2027-recruit-2026",
-    "dongguk-seoul-bi-sep-2026",
-    "yongin-startup-center-fourth-2026",
-    "gvalley-startup-competition-2026",
-    "kyunghee-seoul-bi-second-half-2026",
-    "dobong-oct-startup-consulting-2026",
-    "dongguk-bmc-goyang-bi-sixth-2026",
-    "mjc-bi-2026",
-    "gangbuk-startup-oct-education-2026"
+    "at-agri-price-ai-hackathon-2026"
   ],
   "publishedIds": [
     "kic-ai-agent-competition-2026",
@@ -1150,5 +1110,21 @@
     "korea-clinical-datathon-2026",
     "korea-defense-tech-hackathon-2026",
     "mapo-next-stage-2026"
+  ],
+  "reverificationFailures": [],
+  "reverificationEvidence": [
+    {
+      "id": "at-agri-price-ai-hackathon-2026",
+      "primarySourceUrl": "https://hackathon.imaginationgroup.co.kr/nongnet",
+      "verifiedAt": "2026-10-06T07:33:43Z",
+      "status": "OPEN",
+      "verifiedFields": {
+        "deadline": "2026-10-18T23:59:00+09:00",
+        "eligibility": "나이·소속·전공 제한 없이 누구나, 1인팀 또는 2~4인 팀, 내국인 1인 이상 포함",
+        "reward": "총 시상금 500만원, 대상 100만원 + 최대 500만원 상당 부상, 우수상 4팀 각 100만원",
+        "support": "본선 15팀, AI 개발환경·공통 데이터·베이스라인 모델·전문가 멘토링"
+      },
+      "evidence": "GitHub Actions hosted runner fetched the official page with HTTP 200; official HTML declared registration closes 2026-10-18 23:59 KST and exposed active application CTA."
+    }
   ]
 }
