@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generatedAt": "2026-10-06T06:21:11.671Z",
+  "generatedAt": "2026-10-06T06:22:48.051Z",
   "timezone": "Asia/Seoul",
   "crawler": {
     "engine": "playwright-chromium",
@@ -2246,47 +2246,11 @@
       "actionableItems": [
         {
           "source": "DAKER",
-          "title": "2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래",
-          "url": "https://daker.ai/public/hackathons/2026-finance-ai-challenge",
-          "rawText": "진행중 심사 D-1 금 금융보안원 프리미엄 2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래 총 상금 3,500만원 1,388팀 참가 153,197 진행중",
-          "statusHints": [
-            "진행중"
-          ]
-        },
-        {
-          "source": "DAKER",
-          "title": "2026 K-Health 미개방 의료데이터 활용 경진대회",
-          "url": "https://daker.ai/public/hackathons/2026-k-health-unreleased-data-utilization-competit",
-          "rawText": "진행중 심사 D-30 건 건양대학교의료원, 과학기술정보통신부, 정보통신산업진흥원, 대전정보문화산업진흥원, 대구디지털혁신진흥원, 대구·광주테크노파크 프리미엄 2026 K-Health 미개방 의료데이터 활용 경진대회 총 상금 750만원 417팀 참가 39,614 진행중",
-          "statusHints": [
-            "진행중"
-          ]
-        },
-        {
-          "source": "DAKER",
-          "title": "제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 본선",
-          "url": "https://daker.ai/public/hackathons/4th-jump-ai-agentic-drug-challenge-finals-1",
-          "rawText": "진행중 심사 D-25 보 보건복지부/한국보건산업진흥원/고려대학교의과대학/한국제약바이오협회 프리미엄 제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 본선 총 상금 3,350만원 15팀 참가 7,044 진행중",
-          "statusHints": [
-            "진행중"
-          ]
-        },
-        {
-          "source": "DAKER",
           "title": "2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge",
           "url": "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims",
           "rawText": "모집중 D-19 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 58팀 참가 2,961 참가 신청하기",
           "statusHints": [
             "모집중"
-          ]
-        },
-        {
-          "source": "DAKER",
-          "title": "월간 해커톤: 마약류 문제 예방과 피해 감소를 위한 아이디어 챌린지",
-          "url": "https://daker.ai/public/hackathons/csafcas",
-          "rawText": "진행중 데 데이콘 프리미엄 월간 해커톤: 마약류 문제 예방과 피해 감소를 위한 아이디어 챌린지 총 상금 100만원 277팀 참가 13,265 진행중",
-          "statusHints": [
-            "진행중"
           ]
         },
         {
@@ -2308,7 +2272,7 @@
           ]
         }
       ],
-      "actionableCount": 7,
+      "actionableCount": 3,
       "shadow": false
     },
     "hackathonKorea": {
@@ -2412,20 +2376,6 @@
         },
         {
           "source": "Hackathon Korea",
-          "title": "Team.Human",
-          "url": "https://koreahackathons.com/events/ai-impact-ai-for-good",
-          "rawText": "종료 Team.Human [AI IMPACT] AI FOR GOOD 해커톤 — 여러분의 아이디어가 서울시 정책이 됩니다 2026년 9월 18일 · Seoul",
-          "statusHints": []
-        },
-        {
-          "source": "Hackathon Korea",
-          "title": "Alina L",
-          "url": "https://koreahackathons.com/events/cis-startup-community-hackathon",
-          "rawText": "종료 Alina L CIS STARTUP COMMUNITY HACKATHON 2026년 9월 19일 · Seoul",
-          "statusHints": []
-        },
-        {
-          "source": "Hackathon Korea",
           "title": "18일 후",
           "url": "https://koreahackathons.com/events/cursor-hackathon-seoul-4th",
           "rawText": "18일 후 Seoul CH SpaceXAI for Seoul, South Korea CURSOR HACKATHON SEOUL 4TH 2026년 10월 24일 · Seoul Cursor AI Hackathon Seoul 무료 TBA 오프라인",
@@ -2436,41 +2386,6 @@
           "title": "12일 후",
           "url": "https://koreahackathons.com/events/daytona-hacksprint-seoul",
           "rawText": "12일 후 Seoul DH AI Builders DAYTONA HACKSPRINT SEOUL 해커톤 2026년 10월 18일 · Seoul AI Hackathon Agent Infrastructure Cloud Sandbox 무료 오프라인",
-          "statusHints": []
-        },
-        {
-          "source": "Hackathon Korea",
-          "title": "Blockthon 2026 : AI x Blockchain Hackathon with Sui & Walrus",
-          "url": "https://koreahackathons.com/events/demo-day-ai-x-blockchain-hackathon-blockthon-2026",
-          "rawText": "종료 Blockthon 2026 : AI x Blockchain Hackathon with Sui & Walrus DEMO DAY - AI X BLOCKCHAIN HACKATHON: BLOCKTHON 2026 2026년 9월 19일 · Seoul",
-          "statusHints": []
-        },
-        {
-          "source": "Hackathon Korea",
-          "title": "Builderbase Hackathons",
-          "url": "https://koreahackathons.com/events/digital-af-seoul-hackathon-in-person",
-          "rawText": "종료 Builderbase Hackathons DIGITAL AF SEOUL: HACKATHON - IN PERSON 2026년 10월 1일 · Seoul",
-          "statusHints": []
-        },
-        {
-          "source": "Hackathon Korea",
-          "title": "Four Pillars",
-          "url": "https://koreahackathons.com/events/four-pillars-research-challenge-2026-awards-ceremony",
-          "rawText": "종료 Four Pillars FOUR PILLARS RESEARCH CHALLENGE 2026 AWARDS CEREMONY 2026년 10월 1일 · Seoul",
-          "statusHints": []
-        },
-        {
-          "source": "Hackathon Korea",
-          "title": "HABSIDA",
-          "url": "https://koreahackathons.com/events/habsida-hackathon-2026-eng",
-          "rawText": "종료 HABSIDA HABSIDA HACKATHON 2026 [ENG] 2026년 9월 24일~25일 · Incheon",
-          "statusHints": []
-        },
-        {
-          "source": "Hackathon Korea",
-          "title": "BLOCKBLOCK | 블록블록",
-          "url": "https://koreahackathons.com/events/hacker-house-ai-x-blockchain-hackathon-blockthon-2026",
-          "rawText": "종료 BLOCKBLOCK | 블록블록 HACKER HOUSE - AI X BLOCKCHAIN HACKATHON: BLOCKTHON 2026 2026년 9월 11일 · Seoul",
           "statusHints": []
         },
         {
@@ -2488,7 +2403,7 @@
           "statusHints": []
         }
       ],
-      "actionableCount": 12,
+      "actionableCount": 5,
       "shadow": false
     },
     "sotong24Contests": {
@@ -2801,72 +2716,9 @@
           "url": "https://grantly.kr/opportunities/17128",
           "rawText": "[전북] 군산시 2026년 5차 여성농업인 상생카드 지원사업 신청 공고",
           "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "공모전·경진대회",
-          "url": "https://grantly.kr/opportunities/support/competitions-events",
-          "rawText": "공모전·경진대회 152",
-          "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "교육·멘토링",
-          "url": "https://grantly.kr/opportunities/support/education-mentoring",
-          "rawText": "교육·멘토링 272",
-          "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "창업 지원금",
-          "url": "https://grantly.kr/opportunities/support/grants",
-          "rawText": "창업 지원금 101",
-          "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "투자·협업",
-          "url": "https://grantly.kr/opportunities/support/investment-collaboration",
-          "rawText": "투자·협업 80",
-          "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "판로·수출",
-          "url": "https://grantly.kr/opportunities/support/market-export",
-          "rawText": "판로·수출 170",
-          "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "정책자금",
-          "url": "https://grantly.kr/opportunities/support/policy-finance",
-          "rawText": "정책자금 37",
-          "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "창업공간",
-          "url": "https://grantly.kr/opportunities/support/spaces-facilities",
-          "rawText": "창업공간 72",
-          "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "기술·R&D",
-          "url": "https://grantly.kr/opportunities/support/technology-rnd",
-          "rawText": "기술·R&D 113",
-          "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "인력·채용",
-          "url": "https://grantly.kr/opportunities/support/workforce",
-          "rawText": "인력·채용 52",
-          "statusHints": []
         }
       ],
-      "count": 33,
+      "count": 24,
       "actionableItems": [
         {
           "source": "Grantly",
@@ -3035,72 +2887,9 @@
           "url": "https://grantly.kr/opportunities/17128",
           "rawText": "[전북] 군산시 2026년 5차 여성농업인 상생카드 지원사업 신청 공고",
           "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "공모전·경진대회",
-          "url": "https://grantly.kr/opportunities/support/competitions-events",
-          "rawText": "공모전·경진대회 152",
-          "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "교육·멘토링",
-          "url": "https://grantly.kr/opportunities/support/education-mentoring",
-          "rawText": "교육·멘토링 272",
-          "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "창업 지원금",
-          "url": "https://grantly.kr/opportunities/support/grants",
-          "rawText": "창업 지원금 101",
-          "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "투자·협업",
-          "url": "https://grantly.kr/opportunities/support/investment-collaboration",
-          "rawText": "투자·협업 80",
-          "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "판로·수출",
-          "url": "https://grantly.kr/opportunities/support/market-export",
-          "rawText": "판로·수출 170",
-          "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "정책자금",
-          "url": "https://grantly.kr/opportunities/support/policy-finance",
-          "rawText": "정책자금 37",
-          "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "창업공간",
-          "url": "https://grantly.kr/opportunities/support/spaces-facilities",
-          "rawText": "창업공간 72",
-          "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "기술·R&D",
-          "url": "https://grantly.kr/opportunities/support/technology-rnd",
-          "rawText": "기술·R&D 113",
-          "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "인력·채용",
-          "url": "https://grantly.kr/opportunities/support/workforce",
-          "rawText": "인력·채용 52",
-          "statusHints": []
         }
       ],
-      "actionableCount": 33,
+      "actionableCount": 24,
       "shadow": false
     },
     "devpostOpen": {
@@ -3112,7 +2901,7 @@
           "source": "Devpost",
           "title": "Build, Ship, Shape: Amazon Developer Hackathon",
           "url": "https://amazonappdev2026.devpost.com/",
-          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 18 days left Online $138,000 in prizes 46006 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
+          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 18 days left Online $138,000 in prizes 46008 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
           "statusHints": [
             "days left"
           ]
@@ -3171,139 +2960,6 @@
         },
         {
           "source": "Devpost",
-          "title": "Join a hackathon",
-          "url": "https://help.devpost.com/",
-          "rawText": "Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Managed by Devpost",
-          "url": "https://help.devpost.com/article/42-what-does-e2809cmanaged-by-devposte2809d-mean",
-          "rawText": "Managed by Devpost",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Host a hackathon",
-          "url": "https://info.devpost.com/",
-          "rawText": "Host a hackathon",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "About",
-          "url": "https://info.devpost.com/about",
-          "rawText": "About",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Join a hackathon",
-          "url": "https://info.devpost.com/blog",
-          "rawText": "Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Careers",
-          "url": "https://info.devpost.com/careers",
-          "rawText": "Careers",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Contact",
-          "url": "https://info.devpost.com/contact",
-          "rawText": "Contact",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Join a hackathon",
-          "url": "https://info.devpost.com/customer-stories",
-          "rawText": "Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Join a hackathon",
-          "url": "https://info.devpost.com/guides",
-          "rawText": "Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "CA notice",
-          "url": "https://info.devpost.com/legal/california-consumer-privacy-act",
-          "rawText": "CA notice",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Community guidelines",
-          "url": "https://info.devpost.com/legal/community-guidelines",
-          "rawText": "Community guidelines",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Privacy policy",
-          "url": "https://info.devpost.com/legal/privacy-policy",
-          "rawText": "Privacy policy",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Security",
-          "url": "https://info.devpost.com/legal/security",
-          "rawText": "Security",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Terms of service",
-          "url": "https://info.devpost.com/legal/terms-of-service",
-          "rawText": "Terms of service",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Join a hackathon",
-          "url": "https://info.devpost.com/product/ai-hackathons",
-          "rawText": "Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Join a hackathon",
-          "url": "https://info.devpost.com/product/customer-hackathons",
-          "rawText": "Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Join a hackathon",
-          "url": "https://info.devpost.com/product/devpost-for-teams",
-          "rawText": "Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Join a hackathon",
-          "url": "https://info.devpost.com/product/public-hackathons",
-          "rawText": "Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Join a hackathon",
-          "url": "https://info.devpost.com/webinar-events",
-          "rawText": "Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
           "title": "Build With AI: Basics",
           "url": "https://learn-ai-basics.devpost.com/",
           "rawText": "Build With AI: Basics 21 days left Online $2,500 in prizes 2524 participants Devpost Sep 22 - Oct 26, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyEducation",
@@ -3333,7 +2989,7 @@
           "source": "Devpost",
           "title": "Nebius x NVIDIA Global AI Hackathon",
           "url": "https://nebiusglobalaihackathon.devpost.com/",
-          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 18578 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
+          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 18579 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
           "statusHints": [
             "days left"
           ]
@@ -3351,7 +3007,7 @@
           "source": "Devpost",
           "title": "FEATURED",
           "url": "https://paypalaihackathon.devpost.com/",
-          "rawText": "FEATURED PayPal AI Hackathon about 1 month left Online $67,500 in prizes 7134 participants PayPal Oct 01 - Nov 12, 2026 Managed by Devpost Low/No CodeMachine Learning/AIWeb",
+          "rawText": "FEATURED PayPal AI Hackathon about 1 month left Online $67,500 in prizes 7137 participants PayPal Oct 01 - Nov 12, 2026 Managed by Devpost Low/No CodeMachine Learning/AIWeb",
           "statusHints": []
         },
         {
@@ -3362,20 +3018,6 @@
           "statusHints": [
             "days left"
           ]
-        },
-        {
-          "source": "Devpost",
-          "title": "Log in",
-          "url": "https://secure.devpost.com/users/login",
-          "rawText": "Log in",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Sign up",
-          "url": "https://secure.devpost.com/users/register",
-          "rawText": "Sign up",
-          "statusHints": []
         },
         {
           "source": "Devpost",
@@ -3412,13 +3054,13 @@
           ]
         }
       ],
-      "count": 39,
+      "count": 18,
       "actionableItems": [
         {
           "source": "Devpost",
           "title": "Build, Ship, Shape: Amazon Developer Hackathon",
           "url": "https://amazonappdev2026.devpost.com/",
-          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 18 days left Online $138,000 in prizes 46006 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
+          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 18 days left Online $138,000 in prizes 46008 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
           "statusHints": [
             "days left"
           ]
@@ -3477,139 +3119,6 @@
         },
         {
           "source": "Devpost",
-          "title": "Join a hackathon",
-          "url": "https://help.devpost.com/",
-          "rawText": "Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Managed by Devpost",
-          "url": "https://help.devpost.com/article/42-what-does-e2809cmanaged-by-devposte2809d-mean",
-          "rawText": "Managed by Devpost",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Host a hackathon",
-          "url": "https://info.devpost.com/",
-          "rawText": "Host a hackathon",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "About",
-          "url": "https://info.devpost.com/about",
-          "rawText": "About",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Join a hackathon",
-          "url": "https://info.devpost.com/blog",
-          "rawText": "Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Careers",
-          "url": "https://info.devpost.com/careers",
-          "rawText": "Careers",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Contact",
-          "url": "https://info.devpost.com/contact",
-          "rawText": "Contact",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Join a hackathon",
-          "url": "https://info.devpost.com/customer-stories",
-          "rawText": "Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Join a hackathon",
-          "url": "https://info.devpost.com/guides",
-          "rawText": "Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "CA notice",
-          "url": "https://info.devpost.com/legal/california-consumer-privacy-act",
-          "rawText": "CA notice",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Community guidelines",
-          "url": "https://info.devpost.com/legal/community-guidelines",
-          "rawText": "Community guidelines",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Privacy policy",
-          "url": "https://info.devpost.com/legal/privacy-policy",
-          "rawText": "Privacy policy",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Security",
-          "url": "https://info.devpost.com/legal/security",
-          "rawText": "Security",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Terms of service",
-          "url": "https://info.devpost.com/legal/terms-of-service",
-          "rawText": "Terms of service",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Join a hackathon",
-          "url": "https://info.devpost.com/product/ai-hackathons",
-          "rawText": "Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Join a hackathon",
-          "url": "https://info.devpost.com/product/customer-hackathons",
-          "rawText": "Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Join a hackathon",
-          "url": "https://info.devpost.com/product/devpost-for-teams",
-          "rawText": "Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Join a hackathon",
-          "url": "https://info.devpost.com/product/public-hackathons",
-          "rawText": "Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Join a hackathon",
-          "url": "https://info.devpost.com/webinar-events",
-          "rawText": "Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
           "title": "Build With AI: Basics",
           "url": "https://learn-ai-basics.devpost.com/",
           "rawText": "Build With AI: Basics 21 days left Online $2,500 in prizes 2524 participants Devpost Sep 22 - Oct 26, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyEducation",
@@ -3639,7 +3148,7 @@
           "source": "Devpost",
           "title": "Nebius x NVIDIA Global AI Hackathon",
           "url": "https://nebiusglobalaihackathon.devpost.com/",
-          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 18578 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
+          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 18579 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
           "statusHints": [
             "days left"
           ]
@@ -3657,7 +3166,7 @@
           "source": "Devpost",
           "title": "FEATURED",
           "url": "https://paypalaihackathon.devpost.com/",
-          "rawText": "FEATURED PayPal AI Hackathon about 1 month left Online $67,500 in prizes 7134 participants PayPal Oct 01 - Nov 12, 2026 Managed by Devpost Low/No CodeMachine Learning/AIWeb",
+          "rawText": "FEATURED PayPal AI Hackathon about 1 month left Online $67,500 in prizes 7137 participants PayPal Oct 01 - Nov 12, 2026 Managed by Devpost Low/No CodeMachine Learning/AIWeb",
           "statusHints": []
         },
         {
@@ -3668,20 +3177,6 @@
           "statusHints": [
             "days left"
           ]
-        },
-        {
-          "source": "Devpost",
-          "title": "Log in",
-          "url": "https://secure.devpost.com/users/login",
-          "rawText": "Log in",
-          "statusHints": []
-        },
-        {
-          "source": "Devpost",
-          "title": "Sign up",
-          "url": "https://secure.devpost.com/users/register",
-          "rawText": "Sign up",
-          "statusHints": []
         },
         {
           "source": "Devpost",
@@ -3718,7 +3213,7 @@
           ]
         }
       ],
-      "actionableCount": 39,
+      "actionableCount": 18,
       "shadow": false
     },
     "contestKorea": {
@@ -4338,29 +3833,6 @@
       "items": [
         {
           "source": "K-Startup",
-          "title": "창업기업확인시스템",
-          "url": "https://cert.k-startup.go.kr/index.do",
-          "rawText": "창업기업확인시스템",
-          "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "신규사업공고 더보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do",
-          "rawText": "신규사업공고 더보기",
-          "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "마감임박 공고 더보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?ordFld=deadline",
-          "rawText": "마감임박 공고 더보기",
-          "statusHints": [
-            "마감임박"
-          ]
-        },
-        {
-          "source": "K-Startup",
           "title": "「민관협력 오픈이노베이션 지원」 '공공데이터 활용 지원' 공공기관 제안형(Top-Down) 창업기업 모집공고 오늘마감",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179232&schM=view",
           "rawText": "「민관협력 오픈이노베이션 지원」 '공공데이터 활용 지원' 공공기관 제안형(Top-Down) 창업기업 모집공고 오늘마감",
@@ -4438,91 +3910,12 @@
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179418&schM=view",
           "rawText": "2026년 강북창업지원센터 10월 창업 교육 및 그룹상담 프로그램 참가자 모집",
           "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "「AI+OpenData챌린지 참여기업 모집공고」 서류평가 합격자 공지",
-          "url": "https://www.k-startup.go.kr/web/contents/webNOTICE_MATR.do?id=175770&page=1&schBdcode=&schGroupCode=&schM=view&viewCount=18",
-          "rawText": "「AI+OpenData챌린지 참여기업 모집공고」 서류평가 합격자 공지",
-          "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "「AI+OpenData챌린지 참여기업 모집공고」 서류평가 추가 선정기업 공지",
-          "url": "https://www.k-startup.go.kr/web/contents/webNOTICE_MATR.do?id=175808&page=1&schBdcode=&schGroupCode=&schM=view&viewCount=18",
-          "rawText": "「AI+OpenData챌린지 참여기업 모집공고」 서류평가 추가 선정기업 공지",
-          "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "모두의 창업 프로젝트 세부관리기준(개정본) 안내_'26.6.23.개정",
-          "url": "https://www.k-startup.go.kr/web/contents/webNOTICE_MATR.do?id=175865&page=1&schBdcode=&schGroupCode=&schM=view&viewCount=18",
-          "rawText": "모두의 창업 프로젝트 세부관리기준(개정본) 안내_'26.6.23.개정",
-          "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "2026년 글로벌기업 협업프로그램(추경) 창업기업 선정 결과 안내(7.16.업데이트)",
-          "url": "https://www.k-startup.go.kr/web/contents/webNOTICE_MATR.do?id=175895&page=1&schBdcode=&schGroupCode=&schM=view&viewCount=18",
-          "rawText": "2026년 글로벌기업 협업프로그램(추경) 창업기업 선정 결과 안내(7.16.업데이트)",
-          "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "2026년 글로벌기업 협업프로그램(시범) 창업기업 선정 결과 안내",
-          "url": "https://www.k-startup.go.kr/web/contents/webNOTICE_MATR.do?id=176094&page=1&schBdcode=&schGroupCode=&schM=view&viewCount=18",
-          "rawText": "2026년 글로벌기업 협업프로그램(시범) 창업기업 선정 결과 안내",
-          "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "2026년도 창업패키지(AI 인재 실증형) 창업기업 선정 후보기업 공지",
-          "url": "https://www.k-startup.go.kr/web/contents/webNOTICE_MATR.do?id=176107&page=1&schBdcode=&schGroupCode=&schM=view&viewCount=18",
-          "rawText": "2026년도 창업패키지(AI 인재 실증형) 창업기업 선정 후보기업 공지",
-          "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "2026년도 민관협력 오픈이노베이션(모두의 챌린지 기후테크) 창업기업 최종선정 결과 안내",
-          "url": "https://www.k-startup.go.kr/web/contents/webNOTICE_MATR.do?id=176185&page=1&schBdcode=&schGroupCode=&schM=view&viewCount=18",
-          "rawText": "2026년도 민관협력 오픈이노베이션(모두의 챌린지 기후테크) 창업기업 최종선정 결과 안내",
-          "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "「2026년 AI+OpenData챌린지 」본선평가 결과 공지",
-          "url": "https://www.k-startup.go.kr/web/contents/webNOTICE_MATR.do?id=176252&page=1&schBdcode=&schGroupCode=&schM=view&viewCount=18",
-          "rawText": "「2026년 AI+OpenData챌린지 」본선평가 결과 공지",
-          "statusHints": []
         }
       ],
-      "count": 21,
+      "count": 10,
       "actionableItems": [
         {
           "source": "K-Startup",
-          "title": "창업기업확인시스템",
-          "url": "https://cert.k-startup.go.kr/index.do",
-          "rawText": "창업기업확인시스템",
-          "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "신규사업공고 더보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do",
-          "rawText": "신규사업공고 더보기",
-          "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "마감임박 공고 더보기",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?ordFld=deadline",
-          "rawText": "마감임박 공고 더보기",
-          "statusHints": [
-            "마감임박"
-          ]
-        },
-        {
-          "source": "K-Startup",
           "title": "「민관협력 오픈이노베이션 지원」 '공공데이터 활용 지원' 공공기관 제안형(Top-Down) 창업기업 모집공고 오늘마감",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179232&schM=view",
           "rawText": "「민관협력 오픈이노베이션 지원」 '공공데이터 활용 지원' 공공기관 제안형(Top-Down) 창업기업 모집공고 오늘마감",
@@ -4600,65 +3993,9 @@
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179418&schM=view",
           "rawText": "2026년 강북창업지원센터 10월 창업 교육 및 그룹상담 프로그램 참가자 모집",
           "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "「AI+OpenData챌린지 참여기업 모집공고」 서류평가 합격자 공지",
-          "url": "https://www.k-startup.go.kr/web/contents/webNOTICE_MATR.do?id=175770&page=1&schBdcode=&schGroupCode=&schM=view&viewCount=18",
-          "rawText": "「AI+OpenData챌린지 참여기업 모집공고」 서류평가 합격자 공지",
-          "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "「AI+OpenData챌린지 참여기업 모집공고」 서류평가 추가 선정기업 공지",
-          "url": "https://www.k-startup.go.kr/web/contents/webNOTICE_MATR.do?id=175808&page=1&schBdcode=&schGroupCode=&schM=view&viewCount=18",
-          "rawText": "「AI+OpenData챌린지 참여기업 모집공고」 서류평가 추가 선정기업 공지",
-          "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "모두의 창업 프로젝트 세부관리기준(개정본) 안내_'26.6.23.개정",
-          "url": "https://www.k-startup.go.kr/web/contents/webNOTICE_MATR.do?id=175865&page=1&schBdcode=&schGroupCode=&schM=view&viewCount=18",
-          "rawText": "모두의 창업 프로젝트 세부관리기준(개정본) 안내_'26.6.23.개정",
-          "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "2026년 글로벌기업 협업프로그램(추경) 창업기업 선정 결과 안내(7.16.업데이트)",
-          "url": "https://www.k-startup.go.kr/web/contents/webNOTICE_MATR.do?id=175895&page=1&schBdcode=&schGroupCode=&schM=view&viewCount=18",
-          "rawText": "2026년 글로벌기업 협업프로그램(추경) 창업기업 선정 결과 안내(7.16.업데이트)",
-          "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "2026년 글로벌기업 협업프로그램(시범) 창업기업 선정 결과 안내",
-          "url": "https://www.k-startup.go.kr/web/contents/webNOTICE_MATR.do?id=176094&page=1&schBdcode=&schGroupCode=&schM=view&viewCount=18",
-          "rawText": "2026년 글로벌기업 협업프로그램(시범) 창업기업 선정 결과 안내",
-          "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "2026년도 창업패키지(AI 인재 실증형) 창업기업 선정 후보기업 공지",
-          "url": "https://www.k-startup.go.kr/web/contents/webNOTICE_MATR.do?id=176107&page=1&schBdcode=&schGroupCode=&schM=view&viewCount=18",
-          "rawText": "2026년도 창업패키지(AI 인재 실증형) 창업기업 선정 후보기업 공지",
-          "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "2026년도 민관협력 오픈이노베이션(모두의 챌린지 기후테크) 창업기업 최종선정 결과 안내",
-          "url": "https://www.k-startup.go.kr/web/contents/webNOTICE_MATR.do?id=176185&page=1&schBdcode=&schGroupCode=&schM=view&viewCount=18",
-          "rawText": "2026년도 민관협력 오픈이노베이션(모두의 챌린지 기후테크) 창업기업 최종선정 결과 안내",
-          "statusHints": []
-        },
-        {
-          "source": "K-Startup",
-          "title": "「2026년 AI+OpenData챌린지 」본선평가 결과 공지",
-          "url": "https://www.k-startup.go.kr/web/contents/webNOTICE_MATR.do?id=176252&page=1&schBdcode=&schGroupCode=&schM=view&viewCount=18",
-          "rawText": "「2026년 AI+OpenData챌린지 」본선평가 결과 공지",
-          "statusHints": []
         }
       ],
-      "actionableCount": 21,
+      "actionableCount": 10,
       "shadow": false
     }
   },
@@ -4667,18 +4004,18 @@
     "daconCompetitions": 289,
     "daconCompetitionsActionable": 1,
     "dakerHackathons": 23,
-    "dakerHackathonsActionable": 7,
+    "dakerHackathonsActionable": 3,
     "hackathonKorea": 12,
-    "hackathonKoreaActionable": 12,
+    "hackathonKoreaActionable": 5,
     "sotong24Contests": 9,
     "sotong24ContestsActionable": 9,
-    "grantlySupport": 33,
-    "grantlySupportActionable": 33,
-    "devpostOpen": 39,
-    "devpostOpenActionable": 39,
+    "grantlySupport": 24,
+    "grantlySupportActionable": 24,
+    "devpostOpen": 18,
+    "devpostOpenActionable": 18,
     "contestKorea": 56,
     "contestKoreaActionable": 20,
-    "kStartupHighlights": 21,
-    "kStartupHighlightsActionable": 21
+    "kStartupHighlights": 10,
+    "kStartupHighlightsActionable": 10
   }
 }
