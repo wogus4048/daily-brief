@@ -96,6 +96,18 @@ For public/idea/industry-specialized contests:
 - Prefer items where an individual can enter directly; record whether PoC/prototype/demo is optional or mandatory.
 - Gather at least 10 materially distinct raw candidates or exhaust the relevant government/public and industry-specific source axes.
 
+### Structured source enumeration
+
+For source sites that expose a finite "ongoing/current/open" listing, do not treat opening the site or finding one result as a completed source check. Enumerate the listing and disposition every visible current item before marking the source checked.
+
+DACON is mandatory and stricter:
+- Open the DACON homepage directly, not only search-engine results.
+- Enumerate every card currently visible under both `데이커: 진행 중인 해커톤` and `진행 중인 경진대회`.
+- Follow every potentially relevant card to its detail/official page and determine whether it is `PUBLISHED`, `EXISTING`, `DUPLICATE`, `INELIGIBLE`, `CLOSED`, or `NOT_RELEVANT`.
+- Record every enumerated card in `data/research/YYYY-MM-DD.json -> fixedSources.DACON.inventory[]` with `section`, `title`, `url`, and `disposition`.
+- A DACON source check is incomplete if even one live homepage ongoing-card URL is absent from the audit inventory. `scripts/validate_research_audit.py` independently fetches the DACON homepage during promotion and blocks the refresh when the inventory is incomplete.
+- DACON/Daker items must still pass the same user-eligibility and primary-source verification rules before publication.
+
 For all opportunity tracks:
 - Start with unrestricted web search and inspect new domains.
 - Also check DACON, Hackathon Korea, Grantly, 링커리어, 요즘것들, ContestKorea, K-Startup, 기업마당, Luma/EventUs/온오프믹스/Devpost/Meetup and official organizer pages.
@@ -155,7 +167,9 @@ Search the open web first so discovery is not limited to known platforms. Run in
 Use multiple Korean and English query variants and inspect unfamiliar domains returned by search. Finding enough results in one group never satisfies another group.
 
 ### 3. Check fixed sources as a second safety net
-After broad search, separately inspect the known source families instead of treating them as the whole universe:
+After broad search, separately inspect the known source families instead of treating them as the whole universe. For structured listing sites, enumerate the current listing rather than sampling one or two results:
+- DACON special gate: enumerate every live card under the homepage's `데이커: 진행 중인 해커톤` and `진행 중인 경진대회` sections and record the complete inventory/disposition evidence.
+
 - DACON, Hackathon Korea, Grantly, 링커리어, 요즘것들, ContestKorea
 - 소통24 공모전, 대한민국 정책브리핑, 중앙부처·공공기관·지자체 공식 공모/보도자료
 - AI_TOP_100 (`aitop100.org`), Kakao Impact and Brian Impact competition/program announcements
