@@ -21,7 +21,8 @@
       "url": "https://contestkorea.kr/",
       "role": "Korean public contests and idea competitions",
       "required": false,
-      "managed": true
+      "managed": true,
+      "category": "contest"
     },
     {
       "key": "daconCompetitions",
@@ -29,7 +30,8 @@
       "url": "https://www.dacon.io/competitions",
       "role": "AI/data/software competitions",
       "required": true,
-      "managed": true
+      "managed": true,
+      "category": "contest"
     },
     {
       "key": "dakerHackathons",
@@ -37,7 +39,8 @@
       "url": "https://daker.ai/public/hackathons",
       "role": "Korean AI/developer hackathons",
       "required": true,
-      "managed": true
+      "managed": true,
+      "category": "contest"
     },
     {
       "key": "devpostOpen",
@@ -45,7 +48,8 @@
       "url": "https://devpost.com/hackathons?status=open",
       "role": "global online developer/AI hackathons",
       "required": false,
-      "managed": true
+      "managed": true,
+      "category": "contest"
     },
     {
       "key": "grantlySupport",
@@ -53,7 +57,8 @@
       "url": "https://grantly.kr/opportunities/support",
       "role": "startup/support programs and public opportunities",
       "required": false,
-      "managed": true
+      "managed": true,
+      "category": "startupSupport"
     },
     {
       "key": "hackathonKorea",
@@ -61,7 +66,8 @@
       "url": "https://koreahackathons.com/",
       "role": "Korea in-person/online hackathon directory",
       "required": false,
-      "managed": true
+      "managed": true,
+      "category": "contest"
     },
     {
       "key": "kStartupHighlights",
@@ -70,7 +76,8 @@
       "role": "new and deadline-imminent startup support announcements",
       "required": false,
       "managed": true,
-      "note": "May rate-limit/block cloud IPs; keep GPT/web fallback."
+      "note": "May rate-limit/block cloud IPs; keep GPT/web fallback.",
+      "category": "startupSupport"
     },
     {
       "key": "sotong24Contests",
@@ -79,7 +86,8 @@
       "role": "government/public idea contests",
       "required": false,
       "managed": true,
-      "note": "Use server-rendered contest list endpoint; avoid JS-only NewListPage."
+      "note": "Use server-rendered contest list endpoint; avoid JS-only NewListPage.",
+      "category": "contest"
     }
   ],
   "degraded": [],
@@ -121,7 +129,8 @@
       "reason": "structured support-program boards; exact pagination/API inspection still needed",
       "status": "NEEDS_SPEC",
       "score": 0,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
+      "recommendation": "NEEDS_CRAWLER_SPEC",
+      "category": "startupSupport"
     },
     {
       "key": "datathon-kr",
@@ -193,7 +202,24 @@
       "reason": "multiple notice/business boards; opportunity-relevant board set needs selection",
       "status": "NEEDS_SPEC",
       "score": 0,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
+      "recommendation": "NEEDS_CRAWLER_SPEC",
+      "category": "startupSupport"
+    },
+    {
+      "key": "kised",
+      "name": "창업진흥원 사업공고",
+      "url": "https://www.kised.or.kr/misAnnouncement/index.es?mid=a10302000000",
+      "reason": "Official KISED business-announcement listing; independent startup-support coverage and fallback for K-Startup access limits",
+      "category": "startupSupport",
+      "status": "SHADOW",
+      "crawlerSpec": {
+        "url": "https://www.kised.or.kr/misAnnouncement/index.es?mid=a10302000000",
+        "linkSelector": "a[href*=\"k-startup.go.kr\"]",
+        "hostSuffix": "k-startup.go.kr",
+        "actionability": "all",
+        "expand": false,
+        "waitMs": 1200
+      }
     },
     {
       "key": "learn-ai-basics-devpost-com",
@@ -231,7 +257,8 @@
       "reason": "public announcements are structured but opportunity-relevant boards need selection",
       "status": "NEEDS_SPEC",
       "score": 0,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
+      "recommendation": "NEEDS_CRAWLER_SPEC",
+      "category": "startupSupport"
     },
     {
       "key": "onoffmix",
@@ -248,7 +275,8 @@
       "reason": "public program listings split across multiple boards; source-specific board inventory needed",
       "status": "NEEDS_SPEC",
       "score": 0,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
+      "recommendation": "NEEDS_CRAWLER_SPEC",
+      "category": "startupSupport"
     }
   ],
   "lastEvolvedDate": "2026-10-06",
