@@ -23,70 +23,82 @@ if len(sys.argv) > 3:
 assert audit.get("date") == snapshot_date, "research audit date must match snapshot date"
 assert audit.get("completedAt"), "research audit missing completedAt"
 
-class _DaconHomeParser(HTMLParser):
-    def __init__(self):
+class _LinkInventoryParser(HTMLParser):
+    def __init__(self, base_url, matcher):
         super().__init__()
-        self.section = None
-        self.in_h3 = False
-        self.h3_text = []
+        self.base_url = base_url
+        self.matcher = matcher
         self.anchor = None
         self.items = []
 
     def handle_starttag(self, tag, attrs):
-        attrs = dict(attrs)
-        if tag == "h3":
-            self.in_h3 = True
-            self.h3_text = []
-        if tag == "a" and self.section:
+        if tag == "a":
+            attrs = dict(attrs)
             self.anchor = {"href": attrs.get("href", ""), "text": []}
 
     def handle_data(self, data):
-        if self.in_h3:
-            self.h3_text.append(data)
         if self.anchor is not None:
             self.anchor["text"].append(data)
 
     def handle_endtag(self, tag):
-        if tag == "h3":
-            text = " ".join("".join(self.h3_text).split())
-            if "데이커: 진행 중인 해커톤" in text:
-                self.section = "dakerOngoing"
-            elif "진행 중인 경진대회" in text:
-                self.section = "officialOngoing"
-            elif self.section:
-                self.section = None
-            self.in_h3 = False
-            self.h3_text = []
-        elif tag == "a" and self.anchor is not None:
-            href = self.anchor["href"]
-            text = " ".join("".join(self.anchor["text"]).split())
-            if href and text:
-                absolute = urllib.parse.urljoin("https://www.dacon.io/", href)
-                host = urllib.parse.urlparse(absolute).netloc.lower()
-                path = urllib.parse.urlparse(absolute).path
-                if self.section == "dakerOngoing" and host.endswith("daker.ai"):
-                    self.items.append((self.section, absolute, text))
-                elif self.section == "officialOngoing" and "/competitions/official/" in path:
-                    self.items.append((self.section, absolute, text))
-            self.anchor = None
+        if tag != "a" or self.anchor is None:
+            return
+        href = self.anchor["href"]
+        text = " ".join("".join(self.anchor["text"]).split())
+        self.anchor = None
+        if not href or not text:
+            return
+        absolute = urllib.parse.urljoin(self.base_url, href)
+        parsed = urllib.parse.urlsplit(absolute)
+        normalized = urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, parsed.path, "", ""))
+        if self.matcher(normalized):
+            self.items.append({"url": normalized, "title": text})
 
-def fetch_dacon_home_inventory():
+
+def _fetch_html(url):
     req = urllib.request.Request(
-        "https://www.dacon.io/",
+        url,
         headers={"User-Agent": "daily-brief-coverage-check/1.0"},
     )
     with urllib.request.urlopen(req, timeout=20) as resp:
-        html = resp.read().decode("utf-8", errors="replace")
-    parser = _DaconHomeParser()
-    parser.feed(html)
+        return resp.read().decode("utf-8", errors="replace")
+
+
+def _dedupe_inventory(items):
     seen = {}
-    for section, url, title in parser.items:
-        clean = urllib.parse.urlsplit(url)
-        normalized = urllib.parse.urlunsplit((clean.scheme, clean.netloc, clean.path, "", ""))
-        seen[normalized] = {"section": section, "url": normalized, "title": title}
-    inventory = list(seen.values())
+    for item in items:
+        seen[item["url"]] = item
+    return list(seen.values())
+
+
+def fetch_dacon_competitions_inventory():
+    url = "https://www.dacon.io/competitions"
+    html = _fetch_html(url)
+    parser = _LinkInventoryParser(
+        url,
+        lambda u: urllib.parse.urlsplit(u).netloc.lower().endswith("dacon.io")
+        and "/competitions/official/" in urllib.parse.urlsplit(u).path,
+    )
+    parser.feed(html)
+    inventory = _dedupe_inventory(parser.items)
     if not inventory:
-        raise AssertionError("DACON live inventory extraction returned zero ongoing items")
+        raise AssertionError("DACON competitions page extraction returned zero competition links")
+    return inventory
+
+
+def fetch_daker_hackathons_inventory():
+    url = "https://daker.ai/public/hackathons"
+    html = _fetch_html(url)
+    parser = _LinkInventoryParser(
+        url,
+        lambda u: urllib.parse.urlsplit(u).netloc.lower().endswith("daker.ai")
+        and urllib.parse.urlsplit(u).path.startswith("/public/hackathons/")
+        and urllib.parse.urlsplit(u).path != "/public/hackathons/",
+    )
+    parser.feed(html)
+    inventory = _dedupe_inventory(parser.items)
+    if not inventory:
+        raise AssertionError("DAKER hackathons page extraction returned zero hackathon links")
     return inventory
 
 
@@ -192,24 +204,34 @@ for source in REQUIRED_SOURCES:
 
 dacon = sources["DACON"]
 if dacon.get("status") == "CHECKED":
-    inventory = dacon.get("inventory")
-    assert isinstance(inventory, list) and inventory, "DACON CHECKED requires full homepage inventory evidence"
     allowed_dispositions = {"PUBLISHED", "EXISTING", "DUPLICATE", "INELIGIBLE", "CLOSED", "NOT_RELEVANT"}
-    audit_urls = set()
-    for i, item in enumerate(inventory):
-        assert isinstance(item, dict), f"DACON.inventory[{i}] must be an object"
-        assert item.get("title"), f"DACON.inventory[{i}] missing title"
-        assert item.get("url"), f"DACON.inventory[{i}] missing url"
-        assert item.get("section") in ("dakerOngoing", "officialOngoing"), f"DACON.inventory[{i}] invalid section"
-        assert item.get("disposition") in allowed_dispositions, f"DACON.inventory[{i}] invalid disposition"
-        parsed = urllib.parse.urlsplit(item["url"])
-        normalized = urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, parsed.path, "", ""))
-        audit_urls.add(normalized)
 
-    live_inventory = fetch_dacon_home_inventory()
-    live_urls = {item["url"] for item in live_inventory}
-    missing = live_urls - audit_urls
-    assert not missing, f"DACON homepage ongoing inventory not fully reviewed: {sorted(missing)}"
+    page_specs = [
+        ("competitionsInventory", "https://www.dacon.io/competitions", fetch_dacon_competitions_inventory),
+        ("dakerInventory", "https://daker.ai/public/hackathons", fetch_daker_hackathons_inventory),
+    ]
+
+    for field, expected_page, fetch_live in page_specs:
+        inventory = dacon.get(field)
+        assert isinstance(inventory, list) and inventory, f"DACON CHECKED requires {field}"
+        audit_urls = set()
+        for i, item in enumerate(inventory):
+            assert isinstance(item, dict), f"DACON.{field}[{i}] must be an object"
+            assert item.get("title"), f"DACON.{field}[{i}] missing title"
+            assert item.get("url"), f"DACON.{field}[{i}] missing url"
+            assert item.get("disposition") in allowed_dispositions, f"DACON.{field}[{i}] invalid disposition"
+            parsed = urllib.parse.urlsplit(item["url"])
+            normalized = urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, parsed.path, "", ""))
+            audit_urls.add(normalized)
+
+        live_inventory = fetch_live()
+        live_urls = {item["url"] for item in live_inventory}
+        missing = live_urls - audit_urls
+        assert not missing, f"{expected_page} live inventory not fully reviewed: {sorted(missing)}"
+
+    checked_urls = set(dacon.get("urls", []))
+    assert "https://www.dacon.io/competitions" in checked_urls, "DACON evidence must include competitions page"
+    assert "https://daker.ai/public/hackathons" in checked_urls, "DACON evidence must include DAKER hackathons page"
 
 districts = audit.get("districts")
 assert isinstance(districts, dict), "research audit districts must be an object"
