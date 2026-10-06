@@ -24,6 +24,7 @@ source_cache = json.loads(cache_path.read_text(encoding="utf-8"))
 
 assert audit.get("date") == snapshot_date, "research audit date must match snapshot date"
 assert audit.get("completedAt"), "research audit missing completedAt"
+assert isinstance(audit.get("sourceDiscoveries"), list), "research audit sourceDiscoveries must be a list"
 assert source_cache.get("date") == snapshot_date, "source cache date must match snapshot date"
 assert source_cache.get("crawler", {}).get("engine") == "playwright-chromium", "source cache must come from Playwright crawler"
 
