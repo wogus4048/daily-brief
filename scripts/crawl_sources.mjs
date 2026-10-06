@@ -274,10 +274,45 @@ async function crawlSotong24(page) {
   const url = "https://sotong.go.kr/front/epilogue/epilogueBbsList.do";
   await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
   await page.waitForTimeout(1500);
+
   const selector = 'a[href*="epilogueNewViewPage.do"]';
   await expandListing(page, selector, "소통24 공모전");
-  const items = (await collectAnchorsSafe(page, selector, "소통24"))
+  let items = (await collectAnchorsSafe(page, selector, "소통24"))
     .filter(item => item.url.includes("sotong.go.kr/front/epilogue/epilogueNewViewPage.do"));
+
+  if (!items.length) {
+    const rows = await page.evaluate(() => {
+      const out = [];
+      for (const el of document.querySelectorAll("a, button, li, tr, [onclick], [data-id], [data-bbs-id]")) {
+        const attrs = [...el.attributes].map(a => `${a.name}=${a.value}`).join(" ");
+        const match = attrs.match(/[0-9a-f]{32}/i);
+        if (!match) continue;
+        const text = (el.innerText || el.textContent || "").replace(/\s+/g, " ").trim();
+        if (!text) continue;
+        out.push({ id: match[0], text, attrs });
+      }
+      return out;
+    });
+
+    const byId = new Map();
+    for (const row of rows || []) {
+      const rawText = cleanText(row.text);
+      if (!rawText) continue;
+      const current = byId.get(row.id);
+      if (!current || rawText.length > current.rawText.length) {
+        const detailUrl = `https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=${row.id}&menu_id=527&pagetype=bbs`;
+        byId.set(row.id, {
+          source: "소통24",
+          title: chooseTitle(rawText, `소통24 공모전 ${row.id.slice(0, 8)}`, "소통24"),
+          url: normalizeUrl(detailUrl),
+          rawText,
+          statusHints: statusHints(rawText),
+        });
+      }
+    }
+    items = [...byId.values()].sort((a, b) => a.url.localeCompare(b.url));
+  }
+
   if (!items.length) throw new Error("소통24 crawler returned zero contest items");
   return withActionable({ key: "sotong24Contests", status: "OK", url, items }, () => true);
 }
