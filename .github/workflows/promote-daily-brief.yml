@@ -59,9 +59,13 @@ jobs:
         run: |
           set -euo pipefail
           date='${{ steps.candidate.outputs.date }}'
+          git fetch origin main
           python scripts/validate_data.py data/latest.json
           test -f "data/archive/$date.json"
+          test -f "data/research/$date.json"
           cmp --silent data/latest.json "data/archive/$date.json"
+          git show origin/main:data/latest.json > /tmp/baseline-latest.json
+          python scripts/validate_research_audit.py "data/research/$date.json" data/latest.json /tmp/baseline-latest.json
           python - <<'PY'
           import json, os
           from pathlib import Path
@@ -85,7 +89,7 @@ jobs:
             echo "Candidate has no changes relative to main."
           fi
           for path in "${changed[@]}"; do
-            if [[ "$path" != "data/latest.json" && "$path" != "data/archive/$date.json" ]]; then
+            if [[ "$path" != "data/latest.json" && "$path" != "data/archive/$date.json" && "$path" != "data/research/$date.json" ]]; then
               echo "Candidate changed forbidden path: $path" >&2
               exit 1
             fi
@@ -100,18 +104,20 @@ jobs:
           date='${{ steps.candidate.outputs.date }}'
           git fetch origin "$candidate" main
           git checkout -B main origin/main
-          git checkout "origin/$candidate" -- data/latest.json "data/archive/$date.json"
+          git checkout "origin/$candidate" -- data/latest.json "data/archive/$date.json" "data/research/$date.json"
           python scripts/validate_data.py data/latest.json
           cmp --silent data/latest.json "data/archive/$date.json"
+          git show origin/main:data/latest.json > /tmp/baseline-latest.json
+          python scripts/validate_research_audit.py "data/research/$date.json" data/latest.json /tmp/baseline-latest.json
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          if git diff --cached --quiet -- data/latest.json "data/archive/$date.json"; then
+          if git diff --cached --quiet -- data/latest.json "data/archive/$date.json" "data/research/$date.json"; then
             echo "No data changes to promote."
             sha="$(git rev-parse HEAD)"
           else
-            git add data/latest.json "data/archive/$date.json"
+            git add data/latest.json "data/archive/$date.json" "data/research/$date.json"
             git commit -m "Update daily brief for $date"
             git push origin HEAD:main
             sha="$(git rev-parse HEAD)"
