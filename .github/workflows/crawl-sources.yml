@@ -52,20 +52,33 @@ jobs:
           from pathlib import Path
 
           data = json.loads(Path("data/source-cache/latest.json").read_text(encoding="utf-8"))
-          assert data["sources"]["daconCompetitions"]["count"] > 0
-          assert data["sources"]["dakerHackathons"]["count"] > 0
-          assert isinstance(data["sources"]["daconCompetitions"]["actionableItems"], list)
-          assert isinstance(data["sources"]["dakerHackathons"]["actionableItems"], list)
-          assert data["totals"]["daconCompetitions"] == len(data["sources"]["daconCompetitions"]["items"])
-          assert data["totals"]["dakerHackathons"] == len(data["sources"]["dakerHackathons"]["items"])
-          assert data["totals"]["daconActionable"] == len(data["sources"]["daconCompetitions"]["actionableItems"])
-          assert data["totals"]["dakerActionable"] == len(data["sources"]["dakerHackathons"]["actionableItems"])
-          print(
-              "OK:",
-              data["date"],
-              f"DACON {data['totals']['daconCompetitions']}/{data['totals']['daconActionable']}",
-              f"DAKER {data['totals']['dakerHackathons']}/{data['totals']['dakerActionable']}",
-          )
+          expected = [
+              "daconCompetitions",
+              "dakerHackathons",
+              "hackathonKorea",
+              "sotong24Contests",
+              "grantlySupport",
+              "devpostOpen",
+              "contestKorea",
+              "kStartupHighlights",
+          ]
+          for key in expected:
+              assert key in data["sources"], f"missing crawler source {key}"
+              source = data["sources"][key]
+              assert source["status"] in ("OK", "FAILED"), f"invalid crawler status for {key}"
+              assert isinstance(source["items"], list), f"{key}.items must be a list"
+              assert isinstance(source["actionableItems"], list), f"{key}.actionableItems must be a list"
+              assert source["count"] == len(source["items"]), f"{key} count mismatch"
+              assert source["actionableCount"] == len(source["actionableItems"]), f"{key} actionable count mismatch"
+
+          for key in ("daconCompetitions", "dakerHackathons"):
+              assert data["sources"][key]["status"] == "OK", f"mandatory crawler failed: {key}"
+              assert data["sources"][key]["count"] > 0, f"mandatory crawler empty: {key}"
+
+          print("OK:", data["date"])
+          for key in expected:
+              source = data["sources"][key]
+              print(key, source["status"], source["count"], source["actionableCount"])
           PY
 
       - name: Commit source cache to main
