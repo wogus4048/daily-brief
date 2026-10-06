@@ -150,7 +150,22 @@ with tempfile.TemporaryDirectory() as td:
             "unstableSource": [],
         },
         "fixedSources": {},
-        "tracks": {},
+        "tracks": {
+            "startupSupport": {
+                "rawCandidates": [
+                    {
+                        "title": "Startup support example",
+                        "url": "https://startup-source.example/program/1",
+                        "disposition": "PUBLISHED",
+                    },
+                    {
+                        "title": "Startup support example 2",
+                        "url": "https://startup-source.example/program/2",
+                        "disposition": "EXISTING",
+                    },
+                ]
+            }
+        },
     }
     cache = {
         "date": DATE,
@@ -213,5 +228,10 @@ with tempfile.TemporaryDirectory() as td:
     assert "promoteSource" not in candidates, "promoted candidate should leave candidate bucket"
     assert "recoverSource" in active, "degraded source should auto-recover after shadow stability"
     assert "recoverSource" not in degraded, "recovered source should leave degraded bucket"
+    assert "startup-source-example" in candidates, "startup support domain should be auto-discovered"
+    assert candidates["startup-source-example"].get("category") == "startupSupport", (
+        "startup support discovery must retain its category"
+    )
+    assert candidates["startup-source-example"].get("sourceTracks") == ["startupSupport"]
 
-    print("OK: crawler source lifecycle promotion/degradation/recovery")
+    print("OK: crawler source lifecycle promotion/degradation/recovery/category tracking")
