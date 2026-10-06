@@ -4,6 +4,7 @@ import path from "node:path";
 
 const SEOUL_TZ = "Asia/Seoul";
 const OUTPUT_DIR = path.resolve("data/source-cache");
+const MANIFEST_PATH = path.resolve("data/crawler-sources.json");
 const ACTIONABLE_HINTS = [
   "참가신청중",
   "접수중",
@@ -338,10 +339,64 @@ async function crawlKStartup(page) {
   return withActionable({ key: "kStartupHighlights", status: "OK", url, items }, () => true);
 }
 
+async function crawlGeneric(page, key, name, spec) {
+  const url = spec.url;
+  if (!url || !spec.linkSelector) {
+    throw new Error(`generic crawler ${key} missing url/linkSelector`);
+  }
+
+  await page.goto(url, { waitUntil: "domcontentloaded", timeout: spec.timeoutMs || 60000 });
+  await page.waitForTimeout(spec.waitMs || 1200);
+
+  if (spec.expand !== false) {
+    await expandListing(page, spec.linkSelector, name || key);
+  }
+  if (spec.scrollRounds) {
+    await scrollListing(page, spec.linkSelector, spec.scrollRounds);
+  }
+
+  let items = await collectAnchorsSafe(page, spec.linkSelector, name || key);
+
+  if (spec.hostSuffix) {
+    items = items.filter(item => new URL(item.url).hostname.endsWith(spec.hostSuffix));
+  }
+  if (spec.urlContains) {
+    items = items.filter(item => item.url.includes(spec.urlContains));
+  }
+  if (spec.urlRegex) {
+    const rx = new RegExp(spec.urlRegex);
+    items = items.filter(item => rx.test(item.url));
+  }
+  if (spec.excludeUrlRegex) {
+    const rx = new RegExp(spec.excludeUrlRegex);
+    items = items.filter(item => !rx.test(item.url));
+  }
+
+  if (!items.length) {
+    throw new Error(`generic crawler ${key} returned zero items`);
+  }
+
+  const predicate = spec.actionability === "all" ? () => true : isActionableByHints;
+  return withActionable({ key, status: "OK", url, items }, predicate);
+}
+
 async function main() {
   const now = new Date();
   const date = seoulDate(now);
   await fs.mkdir(OUTPUT_DIR, { recursive: true });
+
+  const manifest = JSON.parse(await fs.readFile(MANIFEST_PATH, "utf8"));
+
+  const builtIns = new Map([
+    ["daconCompetitions", crawlDacon],
+    ["dakerHackathons", crawlDaker],
+    ["hackathonKorea", crawlHackathonKorea],
+    ["sotong24Contests", crawlSotong24],
+    ["grantlySupport", crawlGrantly],
+    ["devpostOpen", crawlDevpost],
+    ["contestKorea", crawlContestKorea],
+    ["kStartupHighlights", crawlKStartup],
+  ]);
 
   const browser = await chromium.launch({ headless: true });
   try {
@@ -352,30 +407,39 @@ async function main() {
       viewport: { width: 1440, height: 1600 },
     });
 
-    const jobs = [
-      ["daconCompetitions", crawlDacon],
-      ["dakerHackathons", crawlDaker],
-      ["hackathonKorea", crawlHackathonKorea],
-      ["sotong24Contests", crawlSotong24],
-      ["grantlySupport", crawlGrantly],
-      ["devpostOpen", crawlDevpost],
-      ["contestKorea", crawlContestKorea],
-      ["kStartupHighlights", crawlKStartup],
-    ];
-
-    const entries = await Promise.all(jobs.map(async ([key, fn]) => {
+    async function runEntry(entry, shadow = false) {
+      const key = entry.key;
       const page = await context.newPage();
-      try { return [key, await safeCrawl(key, () => fn(page))]; }
-      finally { await page.close().catch(() => {}); }
-    }));
-
-    const sources = Object.fromEntries(entries);
-
-    for (const required of ["daconCompetitions", "dakerHackathons"]) {
-      if (sources[required].status !== "OK") {
-        throw new Error(`mandatory crawler failed: ${required}: ${sources[required].error}`);
+      try {
+        const builtIn = builtIns.get(key);
+        const result = await safeCrawl(key, () => {
+          if (builtIn) return builtIn(page);
+          if (entry.crawlerSpec) return crawlGeneric(page, key, entry.name || key, entry.crawlerSpec);
+          throw new Error(`no crawler implementation/spec for ${key}`);
+        });
+        return [key, { ...result, shadow }];
+      } finally {
+        await page.close().catch(() => {});
       }
     }
+
+    const activeEntries = (manifest.active || []).filter(entry => entry.status !== "DEGRADED");
+    const sourceEntries = await Promise.all(activeEntries.map(entry => runEntry(entry, false)));
+    const sources = Object.fromEntries(sourceEntries);
+
+    for (const entry of activeEntries.filter(entry => entry.required)) {
+      const source = sources[entry.key];
+      if (!source || source.status !== "OK") {
+        throw new Error(`mandatory crawler failed: ${entry.key}: ${source?.error || "missing"}`);
+      }
+    }
+
+    const shadowEntries = [
+      ...(manifest.nextCandidates || []).filter(entry => entry.status === "SHADOW" && entry.crawlerSpec),
+      ...(manifest.degraded || []).filter(entry => builtIns.has(entry.key) || entry.crawlerSpec),
+    ];
+    const shadowPairs = await Promise.all(shadowEntries.map(entry => runEntry(entry, true)));
+    const shadowSources = Object.fromEntries(shadowPairs);
 
     const totals = Object.fromEntries(
       Object.entries(sources).flatMap(([key, value]) => [
@@ -388,8 +452,9 @@ async function main() {
       date,
       generatedAt: now.toISOString(),
       timezone: SEOUL_TZ,
-      crawler: { engine: "playwright-chromium", version: 3 },
+      crawler: { engine: "playwright-chromium", version: 4 },
       sources,
+      shadowSources,
       totals,
     };
 
@@ -399,9 +464,10 @@ async function main() {
 
     console.log("OK: source cache", date);
     for (const [key, value] of Object.entries(sources)) {
-      console.log(
-        `${key}: ${value.status} ${value.count || 0}/${value.actionableCount || 0} actionable`
-      );
+      console.log(`active ${key}: ${value.status} ${value.count || 0}/${value.actionableCount || 0} actionable`);
+    }
+    for (const [key, value] of Object.entries(shadowSources)) {
+      console.log(`shadow ${key}: ${value.status} ${value.count || 0}/${value.actionableCount || 0} actionable`);
     }
   } finally {
     await browser.close();
