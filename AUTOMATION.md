@@ -28,7 +28,7 @@ The audit must record:
 - fixed-source evidence for every mandatory source family, including checked URLs or a concrete failure reason
 - district evidence for 노원, 도봉, 강북, including checked URLs or a concrete failure reason
 
-The audit is validated by `scripts/validate_research_audit.py`. A refresh is incomplete if the audit is missing, if a required search axis has no executed query evidence, if required source/district evidence is missing, if the raw-candidate minimum was neither met nor explicitly exhausted with a reason, or if a previously OPEN/UPCOMING id was not re-verified.
+The audit is validated by `scripts/validate_research_audit.py`. A refresh is incomplete if the audit is missing, if a required search axis has no executed query evidence, if required source/district evidence is missing, if the raw-candidate minimum was neither met nor explicitly exhausted with a reason, or if an OPEN/UPCOMING item that is due under the risk-based verification cadence was not re-verified.
 
 Do not fabricate audit evidence. Record only queries, URLs, candidates and checks actually performed in the current run.
 
@@ -191,12 +191,18 @@ Discovery/community sources are for finding leads. Final published facts should 
 
 This checklist is a completion gate, not a suggestion. A daily refresh is incomplete until every applicable step below is performed or explicitly exhausted.
 
-### 1. Re-verify existing OPEN and UPCOMING opportunities first
-- Re-open every currently OPEN or UPCOMING contest/support item's primary official source.
-- For `OPEN`, confirm registration is still open, deadline/date/time, eligibility, prize/support details, and official links.
-- For `UPCOMING`, confirm the announced opening date/time, whether capacity is first-come or limited, deadline, eligibility, rewards, and official application/login prerequisites. Promote it to `OPEN` once the opening time arrives and the official application path is live.
+### 1. Re-verify existing OPEN and UPCOMING opportunities by risk cadence
+Do not spend every daily run reopening every long-lived unchanged item. Re-verify items that are due under this deterministic cadence, plus any item whose crawler/search evidence materially changed:
+- `OPEN` with nearest actionable deadline within 3 days: every day.
+- `OPEN` with nearest actionable deadline 4–14 days away: at least every 2 days.
+- `OPEN` with deadline more than 14 days away or no parseable deadline: at least every 7 days.
+- `UPCOMING` whose opening is today/tomorrow: every day; other UPCOMING items: at least every 2 days.
+- Any source-cache/search evidence indicating a status/schedule change forces immediate re-verification regardless of cadence.
+- For each due item, open its primary official source and confirm registration status, deadline/date/time, eligibility, prize/support details and official links. Set `lastVerifiedDate` to the snapshot date.
+- For `UPCOMING`, also confirm opening time, capacity/first-come rules and application prerequisites; promote it to `OPEN` once live.
 - If an official source proves registration ended, keep the item but set `status: CLOSED`.
-- Do not close or delete an item merely because today's search does not surface it.
+- Do not close/delete an item merely because today's search does not surface it.
+- `scripts/validate_research_audit.py` independently computes the due set from the main baseline and blocks promotion if any due id is absent from `reverifiedIds` or its resulting `lastVerifiedDate` is stale.
 
 ### 2. Run broad unrestricted web discovery before fixed-source checks
 Search the open web first so discovery is not limited to known platforms. Run independent query groups for:
