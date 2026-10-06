@@ -52,17 +52,12 @@ jobs:
           from pathlib import Path
 
           data = json.loads(Path("data/source-cache/latest.json").read_text(encoding="utf-8"))
-          expected = [
-              "daconCompetitions",
-              "dakerHackathons",
-              "hackathonKorea",
-              "sotong24Contests",
-              "grantlySupport",
-              "devpostOpen",
-              "contestKorea",
-              "kStartupHighlights",
-          ]
-          for key in expected:
+          manifest = json.loads(Path("data/crawler-sources.json").read_text(encoding="utf-8"))
+          active = manifest.get("active", [])
+          required = {entry["key"] for entry in active if entry.get("required")}
+
+          for entry in active:
+              key = entry["key"]
               assert key in data["sources"], f"missing crawler source {key}"
               source = data["sources"][key]
               assert source["status"] in ("OK", "FAILED"), f"invalid crawler status for {key}"
@@ -70,15 +65,30 @@ jobs:
               assert isinstance(source["actionableItems"], list), f"{key}.actionableItems must be a list"
               assert source["count"] == len(source["items"]), f"{key} count mismatch"
               assert source["actionableCount"] == len(source["actionableItems"]), f"{key} actionable count mismatch"
+              if key in required:
+                  assert source["status"] == "OK", f"mandatory crawler failed: {key}"
+                  assert source["count"] > 0, f"mandatory crawler empty: {key}"
 
-          for key in ("daconCompetitions", "dakerHackathons"):
-              assert data["sources"][key]["status"] == "OK", f"mandatory crawler failed: {key}"
-              assert data["sources"][key]["count"] > 0, f"mandatory crawler empty: {key}"
+          shadow_expected = {
+              entry["key"]
+              for entry in manifest.get("nextCandidates", [])
+              if entry.get("status") == "SHADOW" and entry.get("crawlerSpec")
+          } | {
+              entry["key"]
+              for entry in manifest.get("degraded", [])
+              if entry.get("crawlerSpec") or entry["key"] in {
+                  "daconCompetitions","dakerHackathons","hackathonKorea","sotong24Contests",
+                  "grantlySupport","devpostOpen","contestKorea","kStartupHighlights"
+              }
+          }
+          for key in shadow_expected:
+              assert key in data.get("shadowSources", {}), f"missing shadow crawler result {key}"
 
           print("OK:", data["date"])
-          for key in expected:
-              source = data["sources"][key]
-              print(key, source["status"], source["count"], source["actionableCount"])
+          for key, source in data["sources"].items():
+              print("active", key, source["status"], source["count"], source["actionableCount"])
+          for key, source in data.get("shadowSources", {}).items():
+              print("shadow", key, source["status"], source["count"], source["actionableCount"])
           PY
 
       - name: Commit source cache to main
