@@ -1,54 +1,75 @@
 {
-  "version": 1,
+  "version": 2,
+  "policy": {
+    "autoPromote": {
+      "minDiscoverySightings": 2,
+      "minPublishedHits": 1,
+      "minShadowSuccessStreak": 3,
+      "minScore": 50
+    },
+    "autoDegrade": {
+      "maxActiveFailureStreak": 3
+    },
+    "autoRecover": {
+      "minShadowSuccessStreak": 2
+    }
+  },
   "active": [
     {
       "key": "daconCompetitions",
       "name": "DACON competitions",
       "url": "https://www.dacon.io/competitions",
       "role": "AI/data/software competitions",
-      "required": true
+      "required": true,
+      "managed": true
     },
     {
       "key": "dakerHackathons",
       "name": "DAKER hackathons",
       "url": "https://daker.ai/public/hackathons",
       "role": "Korean AI/developer hackathons",
-      "required": true
+      "required": true,
+      "managed": true
     },
     {
       "key": "hackathonKorea",
       "name": "Hackathon Korea",
       "url": "https://koreahackathons.com/",
       "role": "Korea in-person/online hackathon directory",
-      "required": false
+      "required": false,
+      "managed": true
     },
     {
       "key": "sotong24Contests",
       "name": "소통24 공모전",
       "url": "https://sotong.go.kr/front/epilogue/epilogueNewListPage.do?menu_id=527&pagetype=bbs&date_range=all&date_range_cnddt=all",
       "role": "government/public idea contests",
-      "required": false
+      "required": false,
+      "managed": true
     },
     {
       "key": "grantlySupport",
       "name": "Grantly 지원사업",
       "url": "https://grantly.kr/opportunities/support",
       "role": "startup/support programs and public opportunities",
-      "required": false
+      "required": false,
+      "managed": true
     },
     {
       "key": "devpostOpen",
       "name": "Devpost open hackathons",
       "url": "https://devpost.com/hackathons?status=open",
       "role": "global online developer/AI hackathons",
-      "required": false
+      "required": false,
+      "managed": true
     },
     {
       "key": "contestKorea",
       "name": "ContestKorea",
-      "url": "https://www.contestkorea.kr/",
+      "url": "https://contestkorea.kr/",
       "role": "Korean public contests and idea competitions",
-      "required": false
+      "required": false,
+      "managed": true
     },
     {
       "key": "kStartupHighlights",
@@ -56,51 +77,73 @@
       "url": "https://www.k-startup.go.kr/web/main/mainSection0.do",
       "role": "new and deadline-imminent startup support announcements",
       "required": false,
+      "managed": true,
       "note": "May rate-limit/block cloud IPs; keep GPT/web fallback."
     }
   ],
+  "degraded": [],
   "nextCandidates": [
     {
+      "key": "bizinfo",
       "name": "기업마당",
-      "reason": "structured support-program boards; exact pagination/API inspection still needed"
+      "reason": "structured support-program boards; exact pagination/API inspection still needed",
+      "status": "NEEDS_SPEC"
     },
     {
+      "key": "onoffmix",
       "name": "온오프믹스",
       "url": "https://www.onoffmix.com/event/main",
-      "reason": "large structured event list; crawler needs category/topic filtering to avoid thousands of irrelevant events"
+      "reason": "large structured event list; crawler needs category/topic filtering to avoid thousands of irrelevant events",
+      "status": "NEEDS_SPEC"
     },
     {
+      "key": "eventus",
       "name": "이벤터스",
-      "reason": "JS-heavy searchable event catalog; exact public search API/URL filtering needs inspection"
+      "reason": "JS-heavy searchable event catalog; exact public search API/URL filtering needs inspection",
+      "status": "NEEDS_SPEC"
     },
     {
+      "key": "linkareer",
       "name": "링커리어",
-      "reason": "structured contest/activity catalog but pagination and anti-bot behavior need inspection"
+      "reason": "structured contest/activity catalog but pagination and anti-bot behavior need inspection",
+      "status": "NEEDS_SPEC"
     },
     {
+      "key": "allforyoung",
       "name": "요즘것들",
-      "reason": "structured opportunity catalog but exact list endpoints need inspection"
+      "reason": "structured opportunity catalog but exact list endpoints need inspection",
+      "status": "NEEDS_SPEC"
     },
     {
+      "key": "sba",
       "name": "SBA",
-      "reason": "public program listings split across multiple boards; source-specific board inventory needed"
+      "reason": "public program listings split across multiple boards; source-specific board inventory needed",
+      "status": "NEEDS_SPEC"
     },
     {
+      "key": "nipa",
       "name": "NIPA",
-      "reason": "public announcements are structured but opportunity-relevant boards need selection"
+      "reason": "public announcements are structured but opportunity-relevant boards need selection",
+      "status": "NEEDS_SPEC"
     },
     {
+      "key": "kisa",
       "name": "KISA",
-      "reason": "multiple notice/business boards; opportunity-relevant board set needs selection"
+      "reason": "multiple notice/business boards; opportunity-relevant board set needs selection",
+      "status": "NEEDS_SPEC"
     },
     {
+      "key": "lumaMeetup",
       "name": "Luma / Meetup",
-      "reason": "use location/query discovery rather than blind full-site crawl"
+      "reason": "use location/query discovery rather than blind full-site crawl",
+      "status": "WATCH_ONLY"
     },
     {
+      "key": "aitop100",
       "name": "AI_TOP_100",
       "url": "https://aitop100.org/",
-      "reason": "single recurring high-value event site; direct watch is more appropriate than broad crawler"
+      "reason": "single recurring high-value event site; direct watch is more appropriate than broad crawler",
+      "status": "WATCH_ONLY"
     }
   ]
 }
