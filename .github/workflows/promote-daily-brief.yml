@@ -113,11 +113,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          git add data/latest.json "data/archive/$date.json" "data/research/$date.json"
+
           if git diff --cached --quiet -- data/latest.json "data/archive/$date.json" "data/research/$date.json"; then
             echo "No data changes to promote."
             sha="$(git rev-parse HEAD)"
           else
-            git add data/latest.json "data/archive/$date.json" "data/research/$date.json"
             git commit -m "Update daily brief for $date"
             git push origin HEAD:main
             sha="$(git rev-parse HEAD)"
