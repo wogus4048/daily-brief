@@ -34,8 +34,11 @@ function chooseTitle(rawText, fallback, source = "") {
   const flatText = cleanText(rawText);
 
   if (source === "DAKER") {
-    const premiumMatch = flatText.match(/프리미엄\s+(.+?)\s+총\s*상금/);
-    if (premiumMatch?.[1]) return cleanText(premiumMatch[1]);
+    const tierMatch = flatText.match(/(?:프리미엄|스탠다드)\s+(.+?)(?:\s+총\s*상금|\s+\d[\d,]*팀\s+참가|\s+참가\s+신청하기)/);
+    if (tierMatch?.[1]) return cleanText(tierMatch[1]);
+
+    const yearMatch = flatText.match(/\b(20\d{2}\s+.+?)(?:\s+총\s*상금|\s+\d[\d,]*팀\s+참가|\s+참가\s+신청하기)/);
+    if (yearMatch?.[1]) return cleanText(yearMatch[1]);
   }
 
   const blocked = /^(참가신청중|접수중|진행중|마감|연습|종료|예정|더보기)$/;
@@ -193,6 +196,20 @@ async function crawlDaker(page) {
   };
 }
 
+const ACTIONABLE_HINTS = new Set(["참가신청중", "접수중", "진행중", "모집중", "예정"]);
+
+function addActionable(items) {
+  const actionableItems = items.filter(item =>
+    (item.statusHints || []).some(hint => ACTIONABLE_HINTS.has(hint))
+  );
+  return {
+    items,
+    count: items.length,
+    actionableItems,
+    actionableCount: actionableItems.length,
+  };
+}
+
 async function main() {
   const now = new Date();
   const date = seoulDate(now);
@@ -214,21 +231,32 @@ async function main() {
       crawlDaker(dakerPage),
     ]);
 
+    const daconInventory = addActionable(daconCompetitions.items);
+    const dakerInventory = addActionable(dakerHackathons.items);
+
     const output = {
       date,
       generatedAt: now.toISOString(),
       timezone: SEOUL_TZ,
       crawler: {
         engine: "playwright-chromium",
-        version: 1,
+        version: 2,
       },
       sources: {
-        daconCompetitions,
-        dakerHackathons,
+        daconCompetitions: {
+          ...daconCompetitions,
+          ...daconInventory,
+        },
+        dakerHackathons: {
+          ...dakerHackathons,
+          ...dakerInventory,
+        },
       },
       totals: {
-        daconCompetitions: daconCompetitions.count,
-        dakerHackathons: dakerHackathons.count,
+        daconCompetitions: daconInventory.count,
+        daconActionable: daconInventory.actionableCount,
+        dakerHackathons: dakerInventory.count,
+        dakerActionable: dakerInventory.actionableCount,
       },
     };
 
@@ -237,7 +265,7 @@ async function main() {
     await fs.writeFile(path.join(OUTPUT_DIR, "latest.json"), json, "utf8");
 
     console.log(
-      `OK: source cache ${date} (DACON ${daconCompetitions.count}, DAKER ${dakerHackathons.count})`
+      `OK: source cache ${date} (DACON ${daconInventory.count}/${daconInventory.actionableCount} actionable, DAKER ${dakerInventory.count}/${dakerInventory.actionableCount} actionable)`
     );
   } finally {
     await browser.close();
