@@ -36,6 +36,9 @@ jobs:
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
+      - name: Test crawler source lifecycle engine
+        run: python scripts/test_evolve_crawler_sources.py
+
       - name: Crawl source inventories
         run: npm run crawl:sources
 
