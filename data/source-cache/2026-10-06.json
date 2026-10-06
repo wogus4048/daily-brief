@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generatedAt": "2026-10-06T04:49:08.288Z",
+  "generatedAt": "2026-10-06T04:51:17.106Z",
   "timezone": "Asia/Seoul",
   "crawler": {
     "engine": "playwright-chromium",
@@ -2648,16 +2648,16 @@
         },
         {
           "source": "DAKER",
-          "title": "심사 D-1",
+          "title": "2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래",
           "url": "https://daker.ai/public/hackathons/2026-finance-ai-challenge",
-          "rawText": "진행중 심사 D-1 금 금융보안원 프리미엄 2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래 총 상금 3,500만원 1,388팀 참가 153,172 진행중",
+          "rawText": "진행중 심사 D-1 금 금융보안원 프리미엄 2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래 총 상금 3,500만원 1,388팀 참가 153,174 진행중",
           "statusHints": [
             "진행중"
           ]
         },
         {
           "source": "DAKER",
-          "title": "심사 D-30",
+          "title": "2026 K-Health 미개방 의료데이터 활용 경진대회",
           "url": "https://daker.ai/public/hackathons/2026-k-health-unreleased-data-utilization-competit",
           "rawText": "진행중 심사 D-30 건 건양대학교의료원, 과학기술정보통신부, 정보통신산업진흥원, 대전정보문화산업진흥원, 대구디지털혁신진흥원, 대구·광주테크노파크 프리미엄 2026 K-Health 미개방 의료데이터 활용 경진대회 총 상금 750만원 417팀 참가 39,601 진행중",
           "statusHints": [
@@ -2666,7 +2666,7 @@
         },
         {
           "source": "DAKER",
-          "title": "차세대융합기술연구원 메이커스페이스",
+          "title": "2026 스마트 공장 운영 시스템 MVP 개발 해커톤",
           "url": "https://daker.ai/public/hackathons/2026-smart-factory-ai-platform-mvp-hackathon",
           "rawText": "종료 차 차세대융합기술연구원 메이커스페이스 프리미엄 2026 스마트 공장 운영 시스템 MVP 개발 해커톤 총 상금 125만원 161팀 참가 15,073 종료됨",
           "statusHints": [
@@ -2684,7 +2684,7 @@
         },
         {
           "source": "DAKER",
-          "title": "보건복지부/한국보건산업진흥원/고려대학교의과대학/한국제약바이오협회",
+          "title": "제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 예선",
           "url": "https://daker.ai/public/hackathons/4th-jump-ai-agentic-drug-challenge",
           "rawText": "종료 보 보건복지부/한국보건산업진흥원/고려대학교의과대학/한국제약바이오협회 프리미엄 제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 예선 총 상금 3,350만원 509팀 참가 79,280 종료됨",
           "statusHints": [
@@ -2693,7 +2693,7 @@
         },
         {
           "source": "DAKER",
-          "title": "심사 D-25",
+          "title": "제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 본선",
           "url": "https://daker.ai/public/hackathons/4th-jump-ai-agentic-drug-challenge-finals-1",
           "rawText": "진행중 심사 D-25 보 보건복지부/한국보건산업진흥원/고려대학교의과대학/한국제약바이오협회 프리미엄 제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 본선 총 상금 3,350만원 15팀 참가 7,020 진행중",
           "statusHints": [
@@ -2713,7 +2713,7 @@
           "source": "DAKER",
           "title": "서울대학교 앵커사업단(캠퍼스타운 사업)",
           "url": "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims",
-          "rawText": "모집중 D-19 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 55팀 참가 2,868 참가 신청하기",
+          "rawText": "모집중 D-19 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 55팀 참가 2,869 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2729,9 +2729,9 @@
         },
         {
           "source": "DAKER",
-          "title": "심사 1시간 남음",
+          "title": "월간 해커톤: 마약류 문제 예방과 피해 감소를 위한 아이디어 챌린지",
           "url": "https://daker.ai/public/hackathons/csafcas",
-          "rawText": "진행중 심사 1시간 남음 데 데이콘 프리미엄 월간 해커톤: 마약류 문제 예방과 피해 감소를 위한 아이디어 챌린지 총 상금 100만원 277팀 참가 13,240 진행중",
+          "rawText": "진행중 심사 1시간 남음 데 데이콘 프리미엄 월간 해커톤: 마약류 문제 예방과 피해 감소를 위한 아이디어 챌린지 총 상금 100만원 277팀 참가 13,242 진행중",
           "statusHints": [
             "진행중"
           ]
@@ -2745,7 +2745,7 @@
         },
         {
           "source": "DAKER",
-          "title": "DACON",
+          "title": "월간 해커톤 : 투자 데이터를 시각화하라- Skills 기반 대시보드 설계",
           "url": "https://daker.ai/public/hackathons/hackathon-investment-data-skills-dashboard",
           "rawText": "종료 D DACON 프리미엄 월간 해커톤 : 투자 데이터를 시각화하라- Skills 기반 대시보드 설계 총 상금 100만원 321팀 참가 29,974 종료됨",
           "statusHints": [
@@ -2754,7 +2754,7 @@
         },
         {
           "source": "DAKER",
-          "title": "JB금융그룹",
+          "title": "JB금융그룹 Fin:AI Challenge",
           "url": "https://daker.ai/public/hackathons/jb-fin-ai-challenge",
           "rawText": "종료 J JB금융그룹 프리미엄 JB금융그룹 Fin:AI Challenge 총 상금 1억원 519팀 참가 77,421 종료됨",
           "statusHints": [
@@ -2763,9 +2763,9 @@
         },
         {
           "source": "DAKER",
-          "title": "한국투자공사",
+          "title": "국부펀드 KIC, AI 에이전트 공모전",
           "url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
-          "rawText": "모집중 D-36 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 160팀 참가 7,789 참가 신청하기",
+          "rawText": "모집중 D-36 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 160팀 참가 7,794 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2781,7 +2781,7 @@
         },
         {
           "source": "DAKER",
-          "title": "DACON",
+          "title": "월간 해커톤 : 긴급 인수인계 해커톤 - 문서만 남기고 사라졌다",
           "url": "https://daker.ai/public/hackathons/monthly-hackathon-emergency-handover-docs",
           "rawText": "종료 D DACON 프리미엄 월간 해커톤 : 긴급 인수인계 해커톤 - 문서만 남기고 사라졌다 총 상금 100만원 370팀 참가 19,512 종료됨",
           "statusHints": [
@@ -2790,7 +2790,7 @@
         },
         {
           "source": "DAKER",
-          "title": "DACON",
+          "title": "월간 해커톤 : 10분 안에 중독시켜라 - 웹 미니게임 챌린지",
           "url": "https://daker.ai/public/hackathons/monthly-hackathon-web-minigame-challenge",
           "rawText": "종료 D DACON 프리미엄 월간 해커톤 : 10분 안에 중독시켜라 - 웹 미니게임 챌린지 총 상금 100만원 280팀 참가 28,551 종료됨",
           "statusHints": [
@@ -2799,7 +2799,7 @@
         },
         {
           "source": "DAKER",
-          "title": "메가존 클라우드, KISTI, 한국양자융합센터",
+          "title": "Quantum Reframing Challenge 2026",
           "url": "https://daker.ai/public/hackathons/quantum-service-innovation-challenge-megazonecloud",
           "rawText": "종료 메 메가존 클라우드, KISTI, 한국양자융합센터 프리미엄 Quantum Reframing Challenge 2026 총 상금 2,000만원 72팀 참가 32,083 종료됨",
           "statusHints": [
@@ -2810,7 +2810,7 @@
           "source": "DAKER",
           "title": "알고리즘",
           "url": "https://daker.ai/public/hackathons/synthetic-microstructure-property-prediction-ai",
-          "rawText": "모집중 알고리즘 D-12 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 226팀 참가 10,850 참가 신청하기",
+          "rawText": "모집중 알고리즘 D-12 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 226팀 참가 10,857 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
