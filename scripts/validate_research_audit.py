@@ -144,12 +144,12 @@ allowed_dispositions = {"PUBLISHED", "EXISTING", "DUPLICATE", "INELIGIBLE", "CLO
 inventory_specs = [
     (
         "competitionsInventory",
-        source_cache.get("sources", {}).get("daconCompetitions", {}).get("items", []),
+        source_cache.get("sources", {}).get("daconCompetitions", {}).get("actionableItems", []),
         "DACON competitions",
     ),
     (
         "dakerInventory",
-        source_cache.get("sources", {}).get("dakerHackathons", {}).get("items", []),
+        source_cache.get("sources", {}).get("dakerHackathons", {}).get("actionableItems", []),
         "DAKER hackathons",
     ),
 ]
@@ -229,5 +229,5 @@ assert set(published_ids).issubset(all_candidate_ids), "every published id must 
 print(
     f"OK: {audit_path} "
     f"({len(published_ids)} published, {len(audit.get('reverifiedIds', []))} reverified, "
-    f"DACON cache {source_cache['totals']['daconCompetitions']}, DAKER cache {source_cache['totals']['dakerHackathons']})"
+    f"DACON actionable {source_cache['totals']['daconActionable']}, DAKER actionable {source_cache['totals']['dakerActionable']})"
 )
