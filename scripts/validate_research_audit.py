@@ -292,9 +292,27 @@ if baseline is not None:
         for item in data.get(group, [])
         if item.get("id") and item["id"] not in baseline_ids and item.get("firstSeenDate") == snapshot_date
     }
-    assert set(published_ids) == new_ids, (
-        f"research audit publishedIds mismatch: expected {sorted(new_ids)}, got {sorted(published_ids)}"
-    )
+    published_set = set(published_ids)
+    if baseline.get("date") == snapshot_date:
+        same_day_baseline_ids = {
+            item["id"]
+            for group in ("contests", "support", "aiNews")
+            for item in baseline.get(group, [])
+            if item.get("id") and item.get("firstSeenDate") == snapshot_date
+        }
+        allowed = same_day_baseline_ids | new_ids
+        missing_new = new_ids - published_set
+        unexpected = published_set - allowed
+        assert not missing_new, (
+            f"research audit publishedIds missing newly added ids on same-day retry: {sorted(missing_new)}"
+        )
+        assert not unexpected, (
+            f"research audit publishedIds contains ids not attributable to this snapshot date: {sorted(unexpected)}"
+        )
+    else:
+        assert published_set == new_ids, (
+            f"research audit publishedIds mismatch: expected {sorted(new_ids)}, got {sorted(published_ids)}"
+        )
 
     baseline_due = {
         item["id"]
