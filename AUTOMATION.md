@@ -14,6 +14,23 @@ The main file is `data/latest.json` with:
 
 All three content arrays are cumulative catalogs, not replace-every-day feeds.
 
+## Research evidence gate
+
+Every scheduled refresh must also write `data/research/YYYY-MM-DD.json`. This is not optional logging; it is promotion evidence.
+
+The audit must record:
+- `date`, `completedAt`
+- `reverifiedIds`: every previously OPEN/UPCOMING contest/support id actually re-opened and checked
+- `publishedIds`: every newly published contest/support/AI-news id for the snapshot date
+- independent track evidence for `aiData`, `generalSoftware`, `publicIdea`, `startupSupport`, `upcomingOpenings`, and `aiNews`
+- for each track, the actual queries grouped by required search axis, raw candidate titles/URLs, and disposition (`PUBLISHED`, `EXISTING`, `DUPLICATE`, `INELIGIBLE`, `CLOSED`, `NOT_RELEVANT`)
+- fixed-source evidence for every mandatory source family, including checked URLs or a concrete failure reason
+- district evidence for 노원, 도봉, 강북, including checked URLs or a concrete failure reason
+
+The audit is validated by `scripts/validate_research_audit.py`. A refresh is incomplete if the audit is missing, if a required search axis has no executed query evidence, if required source/district evidence is missing, if the raw-candidate minimum was neither met nor explicitly exhausted with a reason, or if a previously OPEN/UPCOMING id was not re-verified.
+
+Do not fabricate audit evidence. Record only queries, URLs, candidates and checks actually performed in the current run.
+
 ### Opportunities: contests / support
 
 Keep an item once discovered. Use a stable `id` across days.
@@ -222,12 +239,14 @@ Before writing data:
 
 ### 10. Save, validate and verify deployment
 - Write one final snapshot to both `data/latest.json` and today's `data/archive/YYYY-MM-DD.json`.
+- Write the actual current-run research evidence to `data/research/YYYY-MM-DD.json`.
 - Run `scripts/validate_data.py` against the final snapshot before publishing it.
-- Scheduled automation MUST NOT write directly to `main`. Publish only the two data files to a staging branch named `automation/daily-brief-YYYY-MM-DD-data`, based on the current `main`.
+- The promotion workflow will run `scripts/validate_research_audit.py` against the current `main` baseline. Do not claim completion unless that evidence gate passes.
+- Scheduled automation MUST NOT write directly to `main`. Publish only `data/latest.json`, `data/archive/YYYY-MM-DD.json`, and `data/research/YYYY-MM-DD.json` to a staging branch named `automation/daily-brief-YYYY-MM-DD-data`, based on the current `main`.
 - The staging branch must contain no UI or unrelated changes.
-- Prefer one staging commit containing both data files so the branch represents one complete snapshot.
-- `.github/workflows/promote-daily-brief.yml` re-validates the candidate, confirms the archive is byte-for-byte identical to `data/latest.json`, enforces data-only changes, promotes the snapshot to `main` with commit message `Update daily brief for YYYY-MM-DD`, dispatches `.github/workflows/pages.yml`, and waits for its result.
-- The refresh is complete only after both the promotion workflow and the dispatched Pages workflow succeed for the promoted commit. A staging commit alone is not success.
+- Prefer one staging commit containing all three files so the branch represents one complete snapshot plus its research evidence.
+- `.github/workflows/promote-daily-brief.yml` re-validates the snapshot and research evidence, confirms the archive is byte-for-byte identical to `data/latest.json`, enforces the allowed-file set, promotes the result to `main` with commit message `Update daily brief for YYYY-MM-DD`, dispatches `.github/workflows/pages.yml`, and waits for its result.
+- The refresh is complete only after the research evidence gate, promotion workflow, and dispatched Pages workflow all succeed. A staging commit alone is not success.
 - Normal successful refreshes stay silent; report only failures that require user attention.
 
 
@@ -268,8 +287,8 @@ If broad discovery, official pages, or a tool partially fails:
 ## Validation and deployment
 
 - Validate with `scripts/validate_data.py`.
-- The scheduled automation writes the completed snapshot only to `automation/daily-brief-YYYY-MM-DD-data`; it does not update `main` directly.
-- `.github/workflows/promote-daily-brief.yml` is the promotion path from the automation staging branch to `main`. It validates the candidate, enforces data-only changes, creates the required `Update daily brief for YYYY-MM-DD` commit on `main`, dispatches `.github/workflows/pages.yml`, and waits for that workflow to succeed.
+- The scheduled automation writes the completed snapshot plus `data/research/YYYY-MM-DD.json` only to `automation/daily-brief-YYYY-MM-DD-data`; it does not update `main` directly.
+- `.github/workflows/promote-daily-brief.yml` is the promotion path from the automation staging branch to `main`. It validates the candidate, validates research coverage evidence against the current `main` baseline, enforces the allowed-file set, creates the required `Update daily brief for YYYY-MM-DD` commit on `main`, dispatches `.github/workflows/pages.yml`, and waits for that workflow to succeed.
 - A staging commit or a successful `main` push is not the same as a successful site refresh. Verify the promotion run and the Pages validate/deploy run for the promoted commit.
 - If promotion cannot push to `main`, validation fails, the archive differs from `latest`, or Pages fails, treat the refresh as failed and report the concrete error.
 - Do not send Slack messages for normal refreshes. Report only failures needing user attention.
