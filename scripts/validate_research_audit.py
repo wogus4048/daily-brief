@@ -355,9 +355,48 @@ if baseline is not None:
     assert len(reverified) == len(set(reverified)), "research audit reverifiedIds contains duplicates"
     reverified_set = set(reverified)
 
-    unexpected_reverified = reverified_set - effective_due
+    evidence = audit.get("reverificationEvidence", [])
+    assert isinstance(evidence, list), "research audit reverificationEvidence must be a list"
+    evidence_by_id = {}
+    for i, item in enumerate(evidence):
+        assert isinstance(item, dict), f"reverificationEvidence[{i}] must be an object"
+        item_id = item.get("id")
+        assert item_id and item_id not in evidence_by_id, f"invalid/duplicate reverificationEvidence id: {item_id!r}"
+        assert item.get("primarySourceUrl"), f"reverificationEvidence[{i}] missing primarySourceUrl"
+        assert item.get("verifiedAt"), f"reverificationEvidence[{i}] missing verifiedAt"
+        evidence_by_id[item_id] = item
+
+    same_day_material_fields = (
+        "status",
+        "openingAt",
+        "deadlineText",
+        "period",
+        "participation",
+        "reward",
+        "businessRegistration",
+    )
+    same_day_corrected = {
+        item_id
+        for item_id, current in current_by_id.items()
+        if baseline.get("date") == snapshot_date
+        and item_id in baseline_by_id
+        and baseline_by_id[item_id].get("lastVerifiedDate") == snapshot_date
+        and current.get("lastVerifiedDate") == snapshot_date
+        and item_id in evidence_by_id
+        and any(
+            baseline_by_id[item_id].get(field) != current.get(field)
+            for field in same_day_material_fields
+        )
+    }
+
+    allowed_reverified = effective_due | same_day_corrected
+    unexpected_reverified = reverified_set - allowed_reverified
     assert not unexpected_reverified, (
-        f"research audit reverifiedIds contains non-due ids: {sorted(unexpected_reverified)}"
+        f"research audit reverifiedIds contains non-due/non-correction ids: {sorted(unexpected_reverified)}"
+    )
+    missing_evidence = reverified_set - set(evidence_by_id)
+    assert not missing_evidence, (
+        f"research audit reverifiedIds missing primary-source evidence: {sorted(missing_evidence)}"
     )
 
     failures = audit.get("reverificationFailures", [])
