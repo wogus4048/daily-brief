@@ -320,7 +320,11 @@ async function crawlSotong24(page) {
   }
 
   if (!items.length) throw new Error("소통24 crawler returned zero contest items");
-  return withActionable({ key: "sotong24Contests", status: "OK", url, items }, () => true);
+  return withActionable(
+    { key: "sotong24Contests", status: "OK", url, items },
+    item => /(아이디어|제안|혁신|공모)/.test(item.rawText || "")
+      && !/(영상|영화|퀴즈|굿즈|수기|사진)/.test(item.rawText || "")
+  );
 }
 
 async function crawlGrantly(page) {
@@ -336,7 +340,15 @@ async function crawlGrantly(page) {
         && /^\/opportunities\/\d+\/?$/.test(u.pathname);
     });
   if (!items.length) throw new Error("Grantly crawler returned zero items");
-  return withActionable({ key: "grantlySupport", status: "OK", url, items }, () => true);
+  return withActionable(
+    { key: "grantlySupport", status: "OK", url, items },
+    item => {
+      const text = item.rawText || "";
+      const relevant = /(창업|AI|인공지능|개발|멘토링|교육|프로그램|아이디어|경진대회|해커톤|스타트업|입주|시장·고객)/.test(text);
+      const obviousMismatch = /(\[경북\]|\[대구\]|\[강원\]|\[전북\]|참여기업|기업 모집|기업모집|여성CEO|농업인|수출|해외 전시|착한가격업소)/.test(text);
+      return relevant && !obviousMismatch;
+    }
+  );
 }
 
 async function crawlDevpost(page) {
@@ -366,7 +378,11 @@ async function crawlContestKorea(page) {
   const items = (await collectAnchors(page, selector, "ContestKorea"))
     .filter(item => new URL(item.url).hostname.includes("contestkorea"));
   if (!items.length) throw new Error("ContestKorea crawler returned zero items");
-  return withActionable({ key: "contestKorea", status: "OK", url, items });
+  return withActionable(
+    { key: "contestKorea", status: "OK", url, items },
+    item => /(학문•과학•IT|아이디어•건축•창업)/.test(item.rawText || "")
+      && !/(논문 공모|외국인\s+접수)/.test(item.rawText || "")
+  );
 }
 
 async function crawlKStartup(page) {
@@ -385,7 +401,11 @@ async function crawlKStartup(page) {
         && text.length >= 8;
     });
   if (!items.length) throw new Error("K-Startup crawler returned zero highlighted announcements");
-  return withActionable({ key: "kStartupHighlights", status: "OK", url, items }, () => true);
+  return withActionable(
+    { key: "kStartupHighlights", status: "OK", url, items },
+    item => /(아이디어|경진대회|교육|상담|프로그램|예비창업|청년|시장·고객)/.test(item.rawText || "")
+      && !/(입주기업|참여기업|창업기업 인증)/.test(item.rawText || "")
+  );
 }
 
 async function crawlGeneric(page, key, name, spec) {
