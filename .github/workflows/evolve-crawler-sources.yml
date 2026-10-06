@@ -1,0 +1,83 @@
+name: Evolve daily-brief crawler sources
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/research/*.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-brief-crawler-evolution
+  cancel-in-progress: false
+
+jobs:
+  evolve:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Evolve crawler source manifest
+        run: python scripts/evolve_crawler_sources.py
+
+      - name: Validate evolved state
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          manifest = json.loads(Path("data/crawler-sources.json").read_text(encoding="utf-8"))
+          state = json.loads(Path("data/crawler-source-state.json").read_text(encoding="utf-8"))
+
+          active = manifest.get("active", [])
+          degraded = manifest.get("degraded", [])
+          candidates = manifest.get("nextCandidates", [])
+
+          keys = [x["key"] for x in active + degraded + candidates]
+          assert len(keys) == len(set(keys)), "crawler source key duplicated across lifecycle buckets"
+          assert manifest.get("version") == 2
+          assert isinstance(state.get("sources"), dict)
+
+          required = [x for x in active if x.get("required")]
+          assert required, "at least one required crawler source must remain active"
+
+          print(
+              "OK:",
+              f"active={len(active)}",
+              f"degraded={len(degraded)}",
+              f"candidates={len(candidates)}",
+          )
+          PY
+
+      - name: Commit crawler source evolution
+        shell: bash
+        run: |
+          set -euo pipefail
+          date="$(TZ=Asia/Seoul date +%F)"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/crawler-sources.json data/crawler-source-state.json
+
+          if git diff --cached --quiet; then
+            echo "No crawler source lifecycle changes."
+            exit 0
+          fi
+
+          git commit -m "Evolve crawler sources for $date"
+          git pull --rebase origin main
+          git push origin HEAD:main
