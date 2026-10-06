@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths-ignore:
       - 'data/source-cache/**'
+      - 'data/crawler-sources.json'
+      - 'data/crawler-source-state.json'
   workflow_dispatch:
 permissions:
   contents: read
