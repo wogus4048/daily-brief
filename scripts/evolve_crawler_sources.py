@@ -147,6 +147,7 @@ for discovery in discoveries:
                 "name": discovery.get("name") or domain or key,
                 "url": url,
                 "reason": discovery.get("reason") or "Discovered during daily research",
+                "category": discovery.get("category") or "unclassified",
                 "status": "NEEDS_SPEC",
                 "discoveredAt": date,
             }
@@ -181,7 +182,7 @@ for bucket in (active, degraded, candidates):
             known_domains.add(urlsplit(url).netloc.lower().removeprefix("www."))
 
 domain_evidence = {}
-for track in (audit.get("tracks") or {}).values():
+for track_id, track in (audit.get("tracks") or {}).items():
     for candidate in track.get("rawCandidates", []) if isinstance(track, dict) else []:
         if not isinstance(candidate, dict):
             continue
@@ -198,8 +199,12 @@ for track in (audit.get("tracks") or {}).values():
         domain = parsed.netloc.lower().removeprefix("www.")
         if not domain:
             continue
-        ev = domain_evidence.setdefault(domain, {"relevant": 0, "published": 0, "urls": set()})
+        ev = domain_evidence.setdefault(
+            domain,
+            {"relevant": 0, "published": 0, "urls": set(), "tracks": {}},
+        )
         ev["relevant"] += 1
+        ev["tracks"][track_id] = ev["tracks"].get(track_id, 0) + 1
         if disposition == "PUBLISHED":
             ev["published"] += 1
         ev["urls"].add(url)
@@ -214,11 +219,18 @@ for domain, ev in domain_evidence.items():
     if key in known_keys:
         continue
 
+    dominant_track = max(ev["tracks"], key=ev["tracks"].get) if ev["tracks"] else "unclassified"
+    category = "startupSupport" if dominant_track == "startupSupport" else (
+        "contest" if dominant_track in ("aiData", "generalSoftware", "publicIdea", "upcomingOpenings") else dominant_track
+    )
+
     candidate = {
         "key": key,
         "name": domain,
         "url": f"https://{domain}/",
         "reason": "Auto-discovered from recurring/relevant daily research candidates",
+        "category": category,
+        "sourceTracks": sorted(ev["tracks"]),
         "status": "NEEDS_SPEC",
         "discoveredAt": date,
         "autoDiscovered": True,
