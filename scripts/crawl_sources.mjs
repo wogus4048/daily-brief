@@ -30,7 +30,14 @@ function cleanText(value) {
   return String(value || "").replace(/\s+/g, " ").trim();
 }
 
-function chooseTitle(rawText, fallback) {
+function chooseTitle(rawText, fallback, source = "") {
+  const flatText = cleanText(rawText);
+
+  if (source === "DAKER") {
+    const premiumMatch = flatText.match(/프리미엄\s+(.+?)\s+총\s*상금/);
+    if (premiumMatch?.[1]) return cleanText(premiumMatch[1]);
+  }
+
   const blocked = /^(참가신청중|접수중|진행중|마감|연습|종료|예정|더보기)$/;
   const metadata = /^(알고리즘\s*\||아이디어\s*\||데브톤\s*\||해커톤\s*\||시작까지|종료까지|D[-+]?\d+|\d+명|상금\s|총상금\s)/;
   const lines = String(rawText || "")
@@ -43,7 +50,7 @@ function chooseTitle(rawText, fallback) {
 
   if (lines.length) return lines[0];
 
-  const flat = cleanText(rawText);
+  const flat = flatText;
   const cut = flat.split(/\s+(?:알고리즘|아이디어|데브톤|해커톤)\s*\||\s+(?:참가신청중|접수중|진행중|마감|연습|종료)\b/)[0];
   return cleanText(cut) || fallback || "제목 확인 필요";
 }
@@ -126,7 +133,7 @@ async function collectAnchors(page, hrefSelector, source) {
     if (!current || rawText.length > current.rawText.length) {
       byUrl.set(url, {
         source,
-        title: chooseTitle(row.context || row.text, url),
+        title: chooseTitle(row.context || row.text, url, source),
         url,
         rawText,
         statusHints: statusHints(rawText),
