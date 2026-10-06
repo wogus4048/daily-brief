@@ -126,11 +126,21 @@
     {
       "key": "bizinfo",
       "name": "기업마당",
-      "reason": "structured support-program boards; exact pagination/API inspection still needed",
-      "status": "NEEDS_SPEC",
+      "reason": "Official Bizinfo support-program listing; broad startup/support discovery with structured detail URLs and application periods",
+      "status": "SHADOW",
       "score": 0,
       "recommendation": "NEEDS_CRAWLER_SPEC",
-      "category": "startupSupport"
+      "category": "startupSupport",
+      "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200View.do?pblancArea=400",
+      "crawlerSpec": {
+        "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200View.do?pblancArea=400",
+        "linkSelector": "a[href*=\"selectSIIA200Detail.do\"]",
+        "hostSuffix": "bizinfo.go.kr",
+        "urlContains": "selectSIIA200Detail.do",
+        "actionability": "all",
+        "expand": false,
+        "waitMs": 1200
+      }
     },
     {
       "key": "datathon-kr",
