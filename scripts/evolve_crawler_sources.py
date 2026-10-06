@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import json
+import os
 import pathlib
 import re
 import sys
@@ -7,9 +8,9 @@ from datetime import datetime, timezone
 from urllib.parse import urlsplit
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-MANIFEST = ROOT / "data/crawler-sources.json"
-STATE = ROOT / "data/crawler-source-state.json"
-LATEST = ROOT / "data/latest.json"
+MANIFEST = pathlib.Path(os.environ.get("CRAWLER_MANIFEST_PATH", ROOT / "data/crawler-sources.json"))
+STATE = pathlib.Path(os.environ.get("CRAWLER_STATE_PATH", ROOT / "data/crawler-source-state.json"))
+LATEST = pathlib.Path(os.environ.get("CRAWLER_LATEST_PATH", ROOT / "data/latest.json"))
 
 manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
 latest = json.loads(LATEST.read_text(encoding="utf-8"))
