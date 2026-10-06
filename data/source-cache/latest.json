@@ -1,10 +1,10 @@
 {
   "date": "2026-10-06",
-  "generatedAt": "2026-10-06T05:22:05.010Z",
+  "generatedAt": "2026-10-06T05:42:35.480Z",
   "timezone": "Asia/Seoul",
   "crawler": {
     "engine": "playwright-chromium",
-    "version": 3
+    "version": 4
   },
   "sources": {
     "daconCompetitions": {
@@ -2001,7 +2001,7 @@
           "source": "DACON",
           "title": "항만 문제해결을 위한 AI 기술 공모전",
           "url": "https://www.dacon.io/competitions/official/236771/overview",
-          "rawText": "항만 문제해결을 위한 AI 기술 공모전 알고리즘 | 코드 제출 평가 | 개체 매칭 | 해운물류 참가신청중 시작까지 D-5252명 상금 950 만원",
+          "rawText": "항만 문제해결을 위한 AI 기술 공모전 알고리즘 | 코드 제출 평가 | 개체 매칭 | 해운물류 참가신청중 시작까지 D-5254명 상금 950 만원",
           "statusHints": [
             "참가신청중"
           ]
@@ -2048,13 +2048,14 @@
           "source": "DACON",
           "title": "항만 문제해결을 위한 AI 기술 공모전",
           "url": "https://www.dacon.io/competitions/official/236771/overview",
-          "rawText": "항만 문제해결을 위한 AI 기술 공모전 알고리즘 | 코드 제출 평가 | 개체 매칭 | 해운물류 참가신청중 시작까지 D-5252명 상금 950 만원",
+          "rawText": "항만 문제해결을 위한 AI 기술 공모전 알고리즘 | 코드 제출 평가 | 개체 매칭 | 해운물류 참가신청중 시작까지 D-5254명 상금 950 만원",
           "statusHints": [
             "참가신청중"
           ]
         }
       ],
-      "actionableCount": 1
+      "actionableCount": 1,
+      "shadow": false
     },
     "dakerHackathons": {
       "key": "dakerHackathons",
@@ -2083,7 +2084,7 @@
           "source": "DAKER",
           "title": "2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래",
           "url": "https://daker.ai/public/hackathons/2026-finance-ai-challenge",
-          "rawText": "진행중 심사 D-1 금 금융보안원 프리미엄 2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래 총 상금 3,500만원 1,388팀 참가 153,181 진행중",
+          "rawText": "진행중 심사 D-1 금 금융보안원 프리미엄 2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래 총 상금 3,500만원 1,388팀 참가 153,188 진행중",
           "statusHints": [
             "진행중"
           ]
@@ -2092,7 +2093,7 @@
           "source": "DAKER",
           "title": "2026 K-Health 미개방 의료데이터 활용 경진대회",
           "url": "https://daker.ai/public/hackathons/2026-k-health-unreleased-data-utilization-competit",
-          "rawText": "진행중 심사 D-30 건 건양대학교의료원, 과학기술정보통신부, 정보통신산업진흥원, 대전정보문화산업진흥원, 대구디지털혁신진흥원, 대구·광주테크노파크 프리미엄 2026 K-Health 미개방 의료데이터 활용 경진대회 총 상금 750만원 417팀 참가 39,602 진행중",
+          "rawText": "진행중 심사 D-30 건 건양대학교의료원, 과학기술정보통신부, 정보통신산업진흥원, 대전정보문화산업진흥원, 대구디지털혁신진흥원, 대구·광주테크노파크 프리미엄 2026 K-Health 미개방 의료데이터 활용 경진대회 총 상금 750만원 417팀 참가 39,603 진행중",
           "statusHints": [
             "진행중"
           ]
@@ -2101,14 +2102,14 @@
           "source": "DAKER",
           "title": "2026 스마트 공장 운영 시스템 MVP 개발 해커톤",
           "url": "https://daker.ai/public/hackathons/2026-smart-factory-ai-platform-mvp-hackathon",
-          "rawText": "종료 차 차세대융합기술연구원 메이커스페이스 프리미엄 2026 스마트 공장 운영 시스템 MVP 개발 해커톤 총 상금 125만원 161팀 참가 15,073 종료됨",
+          "rawText": "종료 차 차세대융합기술연구원 메이커스페이스 프리미엄 2026 스마트 공장 운영 시스템 MVP 개발 해커톤 총 상금 125만원 161팀 참가 15,074 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "AI·SW마에스트로 제 17기 프롬프트 경진대회",
           "url": "https://daker.ai/public/hackathons/2026-sw-maestro-prompt-engineering-hackathon",
-          "rawText": "종료 한 한국정보산업협회 프리미엄 AI·SW마에스트로 제 17기 프롬프트 경진대회 74팀 참가 7,419 종료됨",
+          "rawText": "종료 한 한국정보산업협회 프리미엄 AI·SW마에스트로 제 17기 프롬프트 경진대회 74팀 참가 7,422 종료됨",
           "statusHints": []
         },
         {
@@ -2122,7 +2123,7 @@
           "source": "DAKER",
           "title": "제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 본선",
           "url": "https://daker.ai/public/hackathons/4th-jump-ai-agentic-drug-challenge-finals-1",
-          "rawText": "진행중 심사 D-25 보 보건복지부/한국보건산업진흥원/고려대학교의과대학/한국제약바이오협회 프리미엄 제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 본선 총 상금 3,350만원 15팀 참가 7,024 진행중",
+          "rawText": "진행중 심사 D-25 보 보건복지부/한국보건산업진흥원/고려대학교의과대학/한국제약바이오협회 프리미엄 제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 본선 총 상금 3,350만원 15팀 참가 7,026 진행중",
           "statusHints": [
             "진행중"
           ]
@@ -2131,14 +2132,14 @@
           "source": "DAKER",
           "title": "연세대학교 인공지능학회 YAI",
           "url": "https://daker.ai/public/hackathons/agent-24-hackathon",
-          "rawText": "종료 연 연세대학교 인공지능학회 YAI AGENT:24 총 상금 340만원 37팀 참가 4,852 종료됨",
+          "rawText": "종료 연 연세대학교 인공지능학회 YAI AGENT:24 총 상금 340만원 37팀 참가 4,853 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge",
           "url": "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims",
-          "rawText": "모집중 D-19 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 55팀 참가 2,893 참가 신청하기",
+          "rawText": "모집중 D-19 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 57팀 참가 2,918 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2147,14 +2148,14 @@
           "source": "DAKER",
           "title": "AI·SW마에스트로 제 17기 부산센터 프롬프트 경진대회",
           "url": "https://daker.ai/public/hackathons/ai-sw-maestro-busan-center-17th-prompt-competition-1",
-          "rawText": "종료 한 한국정보산업협회 프리미엄 AI·SW마에스트로 제 17기 부산센터 프롬프트 경진대회 49팀 참가 6,347 종료됨",
+          "rawText": "종료 한 한국정보산업협회 프리미엄 AI·SW마에스트로 제 17기 부산센터 프롬프트 경진대회 49팀 참가 6,348 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "월간 해커톤: 마약류 문제 예방과 피해 감소를 위한 아이디어 챌린지",
           "url": "https://daker.ai/public/hackathons/csafcas",
-          "rawText": "진행중 심사 0시간 남음 데 데이콘 프리미엄 월간 해커톤: 마약류 문제 예방과 피해 감소를 위한 아이디어 챌린지 총 상금 100만원 277팀 참가 13,258 진행중",
+          "rawText": "진행중 심사 0시간 남음 데 데이콘 프리미엄 월간 해커톤: 마약류 문제 예방과 피해 감소를 위한 아이디어 챌린지 총 상금 100만원 277팀 참가 13,260 진행중",
           "statusHints": [
             "진행중"
           ]
@@ -2177,14 +2178,14 @@
           "source": "DAKER",
           "title": "JB금융그룹 Fin:AI Challenge",
           "url": "https://daker.ai/public/hackathons/jb-fin-ai-challenge",
-          "rawText": "종료 J JB금융그룹 프리미엄 JB금융그룹 Fin:AI Challenge 총 상금 1억원 519팀 참가 77,421 종료됨",
+          "rawText": "종료 J JB금융그룹 프리미엄 JB금융그룹 Fin:AI Challenge 총 상금 1억원 519팀 참가 77,422 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "국부펀드 KIC, AI 에이전트 공모전",
           "url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
-          "rawText": "모집중 D-36 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 162팀 참가 7,888 참가 신청하기",
+          "rawText": "모집중 D-36 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 165팀 참가 7,963 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2200,7 +2201,7 @@
           "source": "DAKER",
           "title": "월간 해커톤 : 긴급 인수인계 해커톤 - 문서만 남기고 사라졌다",
           "url": "https://daker.ai/public/hackathons/monthly-hackathon-emergency-handover-docs",
-          "rawText": "종료 D DACON 프리미엄 월간 해커톤 : 긴급 인수인계 해커톤 - 문서만 남기고 사라졌다 총 상금 100만원 370팀 참가 19,513 종료됨",
+          "rawText": "종료 D DACON 프리미엄 월간 해커톤 : 긴급 인수인계 해커톤 - 문서만 남기고 사라졌다 총 상금 100만원 370팀 참가 19,514 종료됨",
           "statusHints": []
         },
         {
@@ -2214,14 +2215,14 @@
           "source": "DAKER",
           "title": "Quantum Reframing Challenge 2026",
           "url": "https://daker.ai/public/hackathons/quantum-service-innovation-challenge-megazonecloud",
-          "rawText": "종료 메 메가존 클라우드, KISTI, 한국양자융합센터 프리미엄 Quantum Reframing Challenge 2026 총 상금 2,000만원 72팀 참가 32,084 종료됨",
+          "rawText": "종료 메 메가존 클라우드, KISTI, 한국양자융합센터 프리미엄 Quantum Reframing Challenge 2026 총 상금 2,000만원 72팀 참가 32,086 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "합성 미세구조 기반 재료 물성 예측 AI 경진대회",
           "url": "https://daker.ai/public/hackathons/synthetic-microstructure-property-prediction-ai",
-          "rawText": "모집중 알고리즘 D-12 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 228팀 참가 10,915 참가 신청하기",
+          "rawText": "모집중 알고리즘 D-12 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 228팀 참가 10,963 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2247,7 +2248,7 @@
           "source": "DAKER",
           "title": "2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래",
           "url": "https://daker.ai/public/hackathons/2026-finance-ai-challenge",
-          "rawText": "진행중 심사 D-1 금 금융보안원 프리미엄 2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래 총 상금 3,500만원 1,388팀 참가 153,181 진행중",
+          "rawText": "진행중 심사 D-1 금 금융보안원 프리미엄 2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래 총 상금 3,500만원 1,388팀 참가 153,188 진행중",
           "statusHints": [
             "진행중"
           ]
@@ -2256,7 +2257,7 @@
           "source": "DAKER",
           "title": "2026 K-Health 미개방 의료데이터 활용 경진대회",
           "url": "https://daker.ai/public/hackathons/2026-k-health-unreleased-data-utilization-competit",
-          "rawText": "진행중 심사 D-30 건 건양대학교의료원, 과학기술정보통신부, 정보통신산업진흥원, 대전정보문화산업진흥원, 대구디지털혁신진흥원, 대구·광주테크노파크 프리미엄 2026 K-Health 미개방 의료데이터 활용 경진대회 총 상금 750만원 417팀 참가 39,602 진행중",
+          "rawText": "진행중 심사 D-30 건 건양대학교의료원, 과학기술정보통신부, 정보통신산업진흥원, 대전정보문화산업진흥원, 대구디지털혁신진흥원, 대구·광주테크노파크 프리미엄 2026 K-Health 미개방 의료데이터 활용 경진대회 총 상금 750만원 417팀 참가 39,603 진행중",
           "statusHints": [
             "진행중"
           ]
@@ -2265,7 +2266,7 @@
           "source": "DAKER",
           "title": "제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 본선",
           "url": "https://daker.ai/public/hackathons/4th-jump-ai-agentic-drug-challenge-finals-1",
-          "rawText": "진행중 심사 D-25 보 보건복지부/한국보건산업진흥원/고려대학교의과대학/한국제약바이오협회 프리미엄 제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 본선 총 상금 3,350만원 15팀 참가 7,024 진행중",
+          "rawText": "진행중 심사 D-25 보 보건복지부/한국보건산업진흥원/고려대학교의과대학/한국제약바이오협회 프리미엄 제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 본선 총 상금 3,350만원 15팀 참가 7,026 진행중",
           "statusHints": [
             "진행중"
           ]
@@ -2274,7 +2275,7 @@
           "source": "DAKER",
           "title": "2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge",
           "url": "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims",
-          "rawText": "모집중 D-19 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 55팀 참가 2,893 참가 신청하기",
+          "rawText": "모집중 D-19 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 57팀 참가 2,918 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2283,7 +2284,7 @@
           "source": "DAKER",
           "title": "월간 해커톤: 마약류 문제 예방과 피해 감소를 위한 아이디어 챌린지",
           "url": "https://daker.ai/public/hackathons/csafcas",
-          "rawText": "진행중 심사 0시간 남음 데 데이콘 프리미엄 월간 해커톤: 마약류 문제 예방과 피해 감소를 위한 아이디어 챌린지 총 상금 100만원 277팀 참가 13,258 진행중",
+          "rawText": "진행중 심사 0시간 남음 데 데이콘 프리미엄 월간 해커톤: 마약류 문제 예방과 피해 감소를 위한 아이디어 챌린지 총 상금 100만원 277팀 참가 13,260 진행중",
           "statusHints": [
             "진행중"
           ]
@@ -2292,7 +2293,7 @@
           "source": "DAKER",
           "title": "국부펀드 KIC, AI 에이전트 공모전",
           "url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
-          "rawText": "모집중 D-36 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 162팀 참가 7,888 참가 신청하기",
+          "rawText": "모집중 D-36 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 165팀 참가 7,963 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2301,13 +2302,14 @@
           "source": "DAKER",
           "title": "합성 미세구조 기반 재료 물성 예측 AI 경진대회",
           "url": "https://daker.ai/public/hackathons/synthetic-microstructure-property-prediction-ai",
-          "rawText": "모집중 알고리즘 D-12 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 228팀 참가 10,915 참가 신청하기",
+          "rawText": "모집중 알고리즘 D-12 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 228팀 참가 10,963 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
         }
       ],
-      "actionableCount": 7
+      "actionableCount": 7,
+      "shadow": false
     },
     "hackathonKorea": {
       "key": "hackathonKorea",
@@ -2486,16 +2488,18 @@
           "statusHints": []
         }
       ],
-      "actionableCount": 12
+      "actionableCount": 12,
+      "shadow": false
     },
     "sotong24Contests": {
       "key": "sotong24Contests",
       "status": "FAILED",
-      "error": "Error: 소통24 crawler returned zero contest items\n    at crawlSotong24 (file:///home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:280:28)\n    at runNextTicks (node:internal/process/task_queues:64:5)\n    at process.processImmediate (node:internal/timers:452:9)\n    at process.callbackTrampoline (node:internal/async_hooks:130:17)\n    at async safeCrawl (file:///home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:213:12)\n    at async file:///home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:368:26\n    at async Promise.all (index 3)\n    at async main (file:///home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:366:21)",
+      "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://sotong.go.kr/front/epilogue/epilogueNewListPage.do?menu_id=527&pagetype=bbs&date_range=all&date_range_cnddt=all\", waiting until \"domcontentloaded\"\n\n    at crawlSotong24 (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:275:14)\n    at /home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:416:31\n    at safeCrawl (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:214:18)\n    at runEntry (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:415:30)\n    at async main (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:427:27)",
       "items": [],
       "count": 0,
       "actionableItems": [],
-      "actionableCount": 0
+      "actionableCount": 0,
+      "shadow": false
     },
     "grantlySupport": {
       "key": "grantlySupport",
@@ -2968,7 +2972,8 @@
           "statusHints": []
         }
       ],
-      "actionableCount": 33
+      "actionableCount": 33,
+      "shadow": false
     },
     "devpostOpen": {
       "key": "devpostOpen",
@@ -2979,7 +2984,7 @@
           "source": "Devpost",
           "title": "Build, Ship, Shape: Amazon Developer Hackathon",
           "url": "https://amazonappdev2026.devpost.com/",
-          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 18 days left Online $138,000 in prizes 45807 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
+          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 18 days left Online $138,000 in prizes 45881 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
           "statusHints": [
             "days left"
           ]
@@ -2988,7 +2993,7 @@
           "source": "Devpost",
           "title": "AWS Communication Developer Services (CDS) Agentic AI Partner Hackathon",
           "url": "https://aws-cds-partner.devpost.com/",
-          "rawText": "AWS Communication Developer Services (CDS) Agentic AI Partner Hackathon 23 days left Online $40,000 in prizes 710 participants AWS Sep 14 - Oct 28, 2026 CommunicationMobileMachine Learning/AI",
+          "rawText": "AWS Communication Developer Services (CDS) Agentic AI Partner Hackathon 23 days left Online $40,000 in prizes 712 participants AWS Sep 14 - Oct 28, 2026 CommunicationMobileMachine Learning/AI",
           "statusHints": [
             "days left"
           ]
@@ -2997,14 +3002,14 @@
           "source": "Devpost",
           "title": "Databricks AI Social Impact (DAISI) Challenge - Singapore",
           "url": "https://daisisg26.devpost.com/",
-          "rawText": "Databricks AI Social Impact (DAISI) Challenge - Singapore about 11 hours left Databricks Singapore 1 non-cash prizes 706 participants Databricks Sep 16 - Oct 06, 2026 EducationMachine Learning/AISocial Good",
+          "rawText": "Databricks AI Social Impact (DAISI) Challenge - Singapore about 10 hours left Databricks Singapore 1 non-cash prizes 709 participants Databricks Sep 16 - Oct 06, 2026 EducationMachine Learning/AISocial Good",
           "statusHints": []
         },
         {
           "source": "Devpost",
           "title": "ForgeHacks Online 2026",
           "url": "https://forgehacks-2026.devpost.com/",
-          "rawText": "ForgeHacks Online 2026 4 days left Online $1,218,635 in prizes 1550 participants ForgeHacks Oct 01 - 10, 2026 Beginner FriendlyLifehacksMachine Learning/AI",
+          "rawText": "ForgeHacks Online 2026 4 days left Online $1,218,635 in prizes 1551 participants ForgeHacks Oct 01 - 10, 2026 Beginner FriendlyLifehacksMachine Learning/AI",
           "statusHints": [
             "days left"
           ]
@@ -3022,7 +3027,7 @@
           "source": "Devpost",
           "title": "FEATURED",
           "url": "https://gitlab-transcend.devpost.com/",
-          "rawText": "FEATURED Life After Code 21 days left Online $45,000 in prizes 710 participants GitLab Oct 05 - 27, 2026 Managed by Devpost DevOpsMachine Learning/AIProductivity",
+          "rawText": "FEATURED Life After Code 21 days left Online $45,000 in prizes 711 participants GitLab Oct 05 - 27, 2026 Managed by Devpost DevOpsMachine Learning/AIProductivity",
           "statusHints": [
             "days left"
           ]
@@ -3031,7 +3036,7 @@
           "source": "Devpost",
           "title": "Hack Apertus",
           "url": "https://hackapertus.devpost.com/",
-          "rawText": "Hack Apertus 10 days left Grand Finals 2027 €10,680 in prizes 725 participants aiLights Association Oct 01 - 16, 2026 EducationMachine Learning/AISocial Good",
+          "rawText": "Hack Apertus 10 days left Grand Finals 2027 €10,680 in prizes 726 participants aiLights Association Oct 01 - 16, 2026 EducationMachine Learning/AISocial Good",
           "statusHints": [
             "days left"
           ]
@@ -3173,7 +3178,7 @@
           "source": "Devpost",
           "title": "Build With AI: Basics",
           "url": "https://learn-ai-basics.devpost.com/",
-          "rawText": "Build With AI: Basics 21 days left Online $2,500 in prizes 2518 participants Devpost Sep 22 - Oct 26, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyEducation",
+          "rawText": "Build With AI: Basics 21 days left Online $2,500 in prizes 2519 participants Devpost Sep 22 - Oct 26, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyEducation",
           "statusHints": [
             "days left"
           ]
@@ -3182,7 +3187,7 @@
           "source": "Devpost",
           "title": "MLAI Hackathon 2026",
           "url": "https://mlai-hackathon.devpost.com/",
-          "rawText": "MLAI Hackathon 2026 11 days left Online 4 non-cash prizes 954 participants Mạng Lưới AI Sep 18 - Oct 16, 2026 DatabasesMachine Learning/AI",
+          "rawText": "MLAI Hackathon 2026 10 days left Online 4 non-cash prizes 955 participants Mạng Lưới AI Sep 18 - Oct 16, 2026 DatabasesMachine Learning/AI",
           "statusHints": [
             "days left"
           ]
@@ -3191,7 +3196,7 @@
           "source": "Devpost",
           "title": "Multimodal AI Hackathon 2026",
           "url": "https://multimodal-ai-hackathon-2026-7.devpost.com/",
-          "rawText": "Multimodal AI Hackathon 2026 9 days left Online ₹ 100,000 in prizes 2555 participants Kamand Prompt, IIT Mandi Sep 29 - Oct 14, 2026 Machine Learning/AI",
+          "rawText": "Multimodal AI Hackathon 2026 9 days left Online ₹ 100,000 in prizes 2563 participants Kamand Prompt, IIT Mandi Sep 29 - Oct 14, 2026 Machine Learning/AI",
           "statusHints": [
             "days left"
           ]
@@ -3200,7 +3205,7 @@
           "source": "Devpost",
           "title": "Nebius x NVIDIA Global AI Hackathon",
           "url": "https://nebiusglobalaihackathon.devpost.com/",
-          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 18540 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
+          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 18560 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
           "statusHints": [
             "days left"
           ]
@@ -3209,7 +3214,7 @@
           "source": "Devpost",
           "title": "OpenCV AI Competition 2026, powered by AWS",
           "url": "https://opencv26.devpost.com/",
-          "rawText": "OpenCV AI Competition 2026, powered by AWS 21 days left Online $20,250 in prizes 4056 participants OpenCV Aug 26 - Oct 27, 2026 IoTMachine Learning/AIServerless",
+          "rawText": "OpenCV AI Competition 2026, powered by AWS 21 days left Online $20,250 in prizes 4058 participants OpenCV Aug 26 - Oct 27, 2026 IoTMachine Learning/AIServerless",
           "statusHints": [
             "days left"
           ]
@@ -3218,7 +3223,7 @@
           "source": "Devpost",
           "title": "FEATURED",
           "url": "https://paypalaihackathon.devpost.com/",
-          "rawText": "FEATURED PayPal AI Hackathon about 1 month left Online $67,500 in prizes 7102 participants PayPal Oct 01 - Nov 12, 2026 Managed by Devpost Low/No CodeMachine Learning/AIWeb",
+          "rawText": "FEATURED PayPal AI Hackathon about 1 month left Online $67,500 in prizes 7116 participants PayPal Oct 01 - Nov 12, 2026 Managed by Devpost Low/No CodeMachine Learning/AIWeb",
           "statusHints": []
         },
         {
@@ -3248,7 +3253,7 @@
           "source": "Devpost",
           "title": "Meta VR Start Developer Competition 2026",
           "url": "https://start-developer-competition-26.devpost.com/",
-          "rawText": "Meta VR Start Developer Competition 2026 about 1 month left Online $1,000,000 in prizes 2266 participants Meta Sep 24 - Nov 18, 2026 Managed by Devpost AR/VRMachine Learning/AIWeb",
+          "rawText": "Meta VR Start Developer Competition 2026 about 1 month left Online $1,000,000 in prizes 2270 participants Meta Sep 24 - Nov 18, 2026 Managed by Devpost AR/VRMachine Learning/AIWeb",
           "statusHints": []
         },
         {
@@ -3264,7 +3269,7 @@
           "source": "Devpost",
           "title": "WarriorHacks 2.0",
           "url": "https://warriorhacks-2-0.devpost.com/",
-          "rawText": "WarriorHacks 2.0 8 days left Online 8 non-cash prizes 1793 participants Westwood Computer Science Club Sep 28 - Oct 14, 2026 Beginner FriendlyMachine Learning/AIOpen Ended",
+          "rawText": "WarriorHacks 2.0 8 days left Online 8 non-cash prizes 1798 participants Westwood Computer Science Club Sep 28 - Oct 14, 2026 Beginner FriendlyMachine Learning/AIOpen Ended",
           "statusHints": [
             "days left"
           ]
@@ -3285,7 +3290,7 @@
           "source": "Devpost",
           "title": "Build, Ship, Shape: Amazon Developer Hackathon",
           "url": "https://amazonappdev2026.devpost.com/",
-          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 18 days left Online $138,000 in prizes 45807 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
+          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 18 days left Online $138,000 in prizes 45881 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
           "statusHints": [
             "days left"
           ]
@@ -3294,7 +3299,7 @@
           "source": "Devpost",
           "title": "AWS Communication Developer Services (CDS) Agentic AI Partner Hackathon",
           "url": "https://aws-cds-partner.devpost.com/",
-          "rawText": "AWS Communication Developer Services (CDS) Agentic AI Partner Hackathon 23 days left Online $40,000 in prizes 710 participants AWS Sep 14 - Oct 28, 2026 CommunicationMobileMachine Learning/AI",
+          "rawText": "AWS Communication Developer Services (CDS) Agentic AI Partner Hackathon 23 days left Online $40,000 in prizes 712 participants AWS Sep 14 - Oct 28, 2026 CommunicationMobileMachine Learning/AI",
           "statusHints": [
             "days left"
           ]
@@ -3303,14 +3308,14 @@
           "source": "Devpost",
           "title": "Databricks AI Social Impact (DAISI) Challenge - Singapore",
           "url": "https://daisisg26.devpost.com/",
-          "rawText": "Databricks AI Social Impact (DAISI) Challenge - Singapore about 11 hours left Databricks Singapore 1 non-cash prizes 706 participants Databricks Sep 16 - Oct 06, 2026 EducationMachine Learning/AISocial Good",
+          "rawText": "Databricks AI Social Impact (DAISI) Challenge - Singapore about 10 hours left Databricks Singapore 1 non-cash prizes 709 participants Databricks Sep 16 - Oct 06, 2026 EducationMachine Learning/AISocial Good",
           "statusHints": []
         },
         {
           "source": "Devpost",
           "title": "ForgeHacks Online 2026",
           "url": "https://forgehacks-2026.devpost.com/",
-          "rawText": "ForgeHacks Online 2026 4 days left Online $1,218,635 in prizes 1550 participants ForgeHacks Oct 01 - 10, 2026 Beginner FriendlyLifehacksMachine Learning/AI",
+          "rawText": "ForgeHacks Online 2026 4 days left Online $1,218,635 in prizes 1551 participants ForgeHacks Oct 01 - 10, 2026 Beginner FriendlyLifehacksMachine Learning/AI",
           "statusHints": [
             "days left"
           ]
@@ -3328,7 +3333,7 @@
           "source": "Devpost",
           "title": "FEATURED",
           "url": "https://gitlab-transcend.devpost.com/",
-          "rawText": "FEATURED Life After Code 21 days left Online $45,000 in prizes 710 participants GitLab Oct 05 - 27, 2026 Managed by Devpost DevOpsMachine Learning/AIProductivity",
+          "rawText": "FEATURED Life After Code 21 days left Online $45,000 in prizes 711 participants GitLab Oct 05 - 27, 2026 Managed by Devpost DevOpsMachine Learning/AIProductivity",
           "statusHints": [
             "days left"
           ]
@@ -3337,7 +3342,7 @@
           "source": "Devpost",
           "title": "Hack Apertus",
           "url": "https://hackapertus.devpost.com/",
-          "rawText": "Hack Apertus 10 days left Grand Finals 2027 €10,680 in prizes 725 participants aiLights Association Oct 01 - 16, 2026 EducationMachine Learning/AISocial Good",
+          "rawText": "Hack Apertus 10 days left Grand Finals 2027 €10,680 in prizes 726 participants aiLights Association Oct 01 - 16, 2026 EducationMachine Learning/AISocial Good",
           "statusHints": [
             "days left"
           ]
@@ -3479,7 +3484,7 @@
           "source": "Devpost",
           "title": "Build With AI: Basics",
           "url": "https://learn-ai-basics.devpost.com/",
-          "rawText": "Build With AI: Basics 21 days left Online $2,500 in prizes 2518 participants Devpost Sep 22 - Oct 26, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyEducation",
+          "rawText": "Build With AI: Basics 21 days left Online $2,500 in prizes 2519 participants Devpost Sep 22 - Oct 26, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyEducation",
           "statusHints": [
             "days left"
           ]
@@ -3488,7 +3493,7 @@
           "source": "Devpost",
           "title": "MLAI Hackathon 2026",
           "url": "https://mlai-hackathon.devpost.com/",
-          "rawText": "MLAI Hackathon 2026 11 days left Online 4 non-cash prizes 954 participants Mạng Lưới AI Sep 18 - Oct 16, 2026 DatabasesMachine Learning/AI",
+          "rawText": "MLAI Hackathon 2026 10 days left Online 4 non-cash prizes 955 participants Mạng Lưới AI Sep 18 - Oct 16, 2026 DatabasesMachine Learning/AI",
           "statusHints": [
             "days left"
           ]
@@ -3497,7 +3502,7 @@
           "source": "Devpost",
           "title": "Multimodal AI Hackathon 2026",
           "url": "https://multimodal-ai-hackathon-2026-7.devpost.com/",
-          "rawText": "Multimodal AI Hackathon 2026 9 days left Online ₹ 100,000 in prizes 2555 participants Kamand Prompt, IIT Mandi Sep 29 - Oct 14, 2026 Machine Learning/AI",
+          "rawText": "Multimodal AI Hackathon 2026 9 days left Online ₹ 100,000 in prizes 2563 participants Kamand Prompt, IIT Mandi Sep 29 - Oct 14, 2026 Machine Learning/AI",
           "statusHints": [
             "days left"
           ]
@@ -3506,7 +3511,7 @@
           "source": "Devpost",
           "title": "Nebius x NVIDIA Global AI Hackathon",
           "url": "https://nebiusglobalaihackathon.devpost.com/",
-          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 18540 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
+          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 18560 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
           "statusHints": [
             "days left"
           ]
@@ -3515,7 +3520,7 @@
           "source": "Devpost",
           "title": "OpenCV AI Competition 2026, powered by AWS",
           "url": "https://opencv26.devpost.com/",
-          "rawText": "OpenCV AI Competition 2026, powered by AWS 21 days left Online $20,250 in prizes 4056 participants OpenCV Aug 26 - Oct 27, 2026 IoTMachine Learning/AIServerless",
+          "rawText": "OpenCV AI Competition 2026, powered by AWS 21 days left Online $20,250 in prizes 4058 participants OpenCV Aug 26 - Oct 27, 2026 IoTMachine Learning/AIServerless",
           "statusHints": [
             "days left"
           ]
@@ -3524,7 +3529,7 @@
           "source": "Devpost",
           "title": "FEATURED",
           "url": "https://paypalaihackathon.devpost.com/",
-          "rawText": "FEATURED PayPal AI Hackathon about 1 month left Online $67,500 in prizes 7102 participants PayPal Oct 01 - Nov 12, 2026 Managed by Devpost Low/No CodeMachine Learning/AIWeb",
+          "rawText": "FEATURED PayPal AI Hackathon about 1 month left Online $67,500 in prizes 7116 participants PayPal Oct 01 - Nov 12, 2026 Managed by Devpost Low/No CodeMachine Learning/AIWeb",
           "statusHints": []
         },
         {
@@ -3554,7 +3559,7 @@
           "source": "Devpost",
           "title": "Meta VR Start Developer Competition 2026",
           "url": "https://start-developer-competition-26.devpost.com/",
-          "rawText": "Meta VR Start Developer Competition 2026 about 1 month left Online $1,000,000 in prizes 2266 participants Meta Sep 24 - Nov 18, 2026 Managed by Devpost AR/VRMachine Learning/AIWeb",
+          "rawText": "Meta VR Start Developer Competition 2026 about 1 month left Online $1,000,000 in prizes 2270 participants Meta Sep 24 - Nov 18, 2026 Managed by Devpost AR/VRMachine Learning/AIWeb",
           "statusHints": []
         },
         {
@@ -3570,7 +3575,7 @@
           "source": "Devpost",
           "title": "WarriorHacks 2.0",
           "url": "https://warriorhacks-2-0.devpost.com/",
-          "rawText": "WarriorHacks 2.0 8 days left Online 8 non-cash prizes 1793 participants Westwood Computer Science Club Sep 28 - Oct 14, 2026 Beginner FriendlyMachine Learning/AIOpen Ended",
+          "rawText": "WarriorHacks 2.0 8 days left Online 8 non-cash prizes 1798 participants Westwood Computer Science Club Sep 28 - Oct 14, 2026 Beginner FriendlyMachine Learning/AIOpen Ended",
           "statusHints": [
             "days left"
           ]
@@ -3585,7 +3590,8 @@
           ]
         }
       ],
-      "actionableCount": 39
+      "actionableCount": 39,
+      "shadow": false
     },
     "contestKorea": {
       "key": "contestKorea",
@@ -4194,7 +4200,8 @@
           "statusHints": []
         }
       ],
-      "actionableCount": 20
+      "actionableCount": 20,
+      "shadow": false
     },
     "kStartupHighlights": {
       "key": "kStartupHighlights",
@@ -4523,9 +4530,11 @@
           "statusHints": []
         }
       ],
-      "actionableCount": 21
+      "actionableCount": 21,
+      "shadow": false
     }
   },
+  "shadowSources": {},
   "totals": {
     "daconCompetitions": 289,
     "daconCompetitionsActionable": 1,
