@@ -72,9 +72,17 @@ For startup/support programs:
 - Gather at least 15 raw candidates or exhaust K-Startup, 기업마당, SBA, NIPA, KISA, fintech support sources and unrestricted web search.
 - `support` may be empty only after this independent search is genuinely exhausted; a large contest pool is never a reason to skip it.
 
+For public/idea/industry-specialized contests:
+- Search independently from AI/data and code-heavy hackathons for `아이디어 공모전`, `국민참여 공모`, `서비스 기획 공모전`, `혁신 아이디어`, `산업 아이디어 공모전`, `기술·제품 공모전`, and combinations with `개인 참가`, `국민 누구나`, `상금`, `PoC`, `앱/웹`, `서비스`.
+- Include government ministries, public agencies, public corporations, sports/culture/transport/finance/identity and other industry-specific organizers when an individual can realistically enter.
+- Do not exclude a strong opportunity merely because a finished code submission is not mandatory. Idea/proposal-first contests belong in `contests` when they offer meaningful prize money, portfolio value, expert feedback, PoC support, commercialization, or product-building relevance.
+- Prefer items where an individual can enter directly; record whether PoC/prototype/demo is optional or mandatory.
+- Gather at least 10 materially distinct raw candidates or exhaust the relevant government/public and industry-specific source axes.
+
 For all opportunity tracks:
 - Start with unrestricted web search and inspect new domains.
 - Also check DACON, Hackathon Korea, Grantly, 링커리어, 요즘것들, ContestKorea, K-Startup, 기업마당, Luma/EventUs/온오프믹스/Devpost/Meetup and official organizer pages.
+- Also check 소통24 공모전, 대한민국 정책브리핑/정부부처 보도자료·공고, 공공기관·지자체 공모전 게시판, and industry-specific official contest pages as a safety net for public idea competitions that do not appear on developer-focused platforms.
 - Treat recurring high-value organizer/event sites as a watchlist even before applications open. At minimum, check `aitop100.org` (AI_TOP_100), Kakao Impact, and Brian Impact for newly announced AI competitions or application-opening countdowns.
 - Gather a broad raw candidate pool before applying filters.
 
@@ -122,6 +130,7 @@ Search the open web first so discovery is not limited to known platforms. Run in
 - security / cybersecurity
 - fintech / finance / payment / insurance development
 - public-data / GovTech / civic-tech
+- public-sector / 국민참여 / 아이디어 / 서비스기획 / 산업특화 공모전
 - startup / product-building hackathons
 - startup / pre-startup / commercialization / PoC / accelerator / incubation / workspace support
 - cloud / GPU / API / SaaS / AI development credits
@@ -131,6 +140,7 @@ Use multiple Korean and English query variants and inspect unfamiliar domains re
 ### 3. Check fixed sources as a second safety net
 After broad search, separately inspect the known source families instead of treating them as the whole universe:
 - DACON, Hackathon Korea, Grantly, 링커리어, 요즘것들, ContestKorea
+- 소통24 공모전, 대한민국 정책브리핑, 중앙부처·공공기관·지자체 공식 공모/보도자료
 - AI_TOP_100 (`aitop100.org`), Kakao Impact and Brian Impact competition/program announcements
 - EventUs, Luma, 온오프믹스, Devpost, Meetup
 - K-Startup, 기업마당, SBA and Seoul startup programs
@@ -188,6 +198,7 @@ Do not finish the opportunity refresh until all applicable gates pass:
 - If `support` has zero OPEN items, rerun startup/support discovery with new query variants and re-check K-Startup, 기업마당, SBA, NIPA/KISA and fintech/startup sources.
 - If OPEN contests are mostly AI/data, rerun the non-AI software-development track.
 - If there are no OPEN general-software/app/web/security/fintech/public-data opportunities, run another broad search across those categories before concluding none were found.
+- If there are no OPEN individual-accessible public/idea/industry-specialized contests with meaningful prize/portfolio/product value, rerun `아이디어 공모전` / `국민참여 공모` / `서비스 기획 공모전` / `산업 아이디어 공모전` searches and re-check 소통24 plus government/public-agency official sources.
 - Search separately for imminent application openings (`접수 예정`, `신청 시작`, `오픈 예정`, `선착순`, countdown pages) in the next 7 days. Any relevant same-day/next-24-hour or limited-capacity opening must not be omitted merely because registration is not open yet; publish it as `UPCOMING` with `openingAt`.
 - If a major source family could not be checked because of a tool/site failure, preserve existing verified data and record the gap rather than silently treating it as empty.
 - Do not satisfy a raw-candidate quota by counting obvious duplicates; candidate counts refer to materially distinct opportunities.
