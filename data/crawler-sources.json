@@ -16,6 +16,14 @@
   },
   "active": [
     {
+      "key": "contestKorea",
+      "name": "ContestKorea",
+      "url": "https://contestkorea.kr/",
+      "role": "Korean public contests and idea competitions",
+      "required": false,
+      "managed": true
+    },
+    {
       "key": "daconCompetitions",
       "name": "DACON competitions",
       "url": "https://www.dacon.io/competitions",
@@ -32,21 +40,12 @@
       "managed": true
     },
     {
-      "key": "hackathonKorea",
-      "name": "Hackathon Korea",
-      "url": "https://koreahackathons.com/",
-      "role": "Korea in-person/online hackathon directory",
+      "key": "devpostOpen",
+      "name": "Devpost open hackathons",
+      "url": "https://devpost.com/hackathons?status=open",
+      "role": "global online developer/AI hackathons",
       "required": false,
       "managed": true
-    },
-    {
-      "key": "sotong24Contests",
-      "name": "소통24 공모전",
-      "url": "https://sotong.go.kr/front/epilogue/epilogueBbsList.do",
-      "role": "government/public idea contests",
-      "required": false,
-      "managed": true,
-      "note": "Use server-rendered contest list endpoint; avoid JS-only NewListPage."
     },
     {
       "key": "grantlySupport",
@@ -57,18 +56,10 @@
       "managed": true
     },
     {
-      "key": "devpostOpen",
-      "name": "Devpost open hackathons",
-      "url": "https://devpost.com/hackathons?status=open",
-      "role": "global online developer/AI hackathons",
-      "required": false,
-      "managed": true
-    },
-    {
-      "key": "contestKorea",
-      "name": "ContestKorea",
-      "url": "https://contestkorea.kr/",
-      "role": "Korean public contests and idea competitions",
+      "key": "hackathonKorea",
+      "name": "Hackathon Korea",
+      "url": "https://koreahackathons.com/",
+      "role": "Korea in-person/online hackathon directory",
       "required": false,
       "managed": true
     },
@@ -80,71 +71,186 @@
       "required": false,
       "managed": true,
       "note": "May rate-limit/block cloud IPs; keep GPT/web fallback."
+    },
+    {
+      "key": "sotong24Contests",
+      "name": "소통24 공모전",
+      "url": "https://sotong.go.kr/front/epilogue/epilogueBbsList.do",
+      "role": "government/public idea contests",
+      "required": false,
+      "managed": true,
+      "note": "Use server-rendered contest list endpoint; avoid JS-only NewListPage."
     }
   ],
   "degraded": [],
   "nextCandidates": [
     {
+      "key": "aitop100",
+      "name": "AI_TOP_100",
+      "url": "https://aitop100.org/",
+      "reason": "single recurring high-value event site; direct watch is more appropriate than broad crawler",
+      "status": "WATCH_ONLY",
+      "score": 0,
+      "recommendation": "WATCH_ONLY"
+    },
+    {
+      "key": "allforyoung",
+      "name": "요즘것들",
+      "reason": "structured opportunity catalog but exact list endpoints need inspection",
+      "status": "NEEDS_SPEC",
+      "score": 0,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "amazonappdev2026-devpost-com",
+      "name": "amazonappdev2026.devpost.com",
+      "url": "https://amazonappdev2026.devpost.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://amazonappdev2026.devpost.com/"
+      ],
+      "score": 14,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "bizinfo",
       "name": "기업마당",
       "reason": "structured support-program boards; exact pagination/API inspection still needed",
-      "status": "NEEDS_SPEC"
+      "status": "NEEDS_SPEC",
+      "score": 0,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "datathon-kr",
+      "name": "datathon.kr",
+      "url": "https://datathon.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.datathon.kr/"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "eventus",
+      "name": "이벤터스",
+      "reason": "JS-heavy searchable event catalog; exact public search API/URL filtering needs inspection",
+      "status": "NEEDS_SPEC",
+      "score": 0,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "galuxium-nexus-v2-29411-devpost-com",
+      "name": "galuxium-nexus-v2-29411.devpost.com",
+      "url": "https://galuxium-nexus-v2-29411.devpost.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://galuxium-nexus-v2-29411.devpost.com/"
+      ],
+      "score": 12,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "gitlab-transcend-devpost-com",
+      "name": "gitlab-transcend.devpost.com",
+      "url": "https://gitlab-transcend.devpost.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://gitlab-transcend.devpost.com/"
+      ],
+      "score": 14,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "hackapertus-devpost-com",
+      "name": "hackapertus.devpost.com",
+      "url": "https://hackapertus.devpost.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://hackapertus.devpost.com/"
+      ],
+      "score": 12,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "kisa",
+      "name": "KISA",
+      "reason": "multiple notice/business boards; opportunity-relevant board set needs selection",
+      "status": "NEEDS_SPEC",
+      "score": 0,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "learn-ai-basics-devpost-com",
+      "name": "learn-ai-basics.devpost.com",
+      "url": "https://learn-ai-basics.devpost.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://learn-ai-basics.devpost.com/"
+      ],
+      "score": 12,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "linkareer",
+      "name": "링커리어",
+      "reason": "structured contest/activity catalog but pagination and anti-bot behavior need inspection",
+      "status": "NEEDS_SPEC",
+      "score": 0,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "lumaMeetup",
+      "name": "Luma / Meetup",
+      "reason": "use location/query discovery rather than blind full-site crawl",
+      "status": "WATCH_ONLY",
+      "score": 0,
+      "recommendation": "WATCH_ONLY"
+    },
+    {
+      "key": "nipa",
+      "name": "NIPA",
+      "reason": "public announcements are structured but opportunity-relevant boards need selection",
+      "status": "NEEDS_SPEC",
+      "score": 0,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
       "key": "onoffmix",
       "name": "온오프믹스",
       "url": "https://www.onoffmix.com/event/main",
       "reason": "large structured event list; crawler needs category/topic filtering to avoid thousands of irrelevant events",
-      "status": "NEEDS_SPEC"
-    },
-    {
-      "key": "eventus",
-      "name": "이벤터스",
-      "reason": "JS-heavy searchable event catalog; exact public search API/URL filtering needs inspection",
-      "status": "NEEDS_SPEC"
-    },
-    {
-      "key": "linkareer",
-      "name": "링커리어",
-      "reason": "structured contest/activity catalog but pagination and anti-bot behavior need inspection",
-      "status": "NEEDS_SPEC"
-    },
-    {
-      "key": "allforyoung",
-      "name": "요즘것들",
-      "reason": "structured opportunity catalog but exact list endpoints need inspection",
-      "status": "NEEDS_SPEC"
+      "status": "NEEDS_SPEC",
+      "score": 0,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
       "key": "sba",
       "name": "SBA",
       "reason": "public program listings split across multiple boards; source-specific board inventory needed",
-      "status": "NEEDS_SPEC"
-    },
-    {
-      "key": "nipa",
-      "name": "NIPA",
-      "reason": "public announcements are structured but opportunity-relevant boards need selection",
-      "status": "NEEDS_SPEC"
-    },
-    {
-      "key": "kisa",
-      "name": "KISA",
-      "reason": "multiple notice/business boards; opportunity-relevant board set needs selection",
-      "status": "NEEDS_SPEC"
-    },
-    {
-      "key": "lumaMeetup",
-      "name": "Luma / Meetup",
-      "reason": "use location/query discovery rather than blind full-site crawl",
-      "status": "WATCH_ONLY"
-    },
-    {
-      "key": "aitop100",
-      "name": "AI_TOP_100",
-      "url": "https://aitop100.org/",
-      "reason": "single recurring high-value event site; direct watch is more appropriate than broad crawler",
-      "status": "WATCH_ONLY"
+      "status": "NEEDS_SPEC",
+      "score": 0,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
     }
-  ]
+  ],
+  "lastEvolvedDate": "2026-10-06",
+  "lastEvolvedAt": "2026-10-06T06:53:04.548419Z"
 }
