@@ -170,6 +170,72 @@ for discovery in discoveries:
     m["relevantHits"] += len(set(relevant_urls))
 
 
+# 2b) Auto-discover recurring/relevant domains even when GPT did not explicitly nominate them.
+known_keys = set(active_by_key) | set(degraded_by_key) | set(candidate_by_key)
+known_domains = set()
+for bucket in (active, degraded, candidates):
+    for item in bucket:
+        url = item.get("url")
+        if url:
+            known_domains.add(urlsplit(url).netloc.lower().removeprefix("www."))
+
+domain_evidence = {}
+for track in (audit.get("tracks") or {}).values():
+    for candidate in track.get("rawCandidates", []) if isinstance(track, dict) else []:
+        if not isinstance(candidate, dict):
+            continue
+        disposition = candidate.get("disposition")
+        if disposition not in ("PUBLISHED", "EXISTING"):
+            continue
+        url = candidate.get("url")
+        if not url:
+            continue
+        try:
+            parsed = urlsplit(url)
+        except Exception:
+            continue
+        domain = parsed.netloc.lower().removeprefix("www.")
+        if not domain:
+            continue
+        ev = domain_evidence.setdefault(domain, {"relevant": 0, "published": 0, "urls": set()})
+        ev["relevant"] += 1
+        if disposition == "PUBLISHED":
+            ev["published"] += 1
+        ev["urls"].add(url)
+
+for domain, ev in domain_evidence.items():
+    if domain in known_domains:
+        continue
+    if ev["published"] < 1 and ev["relevant"] < 2:
+        continue
+
+    key = key_for(domain)
+    if key in known_keys:
+        continue
+
+    candidate = {
+        "key": key,
+        "name": domain,
+        "url": f"https://{domain}/",
+        "reason": "Auto-discovered from recurring/relevant daily research candidates",
+        "status": "NEEDS_SPEC",
+        "discoveredAt": date,
+        "autoDiscovered": True,
+        "evidenceUrls": sorted(ev["urls"])[:10],
+    }
+    candidates.append(candidate)
+    candidate_by_key[key] = candidate
+    known_keys.add(key)
+    known_domains.add(domain)
+
+    m = ensure_metric(key)
+    m["discoverySightings"] += 1
+    m["lastDiscoveryDate"] = date
+    m["publishedHits"] += ev["published"]
+    m["relevantHits"] += ev["relevant"]
+    m["lastSeenDate"] = date
+
+
 # 3) Update shadow crawler stability.
 shadow_sources = cache.get("shadowSources", {})
 if not isinstance(shadow_sources, dict):
