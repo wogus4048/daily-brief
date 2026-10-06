@@ -138,16 +138,21 @@ async function scrollListing(page, selector, rounds = 20) {
 }
 
 async function collectAnchors(page, hrefSelector, source) {
-  const rows = await page.evaluate((selector) =>
-    Array.from(document.querySelectorAll(selector)).map((a) => {
-      const parentText = a.closest("article, li, [class*='card'], [class*='item'], [class*='contest'], [class*='hackathon'], tr, section")?.innerText;
-      return {
-        href: a.href,
-        text: a.innerText || a.textContent || "",
-        context: parentText || "",
-      };
-    }), hrefSelector
-  );
+  const locator = page.locator(hrefSelector);
+  const count = await locator.count();
+  const rows = [];
+
+  for (let i = 0; i < count; i += 1) {
+    const a = locator.nth(i);
+    const hrefAttr = await a.getAttribute("href").catch(() => null);
+    const text = await a.textContent().catch(() => "");
+    if (!hrefAttr) continue;
+    rows.push({
+      href: new URL(hrefAttr, page.url()).toString(),
+      text: text || "",
+      context: text || "",
+    });
+  }
 
   const byUrl = new Map();
   for (const row of rows) {
@@ -320,6 +325,7 @@ async function main() {
   const browser = await chromium.launch({ headless: true });
   try {
     const context = await browser.newContext({
+      ignoreHTTPSErrors: true,
       locale: "ko-KR",
       timezoneId: SEOUL_TZ,
       viewport: { width: 1440, height: 1600 },
