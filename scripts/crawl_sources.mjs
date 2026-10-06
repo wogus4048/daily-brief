@@ -271,7 +271,7 @@ async function crawlHackathonKorea(page) {
 }
 
 async function crawlSotong24(page) {
-  const url = "https://sotong.go.kr/front/epilogue/epilogueNewListPage.do?menu_id=527&pagetype=bbs&date_range=all&date_range_cnddt=all";
+  const url = "https://sotong.go.kr/front/epilogue/epilogueBbsList.do";
   await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
   await page.waitForTimeout(1500);
   const selector = 'a[href*="epilogueNewViewPage.do"]';
