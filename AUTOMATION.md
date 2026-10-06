@@ -91,6 +91,10 @@ While the crawler runs, broad unrestricted discovery may proceed in parallel. Be
 
 Do not fabricate or reconstruct source-cache contents manually. The cache is machine-generated evidence from the Playwright workflow.
 
+Crawler source inventory is maintained in `data/crawler-sources.json`. Active machine-crawled sources currently include DACON competitions, DAKER hackathons, Hackathon Korea, 소통24 공모전, Grantly 지원사업, Devpost open hackathons, ContestKorea, and K-Startup highlights. When an active crawler source succeeds, every `actionableItems[]` URL must be reviewed and recorded in `data/research/YYYY-MM-DD.json -> machineSources.<sourceKey>[]` with `title`, `url`, and `disposition`. DACON/DAKER keep their stricter dedicated inventories as well. Failed non-required crawlers must be recorded as source gaps and fall back to GPT/web inspection rather than being silently treated as empty.
+
+Review `data/crawler-sources.json -> nextCandidates` periodically. Promote a candidate to the active crawler set when it has a stable public listing/pagination/filter path and machine enumeration materially reduces omission risk.
+
 ## Discovery
 
 Fixed source lists are starting points, never a whitelist.
