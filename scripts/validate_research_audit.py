@@ -328,5 +328,6 @@ assert set(published_ids).issubset(all_candidate_ids), "every published id must 
 print(
     f"OK: {audit_path} "
     f"({len(published_ids)} published, {len(audit.get('reverifiedIds', []))} reverified, "
-    f"DACON actionable {source_cache['totals']['daconActionable']}, DAKER actionable {source_cache['totals']['dakerActionable']})"
+    f"DACON actionable {source_cache['sources']['daconCompetitions']['actionableCount']}, "
+    f"DAKER actionable {source_cache['sources']['dakerHackathons']['actionableCount']})"
 )
