@@ -68,6 +68,29 @@ When a meaningful follow-up appears, update the existing item's summary/descript
 
 Treat duplicate titles, official URLs, product/project names, and topic continuity as signals for merge instead of creating a new item.
 
+## Source crawler preflight
+
+The scheduled ChatGPT automation remains the orchestrator. Before relying on DACON/DAKER inventory, it must trigger the repository Playwright crawler and wait for a same-day cache.
+
+Trigger protocol:
+- The persistent trigger branch is `automation/source-crawl-trigger`.
+- At the start of each refresh, update `.automation/source-crawl-trigger.txt` on that branch with a fresh current-run timestamp/request marker. If the branch does not exist, create it from the current `main` first.
+- That push triggers `.github/workflows/crawl-sources.yml`.
+- The crawler checks out current `main`, runs Playwright Chromium against `https://www.dacon.io/competitions` and `https://daker.ai/public/hackathons`, expands dynamic `더보기` listing controls, and writes:
+  - `data/source-cache/latest.json`
+  - `data/source-cache/YYYY-MM-DD.json`
+- The crawler commits those cache files back to `main` as `Refresh source cache for YYYY-MM-DD`.
+
+While the crawler runs, broad unrestricted discovery may proceed in parallel. Before completing the DACON/DAKER fixed-source pass or creating the daily staging branch:
+- re-read `data/source-cache/YYYY-MM-DD.json` from `main`
+- require `date == YYYY-MM-DD` for the current Asia/Seoul day
+- require `crawler.engine == playwright-chromium`
+- require non-empty `sources.daconCompetitions.items` and `sources.dakerHackathons.items`
+- if the current-day cache has not appeared yet, poll/retry for up to 10 minutes; if it still does not appear, treat source crawling as failed and do not claim a successful daily refresh
+- create `automation/daily-brief-YYYY-MM-DD-data` only after the current-day source-cache commit is present on `main`, so the staging branch contains the exact cache used by the research audit
+
+Do not fabricate or reconstruct source-cache contents manually. The cache is machine-generated evidence from the Playwright workflow.
+
 ## Discovery
 
 Fixed source lists are starting points, never a whitelist.
@@ -105,9 +128,9 @@ DACON/DAKER are mandatory and stricter:
 - On DACON competitions, enumerate every currently visible competition card and keep loading/advancing the listing when the page exposes more results. Prioritize cards marked 참가신청중/진행중/접수중, but still disposition visible closed/practice items so the source review is auditable.
 - On DAKER hackathons, enumerate every listed hackathon card. The page mixes current and ended events, so open each relevant detail page and verify its actual schedule/status before deciding.
 - Follow every potentially relevant item to its detail/official page and determine whether it is `PUBLISHED`, `EXISTING`, `DUPLICATE`, `INELIGIBLE`, `CLOSED`, or `NOT_RELEVANT`.
-- Record DACON competition-page items in `data/research/YYYY-MM-DD.json -> fixedSources.DACON.competitionsInventory[]` and DAKER items in `fixedSources.DACON.dakerInventory[]`, each with at least `title`, `url`, and `disposition`.
+- Use the current-day Playwright cache as the enumeration baseline. Record every `sources.daconCompetitions.items[]` entry in `data/research/YYYY-MM-DD.json -> fixedSources.DACON.competitionsInventory[]`, and every `sources.dakerHackathons.items[]` entry in `fixedSources.DACON.dakerInventory[]`, each with at least `title`, `url`, and `disposition`.
 - Record both exact listing URLs in `fixedSources.DACON.urls`.
-- A DACON source check is incomplete if an item visible to the independent validator from either exact listing page is absent from the matching audit inventory. `scripts/validate_research_audit.py` fetches both pages during promotion and blocks incomplete coverage.
+- A DACON source check is incomplete if even one URL from the machine-generated current-day source cache is absent from the matching research inventory. `scripts/validate_research_audit.py` compares the audit against that Playwright cache during promotion and blocks incomplete coverage.
 - DACON/DAKER items must still pass the same user-eligibility and primary-source verification rules before publication.
 
 For all opportunity tracks:
@@ -258,7 +281,7 @@ Before writing data:
 - Write the actual current-run research evidence to `data/research/YYYY-MM-DD.json`.
 - Run `scripts/validate_data.py` against the final snapshot before publishing it.
 - The promotion workflow will run `scripts/validate_research_audit.py` against the current `main` baseline. Do not claim completion unless that evidence gate passes.
-- Scheduled automation MUST NOT write directly to `main`. Publish only `data/latest.json`, `data/archive/YYYY-MM-DD.json`, and `data/research/YYYY-MM-DD.json` to a staging branch named `automation/daily-brief-YYYY-MM-DD-data`, based on the current `main`.
+- Scheduled automation MUST NOT write the daily result directly to `main`. The source crawler is the only exception: its workflow may commit `data/source-cache/**` to `main`. After that current-day cache commit is visible, create the daily staging branch from the latest `main` and publish only `data/latest.json`, `data/archive/YYYY-MM-DD.json`, and `data/research/YYYY-MM-DD.json` to `automation/daily-brief-YYYY-MM-DD-data`.
 - The staging branch must contain no UI or unrelated changes.
 - Prefer one staging commit containing all three files so the branch represents one complete snapshot plus its research evidence.
 - `.github/workflows/promote-daily-brief.yml` re-validates the snapshot and research evidence, confirms the archive is byte-for-byte identical to `data/latest.json`, enforces the allowed-file set, promotes the result to `main` with commit message `Update daily brief for YYYY-MM-DD`, dispatches `.github/workflows/pages.yml`, and waits for its result.
