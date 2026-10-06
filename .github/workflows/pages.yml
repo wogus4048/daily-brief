@@ -2,6 +2,8 @@ name: Deploy daily-brief to GitHub Pages
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'data/source-cache/**'
   workflow_dispatch:
 permissions:
   contents: read
