@@ -249,7 +249,10 @@ async function crawlDaker(page) {
       return u.hostname.endsWith("daker.ai") && u.pathname !== "/public/hackathons";
     });
   if (!items.length) throw new Error("DAKER crawler returned zero hackathon items");
-  return withActionable({ key: "dakerHackathons", status: "OK", url, expansion, items });
+  return withActionable(
+    { key: "dakerHackathons", status: "OK", url, expansion, items },
+    item => /(모집중|접수중|참가 신청하기)/.test(item.rawText || "")
+  );
 }
 
 async function crawlHackathonKorea(page) {
@@ -267,7 +270,10 @@ async function crawlHackathonKorea(page) {
     return u.hostname.endsWith("koreahackathons.com") && u.pathname.startsWith("/events/");
   });
   if (!items.length) throw new Error("Hackathon Korea crawler returned zero items");
-  return withActionable({ key: "hackathonKorea", status: "OK", url, items }, () => true);
+  return withActionable(
+    { key: "hackathonKorea", status: "OK", url, items },
+    item => !/종료/.test(item.rawText || "")
+  );
 }
 
 async function crawlSotong24(page) {
@@ -326,7 +332,8 @@ async function crawlGrantly(page) {
   const items = (await collectAnchors(page, selector, "Grantly"))
     .filter(item => {
       const u = new URL(item.url);
-      return u.hostname.endsWith("grantly.kr") && u.pathname !== "/opportunities/support";
+      return u.hostname.endsWith("grantly.kr")
+        && /^\/opportunities\/\d+\/?$/.test(u.pathname);
     });
   if (!items.length) throw new Error("Grantly crawler returned zero items");
   return withActionable({ key: "grantlySupport", status: "OK", url, items }, () => true);
@@ -341,7 +348,11 @@ async function crawlDevpost(page) {
   const items = (await collectAnchors(page, selector, "Devpost"))
     .filter(item => {
       const u = new URL(item.url);
-      return u.hostname.endsWith(".devpost.com") && u.hostname !== "devpost.com";
+      const blockedHosts = new Set(["info.devpost.com", "secure.devpost.com"]);
+      return u.hostname.endsWith(".devpost.com")
+        && u.hostname !== "devpost.com"
+        && !blockedHosts.has(u.hostname)
+        && /(days? left|about \d+ months? left|about 1 month left|\b20\d{2}\b)/i.test(item.rawText || "");
     });
   if (!items.length) throw new Error("Devpost crawler returned zero open hackathons");
   return withActionable({ key: "devpostOpen", status: "OK", url, items }, () => true);
@@ -367,6 +378,9 @@ async function crawlKStartup(page) {
       const u = new URL(item.url);
       const text = cleanText(item.rawText);
       return u.hostname.endsWith("k-startup.go.kr")
+        && u.pathname.includes("/web/contents/bizpbanc-ongoing.do")
+        && u.searchParams.get("pbancSn")
+        && u.searchParams.get("schM") === "view"
         && /(모집|공고|창업|마감|경진대회|챌린지|프로그램)/.test(text)
         && text.length >= 8;
     });
