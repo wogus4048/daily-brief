@@ -85,7 +85,7 @@ While the crawler runs, broad unrestricted discovery may proceed in parallel. Be
 - re-read `data/source-cache/YYYY-MM-DD.json` from `main`
 - require `date == YYYY-MM-DD` for the current Asia/Seoul day
 - require `crawler.engine == playwright-chromium`
-- require non-empty `sources.daconCompetitions.items` and `sources.dakerHackathons.items`
+- require non-empty raw inventories and require the crawler to expose `actionableItems`/`actionableCount` for both sources
 - if the current-day cache has not appeared yet, poll/retry for up to 10 minutes; if it still does not appear, treat source crawling as failed and do not claim a successful daily refresh
 - create `automation/daily-brief-YYYY-MM-DD-data` only after the current-day source-cache commit is present on `main`, so the staging branch contains the exact cache used by the research audit
 
@@ -128,9 +128,11 @@ DACON/DAKER are mandatory and stricter:
 - On DACON competitions, enumerate every currently visible competition card and keep loading/advancing the listing when the page exposes more results. Prioritize cards marked 참가신청중/진행중/접수중, but still disposition visible closed/practice items so the source review is auditable.
 - On DAKER hackathons, enumerate every listed hackathon card. The page mixes current and ended events, so open each relevant detail page and verify its actual schedule/status before deciding.
 - Follow every potentially relevant item to its detail/official page and determine whether it is `PUBLISHED`, `EXISTING`, `DUPLICATE`, `INELIGIBLE`, `CLOSED`, or `NOT_RELEVANT`.
-- Use the current-day Playwright cache as the enumeration baseline. Record every `sources.daconCompetitions.items[]` entry in `data/research/YYYY-MM-DD.json -> fixedSources.DACON.competitionsInventory[]`, and every `sources.dakerHackathons.items[]` entry in `fixedSources.DACON.dakerInventory[]`, each with at least `title`, `url`, and `disposition`.
+- The Playwright cache preserves the full raw listing in `items[]`, but the mandatory human/model review set is `actionableItems[]`: entries whose live card status indicates 참가신청중/접수중/진행중/모집중/예정.
+- Record every `sources.daconCompetitions.actionableItems[]` entry in `data/research/YYYY-MM-DD.json -> fixedSources.DACON.competitionsInventory[]`, and every `sources.dakerHackathons.actionableItems[]` entry in `fixedSources.DACON.dakerInventory[]`, each with at least `title`, `url`, and `disposition`.
+- Do not spend the daily review budget re-opening clearly historical/연습/종료 cards from the raw `items[]` unless another search track surfaces them as relevant again.
 - Record both exact listing URLs in `fixedSources.DACON.urls`.
-- A DACON source check is incomplete if even one URL from the machine-generated current-day source cache is absent from the matching research inventory. `scripts/validate_research_audit.py` compares the audit against that Playwright cache during promotion and blocks incomplete coverage.
+- A DACON source check is incomplete if even one actionable URL from the machine-generated current-day source cache is absent from the matching research inventory. `scripts/validate_research_audit.py` compares the audit against that Playwright actionable cache during promotion and blocks incomplete coverage.
 - DACON/DAKER items must still pass the same user-eligibility and primary-source verification rules before publication.
 
 For all opportunity tracks:
