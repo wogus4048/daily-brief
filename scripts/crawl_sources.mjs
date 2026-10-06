@@ -32,15 +32,20 @@ function cleanText(value) {
 
 function chooseTitle(rawText, fallback) {
   const blocked = /^(참가신청중|접수중|진행중|마감|연습|종료|예정|더보기)$/;
+  const metadata = /^(알고리즘\s*\||아이디어\s*\||데브톤\s*\||해커톤\s*\||시작까지|종료까지|D[-+]?\d+|\d+명|상금\s|총상금\s)/;
   const lines = String(rawText || "")
     .split(/\n+/)
     .map(cleanText)
     .filter(Boolean)
-    .filter(line => !blocked.test(line));
-  const candidates = lines
-    .filter(line => line.length >= 4 && line.length <= 180)
-    .sort((a, b) => b.length - a.length);
-  return candidates[0] || fallback || "제목 확인 필요";
+    .filter(line => !blocked.test(line))
+    .filter(line => !metadata.test(line))
+    .filter(line => line.length >= 4 && line.length <= 180);
+
+  if (lines.length) return lines[0];
+
+  const flat = cleanText(rawText);
+  const cut = flat.split(/\s+(?:알고리즘|아이디어|데브톤|해커톤)\s*\||\s+(?:참가신청중|접수중|진행중|마감|연습|종료)\b/)[0];
+  return cleanText(cut) || fallback || "제목 확인 필요";
 }
 
 function statusHints(rawText) {
