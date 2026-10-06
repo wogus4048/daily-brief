@@ -20,6 +20,7 @@ Every scheduled refresh must also write `data/research/YYYY-MM-DD.json`. This is
 
 The audit must record:
 - `date`, `completedAt`
+- `sourceDiscoveries`: an array (possibly empty) of credible recurring/list-source discoveries considered during the current run
 - `reverifiedIds`: every previously OPEN/UPCOMING contest/support id actually re-opened and checked
 - `publishedIds`: every newly published contest/support/AI-news id for the snapshot date
 - independent track evidence for `aiData`, `generalSoftware`, `publicIdea`, `startupSupport`, `upcomingOpenings`, and `aiNews`
@@ -73,9 +74,9 @@ Treat duplicate titles, official URLs, product/project names, and topic continui
 The scheduled ChatGPT automation remains the orchestrator. Before relying on DACON/DAKER inventory, it must trigger the repository Playwright crawler and wait for a same-day cache.
 
 Trigger protocol:
-- The persistent trigger branch is `automation/source-crawl-trigger`.
-- At the start of each refresh, update `.automation/source-crawl-trigger.txt` on that branch with a fresh current-run timestamp/request marker. If the branch does not exist, create it from the current `main` first.
-- That push triggers `.github/workflows/crawl-sources.yml`.
+- The trigger branch is `automation/source-crawl-trigger`.
+- At the start of each refresh, create the trigger commit from the current `main` tree (or reset/rebuild the trigger branch from current `main`) and change only `.automation/source-crawl-trigger.txt` with a fresh current-run timestamp/request marker. Do not let the trigger branch drift on an old copy of the workflow.
+- That push triggers the current `.github/workflows/crawl-sources.yml`.
 - The crawler checks out current `main`, runs Playwright Chromium against `https://www.dacon.io/competitions` and `https://daker.ai/public/hackathons`, expands dynamic `더보기` listing controls, and writes:
   - `data/source-cache/latest.json`
   - `data/source-cache/YYYY-MM-DD.json`
@@ -92,6 +93,21 @@ While the crawler runs, broad unrestricted discovery may proceed in parallel. Be
 Do not fabricate or reconstruct source-cache contents manually. The cache is machine-generated evidence from the Playwright workflow.
 
 Crawler source inventory is maintained in `data/crawler-sources.json`. Active machine-crawled sources currently include DACON competitions, DAKER hackathons, Hackathon Korea, 소통24 공모전, Grantly 지원사업, Devpost open hackathons, ContestKorea, and K-Startup highlights. When an active crawler source succeeds, every `actionableItems[]` URL must be reviewed and recorded in `data/research/YYYY-MM-DD.json -> machineSources.<sourceKey>[]` with `title`, `url`, and `disposition`. DACON/DAKER keep their stricter dedicated inventories as well. Failed non-required crawlers must be recorded as source gaps and fall back to GPT/web inspection rather than being silently treated as empty.
+
+Review `data/crawler-sources.json -> nextCandidates` continuously as part of the daily loop.
+
+### Crawler source self-improvement loop
+- Every daily research audit MUST contain `sourceDiscoveries: []`.
+- When broad search or a fixed-source pass reveals a recurring/list-style domain that could reduce future omission risk, add a discovery entry with `key` when known, `name`, `domain`, `listUrl` or `url`, `reason`, `relevantUrls`, `publishedIds`, and optional `crawlerSpec`.
+- A `crawlerSpec` may be proposed only for a public, read-only listing page. Do not create crawler specs that require login, user data, destructive actions, or bypassing access controls.
+- Generic `crawlerSpec` fields may include `url`, `linkSelector`, `hostSuffix`, `urlContains`, `urlRegex`, `excludeUrlRegex`, `expand`, `scrollRounds`, `waitMs`, and `actionability` (`all` or `hints`).
+- Even if GPT does not explicitly nominate a source, `scripts/evolve_crawler_sources.py` automatically inspects relevant/published raw-candidate domains and registers recurring/high-yield domains as `NEEDS_SPEC` candidates.
+- Candidate lifecycle is `NEEDS_SPEC -> SHADOW -> ACTIVE`. A candidate with a crawler spec runs in shadow without affecting required coverage until it proves stable.
+- Auto-promotion requires the policy thresholds in `data/crawler-sources.json`: repeated discovery, actual published yield, consecutive successful shadow crawls, and minimum score.
+- Non-required ACTIVE crawlers that repeatedly fail are automatically moved to `degraded`; degraded crawlers are shadow-tested for recovery. Required crawlers are never silently auto-demoted.
+- `.github/workflows/evolve-crawler-sources.yml` runs after a daily research file reaches `main`, updates `data/crawler-source-state.json`, scores every source, performs eligible promotion/degradation/recovery, and commits the evolved manifest.
+- The source lifecycle is evidence-driven. Do not promote a site simply because it exists; require measurable discovery value and crawler stability. Do not keep a repeatedly broken non-required crawler active merely because it was once useful.
+- `data/crawler-source-state.json` is the cumulative operational history: success/failure streaks, discovery sightings, relevant/published yield, shadow stability, and score.
 
 Review `data/crawler-sources.json -> nextCandidates` periodically. Promote a candidate to the active crawler set when it has a stable public listing/pagination/filter path and machine enumeration materially reduces omission risk.
 
