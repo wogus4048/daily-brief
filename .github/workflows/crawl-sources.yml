@@ -54,13 +54,17 @@ jobs:
           data = json.loads(Path("data/source-cache/latest.json").read_text(encoding="utf-8"))
           assert data["sources"]["daconCompetitions"]["count"] > 0
           assert data["sources"]["dakerHackathons"]["count"] > 0
+          assert isinstance(data["sources"]["daconCompetitions"]["actionableItems"], list)
+          assert isinstance(data["sources"]["dakerHackathons"]["actionableItems"], list)
           assert data["totals"]["daconCompetitions"] == len(data["sources"]["daconCompetitions"]["items"])
           assert data["totals"]["dakerHackathons"] == len(data["sources"]["dakerHackathons"]["items"])
+          assert data["totals"]["daconActionable"] == len(data["sources"]["daconCompetitions"]["actionableItems"])
+          assert data["totals"]["dakerActionable"] == len(data["sources"]["dakerHackathons"]["actionableItems"])
           print(
               "OK:",
               data["date"],
-              data["totals"]["daconCompetitions"],
-              data["totals"]["dakerHackathons"],
+              f"DACON {data['totals']['daconCompetitions']}/{data['totals']['daconActionable']}",
+              f"DAKER {data['totals']['dakerHackathons']}/{data['totals']['dakerActionable']}",
           )
           PY
 
