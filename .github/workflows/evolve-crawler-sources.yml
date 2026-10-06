@@ -28,6 +28,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Test crawler source lifecycle engine
+        run: python scripts/test_evolve_crawler_sources.py
+
       - name: Evolve crawler source manifest
         run: python scripts/evolve_crawler_sources.py
 
