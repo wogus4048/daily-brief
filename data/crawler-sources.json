@@ -214,9 +214,10 @@
       "status": "SHADOW",
       "crawlerSpec": {
         "url": "https://www.kised.or.kr/misAnnouncement/index.es?mid=a10302000000",
-        "linkSelector": "a[href*=\"k-startup.go.kr\"]",
+        "linkSelector": "a[href*=\"/web/contents/bizpbanc-ongoing.do\"]",
         "hostSuffix": "k-startup.go.kr",
-        "actionability": "all",
+        "urlContains": "/web/contents/bizpbanc-ongoing.do",
+        "actionability": "hints",
         "expand": false,
         "waitMs": 1200
       }
