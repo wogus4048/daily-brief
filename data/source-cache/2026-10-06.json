@@ -1,0 +1,2843 @@
+{
+  "date": "2026-10-06",
+  "generatedAt": "2026-10-06T04:46:52.271Z",
+  "timezone": "Asia/Seoul",
+  "crawler": {
+    "engine": "playwright-chromium",
+    "version": 1
+  },
+  "sources": {
+    "daconCompetitions": {
+      "url": "https://www.dacon.io/competitions",
+      "count": 289,
+      "expansion": {
+        "label": "DACON competitions",
+        "anchorCount": 289
+      },
+      "items": [
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 금융 | RMSE",
+          "url": "https://www.dacon.io/competitions/official/136/overview",
+          "rawText": "대출 상점 총 매출 예측 경진대회 알고리즘 | 정형 | 회귀 | 금융 | RMSE 연습 613명 상금 $8,500 + 100,000ZPR",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 매출 | 회귀 | MAE",
+          "url": "https://www.dacon.io/competitions/official/140472/overview",
+          "rawText": "상점 신용카드 매출 예측 경진대회 알고리즘 | 정형 | 회귀 | 매출 | 회귀 | MAE 연습 1,541명 상금 200만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 아파트 | RMSE",
+          "url": "https://www.dacon.io/competitions/official/17801/overview",
+          "rawText": "아파트 경매가격 예측 경진대회 알고리즘 | 정형 | 회귀 | 아파트 | RMSE 연습 695명 상금 $10,000 + 120,000ZPR",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 공공 | SMAPE",
+          "url": "https://www.dacon.io/competitions/official/196878/overview",
+          "rawText": "전력 수요량 예측 경진대회 알고리즘 | 정형 | 회귀 | 공공 | SMAPE 연습 869명 상금 600만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 금융 | RMSE",
+          "url": "https://www.dacon.io/competitions/official/21265/overview",
+          "rawText": "아파트 실거래가 예측 AI 경진대회 알고리즘 | 정형 | 회귀 | 금융 | RMSE 연습 1,697명 상금 $8,000 + 80,000ZPR",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 공공 | RMSE",
+          "url": "https://www.dacon.io/competitions/official/229255/overview",
+          "rawText": "퇴근시간 버스승차인원 예측 AI 경진대회 알고리즘 | 정형 | 회귀 | 공공 | RMSE 연습 1,826명 상금 700만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 교통 | RMSE",
+          "url": "https://www.dacon.io/competitions/official/229611/overview",
+          "rawText": "버스 운행시간 예측 AI 경진대회 알고리즘 | 정형 | 회귀 | 교통 | RMSE 연습 927명 상금 300만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 텍스트 | 분류 | 금융 | AUC | KB금융",
+          "url": "https://www.dacon.io/competitions/official/235401/overview",
+          "rawText": "KB금융 문자 분석 경진대회 알고리즘 | 텍스트 | 분류 | 금융 | AUC | KB금융 연습 1,481명 상금 2,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 이미지 | 객체 검출 | 우주 | mAP",
+          "url": "https://www.dacon.io/competitions/official/235492/overview",
+          "rawText": "위성 이미지 객체 검출 미래도전기술 경진대회 알고리즘 | 이미지 | 객체 검출 | 우주 | mAP 마감 499명 -",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "분석시각화 | 정형 | 분석 | 스포츠 | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/235546/overview",
+          "rawText": "KBO 타자 OPS 시각화 경진대회 분석시각화 | 정형 | 분석 | 스포츠 | 정성평가 연습 528명 상금 200만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 산업 | Log Loss",
+          "url": "https://www.dacon.io/competitions/official/235551/overview",
+          "rawText": "원자력발전소 상태 판단 경진대회 알고리즘 | 정형 | 회귀 | 산업 | Log Loss 연습 1,400명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 산업 | MAE",
+          "url": "https://www.dacon.io/competitions/official/235554/overview",
+          "rawText": "월간 데이콘 반도체 박막 두께 분석 경진대회 알고리즘 | 정형 | 회귀 | 산업 | MAE 연습 1,724명 상금 83만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 분류 | 과학 | LogLoss",
+          "url": "https://www.dacon.io/competitions/official/235573/overview",
+          "rawText": "월간 데이콘 천체 유형 분류 대회 알고리즘 | 정형 | 분류 | 과학 | LogLoss 연습 1,276명 상금 154만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "월간 데이콘 행동 데이터 분석 인공지능 AI 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235583/overview",
+          "rawText": "월간 데이콘 행동 데이터 분석 인공지능 AI 경진대회 알고리즘 | 정형 | 분류 | 게임 | AUC 연습 1,128명 상금 100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "AI프렌즈 시즌 공공 데이터 활용 온도 추정 AI 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235584/overview",
+          "rawText": "AI프렌즈 시즌 공공 데이터 활용 온도 추정 AI 경진대회 알고리즘 | 정형 | 회귀 | 기상 | MSE 연습 1,639명 상금 250만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 이미지 | 분류 | 상권 | GAP",
+          "url": "https://www.dacon.io/competitions/official/235585/overview",
+          "rawText": "랜드마크 분류 AI 경진대회 알고리즘 | 이미지 | 분류 | 상권 | GAP 연습 693명 상금 1,500만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "분석시각화 | 정형 | 분석 | 코로나 | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/235590/overview",
+          "rawText": "월간 데이콘 코로나 데이터 시각화 AI 경진대회 분석시각화 | 정형 | 분석 | 코로나 | 정성평가 연습 2,331명 상금 250만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 기상 | MAE,F1score",
+          "url": "https://www.dacon.io/competitions/official/235591/overview",
+          "rawText": "AI프렌즈 위성관측 데이터 활용 강수량 산출 AI 경진대회 알고리즘 | 정형 | 회귀 | 기상 | MAE,F1score 연습 948명 상금 250만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "AI프렌즈 공공 데이터 활용 전력수요 및 SMP 예측 AI 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235606/overview",
+          "rawText": "AI프렌즈 공공 데이터 활용 전력수요 및 SMP 예측 AI 경진대회 알고리즘 | 정형 | 회귀 | 에너지 | WRMSSE 연습 629명 상금 250만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "월간 데이콘 생체 광학 데이터 분석 AI 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235608/overview",
+          "rawText": "월간 데이콘 생체 광학 데이터 분석 AI 경진대회 알고리즘 | 정형 | 회귀 | 바이오 | MAE 연습 981명 상금 360만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "블럭 장난감 제조 공정 최적화 AI경진대회",
+          "url": "https://www.dacon.io/competitions/official/235612/overview",
+          "rawText": "블럭 장난감 제조 공정 최적화 AI경진대회 알고리즘 | 정형 | 강화 학습 | 제조 연습 906명 상금 600만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 산업 | MSPE | 한국원자력연구원",
+          "url": "https://www.dacon.io/competitions/official/235614/overview",
+          "rawText": "한국원자력 연구원 진동데이터 활용 충돌체 탐지 AI 경진대회 알고리즘 | 정형 | 회귀 | 산업 | MSPE | 한국원자력연구원 연습 840명 상금 600만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 금융 | RMSLE",
+          "url": "https://www.dacon.io/competitions/official/235615/overview",
+          "rawText": "제주 신용카드 빅데이터 경진대회 알고리즘 | 정형 | 회귀 | 금융 | RMSLE 연습 1,925명 상금 600만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | Audio | 분류 | 제어 | KL Divergence",
+          "url": "https://www.dacon.io/competitions/official/235616/overview",
+          "rawText": "월간 데이콘 음성 중첩 데이터 분류 AI 경진대회 알고리즘 | Audio | 분류 | 제어 | KL Divergence 연습 595명 상금 100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "분석시각화 | 정형 | 분석 | 유동인구 | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/235618/overview",
+          "rawText": "포스트 코로나 데이터 시각화 경진대회 분석시각화 | 정형 | 분석 | 유동인구 | 정성평가 연습 2,716명 상금 600만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "분석시각화 | 정형 | 분석 | 교통 | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/235622/overview",
+          "rawText": "국토교통 빅데이터 온라인 해커톤 경진대회 분석시각화 | 정형 | 분석 | 교통 | 정성평가 연습 1,325명 상금 1,100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "HAICon2020 산업제어시스템 보안위협 탐지 AI 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235624/overview",
+          "rawText": "HAICon2020 산업제어시스템 보안위협 탐지 AI 경진대회 알고리즘 | 정형 | 이상탐지 | 제어 | TaPR 연습 1,273명 상금 2,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | CV | 분류 | 과학 | Accuracy",
+          "url": "https://www.dacon.io/competitions/official/235626/overview",
+          "rawText": "월간 데이콘 컴퓨터 비전 학습 경진대회 알고리즘 | CV | 분류 | 과학 | Accuracy 연습 1,433명 상금 100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 이미지 | 분류 | 산업 | Similarity",
+          "url": "https://www.dacon.io/competitions/official/235640/overview",
+          "rawText": "분자구조 이미지 SMILES 변환 AI 경진대회 알고리즘 | 이미지 | 분류 | 산업 | Similarity 연습 786명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 이미지 | 객체 탐지 | 컴퓨터 비전 | mAP",
+          "url": "https://www.dacon.io/competitions/official/235644/overview",
+          "rawText": "아리랑 위성영상 AI 객체 검출 경진대회 알고리즘 | 이미지 | 객체 탐지 | 컴퓨터 비전 | mAP 연습 697명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 강우예측 | MAE/CSI",
+          "url": "https://www.dacon.io/competitions/official/235646/overview",
+          "rawText": "공공데이터 활용 수력 댐 강우예측 AI 경진대회 알고리즘 | 정형 | 회귀 | 강우예측 | MAE/CSI 연습 582명 상금 1,100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 분류 | 심리 | AUC",
+          "url": "https://www.dacon.io/competitions/official/235647/overview",
+          "rawText": "월간 데이콘 심리 성향 예측 AI 경진대회 알고리즘 | 정형 | 분류 | 심리 | AUC 연습 2,162명 상금 100만 원+애플워치",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 이미지 | 분류 | 영상 | Accuracy",
+          "url": "https://www.dacon.io/competitions/official/235655/overview",
+          "rawText": "딥페이크 변조 영상 탐지 AI 경진대회 알고리즘 | 이미지 | 분류 | 영상 | Accuracy 연습 617명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 텍스트 | 분류 | 금융 | Accuracy + Time",
+          "url": "https://www.dacon.io/competitions/official/235658/overview",
+          "rawText": "AI야 , 진짜 뉴스를 찾아줘! AI 경진대회 알고리즘 | 텍스트 | 분류 | 금융 | Accuracy + Time 마감 625명 상금 2,500만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "분석시각화 | 정형 | 분류 | 금융 | 정성평가| 중복참가 불가, 대학 재학생만 참가 가능",
+          "url": "https://www.dacon.io/competitions/official/235663/overview",
+          "rawText": "Y&Z세대 투자자 프로파일링 시각화 경진대회 분석시각화 | 정형 | 분류 | 금융 | 정성평가| 중복참가 불가, 대학 재학생만 참가 가능 마감 710명 상금 2,500만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 전력 수요량 | power demand | SMAPE",
+          "url": "https://www.dacon.io/competitions/official/235668/overview",
+          "rawText": "꿈꾸는아이(AI) 전력 수요량 예측 경진대회 알고리즘 | 정형 | 회귀 | 전력 수요량 | power demand | SMAPE 마감 111명 상금 4,850만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | NLP | 분류 | 자연어 | LogLoss",
+          "url": "https://www.dacon.io/competitions/official/235670/overview",
+          "rawText": "월간 데이콘 소설 작가 분류 AI 경진대회 알고리즘 | NLP | 분류 | 자연어 | LogLoss 연습 1,468명 상금 100만 원+애플워치",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 텍스트 | 생성요약 | 언어 | ROUGE-N",
+          "url": "https://www.dacon.io/competitions/official/235671/overview",
+          "rawText": "한국어 문서 추출요약 AI 경진대회 알고리즘 | 텍스트 | 생성요약 | 언어 | ROUGE-N 연습 1,222명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 이미지 | 영상분할 | 이미지 세분화 | mAP",
+          "url": "https://www.dacon.io/competitions/official/235672/overview",
+          "rawText": "K-Fashion AI 경진대회 알고리즘 | 이미지 | 영상분할 | 이미지 세분화 | mAP 연습 780명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 텍스트 | 생성요약 | 언어 | ROUGE-N",
+          "url": "https://www.dacon.io/competitions/official/235673/overview",
+          "rawText": "한국어 문서 생성요약 AI 경진대회 알고리즘 | 텍스트 | 생성요약 | 언어 | ROUGE-N 연습 635명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "월간 데이콘 국회 입법활동 빅데이터 시각화 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235679/overview",
+          "rawText": "월간 데이콘 국회 입법활동 빅데이터 시각화 경진대회 분석시각화 | 정형 | 분석 | 사회 | 정성평가 연습 691명 상금 100만 원 + 애플워치",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 에너지ㅣPinball Loss",
+          "url": "https://www.dacon.io/competitions/official/235680/overview",
+          "rawText": "태양광 발전량 예측 AI 경진대회 알고리즘 | 정형 | 회귀 | 에너지ㅣPinball Loss 연습 2,490명 상금 600만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "분석시각화 | 정형 | 분석 | 교통 | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/235682/overview",
+          "rawText": "공간정보 탐색적 데이터 분석 경진대회 분석시각화 | 정형 | 분석 | 교통 | 정성평가 연습 625명 상금 100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "월간 데이콘 2020 D CUP Google Analytics 데이터 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235683/overview",
+          "rawText": "월간 데이콘 2020 D CUP Google Analytics 데이터 경진대회 알고리즘 | 정형 | 회귀 | 행태심리 | RMSE 마감 592명 상금 100만 원 + 데이콘 기념품",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "시스템 품질 변화로 인한 사용자 불편 예지 AI 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235687/overview",
+          "rawText": "시스템 품질 변화로 인한 사용자 불편 예지 AI 경진대회 알고리즘 | 정형 | 분류 | 시스템 | AUC 연습 2,009명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 분류 | 헬스 | LogLoss",
+          "url": "https://www.dacon.io/competitions/official/235689/overview",
+          "rawText": "월간 데이콘 운동 동작 분류 AI 경진대회 알고리즘 | 정형 | 분류 | 헬스 | LogLoss 연습 1,281명 상금 100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 산업 | MAE",
+          "url": "https://www.dacon.io/competitions/official/235692/overview",
+          "rawText": "제2회 팩토리핵 코리아 알고리즘 | 정형 | 회귀 | 산업 | MAE 연습 57명 상금 660만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | CV | 분류 | 제어 | Accuracy",
+          "url": "https://www.dacon.io/competitions/official/235697/overview",
+          "rawText": "월간 데이콘 제 2회 컴퓨터 비전 학습 경진대회 알고리즘 | CV | 분류 | 제어 | Accuracy 연습 1,214명 상금 100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "운동 | Keypoint Detection | 비전 | RMSE",
+          "url": "https://www.dacon.io/competitions/official/235701/overview",
+          "rawText": "모션 키포인트 검출 AI 경진대회 운동 | Keypoint Detection | 비전 | RMSE 연습 847명 상금 400만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | CV | Semantic segmentation | 환경 | MAE & F1",
+          "url": "https://www.dacon.io/competitions/official/235706/overview",
+          "rawText": "월간 데이콘 위성 영상을 활용한 북극 해빙 예측 AI 경진대회 알고리즘 | CV | Semantic segmentation | 환경 | MAE & F1 연습 905명 상금 100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 금융 | 모의투자",
+          "url": "https://www.dacon.io/competitions/official/235709/overview",
+          "rawText": "연간 데이콘 인공지능 비트 트레이더 경진대회 알고리즘 | 정형 | 회귀 | 금융 | 모의투자 마감 857명 상금 100만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "연간 데이콘 인공지능 비트 트레이더 경진대회 시즌 2",
+          "url": "https://www.dacon.io/competitions/official/235712/overview",
+          "rawText": "연간 데이콘 인공지능 비트 트레이더 경진대회 시즌 2 알고리즘 | 정형 | 회귀 | 금융 | 모의투자 마감 1,206명 상금 200만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "월간 데이콘 신용카드 사용자 연체 예측 AI 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235713/overview",
+          "rawText": "월간 데이콘 신용카드 사용자 연체 예측 AI 경진대회 알고리즘 | 정형 | 분류 | 금융 | LogLoss 연습 3,988명 상금 100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | NLP | 분류 | 제어 | Macro f1 score",
+          "url": "https://www.dacon.io/competitions/official/235717/overview",
+          "rawText": "로그 분석을 통한 보안 위험도 예측 AI 경진대회 알고리즘 | NLP | 분류 | 제어 | Macro f1 score 연습 796명 상금 300만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 에너지 | NMAE",
+          "url": "https://www.dacon.io/competitions/official/235720/overview",
+          "rawText": "동서발전 태양광 발전량 예측 AI 경진대회 알고리즘 | 정형 | 회귀 | 에너지 | NMAE 연습 1,605명 상금 1,600만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "분석시각화 | 정형 | 분석 | 부동산 | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/235724/overview",
+          "rawText": "월간 데이콘 한국 부동산 데이터 시각화 경진대회 분석시각화 | 정형 | 분석 | 부동산 | 정성평가 연습 1,056명 상금 100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "시계열 | 비전 | 극지연구소 | 북극 | 해빙 | MAE/F1",
+          "url": "https://www.dacon.io/competitions/official/235731/overview",
+          "rawText": "북극 해빙예측 AI 경진대회 시계열 | 비전 | 극지연구소 | 북극 | 해빙 | MAE/F1 마감 586명 상금 600만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "시계열 | SMAPE | 한국에너지공단 | 전력",
+          "url": "https://www.dacon.io/competitions/official/235736/overview",
+          "rawText": "전력사용량 예측 AI 경진대회 시계열 | SMAPE | 한국에너지공단 | 전력 연습 2,798명 상금 1800만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | Audio | 분류 | 자연어 | LogLoss",
+          "url": "https://www.dacon.io/competitions/official/235738/overview",
+          "rawText": "월간 데이콘 영어 음성 국적 분류 AI 경진대회 알고리즘 | Audio | 분류 | 자연어 | LogLoss 연습 474명 상금 100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "연간 데이콘 인공지능 비트 트레이더 경진대회 시즌3",
+          "url": "https://www.dacon.io/competitions/official/235740/overview",
+          "rawText": "연간 데이콘 인공지능 비트 트레이더 경진대회 시즌3 알고리즘 | 정형 | 회귀 | 금융 | 모의투자 마감 1,387명 상금 100만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 행태심리 | MAE",
+          "url": "https://www.dacon.io/competitions/official/235743/overview",
+          "rawText": "구내식당 식수 인원 예측 AI 경진대회 알고리즘 | 정형 | 회귀 | 행태심리 | MAE 연습 2,552명 상금 700만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | NLP | 분류 | 환경 | Macro f1 score",
+          "url": "https://www.dacon.io/competitions/official/235744/overview",
+          "rawText": "자연어 기반 기후기술분류 AI 경진대회 알고리즘 | NLP | 분류 | 환경 | Macro f1 score 연습 1,064명 상금 600만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 교통 | MAE",
+          "url": "https://www.dacon.io/competitions/official/235745/overview",
+          "rawText": "주차수요 예측 AI 경진대회 알고리즘 | 정형 | 회귀 | 교통 | MAE 연습 2,322명 상금 1,300만원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | CV | 이미지 변환 | 제어 | PSNR",
+          "url": "https://www.dacon.io/competitions/official/235746/overview",
+          "rawText": "카메라 이미지 품질 향상 AI 경진대회 알고리즘 | CV | 이미지 변환 | 제어 | PSNR 연습 1,294명 상금 1,000만원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | NLP | 분류 | 자연어 | Accuracy",
+          "url": "https://www.dacon.io/competitions/official/235747/overview",
+          "rawText": "월간 데이콘 뉴스 토픽 분류 AI 경진대회 알고리즘 | NLP | 분류 | 자연어 | Accuracy 연습 2,007명 500,000 D-point",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "분석시각화 | 정형 | 분석 | 행태심리 | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/235753/overview",
+          "rawText": "2021 빅데이터 통신 플랫폼 경진대회 분석시각화 | 정형 | 분석 | 행태심리 | 정성평가 마감 635명 상금 400만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "HAICon2021 산업제어시스템 보안위협 탐지 AI 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235757/overview",
+          "rawText": "HAICon2021 산업제어시스템 보안위협 탐지 AI 경진대회 알고리즘 | 정형 | 이상탐지 | 제어 | TaPR 연습 911명 상금 2,000만원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "2021 국토교통 빅데이터 온라인 해커톤 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235758/overview",
+          "rawText": "2021 국토교통 빅데이터 온라인 해커톤 경진대회 분석시각화 | 정형 | 분석 | 교통 | 정성평가 연습 735명 상금 1,100만원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "분석시각화 | 정형 | 분석 | 금융 | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/235767/overview",
+          "rawText": "재정데이터 시각화 경진대회 분석시각화 | 정형 | 분석 | 금융 | 정성평가 연습 625명 상금 1,000만원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "Samsung AI Challenge for Scientific Discovery",
+          "url": "https://www.dacon.io/competitions/official/235789/overview",
+          "rawText": "Samsung AI Challenge for Scientific Discovery 알고리즘 | NLP | 회귀 | 물성 | MAE 연습 991명 상금 1,400만원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "2021 JOISS 해양과학 빅데이터 활용 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235793/overview",
+          "rawText": "2021 JOISS 해양과학 빅데이터 활용 경진대회 분석시각화 | 정형 | 시각화 | 환경 | 정성평가 마감 132명 상금 2,000만원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "교통·문화·통신 빅데이터 플랫폼 융합 분석 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235794/overview",
+          "rawText": "교통·문화·통신 빅데이터 플랫폼 융합 분석 경진대회 분석시각화 | 정형 | 분석 | 제어 | 정성평가 연습 623명 상금 1,500만원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "2021년(제2회) NH투자증권 빅데이터 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235798/overview",
+          "rawText": "2021년(제2회) NH투자증권 빅데이터 경진대회 알고리즘 | 정형 | 회귀 | 금융 | RMSE 마감 831명 상금 총 5,000만원 규모 상금 및 경품 제공",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "월간 데이콘 주식 종료 가격 예측 Pre Competiton (with.데이커)",
+          "url": "https://www.dacon.io/competitions/official/235800/overview",
+          "rawText": "월간 데이콘 주식 종료 가격 예측 Pre Competiton (with.데이커) 알고리즘 | 정형 | 회귀 | 금융 | NMAE 마감 447명 DACON RANKING POINT, XP",
+          "statusHints": [
+            "마감",
+            "종료"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 농작물 | NMAE",
+          "url": "https://www.dacon.io/competitions/official/235801/overview",
+          "rawText": "2021 농산물 가격예측 AI 경진대회 알고리즘 | 정형 | 회귀 | 농작물 | NMAE 연습 2,049명 상금 2,600만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "2021 Ego-Vision 손동작 인식 AI 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235805/overview",
+          "rawText": "2021 Ego-Vision 손동작 인식 AI 경진대회 알고리즘 | CV | 분류 | 제어 | LogLoss 연습 511명 상금 500만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | CV | 객체탐지 | 제어 | LogLoss",
+          "url": "https://www.dacon.io/competitions/official/235806/overview",
+          "rawText": "2021 교통 수(手)신호 동작 인식 AI 경진대회 알고리즘 | CV | 객체탐지 | 제어 | LogLoss 연습 425명 상금 500만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | NLP | 생성요약 | 자연어 | ROUGE-N",
+          "url": "https://www.dacon.io/competitions/official/235813/overview",
+          "rawText": "AI 기반 회의 녹취록 요약 경진대회 알고리즘 | NLP | 생성요약 | 자연어 | ROUGE-N 마감 1,033명 상금 1,000만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | NLP | 분류 | 생성요약 | ROUGE-N",
+          "url": "https://www.dacon.io/competitions/official/235829/overview",
+          "rawText": "가스・에너지분야 문서요약 모델개발 알고리즘 | NLP | 분류 | 생성요약 | ROUGE-N 마감 157명 상금 3,250만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 수요예측 | NMAE",
+          "url": "https://www.dacon.io/competitions/official/235830/overview",
+          "rawText": "가스공급량 수요예측 모델개발 알고리즘 | 정형 | 회귀 | 수요예측 | NMAE 마감 474명 상금 3,250만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | CV | 객체탐지 | 농산물 | Macro f1 score",
+          "url": "https://www.dacon.io/competitions/official/235842/overview",
+          "rawText": "작물 병해 분류 AI 경진대회 알고리즘 | CV | 객체탐지 | 농산물 | Macro f1 score 마감 169명 상금 100만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | CV | 회귀 | 생육 | RMSE",
+          "url": "https://www.dacon.io/competitions/official/235851/overview",
+          "rawText": "생육 기간 예측 경진대회 알고리즘 | CV | 회귀 | 생육 | RMSE 연습 675명 상금 300만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | CV | 분류 | 검출 | mAP",
+          "url": "https://www.dacon.io/competitions/official/235855/overview",
+          "rawText": "병변 검출 AI 경진대회 알고리즘 | CV | 분류 | 검출 | mAP 연습 824명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 금융 | NMAE",
+          "url": "https://www.dacon.io/competitions/official/235857/overview",
+          "rawText": "주식 종료 가격 예측 경진대회 알고리즘 | 정형 | 회귀 | 금융 | NMAE 마감 703명 상금 3,000만원",
+          "statusHints": [
+            "마감",
+            "종료"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 분류 | 추천 | Macro f1 score",
+          "url": "https://www.dacon.io/competitions/official/235863/overview",
+          "rawText": "잡케어 추천 알고리즘 경진대회 알고리즘 | 정형 | 분류 | 추천 | Macro f1 score 연습 1,650명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 분류 | 추천 | Macro f1 score",
+          "url": "https://www.dacon.io/competitions/official/235865/overview",
+          "rawText": "KNOW 기반 직업 추천 알고리즘 경진대회 알고리즘 | 정형 | 분류 | 추천 | Macro f1 score 연습 1,175명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "분석시각화 | 정형 & 비정형 | 분석 | 트렌드 | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/235866/overview",
+          "rawText": "구직자를 위한 기업 트렌드 시각화 경진대회 분석시각화 | 정형 & 비정형 | 분석 | 트렌드 | 정성평가 연습 936명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 운송량 | RMSE",
+          "url": "https://www.dacon.io/competitions/official/235867/overview",
+          "rawText": "물류 유통량 예측 경진대회 알고리즘 | 정형 | 회귀 | 운송량 | RMSE 연습 1,478명 상금 100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | CV | 분류 | 농작물 | Macro f1 score",
+          "url": "https://www.dacon.io/competitions/official/235870/overview",
+          "rawText": "농업 환경 변화에 따른 작물 병해 진단 AI 경진대회 알고리즘 | CV | 분류 | 농작물 | Macro f1 score 연습 1,931명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | NLP | 분류 | 자연어 | Accuracy",
+          "url": "https://www.dacon.io/competitions/official/235875/overview",
+          "rawText": "월간 데이콘 한국어 문장 관계 분류 경진대회 알고리즘 | NLP | 분류 | 자연어 | Accuracy 연습 1,358명 상금 100만원 + α",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "월간 데이콘 제 20대 대선 후보 정책•공약 시각화 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235891/overview",
+          "rawText": "월간 데이콘 제 20대 대선 후보 정책•공약 시각화 경진대회 분석시각화 | NLP | 분석 | 선거 | 정성평가 연습 734명 상금 100만원 + α",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "월간 데이콘 Computer Vision 이상치 탐지 알고리즘 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235894/overview",
+          "rawText": "월간 데이콘 Computer Vision 이상치 탐지 알고리즘 경진대회 알고리즘 | CV | 분류 | 이상탐지 | Macro f1 score 연습 1,419명 상금 100만원 + ɑ",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | CV | 회귀 | 생육 | NMAE",
+          "url": "https://www.dacon.io/competitions/official/235897/overview",
+          "rawText": "생육 환경 최적화 경진대회 알고리즘 | CV | 회귀 | 생육 | NMAE 연습 785명 상금 300만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | NLP | 분류 | 유사성 | Accuracy",
+          "url": "https://www.dacon.io/competitions/official/235900/overview",
+          "rawText": "월간 데이콘 코드 유사성 판단 AI 경진대회 알고리즘 | NLP | 분류 | 유사성 | Accuracy 연습 924명 상금 600만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "SW중심대학 | 예선 | 심리성향 | AUC",
+          "url": "https://www.dacon.io/competitions/official/235902/overview",
+          "rawText": "SW중심대학 공동 AI 경진대회 ❮예선❯ SW중심대학 | 예선 | 심리성향 | AUC 연습 771명 -",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | Audio | 분류 | 검출 | Macro f1 score",
+          "url": "https://www.dacon.io/competitions/official/235910/overview",
+          "rawText": "월간 데이콘 음향 데이터 COVID-19 검출 AI 경진대회 알고리즘 | Audio | 분류 | 검출 | Macro f1 score 연습 757명 상금 100만원 + ɑ",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "분석시각화 | 정형 | 분석 | 기후기술 | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/235911/overview",
+          "rawText": "탄소중립을 위한 기후기술 정보 시각화 경진대회 분석시각화 | 정형 | 분석 | 기후기술 | 정성평가 연습 396명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "제1회 KRX 금융 빅데이터 활용 아이디어 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235914/overview",
+          "rawText": "제1회 KRX 금융 빅데이터 활용 아이디어 경진대회 알고리즘 | 정형 | 회귀 | 금융 | 정성평가 마감 833명 상금 2,000만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 자율주행 | NRMSE",
+          "url": "https://www.dacon.io/competitions/official/235927/overview",
+          "rawText": "자율주행 센서의 안테나 성능 예측 AI 경진대회 알고리즘 | 정형 | 회귀 | 자율주행 | NRMSE 연습 2,192명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 분류 | 탐지 | Macro f1 score",
+          "url": "https://www.dacon.io/competitions/official/235930/overview",
+          "rawText": "신용카드 사기 거래 탐지 AI 경진대회 월간 데이콘 알고리즘 | 정형 | 분류 | 탐지 | Macro f1 score 연습 2,221명 상금 100만 원 + ɑ",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "LG | 채용 | B-cell | Epitope | Classification | macro-f1",
+          "url": "https://www.dacon.io/competitions/official/235932/overview",
+          "rawText": "2022 AI 대학원 챌린지 LG | 채용 | B-cell | Epitope | Classification | macro-f1 연습 327명 상금 2,500만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "데이크루 | 서포터즈 | 3기",
+          "url": "https://www.dacon.io/competitions/official/235946/overview",
+          "rawText": "데이크루 3기 🚀 데이크루 | 서포터즈 | 3기 연습 60명 상금 100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "팔당댐 홍수 안전운영에 따른 한강 수위예측 AI 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235949/overview",
+          "rawText": "팔당댐 홍수 안전운영에 따른 한강 수위예측 AI 경진대회 알고리즘 | 정형 | 회귀 | 시계열 | RMSE 마감 1,330명 상금 1,100만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | CV | 분류 | 3D | Accuracy",
+          "url": "https://www.dacon.io/competitions/official/235951/overview",
+          "rawText": "월간 데이콘 숫자 3D 이미지 분류 AI 경진대회 알고리즘 | CV | 분류 | 3D | Accuracy 연습 543명 상금 100만원 + ɑ",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 에너지 | 자체검증",
+          "url": "https://www.dacon.io/competitions/official/235952/overview",
+          "rawText": "2022 인하 인공지능 챌린지 <본 대회> 알고리즘 | 정형 | 회귀 | 에너지 | 자체검증 마감 153명 상금 900만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "2022 Samsung AI Challenge (Materials Discovery)",
+          "url": "https://www.dacon.io/competitions/official/235953/overview",
+          "rawText": "2022 Samsung AI Challenge (Materials Discovery) 알고리즘 | 정형 | 회귀 | 물성 | RMSE 연습 613명 상금 2,100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "2022 Samsung AI Challenge (3D Metrology)",
+          "url": "https://www.dacon.io/competitions/official/235954/overview",
+          "rawText": "2022 Samsung AI Challenge (3D Metrology) 알고리즘 | CV | 회귀 | SEM | RMSE 연습 793명 상금 2,100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 생육 | 회귀 | RMSE",
+          "url": "https://www.dacon.io/competitions/official/235961/overview",
+          "rawText": "청경채 성장 예측 AI 경진대회 알고리즘 | 정형 | 생육 | 회귀 | RMSE 연습 1,143명 상금 300만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "SW중심대학 | 본선 | OCR | Accuracy",
+          "url": "https://www.dacon.io/competitions/official/235970/overview",
+          "rawText": "SW중심대학 공동 AI 경진대회 <본선> SW중심대학 | 본선 | OCR | Accuracy 연습 370명 상금 950만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 비전 | Image Super-Resolution | PSNR",
+          "url": "https://www.dacon.io/competitions/official/235977/overview",
+          "rawText": "AI 양재 허브 인공지능 오픈소스 경진대회 알고리즘 | 비전 | Image Super-Resolution | PSNR 연습 592명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 비전 | 언어 | 분류 | Weighted f1 score",
+          "url": "https://www.dacon.io/competitions/official/235978/overview",
+          "rawText": "2022 관광데이터 AI 경진대회 알고리즘 | 비전 | 언어 | 분류 | Weighted f1 score 연습 1,313명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "월간 데이콘 KOSPI 기반 분석 시각화 경진대회",
+          "url": "https://www.dacon.io/competitions/official/235980/overview",
+          "rawText": "월간 데이콘 KOSPI 기반 분석 시각화 경진대회 분석시각화 | 정형 | 분석 | 금융 | 정성평가 연습 485명 인증서",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 교통 | 회귀 | MAE",
+          "url": "https://www.dacon.io/competitions/official/235985/overview",
+          "rawText": "제주도 도로 교통량 예측 AI 경진대회 알고리즘 | 정형 | 교통 | 회귀 | MAE 연습 2,243명 상금 500만원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 비전 | 분류 | Macro f1 score",
+          "url": "https://www.dacon.io/competitions/official/236006/overview",
+          "rawText": "월간 데이콘 예술 작품 화가 분류 AI 경진대회 알고리즘 | 비전 | 분류 | Macro f1 score 연습 921명 인증서",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "대도시권 광역교통 빅데이터 분석 시각화 및 활용 아이디어 경진대회",
+          "url": "https://www.dacon.io/competitions/official/236009/overview",
+          "rawText": "대도시권 광역교통 빅데이터 분석 시각화 및 활용 아이디어 경진대회 분석아이디어 | 정형 | 교통 | 정성평가 연습 384명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 비전 | 정형 | 의료 | 분류 | Macro F1 score",
+          "url": "https://www.dacon.io/competitions/official/236011/overview",
+          "rawText": "유방암의 임파선 전이 예측 AI 경진대회 알고리즘 | 비전 | 정형 | 의료 | 분류 | Macro F1 score 연습 1,351명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "디지털 활용 관광 산업발전 BI(Business Idea) 경진대회",
+          "url": "https://www.dacon.io/competitions/official/236012/overview",
+          "rawText": "디지털 활용 관광 산업발전 BI(Business Idea) 경진대회 제주도 | 관광 | 산업 | 분석 아이디어 연습 189명 상품",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 건설기계 | 분류 | Macro f1 score",
+          "url": "https://www.dacon.io/competitions/official/236013/overview",
+          "rawText": "건설기계 오일 상태 분류 AI 경진대회 알고리즘 | 정형 | 건설기계 | 분류 | Macro f1 score 연습 1,487명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 언어 | 분류 | Macro f1 score",
+          "url": "https://www.dacon.io/competitions/official/236027/overview",
+          "rawText": "월간 데이콘 발화자의 감정인식 AI 경진대회 알고리즘 | 언어 | 분류 | Macro f1 score 연습 674명 인증서",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 시계열 | 수요 예측 | 회귀 | MAE",
+          "url": "https://www.dacon.io/competitions/official/236029/overview",
+          "rawText": "2022 UOS 빅데이터 알고리즘 경진대회 알고리즘 | 정형 | 시계열 | 수요 예측 | 회귀 | MAE 연습 814명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 바이오 | 회귀 | RMSE",
+          "url": "https://www.dacon.io/competitions/official/236030/overview",
+          "rawText": "바이오 AI융합 해커톤 알고리즘 | 바이오 | 회귀 | RMSE 연습 73명 상금 300만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 생육 | 회귀 | 생성형 AI | 생성 | RMSE | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/236033/overview",
+          "rawText": "상추의 생육 환경 생성 AI 경진대회 알고리즘 | 정형 | 생육 | 회귀 | 생성형 AI | 생성 | RMSE | 정성평가 연습 903명 상금 300만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 유전체 | 분류 | Macro F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236035/overview",
+          "rawText": "유전체 정보 품종 분류 AI 경진대회 알고리즘 | 유전체 | 분류 | Macro F1 Score 연습 1,454명 상금 300만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 음향 | 비지도학습 | 이상치 탐지 | Macro F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236036/overview",
+          "rawText": "월간 데이콘 기계 고장 진단 AI 경진대회 알고리즘 | 음향 | 비지도학습 | 이상치 탐지 | Macro F1 Score 연습 964명 인증서",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 언어 | 분류 | Weighted f1 Score",
+          "url": "https://www.dacon.io/competitions/official/236037/overview",
+          "rawText": "문장 유형 분류 AI 경진대회 알고리즘 | 언어 | 분류 | Weighted f1 Score 연습 1,079명 상금 500만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | NMAE",
+          "url": "https://www.dacon.io/competitions/official/236038/overview",
+          "rawText": "감귤 착과량 예측 AI 경진대회 알고리즘 | 정형 | 회귀 | NMAE 연습 1,088명 상금 500만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 채용 | 광학문자인식 | Accuracy",
+          "url": "https://www.dacon.io/competitions/official/236042/overview",
+          "rawText": "2023 교원그룹 AI OCR 챌린지 알고리즘 | 채용 | 광학문자인식 | Accuracy 연습 1,366명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 비전 | 분류 | Accuracy",
+          "url": "https://www.dacon.io/competitions/official/236046/overview",
+          "rawText": "포디블록 구조 추출 AI 경진대회 알고리즘 | 비전 | 분류 | Accuracy 연습 944명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "데이크루 | 서포터즈 | 4기",
+          "url": "https://www.dacon.io/competitions/official/236047/overview",
+          "rawText": "데이크루 4기 데이크루 | 서포터즈 | 4기 마감 204명 상금 100만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 동영상 | 비전 | 분류 | Macro F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236050/overview",
+          "rawText": "월간 데이콘 TV 손동작 제어 인식 AI 경진대회 알고리즘 | 동영상 | 비전 | 분류 | Macro F1 Score 연습 583명 인증서",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "채용 | 알고리즘 | 정형 | 스마트 공장 | LG Aimers | 분류 | Macro F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236055/overview",
+          "rawText": "스마트 공장 제품 품질 상태 분류 AI 온라인 해커톤 채용 | 알고리즘 | 정형 | 스마트 공장 | LG Aimers | 분류 | Macro F1 Score 연습 1,642명 본선 진출",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "채용 | 알고리즘 | 동영상 | 비전 | 분류 | Macro F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236064/overview",
+          "rawText": "코스포 x 데이콘 자동차 충돌 분석 AI경진대회 채용 채용 | 알고리즘 | 동영상 | 비전 | 분류 | Macro F1 Score 연습 974명 채용",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | ChatGPT | 프롬프트 엔지니어링 | 언어 | 분류 | Macro F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236071/overview",
+          "rawText": "생성 AI ChatGPT 활용 AI 경진대회 월간 데이콘 알고리즘 | ChatGPT | 프롬프트 엔지니어링 | 언어 | 분류 | Macro F1 Score 연습 1,237명 인증서",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "채용 | 알고리즘 | 정형 | 스마트 공장 | LG Aimers | 분류 | Macro F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236080/overview",
+          "rawText": "스마트 공장 제품 품질 상태 분류 AI 오프라인 해커톤 채용 | 알고리즘 | 정형 | 스마트 공장 | LG Aimers | 분류 | Macro F1 Score 마감 107명 상금 1,000만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 비전 | 분류 | MLOps | Weighted F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236082/overview",
+          "rawText": "도배 하자 유형 분류 AI 경진대회 알고리즘 | 비전 | 분류 | MLOps | Weighted F1 Score 연습 2,124명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "아이디어 | 금융 | AI | 서비스 | 플랫폼 | 알고리즘 | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/236088/overview",
+          "rawText": "신한AI, 보다 나은 금융 생활을 위한 AI 서비스 아이디어 경진대회 아이디어 | 금융 | AI | 서비스 | 플랫폼 | 알고리즘 | 정성평가 연습 1,334명 상금 500만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "데이크루 | 서포터즈 | 5기",
+          "url": "https://www.dacon.io/competitions/official/236091/overview",
+          "rawText": "데이크루 5기 데이크루 | 서포터즈 | 5기 연습 116명 기프티콘, 인증서",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "SW중심대학 | 알고리즘 | 비전 | 객체분할 | DiceScore",
+          "url": "https://www.dacon.io/competitions/official/236092/overview",
+          "rawText": "SW중심대학 공동 AI 경진대회 2023 SW중심대학 | 알고리즘 | 비전 | 객체분할 | DiceScore 연습 1,080명 상금 1,700만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "제2회 코스포 x 데이콘 도서 추천 알고리즘 AI경진대회 채용",
+          "url": "https://www.dacon.io/competitions/official/236093/overview",
+          "rawText": "제2회 코스포 x 데이콘 도서 추천 알고리즘 AI경진대회 채용 채용 | 알고리즘 | 정형 | 추천시스템 | RMSE 연습 1,332명 채용",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 분류 | 준지도학습 | 항공 | LogLoss",
+          "url": "https://www.dacon.io/competitions/official/236094/overview",
+          "rawText": "월간 데이콘 항공편 지연 예측 AI 경진대회 알고리즘 | 정형 | 분류 | 준지도학습 | 항공 | LogLoss 연습 1,622명 인증서",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 음향 | 감정인식 | 분류 | Accuracy",
+          "url": "https://www.dacon.io/competitions/official/236105/overview",
+          "rawText": "음성 감정 인식 AI 경진대회 월간 데이콘 알고리즘 | 음향 | 감정인식 | 분류 | Accuracy 연습 976명 인증서",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 비전 | 객체 탐지 | mAP",
+          "url": "https://www.dacon.io/competitions/official/236107/overview",
+          "rawText": "합성데이터 기반 객체 탐지 AI 경진대회 알고리즘 | 비전 | 객체 탐지 | mAP 연습 1,769명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 언어 | 분류 | Accuracy",
+          "url": "https://www.dacon.io/competitions/official/236112/overview",
+          "rawText": "월간 데이콘 법원 판결 예측 AI 경진대회 알고리즘 | 언어 | 분류 | Accuracy 연습 1,165명 인증서",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 추천시스템 | 멀티모달 | NDCG",
+          "url": "https://www.dacon.io/competitions/official/236113/overview",
+          "rawText": "2023 인하 인공지능 챌린지 알고리즘 | 추천시스템 | 멀티모달 | NDCG 연습 150명 상금 700만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "데이크루 | 서포터즈 | 6기",
+          "url": "https://www.dacon.io/competitions/official/236116/overview",
+          "rawText": "데이크루 6기 데이크루 | 서포터즈 | 6기 연습 205명 상금 100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 시계열 | 포트폴리오 구성 | 금융 | 샤프 지수",
+          "url": "https://www.dacon.io/competitions/official/236117/overview",
+          "rawText": "제2회 KRX 주식 투자 알고리즘 경진대회 알고리즘 | 정형 | 시계열 | 포트폴리오 구성 | 금융 | 샤프 지수 마감 1,322명 상금 5,000만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 멀티모달 | 언어 | 비전 | 이미지 기반 질의 응답 | Accuracy",
+          "url": "https://www.dacon.io/competitions/official/236118/overview",
+          "rawText": "이미지 기반 질의 응답 AI 경진대회 월간 데이콘 알고리즘 | 멀티모달 | 언어 | 비전 | 이미지 기반 질의 응답 | Accuracy 연습 663명 인증서",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 시계열 | 에너지 | SMAPE",
+          "url": "https://www.dacon.io/competitions/official/236125/overview",
+          "rawText": "2023 전력사용량 예측 AI 경진대회 알고리즘 | 정형 | 시계열 | 에너지 | SMAPE 연습 3,166명 상금 2,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 분자 구조 | 정형 | 회귀 | 바이오 | RMSE",
+          "url": "https://www.dacon.io/competitions/official/236127/overview",
+          "rawText": "제1회 신약개발 AI 경진대회 알고리즘 | 분자 구조 | 정형 | 회귀 | 바이오 | RMSE 연습 1,723명 상금 2,900만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "채용 | 알고리즘 | 정형 | 시계열 | LG Aimers | 수요 예측 | SFA",
+          "url": "https://www.dacon.io/competitions/official/236129/overview",
+          "rawText": "온라인 채널 제품 판매량 예측 AI 온라인 해커톤 채용 | 알고리즘 | 정형 | 시계열 | LG Aimers | 수요 예측 | SFA 연습 1,908명 본선 진출",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "2023 Samsung AI Challenge : Camera-Invariant Domain Adaptation",
+          "url": "https://www.dacon.io/competitions/official/236132/overview",
+          "rawText": "2023 Samsung AI Challenge : Camera-Invariant Domain Adaptation 알고리즘 | 비전 | 이미지 분할 | 도메인 적응 | mIoU 연습 783명 상금 2,100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "2023 Samsung AI Challenge : Machine Learning Force Fields",
+          "url": "https://www.dacon.io/competitions/official/236133/overview",
+          "rawText": "2023 Samsung AI Challenge : Machine Learning Force Fields 알고리즘 | 정형 | 회귀 | EF 연습 635명 상금 2,100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "2023 Samsung AI Challenge : Image Quality Assessment",
+          "url": "https://www.dacon.io/competitions/official/236134/overview",
+          "rawText": "2023 Samsung AI Challenge : Image Quality Assessment 알고리즘 | 비전 | 언어 | 이미지 캡셔닝 | Custom Metric 연습 443명 상금 2,100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "2023 NH 투자증권 빅데이터 경진대회, “블룸버그, 나스닥과 함께 세계속으로!”",
+          "url": "https://www.dacon.io/competitions/official/236145/overview",
+          "rawText": "2023 NH 투자증권 빅데이터 경진대회, “블룸버그, 나스닥과 함께 세계속으로!” 아이디어 | 정형 | 언어 | 해외주식 분석 | 금융 | 정성평가 연습 1,155명 상금 5,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "초전도체 임계온도 예측 AI 해커톤 - 월간 데이콘 쇼츠",
+          "url": "https://www.dacon.io/competitions/official/236146/overview",
+          "rawText": "초전도체 임계온도 예측 AI 해커톤 - 월간 데이콘 쇼츠 알고리즘 | 정형 | 회귀 | 초전도체 | NMAE 연습 371명 인증서",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "채용 | 알고리즘 | 정형 | 시계열 | LG Aimers | 수요 예측 | SFA",
+          "url": "https://www.dacon.io/competitions/official/236156/overview",
+          "rawText": "온라인 채널 제품 판매량 예측 AI 오프라인 해커톤 채용 | 알고리즘 | 정형 | 시계열 | LG Aimers | 수요 예측 | SFA 마감 110명 상금 1,000만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 채용 | 정형 | 조선해양 | 회귀 | MAE",
+          "url": "https://www.dacon.io/competitions/official/236158/overview",
+          "rawText": "HD현대 AI Challenge 알고리즘 | 채용 | 정형 | 조선해양 | 회귀 | MAE 연습 1,668명 상금 2,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 언어 | 분류 | 클러스터링 | 라벨링 | Macro F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236159/overview",
+          "rawText": "월간 데이콘 쇼츠 - 뉴스 기사 레이블 복구 해커톤 알고리즘 | 언어 | 분류 | 클러스터링 | 라벨링 | Macro F1 Score 연습 522명 인증서",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "용인시 | 알고리즘 | 언어 | 분류 | Macro F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236161/overview",
+          "rawText": "2023 용인시 SW/AI 해커톤 용인시 | 알고리즘 | 언어 | 분류 | Macro F1 Score 연습 128명 상금 500만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 추천시스템 | Recall",
+          "url": "https://www.dacon.io/competitions/official/236170/overview",
+          "rawText": "제1회 국민대학교 AI빅데이터 분석 경진대회 알고리즘 | 정형 | 추천시스템 | Recall 연습 1,202명 상금 400만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 시계열 | 농업 | RMSE | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/236176/overview",
+          "rawText": "제주 특산물 가격 예측 AI 경진대회 알고리즘 | 정형 | 회귀 | 시계열 | 농업 | RMSE | 정성평가 연습 2,827명 상금 400만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "AI vs Human 텍스트 판별 해커톤 -월간 데이콘 쇼츠",
+          "url": "https://www.dacon.io/competitions/official/236178/overview",
+          "rawText": "AI vs Human 텍스트 판별 해커톤 -월간 데이콘 쇼츠 알고리즘 | 언어 | 분류 | 탐지 연습 335명 인증서",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 교통 | RMSLE | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/236193/overview",
+          "rawText": "대구 교통사고 피해 예측 AI 경진대회 알고리즘 | 정형 | 회귀 | 교통 | RMSLE | 정성평가 연습 2,402명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "아이디어 | 채용 | 정형 | 플랫폼 분석 | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/236198/overview",
+          "rawText": "데이터 분석 아이디어 경진대회 - 월간 데이콘 아이디어 | 채용 | 정형 | 플랫폼 분석 | 정성평가 연습 316명 인증서",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "서울시립대 | 알고리즘 | 비전 | 다중 객체 분류 | mAP",
+          "url": "https://www.dacon.io/competitions/official/236201/overview",
+          "rawText": "2023 AICOSS 해커톤 경진대회 서울시립대 | 알고리즘 | 비전 | 다중 객체 분류 | mAP 연습 93명 상금 1140만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "2024 고등학생 AI경진대회 제1회 제주 ❮예선❯",
+          "url": "https://www.dacon.io/competitions/official/236202/overview",
+          "rawText": "2024 고등학생 AI경진대회 제1회 제주 ❮예선❯ 알고리즘 | 정형 | 이상탐지 | 금융 | AUC 연습 174명 본선 진출",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 월간 데이콘 | 대학 대항전 | 비전 | 자기지도학습 | 기술 혁신 | 분류",
+          "url": "https://www.dacon.io/competitions/official/236207/overview",
+          "rawText": "대학 대항전 : 퍼즐 이미지 AI 경진대회 알고리즘 | 월간 데이콘 | 대학 대항전 | 비전 | 자기지도학습 | 기술 혁신 | 분류 연습 852명 인증서",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "2024 고등학생 AI경진대회 제1회 제주 ❮본선❯",
+          "url": "https://www.dacon.io/competitions/official/236215/overview",
+          "rawText": "2024 고등학생 AI경진대회 제1회 제주 ❮본선❯ 알고리즘 | 정형 | 이상탐지 | 금융 | AUC 마감 60명 상금 600만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 언어 | 생성형 AI | LLM | MLOps | QA | Cosine Similarity",
+          "url": "https://www.dacon.io/competitions/official/236216/overview",
+          "rawText": "도배 하자 질의 응답 처리 : 한솔데코 시즌2 생성 AI 경진대회 알고리즘 | 언어 | 생성형 AI | LLM | MLOps | QA | Cosine Similarity 연습 1,485명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "아이디어 | 정형 | 시계열 | 이커머스 | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/236222/overview",
+          "rawText": "이커머스 고객 세분화 분석 아이디어 경진대회 아이디어 | 정형 | 시계열 | 이커머스 | 정성평가 연습 1,527명 인증서",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 월간 데이콘 | 비전 | 비지도학습 | 이상 탐지 | F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236224/overview",
+          "rawText": "반도체 소자 이상 탐지 AI 경진대회 알고리즘 | 월간 데이콘 | 비전 | 비지도학습 | 이상 탐지 | F1 Score 연습 1,384명 인증서",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 월간 데이콘 | NLP | 유사도 | Accuracy",
+          "url": "https://www.dacon.io/competitions/official/236228/overview",
+          "rawText": "코드 유사성 판단 시즌2 AI 경진대회 알고리즘 | 월간 데이콘 | NLP | 유사도 | Accuracy 연습 349명 인증서",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 하이퍼파라미터 | 모델 튜닝 | 노코딩 | AUC",
+          "url": "https://www.dacon.io/competitions/official/236229/overview",
+          "rawText": "모델 튜닝 챌린지 : 월간 데이콘 파일럿 알고리즘 | 정형 | 하이퍼파라미터 | 모델 튜닝 | 노코딩 | AUC 연습 512명 인증서 + 데이스쿨",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "아이디어 | 정형 | 시계열 | 이커머스 | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/236248/overview",
+          "rawText": "KPI 도출 비즈니스 전략 아이디어 경진대회 아이디어 | 정형 | 시계열 | 이커머스 | 정성평가 연습 571명 인증서 + 데이스쿨",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 월간 데이콘 | Vision | 분류 | Macro F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236251/overview",
+          "rawText": "저해상도 조류 이미지 분류 AI 경진대회 알고리즘 | 월간 데이콘 | Vision | 분류 | Macro F1 Score 연습 1,116명 인증서 + 데이스쿨",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "SW중심대학 | SW부문 | AI·SW개발 | 생성AI | 생성형 AI",
+          "url": "https://www.dacon.io/competitions/official/236252/overview",
+          "rawText": "SW중심대학 디지털 경진대회_SW와 생성 AI의 만남 : SW 부문 SW중심대학 | SW부문 | AI·SW개발 | 생성AI | 생성형 AI 연습 271명 상금 1,220 만원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "SW중심대학 | AI부문 | 알고리즘 | 음성 | 도메인 적응 | AUC | Brier Score | ECE",
+          "url": "https://www.dacon.io/competitions/official/236253/overview",
+          "rawText": "SW중심대학 디지털 경진대회_SW와 생성 AI의 만남 : AI 부문 SW중심대학 | AI부문 | 알고리즘 | 음성 | 도메인 적응 | AUC | Brier Score | ECE 연습 940명 상금 1,220 만원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "아이디어 기획 : 대구광역시 공공데이터 활용 창업경진대회 2024",
+          "url": "https://www.dacon.io/competitions/official/236255/overview",
+          "rawText": "아이디어 기획 : 대구광역시 공공데이터 활용 창업경진대회 2024 아이디어 | 공공데이터 | 창업 | 정성평가 마감 125명 상금 300만원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "제품 및 서비스 개발 : 대구광역시 공공데이터 활용 창업경진대회 2024",
+          "url": "https://www.dacon.io/competitions/official/236256/overview",
+          "rawText": "제품 및 서비스 개발 : 대구광역시 공공데이터 활용 창업경진대회 2024 아이디어 | 공공데이터 | 창업 | 정성평가 마감 44명 상금 500만원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 월간 데이콘 | 정형 | 시계열 | 분류 | 웹 로그 | AUC",
+          "url": "https://www.dacon.io/competitions/official/236258/overview",
+          "rawText": "웹 광고 클릭률 예측 AI 경진대회 알고리즘 | 월간 데이콘 | 정형 | 시계열 | 분류 | 웹 로그 | AUC 연습 1,176명 인증서 + 데이스쿨",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "데이콘 파일럿 | 알고리즘 | 정형 | 결측치 보간 | 노코딩 | RMSE",
+          "url": "https://www.dacon.io/competitions/official/236263/overview",
+          "rawText": "결측치 보간 챌린지 : 월간 데이콘 파일럿 데이콘 파일럿 | 알고리즘 | 정형 | 결측치 보간 | 노코딩 | RMSE 연습 380명 인증서 + 데이스쿨",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "제 6회 대구 빅데이터 분석 경진대회 : 대구시 현안 해결 분야",
+          "url": "https://www.dacon.io/competitions/official/236276/overview",
+          "rawText": "제 6회 대구 빅데이터 분석 경진대회 : 대구시 현안 해결 분야 아이디어 | 공공데이터 | 시각화 | 정성평가 마감 43명 상금 1,000만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "제 6회 대구 빅데이터 분석 경진대회 : 데이터 분석 및 활용 분야 - 공공 부문",
+          "url": "https://www.dacon.io/competitions/official/236283/overview",
+          "rawText": "제 6회 대구 빅데이터 분석 경진대회 : 데이터 분석 및 활용 분야 - 공공 부문 아이디어 | 공공데이터 | 시각화 | 정성평가 마감 160명 상금 2,400만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "제 6회 대구 빅데이터 분석 경진대회 : 데이터 시각화 분야",
+          "url": "https://www.dacon.io/competitions/official/236284/overview",
+          "rawText": "제 6회 대구 빅데이터 분석 경진대회 : 데이터 시각화 분야 아이디어 | 공공데이터 | 시각화 | 정성평가 마감 86명 상금 550만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "제 6회 대구 빅데이터 분석 경진대회 : 데이터 분석 및 활용 분야 - 에너지 부문",
+          "url": "https://www.dacon.io/competitions/official/236285/overview",
+          "rawText": "제 6회 대구 빅데이터 분석 경진대회 : 데이터 분석 및 활용 분야 - 에너지 부문 아이디어 | 공공데이터 | 시각화 | 정성평가 마감 123명 상금 2,400만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "제 6회 대구 빅데이터 분석 경진대회 : 데이터 분석 및 활용 분야 - 산업 부문",
+          "url": "https://www.dacon.io/competitions/official/236286/overview",
+          "rawText": "제 6회 대구 빅데이터 분석 경진대회 : 데이터 분석 및 활용 분야 - 산업 부문 아이디어 | 공공데이터 | 시각화 | 정성평가 마감 140명 상금 2,400만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "제 6회 대구 빅데이터 분석 경진대회 : 데이터 분석 및 활용 분야 - 소비자 부문",
+          "url": "https://www.dacon.io/competitions/official/236289/overview",
+          "rawText": "제 6회 대구 빅데이터 분석 경진대회 : 데이터 분석 및 활용 분야 - 소비자 부문 아이디어 | 공공데이터 | 시각화 | 정성평가 마감 188명 상금 2,400만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 월간 데이콘 | 정형 | 언어 | 추천시스템 | 웹 로그 | Recall",
+          "url": "https://www.dacon.io/competitions/official/236290/overview",
+          "rawText": "웹 기사 추천 AI 경진대회 알고리즘 | 월간 데이콘 | 정형 | 언어 | 추천시스템 | 웹 로그 | Recall 연습 538명 인증서 + 데이스쿨",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 언어 | 생성형 AI | LLM | QA | F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236291/overview",
+          "rawText": "2024 인하 인공지능 챌린지 : 생성 AI 알고리즘 | 언어 | 생성형 AI | LLM | QA | F1 Score 연습 231명 상금 700만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "아이디어 | 생성형 AI | 생성 | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/236293/overview",
+          "rawText": "새싹 해커톤 : 생성 AI 활용 아이디어 | 생성형 AI | 생성 | 정성평가 마감 618명 상금 1,500만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | NLP | 생성형 AI | LLM | 질의응답 | F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236295/overview",
+          "rawText": "재정정보 생성 AI 활용 검색 알고리즘 경진대회 알고리즘 | NLP | 생성형 AI | LLM | 질의응답 | F1 Score 연습 1,132명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 금융보안원 | 생성형 AI | 생성 | 정형 | 분류 | Macro F1 Score | TCAP",
+          "url": "https://www.dacon.io/competitions/official/236297/overview",
+          "rawText": "FSI AIxData Challenge 2024 : 생성 AI 알고리즘 | 금융보안원 | 생성형 AI | 생성 | 정형 | 분류 | Macro F1 Score | TCAP 연습 630명 상금 1,700만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "2024 Samsung AI Challenge : Machine Learning Force Fields",
+          "url": "https://www.dacon.io/competitions/official/236322/overview",
+          "rawText": "2024 Samsung AI Challenge : Machine Learning Force Fields 알고리즘 | 채용 | 반도체 | 정형 | 회귀 | EF | OOD AUROC 마감 520명 상금 2,100만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "2024 Samsung AI Challenge : Black-box Optimization",
+          "url": "https://www.dacon.io/competitions/official/236323/overview",
+          "rawText": "2024 Samsung AI Challenge : Black-box Optimization 알고리즘 | 채용 | 정형 | 최적화 | Recall 연습 1,038명 상금 2,100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 분자 구조 | 정형 | 회귀 | 바이오 | NRMSE",
+          "url": "https://www.dacon.io/competitions/official/236336/overview",
+          "rawText": "제2회 AI 신약개발 경진대회 알고리즘 | 분자 구조 | 정형 | 회귀 | 바이오 | NRMSE 연습 1,810명 상금 2,200만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "빅데이터 | NH | 분석 | AI | ETF | Microsoft | Tableau | 시각화 | 아이디어",
+          "url": "https://www.dacon.io/competitions/official/236348/overview",
+          "rawText": "2024 NH 투자증권 빅데이터 경진대회 빅데이터 | NH | 분석 | AI | ETF | Microsoft | Tableau | 시각화 | 아이디어 마감 879명 상금 6,300만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 분류 | 바이오 | AUC",
+          "url": "https://www.dacon.io/competitions/official/236354/overview",
+          "rawText": "2024 바이오AI 융합 경진대회 알고리즘 | 정형 | 분류 | 바이오 | AUC 연습 132명 상금 600만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 유전체 | 정형 | 분류 | 바이오 | Macro F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236355/overview",
+          "rawText": "2024 생명연구자원 AI활용 경진대회 : 인공지능 활용 부문 알고리즘 | 유전체 | 정형 | 분류 | 바이오 | Macro F1 Score 연습 1,849명 상금 1,110만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "생성 AI ChatGPT 활용 학습 콘텐츠 제작 아이디어 경진대회",
+          "url": "https://www.dacon.io/competitions/official/236368/overview",
+          "rawText": "생성 AI ChatGPT 활용 학습 콘텐츠 제작 아이디어 경진대회 빅데이터 | 분석 | 아이디어 | ChatGPT | 학습 연습 177명 데이스쿨 프로 구독권",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "아이디어 | 헬스케어 | 보건의료 | 혁신 | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/236376/overview",
+          "rawText": "헬스케어 데이터 경진대회 : Track 2 아이디어 | 헬스케어 | 보건의료 | 혁신 | 정성평가 마감 56명 상금 300만원 상당의 부상",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "헬스케어 데이터 경진대회 : Track 1",
+          "url": "https://www.dacon.io/competitions/official/236377/overview",
+          "rawText": "헬스케어 데이터 경진대회 : Track 1 정형 | 알고리즘 | 헬스케어 | 의료 마감 75명 상금 상품 300만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "프롬프트 엔지니어링 | ChatGPT | 노코딩 | 분류 | Macro F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236379/overview",
+          "rawText": "2024 자동차 데이터 분석 경진대회 : 생성 AI 프롬프트 엔지니어링 프롬프트 엔지니어링 | ChatGPT | 노코딩 | 분류 | Macro F1 Score 연습 1,010명 상금 700만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "데이터·AI를 활용한 물가 예측 경진대회 : 농산물 가격을 중심으로",
+          "url": "https://www.dacon.io/competitions/official/236381/overview",
+          "rawText": "데이터·AI를 활용한 물가 예측 경진대회 : 농산물 가격을 중심으로 알고리즘 | 농산물 | 정형 | 시계열 | 회귀 | NMAE 연습 1,900명 상금 5,800만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 의료 | 유전자 | 비전 | 회귀 | PCC",
+          "url": "https://www.dacon.io/competitions/official/236382/overview",
+          "rawText": "제1회 Medical AI (MAI) 경진대회 알고리즘 | 의료 | 유전자 | 비전 | 회귀 | PCC 연습 893명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | Vision | 이미지 변환 | PSNR",
+          "url": "https://www.dacon.io/competitions/official/236412/overview",
+          "rawText": "2024 제 4회 Uni-DTHON 데이터톤 알고리즘 | Vision | 이미지 변환 | PSNR 마감 41명 상금 350만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "<본선> 데이터·AI를 활용한 물가 예측 경진대회 : 농산물 가격을 중심으로",
+          "url": "https://www.dacon.io/competitions/official/236417/overview",
+          "rawText": "<본선> 데이터·AI를 활용한 물가 예측 경진대회 : 농산물 가격을 중심으로 알고리즘 | 농산물 | 정형 | 시계열 | 정성 평가 | 발표 평가 마감 60명 상금 5,800만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 월간 데이콘 | 비전 | 이미지 복원 | 이미지 색상화 | SSIM",
+          "url": "https://www.dacon.io/competitions/official/236420/overview",
+          "rawText": "이미지 색상화 및 손실 부분 복원 AI 경진대회 알고리즘 | 월간 데이콘 | 비전 | 이미지 복원 | 이미지 색상화 | SSIM 연습 790명 데이스쿨 프로 구독권",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "2024 제4회 K-water AI 경진대회 : 상수도 관망 이상 감지 AI 알고리즘 개발",
+          "url": "https://www.dacon.io/competitions/official/236423/overview",
+          "rawText": "2024 제4회 K-water AI 경진대회 : 상수도 관망 이상 감지 AI 알고리즘 개발 알고리즘 | 시계열 | 정형 | 이상 탐지 연습 1,333명 상금 800만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 월간 데이콘 | 최적화 | TSP | Euclidean Distance",
+          "url": "https://www.dacon.io/competitions/official/236437/overview",
+          "rawText": "선물 배송 경로 최적화 경진대회: 산타와 루돌프의 워라벨 사수작전 알고리즘 | 월간 데이콘 | 최적화 | TSP | Euclidean Distance 연습 577명 데이스쿨 프로 구독권",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 월간 데이콘 | NLP | 생성형 AI | LLM | F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236446/overview",
+          "rawText": "난독화된 한글 리뷰 복원 및 생성 AI 경진대회 알고리즘 | 월간 데이콘 | NLP | 생성형 AI | LLM | F1 Score 연습 832명 데이스쿨 프로 구독권",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 월간 데이콘 | NLP | 정형 | Feature Engineering | ROC-AUC",
+          "url": "https://www.dacon.io/competitions/official/236451/overview",
+          "rawText": "악성 URL 분류 AI 경진대회 알고리즘 | 월간 데이콘 | NLP | 정형 | Feature Engineering | ROC-AUC 연습 821명 데이스쿨 프로 구독권",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "LG Aimers | 채용 | 알고리즘 | 의료 | 바이오 | 정형 | 분류 | ROC-AUC",
+          "url": "https://www.dacon.io/competitions/official/236452/overview",
+          "rawText": "난임 환자 대상 임신 성공 여부 예측 AI 온라인 해커톤 LG Aimers | 채용 | 알고리즘 | 의료 | 바이오 | 정형 | 분류 | ROC-AUC 마감 1,566명 본선 진출",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "건설공사 사고 예방 및 대응책 생성 : 한솔데코 시즌3 생성 AI 경진대회",
+          "url": "https://www.dacon.io/competitions/official/236455/overview",
+          "rawText": "건설공사 사고 예방 및 대응책 생성 : 한솔데코 시즌3 생성 AI 경진대회 알고리즘 | NLP | 생성형 AI | LLM | MLOps | 유사도 연습 1,391명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 월간 데이콘 | 정형 | 금융 | 분류 | F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236460/overview",
+          "rawText": "신용카드 고객 세그먼트 분류 AI 경진대회 알고리즘 | 월간 데이콘 | 정형 | 금융 | 분류 | F1 Score 연습 1,929명 데이스쿨 프로 구독권",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 라이프로그 | 논문 | 분류 | Macro F1-Score",
+          "url": "https://www.dacon.io/competitions/official/236468/overview",
+          "rawText": "제 4회 ETRI 휴먼이해 인공지능 논문경진대회 알고리즘 | 정형 | 라이프로그 | 논문 | 분류 | Macro F1-Score 마감 1,031명 상금 770만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 월간 데이콘 | 비전 | 분류 | macro-f1",
+          "url": "https://www.dacon.io/competitions/official/236471/overview",
+          "rawText": "건설용 자갈 암석 종류 분류 AI 경진대회 알고리즘 | 월간 데이콘 | 비전 | 분류 | macro-f1 연습 873명 데이스쿨 프로 구독권",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "SW중심대학 | AI부문 | 알고리즘 | NLP | 생성형 AI | LLM | ROC-AUC",
+          "url": "https://www.dacon.io/competitions/official/236473/overview",
+          "rawText": "2025 SW중심대학 디지털 경진대회 : AI부문 SW중심대학 | AI부문 | 알고리즘 | NLP | 생성형 AI | LLM | ROC-AUC 연습 1,030명 상금 1,220만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "SW중심대학 | SW부문 | AI·SW개발 | 생성AI | 생성형 AI",
+          "url": "https://www.dacon.io/competitions/official/236474/overview",
+          "rawText": "2025 SW중심대학 디지털 경진대회 : SW부문 SW중심대학 | SW부문 | AI·SW개발 | 생성AI | 생성형 AI 연습 265명 상금 1,220만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "LG Aimers | 채용 | 알고리즘 | 의료 | 바이오 | 정형 | 회귀 | Brier Score",
+          "url": "https://www.dacon.io/competitions/official/236476/overview",
+          "rawText": "난임 환자 대상 임신 성공 확률 예측 AI 오프라인 해커톤 LG Aimers | 채용 | 알고리즘 | 의료 | 바이오 | 정형 | 회귀 | Brier Score 연습 160명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "Track1 | 프롬프트 엔지니어링 | LLM | Bias Finding | 정성 평가",
+          "url": "https://www.dacon.io/competitions/official/236486/overview",
+          "rawText": "2025 Bias-A-Thon : Bias 발견 챌린지 <Track 1> Track1 | 프롬프트 엔지니어링 | LLM | Bias Finding | 정성 평가 연습 196명 상금 720만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "Track2 | 알고리즘 | 프롬프트 엔지니어링 | RAG | LLM | Bias Defence | Llama | Accuracy",
+          "url": "https://www.dacon.io/competitions/official/236487/overview",
+          "rawText": "2025 Bias-A-Thon : Bias 대응 챌린지 <Track 2> Track2 | 알고리즘 | 프롬프트 엔지니어링 | RAG | LLM | Bias Defence | Llama | Accuracy 연습 259명 상금 720만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 월간 데이콘 | NLP | 생성형 AI | LLM | Accuracy",
+          "url": "https://www.dacon.io/competitions/official/236489/overview",
+          "rawText": "문맥 기반 문장 순서 예측 AI 경진대회 알고리즘 | 월간 데이콘 | NLP | 생성형 AI | LLM | Accuracy 연습 463명 데이스쿨 프로 구독권",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "HAI(하이)! - Hecto AI Challenge : 2025 상반기 헥토 채용 AI 경진대회",
+          "url": "https://www.dacon.io/competitions/official/236493/overview",
+          "rawText": "HAI(하이)! - Hecto AI Challenge : 2025 상반기 헥토 채용 AI 경진대회 채용 | 알고리즘 | 헥토 | 비전 | 분류 연습 1,444명 상금 2,600만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 언어 | 이미지 | 멀티모달 | 색채화 | CLIP Score",
+          "url": "https://www.dacon.io/competitions/official/236499/overview",
+          "rawText": "2025 인하 인공지능 챌린지 알고리즘 | 언어 | 이미지 | 멀티모달 | 색채화 | CLIP Score 연습 257명 상금 900만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "2025 Samsung Collegiate Programming Challenge : AI 챌린지",
+          "url": "https://www.dacon.io/competitions/official/236500/overview",
+          "rawText": "2025 Samsung Collegiate Programming Challenge : AI 챌린지 채용 | SCPC | 알고리즘 | 비전 | LLM | 생성 AI | 멀티모달 | 정확도 연습 1,482명 상금 6,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "2025 KHD (Konyang Health Datathon)",
+          "url": "https://www.dacon.io/competitions/official/236503/overview",
+          "rawText": "2025 KHD (Konyang Health Datathon) 아이디어 | 의료데이터 | 분석 | 정성평가 연습 381명 상금 1,800만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "오프라인 해커톤 | 프롬프트 엔지니어링 | ChatGPT | 노코딩 | 분류",
+          "url": "https://www.dacon.io/competitions/official/236504/overview",
+          "rawText": "SW마에스트로 제16기 프롬프트 엔지니어링 오프라인 해커톤 오프라인 해커톤 | 프롬프트 엔지니어링 | ChatGPT | 노코딩 | 분류 연습 262명 상금 120만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 분자구조 | 정형 | 회귀 | 바이오 | NRMSE | PCC",
+          "url": "https://www.dacon.io/competitions/official/236518/overview",
+          "rawText": "Boost up AI 2025 : 신약 개발 경진대회 알고리즘 | 분자구조 | 정형 | 회귀 | 바이오 | NRMSE | PCC 연습 1,329명 상금 1,300만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 월간 데이콘 | 정형 | F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236519/overview",
+          "rawText": "데이콘 x BDA 학습자 수료 예측 AI 경진대회 알고리즘 | 월간 데이콘 | 정형 | F1 Score 연습 579명 데이스쿨 프로 구독권",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 금융보안원 | 금융 | 생성형 AI | LLM | FSKU",
+          "url": "https://www.dacon.io/competitions/official/236527/overview",
+          "rawText": "2025 금융 AI Challenge : 금융 AI 모델 경쟁 알고리즘 | 금융보안원 | 금융 | 생성형 AI | LLM | FSKU 연습 1,184명 상금 3,300만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "Jump AI(.py) 2025 : 제 3회 AI 신약개발 경진대회",
+          "url": "https://www.dacon.io/competitions/official/236530/overview",
+          "rawText": "Jump AI(.py) 2025 : 제 3회 AI 신약개발 경진대회 알고리즘 | 분자 구조 | 정형 | 회귀 | 바이오 마감 1,133명 상금 1,500만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 시계열 | 에너지 | SMAPE",
+          "url": "https://www.dacon.io/competitions/official/236531/overview",
+          "rawText": "2025 전력사용량 예측 AI 경진대회 알고리즘 | 정형 | 시계열 | 에너지 | SMAPE 연습 1,911명 상금 2,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "SRI 데이터 경진대회 : 수원시 정책 아이디어 제안",
+          "url": "https://www.dacon.io/competitions/official/236539/overview",
+          "rawText": "SRI 데이터 경진대회 : 수원시 정책 아이디어 제안 아이디어 | 데이터 | 분석 | 정책 연습 483명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "제 7회 대구 빅데이터 분석 경진대회 : 데이터 분석 및 활용 분야 - 공공 부문",
+          "url": "https://www.dacon.io/competitions/official/236545/overview",
+          "rawText": "제 7회 대구 빅데이터 분석 경진대회 : 데이터 분석 및 활용 분야 - 공공 부문 아이디어 | 공공데이터 | 시각화 | 정성평가 연습 227명 상금 600만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "2025 동원 x 카이스트 AI Competition: Unlocking Future Sales & Demographics",
+          "url": "https://www.dacon.io/competitions/official/236546/overview",
+          "rawText": "2025 동원 x 카이스트 AI Competition: Unlocking Future Sales & Demographics 알고리즘 | 동원그룹 | KAIST | 김재철AI대학원 | 페르소나 | 수요 예측 | LLM | 생성 AI 연습 698명 상금 7,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "제 7회 대구 빅데이터 분석 경진대회 : 데이터 분석 및 활용 분야 - 산업 부문",
+          "url": "https://www.dacon.io/competitions/official/236547/overview",
+          "rawText": "제 7회 대구 빅데이터 분석 경진대회 : 데이터 분석 및 활용 분야 - 산업 부문 아이디어 | 공공데이터 | 시각화 | 정성평가 연습 101명 상금 600만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "제 7회 대구 빅데이터 분석 경진대회 : 데이터 시각화 분야",
+          "url": "https://www.dacon.io/competitions/official/236548/overview",
+          "rawText": "제 7회 대구 빅데이터 분석 경진대회 : 데이터 시각화 분야 아이디어 | 공공데이터 | 시각화 | 정성평가 연습 88명 상금 500만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "Track2 | 채용 | KT | K intelligence | GPT4o 기반 Custom 모델(beta) | LLM | 프롬프트 엔지니어링",
+          "url": "https://www.dacon.io/competitions/official/236552/overview",
+          "rawText": "Track2: 프롬프트 엔지니어링 <K intelligence 해커톤 2025> Track2 | 채용 | KT | K intelligence | GPT4o 기반 Custom 모델(beta) | LLM | 프롬프트 엔지니어링 연습 1,023명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "Track1 | 채용 | KT | K intelligence | 믿:음 | LLM | AI Agent |",
+          "url": "https://www.dacon.io/competitions/official/236553/overview",
+          "rawText": "Track1: AI Agent 개발 <K intelligence 해커톤 2025> Track1 | 채용 | KT | K intelligence | 믿:음 | LLM | AI Agent | 연습 534명 상금 4,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "LG Aimers | 채용 | 알고리즘 | 정형 | 시계열 | 수요 예측 | SMAPE",
+          "url": "https://www.dacon.io/competitions/official/236559/overview",
+          "rawText": "식음업장 메뉴 수요 예측 AI 온라인 해커톤 LG Aimers | 채용 | 알고리즘 | 정형 | 시계열 | 수요 예측 | SMAPE 연습 1,781명 본선 진출",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "거대 모델의 성능 저하 없이 크기를 줄이는 방법 : 2025 Samsung AI Challenge",
+          "url": "https://www.dacon.io/competitions/official/236563/overview",
+          "rawText": "거대 모델의 성능 저하 없이 크기를 줄이는 방법 : 2025 Samsung AI Challenge 알고리즘 | 삼성 | 채용 | 거대 모델 | LLM | 전문가 가지치기 | 전문가 병합 | 경량화 연습 136명 상금 2,100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "Visually-rich Document Understanding : 2025 Samsung AI Challenge",
+          "url": "https://www.dacon.io/competitions/official/236564/overview",
+          "rawText": "Visually-rich Document Understanding : 2025 Samsung AI Challenge 알고리즘 | 삼성 | 채용 | 멀티모달 | OCR | Document Parsing | 코드 제출 평가 연습 274명 상금 2,100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "AI Co-Scientist : 2025 Samsung AI Challenge",
+          "url": "https://www.dacon.io/competitions/official/236565/overview",
+          "rawText": "AI Co-Scientist : 2025 Samsung AI Challenge 알고리즘 | 삼성 | 채용 | AI Agent | LLM | MCP 연습 156명 상금 2,100만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "토스 NEXT ML CHALLENGE : 광고 클릭 예측(CTR) 모델 개발",
+          "url": "https://www.dacon.io/competitions/official/236575/overview",
+          "rawText": "토스 NEXT ML CHALLENGE : 광고 클릭 예측(CTR) 모델 개발 알고리즘 | 채용 | 토스 | 정형 | CTR | 머신러닝 | 분류 연습 2,911명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "프롬프트 엔지니어링 | GPT | 뉴스클리핑 | 분류 | AI Agent |",
+          "url": "https://www.dacon.io/competitions/official/236577/overview",
+          "rawText": "2025 자동차 데이터 분석 경진대회 : GPT를 활용한 뉴스클리핑 만들기 프롬프트 엔지니어링 | GPT | 뉴스클리핑 | 분류 | AI Agent | 연습 1,409명 상금 700만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "스마트 해운물류 x AI 미션 챌린지 : 이상신호 감지 기반 비정상 작동 진단",
+          "url": "https://www.dacon.io/competitions/official/236590/overview",
+          "rawText": "스마트 해운물류 x AI 미션 챌린지 : 이상신호 감지 기반 비정상 작동 진단 알고리즘 | 이상신호 | 정형 | 분류 연습 988명 본선 진출",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "스마트 해운물류 x AI 미션 챌린지 : 스마트 항만 AGV 경로 최적화 경진대회",
+          "url": "https://www.dacon.io/competitions/official/236592/overview",
+          "rawText": "스마트 해운물류 x AI 미션 챌린지 : 스마트 항만 AGV 경로 최적화 경진대회 FKII | 알고리즘 | 정형 | 최적화 | TSP 연습 453명 본선 진출",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "LG Aimers | 채용 | 알고리즘 | 정형 | 시계열 | 수요 예측 | SMAPE | NMAE | NRMSE | R Squared",
+          "url": "https://www.dacon.io/competitions/official/236594/overview",
+          "rawText": "식음업장 메뉴 수요 예측 AI 오프라인 해커톤 LG Aimers | 채용 | 알고리즘 | 정형 | 시계열 | 수요 예측 | SMAPE | NMAE | NRMSE | R Squared 연습 284명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "Track1 | 본선 | 채용 | KT | K intelligence | 믿:음 | LLM | AI Agent |",
+          "url": "https://www.dacon.io/competitions/official/236599/overview",
+          "rawText": "Track1 본선: AI Agent 개발 <K intelligence 해커톤 2025> Track1 | 본선 | 채용 | KT | K intelligence | 믿:음 | LLM | AI Agent | 연습 40명 상금 4,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "Track2 | 본선 | 채용 | KT | K intelligence | SOTA K | LLM | 프롬프트 엔지니어링 | 바이브 코딩",
+          "url": "https://www.dacon.io/competitions/official/236600/overview",
+          "rawText": "Track2 본선: 프롬프트 엔지니어링 <K intelligence 해커톤 2025> Track2 | 본선 | 채용 | KT | K intelligence | SOTA K | LLM | 프롬프트 엔지니어링 | 바이브 코딩 연습 28명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "아이디어 | 월간 데이콘 | 정형 | 데이터 분석 | 시각화 | 인사이트",
+          "url": "https://www.dacon.io/competitions/official/236606/overview",
+          "rawText": "2025 신문과 방송 독자 데이터 분석 아이디어 경진대회 아이디어 | 월간 데이콘 | 정형 | 데이터 분석 | 시각화 | 인사이트 연습 535명 한국언론진흥재단 이사장상",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 코드 제출 평가 | 정형 | 회귀 | 데이터 분석 | AUC | Brier Score | ECE",
+          "url": "https://www.dacon.io/competitions/official/236607/overview",
+          "rawText": "운수종사자 인지적 특성 데이터를 활용한 교통사고 위험 예측 AI 경진대회 알고리즘 | 코드 제출 평가 | 정형 | 회귀 | 데이터 분석 | AUC | Brier Score | ECE 마감 1,592명 상금 6,000만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "오프라인 해커톤 | 프롬프트 엔지니어링 | GPT4o-mini | 노코딩 | 분류",
+          "url": "https://www.dacon.io/competitions/official/236609/overview",
+          "rawText": "프롬프트 콘테스트 <K intelligence 해커톤 2025> 오프라인 해커톤 | 프롬프트 엔지니어링 | GPT4o-mini | 노코딩 | 분류 마감 55명 수상 인증서",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "아이디어 | 생성형 AI | 서비스 개발 | 파주시",
+          "url": "https://www.dacon.io/competitions/official/236612/overview",
+          "rawText": "파주 시민 AI 혁신 아이디어 경진대회 아이디어 | 생성형 AI | 서비스 개발 | 파주시 연습 319명 상금 800만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 시계열 | 무역 | 분류 | 회귀",
+          "url": "https://www.dacon.io/competitions/official/236619/overview",
+          "rawText": "제3회 국민대학교 AI빅데이터 분석 경진대회 알고리즘 | 정형 | 시계열 | 무역 | 분류 | 회귀 연습 1,807명 상금 700만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "아이디어 | AI | 생성 | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/236624/overview",
+          "rawText": "2025 새싹 해커톤 아이디어 | AI | 생성 | 정성평가 마감 923명 상금 1,500만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "롯데 | 프롬프트 엔지니어링 | ChatGPT | 노코딩 | 분류",
+          "url": "https://www.dacon.io/competitions/official/236627/overview",
+          "rawText": "2025 롯데이노베이트 프롬프트 엔지니어링 해커톤 롯데 | 프롬프트 엔지니어링 | ChatGPT | 노코딩 | 분류 연습 107명 상금 180만 L.Point",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "HAI(하이)! - Hecto AI Challenge : 2025 하반기 헥토 채용 AI 경진대회",
+          "url": "https://www.dacon.io/competitions/official/236628/overview",
+          "rawText": "HAI(하이)! - Hecto AI Challenge : 2025 하반기 헥토 채용 AI 경진대회 채용 | 알고리즘 | 헥토 | 비전 | 딥페이크 | 분류 연습 1,382명 상금 2,600만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 의료 | 유전자 | Cosine Distance",
+          "url": "https://www.dacon.io/competitions/official/236630/overview",
+          "rawText": "제2회 Medical AI (MAI) 경진대회 알고리즘 | 의료 | 유전자 | Cosine Distance 연습 825명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "Track1 알고리즘 부문 : K리그-서울시립대 공개 AI 경진대회",
+          "url": "https://www.dacon.io/competitions/official/236647/overview",
+          "rawText": "Track1 알고리즘 부문 : K리그-서울시립대 공개 AI 경진대회 알고리즘 | 서울시립대 | 스포츠 | 시계열 | 유클리드 거리 연습 1,805명 상금 300만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "Track2 아이디어 개발 부문 : K리그-서울시립대 공개 AI 경진대회",
+          "url": "https://www.dacon.io/competitions/official/236648/overview",
+          "rawText": "Track2 아이디어 개발 부문 : K리그-서울시립대 공개 AI 경진대회 아이디어 | 서울시립대 | 스포츠 | 개발 | MVP | 정성 평가 연습 613명 상금 300만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "제조업 | 스마트 팩토리 | LLM | RAG | AI Agent | MVP",
+          "url": "https://www.dacon.io/competitions/official/236652/overview",
+          "rawText": "스마트 제조 AI Agent 해커톤 2025 제조업 | 스마트 팩토리 | LLM | RAG | AI Agent | MVP 연습 266명 상금 125만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "본선 | 제조업 | 스마트 팩토리 | LLM | RAG | AI Agent | MVP",
+          "url": "https://www.dacon.io/competitions/official/236655/overview",
+          "rawText": "스마트 제조 AI Agent <본선> 해커톤 2025 본선 | 제조업 | 스마트 팩토리 | LLM | RAG | AI Agent | MVP 마감 29명 상금 125만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "데이콘 x BDA 제 2회 학습자 수료 예측 AI 경진대회",
+          "url": "https://www.dacon.io/competitions/official/236664/overview",
+          "rawText": "데이콘 x BDA 제 2회 학습자 수료 예측 AI 경진대회 알고리즘 | 월간 데이콘 | 정형 | F1 Score 연습 1,257명 데이스쿨 프로 구독권",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "아이디어 | 사이버 보안 | 피싱·스캠 탐지 | MVP",
+          "url": "https://www.dacon.io/competitions/official/236666/overview",
+          "rawText": "피싱·스캠 예방을 위한 서비스 개발 경진대회 아이디어 | 사이버 보안 | 피싱·스캠 탐지 | MVP 마감 643명 상금 1,000 만원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "LG Aimers | 채용 | 알고리즘 | LLM | 코드제출 | 경량화",
+          "url": "https://www.dacon.io/competitions/official/236673/overview",
+          "rawText": "Aimers 8기 : 모델 경량화 온라인 해커톤 LG Aimers | 채용 | 알고리즘 | LLM | 코드제출 | 경량화 마감 1,535명 본선 진출",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "한양대 | 현대NGV | HYPER AI | LLM | AI Agent | Binary F1 Score",
+          "url": "https://www.dacon.io/competitions/official/236680/overview",
+          "rawText": "한양대 X 현대엔지비 산업체 제조 환경 기반 문제해결 AI Agent 해커톤 한양대 | 현대NGV | HYPER AI | LLM | AI Agent | Binary F1 Score 마감 45명 상금 300 만원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 월간 데이콘 | Physics AI | Vision AI | 시각 기반 물리 이해 | 구조 안정성 예측",
+          "url": "https://www.dacon.io/competitions/official/236686/overview",
+          "rawText": "구조물 안정성 물리 추론 AI 경진대회 알고리즘 | 월간 데이콘 | Physics AI | Vision AI | 시각 기반 물리 이해 | 구조 안정성 예측 연습 910명 데이스쿨 프로 구독권",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "LG Aimers | 채용 | 알고리즘 | LLM | 코드제출 | 경량화",
+          "url": "https://www.dacon.io/competitions/official/236689/overview",
+          "rawText": "Aimers 8기 : 모델 경량화 오프라인 해커톤 LG Aimers | 채용 | 알고리즘 | LLM | 코드제출 | 경량화 마감 96명 상금 1,000만원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 라이프로그 | 논문 | 분류 | Log Loss",
+          "url": "https://www.dacon.io/competitions/official/236690/overview",
+          "rawText": "제 5회 ETRI 휴먼이해 인공지능 논문경진대회 알고리즘 | 정형 | 라이프로그 | 논문 | 분류 | Log Loss 마감 864명 상금 530만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "AI·SW중심대학 | SW부문 | AI·SW개발 | AI Agent",
+          "url": "https://www.dacon.io/competitions/official/236693/overview",
+          "rawText": "2026 AI·SW중심대학 디지털 경진대회 : SW부문 AI·SW중심대학 | SW부문 | AI·SW개발 | AI Agent 마감 237명 상금 1,220만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "AI·SW중심대학 | AI부문 | 알고리즘 | NLP | AI Agent | 코드 제출 평가",
+          "url": "https://www.dacon.io/competitions/official/236694/overview",
+          "rawText": "2026 AI·SW중심대학 디지털 경진대회 : AI부문 AI·SW중심대학 | AI부문 | 알고리즘 | NLP | AI Agent | 코드 제출 평가 마감 867명 상금 1,220만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 스마트물류 | MAE",
+          "url": "https://www.dacon.io/competitions/official/236696/overview",
+          "rawText": "스마트 창고 출고 지연 예측 AI 경진대회 알고리즘 | 정형 | 회귀 | 스마트물류 | MAE 연습 1,217명 데이스쿨 프로 구독권",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 시계열 | 정형 | 회귀 | LiDAR | Hit Rate",
+          "url": "https://www.dacon.io/competitions/official/236716/overview",
+          "rawText": "모기 비행 궤적 예측 AI 경진대회 알고리즘 | 시계열 | 정형 | 회귀 | LiDAR | Hit Rate 연습 966명 데이스쿨 프로 구독권",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 멀티모달 | LLM | Vision | 생성형 AI | Bias | QA | Accuracy",
+          "url": "https://www.dacon.io/competitions/official/236722/overview",
+          "rawText": "2026 성균관대학교 멀티모달 AI Bias 챌린지 알고리즘 | 멀티모달 | LLM | Vision | 생성형 AI | Bias | QA | Accuracy 연습 552명 상금 720만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 사전 워크샵 | 정형 | 회귀 | 에너지 | 정산금 | NMAE",
+          "url": "https://www.dacon.io/competitions/official/236727/overview",
+          "rawText": "제3회 풍력발전량 예측 AI 경진대회 - BARAM 2026 알고리즘 | 사전 워크샵 | 정형 | 회귀 | 에너지 | 정산금 | NMAE 연습 2,185명 상금 2,500만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "[1차예선] 2026 Samsung Collegiate Programming Challenge : AI 챌린지",
+          "url": "https://www.dacon.io/competitions/official/236730/overview",
+          "rawText": "[1차예선] 2026 Samsung Collegiate Programming Challenge : AI 챌린지 채용 | SCPC | 알고리즘 | sLM | Harness Engineering 마감 1,843명 상금 7,000만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 로보틱스 | 이미지 | 영상 생성 | 월드 모델 | Action Sequence",
+          "url": "https://www.dacon.io/competitions/official/236736/overview",
+          "rawText": "2026 인하 인공지능 챌린지 알고리즘 | 로보틱스 | 이미지 | 영상 생성 | 월드 모델 | Action Sequence 연습 230명 상금 900만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "LG Aimers | 채용 | 알고리즘 | 코드제출 | 정형 | 스포츠 | 야구",
+          "url": "https://www.dacon.io/competitions/official/236743/overview",
+          "rawText": "Aimers 9기 : 투구 제구 성공 확률 예측 AI 온라인 해커톤 LG Aimers | 채용 | 알고리즘 | 코드제출 | 정형 | 스포츠 | 야구 마감 2,403명 본선 진출",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "딥보이스 범죄 대응을 위한 AI 탐지 모델 경진대회",
+          "url": "https://www.dacon.io/competitions/official/236749/overview",
+          "rawText": "딥보이스 범죄 대응을 위한 AI 탐지 모델 경진대회 알고리즘 | 코드 제출 평가 | 오디오 | 딥보이스 마감 1,149명 상금 4,200만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "블랙박스 영상 기반 지능형 고의사고 분석 모델 AI 경진대회",
+          "url": "https://www.dacon.io/competitions/official/236753/overview",
+          "rawText": "블랙박스 영상 기반 지능형 고의사고 분석 모델 AI 경진대회 알고리즘 | 코드 제출 평가 | 컴퓨터비전 | 고의교통사고 마감 1,000명 상금 4,200만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 코드 제출 평가 | 자연어처리 | 법령 위반사항 모니터링",
+          "url": "https://www.dacon.io/competitions/official/236754/overview",
+          "rawText": "나라장터 자체입찰 공고 법령 위반사항 모니터링 AI 경진대회 알고리즘 | 코드 제출 평가 | 자연어처리 | 법령 위반사항 모니터링 마감 1,177명 상금 4,200만 원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "LG Aimers | 채용 | 알고리즘 | 코드제출 | 정형 | 스포츠 | 야구",
+          "url": "https://www.dacon.io/competitions/official/236767/overview",
+          "rawText": "Aimers 9기 : 투구 제구 성공 확률 예측 AI 오프라인 해커톤 LG Aimers | 채용 | 알고리즘 | 코드제출 | 정형 | 스포츠 | 야구 마감 98명 상금 1,000만원",
+          "statusHints": [
+            "마감"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 코드 제출 평가 | 개체 매칭 | 해운물류",
+          "url": "https://www.dacon.io/competitions/official/236771/overview",
+          "rawText": "항만 문제해결을 위한 AI 기술 공모전 알고리즘 | 코드 제출 평가 | 개체 매칭 | 해운물류 참가신청중 시작까지 D-5251명 상금 950 만원",
+          "statusHints": [
+            "참가신청중"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "분석시각화 | 정형 | 분석 | 금융 | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/42473/overview",
+          "rawText": "신용카드 거래 데이터 시각화 분석시각화 | 정형 | 분석 | 금융 | 정성평가 연습 882명 상금 $1,000 + 100,000ZPR",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 스포츠 | WRMSE",
+          "url": "https://www.dacon.io/competitions/official/62540/overview",
+          "rawText": "KBO 타자 OPS 예측 경진대회 알고리즘 | 정형 | 회귀 | 스포츠 | WRMSE 연습 1,346명 상금 800만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 회귀 | 스포츠| RMSE",
+          "url": "https://www.dacon.io/competitions/official/68346/overview",
+          "rawText": "KBO 외국인 투수 스카우팅 최적화 경진대회 알고리즘 | 정형 | 회귀 | 스포츠| RMSE 연습 310명 상금 200만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "분석시각화 | 정형 | 분석 | 금융 | 정성평가",
+          "url": "https://www.dacon.io/competitions/official/82407/overview",
+          "rawText": "KCB 금융스타일 시각화 경진대회 분석시각화 | 정형 | 분석 | 금융 | 정성평가 연습 944명 상금 1,000만 원",
+          "statusHints": [
+            "연습"
+          ]
+        },
+        {
+          "source": "DACON",
+          "title": "알고리즘 | 정형 | 분류 | 금융 | Accuracy",
+          "url": "https://www.dacon.io/competitions/official/9565/overview",
+          "rawText": "병원 개/폐업 분류 예측 경진대회 알고리즘 | 정형 | 분류 | 금융 | Accuracy 연습 1,114명 상금 $3,500 + 40,000ZPR",
+          "statusHints": [
+            "연습"
+          ]
+        }
+      ]
+    },
+    "dakerHackathons": {
+      "url": "https://daker.ai/public/hackathons",
+      "count": 23,
+      "expansion": {
+        "label": "DAKER hackathons",
+        "anchorCount": 23
+      },
+      "items": [
+        {
+          "source": "DAKER",
+          "title": "Track 1: 2026 3rd MixUp Agent 개발 해커톤",
+          "url": "https://daker.ai/public/hackathons/2026-3rd-mixup-agent-development-hackathon",
+          "rawText": "종료 B BITAmin, Prometheus, Tobig's Track 1: 2026 3rd MixUp Agent 개발 해커톤 총 상금 60만원 15팀 참가 2,186 종료됨",
+          "statusHints": [
+            "종료"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "EDUPIA삼척교육발전사업단 / 강원대학교/ 데이콘",
+          "url": "https://daker.ai/public/hackathons/2026-ai-maker-ideathon-local-solutions",
+          "rawText": "종료 E EDUPIA삼척교육발전사업단 / 강원대학교/ 데이콘 프리미엄 2026 AI를 활용한 메이커 아이디어톤 캠프 7팀 참가 2,217 종료됨",
+          "statusHints": [
+            "종료"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래",
+          "url": "https://daker.ai/public/hackathons/2026-finance-ai-challenge",
+          "rawText": "진행중 심사 D-1 금 금융보안원 프리미엄 2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래 총 상금 3,500만원 1,388팀 참가 153,172 진행중",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "건양대학교의료원, 과학기술정보통신부, 정보통신산업진흥원, 대전정보문화산업진흥원, 대구디지털혁신진흥원, 대구·광주테크노파크",
+          "url": "https://daker.ai/public/hackathons/2026-k-health-unreleased-data-utilization-competit",
+          "rawText": "진행중 심사 D-30 건 건양대학교의료원, 과학기술정보통신부, 정보통신산업진흥원, 대전정보문화산업진흥원, 대구디지털혁신진흥원, 대구·광주테크노파크 프리미엄 2026 K-Health 미개방 의료데이터 활용 경진대회 총 상금 750만원 417팀 참가 39,600 진행중",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "2026 스마트 공장 운영 시스템 MVP 개발 해커톤",
+          "url": "https://daker.ai/public/hackathons/2026-smart-factory-ai-platform-mvp-hackathon",
+          "rawText": "종료 차 차세대융합기술연구원 메이커스페이스 프리미엄 2026 스마트 공장 운영 시스템 MVP 개발 해커톤 총 상금 125만원 161팀 참가 15,073 종료됨",
+          "statusHints": [
+            "종료"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "AI·SW마에스트로 제 17기 프롬프트 경진대회",
+          "url": "https://daker.ai/public/hackathons/2026-sw-maestro-prompt-engineering-hackathon",
+          "rawText": "종료 한 한국정보산업협회 프리미엄 AI·SW마에스트로 제 17기 프롬프트 경진대회 74팀 참가 7,413 종료됨",
+          "statusHints": [
+            "종료"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 예선",
+          "url": "https://daker.ai/public/hackathons/4th-jump-ai-agentic-drug-challenge",
+          "rawText": "종료 보 보건복지부/한국보건산업진흥원/고려대학교의과대학/한국제약바이오협회 프리미엄 제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 예선 총 상금 3,350만원 509팀 참가 79,280 종료됨",
+          "statusHints": [
+            "종료"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 본선",
+          "url": "https://daker.ai/public/hackathons/4th-jump-ai-agentic-drug-challenge-finals-1",
+          "rawText": "진행중 심사 D-25 보 보건복지부/한국보건산업진흥원/고려대학교의과대학/한국제약바이오협회 프리미엄 제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 본선 총 상금 3,350만원 15팀 참가 7,020 진행중",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "연세대학교 인공지능학회 YAI",
+          "url": "https://daker.ai/public/hackathons/agent-24-hackathon",
+          "rawText": "종료 연 연세대학교 인공지능학회 YAI AGENT:24 총 상금 340만원 37팀 참가 4,852 종료됨",
+          "statusHints": [
+            "종료"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge",
+          "url": "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims",
+          "rawText": "모집중 D-19 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 55팀 참가 2,867 참가 신청하기",
+          "statusHints": [
+            "모집중"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "AI·SW마에스트로 제 17기 부산센터 프롬프트 경진대회",
+          "url": "https://daker.ai/public/hackathons/ai-sw-maestro-busan-center-17th-prompt-competition-1",
+          "rawText": "종료 한 한국정보산업협회 프리미엄 AI·SW마에스트로 제 17기 부산센터 프롬프트 경진대회 49팀 참가 6,344 종료됨",
+          "statusHints": [
+            "종료"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "월간 해커톤: 마약류 문제 예방과 피해 감소를 위한 아이디어 챌린지",
+          "url": "https://daker.ai/public/hackathons/csafcas",
+          "rawText": "진행중 심사 1시간 남음 데 데이콘 프리미엄 월간 해커톤: 마약류 문제 예방과 피해 감소를 위한 아이디어 챌린지 총 상금 100만원 277팀 참가 13,239 진행중",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "해커톤 참가 가이드",
+          "url": "https://daker.ai/public/hackathons/guide",
+          "rawText": "해커톤 참가 가이드 자세히 알아보기",
+          "statusHints": []
+        },
+        {
+          "source": "DAKER",
+          "title": "월간 해커톤 : 투자 데이터를 시각화하라- Skills 기반 대시보드 설계",
+          "url": "https://daker.ai/public/hackathons/hackathon-investment-data-skills-dashboard",
+          "rawText": "종료 D DACON 프리미엄 월간 해커톤 : 투자 데이터를 시각화하라- Skills 기반 대시보드 설계 총 상금 100만원 321팀 참가 29,974 종료됨",
+          "statusHints": [
+            "종료"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "JB금융그룹 Fin:AI Challenge",
+          "url": "https://daker.ai/public/hackathons/jb-fin-ai-challenge",
+          "rawText": "종료 J JB금융그룹 프리미엄 JB금융그룹 Fin:AI Challenge 총 상금 1억원 519팀 참가 77,421 종료됨",
+          "statusHints": [
+            "종료"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "국부펀드 KIC, AI 에이전트 공모전",
+          "url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
+          "rawText": "모집중 D-36 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 159팀 참가 7,784 참가 신청하기",
+          "statusHints": [
+            "모집중"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "언론 통계 분석·활용 경진대회",
+          "url": "https://daker.ai/public/hackathons/media-stats-analysis-competition",
+          "rawText": "종료 한 한국언론진흥재단 언론 통계 분석·활용 경진대회 총 상금 200만원 312팀 참가 25,240 종료됨",
+          "statusHints": [
+            "종료"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "월간 해커톤 : 긴급 인수인계 해커톤 - 문서만 남기고 사라졌다",
+          "url": "https://daker.ai/public/hackathons/monthly-hackathon-emergency-handover-docs",
+          "rawText": "종료 D DACON 프리미엄 월간 해커톤 : 긴급 인수인계 해커톤 - 문서만 남기고 사라졌다 총 상금 100만원 370팀 참가 19,512 종료됨",
+          "statusHints": [
+            "종료"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "월간 해커톤 : 10분 안에 중독시켜라 - 웹 미니게임 챌린지",
+          "url": "https://daker.ai/public/hackathons/monthly-hackathon-web-minigame-challenge",
+          "rawText": "종료 D DACON 프리미엄 월간 해커톤 : 10분 안에 중독시켜라 - 웹 미니게임 챌린지 총 상금 100만원 280팀 참가 28,551 종료됨",
+          "statusHints": [
+            "종료"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "Quantum Reframing Challenge 2026",
+          "url": "https://daker.ai/public/hackathons/quantum-service-innovation-challenge-megazonecloud",
+          "rawText": "종료 메 메가존 클라우드, KISTI, 한국양자융합센터 프리미엄 Quantum Reframing Challenge 2026 총 상금 2,000만원 72팀 참가 32,083 종료됨",
+          "statusHints": [
+            "종료"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "합성 미세구조 기반 재료 물성 예측 AI 경진대회",
+          "url": "https://daker.ai/public/hackathons/synthetic-microstructure-property-prediction-ai",
+          "rawText": "모집중 알고리즘 D-12 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 226팀 참가 10,845 참가 신청하기",
+          "statusHints": [
+            "모집중"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "월간 해커톤: 바이브 코딩 개선 AI 아이디어 공모전",
+          "url": "https://daker.ai/public/hackathons/vibe-coding-improvement-ai-idea-competition",
+          "rawText": "종료 D DACON 월간 해커톤: 바이브 코딩 개선 AI 아이디어 공모전 총 상금 100만원 195팀 참가 13,200 종료됨",
+          "statusHints": [
+            "종료"
+          ]
+        },
+        {
+          "source": "DAKER",
+          "title": "월간 해커톤: 내가 축구 감독이라면 - 월드컵 전술 웹서비스 챌린지",
+          "url": "https://daker.ai/public/hackathons/world-cup-manager-tactics-web-challenge",
+          "rawText": "종료 데 데이콘 월간 해커톤: 내가 축구 감독이라면 - 월드컵 전술 웹서비스 챌린지 총 상금 100만원 159팀 참가 18,874 종료됨",
+          "statusHints": [
+            "종료"
+          ]
+        }
+      ]
+    }
+  },
+  "totals": {
+    "daconCompetitions": 289,
+    "dakerHackathons": 23
+  }
+}
