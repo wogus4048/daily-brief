@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generatedAt": "2026-10-06T08:30:53.890Z",
+  "generatedAt": "2026-10-06T08:33:58.445Z",
   "timezone": "Asia/Seoul",
   "crawler": {
     "engine": "playwright-chromium",
@@ -2552,7 +2552,7 @@
           "source": "DAKER",
           "title": "2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래",
           "url": "https://daker.ai/public/hackathons/2026-finance-ai-challenge",
-          "rawText": "진행중 심사 D-1 금 금융보안원 프리미엄 2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래 총 상금 3,500만원 1,388팀 참가 153,255 진행중",
+          "rawText": "진행중 심사 D-1 금 금융보안원 프리미엄 2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래 총 상금 3,500만원 1,388팀 참가 153,258 진행중",
           "statusHints": [
             "진행중"
           ]
@@ -2561,7 +2561,7 @@
           "source": "DAKER",
           "title": "2026 K-Health 미개방 의료데이터 활용 경진대회",
           "url": "https://daker.ai/public/hackathons/2026-k-health-unreleased-data-utilization-competit",
-          "rawText": "진행중 심사 D-30 건 건양대학교의료원, 과학기술정보통신부, 정보통신산업진흥원, 대전정보문화산업진흥원, 대구디지털혁신진흥원, 대구·광주테크노파크 프리미엄 2026 K-Health 미개방 의료데이터 활용 경진대회 총 상금 750만원 417팀 참가 39,625 진행중",
+          "rawText": "진행중 심사 D-30 건 건양대학교의료원, 과학기술정보통신부, 정보통신산업진흥원, 대전정보문화산업진흥원, 대구디지털혁신진흥원, 대구·광주테크노파크 프리미엄 2026 K-Health 미개방 의료데이터 활용 경진대회 총 상금 750만원 417팀 참가 39,626 진행중",
           "statusHints": [
             "진행중"
           ]
@@ -2600,14 +2600,14 @@
           "source": "DAKER",
           "title": "연세대학교 인공지능학회 YAI",
           "url": "https://daker.ai/public/hackathons/agent-24-hackathon",
-          "rawText": "종료 연 연세대학교 인공지능학회 YAI AGENT:24 총 상금 340만원 37팀 참가 4,855 종료됨",
+          "rawText": "종료 연 연세대학교 인공지능학회 YAI AGENT:24 총 상금 340만원 37팀 참가 4,856 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge",
           "url": "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims",
-          "rawText": "모집중 D-18 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 59팀 참가 3,035 참가 신청하기",
+          "rawText": "모집중 D-18 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 59팀 참가 3,039 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2653,7 +2653,7 @@
           "source": "DAKER",
           "title": "국부펀드 KIC, AI 에이전트 공모전",
           "url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
-          "rawText": "모집중 D-36 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 173팀 참가 8,646 참가 신청하기",
+          "rawText": "모집중 D-36 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 173팀 참가 8,665 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2690,7 +2690,7 @@
           "source": "DAKER",
           "title": "합성 미세구조 기반 재료 물성 예측 AI 경진대회",
           "url": "https://daker.ai/public/hackathons/synthetic-microstructure-property-prediction-ai",
-          "rawText": "모집중 알고리즘 D-12 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 236팀 참가 11,289 참가 신청하기",
+          "rawText": "모집중 알고리즘 D-12 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 236팀 참가 11,294 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2716,7 +2716,7 @@
           "source": "DAKER",
           "title": "2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge",
           "url": "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims",
-          "rawText": "모집중 D-18 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 59팀 참가 3,035 참가 신청하기",
+          "rawText": "모집중 D-18 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 59팀 참가 3,039 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2725,7 +2725,7 @@
           "source": "DAKER",
           "title": "국부펀드 KIC, AI 에이전트 공모전",
           "url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
-          "rawText": "모집중 D-36 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 173팀 참가 8,646 참가 신청하기",
+          "rawText": "모집중 D-36 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 173팀 참가 8,665 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2734,7 +2734,7 @@
           "source": "DAKER",
           "title": "합성 미세구조 기반 재료 물성 예측 AI 경진대회",
           "url": "https://daker.ai/public/hackathons/synthetic-microstructure-property-prediction-ai",
-          "rawText": "모집중 알고리즘 D-12 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 236팀 참가 11,289 참가 신청하기",
+          "rawText": "모집중 알고리즘 D-12 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 236팀 참가 11,294 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2752,7 +2752,7 @@
           "source": "Devpost",
           "title": "Build, Ship, Shape: Amazon Developer Hackathon",
           "url": "https://amazonappdev2026.devpost.com/",
-          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 17 days left Online $138,000 in prizes 46426 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
+          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 17 days left Online $138,000 in prizes 46435 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
           "statusHints": [
             "days left"
           ]
@@ -2770,7 +2770,7 @@
           "source": "Devpost",
           "title": "Databricks AI Social Impact (DAISI) Challenge - Singapore",
           "url": "https://daisisg26.devpost.com/",
-          "rawText": "Databricks AI Social Impact (DAISI) Challenge - Singapore about 8 hours left Databricks Singapore 1 non-cash prizes 724 participants Databricks Sep 16 - Oct 06, 2026 EducationMachine Learning/AISocial Good",
+          "rawText": "Databricks AI Social Impact (DAISI) Challenge - Singapore about 7 hours left Databricks Singapore 1 non-cash prizes 724 participants Databricks Sep 16 - Oct 06, 2026 EducationMachine Learning/AISocial Good",
           "statusHints": []
         },
         {
@@ -2795,7 +2795,7 @@
           "source": "Devpost",
           "title": "FEATURED",
           "url": "https://gitlab-transcend.devpost.com/",
-          "rawText": "FEATURED Life After Code 21 days left Online $45,000 in prizes 733 participants GitLab Oct 05 - 27, 2026 Managed by Devpost DevOpsMachine Learning/AIProductivity",
+          "rawText": "FEATURED Life After Code 21 days left Online $45,000 in prizes 734 participants GitLab Oct 05 - 27, 2026 Managed by Devpost DevOpsMachine Learning/AIProductivity",
           "statusHints": [
             "days left"
           ]
@@ -2813,7 +2813,7 @@
           "source": "Devpost",
           "title": "Build With AI: Basics",
           "url": "https://learn-ai-basics.devpost.com/",
-          "rawText": "Build With AI: Basics 21 days left Online $2,500 in prizes 2533 participants Devpost Sep 22 - Oct 26, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyEducation",
+          "rawText": "Build With AI: Basics 21 days left Online $2,500 in prizes 2534 participants Devpost Sep 22 - Oct 26, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyEducation",
           "statusHints": [
             "days left"
           ]
@@ -2840,7 +2840,7 @@
           "source": "Devpost",
           "title": "Nebius x NVIDIA Global AI Hackathon",
           "url": "https://nebiusglobalaihackathon.devpost.com/",
-          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 18640 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
+          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 18643 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
           "statusHints": [
             "days left"
           ]
@@ -2858,7 +2858,7 @@
           "source": "Devpost",
           "title": "FEATURED",
           "url": "https://paypalaihackathon.devpost.com/",
-          "rawText": "FEATURED PayPal AI Hackathon about 1 month left Online $67,500 in prizes 7231 participants PayPal Oct 01 - Nov 12, 2026 Managed by Devpost Low/No CodeMachine Learning/AIWeb",
+          "rawText": "FEATURED PayPal AI Hackathon about 1 month left Online $67,500 in prizes 7233 participants PayPal Oct 01 - Nov 12, 2026 Managed by Devpost Low/No CodeMachine Learning/AIWeb",
           "statusHints": []
         },
         {
@@ -2874,7 +2874,7 @@
           "source": "Devpost",
           "title": "Meta VR Start Developer Competition 2026",
           "url": "https://start-developer-competition-26.devpost.com/",
-          "rawText": "Meta VR Start Developer Competition 2026 about 1 month left Online $1,000,000 in prizes 2285 participants Meta Sep 24 - Nov 18, 2026 Managed by Devpost AR/VRMachine Learning/AIWeb",
+          "rawText": "Meta VR Start Developer Competition 2026 about 1 month left Online $1,000,000 in prizes 2286 participants Meta Sep 24 - Nov 18, 2026 Managed by Devpost AR/VRMachine Learning/AIWeb",
           "statusHints": []
         },
         {
@@ -2911,7 +2911,7 @@
           "source": "Devpost",
           "title": "Build, Ship, Shape: Amazon Developer Hackathon",
           "url": "https://amazonappdev2026.devpost.com/",
-          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 17 days left Online $138,000 in prizes 46426 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
+          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 17 days left Online $138,000 in prizes 46435 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
           "statusHints": [
             "days left"
           ]
@@ -2929,7 +2929,7 @@
           "source": "Devpost",
           "title": "Databricks AI Social Impact (DAISI) Challenge - Singapore",
           "url": "https://daisisg26.devpost.com/",
-          "rawText": "Databricks AI Social Impact (DAISI) Challenge - Singapore about 8 hours left Databricks Singapore 1 non-cash prizes 724 participants Databricks Sep 16 - Oct 06, 2026 EducationMachine Learning/AISocial Good",
+          "rawText": "Databricks AI Social Impact (DAISI) Challenge - Singapore about 7 hours left Databricks Singapore 1 non-cash prizes 724 participants Databricks Sep 16 - Oct 06, 2026 EducationMachine Learning/AISocial Good",
           "statusHints": []
         },
         {
@@ -2954,7 +2954,7 @@
           "source": "Devpost",
           "title": "FEATURED",
           "url": "https://gitlab-transcend.devpost.com/",
-          "rawText": "FEATURED Life After Code 21 days left Online $45,000 in prizes 733 participants GitLab Oct 05 - 27, 2026 Managed by Devpost DevOpsMachine Learning/AIProductivity",
+          "rawText": "FEATURED Life After Code 21 days left Online $45,000 in prizes 734 participants GitLab Oct 05 - 27, 2026 Managed by Devpost DevOpsMachine Learning/AIProductivity",
           "statusHints": [
             "days left"
           ]
@@ -2972,7 +2972,7 @@
           "source": "Devpost",
           "title": "Build With AI: Basics",
           "url": "https://learn-ai-basics.devpost.com/",
-          "rawText": "Build With AI: Basics 21 days left Online $2,500 in prizes 2533 participants Devpost Sep 22 - Oct 26, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyEducation",
+          "rawText": "Build With AI: Basics 21 days left Online $2,500 in prizes 2534 participants Devpost Sep 22 - Oct 26, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyEducation",
           "statusHints": [
             "days left"
           ]
@@ -2999,7 +2999,7 @@
           "source": "Devpost",
           "title": "Nebius x NVIDIA Global AI Hackathon",
           "url": "https://nebiusglobalaihackathon.devpost.com/",
-          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 18640 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
+          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 18643 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
           "statusHints": [
             "days left"
           ]
@@ -3017,7 +3017,7 @@
           "source": "Devpost",
           "title": "FEATURED",
           "url": "https://paypalaihackathon.devpost.com/",
-          "rawText": "FEATURED PayPal AI Hackathon about 1 month left Online $67,500 in prizes 7231 participants PayPal Oct 01 - Nov 12, 2026 Managed by Devpost Low/No CodeMachine Learning/AIWeb",
+          "rawText": "FEATURED PayPal AI Hackathon about 1 month left Online $67,500 in prizes 7233 participants PayPal Oct 01 - Nov 12, 2026 Managed by Devpost Low/No CodeMachine Learning/AIWeb",
           "statusHints": []
         },
         {
@@ -3033,7 +3033,7 @@
           "source": "Devpost",
           "title": "Meta VR Start Developer Competition 2026",
           "url": "https://start-developer-competition-26.devpost.com/",
-          "rawText": "Meta VR Start Developer Competition 2026 about 1 month left Online $1,000,000 in prizes 2285 participants Meta Sep 24 - Nov 18, 2026 Managed by Devpost AR/VRMachine Learning/AIWeb",
+          "rawText": "Meta VR Start Developer Competition 2026 about 1 month left Online $1,000,000 in prizes 2286 participants Meta Sep 24 - Nov 18, 2026 Managed by Devpost AR/VRMachine Learning/AIWeb",
           "statusHints": []
         },
         {
@@ -3560,16 +3560,331 @@
     },
     "sotong24Contests": {
       "key": "sotong24Contests",
-      "status": "FAILED",
-      "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://sotong.go.kr/front/epilogue/epilogueBbsList.do\", waiting until \"domcontentloaded\"\n\n    at crawlSotong24 (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:285:14)\n    at /home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:489:31\n    at safeCrawl (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:218:18)\n    at runEntry (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:488:30)\n    at async main (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:500:27)",
-      "items": [],
-      "count": 0,
-      "actionableItems": [],
-      "actionableCount": 0,
+      "status": "OK",
+      "url": "https://sotong.go.kr/front/epilogue/epilogueBbsList.do",
+      "items": [
+        {
+          "source": "소통24",
+          "title": "[2026-10-01 09:00 ~ 2026-10-31 18:00] 【해양경찰청】 소형레저기구 표류사고 예방 퀴즈 이벤트 해양경찰청 서해지방해양경찰청 여수해양경찰서 기획운영과 의견 작성 수0 공유 수0",
+          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=0020670e346c42a6b0dc993b34bfe876&menu_id=527&pagetype=bbs",
+          "rawText": "[2026-10-01 09:00 ~ 2026-10-31 18:00] 【해양경찰청】 소형레저기구 표류사고 예방 퀴즈 이벤트 해양경찰청 서해지방해양경찰청 여수해양경찰서 기획운영과 의견 작성 수0 공유 수0",
+          "statusHints": []
+        },
+        {
+          "source": "소통24",
+          "title": "[2026-10-01 00:00 ~ 2026-11-10 17:00] 【서울특별시】 제12회 서울 29초 영화제 서울특별시 홍보기획관 홍보담당관 의견 작성 수0 공유 수0",
+          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=1bd7e2dabb80469fa1597d4cae85f6bd&menu_id=527&pagetype=bbs",
+          "rawText": "[2026-10-01 00:00 ~ 2026-11-10 17:00] 【서울특별시】 제12회 서울 29초 영화제 서울특별시 홍보기획관 홍보담당관 의견 작성 수0 공유 수0",
+          "statusHints": []
+        },
+        {
+          "source": "소통24",
+          "title": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【감사원】 국민제안 감사 아이디어 공모 감사원 대변인 홍보담당관 의견 작성 수0 공유 수0",
+          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=2d5934930c3e4b9a8a9fe40cdb81bdf9&menu_id=527&pagetype=bbs",
+          "rawText": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【감사원】 국민제안 감사 아이디어 공모 감사원 대변인 홍보담당관 의견 작성 수0 공유 수0",
+          "statusHints": []
+        },
+        {
+          "source": "소통24",
+          "title": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【행정안전부】 제7차 열린정부 실행계획 국민제안공모 행정안전부 참여혁신조직실 참여혁신국 혁신기획과 의견 작성 수0 공유 수0",
+          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=5657d4f1636f406182359c88f0847e49&menu_id=527&pagetype=bbs",
+          "rawText": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【행정안전부】 제7차 열린정부 실행계획 국민제안공모 행정안전부 참여혁신조직실 참여혁신국 혁신기획과 의견 작성 수0 공유 수0",
+          "statusHints": []
+        },
+        {
+          "source": "소통24",
+          "title": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【행정안전부】 2026 모바일신분증 아이디어 공모전 행정안전부 인공지능정부실 인공지능정부서비스국 국민맞춤서비스과 의견 작성 수0 공유 수1",
+          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=567b5562322d43f0b806794dfc27bdd9&menu_id=527&pagetype=bbs",
+          "rawText": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【행정안전부】 2026 모바일신분증 아이디어 공모전 행정안전부 인공지능정부실 인공지능정부서비스국 국민맞춤서비스과 의견 작성 수0 공유 수1",
+          "statusHints": []
+        },
+        {
+          "source": "소통24",
+          "title": "[2026-09-30 10:00 ~ 2026-10-27 17:00] 【서울특별시】 2026 서울영상공모전 <서울 밤로그> 서울특별시 홍보기획관 콘텐츠담당관 의견 작성 수0 공유 수0",
+          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=7e4fe7c5d65f483f819e35ad1abcd608&menu_id=527&pagetype=bbs",
+          "rawText": "[2026-09-30 10:00 ~ 2026-10-27 17:00] 【서울특별시】 2026 서울영상공모전 <서울 밤로그> 서울특별시 홍보기획관 콘텐츠담당관 의견 작성 수0 공유 수0",
+          "statusHints": []
+        },
+        {
+          "source": "소통24",
+          "title": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【동두천시】 2026 영상공모전 ‘PLAY 동두천!’ 경기도 동두천시 홍보미래담당관 의견 작성 수0 공유 수0",
+          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=81a73915bb7a4fd4b2412af97bb2c0fb&menu_id=527&pagetype=bbs",
+          "rawText": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【동두천시】 2026 영상공모전 ‘PLAY 동두천!’ 경기도 동두천시 홍보미래담당관 의견 작성 수0 공유 수0",
+          "statusHints": []
+        },
+        {
+          "source": "소통24",
+          "title": "[2026-09-29 15:00 ~ 2026-10-14 19:00] 【국가철도공단】 철도산업 규제ㆍ애로 개선제안 공모 국가철도공단 기획본부 의견 작성 수0 공유 수0",
+          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=c24f5002e9424991bdfe52e3bd4e10ae&menu_id=527&pagetype=bbs",
+          "rawText": "[2026-09-29 15:00 ~ 2026-10-14 19:00] 【국가철도공단】 철도산업 규제ㆍ애로 개선제안 공모 국가철도공단 기획본부 의견 작성 수0 공유 수0",
+          "statusHints": []
+        },
+        {
+          "source": "소통24",
+          "title": "[2026-10-01 09:00 ~ 2026-10-14 23:59] 【서울특별시】 제3회 서울특별시 강서구 캐릭터 새로미 굿즈 공모전(연장) 서울특별시 강서구 기획재정국 홍보소통과 의견 작성 수0 공유 수0",
+          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=d544637c156442d8b12e646941fd6f7d&menu_id=527&pagetype=bbs",
+          "rawText": "[2026-10-01 09:00 ~ 2026-10-14 23:59] 【서울특별시】 제3회 서울특별시 강서구 캐릭터 새로미 굿즈 공모전(연장) 서울특별시 강서구 기획재정국 홍보소통과 의견 작성 수0 공유 수0",
+          "statusHints": []
+        }
+      ],
+      "count": 9,
+      "actionableItems": [
+        {
+          "source": "소통24",
+          "title": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【감사원】 국민제안 감사 아이디어 공모 감사원 대변인 홍보담당관 의견 작성 수0 공유 수0",
+          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=2d5934930c3e4b9a8a9fe40cdb81bdf9&menu_id=527&pagetype=bbs",
+          "rawText": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【감사원】 국민제안 감사 아이디어 공모 감사원 대변인 홍보담당관 의견 작성 수0 공유 수0",
+          "statusHints": []
+        },
+        {
+          "source": "소통24",
+          "title": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【행정안전부】 제7차 열린정부 실행계획 국민제안공모 행정안전부 참여혁신조직실 참여혁신국 혁신기획과 의견 작성 수0 공유 수0",
+          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=5657d4f1636f406182359c88f0847e49&menu_id=527&pagetype=bbs",
+          "rawText": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【행정안전부】 제7차 열린정부 실행계획 국민제안공모 행정안전부 참여혁신조직실 참여혁신국 혁신기획과 의견 작성 수0 공유 수0",
+          "statusHints": []
+        },
+        {
+          "source": "소통24",
+          "title": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【행정안전부】 2026 모바일신분증 아이디어 공모전 행정안전부 인공지능정부실 인공지능정부서비스국 국민맞춤서비스과 의견 작성 수0 공유 수1",
+          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=567b5562322d43f0b806794dfc27bdd9&menu_id=527&pagetype=bbs",
+          "rawText": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【행정안전부】 2026 모바일신분증 아이디어 공모전 행정안전부 인공지능정부실 인공지능정부서비스국 국민맞춤서비스과 의견 작성 수0 공유 수1",
+          "statusHints": []
+        },
+        {
+          "source": "소통24",
+          "title": "[2026-09-29 15:00 ~ 2026-10-14 19:00] 【국가철도공단】 철도산업 규제ㆍ애로 개선제안 공모 국가철도공단 기획본부 의견 작성 수0 공유 수0",
+          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=c24f5002e9424991bdfe52e3bd4e10ae&menu_id=527&pagetype=bbs",
+          "rawText": "[2026-09-29 15:00 ~ 2026-10-14 19:00] 【국가철도공단】 철도산업 규제ㆍ애로 개선제안 공모 국가철도공단 기획본부 의견 작성 수0 공유 수0",
+          "statusHints": []
+        }
+      ],
+      "actionableCount": 4,
       "shadow": false
     }
   },
   "shadowSources": {
+    "bizinfo": {
+      "key": "bizinfo",
+      "status": "OK",
+      "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200View.do?pblancArea=400",
+      "items": [
+        {
+          "source": "기업마당",
+          "title": "1454 수출 [울산ㆍ경남] 2026년 인도네시아 자카르타 K-뷰티ㆍ푸드 소비재 수출상담회 지역 수출컨소시엄 참여기업 모집 연장 재공고 2026-08-21 ~ 2026-10-14 경상남도 진주바이오산업진흥원 2026-10-06 410",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127009&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1454 수출 [울산ㆍ경남] 2026년 인도네시아 자카르타 K-뷰티ㆍ푸드 소비재 수출상담회 지역 수출컨소시엄 참여기업 모집 연장 재공고 2026-08-21 ~ 2026-10-14 경상남도 진주바이오산업진흥원 2026-10-06 410",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1455 기술 2026년 2차 우수연구개발 혁신제품 지정 기간연장(1차 연장) 공고 2026-10-02 ~ 2026-10-19 과학기술정보통신부 한국산업기술진흥협회 2026-10-06 424",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127010&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1455 기술 2026년 2차 우수연구개발 혁신제품 지정 기간연장(1차 연장) 공고 2026-10-02 ~ 2026-10-19 과학기술정보통신부 한국산업기술진흥협회 2026-10-06 424",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1456 기술 2026년 2차 우수연구개발 혁신제품 지정 기간연장(2차 연장) 공고 2026-10-02 ~ 2026-10-19 과학기술정보통신부 한국산업기술진흥협회 2026-10-06 430",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127011&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1456 기술 2026년 2차 우수연구개발 혁신제품 지정 기간연장(2차 연장) 공고 2026-10-02 ~ 2026-10-19 과학기술정보통신부 한국산업기술진흥협회 2026-10-06 430",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1457 금융 [강원] 2026년 하반기 농어촌진흥기금 지원계획 공고 2026-10-02 ~ 2026-10-30 강원특별자치도 직접수행 2026-10-06 412",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127012&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1457 금융 [강원] 2026년 하반기 농어촌진흥기금 지원계획 공고 2026-10-02 ~ 2026-10-30 강원특별자치도 직접수행 2026-10-06 412",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1458 인력 [서울ㆍ인천ㆍ경기] 2026년 미래내일 일경험(인턴형) 마케팅전략디자인 직무 참여기업 모집 공고 2026-10-02 ~ 2026-10-19 고용노동부 인사이드아웃 사회적협동조합 2026-10-06 496",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127013&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1458 인력 [서울ㆍ인천ㆍ경기] 2026년 미래내일 일경험(인턴형) 마케팅전략디자인 직무 참여기업 모집 공고 2026-10-02 ~ 2026-10-19 고용노동부 인사이드아웃 사회적협동조합 2026-10-06 496",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1459 경영 [경북] 2026년 지역특화형(방산ㆍ모빌리티) 스마트공장 보급확산 사업(기초단계) 참여기업 모집 공고 2026-10-12 ~ 2026-10-27 경상북도 경북테크노파크 2026-10-06 438",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127014&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1459 경영 [경북] 2026년 지역특화형(방산ㆍ모빌리티) 스마트공장 보급확산 사업(기초단계) 참여기업 모집 공고 2026-10-12 ~ 2026-10-27 경상북도 경북테크노파크 2026-10-06 438",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1460 기술 수성알파시티 기업 전용 5G 기반 통신망 서비스 지원 대상 기업 2차 모집 공고 2026-10-06 ~ 2026-10-27 국토교통부 대구테크노파크 2026-10-06 416",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127015&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1460 기술 수성알파시티 기업 전용 5G 기반 통신망 서비스 지원 대상 기업 2차 모집 공고 2026-10-06 ~ 2026-10-27 국토교통부 대구테크노파크 2026-10-06 416",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1461 창업 2026년 한국도로공사 상생형 창업ㆍ벤처기업 지원사업 모집 공고 2026-10-06 ~ 2026-10-28 국토교통부 한국도로공사 2026-10-06 531",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127016&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1461 창업 2026년 한국도로공사 상생형 창업ㆍ벤처기업 지원사업 모집 공고 2026-10-06 ~ 2026-10-28 국토교통부 한국도로공사 2026-10-06 531",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1462 기술 [전북] 김제시 2026년 4차 미래 Special 차Car세대 성장프로젝트 지원기업 모집 공고(시군구연고산업육성 협업프로젝트) 2026-10-02 ~ 2026-10-12 중소벤처기업부 전북테크노파크 2026-10-06 417",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127017&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1462 기술 [전북] 김제시 2026년 4차 미래 Special 차Car세대 성장프로젝트 지원기업 모집 공고(시군구연고산업육성 협업프로젝트) 2026-10-02 ~ 2026-10-12 중소벤처기업부 전북테크노파크 2026-10-06 417",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1463 수출 [경기] 용인시 2026년 3차 해외진출 종합지원사업(해외물류비) 공고 2026-10-13 ~ 2026-10-20 경기도 용인시산업진흥원 2026-10-06 419",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127018&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1463 수출 [경기] 용인시 2026년 3차 해외진출 종합지원사업(해외물류비) 공고 2026-10-13 ~ 2026-10-20 경기도 용인시산업진흥원 2026-10-06 419",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1464 경영 제주 K-뷰티 글로벌 라운지 입점 업체 모집 공고 2026-10-06 ~ 2026-10-19 중소벤처기업부 제주테크노파크 2026-10-06 436",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127019&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1464 경영 제주 K-뷰티 글로벌 라운지 입점 업체 모집 공고 2026-10-06 ~ 2026-10-19 중소벤처기업부 제주테크노파크 2026-10-06 436",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1465 기술 [충남] 2026년 4차 예비수소전문기업지원사업 수소산업분야 기술사업화(비R&D) 수혜기업 모집 공고 2026-10-06 ~ 2026-10-08 충청남도 충남테크노파크 2026-10-06 425",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127020&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1465 기술 [충남] 2026년 4차 예비수소전문기업지원사업 수소산업분야 기술사업화(비R&D) 수혜기업 모집 공고 2026-10-06 ~ 2026-10-08 충청남도 충남테크노파크 2026-10-06 425",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1466 창업 [경북] 정보보호 스타트업 육성사업 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 경상북도 포항테크노파크 2026-10-06 432",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127021&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1466 창업 [경북] 정보보호 스타트업 육성사업 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 경상북도 포항테크노파크 2026-10-06 432",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1467 경영 [경북] 정보보호 맞춤형 패키지 지원사업 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 경상북도 포항테크노파크 2026-10-06 444",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127022&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1467 경영 [경북] 정보보호 맞춤형 패키지 지원사업 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 경상북도 포항테크노파크 2026-10-06 444",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1468 내수 [경기] 2026년 10월 동행축제 소상공인 라이브커머스 참가기업 모집 공고 2026-10-02 ~ 2026-10-16 중소벤처기업부 경기지방중소벤처기업청 2026-10-06 462",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127023&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1468 내수 [경기] 2026년 10월 동행축제 소상공인 라이브커머스 참가기업 모집 공고 2026-10-02 ~ 2026-10-16 중소벤처기업부 경기지방중소벤처기업청 2026-10-06 462",
+          "statusHints": []
+        }
+      ],
+      "count": 15,
+      "actionableItems": [
+        {
+          "source": "기업마당",
+          "title": "1454 수출 [울산ㆍ경남] 2026년 인도네시아 자카르타 K-뷰티ㆍ푸드 소비재 수출상담회 지역 수출컨소시엄 참여기업 모집 연장 재공고 2026-08-21 ~ 2026-10-14 경상남도 진주바이오산업진흥원 2026-10-06 410",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127009&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1454 수출 [울산ㆍ경남] 2026년 인도네시아 자카르타 K-뷰티ㆍ푸드 소비재 수출상담회 지역 수출컨소시엄 참여기업 모집 연장 재공고 2026-08-21 ~ 2026-10-14 경상남도 진주바이오산업진흥원 2026-10-06 410",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1455 기술 2026년 2차 우수연구개발 혁신제품 지정 기간연장(1차 연장) 공고 2026-10-02 ~ 2026-10-19 과학기술정보통신부 한국산업기술진흥협회 2026-10-06 424",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127010&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1455 기술 2026년 2차 우수연구개발 혁신제품 지정 기간연장(1차 연장) 공고 2026-10-02 ~ 2026-10-19 과학기술정보통신부 한국산업기술진흥협회 2026-10-06 424",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1456 기술 2026년 2차 우수연구개발 혁신제품 지정 기간연장(2차 연장) 공고 2026-10-02 ~ 2026-10-19 과학기술정보통신부 한국산업기술진흥협회 2026-10-06 430",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127011&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1456 기술 2026년 2차 우수연구개발 혁신제품 지정 기간연장(2차 연장) 공고 2026-10-02 ~ 2026-10-19 과학기술정보통신부 한국산업기술진흥협회 2026-10-06 430",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1457 금융 [강원] 2026년 하반기 농어촌진흥기금 지원계획 공고 2026-10-02 ~ 2026-10-30 강원특별자치도 직접수행 2026-10-06 412",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127012&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1457 금융 [강원] 2026년 하반기 농어촌진흥기금 지원계획 공고 2026-10-02 ~ 2026-10-30 강원특별자치도 직접수행 2026-10-06 412",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1458 인력 [서울ㆍ인천ㆍ경기] 2026년 미래내일 일경험(인턴형) 마케팅전략디자인 직무 참여기업 모집 공고 2026-10-02 ~ 2026-10-19 고용노동부 인사이드아웃 사회적협동조합 2026-10-06 496",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127013&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1458 인력 [서울ㆍ인천ㆍ경기] 2026년 미래내일 일경험(인턴형) 마케팅전략디자인 직무 참여기업 모집 공고 2026-10-02 ~ 2026-10-19 고용노동부 인사이드아웃 사회적협동조합 2026-10-06 496",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1459 경영 [경북] 2026년 지역특화형(방산ㆍ모빌리티) 스마트공장 보급확산 사업(기초단계) 참여기업 모집 공고 2026-10-12 ~ 2026-10-27 경상북도 경북테크노파크 2026-10-06 438",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127014&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1459 경영 [경북] 2026년 지역특화형(방산ㆍ모빌리티) 스마트공장 보급확산 사업(기초단계) 참여기업 모집 공고 2026-10-12 ~ 2026-10-27 경상북도 경북테크노파크 2026-10-06 438",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1460 기술 수성알파시티 기업 전용 5G 기반 통신망 서비스 지원 대상 기업 2차 모집 공고 2026-10-06 ~ 2026-10-27 국토교통부 대구테크노파크 2026-10-06 416",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127015&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1460 기술 수성알파시티 기업 전용 5G 기반 통신망 서비스 지원 대상 기업 2차 모집 공고 2026-10-06 ~ 2026-10-27 국토교통부 대구테크노파크 2026-10-06 416",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1461 창업 2026년 한국도로공사 상생형 창업ㆍ벤처기업 지원사업 모집 공고 2026-10-06 ~ 2026-10-28 국토교통부 한국도로공사 2026-10-06 531",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127016&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1461 창업 2026년 한국도로공사 상생형 창업ㆍ벤처기업 지원사업 모집 공고 2026-10-06 ~ 2026-10-28 국토교통부 한국도로공사 2026-10-06 531",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1462 기술 [전북] 김제시 2026년 4차 미래 Special 차Car세대 성장프로젝트 지원기업 모집 공고(시군구연고산업육성 협업프로젝트) 2026-10-02 ~ 2026-10-12 중소벤처기업부 전북테크노파크 2026-10-06 417",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127017&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1462 기술 [전북] 김제시 2026년 4차 미래 Special 차Car세대 성장프로젝트 지원기업 모집 공고(시군구연고산업육성 협업프로젝트) 2026-10-02 ~ 2026-10-12 중소벤처기업부 전북테크노파크 2026-10-06 417",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1463 수출 [경기] 용인시 2026년 3차 해외진출 종합지원사업(해외물류비) 공고 2026-10-13 ~ 2026-10-20 경기도 용인시산업진흥원 2026-10-06 419",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127018&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1463 수출 [경기] 용인시 2026년 3차 해외진출 종합지원사업(해외물류비) 공고 2026-10-13 ~ 2026-10-20 경기도 용인시산업진흥원 2026-10-06 419",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1464 경영 제주 K-뷰티 글로벌 라운지 입점 업체 모집 공고 2026-10-06 ~ 2026-10-19 중소벤처기업부 제주테크노파크 2026-10-06 436",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127019&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1464 경영 제주 K-뷰티 글로벌 라운지 입점 업체 모집 공고 2026-10-06 ~ 2026-10-19 중소벤처기업부 제주테크노파크 2026-10-06 436",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1465 기술 [충남] 2026년 4차 예비수소전문기업지원사업 수소산업분야 기술사업화(비R&D) 수혜기업 모집 공고 2026-10-06 ~ 2026-10-08 충청남도 충남테크노파크 2026-10-06 425",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127020&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1465 기술 [충남] 2026년 4차 예비수소전문기업지원사업 수소산업분야 기술사업화(비R&D) 수혜기업 모집 공고 2026-10-06 ~ 2026-10-08 충청남도 충남테크노파크 2026-10-06 425",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1466 창업 [경북] 정보보호 스타트업 육성사업 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 경상북도 포항테크노파크 2026-10-06 432",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127021&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1466 창업 [경북] 정보보호 스타트업 육성사업 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 경상북도 포항테크노파크 2026-10-06 432",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1467 경영 [경북] 정보보호 맞춤형 패키지 지원사업 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 경상북도 포항테크노파크 2026-10-06 444",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127022&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1467 경영 [경북] 정보보호 맞춤형 패키지 지원사업 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 경상북도 포항테크노파크 2026-10-06 444",
+          "statusHints": []
+        },
+        {
+          "source": "기업마당",
+          "title": "1468 내수 [경기] 2026년 10월 동행축제 소상공인 라이브커머스 참가기업 모집 공고 2026-10-02 ~ 2026-10-16 중소벤처기업부 경기지방중소벤처기업청 2026-10-06 462",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127023&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
+          "rawText": "1468 내수 [경기] 2026년 10월 동행축제 소상공인 라이브커머스 참가기업 모집 공고 2026-10-02 ~ 2026-10-16 중소벤처기업부 경기지방중소벤처기업청 2026-10-06 462",
+          "statusHints": []
+        }
+      ],
+      "actionableCount": 15,
+      "shadow": true
+    },
     "kised": {
       "key": "kised",
       "status": "OK",
@@ -3929,7 +4244,7 @@
     "hackathonKoreaActionable": 5,
     "kStartupHighlights": 10,
     "kStartupHighlightsActionable": 3,
-    "sotong24Contests": 0,
-    "sotong24ContestsActionable": 0
+    "sotong24Contests": 9,
+    "sotong24ContestsActionable": 4
   }
 }
