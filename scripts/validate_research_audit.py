@@ -2,6 +2,8 @@
 import json
 import pathlib
 import sys
+import re
+from datetime import date as date_cls, datetime, timedelta
 from urllib.parse import urlsplit, urlunsplit
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -33,6 +35,60 @@ def normalize_url(value):
     parsed = urlsplit(value)
     path = parsed.path[:-1] if len(parsed.path) > 1 and parsed.path.endswith("/") else parsed.path
     return urlunsplit((parsed.scheme, parsed.netloc, path, "", ""))
+
+
+def _parse_iso_date(value):
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(str(value).replace("Z", "+00:00")).date()
+    except ValueError:
+        try:
+            return date_cls.fromisoformat(str(value)[:10])
+        except ValueError:
+            return None
+
+
+def _nearest_deadline_date(item, today):
+    candidates = []
+    for field in ("deadlineText", "period"):
+        text = str(item.get(field) or "")
+        for y, m, d in re.findall(r"(?:(20\d{2})[.\-/])?(\d{1,2})[.\-/](\d{1,2})", text):
+            year = int(y) if y else today.year
+            try:
+                dt = date_cls(year, int(m), int(d))
+            except ValueError:
+                continue
+            if dt < today and not y:
+                try:
+                    dt = date_cls(today.year + 1, int(m), int(d))
+                except ValueError:
+                    continue
+            if dt >= today:
+                candidates.append(dt)
+    return min(candidates) if candidates else None
+
+
+def _reverify_due(item, snapshot_date):
+    today = date_cls.fromisoformat(snapshot_date)
+    last = _parse_iso_date(item.get("lastVerifiedDate"))
+    if last is None:
+        return True
+
+    if item.get("status") == "UPCOMING":
+        opening = _parse_iso_date(item.get("openingAt"))
+        interval_days = 1 if opening and opening <= today + timedelta(days=1) else 2
+    else:
+        deadline = _nearest_deadline_date(item, today)
+        days_left = (deadline - today).days if deadline else None
+        if days_left is not None and days_left <= 3:
+            interval_days = 1
+        elif days_left is not None and days_left <= 14:
+            interval_days = 2
+        else:
+            interval_days = 7
+
+    return (today - last).days >= interval_days
 
 
 TRACKS = {
@@ -240,16 +296,31 @@ if baseline is not None:
         f"research audit publishedIds mismatch: expected {sorted(new_ids)}, got {sorted(published_ids)}"
     )
 
-    baseline_open = {
+    baseline_due = {
         item["id"]
         for group in ("contests", "support")
         for item in baseline.get(group, [])
-        if item.get("id") and item.get("status") in ("OPEN", "UPCOMING")
+        if item.get("id")
+        and item.get("status") in ("OPEN", "UPCOMING")
+        and _reverify_due(item, snapshot_date)
     }
     reverified = audit.get("reverifiedIds")
     assert isinstance(reverified, list), "research audit reverifiedIds must be a list"
-    missing = baseline_open - set(reverified)
-    assert not missing, f"research audit did not re-verify existing OPEN/UPCOMING ids: {sorted(missing)}"
+    missing = baseline_due - set(reverified)
+    assert not missing, f"research audit did not re-verify due OPEN/UPCOMING ids: {sorted(missing)}"
+
+    current_by_id = {
+        item["id"]: item
+        for group in ("contests", "support")
+        for item in data.get(group, [])
+        if item.get("id")
+    }
+    stale = [
+        item_id
+        for item_id in baseline_due
+        if current_by_id.get(item_id, {}).get("lastVerifiedDate") != snapshot_date
+    ]
+    assert not stale, f"due reverified items must set lastVerifiedDate to snapshot date: {sorted(stale)}"
 
 assert set(published_ids).issubset(candidate_ids), "research audit publishedIds includes ids absent from snapshot"
 assert set(published_ids).issubset(all_candidate_ids), "every published id must appear in rawCandidates evidence"
