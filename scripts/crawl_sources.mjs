@@ -138,15 +138,15 @@ async function scrollListing(page, selector, rounds = 20) {
 }
 
 async function collectAnchors(page, hrefSelector, source) {
-  const rows = await page.locator(hrefSelector).evaluateAll((anchors) =>
-    anchors.map((a) => {
+  const rows = await page.evaluate((selector) =>
+    Array.from(document.querySelectorAll(selector)).map((a) => {
       const parentText = a.closest("article, li, [class*='card'], [class*='item'], [class*='contest'], [class*='hackathon'], tr, section")?.innerText;
       return {
         href: a.href,
         text: a.innerText || a.textContent || "",
         context: parentText || "",
       };
-    })
+    }), hrefSelector
   );
 
   const byUrl = new Map();
@@ -229,7 +229,7 @@ async function crawlHackathonKorea(page) {
   const url = "https://koreahackathons.com/";
   await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
   await page.waitForTimeout(1000);
-  const selector = 'a[href*="/hackathons/"]';
+  const selector = 'a[href*="/events/"]';
   let items = await collectAnchors(page, selector, "Hackathon Korea");
   const hubPaths = new Set([
     "/hackathons/seoul", "/hackathons/busan", "/hackathons/daejeon", "/hackathons/daegu",
@@ -237,7 +237,7 @@ async function crawlHackathonKorea(page) {
   ]);
   items = items.filter(item => {
     const u = new URL(item.url);
-    return u.hostname.endsWith("koreahackathons.com") && !hubPaths.has(u.pathname);
+    return u.hostname.endsWith("koreahackathons.com") && u.pathname.startsWith("/events/");
   });
   if (!items.length) throw new Error("Hackathon Korea crawler returned zero items");
   return withActionable({ key: "hackathonKorea", status: "OK", url, items }, () => true);
@@ -286,7 +286,7 @@ async function crawlDevpost(page) {
 }
 
 async function crawlContestKorea(page) {
-  const url = "https://www.contestkorea.kr/";
+  const url = "https://contestkorea.kr/";
   await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
   await page.waitForTimeout(1000);
   const selector = 'a[href*="/sub/view.php"], a[href*="sub/view.php"]';
