@@ -845,9 +845,10 @@ function discoveryPrimaryGroup(item) {
   if (type === "github") return "github";
   if (["skill","mcp","agent"].includes(type)) return "agents";
   if (type === "workflow") return "workflows";
-  if (["site","directory","platform"].includes(type)) return "sites";
 
   const categories = (item.categories || []).map(v => String(v).toLowerCase());
+  if (type === "directory" && categories.some(v => ["workflow","showcase"].includes(v))) return "workflows";
+  if (["site","directory","platform"].includes(type)) return "sites";
   if (categories.some(v => ["skill","mcp","agent"].includes(v))) return "agents";
   if (categories.some(v => ["workflow","showcase","automation"].includes(v))) return "workflows";
   return "sites";
