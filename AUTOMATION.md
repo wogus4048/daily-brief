@@ -75,8 +75,9 @@ Required fields:
 - `categories[]` using stable tags such as Agent, Skill, MCP, Prompt, Video, Dev Tool, Research, Directory, Showcase, Automation
 - `signals[]`: why it surfaced (e.g. GitHub star velocity, repeated Reddit/X mentions, official showcase inclusion, dependency/reference from a tracked repo)
 - `discoveryReason`: compact explanation of the discovery evidence
-- `adoption`: one of `USE`, `ADOPT`, `STUDY`, `WATCH`, `IGNORE`
-- `relevance`: concrete applicability to this user's systems/projects
+- `marketPosition`: one of `MAINSTREAM`, `NICHE`, `EXPERIMENTAL`
+- `momentum`: one of `HOT`, `RISING`, `STABLE`, `RESURFACED`
+- `discoveryState`: one of `NEW`, `NEW_TO_US`, `UPDATED`
 - optional `related[]` references to related sites/repos/skills/workflows
 
 Collection policy:
@@ -84,10 +85,14 @@ Collection policy:
 - Search independently across official ecosystem showcases/directories, GitHub, Reddit, Hacker News, Product Hunt, X/public social results when accessible, and official developer/platform channels.
 - Keep the existing broad-web principle: do not reduce discovery to a fixed whitelist. Credible newly found recurring sources must be recorded in `sourceDiscoveries` and evaluated for the source lifecycle.
 - Merge duplicate mentions into one entity while preserving independent signal counts/sources. A website and its GitHub repository may remain separate linked entities when each has independent utility.
-- Classify change state as `NEW`, `UPDATED`, `TRENDING`, or `RESURFACED` when useful.
+- Keep the three status axes separate:
+  - what it is: `discoveryType` / `categories[]`
+  - where it sits in the ecosystem: `marketPosition` + `momentum`
+  - how it appears in this catalog: `discoveryState`
+- Do not infer popularity from the fact that the user only just discovered an item. A long-popular project may be `MAINSTREAM · HOT · NEW_TO_US`.
 - Every daily refresh must produce both a ranked Top Finds view and the full discovery catalog; ranking may hide nothing from storage.
 - High-value recurring sources discovered through an item should feed back into Source Radar: discovery -> candidate -> SHADOW -> ACTIVE, using the existing source lifecycle engine where technically crawlable.
-- Adoption scoring must be independent of popularity. Prefer practical reuse, reproducibility, openness, maintenance activity, and fit with the user's agent/harness/developer workflows.
+- Rank by signal strength, novelty, practical usefulness, reproducibility, openness and maintenance activity. This ranking is for presentation only and must not become an internal adoption/status field.
 - Do not turn ordinary AI product announcements into Discovery unless there is a reusable asset (site/repo/skill/workflow/directory) worth cataloging.
 
 Suggested brief grouping:
@@ -98,7 +103,7 @@ Suggested brief grouping:
 - Interesting Workflows
 - Trending Discussions
 - Model & Platform Changes (link to AI news when primarily news)
-- Adoption Candidates
+- Established but Important
 - Everything Else
 - Source Radar (new recurring information sources discovered today)
 
