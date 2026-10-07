@@ -7,7 +7,9 @@ const state = {
   categorySort: "deadline",
   activeRoute: null,
   viewStates: {},
-  discoveryFilter: "all"
+  discoveryFilter: "all",
+  homeFilter: "all",
+  homeSort: "recommended"
 };
 
 const $ = (s) => document.querySelector(s);
@@ -209,10 +211,19 @@ function renderShared() {
   const data = state.data;
   $("#topbarDate").textContent = formatDate(data.date);
   $("#year").textContent = new Date().getFullYear();
-  $("#navContestCount").textContent = (data.contests || []).filter(isOpenItem).length;
-  $("#navAiCount").textContent = (data.aiNews || []).length;
-  $("#navDiscoveryCount").textContent = (data.aiDiscovery || []).length;
-  $("#navSupportCount").textContent = (data.support || []).filter(isOpenItem).length;
+  const set = (selector, value) => { const el = $(selector); if (el) el.textContent = value; };
+  const contestCount = (data.contests || []).filter(isOpenItem).length;
+  const aiCount = (data.aiNews || []).length;
+  const discoveryCount = (data.aiDiscovery || []).length;
+  const supportCount = (data.support || []).filter(isOpenItem).length;
+  set("#navContestCount", contestCount);
+  set("#navAiCount", aiCount);
+  set("#navDiscoveryCount", discoveryCount);
+  set("#navSupportCount", supportCount);
+  set("#topNavContestCount", contestCount);
+  set("#topNavAiCount", aiCount);
+  set("#topNavDiscoveryCount", discoveryCount);
+  set("#topNavSupportCount", supportCount);
 }
 
 function hideAllViews() {
@@ -231,6 +242,7 @@ function route() {
   if (!state.data) return;
 
   const hash = location.hash || "#/";
+  document.body.classList.toggle("home-route", hash === "#/" || hash === "#");
   hideAllViews();
   document.body.classList.remove("menu-open");
 
@@ -321,20 +333,26 @@ function renderHome() {
   const newToday = items => items.filter(isNewToday).length;
   const totalNewToday = newToday(contests) + newToday(news) + newToday(discovery) + newToday(support);
 
-  $("#homeDateLabel").textContent = state.data.date;
-  $("#homeTotalCount").textContent = state.all.length;
-  $("#homeNewTotal").textContent = totalNewToday;
-  $("#homeOpenTotal").textContent = openContests.length + openSupport.length;
-  $("#homeDiscoveryTotal").textContent = discovery.length;
+  const set = (selector, value) => { const el = $(selector); if (el) el.textContent = value; };
+  set("#homeDateLabel", state.data.date);
+  set("#homeTotalCount", state.all.length);
+  set("#homeNewTotal", totalNewToday);
+  set("#leftTodayCount", state.all.length);
+  set("#leftNewCount", totalNewToday);
+  set("#leftUpdatedCount", state.all.filter(x => isUpdatedToday(x) || (itemKind(x) === "discovery" && String(x.newsState || "").toUpperCase() === "UPDATED")).length);
+  set("#leftRisingCount", discovery.filter(x => ["HOT","RISING","RESURFACED"].includes(String(x.trend || "").toUpperCase())).length);
+  set("#leftUrgentCount", [].concat(openContests, openSupport).filter(withinWeek).length);
+  set("#leftToolCount", discovery.filter(x => ["site","directory","platform","workflow"].includes(String(x.discoveryType || "").toLowerCase())).length);
+  set("#leftGithubCount", discovery.filter(x => String(x.discoveryType || "").toLowerCase() === "github").length);
+  set("#leftAgentCount", discovery.filter(x => ["mcp","skill","agent"].includes(String(x.discoveryType || "").toLowerCase())).length);
+  set("#homeRightNewCount", totalNewToday);
 
-  renderHomeTopSignals();
+  renderHomeFeed();
   renderHomeTrending();
-  renderHomeSources();
-  renderHomeExplore();
-  renderHomeAllSignals();
-  renderHomeResources();
-  renderHomeUpcoming();
-  renderArchiveStrip("#homeArchiveDays", state.data.archive || []);
+  renderHomeRightUpcoming();
+  renderHomeRightNew();
+  renderHomeRightUpdated();
+  renderHomeLeftArchive();
 }
 
 function homeSignalScore(item) {
@@ -402,6 +420,117 @@ function rankedHomeSignals(limit) {
   }).slice(0, limit);
 }
 
+function homeFeedMatches(item) {
+  const filter = state.homeFilter;
+  if (filter === "all") return true;
+  if (filter === "new") return isNewToday(item);
+  if (filter === "updated") return isUpdatedToday(item) || (itemKind(item) === "discovery" && String(item.newsState || "").toUpperCase() === "UPDATED");
+  if (filter === "rising") return itemKind(item) === "discovery" && ["HOT","RISING","RESURFACED"].includes(String(item.trend || "").toUpperCase());
+  if (filter === "urgent") return ["contest","support"].includes(itemKind(item)) && isOpenItem(item) && withinWeek(item);
+  return true;
+}
+
+function homeFeedItems() {
+  const items = state.all.filter(homeFeedMatches);
+  if (state.homeSort === "latest") {
+    return items.sort((a,b) => latestDateValue(b).localeCompare(latestDateValue(a)) || homeSignalScore(b) - homeSignalScore(a));
+  }
+  return items.sort((a,b) => homeSignalScore(b) - homeSignalScore(a) || latestDateValue(b).localeCompare(latestDateValue(a)));
+}
+
+function homeFeedIcon(item) {
+  if (item.icon) return item.icon;
+  const kind = itemKind(item);
+  if (kind === "ai") return "AI";
+  if (kind === "contest") return "H";
+  if (kind === "support") return "S";
+  const type = String(item.discoveryType || "").toLowerCase();
+  if (type === "github") return "GH";
+  if (type === "mcp") return "M";
+  if (type === "skill") return "SK";
+  if (type === "agent") return "AG";
+  if (type === "workflow") return "WF";
+  return "W";
+}
+
+function homeFeedTags(item) {
+  const values = itemKind(item) === "discovery" ? (item.categories || item.tags || []) : (item.tags || []);
+  return values.slice(0,3).join(" · ") || homeSignalLabel(item);
+}
+
+function renderHomeFeed() {
+  const el = $("#homeFeed");
+  if (!el) return;
+  const items = homeFeedItems().slice(0, 40);
+  const note = $("#homeFeedFilterNote");
+  const labels = {all:"",new:"오늘 새로 추가된 정보",updated:"최근 업데이트된 정보",rising:"최근 관심이 늘어난 항목",urgent:"7일 안에 마감되는 항목"};
+  if (note) {
+    note.hidden = state.homeFilter === "all";
+    note.textContent = labels[state.homeFilter] ? labels[state.homeFilter] + " · " + items.length + "개" : "";
+  }
+  if (!items.length) {
+    el.innerHTML = '<div class="empty-state">이 조건에 해당하는 정보가 없습니다.</div>';
+    return;
+  }
+  el.innerHTML = items.map((item,index) =>
+    '<a class="product-row" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '">' +
+      '<div class="product-rank">' + String(index + 1).padStart(2,"0") + '</div>' +
+      '<div class="product-icon tone-' + homeSignalTone(item) + (item.icon ? ' emoji' : '') + '">' + esc(homeFeedIcon(item)) + '</div>' +
+      '<div class="product-body">' +
+        '<div class="product-title-line"><h3>' + esc(item.title) + '</h3><span>' + esc(homeSignalLabel(item)) + '</span></div>' +
+        '<p>' + esc(cut(item.summary || item.description || "", 155)) + '</p>' +
+        '<div class="product-meta"><span>' + esc(homeFeedTags(item)) + '</span></div>' +
+      '</div>' +
+      '<div class="product-side"><strong>' + esc(homeSignalStatus(item)) + '</strong><span>' + esc(cut(homeSignalMeta(item), 44)) + '</span></div>' +
+    '</a>'
+  ).join("");
+  wireHomeRows(el);
+}
+
+function renderHomeRightUpcoming() {
+  const el = $("#homeRightUpcoming");
+  if (!el) return;
+  const items = [].concat(state.data.contests || [], state.data.support || [])
+    .filter(item => isOpenItem(item) && ddayNumber(item) !== null && ddayNumber(item) >= 0)
+    .sort((a,b) => ddayNumber(a) - ddayNumber(b))
+    .slice(0,5);
+  el.innerHTML = items.map(item =>
+    '<a class="right-row" href="' + itemRoute(item) + '"><strong>' + esc(item.dDay || "진행 중") + '</strong><span>' + esc(item.title) + '</span></a>'
+  ).join("") || '<div class="right-empty">확인된 마감이 없습니다.</div>';
+}
+
+function renderHomeRightNew() {
+  const el = $("#homeRightNew");
+  if (!el) return;
+  const items = state.all.filter(isNewToday).sort((a,b) => homeSignalScore(b) - homeSignalScore(a)).slice(0,5);
+  el.innerHTML = items.map(item =>
+    '<a class="right-row simple" href="' + itemRoute(item) + '"><span>' + esc(item.title) + '</span><em>' + esc(homeSignalLabel(item)) + '</em></a>'
+  ).join("") || '<div class="right-empty">오늘 새로 추가된 정보가 없습니다.</div>';
+}
+
+function renderHomeRightUpdated() {
+  const el = $("#homeRightUpdated");
+  if (!el) return;
+  const items = state.all
+    .filter(item => isUpdatedToday(item) || (itemKind(item) === "discovery" && String(item.newsState || "").toUpperCase() === "UPDATED"))
+    .sort((a,b) => latestDateValue(b).localeCompare(latestDateValue(a)))
+    .slice(0,5);
+  el.innerHTML = items.map(item =>
+    '<a class="right-row simple" href="' + itemRoute(item) + '"><span>' + esc(item.title) + '</span><em>업데이트</em></a>'
+  ).join("") || '<div class="right-empty">오늘 후속 업데이트가 없습니다.</div>';
+}
+
+function renderHomeLeftArchive() {
+  const el = $("#homeLeftArchive");
+  if (!el) return;
+  const days = (state.data.archive || []).slice(0,5);
+  el.innerHTML = days.map(date => {
+    const label = shortDate(date);
+    const href = '?date=' + encodeURIComponent(date) + '#/';
+    return '<a class="side-link archive-link" href="' + href + '"><span>' + esc(label) + '</span></a>';
+  }).join("");
+}
+
 function wireHomeRows(root) {
   if (!root) return;
   root.querySelectorAll("[data-id]").forEach(row => {
@@ -444,8 +573,8 @@ function renderHomeTrending() {
   });
 
   const rows = [...scores.entries()].sort((a,b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0,6);
-  $("#homeTrending").innerHTML = rows.map(([label,count],index) =>
-    '<div class="rail-row"><span class="rail-rank">' + String(index + 1).padStart(2,"0") + '</span><strong>' + esc(label) + '</strong><span class="rail-value">' + count + '</span></div>'
+  $("#homeTrending").innerHTML = rows.map(([label,count]) =>
+    '<div class="right-topic"><span>' + esc(label) + '</span><strong>' + count + '</strong></div>'
   ).join("");
 }
 
@@ -1165,7 +1294,7 @@ function renderDiscoveryHub() {
     '<section class="discovery-all">' +
       '<div class="discovery-section-head"><div><p class="section-eyebrow">전체 모음</p><h2>모든 항목</h2></div><span>찾은 항목은 빠짐없이 모아둡니다</span></div>' +
       '<div class="discovery-filter-row" id="discoveryFilters">' +
-        [["all","전체"],["new","오늘 찾은 것"],["rising","요즘 뜨는 것"],["site","사이트"],["directory","디렉터리"],["github","GitHub"],["skill","Skill"],["mcp","MCP"],["agent","Agent"],["workflow","Workflow"]]
+        [["all","전체"],["new","오늘 찾은 것"],["rising","요즘 뜨는 것"],["tools","도구 · 서비스"],["github","GitHub"],["agents","MCP · Skill · Agent"],["workflow","Workflow"]]
           .map(([key,label]) => '<button class="btn btn-sm filter-chip ' + (state.discoveryFilter === key ? "selected active" : "") + '" data-filter="' + key + '">' + label + '</button>').join("") +
       '</div>' +
       '<div class="discovery-all-list" id="discoveryAllList"></div>' +
@@ -1196,6 +1325,8 @@ function matchesDiscoveryFilter(item, filter) {
   if (filter === "all") return true;
   if (filter === "new") return isNewToday(item);
   if (filter === "rising") return ["HOT","RISING","RESURFACED"].includes(String(item.trend || "").toUpperCase());
+  if (filter === "tools") return ["site","directory","platform","workflow"].includes(String(item.discoveryType || "").toLowerCase());
+  if (filter === "agents") return ["mcp","skill","agent"].includes(String(item.discoveryType || "").toLowerCase());
   return String(item.discoveryType || "").toLowerCase() === filter;
 }
 
@@ -1405,6 +1536,28 @@ function setupInteractions() {
   const mobileMenu = $("#mobileMenu");
   if (mobileMenu) mobileMenu.addEventListener("click", () => document.body.classList.toggle("menu-open"));
   document.querySelectorAll(".nav-item").forEach(a => a.addEventListener("click", () => document.body.classList.remove("menu-open")));
+
+  document.querySelectorAll("[data-home-filter]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      state.homeFilter = btn.dataset.homeFilter || "all";
+      document.querySelectorAll("[data-home-filter]").forEach(x => x.classList.toggle("active", x === btn));
+      renderHomeFeed();
+    });
+  });
+
+  document.querySelectorAll("[data-home-sort]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      state.homeSort = btn.dataset.homeSort || "recommended";
+      document.querySelectorAll("[data-home-sort]").forEach(x => x.classList.toggle("selected", x === btn));
+      renderHomeFeed();
+    });
+  });
+
+  document.querySelectorAll("[data-discovery-filter]").forEach(link => {
+    link.addEventListener("click", () => {
+      state.discoveryFilter = link.dataset.discoveryFilter || "all";
+    });
+  });
 
   $("#backButton").addEventListener("click", () => {
     if (history.length > 1) history.back();
