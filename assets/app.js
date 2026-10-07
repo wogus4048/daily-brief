@@ -835,6 +835,11 @@ function discoveryLabel(map, value) {
   return map[key] || String(value || "");
 }
 
+function discoveryTypeLabel(value) {
+  const key = String(value || "").toLowerCase();
+  return DISCOVERY_TYPE_LABELS[key] || String(value || "");
+}
+
 function discoveryPrimaryGroup(item) {
   const type = String(item.discoveryType || "").toLowerCase();
   if (type === "github") return "github";
@@ -857,7 +862,7 @@ function discoveryRank(item) {
 
 function discoverySignalBadges(item) {
   const parts = [
-    discoveryLabel(DISCOVERY_TYPE_LABELS, String(item.discoveryType || "").toLowerCase()),
+    discoveryTypeLabel(item.discoveryType),
     discoveryLabel(DISCOVERY_AWARENESS_LABELS, item.awareness),
     discoveryLabel(DISCOVERY_TREND_LABELS, item.trend),
     discoveryLabel(DISCOVERY_NEWS_LABELS, item.newsState)
