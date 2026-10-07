@@ -1,14 +1,15 @@
 <!doctype html>
-<html lang="ko" data-color-mode="light" data-light-theme="light">
+<html lang="ko" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="개발자와 빌더를 위해 AI, 오픈소스, 공모전, 창업·지원사업의 새 소식과 자료를 매일 골라 정리하는 공개 브리핑" />
-  <meta name="theme-color" content="#f6f8fa" />
+  <meta name="theme-color" content="#f2f2f7" />
   <title>daily-brief</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/vendor/primer.css" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/apple-ui.css" />
 </head>
 <body>
   <div class="app-shell">
@@ -20,7 +21,7 @@
             <small>AI · 개발 · 오픈소스 · 기회</small>
           </a>
           <button class="btn topbar-search" id="searchButton" type="button">
-            <span class="search-icon">/</span>
+            <span class="search-icon" aria-hidden="true"></span>
             <span>검색</span>
             <kbd>⌘ K</kbd>
           </button>
@@ -33,17 +34,17 @@
           <aside class="global-left" aria-label="탐색">
             <nav class="side-nav">
               <div class="side-group">
-                <a class="side-link nav-item active" href="#/" data-route="home"><span>오늘</span><b id="leftTodayCount">0</b></a>
+                <a class="side-link nav-item active" href="#/" data-route="home" data-icon="home"><span>오늘</span><b id="leftTodayCount">0</b></a>
               </div>
 
               <div class="side-group">
                 <h2>분야</h2>
-                <a class="side-link nav-item" href="#/ai-news" data-route="ai-news"><span>AI 뉴스</span><b id="navAiCount">0</b></a>
-                <a class="side-link nav-item" href="#/ai-discovery" data-route="ai-discovery" data-discovery-filter="tools"><span>AI 도구 · 서비스</span><b id="leftToolCount">0</b></a>
-                <a class="side-link" href="#/ai-discovery" data-discovery-filter="github"><span>GitHub · 오픈소스</span><b id="leftGithubCount">0</b></a>
-                <a class="side-link" href="#/ai-discovery" data-discovery-filter="agents"><span>MCP · Skill · Agent</span><b id="leftAgentCount">0</b></a>
-                <a class="side-link nav-item" href="#/contests" data-route="contests"><span>공모전 · 해커톤</span><b id="navContestCount">0</b></a>
-                <a class="side-link nav-item" href="#/support" data-route="support"><span>창업 · 지원사업</span><b id="navSupportCount">0</b></a>
+                <a class="side-link nav-item" href="#/ai-news" data-route="ai-news" data-icon="sparkles"><span>AI 뉴스</span><b id="navAiCount">0</b></a>
+                <a class="side-link nav-item" href="#/ai-discovery" data-route="ai-discovery" data-discovery-filter="tools" data-icon="tools"><span>AI 도구 · 서비스</span><b id="leftToolCount">0</b></a>
+                <a class="side-link" href="#/ai-discovery" data-discovery-filter="github" data-icon="code"><span>GitHub · 오픈소스</span><b id="leftGithubCount">0</b></a>
+                <a class="side-link" href="#/ai-discovery" data-discovery-filter="agents" data-icon="nodes"><span>MCP · Skill · Agent</span><b id="leftAgentCount">0</b></a>
+                <a class="side-link nav-item" href="#/contests" data-route="contests" data-icon="trophy"><span>공모전 · 해커톤</span><b id="navContestCount">0</b></a>
+                <a class="side-link nav-item" href="#/support" data-route="support" data-icon="briefcase"><span>창업 · 지원사업</span><b id="navSupportCount">0</b></a>
               </div>
 
               <div class="side-group">
@@ -58,7 +59,7 @@
               <div class="side-group side-archive-group">
                 <h2>지난 기록</h2>
                 <div id="homeLeftArchive"></div>
-                <a class="side-link nav-item" href="#/archive" data-route="archive"><span>아카이브 전체</span></a>
+                <a class="side-link nav-item" href="#/archive" data-route="archive" data-icon="clock"><span>아카이브 전체</span></a>
               </div>
             </nav>
           </aside>
@@ -157,6 +158,14 @@
           </aside>
         </div>
       </main>
+
+      <nav class="ios-tabbar" aria-label="하단 탭">
+        <a class="ios-tab-item nav-item active" href="#/" data-route="home"><span class="ios-tab-symbol" data-icon="home"></span><span>오늘</span></a>
+        <a class="ios-tab-item nav-item" href="#/ai-news" data-route="ai-news"><span class="ios-tab-symbol" data-icon="sparkles"></span><span>AI</span></a>
+        <a class="ios-tab-item nav-item" href="#/ai-discovery" data-route="ai-discovery"><span class="ios-tab-symbol" data-icon="tools"></span><span>발견</span></a>
+        <a class="ios-tab-item nav-item" href="#/contests" data-route="contests"><span class="ios-tab-symbol" data-icon="trophy"></span><span>공모전</span></a>
+        <a class="ios-tab-item nav-item" href="#/support" data-route="support"><span class="ios-tab-symbol" data-icon="briefcase"></span><span>지원</span></a>
+      </nav>
 
       <footer>
         <span>daily-brief</span>
