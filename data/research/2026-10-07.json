@@ -559,6 +559,65 @@
         ]
       },
       "rawCandidates": []
+    },
+    "aiDiscovery": {
+      "status": "DONE",
+      "queriesByAxis": {
+        "sitesDirectories": [
+          "AI agent tool showcase directory Claude Code Codex skills October 2026"
+        ],
+        "github": [
+          "GitHub new AI agent skill MCP Claude Code Codex October 2026"
+        ],
+        "skillsMcpAgents": [
+          "Claude Code skill MCP agent new tool October 2026"
+        ],
+        "workflows": [
+          "AI coding workflow Remotion Claude Code Codex showcase October 2026"
+        ],
+        "communities": [
+          "Reddit Claude Code Codex new workflow skills October 2026"
+        ],
+        "sourceRadar": [
+          "AI agent tools directory showcase skills MCP October 2026"
+        ]
+      },
+      "rawCandidates": [
+        {
+          "title": "Prompt Motion",
+          "url": "https://www.prompt-motion.com/",
+          "disposition": "PUBLISHED",
+          "id": "prompt-motion"
+        },
+        {
+          "title": "Remotion Prompt Showcase",
+          "url": "https://www.remotion.dev/prompts",
+          "disposition": "PUBLISHED",
+          "id": "remotion-prompt-showcase"
+        },
+        {
+          "title": "mosaic/lab",
+          "url": "https://mosaiclab.net/",
+          "disposition": "PUBLISHED",
+          "id": "mosaic-lab-agent-directory"
+        },
+        {
+          "title": "CookiesForAI",
+          "url": "https://cookiesforai.app/",
+          "disposition": "PUBLISHED",
+          "id": "cookies-for-ai"
+        },
+        {
+          "title": "Claude Code + Codex workflow discussion",
+          "url": "https://www.reddit.com/r/codex/comments/1wyzbib/claude_code_codex_users_what_does_your_actual/",
+          "disposition": "NOT_RELEVANT"
+        },
+        {
+          "title": "Reusable Claude Code corrections workflow",
+          "url": "https://www.reddit.com/r/ClaudeWorkflows/comments/1wy7myl/workflow_automating_claude_code_corrections/",
+          "disposition": "NOT_RELEVANT"
+        }
+      ]
     }
   },
   "fixedSources": {
@@ -986,7 +1045,11 @@
     "gvalley-startup-competition-2026"
   ],
   "publishedIds": [
-    "keit-ai-life-solution-challenge-2026"
+    "keit-ai-life-solution-challenge-2026",
+    "prompt-motion",
+    "mosaic-lab-agent-directory",
+    "cookies-for-ai",
+    "remotion-prompt-showcase"
   ],
   "reverificationFailures": [],
   "reverificationEvidence": [
