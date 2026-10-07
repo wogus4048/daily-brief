@@ -3865,7 +3865,151 @@
       ]
     }
   ],
-  "aiDiscovery": [],
+  "aiDiscovery": [
+    {
+      "id": "prompt-motion",
+      "title": "Prompt Motion",
+      "summary": "Claude Opus 5.5로 만든 모션 영상과 실제 Prompt·Skill을 결과물과 함께 모아둔 쇼케이스",
+      "discoveryType": "site",
+      "description": "영상 결과물만 보여주는 갤러리가 아니라 각 작품에 사용된 프롬프트, Skill, 모델, 스택을 함께 공개해 재현 가능한 제작 레시피를 찾기 좋다.",
+      "why": "Claude Code·Remotion·HTML/Playwright 등 코드 기반 영상 제작법을 실제 결과물과 연결해 볼 수 있어 영상 Skill과 검증 루프 설계에 직접 참고할 수 있다.",
+      "firstSeenDate": "2026-10-07",
+      "lastUpdatedDate": "2026-10-07",
+      "categories": [
+        "Prompt",
+        "Video",
+        "Skill",
+        "Showcase",
+        "Automation"
+      ],
+      "signals": [
+        "공식 사이트에 Prompt/Skill 필터와 다수 실제 제작 사례 존재",
+        "최근 Remotion·Claude Code 기반 Skill 사례가 계속 추가됨"
+      ],
+      "discoveryReason": "사용자 제보로 최초 발견 후 공식 사이트와 최근 Skill 사례를 재검증",
+      "adoption": "ADOPT",
+      "relevance": "daily-brief Source Radar의 고정 관찰 후보이자 motion-video Skill 설계 참고원",
+      "links": [
+        {
+          "label": "Official",
+          "url": "https://www.prompt-motion.com/"
+        },
+        {
+          "label": "Remotion Prompt Showcase",
+          "url": "https://www.remotion.dev/prompts"
+        }
+      ],
+      "related": [
+        "Remotion Prompt Showcase",
+        "Cinetic",
+        "product-film-skill"
+      ]
+    },
+    {
+      "id": "mosaic-lab-agent-directory",
+      "title": "mosaic/lab",
+      "summary": "Agent Skill과 MCP 서버를 실제로 설치·시험한 결과를 검색할 수 있는 대규모 디렉터리",
+      "discoveryType": "directory",
+      "description": "사이트 표기 기준 2,540개 Agent Skill과 1,440개 MCP 서버를 다루며, 설치 명령과 사용량 신호를 함께 제공한다.",
+      "why": "단순 링크 모음이 아니라 직접 설치·시험했다는 기준을 내세워 Skill/MCP 후보 발굴의 질을 높일 수 있다.",
+      "firstSeenDate": "2026-10-07",
+      "lastUpdatedDate": "2026-10-07",
+      "categories": [
+        "Skill",
+        "MCP",
+        "Directory",
+        "Agent",
+        "Dev Tool"
+      ],
+      "signals": [
+        "대규모 Skill/MCP 색인",
+        "설치 명령 제공",
+        "lab-tested 표방"
+      ],
+      "discoveryReason": "AI Agent Skill/MCP 디렉터리 탐색 쿼리에서 발견",
+      "adoption": "USE",
+      "relevance": "Source Radar의 Skill/MCP 신규 후보 발굴용 핵심 반복 소스 후보",
+      "links": [
+        {
+          "label": "Official",
+          "url": "https://mosaiclab.net/"
+        }
+      ],
+      "related": [
+        "Skills CLI",
+        "MCP directories"
+      ]
+    },
+    {
+      "id": "cookies-for-ai",
+      "title": "CookiesForAI",
+      "summary": "Claude Code·Codex 등에서 쓸 Agent Skill, MCP 서버, AI coding tool을 조사·비교하는 리서치형 디렉터리",
+      "discoveryType": "directory",
+      "description": "Skill/MCP 추천뿐 아니라 디렉터리 자체 비교, 모델별 도구 탐색 실험, llms.txt, 읽기 전용 MCP, 오픈 JSON 데이터까지 제공한다.",
+      "why": "사람용 글과 기계가 읽을 수 있는 데이터가 같이 있어 daily-brief의 자동 Source Radar에 특히 잘 맞는다.",
+      "firstSeenDate": "2026-10-07",
+      "lastUpdatedDate": "2026-10-07",
+      "categories": [
+        "Skill",
+        "MCP",
+        "Directory",
+        "Research",
+        "Dev Tool"
+      ],
+      "signals": [
+        "2026-10 최신 비교 연구",
+        "오픈 데이터 JSON 제공",
+        "llms.txt 및 MCP 제공"
+      ],
+      "discoveryReason": "Agent Skill/MCP 디렉터리 비교 검색에서 발견",
+      "adoption": "ADOPT",
+      "relevance": "신규 Skill/MCP/AI coding tool 발견과 소스 자동 확장에 바로 활용 가능",
+      "links": [
+        {
+          "label": "Official",
+          "url": "https://cookiesforai.app/"
+        }
+      ],
+      "related": [
+        "Skill directories",
+        "MCP directories"
+      ]
+    },
+    {
+      "id": "remotion-prompt-showcase",
+      "title": "Remotion Prompt Showcase",
+      "summary": "Claude Code·Codex·OpenCode와 Remotion Skills로 만든 영상 사례와 프롬프트를 모아둔 공식 쇼케이스",
+      "discoveryType": "directory",
+      "description": "Remotion 공식 사이트가 커뮤니티의 코드 기반 영상 결과물과 프롬프트를 연결해 보여주는 쇼케이스다.",
+      "why": "Prompt Motion과 독립된 공식 생태계 소스라서 같은 트렌드를 교차검증하고 새 제작자·워크플로를 발견하기 좋다.",
+      "firstSeenDate": "2026-10-07",
+      "lastUpdatedDate": "2026-10-07",
+      "categories": [
+        "Prompt",
+        "Video",
+        "Directory",
+        "Showcase",
+        "Workflow"
+      ],
+      "signals": [
+        "Remotion 공식 운영",
+        "Claude Code·Codex·OpenCode 사례 명시"
+      ],
+      "discoveryReason": "Prompt Motion 주변 생태계 교차검증 중 공식 Remotion 소스에서 발견",
+      "adoption": "USE",
+      "relevance": "코드 기반 영상/모션 Skill과 workflow 신규 사례의 반복 수집원",
+      "links": [
+        {
+          "label": "Official",
+          "url": "https://www.remotion.dev/prompts"
+        }
+      ],
+      "related": [
+        "Prompt Motion",
+        "Remotion Skills"
+      ]
+    }
+  ],
   "support": [
     {
       "id": "seokyeong-bi-third-2026",
