@@ -985,58 +985,348 @@ body.apple-shell .ios-tabbar{display:none}
   body.apple-shell *{transition-duration:.01ms!important;animation-duration:.01ms!important}
 }
 
-/* SF-Symbol-like vector masks (custom-drawn for the web; no Apple assets embedded) */
-body.apple-shell .side-link[data-icon]::before,
-body.apple-shell .ios-tab-symbol[data-icon]{
-  content:"";
+/* Ionic iOS component integration
+ * Component chrome is owned by @ionic/core. Daily Brief CSS only supplies
+ * layout, sizing, density and semantic product tokens around the components.
+ */
+:root{
+  --ion-color-primary:#007aff;
+  --ion-color-primary-rgb:0,122,255;
+  --ion-background-color:#f2f2f7;
+  --ion-text-color:#000;
+  --ion-font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",system-ui,"Segoe UI",sans-serif;
+  --ion-item-background:#fff;
+  --ion-toolbar-background:transparent;
+}
+
+/* Real Ionicons in sidebar. */
+body.apple-shell .side-link ion-icon{
   width:18px;
   height:18px;
   flex:0 0 18px;
+  color:var(--ios-secondary-label);
+  font-size:18px;
+  --ionicon-stroke-width:28px;
+}
+body.apple-shell .side-link.active ion-icon{color:var(--ios-blue)}
+
+/* Ionic Searchbar owns search-field internals. */
+body.apple-shell .topbar-search-wrap{
+  position:relative;
+  width:330px;
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+}
+body.apple-shell ion-searchbar.topbar-search{
+  width:100%;
+  min-height:36px;
+  padding:0;
+  --background:var(--ios-fill);
+  --color:var(--ios-label);
+  --placeholder-color:var(--ios-secondary-label);
+  --icon-color:var(--ios-secondary-label);
+  --clear-button-color:var(--ios-secondary-label);
+  --border-radius:10px;
+  --box-shadow:none;
+  cursor:pointer;
+}
+body.apple-shell .topbar-search-wrap>kbd{
+  position:absolute;
+  right:10px;
+  z-index:2;
+  pointer-events:none;
+  color:var(--ios-secondary-label);
+  background:transparent;
+  border:0;
+  box-shadow:none;
+  font-size:11px;
+}
+body.apple-shell ion-searchbar.topbar-search:hover{
+  --background:var(--ios-fill-strong);
+}
+
+/* Ionic iOS segmented control. */
+body.apple-shell ion-segment.feed-sort{
+  width:132px;
+  min-height:32px;
+  padding:2px;
+  border-radius:9px;
+  background:var(--ios-fill);
+}
+body.apple-shell ion-segment.feed-sort ion-segment-button{
+  min-width:0;
+  min-height:28px;
+  --color:var(--ios-label);
+  --color-checked:var(--ios-label);
+  --indicator-color:var(--ios-elevated);
+  --indicator-box-shadow:0 1px 4px rgba(0,0,0,.14);
+  --border-radius:7px;
+  --padding-start:10px;
+  --padding-end:10px;
+  font-size:12px;
+  font-weight:600;
+  text-transform:none;
+}
+body.apple-shell ion-segment.feed-sort ion-label{margin:0}
+
+/* Ionic lists are the grouped-list surface. */
+body.apple-shell ion-list.product-feed,
+body.apple-shell ion-list.category-list,
+body.apple-shell ion-list.discovery-group-list,
+body.apple-shell ion-list.discovery-all-list,
+body.apple-shell ion-list.archive-page-grid{
+  margin:0;
+  padding:0;
+  background:var(--ios-group);
+  border-radius:var(--ios-radius);
+  overflow:hidden;
+  box-shadow:inset 0 0 0 .5px var(--ios-separator);
+}
+
+/* Home feed: ion-item provides pressed state/separators; grid is product-owned. */
+body.apple-shell ion-item.product-row{
+  --background:transparent;
+  --background-hover:var(--ios-fill);
+  --background-activated:var(--ios-fill-strong);
+  --border-color:var(--ios-separator);
+  --inner-border-width:0 0 .5px 0;
+  --min-height:92px;
+  --padding-start:0;
+  --inner-padding-end:0;
+  color:var(--ios-label);
+}
+body.apple-shell ion-item.product-row:last-child{--inner-border-width:0}
+body.apple-shell ion-item.product-row::part(native){
+  padding:0;
+}
+body.apple-shell .product-row-content{
+  width:100%;
+  display:grid;
+  grid-template-columns:34px 44px minmax(0,1fr) 142px;
+  gap:12px;
+  align-items:center;
+  padding:13px 14px;
+}
+
+/* Category routes: full-width content inside a real ion-item. */
+body.apple-shell ion-item.category-card{
+  --background:transparent;
+  --background-hover:var(--ios-fill);
+  --background-activated:var(--ios-fill-strong);
+  --border-color:var(--ios-separator);
+  --inner-border-width:0 0 .5px 0;
+  --padding-start:16px;
+  --inner-padding-end:16px;
+  --min-height:0;
   display:block;
-  background:currentColor;
-  -webkit-mask-repeat:no-repeat;
-  mask-repeat:no-repeat;
-  -webkit-mask-position:center;
-  mask-position:center;
-  -webkit-mask-size:18px 18px;
-  mask-size:18px 18px;
 }
-body.apple-shell .side-link[data-icon]::before{color:var(--ios-secondary-label)}
-body.apple-shell .side-link.active[data-icon]::before{color:var(--ios-blue)}
-body.apple-shell [data-icon="home"]::before,
-body.apple-shell .ios-tab-symbol[data-icon="home"]{
-  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3.5 10.5 12 3l8.5 7.5v8.25a1.75 1.75 0 0 1-1.75 1.75H15v-6.25H9v6.25H5.25a1.75 1.75 0 0 1-1.75-1.75Z' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E");
-  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3.5 10.5 12 3l8.5 7.5v8.25a1.75 1.75 0 0 1-1.75 1.75H15v-6.25H9v6.25H5.25a1.75 1.75 0 0 1-1.75-1.75Z' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E");
+body.apple-shell ion-item.category-card:last-child{--inner-border-width:0}
+body.apple-shell ion-item.category-card::part(native),
+body.apple-shell ion-item.category-card::part(inner){
+  display:block;
+  width:100%;
 }
-body.apple-shell [data-icon="sparkles"]::before,
-body.apple-shell .ios-tab-symbol[data-icon="sparkles"]{
-  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.8c.7 4.4 2.8 6.5 7.2 7.2-4.4.7-6.5 2.8-7.2 7.2-.7-4.4-2.8-6.5-7.2-7.2 4.4-.7 6.5-2.8 7.2-7.2Zm7.2 12.8c.3 1.9 1.2 2.8 3 3.1-1.8.3-2.7 1.2-3 3.1-.3-1.9-1.2-2.8-3-3.1 1.8-.3 2.7-1.2 3-3.1Z' fill='none' stroke='black' stroke-width='1.7' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E");
-  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.8c.7 4.4 2.8 6.5 7.2 7.2-4.4.7-6.5 2.8-7.2 7.2-.7-4.4-2.8-6.5-7.2-7.2 4.4-.7 6.5-2.8 7.2-7.2Zm7.2 12.8c.3 1.9 1.2 2.8 3 3.1-1.8.3-2.7 1.2-3 3.1-.3-1.9-1.2-2.8-3-3.1 1.8-.3 2.7-1.2 3-3.1Z' fill='none' stroke='black' stroke-width='1.7' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E");
+body.apple-shell ion-item.category-card::part(native){padding-top:15px;padding-bottom:16px}
+
+/* Discovery rows are real list items; retain the information split inside them. */
+body.apple-shell ion-item.discovery-row{
+  --background:transparent;
+  --background-hover:var(--ios-fill);
+  --background-activated:var(--ios-fill-strong);
+  --border-color:var(--ios-separator);
+  --inner-border-width:0 0 .5px 0;
+  --padding-start:16px;
+  --inner-padding-end:16px;
+  --min-height:0;
 }
-body.apple-shell [data-icon="tools"]::before,
-body.apple-shell .ios-tab-symbol[data-icon="tools"]{
-  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M14.3 5.3a4.6 4.6 0 0 0-5.8 5.8L3.7 16a2.6 2.6 0 0 0 3.7 3.7l4.8-4.8a4.6 4.6 0 0 0 5.8-5.8l-2.8 2.8-3.2-.8-.8-3.2 3.1-2.6Z' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E");
-  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M14.3 5.3a4.6 4.6 0 0 0-5.8 5.8L3.7 16a2.6 2.6 0 0 0 3.7 3.7l4.8-4.8a4.6 4.6 0 0 0 5.8-5.8l-2.8 2.8-3.2-.8-.8-3.2 3.1-2.6Z' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E");
+body.apple-shell ion-item.discovery-row:last-child{--inner-border-width:0}
+body.apple-shell ion-item.discovery-row::part(native){padding-top:15px;padding-bottom:15px}
+body.apple-shell ion-item.discovery-row::part(inner){
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 300px;
+  gap:32px;
+  align-items:center;
+  width:100%;
 }
-body.apple-shell [data-icon="code"]::before{
-  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m8.2 6.5-5 5 5 5M15.8 6.5l5 5-5 5M13.5 4l-3 15' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E");
-  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m8.2 6.5-5 5 5 5M15.8 6.5l5 5-5 5M13.5 4l-3 15' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E");
+
+/* Ionic chips own pill geometry and interaction feedback. */
+body.apple-shell ion-chip.filter-chip{
+  height:30px;
+  min-height:30px;
+  margin:0;
+  padding-inline:10px;
+  color:var(--ios-label);
+  background:var(--ios-fill);
+  border:0;
+  font-size:12px;
+  font-weight:500;
+  cursor:pointer;
 }
-body.apple-shell [data-icon="nodes"]::before{
-  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='6' cy='12' r='2.5' fill='none' stroke='black' stroke-width='1.7'/%3E%3Ccircle cx='18' cy='6' r='2.5' fill='none' stroke='black' stroke-width='1.7'/%3E%3Ccircle cx='18' cy='18' r='2.5' fill='none' stroke='black' stroke-width='1.7'/%3E%3Cpath d='m8.3 10.9 7.4-3.7M8.3 13.1l7.4 3.7' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round'/%3E%3C/svg%3E");
-  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='6' cy='12' r='2.5' fill='none' stroke='black' stroke-width='1.7'/%3E%3Ccircle cx='18' cy='6' r='2.5' fill='none' stroke='black' stroke-width='1.7'/%3E%3Ccircle cx='18' cy='18' r='2.5' fill='none' stroke='black' stroke-width='1.7'/%3E%3Cpath d='m8.3 10.9 7.4-3.7M8.3 13.1l7.4 3.7' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round'/%3E%3C/svg%3E");
+body.apple-shell ion-chip.filter-chip.active,
+body.apple-shell ion-chip.filter-chip.selected{
+  color:var(--ios-blue);
+  background:color-mix(in srgb,var(--ios-blue) 12%,transparent);
 }
-body.apple-shell [data-icon="trophy"]::before,
-body.apple-shell .ios-tab-symbol[data-icon="trophy"]{
-  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 4h8v3.5c0 3.2-1.5 5.5-4 6.5-2.5-1-4-3.3-4-6.5V4Zm0 2H4.5v1.5c0 2.4 1.4 4 3.7 4.6M16 6h3.5v1.5c0 2.4-1.4 4-3.7 4.6M12 14v4M8.5 20h7' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E");
-  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 4h8v3.5c0 3.2-1.5 5.5-4 6.5-2.5-1-4-3.3-4-6.5V4Zm0 2H4.5v1.5c0 2.4 1.4 4 3.7 4.6M16 6h3.5v1.5c0 2.4-1.4 4-3.7 4.6M12 14v4M8.5 20h7' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E");
+body.apple-shell ion-chip.filter-chip ion-label{font-size:inherit}
+
+/* Ionic select uses the iOS popover interface rather than a browser select. */
+body.apple-shell ion-select.sort-select{
+  width:auto;
+  min-width:154px;
+  min-height:36px;
+  padding:0 10px;
+  color:var(--ios-label);
+  background:var(--ios-fill);
+  border-radius:9px;
+  font-size:12px;
+  --placeholder-color:var(--ios-secondary-label);
 }
-body.apple-shell [data-icon="briefcase"]::before,
-body.apple-shell .ios-tab-symbol[data-icon="briefcase"]{
-  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='3.5' y='7.5' width='17' height='12' rx='2.2' fill='none' stroke='black' stroke-width='1.8'/%3E%3Cpath d='M9 7.5V5.8A1.8 1.8 0 0 1 10.8 4h2.4A1.8 1.8 0 0 1 15 5.8v1.7M3.5 11.5c2.8 1.4 5.6 2.1 8.5 2.1s5.7-.7 8.5-2.1' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
-  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='3.5' y='7.5' width='17' height='12' rx='2.2' fill='none' stroke='black' stroke-width='1.8'/%3E%3Cpath d='M9 7.5V5.8A1.8 1.8 0 0 1 10.8 4h2.4A1.8 1.8 0 0 1 15 5.8v1.7M3.5 11.5c2.8 1.4 5.6 2.1 8.5 2.1s5.7-.7 8.5-2.1' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
+
+/* Archive rows. */
+body.apple-shell ion-item.archive-card{
+  --background:transparent;
+  --background-hover:var(--ios-fill);
+  --background-activated:var(--ios-fill-strong);
+  --border-color:var(--ios-separator);
+  --inner-border-width:0 0 .5px 0;
+  --padding-start:16px;
+  --inner-padding-end:12px;
+  --min-height:64px;
 }
-body.apple-shell [data-icon="clock"]::before{
-  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='8.5' fill='none' stroke='black' stroke-width='1.8'/%3E%3Cpath d='M12 7.5v5l3.3 2' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='8.5' fill='none' stroke='black' stroke-width='1.8'/%3E%3Cpath d='M12 7.5v5l3.3 2' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+body.apple-shell ion-item.archive-card:last-child{--inner-border-width:0}
+body.apple-shell ion-item.archive-card>div{display:flex;flex-direction:column;gap:2px}
+body.apple-shell ion-item.archive-card small,
+body.apple-shell ion-item.archive-card span{color:var(--ios-secondary-label)}
+
+/* Ionic buttons own action chrome. */
+body.apple-shell ion-button.back-link{
+  margin:0 0 6px;
+  min-height:32px;
+  --color:var(--ios-blue);
+  --background:transparent;
+  --background-hover:var(--ios-fill);
+  --box-shadow:none;
+  --padding-start:4px;
+  --padding-end:8px;
+  font-size:14px;
+  font-weight:500;
+  text-transform:none;
+}
+body.apple-shell .detail-actions-top ion-button{
+  min-height:34px;
+  margin:0;
+  text-transform:none;
+  font-size:13px;
+  font-weight:600;
+}
+body.apple-shell .detail-actions-top ion-button.primary-link{
+  --background:var(--ios-blue);
+  --background-hover:#006ee6;
+  --color:#fff;
+  --border-radius:999px;
+  --box-shadow:none;
+}
+body.apple-shell .detail-actions-top ion-button.secondary-link{
+  --background:var(--ios-fill);
+  --background-hover:var(--ios-fill-strong);
+  --color:var(--ios-label);
+  --border-radius:999px;
+  --box-shadow:none;
+}
+
+/* Search sheet contains an actual Ionic iOS searchbar/button. */
+body.apple-shell ion-searchbar.search-field{
+  flex:1;
+  min-width:0;
+  padding:0;
+  --background:var(--ios-fill);
+  --color:var(--ios-label);
+  --placeholder-color:var(--ios-secondary-label);
+  --icon-color:var(--ios-secondary-label);
+  --clear-button-color:var(--ios-secondary-label);
+  --cancel-button-color:var(--ios-blue);
+  --border-radius:10px;
+  --box-shadow:none;
+}
+body.apple-shell ion-button.search-close{
+  min-width:52px;
+  min-height:36px;
+  margin:0;
+  --color:var(--ios-blue);
+  --background:transparent;
+  --box-shadow:none;
+  text-transform:none;
+}
+
+/* Actual Ionic tab bar/tab buttons for compact navigation. */
+body.apple-shell ion-tab-bar.ios-tabbar{display:none}
+@media(max-width:819px){
+  body.apple-shell ion-tab-bar.ios-tabbar{
+    position:fixed;
+    left:10px;
+    right:10px;
+    bottom:max(10px,env(safe-area-inset-bottom));
+    z-index:80;
+    height:66px;
+    display:flex;
+    padding:5px;
+    --background:var(--ios-glass-strong);
+    background:var(--ios-glass-strong);
+    border:.5px solid var(--ios-separator);
+    border-radius:22px;
+    box-shadow:0 10px 35px rgba(0,0,0,.16);
+    -webkit-backdrop-filter:saturate(180%) blur(30px);
+    backdrop-filter:saturate(180%) blur(30px);
+    overflow:hidden;
+  }
+  body.apple-shell ion-tab-button.ios-tab-item{
+    min-height:54px;
+    --color:var(--ios-secondary-label);
+    --color-selected:var(--ios-blue);
+    --background:transparent;
+    --ripple-color:transparent;
+    font-size:10px;
+    font-weight:500;
+  }
+  body.apple-shell ion-tab-button.ios-tab-item ion-icon{
+    font-size:21px;
+    --ionicon-stroke-width:28px;
+  }
+  body.apple-shell ion-tab-button.ios-tab-item ion-label{
+    margin-top:2px;
+    font-size:10px;
+  }
+
+  body.apple-shell .product-row-content{
+    grid-template-columns:26px 42px minmax(0,1fr);
+    gap:10px;
+    padding:12px;
+  }
+  body.apple-shell .product-row-content .product-side{
+    grid-column:3;
+    display:flex;
+    gap:8px;
+    text-align:left;
+  }
+  body.apple-shell ion-item.discovery-row::part(inner){
+    display:block;
+  }
+  body.apple-shell ion-select.sort-select{
+    width:100%;
+    min-height:38px;
+  }
+  body.apple-shell ion-chip.filter-chip{
+    min-height:34px;
+    height:34px;
+    flex:0 0 auto;
+  }
+}
+
+@media(max-width:430px){
+  body.apple-shell .topbar-search-wrap{width:min(126px,38vw)}
+  body.apple-shell .product-row-content{
+    grid-template-columns:22px 40px minmax(0,1fr);
+    gap:8px;
+  }
 }
