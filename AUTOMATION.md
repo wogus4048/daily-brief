@@ -9,10 +9,11 @@ The main file is `data/latest.json` with:
 - `generatedAt`
 - `contests`
 - `aiNews`
+- `aiDiscovery`
 - `support`
 - `archive`
 
-All three content arrays are cumulative catalogs, not replace-every-day feeds.
+All content arrays are cumulative catalogs, not replace-every-day feeds.
 
 ## Research evidence gate
 
@@ -50,6 +51,56 @@ Classification:
 - `support` is a separate catalog for startup/support opportunities such as pre-startup programs, commercialization funding, incubation/education, accelerators, PoC/validation, office/space support, cloud/GPU/API credits, and developer/startup benefit programs.
 
 Do not delete an opportunity just because today's search did not surface it. Re-check the official source. Use `UPCOMING` when an officially announced opportunity is not accepting applications yet but has a known future opening time/date and is relevant to act on in advance, especially same-day/next-24-hour or first-come openings. Change `UPCOMING` to `OPEN` after the official opening time is reached and the application page is available. When registration closes or the deadline passes, set `status: CLOSED` and keep it in the cumulative catalog so history remains searchable.
+
+### AI Discovery / Source Radar
+
+`aiDiscovery` is a cumulative asset catalog for reusable AI ecosystem discoveries, separate from `aiNews`.
+
+Discovery types:
+- `site`: standalone service/showcase/tool website
+- `github`: GitHub repository or project
+- `skill`: reusable agent skill/instruction package
+- `mcp`: MCP server/tool integration
+- `agent`: agent framework/runtime
+- `workflow`: reproducible multi-tool workflow or recipe
+- `directory`: curated catalog/showcase/index
+- `discussion`: high-signal community thread that reveals a reusable technique/tool
+- `platform`: broader developer/model platform
+
+Required fields:
+- `id`, `title`, `summary`, `discoveryType`
+- `description`, `why`
+- `firstSeenDate`, `lastUpdatedDate`
+- `links[]` with typed labels such as Official, GitHub, Docs, Demo, X, Reddit, HN, Video
+- `categories[]` using stable tags such as Agent, Skill, MCP, Prompt, Video, Dev Tool, Research, Directory, Showcase, Automation
+- `signals[]`: why it surfaced (e.g. GitHub star velocity, repeated Reddit/X mentions, official showcase inclusion, dependency/reference from a tracked repo)
+- `discoveryReason`: compact explanation of the discovery evidence
+- `adoption`: one of `USE`, `ADOPT`, `STUDY`, `WATCH`, `IGNORE`
+- `relevance`: concrete applicability to this user's systems/projects
+- optional `related[]` references to related sites/repos/skills/workflows
+
+Collection policy:
+- Optimize for coverage at ingestion time; do not discard lower-priority discoveries merely because they are not Top Finds.
+- Search independently across official ecosystem showcases/directories, GitHub, Reddit, Hacker News, Product Hunt, X/public social results when accessible, and official developer/platform channels.
+- Keep the existing broad-web principle: do not reduce discovery to a fixed whitelist. Credible newly found recurring sources must be recorded in `sourceDiscoveries` and evaluated for the source lifecycle.
+- Merge duplicate mentions into one entity while preserving independent signal counts/sources. A website and its GitHub repository may remain separate linked entities when each has independent utility.
+- Classify change state as `NEW`, `UPDATED`, `TRENDING`, or `RESURFACED` when useful.
+- Every daily refresh must produce both a ranked Top Finds view and the full discovery catalog; ranking may hide nothing from storage.
+- High-value recurring sources discovered through an item should feed back into Source Radar: discovery -> candidate -> SHADOW -> ACTIVE, using the existing source lifecycle engine where technically crawlable.
+- Adoption scoring must be independent of popularity. Prefer practical reuse, reproducibility, openness, maintenance activity, and fit with the user's agent/harness/developer workflows.
+- Do not turn ordinary AI product announcements into Discovery unless there is a reusable asset (site/repo/skill/workflow/directory) worth cataloging.
+
+Suggested brief grouping:
+- Top Finds
+- New Sites
+- GitHub Radar
+- Skills · MCP · Agents
+- Interesting Workflows
+- Trending Discussions
+- Model & Platform Changes (link to AI news when primarily news)
+- Adoption Candidates
+- Everything Else
+- Source Radar (new recurring information sources discovered today)
 
 ### AI news
 
