@@ -149,23 +149,37 @@ Do not add a custom class just to reproduce an existing Primer utility.
 
 Desktop-first.
 
-- maximum content width: about 1400px
+- maximum content width: about 1460px
 - sticky top header
-- horizontal category navigation
-- no permanent left sidebar
-- dense list/table views for collections
-- secondary context can live in a narrow right rail
-- detail pages use main content plus optional facts/actions rail
+- home uses a Product Hunt-inspired three-column shell
+- left rail = navigation / scope selection
+- center = the primary feed and the visual focus of the page
+- right rail = time-sensitive/contextual information
+- category/detail pages may keep their current simpler layout until they are separately migrated
 
 Home order:
 
-1. daily summary
-2. priority items + context rail
-3. category overview
-4. all-items list/table
-5. reusable resources
-6. upcoming deadlines
-7. archive
+1. header: brand + search + date
+2. left rail: categories, quick views, archive
+3. center: one continuous ranked/dated feed
+4. right rail: upcoming deadlines, new items, trending topics, recent updates
+
+Do not rebuild the old stacked home sections (`priority`, `category cards`, `all items`, `resources`, `deadlines`, `archive`) as separate blocks. Their information is redistributed across the three-column shell.
+
+The current Product Hunt homepage is the visual reference for home typography and surface treatment. The reference values observed on 2026-10-07 include:
+
+```text
+primary text      #21293c
+secondary text    #4b587c
+border            #d9e1ec
+accent            #ff6154
+row hover         #feede6
+font stack        ui-sans-serif, system-ui, sans-serif
+product name      18px / 600 / 28px line-height
+detail/meta       14px class of text
+```
+
+Primer remains the implementation foundation underneath this page language; Product Hunt is the page-level layout/visual reference.
 
 The information architecture remains project-owned; Primer provides the UI grammar.
 
