@@ -46,11 +46,11 @@ for item in data['aiDiscovery']:
     assert_date(item['firstSeenDate'], f"aiDiscovery.{item['id']}.firstSeenDate")
     assert_date(item['lastUpdatedDate'], f"aiDiscovery.{item['id']}.lastUpdatedDate")
     assert isinstance(item['links'], list) and item['links'], f"aiDiscovery.{item['id']}.links must be non-empty"
-    for field in ('marketPosition', 'momentum', 'discoveryState'):
+    for field in ('awareness', 'trend', 'newsState'):
         assert item.get(field), f"aiDiscovery.{item['id']} missing {field}"
-    assert item['marketPosition'] in ('MAINSTREAM', 'NICHE', 'EXPERIMENTAL'), f"aiDiscovery.{item['id']}.marketPosition invalid"
-    assert item['momentum'] in ('HOT', 'RISING', 'STABLE', 'RESURFACED'), f"aiDiscovery.{item['id']}.momentum invalid"
-    assert item['discoveryState'] in ('NEW', 'NEW_TO_US', 'UPDATED'), f"aiDiscovery.{item['id']}.discoveryState invalid"
+    assert item['awareness'] in ('WELL_KNOWN', 'SPECIALIZED', 'EARLY'), f"aiDiscovery.{item['id']}.awareness invalid"
+    assert item['trend'] in ('HOT', 'RISING', 'STEADY', 'RESURFACED'), f"aiDiscovery.{item['id']}.trend invalid"
+    assert item['newsState'] in ('NEW_RELEASE', 'NEWLY_DISCOVERED', 'UPDATED'), f"aiDiscovery.{item['id']}.newsState invalid"
     ids.append(item['id'])
 
 assert len(ids) == len(set(ids)), 'duplicate item id'
