@@ -75,9 +75,9 @@ Required fields:
 - `categories[]` using stable tags such as Agent, Skill, MCP, Prompt, Video, Dev Tool, Research, Directory, Showcase, Automation
 - `signals[]`: why it surfaced (e.g. GitHub star velocity, repeated Reddit/X mentions, official showcase inclusion, dependency/reference from a tracked repo)
 - `discoveryReason`: compact explanation of the discovery evidence
-- `marketPosition`: one of `MAINSTREAM`, `NICHE`, `EXPERIMENTAL`
-- `momentum`: one of `HOT`, `RISING`, `STABLE`, `RESURFACED`
-- `discoveryState`: one of `NEW`, `NEW_TO_US`, `UPDATED`
+- `awareness`: one of `WELL_KNOWN`, `SPECIALIZED`, `EARLY`
+- `trend`: one of `HOT`, `RISING`, `STEADY`, `RESURFACED`
+- `newsState`: one of `NEW_RELEASE`, `NEWLY_DISCOVERED`, `UPDATED`
 - optional `related[]` references to related sites/repos/skills/workflows
 
 Collection policy:
@@ -87,9 +87,10 @@ Collection policy:
 - Merge duplicate mentions into one entity while preserving independent signal counts/sources. A website and its GitHub repository may remain separate linked entities when each has independent utility.
 - Keep the three status axes separate:
   - what it is: `discoveryType` / `categories[]`
-  - where it sits in the ecosystem: `marketPosition` + `momentum`
-  - how it appears in this catalog: `discoveryState`
-- Do not infer popularity from the fact that the user only just discovered an item. A long-popular project may be `MAINSTREAM · HOT · NEW_TO_US`.
+  - awareness: how broadly known it is (`awareness`)
+  - trend: how attention is changing now (`trend`)
+  - news state: why it appears in today's brief (`newsState`)
+- Do not infer popularity from the fact that the user only just discovered an item. A long-popular project may be `WELL_KNOWN · HOT · NEWLY_DISCOVERED`.
 - Every daily refresh must produce both a ranked Top Finds view and the full discovery catalog; ranking may hide nothing from storage.
 - High-value recurring sources discovered through an item should feed back into Source Radar: discovery -> candidate -> SHADOW -> ACTIVE, using the existing source lifecycle engine where technically crawlable.
 - Rank by signal strength, novelty, practical usefulness, reproducibility, openness and maintenance activity. This ranking is for presentation only and must not become an internal adoption/status field.
