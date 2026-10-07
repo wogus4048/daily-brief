@@ -128,7 +128,7 @@
       "name": "기업마당",
       "reason": "Official Bizinfo support-program listing; broad startup/support discovery with structured detail URLs and application periods",
       "status": "SHADOW",
-      "score": 10,
+      "score": 20,
       "recommendation": "CONTINUE_SHADOW",
       "category": "startupSupport",
       "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200View.do?pblancArea=400",
@@ -141,6 +141,24 @@
         "expand": false,
         "waitMs": 1200
       }
+    },
+    {
+      "key": "cookiesforai-app",
+      "name": "cookiesforai.app",
+      "url": "https://cookiesforai.app/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "aiDiscovery",
+      "sourceTracks": [
+        "aiDiscovery"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-07",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://cookiesforai.app/"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
       "key": "datathon-kr",
@@ -214,7 +232,7 @@
       "category": "unclassified",
       "status": "NEEDS_SPEC",
       "discoveredAt": "2026-10-07",
-      "score": 25,
+      "score": 42,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -276,6 +294,24 @@
       "recommendation": "WATCH_ONLY"
     },
     {
+      "key": "mosaiclab-net",
+      "name": "mosaiclab.net",
+      "url": "https://mosaiclab.net/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "aiDiscovery",
+      "sourceTracks": [
+        "aiDiscovery"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-07",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://mosaiclab.net/"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "nipa",
       "name": "NIPA",
       "reason": "public announcements are structured but opportunity-relevant boards need selection",
@@ -313,6 +349,42 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "prompt-motion-com",
+      "name": "prompt-motion.com",
+      "url": "https://prompt-motion.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "aiDiscovery",
+      "sourceTracks": [
+        "aiDiscovery"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-07",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.prompt-motion.com/"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "remotion-dev",
+      "name": "remotion.dev",
+      "url": "https://remotion.dev/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "aiDiscovery",
+      "sourceTracks": [
+        "aiDiscovery"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-07",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.remotion.dev/prompts"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "sba",
       "name": "SBA",
       "reason": "public program listings split across multiple boards; source-specific board inventory needed",
@@ -323,5 +395,5 @@
     }
   ],
   "lastEvolvedDate": "2026-10-07",
-  "lastEvolvedAt": "2026-10-07T00:20:55.206703Z"
+  "lastEvolvedAt": "2026-10-07T01:47:22.303591Z"
 }
