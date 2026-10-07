@@ -3902,9 +3902,9 @@
         "Cinetic",
         "product-film-skill"
       ],
-      "marketPosition": "NICHE",
-      "momentum": "RISING",
-      "discoveryState": "NEW_TO_US"
+      "awareness": "SPECIALIZED",
+      "trend": "RISING",
+      "newsState": "NEWLY_DISCOVERED"
     },
     {
       "id": "mosaic-lab-agent-directory",
@@ -3938,9 +3938,9 @@
         "Skills CLI",
         "MCP directories"
       ],
-      "marketPosition": "NICHE",
-      "momentum": "RISING",
-      "discoveryState": "NEW_TO_US"
+      "awareness": "SPECIALIZED",
+      "trend": "RISING",
+      "newsState": "NEWLY_DISCOVERED"
     },
     {
       "id": "cookies-for-ai",
@@ -3974,9 +3974,9 @@
         "Skill directories",
         "MCP directories"
       ],
-      "marketPosition": "NICHE",
-      "momentum": "RISING",
-      "discoveryState": "NEW_TO_US"
+      "awareness": "SPECIALIZED",
+      "trend": "RISING",
+      "newsState": "NEWLY_DISCOVERED"
     },
     {
       "id": "remotion-prompt-showcase",
@@ -4009,9 +4009,9 @@
         "Prompt Motion",
         "Remotion Skills"
       ],
-      "marketPosition": "MAINSTREAM",
-      "momentum": "STABLE",
-      "discoveryState": "NEW_TO_US"
+      "awareness": "WELL_KNOWN",
+      "trend": "STEADY",
+      "newsState": "NEWLY_DISCOVERED"
     }
   ],
   "support": [
