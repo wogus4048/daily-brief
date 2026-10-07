@@ -94,21 +94,20 @@ Content uses standard grouped surfaces:
 
 ## 4. Dynamic color model
 
-Use semantic Apple-style tokens defined in `assets/apple-ui.css`.
+Use light-mode semantic tokens defined in `assets/apple-ui.css`, with Ionic's primary color mapped to iOS system blue.
 
 Light references:
 
 ```text
 system background       #f2f2f7
 secondary group         #ffffff
-system blue             #0088ff
+system blue             #007aff
 system red              #ff383c
 primary label           #000000
 secondary label         rgba(60,60,67,.68)
 separator               rgba(60,60,67,.20)
 ```
 
-Dark mode must resolve to dark semantic equivalents automatically.
 
 Rules:
 
