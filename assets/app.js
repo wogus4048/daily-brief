@@ -271,7 +271,7 @@ function route() {
   if (!state.data) return;
 
   const hash = location.hash || "#/";
-  document.body.classList.add("producthunt-shell");
+  document.body.classList.add("producthunt-shell", "apple-shell");
   hideAllViews();
   document.body.classList.remove("menu-open");
 

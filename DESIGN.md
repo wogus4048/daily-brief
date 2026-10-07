@@ -1,291 +1,321 @@
-# daily-brief Design System
+# daily-brief Apple Platform Design System
 
-`daily-brief` uses **Primer CSS as its UI foundation**.
+`daily-brief` should look and behave like an Apple-platform information app, not a generic web dashboard.
 
-This document exists to keep implementation aligned with Primer instead of drifting into custom AI-generated styling.
+The page-level visual source of truth is Apple Human Interface Guidelines (HIG), with an iPadOS-style split view on wide screens and an iOS-style single-pane/tab-bar layout on compact screens.
 
-## 1. Foundation
+`@primer/css` remains loaded only as a legacy/reset layer for existing markup. It is **not** the visual source of truth. `assets/apple-ui.css` must win visually.
 
-Primary UI system:
+## 1. Product character
 
-- `@primer/css`
-- current adopted version: `22.3.2`
-- vendored build: `assets/vendor/primer.css`
-- generated from Primer modules through `npm run build:styles`
+The product should feel:
 
-The vendored file is Primer's official `dist/primer.css` build. Do not hand-pick or fork Primer modules unless bundle size becomes a demonstrated problem.
-
-Do not re-create buttons, form controls, labels, focus states, spacing scales, borders, or semantic colors when Primer already provides them.
-
-## 2. Design goal
-
-The product should feel like a useful developer information surface:
-
-- compact but readable
-- neutral and functional
-- easy to scan
-- stable across pages
-- closer to a mature developer product than a marketing dashboard
+- quiet
+- native
+- precise
+- information-dense without feeling cramped
+- layered rather than boxed
+- obvious to navigate
+- readable before decorative
 
 It should not feel like:
 
+- Windows 95/98/XP UI
+- a generic admin dashboard
+- a pile of colored status cards
+- a Product Hunt clone
+- a GitHub clone
 - an AI-generated SaaS landing page
-- a custom mood-board experiment
-- a newspaper layout
-- a card farm
-- a black/white wireframe
-- a dashboard decorated with arbitrary colors
+- a collection of unrelated component styles
 
-## 3. Primer ownership boundary
+## 2. Platform model
 
-Primer owns:
+### Wide desktop / tablet landscape
 
-- color tokens
-- semantic states
-- border and radius conventions
-- buttons
-- form inputs and selects
-- labels
-- focus treatment
-- spacing scale
-- typography defaults and utilities
-- common layout utilities
+Use an iPadOS-style split view:
 
-Project CSS owns only what Primer does not know about:
+1. navigation/toolbar material at the top
+2. leading sidebar for navigation and scope
+3. primary content pane
+4. trailing inspector/context pane when space permits
 
-- Daily Brief page layout
-- widths and column structure
-- information hierarchy specific to this product
-- responsive reflow of Daily Brief sections
-- a small amount of component composition around Primer primitives
+The sidebar and inspector belong to the control/navigation layer and may use translucent material.
 
-When custom CSS introduces a raw color that could be expressed with a Primer token, replace it with a Primer token.
+### Medium widths
 
-## 4. Theme
+Use two panes:
 
-Use Primer light mode:
+1. sidebar
+2. primary content
 
-```html
-<html data-color-mode="light" data-light-theme="light">
-```
+Hide the trailing inspector before compressing the main content too far.
 
-Prefer Primer variables such as:
+### Compact / phone widths
 
-```text
---bgColor-default
---bgColor-muted
---fgColor-default
---fgColor-muted
---fgColor-accent
---borderColor-default
---borderColor-muted
---bgColor-accent-muted
---bgColor-success-muted
---bgColor-attention-muted
---bgColor-done-muted
-```
+Use an iOS-style single content pane:
 
-Do not add a separate site-wide custom palette unless a real product requirement appears.
+- hide sidebars
+- show a persistent bottom tab bar for top-level navigation
+- keep search in the top navigation area
+- preserve route state while moving between tabs
 
-## 5. Components
+Do not squeeze a desktop sidebar into a phone layout.
 
-Use Primer components directly where possible.
+## 3. Materials
 
-### Buttons
+Use Liquid-Glass-like material only for controls/navigation:
 
-Use:
+- top toolbar
+- sidebar
+- trailing inspector
+- bottom tab bar
+- search sheet
+
+Implementation uses translucent backgrounds, `backdrop-filter`, subtle separators, and small shadows.
+
+Do **not** use glass inside the scrolling content layer.
+
+Content uses standard grouped surfaces:
+
+- system grouped background
+- white/dark secondary grouped surfaces
+- inset grouped lists
+- subtle separators
+
+## 4. Dynamic color model
+
+Use semantic Apple-style tokens defined in `assets/apple-ui.css`.
+
+Light references:
 
 ```text
-.btn
-.btn-primary
-.btn-sm
+system background       #f2f2f7
+secondary group         #ffffff
+system blue             #0088ff
+system red              #ff383c
+primary label           #000000
+secondary label         rgba(60,60,67,.68)
+separator               rgba(60,60,67,.20)
 ```
 
-Do not custom-build generic buttons.
+Dark mode must resolve to dark semantic equivalents automatically.
 
-### Forms
+Rules:
 
-Use:
+- do not use category-specific colored blocks
+- blue means selection, navigation, link, or primary action
+- red means danger/urgency
+- use neutral fills for ordinary metadata
+- do not make AI/news/support/contest rows different background colors
+- color is not decoration
 
-```text
-.form-control
-.form-select
-.input-block
+## 5. Typography
+
+Prefer the Apple system stack:
+
+```css
+-apple-system,
+BlinkMacSystemFont,
+"SF Pro Text",
+"SF Pro Display",
+system-ui,
+"Segoe UI",
+sans-serif
 ```
 
-Search and filtering controls should look and behave like standard Primer controls.
+Do not bundle or redistribute Apple font files.
 
-### Labels
+When the page runs on Apple platforms, the system font should resolve to San Francisco/SF Pro. Other platforms use their native fallback while preserving Apple-like metrics and hierarchy.
 
-Use:
+Recommended hierarchy:
 
-```text
-.IssueLabel
-```
+- large view title: 27–30px, 700
+- grouped section title: 18–20px, 700
+- primary row title: 16–17px, 600–650
+- descriptive text: 13–14px
+- metadata: 11–12px
+- tab labels: 10px
 
-Labels are for compact metadata and states, not decoration.
+Never shrink body copy to create density.
 
-Semantic label colors should come from Primer tokens.
+## 6. Navigation components
 
-### Utilities
+### Top toolbar
 
-Prefer Primer utility classes for ordinary spacing, display, borders, background, and text color:
+Contains only global controls:
 
-```text
-.border
-.border-bottom
-.rounded-2
-.color-bg-default
-.color-bg-subtle
-.color-fg-muted
-.p-*
-.m-*
-.d-flex
-```
+- app identity
+- search
+- date/context
 
-Do not add a custom class just to reproduce an existing Primer utility.
+Avoid repeating category navigation in the toolbar when the sidebar/tab bar already provides it.
 
-## 6. Layout
+### Sidebar
 
-Desktop-first.
+Sidebar is for app hierarchy, not analytics.
 
-- maximum content width: about 1460px
-- sticky top header
-- all primary routes use a Product Hunt-inspired three-column shell
-- left rail = navigation / scope selection
-- center = the primary feed and the visual focus of the page
-- right rail = time-sensitive/contextual information
-- only the center content changes between home, category, discovery, archive, and detail routes
+Groups:
 
-Global shell:
+- Today
+- content areas
+- quick views
+- archive/history
 
-1. header: brand + search + date
-2. left rail: categories, quick views, archive
-3. center: route-specific primary content
-4. right rail: upcoming deadlines, new items, trending topics, recent updates
+Selected rows:
 
-Home uses one continuous ranked/dated feed. Category, discovery, archive, and detail routes use the same shell and should keep their center content flat and row-oriented instead of reverting to full-width dashboard/card layouts.
+- subtle system-blue tint
+- system-blue icon/text
+- rounded selection shape
 
-The current Product Hunt homepage is the visual reference for home typography and surface treatment. The reference values observed on 2026-10-07 include:
+No bright colored category icons.
 
-```text
-primary text      #21293c
-secondary text    #4b587c
-border            #d9e1ec
-accent            #ff6154
-row hover         #feede6
-font stack        ui-sans-serif, system-ui, sans-serif
-product name      18px / 600 / 28px line-height
-detail/meta       14px class of text
-```
+### Bottom tab bar
 
-Primer remains the implementation foundation underneath this page language; Product Hunt is the page-level layout/visual reference.
+Compact layout uses five top-level destinations:
 
-The information architecture remains project-owned; Primer provides the UI grammar.
+- Today
+- AI
+- Discover
+- Contests
+- Support
 
-## 7. Typography
+The tab bar floats above content using translucent material and remains visible while navigating.
 
-Do not shrink typography to create density.
+## 7. Search
 
-Desktop targets:
+Search is a primary global control.
 
-- body: 16px
-- primary item title: 18px or larger
-- descriptive text: 14px or larger
-- metadata: 11px or larger
-- navigation: 13px or larger
-- page title: about 32–36px
+Use an iOS-style search field:
 
-Mobile targets:
+- neutral system fill
+- magnifier icon
+- plain placeholder
+- no hard border
+- clear focus feedback
 
-- body: 15px or larger
-- primary item title: 17px or larger
-- metadata: 10px or larger
-- navigation: 12px or larger
-- search input: 16px to avoid mobile zoom
+The search dialog behaves visually like a sheet:
 
-Use Primer's font stack and weight tokens.
+- large rounded corners
+- translucent material
+- blurred backdrop
+- grouped result rows
 
-## 8. Semantic color
+## 8. Segmented controls and filters
 
-Color communicates meaning only.
+Use segmented controls for a small single-choice set such as:
 
-Use Primer semantic token families:
+- Recommended / Latest
 
-- accent: AI/news/navigation emphasis
-- success: support/open/success states
-- attention: deadlines/contests/warnings
-- done: reference/resources where needed
-- neutral: open source/general metadata
-- danger: errors or genuinely urgent destructive states
+Use neutral pills for larger filter sets.
 
-Do not assign a decorative color to every section just to make the page look more designed.
+Selected filter:
 
-## 9. Density
+- system blue text
+- very subtle blue tint
 
-Dense means reducing repetition, not reducing readability.
+Do not use yellow, green, purple, or blue category backgrounds.
 
-- Prefer flat list rows for repeated content.
-- Use bordered surfaces only when grouping helps comprehension.
-- Keep comparable fields aligned in columns.
-- Hide low-priority columns on mobile rather than shrinking them.
-- Avoid giant featured cards for ordinary content.
-- Avoid KPI cards unless there is an actual decision-making need.
+## 9. Lists and tables
 
-## 10. Korean UI language
+Information-heavy routes should use grouped lists rather than cards for every row.
 
-Use plain, natural Korean.
+A list surface:
 
-Preferred examples:
+- uses one rounded grouped container
+- contains multiple rows
+- separates rows with thin inset separators
+- uses consistent title/description/metadata alignment
+- uses neutral icons or thumbnails
+- applies a neutral pressed/hover state
 
-- `오늘 새로`
-- `최근 업데이트`
-- `눈여겨볼 점`
-- `요즘 많이 보이는 주제`
-- `다가오는 마감`
-- `계속 참고할 만한 것`
+Home feed, category lists, discovery lists, and archive should all follow this grammar.
 
-Avoid:
+## 10. Home feed
 
-- `현재 신호`
-- `상승 신호`
-- `고신호`
-- `왜 볼 가치가 있나`
-- `발견 이유`
-- `signal score`
-- `high signal`
-- `tracked`
-- `baseline`
-- `open opportunities`
+Each row contains:
 
-English is appropriate for real technical names such as GitHub, MCP, Skill, Agent, product names, and established industry terms.
+1. rank/order
+2. icon
+3. title
+4. one-line description
+5. metadata
+6. compact status on wide layouts
 
-## 11. Anti-patterns
+No category-colored backgrounds.
 
-Reject changes that introduce:
+The right-side status should remain secondary to the title.
 
-- custom gradients
-- glassmorphism
-- glow effects
-- random pastel section coloring
-- custom button systems beside Primer buttons
-- rounded cards around every row
-- tiny gray metadata
-- huge marketing headlines
-- decorative dashboard statistics
-- copied Linear/Vercel aesthetics without a product reason
+## 11. Detail views
 
-## 12. Review gate
+Detail pages keep the same global shell.
 
-Before merging UI work:
+Inside the content pane:
 
-1. Run `npm run build:styles` and verify the vendored Primer CSS is current.
-2. Confirm visible generic controls use Primer component classes.
-3. Render real `data/latest.json` content.
-4. Capture 1440px, 1024px, and 390px layouts.
-5. Check for horizontal overflow and console errors.
-6. Verify readable font-size minimums.
-7. Check mobile target sizes.
-8. Search visible copy for banned phrasing.
-9. Confirm custom CSS uses Primer tokens rather than an independent palette.
-10. Only then merge and deploy.
+- large navigation title
+- blue primary action
+- neutral secondary action
+- content divided into inset grouped sections
+- key/value rows use subtle separators
+- no decorative card colors
+- no separate dashboard-like facts panel unless the content genuinely needs it
+
+## 12. Inspector / right context pane
+
+On wide screens the trailing pane provides secondary context:
+
+- deadlines
+- new items
+- trending topics
+- recent updates
+
+Each block is an inset grouped section.
+
+Hide the inspector at medium widths before reducing primary content legibility.
+
+Do not show the inspector below primary content on iPhone. Compact layout uses the tab-bar/single-pane model instead.
+
+## 13. Icons
+
+Do not redistribute SF Symbols assets or Apple font files.
+
+For the web implementation, use custom monochrome vector masks with:
+
+- rounded line endings
+- consistent stroke weight
+- no multicolor emoji
+- no Windows-style glyph characters
+
+Navigation icons inherit label/selection color.
+
+## 14. Touch and interaction
+
+Compact layouts:
+
+- primary navigation targets: at least about 44px
+- bottom tab items: 54px or larger
+- pressed state: subtle neutral fill or reduced opacity
+- avoid tiny text-only click targets
+
+Honor `prefers-reduced-motion`.
+
+## 15. Dark mode
+
+All navigation materials, grouped backgrounds, labels, fills, separators, and controls must adapt to `prefers-color-scheme: dark`.
+
+Do not duplicate hard-coded light-only values in components.
+
+## 16. Review gate
+
+Before merging UI changes:
+
+1. render home, category, discovery, archive, and detail routes
+2. validate 1440px, tablet-width, and 390px layouts
+3. verify wide = 3-pane, medium = 2-pane, compact = 1-pane + tab bar
+4. verify no horizontal overflow
+5. verify no console/page errors
+6. verify no duplicate IDs
+7. verify mobile targets are usable
+8. verify search and segmented controls work
+9. verify no large yellow/blue/green semantic category backgrounds remain
+10. verify light and dark color schemes
+11. keep `assets/apple-ui.css` as the final visual authority
