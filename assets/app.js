@@ -351,10 +351,23 @@ function homeSignalScore(item) {
 
 function homeSignalLabel(item) {
   const kind = itemKind(item);
-  if (kind === "ai") return "AI NEWS";
-  if (kind === "discovery") return discoveryTypeLabel(item.discoveryType).toUpperCase();
-  if (kind === "support") return "SUPPORT";
-  return "CONTEST";
+  if (kind === "ai") return "AI 뉴스";
+  if (kind === "discovery") {
+    const type = String(item.discoveryType || "").toLowerCase();
+    if (type === "github") return "오픈소스";
+    return discoveryTypeLabel(item.discoveryType) || "AI 자료";
+  }
+  if (kind === "support") return "지원사업";
+  return "공모전";
+}
+
+function homeSignalTone(item) {
+  const kind = itemKind(item);
+  if (kind === "support") return "support";
+  if (kind === "contest") return "contest";
+  if (kind === "ai") return "ai";
+  if (String(item.discoveryType || "").toLowerCase() === "github") return "opensource";
+  return "resource";
 }
 
 function homeSignalStatus(item) {
@@ -363,11 +376,11 @@ function homeSignalStatus(item) {
     return discoveryLabel(DISCOVERY_TREND_LABELS, item.trend) || discoveryLabel(DISCOVERY_NEWS_LABELS, item.newsState);
   }
   if (kind === "ai") {
-    if (isNewToday(item)) return "NEW";
-    if (isUpdatedToday(item)) return "UPDATED";
-    return "TRACKED";
+    if (isNewToday(item)) return "오늘 새로";
+    if (isUpdatedToday(item)) return "최근 업데이트";
+    return "확인 완료";
   }
-  return !isOpenItem(item) ? "CLOSED" : (item.dDay || "OPEN");
+  return !isOpenItem(item) ? "종료" : (item.dDay || "진행 중");
 }
 
 function homeSignalMeta(item) {
@@ -394,7 +407,7 @@ function wireHomeRows(root) {
       const item = state.all.find(x => x.id === row.dataset.id);
       if (!item) return;
       state.lastRoute = "#/";
-      location.hash = itemRoute(item);
+      if (row.tagName !== "A") location.hash = itemRoute(item);
     });
   });
 }
@@ -403,13 +416,13 @@ function renderHomeTopSignals() {
   const el = $("#homeTopSignals");
   const items = rankedHomeSignals(6);
   el.innerHTML = items.map((item,index) =>
-    '<article class="top-signal-row" data-id="' + esc(item.id) + '">' +
+    '<a class="top-signal-row" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '">' +
       '<div class="signal-rank">' + String(index + 1).padStart(2,"0") + '</div>' +
-      '<div class="signal-main"><div class="signal-kicker"><span>' + esc(homeSignalLabel(item)) + '</span><span>' + esc(homeSignalStatus(item)) + '</span></div>' +
+      '<div class="signal-main"><div class="signal-kicker"><span class="signal-category tone-' + homeSignalTone(item) + '">' + esc(homeSignalLabel(item)) + '</span><span class="signal-state">' + esc(homeSignalStatus(item)) + '</span></div>' +
       '<h3>' + esc(item.title) + '</h3><p>' + esc(item.summary || "") + '</p>' +
-      (item.why ? '<div class="why-line"><b>WHY</b><span>' + esc(cut(item.why, 155)) + '</span></div>' : '') + '</div>' +
+      (item.why ? '<div class="why-line"><b>눈여겨볼 점</b><span>' + esc(cut(item.why, 155)) + '</span></div>' : '') + '</div>' +
       '<div class="signal-arrow">↗</div>' +
-    '</article>'
+    '</a>'
   ).join("");
   wireHomeRows(el);
 }
@@ -453,18 +466,18 @@ function renderHomeExplore() {
   const openContests = (state.data.contests || []).filter(isOpenItem);
   const openSupport = (state.data.support || []).filter(isOpenItem);
   const groups = [
-    {title:"AI News", href:"#/ai-news", count:(state.data.aiNews || []).length, items:newsPriority(state.data.aiNews || []).slice(0,3)},
-    {title:"AI Discovery", href:"#/ai-discovery", count:discovery.length, items:discovery.slice().sort((a,b)=>discoveryRank(b)-discoveryRank(a)).slice(0,3)},
-    {title:"GitHub · Open Source", href:"#/ai-discovery", count:discovery.filter(x=>String(x.discoveryType||"").toLowerCase()==="github").length, items:discovery.filter(x=>String(x.discoveryType||"").toLowerCase()==="github").slice(0,3)},
-    {title:"Tools · Workflows", href:"#/ai-discovery", count:discovery.filter(x=>["skill","mcp","agent","workflow","site","platform"].includes(String(x.discoveryType||"").toLowerCase())).length, items:discovery.filter(x=>["skill","mcp","agent","workflow","site","platform"].includes(String(x.discoveryType||"").toLowerCase())).slice(0,3)},
-    {title:"공모전 · 해커톤", href:"#/contests", count:openContests.length, items:opportunityPriority(openContests).slice(0,3)},
-    {title:"창업 · 지원사업", href:"#/support", count:openSupport.length, items:opportunityPriority(openSupport).slice(0,3)}
+    {title:"AI 뉴스", tone:"ai", href:"#/ai-news", count:(state.data.aiNews || []).length, items:newsPriority(state.data.aiNews || []).slice(0,3)},
+    {title:"AI Discovery", tone:"resource", href:"#/ai-discovery", count:discovery.length, items:discovery.slice().sort((a,b)=>discoveryRank(b)-discoveryRank(a)).slice(0,3)},
+    {title:"GitHub · 오픈소스", tone:"opensource", href:"#/ai-discovery", count:discovery.filter(x=>String(x.discoveryType||"").toLowerCase()==="github").length, items:discovery.filter(x=>String(x.discoveryType||"").toLowerCase()==="github").slice(0,3)},
+    {title:"도구 · 워크플로", tone:"resource", href:"#/ai-discovery", count:discovery.filter(x=>["skill","mcp","agent","workflow","site","platform"].includes(String(x.discoveryType||"").toLowerCase())).length, items:discovery.filter(x=>["skill","mcp","agent","workflow","site","platform"].includes(String(x.discoveryType||"").toLowerCase())).slice(0,3)},
+    {title:"공모전 · 해커톤", tone:"contest", href:"#/contests", count:openContests.length, items:opportunityPriority(openContests).slice(0,3)},
+    {title:"창업 · 지원사업", tone:"support", href:"#/support", count:openSupport.length, items:opportunityPriority(openSupport).slice(0,3)}
   ];
 
   $("#homeExplore").innerHTML = groups.map(group =>
-    '<section class="explore-cell"><a class="explore-cell-head" href="' + group.href + '"><h3>' + esc(group.title) + '</h3><span>' + group.count + '</span></a>' +
+    '<section class="explore-cell tone-' + group.tone + '"><a class="explore-cell-head" href="' + group.href + '"><h3>' + esc(group.title) + '</h3><span>' + group.count + '</span></a>' +
     '<div class="explore-items">' + (group.items.length ? group.items.map(item =>
-      '<div class="explore-item" data-id="' + esc(item.id) + '"><span>' + esc(item.title) + '</span><b>→</b></div>'
+      '<a class="explore-item" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '"><span>' + esc(item.title) + '</span><b>→</b></a>'
     ).join("") : '<div class="explore-empty">표시할 항목 없음</div>') + '</div></section>'
   ).join("");
   wireHomeRows($("#homeExplore"));
@@ -475,12 +488,12 @@ function renderHomeAllSignals() {
   $("#homeSignalCount").textContent = "전체 " + state.all.length + "개 중 " + items.length + "개 표시";
   const el = $("#homeAllSignals");
   el.innerHTML = items.map(item =>
-    '<article class="signal-table-row" data-id="' + esc(item.id) + '">' +
-      '<div class="signal-type">' + esc(homeSignalLabel(item)) + '</div>' +
+    '<a class="signal-table-row" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '">' +
+      '<div class="signal-type tone-' + homeSignalTone(item) + '">' + esc(homeSignalLabel(item)) + '</div>' +
       '<div class="signal-title"><strong>' + esc(item.title) + '</strong><span>' + esc(cut(item.summary || "", 105)) + '</span></div>' +
       '<div class="signal-meta">' + esc(cut(homeSignalMeta(item), 72)) + '</div>' +
       '<div class="signal-status">' + esc(homeSignalStatus(item)) + '</div>' +
-    '</article>'
+    '</a>'
   ).join("");
   wireHomeRows(el);
 }
@@ -491,7 +504,8 @@ function renderHomeResources() {
   el.innerHTML = items.map(item => {
     let domain = "";
     try { domain = new URL((item.links || [])[0]?.url || "").hostname.replace(/^www\./, ""); } catch (_) {}
-    return '<article class="resource-item" data-id="' + esc(item.id) + '"><div><strong>' + esc(item.title) + '</strong><span>' + esc(discoveryTypeLabel(item.discoveryType)) + '</span></div><small>' + esc(domain) + '</small></article>';
+    const tone = String(item.discoveryType || "").toLowerCase() === "github" ? "opensource" : "resource";
+    return '<a class="resource-item tone-' + tone + '" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '"><div><strong>' + esc(item.title) + '</strong><span>' + esc(discoveryTypeLabel(item.discoveryType)) + '</span></div><small>' + esc(domain) + '</small></a>';
   }).join("");
   wireHomeRows(el);
 }
@@ -507,7 +521,7 @@ function renderHomeUpcoming() {
     return;
   }
   el.innerHTML = items.map(item =>
-    '<article class="upcoming-row" data-id="' + esc(item.id) + '"><span class="upcoming-date">' + esc(item.dDay || "OPEN") + '</span><strong>' + esc(item.title) + '</strong><span class="upcoming-kind">' + (itemKind(item) === "support" ? "지원사업" : "공모전") + '</span><span class="signal-arrow">↗</span></article>'
+    '<a class="upcoming-row" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '"><span class="upcoming-date">' + esc(item.dDay || "진행 중") + '</span><strong>' + esc(item.title) + '</strong><span class="upcoming-kind">' + (itemKind(item) === "support" ? "지원사업" : "공모전") + '</span><span class="signal-arrow">↗</span></a>'
   ).join("");
   wireHomeRows(el);
 }
@@ -621,12 +635,12 @@ function renderCategory(type) {
 
   const configs = {
     contests: {
-      eyebrow:"현재 신청 가능",
+      eyebrow:"지금 신청 가능",
       title:"공모전 · 해커톤",
       description:"진행 중인 공고를 기본으로 보여드립니다. 새로 발견한 공고와 마감이 가까운 공고를 먼저 확인하세요."
     },
     "ai-news": {
-      eyebrow:"새 이슈 · 후속 업데이트",
+      eyebrow:"새 소식 · 후속 업데이트",
       title:"AI 뉴스",
       description:"완전히 새로운 이슈는 추가하고, 같은 이슈의 후속 소식은 기존 항목에 업데이트로 이어서 기록합니다."
     },
@@ -636,7 +650,7 @@ function renderCategory(type) {
       description:"사이트, GitHub, Skill, MCP, Agent, Workflow를 한곳에 모아 무엇에 쓰는지와 최근 변화까지 함께 정리합니다."
     },
     support: {
-      eyebrow:"현재 신청 가능",
+      eyebrow:"지금 신청 가능",
       title:"창업 · 지원사업",
       description:"사업자등록 전 예비창업자도 검토할 수 있는 사업화·보육·실증·크레딧·개발지원 기회를 모읍니다. 종료된 공고도 이력으로 보관합니다."
     }
@@ -915,7 +929,7 @@ function renderCategoryList(type) {
 
   if (type === "ai-news") {
     el.innerHTML = items.map(item =>
-      '<article class="category-card ai-category-card" data-id="' + esc(item.id) + '">' +
+      '<a class="category-card ai-category-card tone-ai" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '">' +
         '<div class="card-meta-row">' +
           '<div class="card-status-group">' +
             changeBadge(item, "ai") +
@@ -926,13 +940,13 @@ function renderCategoryList(type) {
         '<h3 class="category-item-title">' + esc(item.title) + '</h3>' +
         '<p class="category-item-summary">' + esc(item.summary || "") + '</p>' +
         tagsHtml(item.tags) +
-        '<div class="category-explainer"><span>왜 중요한가</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
+        '<div class="category-explainer"><span>눈여겨볼 점</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
         '<div class="category-action">업데이트 기록과 상세 내용 보기 <span>→</span></div>' +
-      '</article>'
+      '</a>'
     ).join("");
   } else if (type === "ai-discovery") {
     el.innerHTML = items.map(item =>
-      '<article class="category-card ai-category-card" data-id="' + esc(item.id) + '">' +
+      '<a class="category-card ai-category-card tone-' + (String(item.discoveryType || "").toLowerCase() === "github" ? "opensource" : "resource") + '" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '">' +
         '<div class="card-meta-row"><div class="card-status-group">' +
           changeBadge(item, "discovery") +
           '<span class="meta-label">' + esc(discoveryTypeLabel(item.discoveryType)) + '</span>' +
@@ -945,12 +959,12 @@ function renderCategoryList(type) {
         tagsHtml(item.tags) +
         '<div class="category-explainer"><span>눈여겨볼 점</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
         '<div class="category-action">상세 정보와 링크 보기 <span>→</span></div>' +
-      '</article>'
+      '</a>'
     ).join("");
   } else {
     const kind = type === "support" ? "support" : "contest";
     el.innerHTML = items.map(item =>
-      '<article class="category-card ' + (!isOpenItem(item) ? "is-closed" : "") + '" data-id="' + esc(item.id) + '">' +
+      '<a class="category-card tone-' + kind + ' ' + (!isOpenItem(item) ? "is-closed" : "") + '" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '">' +
         '<div class="card-meta-row">' +
           '<div class="card-status-group">' +
             changeBadge(item, kind) +
@@ -968,15 +982,13 @@ function renderCategoryList(type) {
           '<div class="flow-fact"><span>' + (kind === "support" ? "지원 대상" : "참가 조건") + '</span><strong>' + esc(txt(item.participation)) + '</strong></div>' +
         '</div>' +
         '<div class="category-action">상세 내용 보기 <span>→</span></div>' +
-      '</article>'
+      '</a>'
     ).join("");
   }
 
   el.querySelectorAll(".category-card").forEach(row => {
     row.addEventListener("click", () => {
       state.lastRoute = location.hash;
-      const item = state.all.find(x => x.id === row.dataset.id);
-      location.hash = itemRoute(item);
     });
   });
 }
@@ -1063,18 +1075,18 @@ function discoverySignalBadges(item) {
 }
 
 function discoveryTopCard(item, index) {
-  return '<article class="discovery-top-card ' + (index === 0 ? "primary" : "") + '" data-id="' + esc(item.id) + '">' +
+  return '<a class="discovery-top-card ' + (index === 0 ? "primary" : "") + '" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '">' +
     '<div class="discovery-top-index">0' + (index + 1) + '</div>' +
     discoverySignalBadges(item) +
     '<h3>' + esc(item.title) + '</h3>' +
     '<p>' + esc(item.summary || "") + '</p>' +
     '<div class="discovery-why"><span>눈여겨볼 점</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
     '<div class="discovery-card-action">자세히 보기 <span>→</span></div>' +
-  '</article>';
+  '</a>';
 }
 
 function discoveryRow(item) {
-  return '<article class="discovery-row" data-id="' + esc(item.id) + '">' +
+  return '<a class="discovery-row" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '">' +
     '<div class="discovery-row-main">' +
       discoverySignalBadges(item) +
       '<h3>' + esc(item.title) + '</h3>' +
@@ -1085,7 +1097,7 @@ function discoveryRow(item) {
       '<span>눈여겨볼 점</span>' +
       '<p>' + esc(cut(item.why || item.description || item.summary, 150)) + '</p>' +
     '</div>' +
-  '</article>';
+  '</a>';
 }
 
 function discoveryGroup(title, eyebrow, items) {
@@ -1162,8 +1174,6 @@ function renderDiscoveryHub() {
   el.querySelectorAll(".discovery-top-card, .discovery-row").forEach(card => {
     card.addEventListener("click", () => {
       state.lastRoute = "#/ai-discovery";
-      const item = state.all.find(x => x.id === card.dataset.id);
-      location.hash = itemRoute(item);
     });
   });
 
@@ -1236,6 +1246,9 @@ function openArchiveDate(date) {
 
 function renderDetail(item) {
   const kind = itemKind(item);
+  const detailView = $("#detailView");
+  detailView.classList.remove("tone-ai","tone-resource","tone-opensource","tone-contest","tone-support");
+  detailView.classList.add("tone-" + homeSignalTone(item));
   if (kind === "ai") renderNewsDetail(item);
   else if (kind === "discovery") renderDiscoveryDetail(item);
   else renderOpportunityDetail(item, kind);
@@ -1334,8 +1347,8 @@ function renderNewsDetail(item) {
 
   $("#detailContent").innerHTML =
     updateTimeline(item.updates || []) +
-    infoBlock("현재 핵심","",[["내용",item.description || item.summary]]) +
-    infoBlock("왜 중요한가","",[["의미",item.why || item.description || item.summary]]) +
+    infoBlock("핵심 내용","",[["내용",item.description || item.summary]]) +
+    infoBlock("눈여겨볼 점","",[["의미",item.why || item.description || item.summary]]) +
     (ideas.length ? ideaBlock("직접 써볼 방법",ideas) : "") +
     (links.length ? '<section class="detail-block"><h2>공식 링크</h2><div class="official-link-list">' + links.map(l => '<a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer"><span>' + esc(l.label) + '</span><span>↗</span></a>').join("") + '</div></section>' : '');
 
