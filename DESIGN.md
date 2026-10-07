@@ -4,9 +4,17 @@
 
 The page-level visual source of truth is Apple Human Interface Guidelines (HIG), with an iPadOS-style split view on wide screens and an iOS-style single-pane/tab-bar layout on compact screens.
 
-Important: this is a web recreation of Apple interaction/layout patterns. It does **not** use UIKit, SwiftUI, or Apple-provided native components directly.
+Important: this is a web implementation, not UIKit or SwiftUI. Native Apple components cannot run directly in a browser.
 
-`@primer/css` remains loaded only as a legacy/reset layer for existing markup. It is **not** the visual source of truth. `assets/apple-ui.css` must win visually.
+The component foundation is now **Ionic Core 9.0.6 in explicit `mode="ios"`**, loaded as standalone Web Components. Ionic supplies the actual component structure, iOS-mode control chrome, interaction states, and Ionicons. The current production UI uses real `ion-searchbar`, `ion-segment`, `ion-list`, `ion-item`, `ion-chip`, `ion-select`, `ion-button`, `ion-tab-bar`, `ion-tab-button`, and `ion-icon` elements.
+
+`@primer/css` remains loaded only for legacy compatibility with older markup. It is **not** the visual source of truth.
+
+Ownership order:
+
+1. Ionic iOS mode owns standard component appearance and behavior.
+2. `assets/apple-ui.css` owns Daily Brief layout, density, sizing, and semantic product tokens around Ionic components.
+3. Custom CSS must not redraw an Ionic component when Ionic already provides the needed control.
 
 ## 1. Product character
 
@@ -86,21 +94,20 @@ Content uses standard grouped surfaces:
 
 ## 4. Dynamic color model
 
-Use semantic Apple-style tokens defined in `assets/apple-ui.css`.
+Use light-mode semantic tokens defined in `assets/apple-ui.css`, with Ionic's primary color mapped to iOS system blue.
 
 Light references:
 
 ```text
 system background       #f2f2f7
 secondary group         #ffffff
-system blue             #0088ff
+system blue             #007aff
 system red              #ff383c
 primary label           #000000
 secondary label         rgba(60,60,67,.68)
 separator               rgba(60,60,67,.20)
 ```
 
-Dark mode must resolve to dark semantic equivalents automatically.
 
 Rules:
 
@@ -173,6 +180,8 @@ No bright colored category icons.
 
 ### Bottom tab bar
 
+Use Ionic's real `ion-tab-bar` and `ion-tab-button` components in `mode="ios"`.
+
 Compact layout uses five top-level destinations:
 
 - Today
@@ -187,13 +196,9 @@ The tab bar floats above content using translucent material and remains visible 
 
 Search is a primary global control.
 
-Use an iOS-style search field:
+Use Ionic's real `ion-searchbar mode="ios"`.
 
-- neutral system fill
-- magnifier icon
-- plain placeholder
-- no hard border
-- clear focus feedback
+Its built-in search icon, clear-button behavior, native input geometry, and focus behavior should be preserved. Product CSS may change width and semantic colors, but should not rebuild the internal search field.
 
 The search dialog behaves visually like a sheet:
 
@@ -204,7 +209,7 @@ The search dialog behaves visually like a sheet:
 
 ## 8. Segmented controls and filters
 
-Use segmented controls for a small single-choice set such as:
+Use Ionic's real `ion-segment` + `ion-segment-button` in iOS mode for a small single-choice set such as:
 
 - Recommended / Latest
 
@@ -219,7 +224,7 @@ Do not use yellow, green, purple, or blue category backgrounds.
 
 ## 9. Lists and tables
 
-Information-heavy routes should use grouped lists rather than cards for every row.
+Information-heavy routes should use Ionic `ion-list` + `ion-item` grouped lists rather than cards for every row.
 
 A list surface:
 
@@ -278,16 +283,15 @@ Do not show the inspector below primary content on iPhone. Compact layout uses t
 
 ## 13. Icons
 
+Use **Ionicons**, which ships with Ionic, for application navigation and controls.
+
+- use outline variants for ordinary navigation
+- let icons inherit label/selection color
+- keep stroke weight consistent
+- do not use multicolor emoji as navigation chrome
+- do not maintain custom SVG-mask copies of common icons
+
 Do not redistribute SF Symbols assets or Apple font files.
-
-For the web implementation, use custom monochrome vector masks with:
-
-- rounded line endings
-- consistent stroke weight
-- no multicolor emoji
-- no Windows-style glyph characters
-
-Navigation icons inherit label/selection color.
 
 ## 14. Touch and interaction
 
@@ -317,7 +321,9 @@ Before merging UI changes:
 5. verify no console/page errors
 6. verify no duplicate IDs
 7. verify mobile targets are usable
-8. verify search and segmented controls work
-9. verify no large yellow/blue/green semantic category backgrounds remain
-10. verify the light color scheme remains coherent and readable
-11. keep `assets/apple-ui.css` as the final visual authority
+8. verify the Ionic searchbar and Ionic segment emit the expected events
+9. verify mobile navigation is a real `ion-tab-bar`
+10. verify grouped routes render real `ion-list` / `ion-item` elements
+11. verify no large yellow/blue/green semantic category backgrounds remain
+12. verify the light color scheme remains coherent and readable
+13. verify custom CSS does not redraw standard Ionic controls

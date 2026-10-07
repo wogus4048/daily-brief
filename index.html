@@ -8,6 +8,7 @@
   <title>daily-brief</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/vendor/primer.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@9.0.6/css/ionic.bundle.css" />
   <link rel="stylesheet" href="assets/styles.css" />
   <link rel="stylesheet" href="assets/apple-ui.css" />
 </head>
@@ -20,11 +21,10 @@
             <strong>daily-brief</strong>
             <small>AI · 개발 · 오픈소스 · 기회</small>
           </a>
-          <button class="btn topbar-search" id="searchButton" type="button">
-            <span class="search-icon" aria-hidden="true"></span>
-            <span>검색</span>
+          <div class="topbar-search-wrap">
+            <ion-searchbar class="topbar-search ionic-global-search" id="searchButton" mode="ios" placeholder="검색" readonly="true" show-clear-button="never" aria-label="검색"></ion-searchbar>
             <kbd>⌘ K</kbd>
-          </button>
+          </div>
           <div class="topbar-date" id="topbarDate">불러오는 중</div>
         </div>
       </header>
@@ -34,17 +34,17 @@
           <aside class="global-left" aria-label="탐색">
             <nav class="side-nav">
               <div class="side-group">
-                <a class="side-link nav-item active" href="#/" data-route="home" data-icon="home"><span>오늘</span><b id="leftTodayCount">0</b></a>
+                <a class="side-link nav-item active" href="#/" data-route="home"><ion-icon name="today-outline" aria-hidden="true"></ion-icon><span>오늘</span><b id="leftTodayCount">0</b></a>
               </div>
 
               <div class="side-group">
                 <h2>분야</h2>
-                <a class="side-link nav-item" href="#/ai-news" data-route="ai-news" data-icon="sparkles"><span>AI 뉴스</span><b id="navAiCount">0</b></a>
-                <a class="side-link nav-item" href="#/ai-discovery" data-route="ai-discovery" data-discovery-filter="tools" data-icon="tools"><span>AI 도구 · 서비스</span><b id="leftToolCount">0</b></a>
-                <a class="side-link" href="#/ai-discovery" data-discovery-filter="github" data-icon="code"><span>GitHub · 오픈소스</span><b id="leftGithubCount">0</b></a>
-                <a class="side-link" href="#/ai-discovery" data-discovery-filter="agents" data-icon="nodes"><span>MCP · Skill · Agent</span><b id="leftAgentCount">0</b></a>
-                <a class="side-link nav-item" href="#/contests" data-route="contests" data-icon="trophy"><span>공모전 · 해커톤</span><b id="navContestCount">0</b></a>
-                <a class="side-link nav-item" href="#/support" data-route="support" data-icon="briefcase"><span>창업 · 지원사업</span><b id="navSupportCount">0</b></a>
+                <a class="side-link nav-item" href="#/ai-news" data-route="ai-news"><ion-icon name="sparkles-outline" aria-hidden="true"></ion-icon><span>AI 뉴스</span><b id="navAiCount">0</b></a>
+                <a class="side-link nav-item" href="#/ai-discovery" data-route="ai-discovery" data-discovery-filter="tools"><ion-icon name="build-outline" aria-hidden="true"></ion-icon><span>AI 도구 · 서비스</span><b id="leftToolCount">0</b></a>
+                <a class="side-link" href="#/ai-discovery" data-discovery-filter="github"><ion-icon name="logo-github" aria-hidden="true"></ion-icon><span>GitHub · 오픈소스</span><b id="leftGithubCount">0</b></a>
+                <a class="side-link" href="#/ai-discovery" data-discovery-filter="agents"><ion-icon name="git-network-outline" aria-hidden="true"></ion-icon><span>MCP · Skill · Agent</span><b id="leftAgentCount">0</b></a>
+                <a class="side-link nav-item" href="#/contests" data-route="contests"><ion-icon name="trophy-outline" aria-hidden="true"></ion-icon><span>공모전 · 해커톤</span><b id="navContestCount">0</b></a>
+                <a class="side-link nav-item" href="#/support" data-route="support"><ion-icon name="briefcase-outline" aria-hidden="true"></ion-icon><span>창업 · 지원사업</span><b id="navSupportCount">0</b></a>
               </div>
 
               <div class="side-group">
@@ -59,7 +59,7 @@
               <div class="side-group side-archive-group">
                 <h2>지난 기록</h2>
                 <div id="homeLeftArchive"></div>
-                <a class="side-link nav-item" href="#/archive" data-route="archive" data-icon="clock"><span>아카이브 전체</span></a>
+                <a class="side-link nav-item" href="#/archive" data-route="archive"><ion-icon name="time-outline" aria-hidden="true"></ion-icon><span>아카이브 전체</span></a>
               </div>
             </nav>
           </aside>
@@ -72,13 +72,13 @@
                   <h1>오늘의 브리핑</h1>
                   <p class="feed-sub"><span id="homeNewTotal">0</span>개 새로 추가 · 전체 <span id="homeTotalCount">0</span>개</p>
                 </div>
-                <div class="feed-sort" aria-label="정렬">
-                  <button class="btn btn-sm selected" type="button" data-home-sort="recommended">추천</button>
-                  <button class="btn btn-sm" type="button" data-home-sort="latest">최신</button>
-                </div>
+                <ion-segment class="feed-sort" id="homeSort" mode="ios" value="recommended" aria-label="정렬">
+                  <ion-segment-button value="recommended"><ion-label>추천</ion-label></ion-segment-button>
+                  <ion-segment-button value="latest"><ion-label>최신</ion-label></ion-segment-button>
+                </ion-segment>
               </header>
               <div class="feed-filter-note" id="homeFeedFilterNote" hidden></div>
-              <div class="product-feed" id="homeFeed"></div>
+              <ion-list class="product-feed" id="homeFeed" mode="ios" inset="true"></ion-list>
             </section>
 
             <section class="view category-view" id="categoryView" hidden>
@@ -102,12 +102,12 @@
                     <div class="filter-row" id="categoryTopicFilters"></div>
                   </div>
                 </div>
-                <select id="categorySort" class="form-select sort-select" aria-label="정렬">
-                  <option value="deadline">마감 임박순</option>
-                  <option value="default">기본순</option>
-                </select>
+                <ion-select id="categorySort" class="sort-select" mode="ios" interface="popover" aria-label="정렬" value="deadline">
+                  <ion-select-option value="deadline">마감 임박순</ion-select-option>
+                  <ion-select-option value="default">기본순</ion-select-option>
+                </ion-select>
               </div>
-              <div class="category-list" id="categoryList"></div>
+              <ion-list class="category-list" id="categoryList" mode="ios" inset="true"></ion-list>
             </section>
 
             <section class="view discovery-view" id="discoveryView" hidden>
@@ -122,11 +122,11 @@
                   <p>날짜를 선택하면 당시의 스냅샷을 그대로 볼 수 있습니다.</p>
                 </div>
               </header>
-              <div class="archive-page-grid" id="archivePageGrid"></div>
+              <ion-list class="archive-page-grid" id="archivePageGrid" mode="ios" inset="true"></ion-list>
             </section>
 
             <section class="view detail-view" id="detailView" hidden>
-              <button class="btn btn-sm back-link" id="backButton">← 이전 화면</button>
+              <ion-button class="back-link" id="backButton" mode="ios" fill="clear" size="small"><ion-icon slot="start" name="chevron-back-outline"></ion-icon>이전 화면</ion-button>
               <header class="detail-page-head">
                 <div class="detail-page-title" id="detailHeader"></div>
                 <div class="detail-actions-top" id="detailTopActions"></div>
@@ -159,13 +159,13 @@
         </div>
       </main>
 
-      <nav class="ios-tabbar" aria-label="하단 탭">
-        <a class="ios-tab-item nav-item active" href="#/" data-route="home"><span class="ios-tab-symbol" data-icon="home"></span><span>오늘</span></a>
-        <a class="ios-tab-item nav-item" href="#/ai-news" data-route="ai-news"><span class="ios-tab-symbol" data-icon="sparkles"></span><span>AI</span></a>
-        <a class="ios-tab-item nav-item" href="#/ai-discovery" data-route="ai-discovery"><span class="ios-tab-symbol" data-icon="tools"></span><span>발견</span></a>
-        <a class="ios-tab-item nav-item" href="#/contests" data-route="contests"><span class="ios-tab-symbol" data-icon="trophy"></span><span>공모전</span></a>
-        <a class="ios-tab-item nav-item" href="#/support" data-route="support"><span class="ios-tab-symbol" data-icon="briefcase"></span><span>지원</span></a>
-      </nav>
+      <ion-tab-bar class="ios-tabbar" id="mobileTabBar" mode="ios" aria-label="하단 탭">
+        <ion-tab-button class="ios-tab-item nav-item active" tab="home" href="#/" data-route="home"><ion-icon name="today-outline"></ion-icon><ion-label>오늘</ion-label></ion-tab-button>
+        <ion-tab-button class="ios-tab-item nav-item" tab="ai-news" href="#/ai-news" data-route="ai-news"><ion-icon name="sparkles-outline"></ion-icon><ion-label>AI</ion-label></ion-tab-button>
+        <ion-tab-button class="ios-tab-item nav-item" tab="ai-discovery" href="#/ai-discovery" data-route="ai-discovery"><ion-icon name="compass-outline"></ion-icon><ion-label>발견</ion-label></ion-tab-button>
+        <ion-tab-button class="ios-tab-item nav-item" tab="contests" href="#/contests" data-route="contests"><ion-icon name="trophy-outline"></ion-icon><ion-label>공모전</ion-label></ion-tab-button>
+        <ion-tab-button class="ios-tab-item nav-item" tab="support" href="#/support" data-route="support"><ion-icon name="briefcase-outline"></ion-icon><ion-label>지원</ion-label></ion-tab-button>
+      </ion-tab-bar>
 
       <footer>
         <span>daily-brief</span>
@@ -177,12 +177,13 @@
 
   <dialog id="searchDialog" class="search-dialog">
     <div class="search-head">
-      <input class="form-control input-block" type="search" id="searchInput" placeholder="공모전, 해커톤, 창업지원, AI 뉴스, AI 도구 검색" autocomplete="off" />
-      <button class="btn btn-sm search-close" id="searchClose" aria-label="닫기">Esc</button>
+      <ion-searchbar class="search-field" id="searchInput" mode="ios" placeholder="공모전, 해커톤, 창업지원, AI 뉴스, AI 도구 검색" inputmode="search" autocomplete="off" show-clear-button="focus" show-cancel-button="never"></ion-searchbar>
+      <ion-button class="search-close" id="searchClose" mode="ios" fill="clear" size="small" aria-label="닫기">닫기</ion-button>
     </div>
     <div id="searchResults" class="search-results"></div>
   </dialog>
 
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@9.0.6/dist/ionic/ionic.esm.js"></script>
   <script src="assets/app.js" defer></script>
 </body>
 </html>

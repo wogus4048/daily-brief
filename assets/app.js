@@ -264,6 +264,7 @@ function setActiveNav(routeName) {
     const selected = el.dataset.route === routeName;
     el.classList.toggle("active", selected);
     el.classList.toggle("selected", selected);
+    if (el.tagName === "ION-TAB-BUTTON") el.selected = selected;
   });
 }
 
@@ -454,18 +455,17 @@ function homeFeedItems() {
 }
 
 function homeFeedIcon(item) {
-  if (item.icon) return item.icon;
   const kind = itemKind(item);
-  if (kind === "ai") return "AI";
-  if (kind === "contest") return "H";
-  if (kind === "support") return "S";
+  if (kind === "ai") return "sparkles-outline";
+  if (kind === "contest") return "trophy-outline";
+  if (kind === "support") return "briefcase-outline";
   const type = String(item.discoveryType || "").toLowerCase();
-  if (type === "github") return "GH";
-  if (type === "mcp") return "M";
-  if (type === "skill") return "SK";
-  if (type === "agent") return "AG";
-  if (type === "workflow") return "WF";
-  return "W";
+  if (type === "github") return "logo-github";
+  if (type === "mcp") return "git-network-outline";
+  if (type === "skill") return "construct-outline";
+  if (type === "agent") return "hardware-chip-outline";
+  if (type === "workflow") return "git-branch-outline";
+  return "link-outline";
 }
 
 function homeFeedTags(item) {
@@ -488,16 +488,18 @@ function renderHomeFeed() {
     return;
   }
   el.innerHTML = items.map((item,index) =>
-    '<a class="product-row" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '">' +
-      '<div class="product-rank">' + String(index + 1).padStart(2,"0") + '</div>' +
-      '<div class="product-icon tone-' + homeSignalTone(item) + (item.icon ? ' emoji' : '') + '">' + esc(homeFeedIcon(item)) + '</div>' +
-      '<div class="product-body">' +
-        '<div class="product-title-line"><h3>' + esc(item.title) + '</h3><span>' + esc(homeSignalLabel(item)) + '</span></div>' +
-        '<p>' + esc(cut(item.summary || item.description || "", 155)) + '</p>' +
-        '<div class="product-meta"><span>' + esc(homeFeedTags(item)) + '</span></div>' +
+    '<ion-item class="product-row" button="true" detail="false" lines="inset" mode="ios" data-id="' + esc(item.id) + '">' +
+      '<div class="product-row-content">' +
+        '<div class="product-rank">' + String(index + 1).padStart(2,"0") + '</div>' +
+        '<div class="product-icon tone-' + homeSignalTone(item) + '"><ion-icon name="' + esc(homeFeedIcon(item)) + '" aria-hidden="true"></ion-icon></div>' +
+        '<div class="product-body">' +
+          '<div class="product-title-line"><h3>' + esc(item.title) + '</h3><span>' + esc(homeSignalLabel(item)) + '</span></div>' +
+          '<p>' + esc(cut(item.summary || item.description || "", 155)) + '</p>' +
+          '<div class="product-meta"><span>' + esc(homeFeedTags(item)) + '</span></div>' +
+        '</div>' +
+        '<div class="product-side"><strong>' + esc(homeSignalStatus(item)) + '</strong><span>' + esc(cut(homeSignalMeta(item), 44)) + '</span></div>' +
       '</div>' +
-      '<div class="product-side"><strong>' + esc(homeSignalStatus(item)) + '</strong><span>' + esc(cut(homeSignalMeta(item), 44)) + '</span></div>' +
-    '</a>'
+    '</ion-item>'
   ).join("");
   wireHomeRows(el);
 }
@@ -809,11 +811,11 @@ function renderCategory(type) {
 
   const sort = $("#categorySort");
   if (type === "ai-news") {
-    sort.innerHTML = '<option value="updated">최근 업데이트순</option><option value="discovered">최근 발견순</option>';
+    sort.innerHTML = '<ion-select-option value="updated">최근 업데이트순</ion-select-option><ion-select-option value="discovered">최근 발견순</ion-select-option>';
   } else if (type === "ai-discovery") {
-    sort.innerHTML = '<option value="discovered">최근 발견순</option><option value="updated">최근 업데이트순</option>';
+    sort.innerHTML = '<ion-select-option value="discovered">최근 발견순</ion-select-option><ion-select-option value="updated">최근 업데이트순</ion-select-option>';
   } else {
-    sort.innerHTML = '<option value="deadline">마감 임박순</option><option value="discovered">최근 발견순</option><option value="updated">최근 변경순</option>';
+    sort.innerHTML = '<ion-select-option value="deadline">마감 임박순</ion-select-option><ion-select-option value="discovered">최근 발견순</ion-select-option><ion-select-option value="updated">최근 변경순</ion-select-option>';
   }
   sort.value = state.categorySort;
 
@@ -865,7 +867,7 @@ function filterDefs(type) {
 function renderFilterChips(type) {
   const el = $("#categoryFilters");
   el.innerHTML = filterDefs(type).map(([key,label]) =>
-    '<button class="btn btn-sm filter-chip ' + (key === state.categoryFilter ? "selected active" : "") + '" data-filter="' + key + '">' + label + '</button>'
+    '<ion-chip class="filter-chip ' + (key === state.categoryFilter ? "selected active" : "") + '" data-filter="' + key + '" mode="ios"><ion-label>' + label + '</ion-label></ion-chip>'
   ).join("");
 
   el.querySelectorAll(".filter-chip").forEach(btn => {
@@ -989,7 +991,7 @@ function renderTopicChips(type) {
   }
 
   el.innerHTML = defs.map(([key,label]) =>
-    '<button class="filter-chip topic-chip ' + (key === state.categoryTopicFilter ? "active" : "") + '" data-topic="' + key + '">' + label + '</button>'
+    '<ion-chip class="filter-chip topic-chip ' + (key === state.categoryTopicFilter ? "active" : "") + '" data-topic="' + key + '" mode="ios"><ion-label>' + label + '</ion-label></ion-chip>'
   ).join("");
 
   el.querySelectorAll(".topic-chip").forEach(btn => {
@@ -1075,7 +1077,7 @@ function renderCategoryList(type) {
 
   if (type === "ai-news") {
     el.innerHTML = items.map(item =>
-      '<a class="category-card ai-category-card tone-ai" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '">' +
+      '<ion-item class="category-card ai-category-card tone-ai" button="true" detail="false" lines="inset" mode="ios" data-id="' + esc(item.id) + '">' +
         '<div class="card-meta-row">' +
           '<div class="card-status-group">' +
             changeBadge(item, "ai") +
@@ -1088,11 +1090,11 @@ function renderCategoryList(type) {
         tagsHtml(item.tags) +
         '<div class="category-explainer"><span>눈여겨볼 점</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
         '<div class="category-action">업데이트 기록과 상세 내용 보기 <span>→</span></div>' +
-      '</a>'
+      '</ion-item>'
     ).join("");
   } else if (type === "ai-discovery") {
     el.innerHTML = items.map(item =>
-      '<a class="category-card ai-category-card tone-' + (String(item.discoveryType || "").toLowerCase() === "github" ? "opensource" : "resource") + '" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '">' +
+      '<ion-item class="category-card ai-category-card tone-' + (String(item.discoveryType || "").toLowerCase() === "github" ? "opensource" : "resource") + '" button="true" detail="false" lines="inset" mode="ios" data-id="' + esc(item.id) + '">' +
         '<div class="card-meta-row"><div class="card-status-group">' +
           changeBadge(item, "discovery") +
           '<span class="meta-label">' + esc(discoveryTypeLabel(item.discoveryType)) + '</span>' +
@@ -1105,12 +1107,12 @@ function renderCategoryList(type) {
         tagsHtml(item.tags) +
         '<div class="category-explainer"><span>눈여겨볼 점</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
         '<div class="category-action">상세 정보와 링크 보기 <span>→</span></div>' +
-      '</a>'
+      '</ion-item>'
     ).join("");
   } else {
     const kind = type === "support" ? "support" : "contest";
     el.innerHTML = items.map(item =>
-      '<a class="category-card tone-' + kind + ' ' + (!isOpenItem(item) ? "is-closed" : "") + '" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '">' +
+      '<ion-item class="category-card tone-' + kind + ' ' + (!isOpenItem(item) ? "is-closed" : "") + '" button="true" detail="false" lines="inset" mode="ios" data-id="' + esc(item.id) + '">' +
         '<div class="card-meta-row">' +
           '<div class="card-status-group">' +
             changeBadge(item, kind) +
@@ -1128,13 +1130,16 @@ function renderCategoryList(type) {
           '<div class="flow-fact"><span>' + (kind === "support" ? "지원 대상" : "참가 조건") + '</span><strong>' + esc(txt(item.participation)) + '</strong></div>' +
         '</div>' +
         '<div class="category-action">상세 내용 보기 <span>→</span></div>' +
-      '</a>'
+      '</ion-item>'
     ).join("");
   }
 
   el.querySelectorAll(".category-card").forEach(row => {
     row.addEventListener("click", () => {
+      const item = state.all.find(x => x.id === row.dataset.id);
+      if (!item) return;
       state.lastRoute = location.hash;
+      location.hash = itemRoute(item);
     });
   });
 }
@@ -1232,7 +1237,7 @@ function discoveryTopCard(item, index) {
 }
 
 function discoveryRow(item) {
-  return '<a class="discovery-row" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '">' +
+  return '<ion-item class="discovery-row" button="true" detail="false" lines="inset" mode="ios" data-id="' + esc(item.id) + '">' +
     '<div class="discovery-row-main">' +
       discoverySignalBadges(item) +
       '<h3>' + esc(item.title) + '</h3>' +
@@ -1243,7 +1248,7 @@ function discoveryRow(item) {
       '<span>눈여겨볼 점</span>' +
       '<p>' + esc(cut(item.why || item.description || item.summary, 150)) + '</p>' +
     '</div>' +
-  '</a>';
+  '</ion-item>';
 }
 
 function discoveryGroup(title, eyebrow, items) {
@@ -1253,7 +1258,7 @@ function discoveryGroup(title, eyebrow, items) {
       '<div><p class="section-eyebrow">' + esc(eyebrow) + '</p><h2>' + esc(title) + '</h2></div>' +
       '<span>' + items.length + '개</span>' +
     '</div>' +
-    '<div class="discovery-group-list">' + items.map(discoveryRow).join("") + '</div>' +
+    '<ion-list class="discovery-group-list" mode="ios" inset="true">' + items.map(discoveryRow).join("") + '</ion-list>' +
   '</section>';
 }
 
@@ -1310,9 +1315,9 @@ function renderDiscoveryHub() {
       '<div class="discovery-section-head"><div><p class="section-eyebrow">전체 모음</p><h2>모든 항목</h2></div><span>찾은 항목은 빠짐없이 모아둡니다</span></div>' +
       '<div class="discovery-filter-row" id="discoveryFilters">' +
         [["all","전체"],["new","오늘 찾은 것"],["rising","요즘 뜨는 것"],["tools","도구 · 서비스"],["github","GitHub"],["agents","MCP · Skill · Agent"],["workflow","Workflow"]]
-          .map(([key,label]) => '<button class="btn btn-sm filter-chip ' + (state.discoveryFilter === key ? "selected active" : "") + '" data-filter="' + key + '">' + label + '</button>').join("") +
+          .map(([key,label]) => '<ion-chip class="filter-chip ' + (state.discoveryFilter === key ? "selected active" : "") + '" data-filter="' + key + '" mode="ios"><ion-label>' + label + '</ion-label></ion-chip>').join("") +
       '</div>' +
-      '<div class="discovery-all-list" id="discoveryAllList"></div>' +
+      '<ion-list class="discovery-all-list" id="discoveryAllList" mode="ios" inset="true"></ion-list>' +
     '</section>';
 
   renderDiscoveryAllList();
@@ -1320,6 +1325,10 @@ function renderDiscoveryHub() {
   el.querySelectorAll(".discovery-top-card, .discovery-row").forEach(card => {
     card.addEventListener("click", () => {
       state.lastRoute = "#/ai-discovery";
+      if (card.tagName === "ION-ITEM") {
+        const item = state.all.find(x => x.id === card.dataset.id);
+        if (item) location.hash = itemRoute(item);
+      }
     });
   });
 
@@ -1381,7 +1390,7 @@ function renderArchivePage() {
   el.innerHTML = days.map(d => {
     const dt = new Date(d + "T00:00:00+09:00");
     const w = ["일","월","화","수","목","금","토"][dt.getDay()];
-    return '<article class="archive-card" data-date="' + d + '"><small>' + dt.getFullYear() + '년 ' + (dt.getMonth()+1) + '월</small><strong>' + dt.getDate() + '일 ' + w + '요일</strong><span>이날의 브리핑 보기 →</span></article>';
+    return '<ion-item class="archive-card" button="true" detail="true" lines="inset" mode="ios" data-date="' + d + '"><div><small>' + dt.getFullYear() + '년 ' + (dt.getMonth()+1) + '월</small><strong>' + dt.getDate() + '일 ' + w + '요일</strong><span>이날의 브리핑 보기</span></div></ion-item>';
   }).join("");
 
   el.querySelectorAll(".archive-card").forEach(card => {
@@ -1421,7 +1430,7 @@ function renderOpportunityDetail(item, kind) {
     (item.lastUpdatedDate ? '<span><b>정보 수정</b> ' + esc(shortDate(item.lastUpdatedDate)) + '</span>' : '') + '</div>';
 
   $("#detailTopActions").innerHTML = links.slice(0,2).map((l,i) =>
-    '<a class="btn ' + (i === 0 ? "btn-primary primary-link" : "secondary-link") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + ' ↗</a>'
+    '<ion-button mode="ios" size="small" class="' + (i === 0 ? "primary-link" : "secondary-link") + '" fill="' + (i === 0 ? "solid" : "clear") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + '<ion-icon slot="end" name="open-outline"></ion-icon></ion-button>'
   ).join("");
 
   const core = [
@@ -1465,7 +1474,7 @@ function renderDiscoveryDetail(item) {
     '<div class="detail-date-line"><span><b>발견일</b> ' + esc(shortDate(item.firstSeenDate)) + '</span><span><b>최종 확인</b> ' + esc(shortDate(item.lastUpdatedDate || item.firstSeenDate)) + '</span></div>';
 
   $("#detailTopActions").innerHTML = links.slice(0,2).map((l,i) =>
-    '<a class="btn ' + (i === 0 ? "btn-primary primary-link" : "secondary-link") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + ' ↗</a>'
+    '<ion-button mode="ios" size="small" class="' + (i === 0 ? "primary-link" : "secondary-link") + '" fill="' + (i === 0 ? "solid" : "clear") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + '<ion-icon slot="end" name="open-outline"></ion-icon></ion-button>'
   ).join("");
 
   $("#detailContent").innerHTML =
@@ -1494,7 +1503,7 @@ function renderNewsDetail(item) {
     '<div class="detail-date-line"><span><b>발견일</b> ' + esc(shortDate(item.firstSeenDate)) + '</span><span><b>최종 업데이트</b> ' + esc(shortDate(item.lastUpdatedDate || item.firstSeenDate)) + '</span></div>';
 
   $("#detailTopActions").innerHTML = links.slice(0,2).map((l,i) =>
-    '<a class="btn ' + (i === 0 ? "btn-primary primary-link" : "secondary-link") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + ' ↗</a>'
+    '<ion-button mode="ios" size="small" class="' + (i === 0 ? "primary-link" : "secondary-link") + '" fill="' + (i === 0 ? "solid" : "clear") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + '<ion-icon slot="end" name="open-outline"></ion-icon></ion-button>'
   ).join("");
 
   $("#detailContent").innerHTML =
@@ -1561,13 +1570,14 @@ function setupInteractions() {
     });
   });
 
-  document.querySelectorAll("[data-home-sort]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      state.homeSort = btn.dataset.homeSort || "recommended";
-      document.querySelectorAll("[data-home-sort]").forEach(x => x.classList.toggle("selected", x === btn));
+  const homeSort = $("#homeSort");
+  if (homeSort) {
+    homeSort.value = state.homeSort;
+    homeSort.addEventListener("ionChange", e => {
+      state.homeSort = e.detail.value || "recommended";
       renderHomeFeed();
     });
-  });
+  }
 
   document.querySelectorAll("[data-discovery-filter]").forEach(link => {
     link.addEventListener("click", () => {
@@ -1580,8 +1590,8 @@ function setupInteractions() {
     else location.hash = state.lastRoute || "#/";
   });
 
-  $("#categorySort").addEventListener("change", e => {
-    state.categorySort = e.target.value;
+  $("#categorySort").addEventListener("ionChange", e => {
+    state.categorySort = e.detail.value;
     const routeName = location.hash.replace("#/","");
     renderCategoryList(routeName);
   });
@@ -1591,7 +1601,7 @@ function setupInteractions() {
 
   const openSearch = () => {
     dialog.showModal();
-    setTimeout(() => input.focus(),30);
+    setTimeout(() => input.setFocus?.(),30);
   };
   const closeSearch = () => { if (dialog.open) dialog.close(); };
 
@@ -1607,8 +1617,8 @@ function setupInteractions() {
     }
   });
 
-  input.addEventListener("input", e => {
-    const q = e.target.value.trim().toLowerCase();
+  input.addEventListener("ionInput", e => {
+    const q = String(e.detail.value || "").trim().toLowerCase();
     const results = !q ? [] : state.all.filter(x =>
       [x.title,x.summary,x.description,x.why,x.discoveryReason]
         .concat(x.tags || [])
@@ -1634,8 +1644,22 @@ function setupInteractions() {
   });
 }
 
-setupInteractions();
-loadData().catch(err => {
-  console.error(err);
-  document.querySelector("main").innerHTML = '<div class="empty-state">' + esc(err.message) + '</div>';
-});
+async function bootstrap() {
+  try {
+    await Promise.all([
+      "ion-searchbar",
+      "ion-segment",
+      "ion-select",
+      "ion-item",
+      "ion-tab-bar",
+      "ion-icon"
+    ].map(tag => customElements.whenDefined(tag)));
+    setupInteractions();
+    await loadData();
+  } catch (err) {
+    console.error(err);
+    document.querySelector("main").innerHTML = '<div class="empty-state">브리핑 화면을 불러오지 못했습니다.</div>';
+  }
+}
+
+bootstrap();
