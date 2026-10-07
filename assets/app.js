@@ -224,6 +224,35 @@ function renderShared() {
   set("#topNavAiCount", aiCount);
   set("#topNavDiscoveryCount", discoveryCount);
   set("#topNavSupportCount", supportCount);
+  renderGlobalShellData();
+}
+
+function renderGlobalShellData() {
+  const contests = state.data.contests || [];
+  const news = state.data.aiNews || [];
+  const discovery = state.data.aiDiscovery || [];
+  const support = state.data.support || [];
+  const openContests = contests.filter(isOpenItem);
+  const openSupport = support.filter(isOpenItem);
+  const newToday = items => items.filter(isNewToday).length;
+  const totalNewToday = newToday(contests) + newToday(news) + newToday(discovery) + newToday(support);
+  const set = (selector, value) => { const el = $(selector); if (el) el.textContent = value; };
+
+  set("#leftTodayCount", state.all.length);
+  set("#leftNewCount", totalNewToday);
+  set("#leftUpdatedCount", state.all.filter(x => isUpdatedToday(x) || (itemKind(x) === "discovery" && String(x.newsState || "").toUpperCase() === "UPDATED")).length);
+  set("#leftRisingCount", discovery.filter(x => ["HOT","RISING","RESURFACED"].includes(String(x.trend || "").toUpperCase())).length);
+  set("#leftUrgentCount", [].concat(openContests, openSupport).filter(withinWeek).length);
+  set("#leftToolCount", discovery.filter(x => ["site","directory","platform","workflow"].includes(String(x.discoveryType || "").toLowerCase())).length);
+  set("#leftGithubCount", discovery.filter(x => String(x.discoveryType || "").toLowerCase() === "github").length);
+  set("#leftAgentCount", discovery.filter(x => ["mcp","skill","agent"].includes(String(x.discoveryType || "").toLowerCase())).length);
+  set("#homeRightNewCount", totalNewToday);
+
+  renderHomeTrending();
+  renderHomeRightUpcoming();
+  renderHomeRightNew();
+  renderHomeRightUpdated();
+  renderHomeLeftArchive();
 }
 
 function hideAllViews() {
@@ -242,7 +271,7 @@ function route() {
   if (!state.data) return;
 
   const hash = location.hash || "#/";
-  document.body.classList.toggle("home-route", hash === "#/" || hash === "#");
+  document.body.classList.add("producthunt-shell");
   hideAllViews();
   document.body.classList.remove("menu-open");
 
@@ -337,22 +366,8 @@ function renderHome() {
   set("#homeDateLabel", state.data.date);
   set("#homeTotalCount", state.all.length);
   set("#homeNewTotal", totalNewToday);
-  set("#leftTodayCount", state.all.length);
-  set("#leftNewCount", totalNewToday);
-  set("#leftUpdatedCount", state.all.filter(x => isUpdatedToday(x) || (itemKind(x) === "discovery" && String(x.newsState || "").toUpperCase() === "UPDATED")).length);
-  set("#leftRisingCount", discovery.filter(x => ["HOT","RISING","RESURFACED"].includes(String(x.trend || "").toUpperCase())).length);
-  set("#leftUrgentCount", [].concat(openContests, openSupport).filter(withinWeek).length);
-  set("#leftToolCount", discovery.filter(x => ["site","directory","platform","workflow"].includes(String(x.discoveryType || "").toLowerCase())).length);
-  set("#leftGithubCount", discovery.filter(x => String(x.discoveryType || "").toLowerCase() === "github").length);
-  set("#leftAgentCount", discovery.filter(x => ["mcp","skill","agent"].includes(String(x.discoveryType || "").toLowerCase())).length);
-  set("#homeRightNewCount", totalNewToday);
 
   renderHomeFeed();
-  renderHomeTrending();
-  renderHomeRightUpcoming();
-  renderHomeRightNew();
-  renderHomeRightUpdated();
-  renderHomeLeftArchive();
 }
 
 function homeSignalScore(item) {
@@ -1541,7 +1556,8 @@ function setupInteractions() {
     btn.addEventListener("click", () => {
       state.homeFilter = btn.dataset.homeFilter || "all";
       document.querySelectorAll("[data-home-filter]").forEach(x => x.classList.toggle("active", x === btn));
-      renderHomeFeed();
+      if (location.hash !== "#/" && location.hash !== "#") location.hash = "#/";
+      else renderHomeFeed();
     });
   });
 
