@@ -455,18 +455,17 @@ function homeFeedItems() {
 }
 
 function homeFeedIcon(item) {
-  if (item.icon) return item.icon;
   const kind = itemKind(item);
-  if (kind === "ai") return "AI";
-  if (kind === "contest") return "H";
-  if (kind === "support") return "S";
+  if (kind === "ai") return "sparkles-outline";
+  if (kind === "contest") return "trophy-outline";
+  if (kind === "support") return "briefcase-outline";
   const type = String(item.discoveryType || "").toLowerCase();
-  if (type === "github") return "GH";
-  if (type === "mcp") return "M";
-  if (type === "skill") return "SK";
-  if (type === "agent") return "AG";
-  if (type === "workflow") return "WF";
-  return "W";
+  if (type === "github") return "logo-github";
+  if (type === "mcp") return "git-network-outline";
+  if (type === "skill") return "construct-outline";
+  if (type === "agent") return "hardware-chip-outline";
+  if (type === "workflow") return "git-branch-outline";
+  return "link-outline";
 }
 
 function homeFeedTags(item) {
@@ -492,7 +491,7 @@ function renderHomeFeed() {
     '<ion-item class="product-row" button="true" detail="false" lines="inset" mode="ios" data-id="' + esc(item.id) + '">' +
       '<div class="product-row-content">' +
         '<div class="product-rank">' + String(index + 1).padStart(2,"0") + '</div>' +
-        '<div class="product-icon tone-' + homeSignalTone(item) + (item.icon ? ' emoji' : '') + '">' + esc(homeFeedIcon(item)) + '</div>' +
+        '<div class="product-icon tone-' + homeSignalTone(item) + '"><ion-icon name="' + esc(homeFeedIcon(item)) + '" aria-hidden="true"></ion-icon></div>' +
         '<div class="product-body">' +
           '<div class="product-title-line"><h3>' + esc(item.title) + '</h3><span>' + esc(homeSignalLabel(item)) + '</span></div>' +
           '<p>' + esc(cut(item.summary || item.description || "", 155)) + '</p>' +
@@ -1645,8 +1644,22 @@ function setupInteractions() {
   });
 }
 
-customElements.whenDefined("ion-searchbar").then(() => setupInteractions());
-loadData().catch(err => {
-  console.error(err);
-  document.querySelector("main").innerHTML = '<div class="empty-state">' + esc(err.message) + '</div>';
-});
+async function bootstrap() {
+  try {
+    await Promise.all([
+      "ion-searchbar",
+      "ion-segment",
+      "ion-select",
+      "ion-item",
+      "ion-tab-bar",
+      "ion-icon"
+    ].map(tag => customElements.whenDefined(tag)));
+    setupInteractions();
+    await loadData();
+  } catch (err) {
+    console.error(err);
+    document.querySelector("main").innerHTML = '<div class="empty-state">브리핑 화면을 불러오지 못했습니다.</div>';
+  }
+}
+
+bootstrap();
