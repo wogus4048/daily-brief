@@ -311,20 +311,28 @@ function route() {
 function renderHome() {
   const contests = state.data.contests || [];
   const news = state.data.aiNews || [];
+  const discovery = state.data.aiDiscovery || [];
   const support = state.data.support || [];
 
   const openContests = contests.filter(isOpenItem);
   const openSupport = support.filter(isOpenItem);
   const newToday = items => items.filter(isNewToday).length;
   const updatedToday = items => items.filter(isUpdatedToday).length;
+  const totalNewToday = newToday(contests) + newToday(news) + newToday(discovery) + newToday(support);
 
   $("#homeContestCount").textContent = "신규 " + newToday(contests) + " · 진행중 " + openContests.length;
   $("#homeAiCount").textContent = "신규 " + newToday(news) + " · 업데이트 " + updatedToday(news);
+  $("#homeDiscoveryCount").textContent = "신규 " + newToday(discovery) + " · 전체 " + discovery.length;
   $("#homeSupportCount").textContent = "신규 " + newToday(support) + " · 진행중 " + openSupport.length;
+  $("#homeNewTotal").textContent = totalNewToday;
+  $("#homeOpenTotal").textContent = openContests.length + openSupport.length;
+  $("#homeDiscoveryTotal").textContent = discovery.length;
+  $("#homeNewsTotal").textContent = news.length;
 
   renderFeatured(openContests, openSupport);
   renderCompact("#homeContestList", opportunityPriority(openContests).slice(0, 4), "contest");
   renderCompact("#homeAiList", newsPriority(news).slice(0, 5), "ai");
+  renderCompact("#homeDiscoveryList", discovery.slice().sort((a,b) => discoveryRank(b) - discoveryRank(a)).slice(0, 5), "discovery");
   renderCompact("#homeSupportList", opportunityPriority(openSupport).slice(0, 4), "support");
   renderArchiveStrip("#homeArchiveDays", state.data.archive || []);
 
@@ -378,14 +386,19 @@ function renderCompact(sel, items, kind) {
 
   el.innerHTML = items.map(item => {
     const isAi = kind === "ai";
-    const category = isAi ? "AI 뉴스" : kind === "support" ? "창업 · 지원사업" : "공모전 · 해커톤";
+    const isDiscovery = kind === "discovery";
+    const category = isAi ? "AI 뉴스" : isDiscovery ? "AI Discovery" : kind === "support" ? "창업 · 지원사업" : "공모전 · 해커톤";
     const primaryStatus = isAi
       ? ""
-      : '<span class="compact-status ' + dangerClass(item) + '">' + esc(!isOpenItem(item) ? "종료" : (item.dDay || "접수중")) + '</span>';
+      : isDiscovery
+        ? (item.trend ? '<span class="compact-status signal">' + esc(discoveryLabel(DISCOVERY_TREND_LABELS, item.trend)) + '</span>' : "")
+        : '<span class="compact-status ' + dangerClass(item) + '">' + esc(!isOpenItem(item) ? "종료" : (item.dDay || "접수중")) + '</span>';
 
     const foot = isAi
       ? ((item.tags || []).slice(0,3).join(" · ") || "AI")
-      : "마감 " + txt(item.deadlineText || item.dDay);
+      : isDiscovery
+        ? [discoveryTypeLabel(item.discoveryType), discoveryLabel(DISCOVERY_AWARENESS_LABELS, item.awareness)].filter(Boolean).join(" · ")
+        : "마감 " + txt(item.deadlineText || item.dDay);
 
     return '<article class="compact-item compact-flow" data-id="' + esc(item.id) + '">' +
       '<div class="card-meta-row">' +
@@ -394,7 +407,7 @@ function renderCompact(sel, items, kind) {
           primaryStatus +
           '<span class="compact-category">' + category + '</span>' +
         '</div>' +
-        dateMetaHtml(item, kind) +
+        dateMetaHtml(item, (isAi || isDiscovery) ? "ai" : kind) +
       '</div>' +
       '<h3>' + esc(item.title) + '</h3>' +
       '<p>' + esc(item.summary || "") + '</p>' +
