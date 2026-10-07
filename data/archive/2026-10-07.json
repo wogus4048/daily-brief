@@ -4053,7 +4053,7 @@
       ],
       "awareness": "WELL_KNOWN",
       "trend": "HOT",
-      "newsState": "NEWLY_DISCOVERED"
+      "newsState": "BASELINE"
     },
     {
       "id": "artex-autumn27",
@@ -4094,7 +4094,7 @@
       ],
       "awareness": "SPECIALIZED",
       "trend": "RISING",
-      "newsState": "NEWLY_DISCOVERED"
+      "newsState": "BASELINE"
     },
     {
       "id": "k-humanizer-evergreentree97",
@@ -4134,7 +4134,7 @@
       ],
       "awareness": "EARLY",
       "trend": "STEADY",
-      "newsState": "NEWLY_DISCOVERED"
+      "newsState": "BASELINE"
     },
     {
       "id": "geullint",
@@ -4175,7 +4175,7 @@
       ],
       "awareness": "EARLY",
       "trend": "STEADY",
-      "newsState": "NEWLY_DISCOVERED"
+      "newsState": "BASELINE"
     }
   ],
   "support": [
