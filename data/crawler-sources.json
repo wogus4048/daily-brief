@@ -128,7 +128,7 @@
       "name": "기업마당",
       "reason": "Official Bizinfo support-program listing; broad startup/support discovery with structured detail URLs and application periods",
       "status": "SHADOW",
-      "score": 20,
+      "score": 30,
       "recommendation": "CONTINUE_SHADOW",
       "category": "startupSupport",
       "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200View.do?pblancArea=400",
@@ -197,6 +197,27 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "github-com",
+      "name": "github.com",
+      "url": "https://github.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "aiDiscovery",
+      "sourceTracks": [
+        "aiDiscovery"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-07",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://github.com/Autumn-27/ARTEX",
+        "https://github.com/binibinibin123/geullint",
+        "https://github.com/evergreentree97/K-Humanizer",
+        "https://github.com/obra/superpowers"
+      ],
+      "score": 46,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "gitlab-transcend-devpost-com",
       "name": "gitlab-transcend.devpost.com",
       "url": "https://gitlab-transcend.devpost.com/",
@@ -232,7 +253,7 @@
       "category": "unclassified",
       "status": "NEEDS_SPEC",
       "discoveredAt": "2026-10-07",
-      "score": 42,
+      "score": 44,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -395,5 +416,5 @@
     }
   ],
   "lastEvolvedDate": "2026-10-07",
-  "lastEvolvedAt": "2026-10-07T01:47:22.303591Z"
+  "lastEvolvedAt": "2026-10-07T01:55:47.129499Z"
 }
