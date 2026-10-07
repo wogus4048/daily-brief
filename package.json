@@ -3,9 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "crawl:sources": "node scripts/crawl_sources.mjs"
+    "crawl:sources": "node scripts/crawl_sources.mjs",
+    "build:styles": "node scripts/build_styles.mjs"
   },
   "devDependencies": {
     "playwright": "^1.56.0"
+  },
+  "dependencies": {
+    "@primer/css": "^22.3.2"
   }
 }

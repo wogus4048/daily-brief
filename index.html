@@ -1,24 +1,25 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" data-color-mode="light" data-light-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="개발자와 빌더를 위해 AI, 오픈소스, 공모전, 창업·지원사업의 새 소식과 자료를 매일 골라 정리하는 공개 브리핑" />
-  <meta name="theme-color" content="#f6f1e9" />
+  <meta name="theme-color" content="#f6f8fa" />
   <title>daily-brief</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/vendor/primer.css" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
   <div class="app-shell">
     <div class="workspace">
-      <header class="site-header">
+      <header class="site-header color-bg-default border-bottom">
         <div class="header-row">
           <a class="brand" href="#/" aria-label="daily-brief 홈">
             <strong>daily-brief</strong>
             <small>AI · 개발 · 오픈소스 · 기회</small>
           </a>
-          <button class="topbar-search" id="searchButton" type="button">
+          <button class="btn topbar-search" id="searchButton" type="button">
             <span class="search-icon">/</span>
             <span>검색</span>
             <kbd>⌘ K</kbd>
@@ -37,7 +38,7 @@
 
       <main>
         <section class="view" id="homeView" hidden>
-          <section class="home-intro">
+          <section class="home-intro border rounded-2 color-bg-default p-4">
             <div>
               <p class="section-eyebrow">오늘 · <span id="homeDateLabel">—</span></p>
               <h1>오늘 개발자가 알아둘 것</h1>
@@ -63,11 +64,11 @@
             </div>
 
             <aside class="home-rail">
-              <section class="rail-section">
+              <section class="rail-section border rounded-2 color-bg-subtle">
                 <div class="rail-head"><h2>요즘 많이 보이는 주제</h2><span>오늘 수집 기준</span></div>
                 <div class="trend-list" id="homeTrending"></div>
               </section>
-              <section class="rail-section">
+              <section class="rail-section border rounded-2 color-bg-default">
                 <div class="rail-head"><h2>자주 나온 출처</h2><span>링크 기준</span></div>
                 <div class="source-list" id="homeSources"></div>
               </section>
@@ -149,7 +150,7 @@
                 <div class="filter-row" id="categoryTopicFilters"></div>
               </div>
             </div>
-            <select id="categorySort" class="sort-select" aria-label="정렬">
+            <select id="categorySort" class="form-select sort-select" aria-label="정렬">
               <option value="deadline">마감 임박순</option>
               <option value="default">기본순</option>
             </select>
@@ -174,7 +175,7 @@
         </section>
 
         <section class="view detail-view" id="detailView" hidden>
-          <button class="back-link" id="backButton">← 이전 화면</button>
+          <button class="btn btn-sm back-link" id="backButton">← 이전 화면</button>
 
           <header class="detail-page-head">
             <div class="detail-page-title" id="detailHeader"></div>
@@ -198,8 +199,8 @@
 
   <dialog id="searchDialog" class="search-dialog">
     <div class="search-head">
-      <input type="search" id="searchInput" placeholder="공모전, 해커톤, 창업지원, AI 뉴스, AI 도구 검색" autocomplete="off" />
-      <button class="search-close" id="searchClose" aria-label="닫기">Esc</button>
+      <input class="form-control input-block" type="search" id="searchInput" placeholder="공모전, 해커톤, 창업지원, AI 뉴스, AI 도구 검색" autocomplete="off" />
+      <button class="btn btn-sm search-close" id="searchClose" aria-label="닫기">Esc</button>
     </div>
     <div id="searchResults" class="search-results"></div>
   </dialog>

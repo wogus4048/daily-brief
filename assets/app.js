@@ -155,8 +155,8 @@ function newsPriority(items) {
 }
 
 function changeBadge(item, kind) {
-  if (isNewToday(item)) return '<span class="change-badge new">오늘 신규</span>';
-  if (kind === "ai" && isUpdatedToday(item)) return '<span class="change-badge updated">오늘 업데이트</span>';
+  if (isNewToday(item)) return '<span class="IssueLabel change-badge new">오늘 신규</span>';
+  if (kind === "ai" && isUpdatedToday(item)) return '<span class="IssueLabel change-badge updated">오늘 업데이트</span>';
   return "";
 }
 
@@ -221,7 +221,9 @@ function hideAllViews() {
 
 function setActiveNav(routeName) {
   document.querySelectorAll(".nav-item, .mobile-tab").forEach(el => {
-    el.classList.toggle("active", el.dataset.route === routeName);
+    const selected = el.dataset.route === routeName;
+    el.classList.toggle("active", selected);
+    el.classList.toggle("selected", selected);
   });
 }
 
@@ -418,7 +420,7 @@ function renderHomeTopSignals() {
   el.innerHTML = items.map((item,index) =>
     '<a class="top-signal-row" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '">' +
       '<div class="signal-rank">' + String(index + 1).padStart(2,"0") + '</div>' +
-      '<div class="signal-main"><div class="signal-kicker"><span class="signal-category tone-' + homeSignalTone(item) + '">' + esc(homeSignalLabel(item)) + '</span><span class="signal-state">' + esc(homeSignalStatus(item)) + '</span></div>' +
+      '<div class="signal-main"><div class="signal-kicker"><span class="IssueLabel signal-category tone-' + homeSignalTone(item) + '">' + esc(homeSignalLabel(item)) + '</span><span class="IssueLabel signal-state">' + esc(homeSignalStatus(item)) + '</span></div>' +
       '<h3>' + esc(item.title) + '</h3><p>' + esc(item.summary || "") + '</p>' +
       (item.why ? '<div class="why-line"><b>눈여겨볼 점</b><span>' + esc(cut(item.why, 155)) + '</span></div>' : '') + '</div>' +
       '<div class="signal-arrow">↗</div>' +
@@ -489,7 +491,7 @@ function renderHomeAllSignals() {
   const el = $("#homeAllSignals");
   el.innerHTML = items.map(item =>
     '<a class="signal-table-row" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '">' +
-      '<div class="signal-type tone-' + homeSignalTone(item) + '">' + esc(homeSignalLabel(item)) + '</div>' +
+      '<div class="IssueLabel signal-type tone-' + homeSignalTone(item) + '">' + esc(homeSignalLabel(item)) + '</div>' +
       '<div class="signal-title"><strong>' + esc(item.title) + '</strong><span>' + esc(cut(item.summary || "", 105)) + '</span></div>' +
       '<div class="signal-meta">' + esc(cut(homeSignalMeta(item), 72)) + '</div>' +
       '<div class="signal-status">' + esc(homeSignalStatus(item)) + '</div>' +
@@ -719,7 +721,7 @@ function filterDefs(type) {
 function renderFilterChips(type) {
   const el = $("#categoryFilters");
   el.innerHTML = filterDefs(type).map(([key,label]) =>
-    '<button class="filter-chip ' + (key === state.categoryFilter ? "active" : "") + '" data-filter="' + key + '">' + label + '</button>'
+    '<button class="btn btn-sm filter-chip ' + (key === state.categoryFilter ? "selected active" : "") + '" data-filter="' + key + '">' + label + '</button>'
   ).join("");
 
   el.querySelectorAll(".filter-chip").forEach(btn => {
@@ -994,7 +996,7 @@ function renderCategoryList(type) {
 }
 
 function tagsHtml(tags) {
-  return '<div class="category-tags">' + (tags || []).slice(0,4).map(t => '<span class="category-tag">' + esc(t) + '</span>').join("") + '</div>';
+  return '<div class="category-tags">' + (tags || []).slice(0,4).map(t => '<span class="IssueLabel category-tag">' + esc(t) + '</span>').join("") + '</div>';
 }
 
 
@@ -1070,7 +1072,7 @@ function discoverySignalBadges(item) {
   ].filter(Boolean);
 
   return '<div class="discovery-signals">' +
-    parts.map((v,i) => '<span class="discovery-signal ' + (i === 2 ? "trend" : i === 3 ? "news" : "") + '">' + esc(v) + '</span>').join("") +
+    parts.map((v,i) => '<span class="IssueLabel discovery-signal ' + (i === 2 ? "trend" : i === 3 ? "news" : "") + '">' + esc(v) + '</span>').join("") +
   '</div>';
 }
 
@@ -1164,7 +1166,7 @@ function renderDiscoveryHub() {
       '<div class="discovery-section-head"><div><p class="section-eyebrow">전체 모음</p><h2>모든 항목</h2></div><span>찾은 항목은 빠짐없이 모아둡니다</span></div>' +
       '<div class="discovery-filter-row" id="discoveryFilters">' +
         [["all","전체"],["new","오늘 찾은 것"],["rising","요즘 뜨는 것"],["site","사이트"],["directory","디렉터리"],["github","GitHub"],["skill","Skill"],["mcp","MCP"],["agent","Agent"],["workflow","Workflow"]]
-          .map(([key,label]) => '<button class="filter-chip ' + (state.discoveryFilter === key ? "active" : "") + '" data-filter="' + key + '">' + label + '</button>').join("") +
+          .map(([key,label]) => '<button class="btn btn-sm filter-chip ' + (state.discoveryFilter === key ? "selected active" : "") + '" data-filter="' + key + '">' + label + '</button>').join("") +
       '</div>' +
       '<div class="discovery-all-list" id="discoveryAllList"></div>' +
     '</section>';
@@ -1180,7 +1182,11 @@ function renderDiscoveryHub() {
   $("#discoveryFilters").querySelectorAll("[data-filter]").forEach(btn => {
     btn.addEventListener("click", () => {
       state.discoveryFilter = btn.dataset.filter;
-      $("#discoveryFilters").querySelectorAll("[data-filter]").forEach(x => x.classList.toggle("active", x.dataset.filter === state.discoveryFilter));
+      $("#discoveryFilters").querySelectorAll("[data-filter]").forEach(x => {
+        const selected = x.dataset.filter === state.discoveryFilter;
+        x.classList.toggle("active", selected);
+        x.classList.toggle("selected", selected);
+      });
       renderDiscoveryAllList();
     });
   });
@@ -1262,14 +1268,14 @@ function renderOpportunityDetail(item, kind) {
   $("#detailHeader").innerHTML =
     '<div class="detail-kicker">' +
       changeBadge(item, kind) +
-      '<span class="detail-pill">' + esc(isOpenItem(item) ? (item.dDay || "진행중") : "종료") + '</span>' +
-      '<span class="detail-pill">' + category + '</span>' +
+      '<span class="IssueLabel detail-pill">' + esc(isOpenItem(item) ? (item.dDay || "진행중") : "종료") + '</span>' +
+      '<span class="IssueLabel detail-pill">' + category + '</span>' +
     '</div><h1>' + esc(item.title) + '</h1><p>' + esc(item.description || item.summary || "") + '</p>' +
     '<div class="detail-date-line"><span><b>발견일</b> ' + esc(shortDate(item.firstSeenDate)) + '</span><span><b>최종 확인</b> ' + esc(shortDate(item.lastVerifiedDate || item.firstSeenDate)) + '</span>' +
     (item.lastUpdatedDate ? '<span><b>정보 수정</b> ' + esc(shortDate(item.lastUpdatedDate)) + '</span>' : '') + '</div>';
 
   $("#detailTopActions").innerHTML = links.slice(0,2).map((l,i) =>
-    '<a class="' + (i === 0 ? "primary-link" : "secondary-link") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + ' ↗</a>'
+    '<a class="btn ' + (i === 0 ? "btn-primary primary-link" : "secondary-link") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + ' ↗</a>'
   ).join("");
 
   const core = [
@@ -1305,15 +1311,15 @@ function renderDiscoveryDetail(item) {
   const related = item.related || [];
   $("#detailHeader").innerHTML =
     '<div class="detail-kicker">' + changeBadge(item, "discovery") +
-      '<span class="detail-pill">' + esc(discoveryTypeLabel(item.discoveryType)) + '</span>' +
-      (item.awareness ? '<span class="detail-pill">' + esc(discoveryLabel(DISCOVERY_AWARENESS_LABELS, item.awareness)) + '</span>' : '') +
-      (item.trend ? '<span class="detail-pill">' + esc(discoveryLabel(DISCOVERY_TREND_LABELS, item.trend)) + '</span>' : '') +
-      (item.newsState ? '<span class="detail-pill">' + esc(discoveryLabel(DISCOVERY_NEWS_LABELS, item.newsState)) + '</span>' : '') +
+      '<span class="IssueLabel detail-pill">' + esc(discoveryTypeLabel(item.discoveryType)) + '</span>' +
+      (item.awareness ? '<span class="IssueLabel detail-pill">' + esc(discoveryLabel(DISCOVERY_AWARENESS_LABELS, item.awareness)) + '</span>' : '') +
+      (item.trend ? '<span class="IssueLabel detail-pill">' + esc(discoveryLabel(DISCOVERY_TREND_LABELS, item.trend)) + '</span>' : '') +
+      (item.newsState ? '<span class="IssueLabel detail-pill">' + esc(discoveryLabel(DISCOVERY_NEWS_LABELS, item.newsState)) + '</span>' : '') +
     '</div><h1>' + esc(item.title) + '</h1><p>' + esc(item.summary || "") + '</p>' +
     '<div class="detail-date-line"><span><b>발견일</b> ' + esc(shortDate(item.firstSeenDate)) + '</span><span><b>최종 확인</b> ' + esc(shortDate(item.lastUpdatedDate || item.firstSeenDate)) + '</span></div>';
 
   $("#detailTopActions").innerHTML = links.slice(0,2).map((l,i) =>
-    '<a class="' + (i === 0 ? "primary-link" : "secondary-link") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + ' ↗</a>'
+    '<a class="btn ' + (i === 0 ? "btn-primary primary-link" : "secondary-link") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + ' ↗</a>'
   ).join("");
 
   $("#detailContent").innerHTML =
@@ -1337,12 +1343,12 @@ function renderNewsDetail(item) {
   $("#detailHeader").innerHTML =
     '<div class="detail-kicker">' +
       changeBadge(item, "ai") +
-      '<span class="detail-pill">AI 뉴스</span>' +
+      '<span class="IssueLabel detail-pill">AI 뉴스</span>' +
     '</div><h1>' + esc(item.title) + '</h1><p>' + esc(item.summary || "") + '</p>' +
     '<div class="detail-date-line"><span><b>발견일</b> ' + esc(shortDate(item.firstSeenDate)) + '</span><span><b>최종 업데이트</b> ' + esc(shortDate(item.lastUpdatedDate || item.firstSeenDate)) + '</span></div>';
 
   $("#detailTopActions").innerHTML = links.slice(0,2).map((l,i) =>
-    '<a class="' + (i === 0 ? "primary-link" : "secondary-link") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + ' ↗</a>'
+    '<a class="btn ' + (i === 0 ? "btn-primary primary-link" : "secondary-link") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + ' ↗</a>'
   ).join("");
 
   $("#detailContent").innerHTML =
