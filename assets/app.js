@@ -45,7 +45,7 @@ function saveViewState(route = state.activeRoute) {
     scrollY: Math.max(0, Math.round(window.scrollY || 0))
   };
 
-  if (route === "#/contests" || route === "#/ai-news" || route === "#/support") {
+  if (route === "#/contests" || route === "#/ai-news" || route === "#/ai-discovery" || route === "#/support") {
     snapshot.categoryFilter = state.categoryFilter;
     snapshot.categoryTopicFilter = state.categoryTopicFilter;
     snapshot.categorySort = state.categorySort;
@@ -176,13 +176,14 @@ function dangerClass(item) { return isToday(item) ? "danger" : ""; }
 
 function itemKind(item) {
   if ((state.data.aiNews || []).some(x => x.id === item.id)) return "ai";
+  if ((state.data.aiDiscovery || []).some(x => x.id === item.id)) return "discovery";
   if ((state.data.support || []).some(x => x.id === item.id)) return "support";
   return "contest";
 }
 
 function itemRoute(item) {
   const kind = itemKind(item);
-  return "#/" + (kind === "ai" ? "ai" : kind) + "/" + encodeURIComponent(item.id);
+  return "#/" + (kind === "ai" ? "ai" : kind === "discovery" ? "discovery" : kind) + "/" + encodeURIComponent(item.id);
 }
 
 async function loadData() {
@@ -192,7 +193,7 @@ async function loadData() {
   if (!res.ok) throw new Error("브리핑 데이터를 불러오지 못했습니다.");
 
   state.data = await res.json();
-  state.all = [].concat(state.data.contests || [], state.data.aiNews || [], state.data.support || []);
+  state.all = [].concat(state.data.contests || [], state.data.aiNews || [], state.data.aiDiscovery || [], state.data.support || []);
   renderShared();
   route();
 }
@@ -209,6 +210,7 @@ function renderShared() {
   $("#year").textContent = new Date().getFullYear();
   $("#navContestCount").textContent = (data.contests || []).filter(isOpenItem).length;
   $("#navAiCount").textContent = (data.aiNews || []).length;
+  $("#navDiscoveryCount").textContent = (data.aiDiscovery || []).length;
   $("#navSupportCount").textContent = (data.support || []).filter(isOpenItem).length;
 }
 
@@ -258,6 +260,16 @@ function route() {
     return;
   }
 
+  if (hash === "#/ai-discovery") {
+    setActiveNav("ai-discovery");
+    $("#categoryView").hidden = false;
+    renderCategory("ai-discovery");
+    document.title = "AI Discovery | daily-brief";
+    state.lastRoute = hash;
+    completeRoute(hash);
+    return;
+  }
+
   if (hash === "#/support") {
     setActiveNav("support");
     $("#categoryView").hidden = false;
@@ -278,12 +290,12 @@ function route() {
     return;
   }
 
-  const m = hash.match(/^#\/(contest|ai|support)\/(.+)$/);
+  const m = hash.match(/^#\/(contest|ai|discovery|support)\/(.+)$/);
   if (m) {
     const id = decodeURIComponent(m[2]);
     const item = state.all.find(x => x.id === id);
     if (item) {
-      setActiveNav(m[1] === "ai" ? "ai-news" : m[1] === "support" ? "support" : "contests");
+      setActiveNav(m[1] === "ai" ? "ai-news" : m[1] === "discovery" ? "ai-discovery" : m[1] === "support" ? "support" : "contests");
       $("#detailView").hidden = false;
       renderDetail(item);
       document.title = item.title + " | daily-brief";
@@ -415,9 +427,9 @@ function renderCategory(type) {
   const routeKey = type === "contests" ? "#/contests" : type === "ai-news" ? "#/ai-news" : "#/support";
   const savedView = state.viewStates[routeKey] || {};
 
-  state.categoryFilter = savedView.categoryFilter || (type === "ai-news" ? "all" : "open");
+  state.categoryFilter = savedView.categoryFilter || ((type === "ai-news" || type === "ai-discovery") ? "all" : "open");
   state.categoryTopicFilter = savedView.categoryTopicFilter || "all";
-  state.categorySort = savedView.categorySort || (type === "ai-news" ? "updated" : "deadline");
+  state.categorySort = savedView.categorySort || (type === "ai-news" ? "updated" : type === "ai-discovery" ? "discovered" : "deadline");
 
   const configs = {
     contests: {
@@ -429,6 +441,11 @@ function renderCategory(type) {
       eyebrow:"새 이슈 · 후속 업데이트",
       title:"AI 뉴스",
       description:"완전히 새로운 이슈는 추가하고, 같은 이슈의 후속 소식은 기존 항목에 업데이트로 이어서 기록합니다."
+    },
+    "ai-discovery": {
+      eyebrow:"새 도구 · 사이트 · 저장소 · 워크플로",
+      title:"AI Discovery",
+      description:"사이트, GitHub, Skill, MCP, Agent, Workflow와 커뮤니티 발견을 하나의 카탈로그로 정리하고 도입 가치를 함께 기록합니다."
     },
     support: {
       eyebrow:"현재 신청 가능",
@@ -445,6 +462,8 @@ function renderCategory(type) {
   const sort = $("#categorySort");
   if (type === "ai-news") {
     sort.innerHTML = '<option value="updated">최근 업데이트순</option><option value="discovered">최근 발견순</option>';
+  } else if (type === "ai-discovery") {
+    sort.innerHTML = '<option value="discovered">최근 발견순</option><option value="updated">최근 업데이트순</option>';
   } else {
     sort.innerHTML = '<option value="deadline">마감 임박순</option><option value="discovered">최근 발견순</option><option value="updated">최근 변경순</option>';
   }
@@ -472,6 +491,18 @@ function filterDefs(type) {
     ["coding","코딩 AI"],
     ["opensource","MCP·오픈소스"],
     ["security","보안"]
+  ];
+  if (type === "ai-discovery") return [
+    ["all","전체"],
+    ["new","오늘 신규"],
+    ["site","사이트"],
+    ["github","GitHub"],
+    ["skill","Skill"],
+    ["mcp","MCP"],
+    ["workflow","Workflow"],
+    ["hot","HOT"],
+    ["rising","RISING"],
+    ["mainstream","WELL_KNOWN"]
   ];
   return [
     ["open","진행중"],
@@ -625,6 +656,7 @@ function renderTopicChips(type) {
 function sourceFor(type) {
   if (type === "contests") return state.data.contests || [];
   if (type === "ai-news") return state.data.aiNews || [];
+  if (type === "ai-discovery") return state.data.aiDiscovery || [];
   return state.data.support || [];
 }
 
@@ -646,6 +678,10 @@ function matchesFilter(item, type, filter) {
   if (filter === "agent") return /agent|에이전트/i.test(hay);
   if (filter === "coding") return /coding|코딩|개발자|engineering/i.test(hay);
   if (filter === "security") return /security|보안|threat|위협|anomaly|관측/i.test(hay);
+  if (type === "ai-discovery" && ["site","github","skill","mcp","workflow"].includes(filter)) return String(item.discoveryType || "").toLowerCase() === filter;
+  if (filter === "hot") return type === "ai-discovery" && String(item.trend || "").toUpperCase() === "HOT";
+  if (filter === "rising") return type === "ai-discovery" && String(item.trend || "").toUpperCase() === "RISING";
+  if (filter === "well-known") return type === "ai-discovery" && String(item.awareness || "").toUpperCase() === "WELL_KNOWN";
   if (filter === "opensource") return /open.?source|오픈소스|github|hugging face|mcp/i.test(hay);
   return true;
 }
@@ -676,6 +712,8 @@ function renderCategoryList(type) {
   const updatedCount = source.filter(isUpdatedToday).length;
   if (type === "ai-news") {
     $("#categoryCount").textContent = "전체 " + source.length + " · 오늘 신규 " + newCount + " · 업데이트 " + updatedCount;
+  } else if (type === "ai-discovery") {
+    $("#categoryCount").textContent = "전체 " + source.length + " · 오늘 신규 " + newCount;
   } else {
     const openCount = source.filter(isOpenItem).length;
     $("#categoryCount").textContent = "진행중 " + openCount + " · 오늘 신규 " + newCount + " · 전체 " + source.length;
@@ -702,6 +740,23 @@ function renderCategoryList(type) {
         tagsHtml(item.tags) +
         '<div class="category-explainer"><span>왜 중요한가</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
         '<div class="category-action">업데이트 기록과 상세 내용 보기 <span>→</span></div>' +
+      '</article>'
+    ).join("");
+  } else if (type === "ai-discovery") {
+    el.innerHTML = items.map(item =>
+      '<article class="category-card ai-category-card" data-id="' + esc(item.id) + '">' +
+        '<div class="card-meta-row"><div class="card-status-group">' +
+          changeBadge(item, "discovery") +
+          '<span class="meta-label">' + esc(String(item.discoveryType || "site").toUpperCase()) + '</span>' +
+          (item.awareness ? '<span class="meta-label">' + esc(item.awareness) + '</span>' : '') +
+          (item.trend ? '<span class="meta-label">' + esc(item.trend) + '</span>' : '') +
+          (item.newsState ? '<span class="meta-label">' + esc(item.newsState) + '</span>' : '') +
+        '</div>' + dateMetaHtml(item, "ai") + '</div>' +
+        '<h3 class="category-item-title">' + esc(item.title) + '</h3>' +
+        '<p class="category-item-summary">' + esc(item.summary || "") + '</p>' +
+        tagsHtml(item.tags) +
+        '<div class="category-explainer"><span>왜 볼 가치가 있나</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
+        '<div class="category-action">링크와 도입 판단 보기 <span>→</span></div>' +
       '</article>'
     ).join("");
   } else {
@@ -771,6 +826,7 @@ function openArchiveDate(date) {
 function renderDetail(item) {
   const kind = itemKind(item);
   if (kind === "ai") renderNewsDetail(item);
+  else if (kind === "discovery") renderDiscoveryDetail(item);
   else renderOpportunityDetail(item, kind);
 }
 
@@ -816,6 +872,32 @@ function renderOpportunityDetail(item, kind) {
     infoBlock("진행 방식","",process) +
     (ideas.length ? ideaBlock(kind === "support" ? "활용 아이디어" : "만들어볼 아이디어", ideas) : "") +
     (links.length ? '<section class="detail-block"><h2>공식 링크</h2><div class="official-link-list">' + links.map(l => '<a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer"><span>' + esc(l.label) + '</span><span>↗</span></a>').join("") + '</div></section>' : '');
+
+  $("#detailAside").innerHTML = "";
+}
+
+function renderDiscoveryDetail(item) {
+  const links = item.links || [];
+  const related = item.related || [];
+  $("#detailHeader").innerHTML =
+    '<div class="detail-kicker">' + changeBadge(item, "discovery") +
+      '<span class="detail-pill">' + esc(String(item.discoveryType || "site").toUpperCase()) + '</span>' +
+      (item.awareness ? '<span class="detail-pill">' + esc(item.awareness) + '</span>' : '') +
+      (item.trend ? '<span class="detail-pill">' + esc(item.trend) + '</span>' : '') +
+      (item.newsState ? '<span class="detail-pill">' + esc(item.newsState) + '</span>' : '') +
+    '</div><h1>' + esc(item.title) + '</h1><p>' + esc(item.summary || "") + '</p>' +
+    '<div class="detail-date-line"><span><b>발견일</b> ' + esc(shortDate(item.firstSeenDate)) + '</span><span><b>최종 확인</b> ' + esc(shortDate(item.lastUpdatedDate || item.firstSeenDate)) + '</span></div>';
+
+  $("#detailTopActions").innerHTML = links.slice(0,2).map((l,i) =>
+    '<a class="' + (i === 0 ? "primary-link" : "secondary-link") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + ' ↗</a>'
+  ).join("");
+
+  $("#detailContent").innerHTML =
+    infoBlock("무엇인가","",[["설명", item.description || item.summary],["왜 볼 가치가 있나", item.why],["발견 이유", item.discoveryReason]]) +
+    infoBlock("현재 신호","",[["인지도", item.awareness],["트렌드", item.trend],["새 소식", item.newsState]]) +
+    infoBlock("신호","",[["발견 경로", (item.signals || []).join(" · ")],["카테고리", (item.categories || []).join(" · ")]]) +
+    (related.length ? ideaBlock("연결된 항목", related) : "") +
+    (links.length ? '<section class="detail-block"><h2>링크</h2><div class="official-link-list">' + links.map(l => '<a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer"><span>' + esc(l.label) + '</span><span>↗</span></a>').join("") + '</div></section>' : '');
 
   $("#detailAside").innerHTML = "";
 }

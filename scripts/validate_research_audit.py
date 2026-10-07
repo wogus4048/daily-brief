@@ -116,7 +116,16 @@ TRACKS = {
         "axes": ["officialProduct", "githubReleases", "huggingFace", "researchLabs", "communities"],
         "min_candidates": 0,
     },
+    "aiDiscovery": {
+        "axes": ["sitesDirectories", "github", "skillsMcpAgents", "workflows", "communities", "sourceRadar"],
+        "min_candidates": 0,
+    },
 }
+
+# AI Discovery was introduced on 2026-10-07 after that day's scheduled evidence had already
+# completed. Enforce its independent evidence track from the next daily snapshot onward.
+if snapshot_date < "2026-10-08":
+    TRACKS.pop("aiDiscovery", None)
 
 tracks = audit.get("tracks")
 assert isinstance(tracks, dict), "research audit tracks must be an object"
@@ -274,7 +283,7 @@ assert len(published_ids) == len(set(published_ids)), "research audit publishedI
 
 candidate_ids = {
     item["id"]
-    for group in ("contests", "support", "aiNews")
+    for group in ("contests", "support", "aiNews", "aiDiscovery")
     for item in data.get(group, [])
     if item.get("id")
 }
@@ -282,13 +291,13 @@ candidate_ids = {
 if baseline is not None:
     baseline_ids = {
         item["id"]
-        for group in ("contests", "support", "aiNews")
+        for group in ("contests", "support", "aiNews", "aiDiscovery")
         for item in baseline.get(group, [])
         if item.get("id")
     }
     new_ids = {
         item["id"]
-        for group in ("contests", "support", "aiNews")
+        for group in ("contests", "support", "aiNews", "aiDiscovery")
         for item in data.get(group, [])
         if item.get("id") and item["id"] not in baseline_ids and item.get("firstSeenDate") == snapshot_date
     }
@@ -296,7 +305,7 @@ if baseline is not None:
     if baseline.get("date") == snapshot_date:
         same_day_baseline_ids = {
             item["id"]
-            for group in ("contests", "support", "aiNews")
+            for group in ("contests", "support", "aiNews", "aiDiscovery")
             for item in baseline.get(group, [])
             if item.get("id") and item.get("firstSeenDate") == snapshot_date
         }
