@@ -128,8 +128,8 @@
       "name": "기업마당",
       "reason": "Official Bizinfo support-program listing; broad startup/support discovery with structured detail URLs and application periods",
       "status": "SHADOW",
-      "score": 0,
-      "recommendation": "NEEDS_CRAWLER_SPEC",
+      "score": 10,
+      "recommendation": "CONTINUE_SHADOW",
       "category": "startupSupport",
       "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200View.do?pblancArea=400",
       "crawlerSpec": {
@@ -207,6 +207,17 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "keitNotices",
+      "name": "한국산업기술기획평가원(KEIT) 공지사항",
+      "url": "https://www.keit.re.kr/board.es?bid=0009&mid=a10301010000",
+      "reason": "AI 라이프 솔루션 챌린지처럼 개인 참여 가능한 AI·R&D 공모가 공식 공지사항에 게시되어 반복 점검 가치가 있음",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-07",
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "kisa",
       "name": "KISA",
       "reason": "multiple notice/business boards; opportunity-relevant board set needs selection",
@@ -230,7 +241,9 @@
         "actionability": "hints",
         "expand": false,
         "waitMs": 1200
-      }
+      },
+      "score": 0,
+      "recommendation": "CONTINUE_SHADOW"
     },
     {
       "key": "learn-ai-basics-devpost-com",
@@ -281,6 +294,25 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "opencv26-devpost-com",
+      "name": "opencv26.devpost.com",
+      "url": "https://opencv26.devpost.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "aiData",
+        "generalSoftware"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-07",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://opencv26.devpost.com/"
+      ],
+      "score": 12,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "sba",
       "name": "SBA",
       "reason": "public program listings split across multiple boards; source-specific board inventory needed",
@@ -290,6 +322,6 @@
       "category": "startupSupport"
     }
   ],
-  "lastEvolvedDate": "2026-10-06",
-  "lastEvolvedAt": "2026-10-06T07:36:55.785807Z"
+  "lastEvolvedDate": "2026-10-07",
+  "lastEvolvedAt": "2026-10-07T00:20:55.206703Z"
 }
