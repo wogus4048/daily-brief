@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "generatedAt": "2026-10-07T00:03:23.287Z",
+  "generatedAt": "2026-10-07T02:43:17.450Z",
   "timezone": "Asia/Seoul",
   "crawler": {
     "engine": "playwright-chromium",
@@ -21,9 +21,9 @@
         },
         {
           "source": "ContestKorea",
-          "title": "문학•문예 2027년 상상인 신춘문예 공모 250",
+          "title": "문학•문예 2027년 상상인 신춘문예 공모 251",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030110001&int_gbn=1&str_no=202602240031",
-          "rawText": "문학•문예 2027년 상상인 신춘문예 공모 250 주최 . 상상인 대상 . 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 12.01~01.05 심사 01.06~01.20 발표 01.26 D-90 접수예정",
+          "rawText": "문학•문예 2027년 상상인 신춘문예 공모 251 주최 . 상상인 대상 . 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 12.01~01.05 심사 01.06~01.20 발표 01.26 D-90 접수예정",
           "statusHints": [
             "접수예정",
             "예정"
@@ -80,25 +80,23 @@
         },
         {
           "source": "ContestKorea",
-          "title": "문학•문예 [광주 신세계안과] 제47회 빛창공모전 겨울편 공모 1",
-          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030110001&int_gbn=1&str_no=202610010090",
-          "rawText": "문학•문예 [광주 신세계안과] 제47회 빛창공모전 겨울편 공모 1 주최 . 신세계안과 대상 . 누구나 , 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 10.02~11.09 심사 11.10~11.16 발표 11.17 D-33 접수중",
-          "statusHints": [
-            "접수중"
-          ]
-        },
-        {
-          "source": "ContestKorea",
-          "title": "7. 제2회 클레이키위 책시회 리뷰 공모전",
+          "title": "9. 제2회 클레이키위 책시회 리뷰 공모전",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030110001&int_gbn=1&str_no=202610020058",
-          "rawText": "7. 제2회 클레이키위 책시회 리뷰 공모전",
+          "rawText": "9. 제2회 클레이키위 책시회 리뷰 공모전",
           "statusHints": []
         },
         {
           "source": "ContestKorea",
-          "title": "6. 2026년 제2회 강남구 세계청소년백일장",
+          "title": "8. 2026년 제2회 강남구 세계청소년백일장",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030110001&int_gbn=1&str_no=202610020070",
-          "rawText": "6. 2026년 제2회 강남구 세계청소년백일장",
+          "rawText": "8. 2026년 제2회 강남구 세계청소년백일장",
+          "statusHints": []
+        },
+        {
+          "source": "ContestKorea",
+          "title": "4. 제30회 우암전국백일장",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030110001&int_gbn=1&str_no=202610060010",
+          "rawText": "4. 제30회 우암전국백일장",
           "statusHints": []
         },
         {
@@ -124,20 +122,11 @@
         },
         {
           "source": "ContestKorea",
-          "title": "네이밍•슬로건 '완도 대표축제' 명칭 공모 1",
+          "title": "네이밍•슬로건 '완도 대표축제' 명칭 공모 3",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030210001&int_gbn=1&str_no=202610020069",
-          "rawText": "네이밍•슬로건 '완도 대표축제' 명칭 공모 1 주최 . 완도군 대상 . 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 접수 10.01~10.16 심사 10.17~11.30 발표 11.30 D-9 접수중",
+          "rawText": "네이밍•슬로건 '완도 대표축제' 명칭 공모 3 주최 . 완도군 대상 . 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 접수 10.01~10.16 심사 10.17~11.30 발표 11.30 D-9 접수중",
           "statusHints": [
             "접수중"
-          ]
-        },
-        {
-          "source": "ContestKorea",
-          "title": "네이밍•슬로건 강릉시 청년센터 명칭 공모 2",
-          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030210001&int_gbn=1&str_no=202610060058",
-          "rawText": "네이밍•슬로건 강릉시 청년센터 명칭 공모 2 주최 . 강릉시 대상 . 누구나 , 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 10.01~10.12 심사 10.13~10.29 발표 10.30 D-5 마감임박",
-          "statusHints": [
-            "마감임박"
           ]
         },
         {
@@ -158,11 +147,12 @@
         },
         {
           "source": "ContestKorea",
-          "title": "학문•과학•IT 2026 재난 안전 논문 공모전 0",
-          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030310001&int_gbn=1&str_no=202609280031",
-          "rawText": "학문•과학•IT 2026 재난 안전 논문 공모전 0 주최 . 행정안전부 대상 . 대학생 , 일반인 , 해당자 ▶ 접수 09.01~11.10 심사 10.12~12.30 발표 12.31 D-34 접수중",
+          "title": "학문•과학•IT 2026년 10월 KESEL 영어 말하기 대회 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030310001&int_gbn=1&str_no=202610060078",
+          "rawText": "학문•과학•IT 2026년 10월 KESEL 영어 말하기 대회 0 주최 . 한국영어말하기평가연구소(KESEL) 대상 . 초등학생 접수 10.19~10.31 심사 11.01~11.09 발표 11.09 D-24 접수예정 ￦ 유료 접수",
           "statusHints": [
-            "접수중"
+            "접수예정",
+            "예정"
           ]
         },
         {
@@ -174,16 +164,36 @@
         },
         {
           "source": "ContestKorea",
-          "title": "8. 탑승머니 광고 디자인 공모전",
+          "title": "미술•디자인•웹툰 부산동구 개청 70주년 기념「북항 상어 캐릭터 디자인 공모전」 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030610001&int_gbn=1&str_no=202609280050",
+          "rawText": "미술•디자인•웹툰 부산동구 개청 70주년 기념「북항 상어 캐릭터 디자인 공모전」 0 주최 . 부산 동구 대상 . 누구나 , 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 10.12~10.23 심사 10.26~11.19 발표 11.20 D-16 접수예정",
+          "statusHints": [
+            "접수예정",
+            "예정"
+          ]
+        },
+        {
+          "source": "ContestKorea",
+          "title": "10. 탑승머니 광고 디자인 공모전",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030610001&int_gbn=1&str_no=202610020002",
-          "rawText": "8. 탑승머니 광고 디자인 공모전",
+          "rawText": "10. 탑승머니 광고 디자인 공모전",
           "statusHints": []
         },
         {
           "source": "ContestKorea",
-          "title": "미술•디자인•웹툰 생명안전 그림그리기 대회 0",
-          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030610001&int_gbn=1&str_no=202610060014",
-          "rawText": "미술•디자인•웹툰 생명안전 그림그리기 대회 0 주최 . 4·16재단 대상 . 초등학생 , 중학생 , 고등학생 접수 09.29~10.11 심사 10.17 발표 10.17 D-4 마감임박",
+          "title": "음악•콩쿠르•댄스 ÉLAN 2026 1st NATIONAL DANCE CONCOURS 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030910001&int_gbn=1&str_no=202609290009",
+          "rawText": "음악•콩쿠르•댄스 ÉLAN 2026 1st NATIONAL DANCE CONCOURS 0 주최 . ELAN 무용콩쿠르 조직위원회, 글로벌 컨소시엄 대상 . 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 일반인 접수 10.12~11.16 심사 11.22 발표 11.22 D-40 접수예정 ￦ 유료 접수",
+          "statusHints": [
+            "접수예정",
+            "예정"
+          ]
+        },
+        {
+          "source": "ContestKorea",
+          "title": "음악•콩쿠르•댄스 2026년 제1회 AMT AI 작곡대회 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030910001&int_gbn=1&str_no=202609290036",
+          "rawText": "음악•콩쿠르•댄스 2026년 제1회 AMT AI 작곡대회 0 주최 . 주식회사 프롬프트뱅크 대상 . 누구나 , 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 10.05~10.12 심사 10.05~10.18 발표 10.18 D-5 마감임박",
           "statusHints": [
             "마감임박"
           ]
@@ -213,82 +223,110 @@
         },
         {
           "source": "ContestKorea",
-          "title": "3. 5극3특 성장엔진 미래지도 AI 영상 공모전",
+          "title": "사진•영상•영화제 대국민 미소 사진 공모전 - 스마일 모먼트 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031210001&int_gbn=1&str_no=202609280055",
+          "rawText": "사진•영상•영화제 대국민 미소 사진 공모전 - 스마일 모먼트 0 주최 . LG 대상 . 누구나 , 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 09.23~10.18 심사 10.19~10.30 발표 11.02 D-11 접수중",
+          "statusHints": [
+            "접수중"
+          ]
+        },
+        {
+          "source": "ContestKorea",
+          "title": "사진•영상•영화제 시민의 시선으로 기록하는 노들글로벌예술섬 사진·짧은 영상(숏폼) 공모전 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031210001&int_gbn=1&str_no=202609290007",
+          "rawText": "사진•영상•영화제 시민의 시선으로 기록하는 노들글로벌예술섬 사진·짧은 영상(숏폼) 공모전 0 주최 . 서울특별시 대상 . 누구나 , 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 09.28~10.30 심사 11.02~11.17 발표 11.18 D-23 접수중",
+          "statusHints": [
+            "접수중"
+          ]
+        },
+        {
+          "source": "ContestKorea",
+          "title": "5. 5극3특 성장엔진 미래지도 AI 영상 공모전",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031210001&int_gbn=1&str_no=202609300020",
-          "rawText": "3. 5극3특 성장엔진 미래지도 AI 영상 공모전",
+          "rawText": "5. 5극3특 성장엔진 미래지도 AI 영상 공모전",
           "statusHints": []
         },
         {
           "source": "ContestKorea",
-          "title": "사진•영상•영화제 2026년 경기도 청소년활동 수기·영상 공모전 [한걸음 Level Up!] 0",
+          "title": "6. 2026년 경기도 청소년활동 수기·영상 공모전 [한걸음 Level Up!]",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031210001&int_gbn=1&str_no=202610060005",
-          "rawText": "사진•영상•영화제 2026년 경기도 청소년활동 수기·영상 공모전 [한걸음 Level Up!] 0 주최 . 경기도청소년활동진흥센터 대상 . 초등학생 , 중학생 , 고등학생 , 대학생 접수 09.21~10.31 심사 11.02~11.04 발표 11.06 D-24 접수중",
-          "statusHints": [
-            "접수중"
-          ]
+          "rawText": "6. 2026년 경기도 청소년활동 수기·영상 공모전 [한걸음 Level Up!]",
+          "statusHints": []
         },
         {
           "source": "ContestKorea",
-          "title": "사진•영상•영화제 생명안전 AI숏폼 공모전 0",
-          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031210001&int_gbn=1&str_no=202610060012",
-          "rawText": "사진•영상•영화제 생명안전 AI숏폼 공모전 0 주최 . 4·16재단 대상 . 누구나 , 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 09.29~10.11 심사 10.12~10.15 발표 10.17 D-4 마감임박",
-          "statusHints": [
-            "마감임박"
-          ]
-        },
-        {
-          "source": "ContestKorea",
-          "title": "사진•영상•영화제 국민콜110 「110을 알려줘!」 SNS 숏폼 콘텐츠 공모전 0",
+          "title": "3. 국민콜110 「110을 알려줘!」 SNS 숏폼 콘텐츠 공모전",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031210001&int_gbn=1&str_no=202610060038",
-          "rawText": "사진•영상•영화제 국민콜110 「110을 알려줘!」 SNS 숏폼 콘텐츠 공모전 0 주최 . 국민권익위원회 대상 . 누구나 , 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 10.05~11.01 심사 11.01~11.16 발표 11.17 D-25 접수중",
+          "rawText": "3. 국민콜110 「110을 알려줘!」 SNS 숏폼 콘텐츠 공모전",
+          "statusHints": []
+        },
+        {
+          "source": "ContestKorea",
+          "title": "사진•영상•영화제 2026 남원시 영상 공모전 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031210001&int_gbn=1&str_no=202610060081",
+          "rawText": "사진•영상•영화제 2026 남원시 영상 공모전 0 주최 . 남원시청 대상 . 누구나 , 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 10.06~10.26 심사 10.28~11.15 발표 11.23 D-19 접수중",
           "statusHints": [
             "접수중"
           ]
         },
         {
           "source": "ContestKorea",
-          "title": "사진•영상•영화제 AI 뮤직비디오 제작 이벤트 <모두의 프로듀서> 0",
-          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031210001&int_gbn=1&str_no=202610060067",
-          "rawText": "사진•영상•영화제 AI 뮤직비디오 제작 이벤트 <모두의 프로듀서> 0 주최 . 한국정보통신기술협회 대상 . 누구나 , 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 10.01~10.31 심사 11.01~11.25 발표 11.26 D-24 접수중",
+          "title": "사진•영상•영화제 제12회 서울 29초영화제 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031210001&int_gbn=1&str_no=202610060089",
+          "rawText": "사진•영상•영화제 제12회 서울 29초영화제 0 주최 . 서울특별시, 한국경제신문 대상 . 누구나 , 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 10.01~11.10 심사 10.01~11.10 발표 12.01 D-34 접수중",
           "statusHints": [
             "접수중"
           ]
         },
         {
           "source": "ContestKorea",
-          "title": "아이디어•건축•창업 문화·관광·콘텐츠 분야 대국민 연구 아이디어 공모 4",
+          "title": "아이디어•건축•창업 문화·관광·콘텐츠 분야 대국민 연구 아이디어 공모 6",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202607090072",
-          "rawText": "아이디어•건축•창업 문화·관광·콘텐츠 분야 대국민 연구 아이디어 공모 4 주최 . 한국문화관광연구원 대상 . 대학생 , 대학원생 , 일반인 접수 10.05~10.23 심사 10.26~11.06 발표 11.13 D-16 접수중",
+          "rawText": "아이디어•건축•창업 문화·관광·콘텐츠 분야 대국민 연구 아이디어 공모 6 주최 . 한국문화관광연구원 대상 . 대학생 , 대학원생 , 일반인 접수 10.05~10.23 심사 10.26~11.06 발표 11.13 D-16 접수중",
           "statusHints": [
             "접수중"
           ]
         },
         {
           "source": "ContestKorea",
-          "title": "아이디어•건축•창업 [국립해양생물자원관] 해양바이오뱅크 산업·연구 활용 아이디어 발굴 공모전 0",
+          "title": "아이디어•건축•창업 사회서비스 현장 ESG 우수사례 공모전 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202609280053",
+          "rawText": "아이디어•건축•창업 사회서비스 현장 ESG 우수사례 공모전 0 주최 . 전북사회서비스원 대상 . 일반인 , 해당자 ▶ 접수 09.28~10.23 심사 10.26~11.27 발표 11.30 D-16 접수중",
+          "statusHints": [
+            "접수중"
+          ]
+        },
+        {
+          "source": "ContestKorea",
+          "title": "아이디어•건축•창업 울산광역시 중구 주민 정책 아이디어 공모전 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202609280056",
+          "rawText": "아이디어•건축•창업 울산광역시 중구 주민 정책 아이디어 공모전 0 주최 . 울산광역시 중구 대상 . 누구나 , 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 09.28~10.30 심사 11.02~12.17 발표 12.18 D-23 접수중",
+          "statusHints": [
+            "접수중"
+          ]
+        },
+        {
+          "source": "ContestKorea",
+          "title": "아이디어•건축•창업 2026 모바일신분증 아이디어 공모전 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202609290006",
+          "rawText": "아이디어•건축•창업 2026 모바일신분증 아이디어 공모전 0 주최 . 행정안전부 대상 . 누구나 , 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 10.01~10.30 심사 11.02~11.24 발표 11.25 D-23 접수중",
+          "statusHints": [
+            "접수중"
+          ]
+        },
+        {
+          "source": "ContestKorea",
+          "title": "7. [국립해양생물자원관] 해양바이오뱅크 산업·연구 활용 아이디어 발굴 공모전",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202610060003",
-          "rawText": "아이디어•건축•창업 [국립해양생물자원관] 해양바이오뱅크 산업·연구 활용 아이디어 발굴 공모전 0 주최 . 국립해양생물자원관 대상 . 대학생 , 대학원생 , 일반인 , 해당자 ▶ 접수 09.30~10.25 심사 10.26~11.06 발표 11.20 D-18 접수중",
-          "statusHints": [
-            "접수중"
-          ]
+          "rawText": "7. [국립해양생물자원관] 해양바이오뱅크 산업·연구 활용 아이디어 발굴 공모전",
+          "statusHints": []
         },
         {
           "source": "ContestKorea",
-          "title": "아이디어•건축•창업 2026년 대국민 공공의료 공모전 0",
-          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202610060053",
-          "rawText": "아이디어•건축•창업 2026년 대국민 공공의료 공모전 0 주최 . 보건복지부 대상 . 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 접수 10.06~11.05 심사 11.09~11.30 발표 11.02 D-29 접수중",
-          "statusHints": [
-            "접수중"
-          ]
-        },
-        {
-          "source": "ContestKorea",
-          "title": "아이디어•건축•창업 2026년 기업 맞춤형 다양성 교육 우수사례 공모전 0",
+          "title": "2. 2026년 기업 맞춤형 다양성 교육 우수사례 공모전",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202610060070",
-          "rawText": "아이디어•건축•창업 2026년 기업 맞춤형 다양성 교육 우수사례 공모전 0 주최 . 한국양성평등교육진흥원 대상 . 해당자 ▶ 접수 10.06~10.26 심사 10.27~10.30 발표 11.30 D-19 접수중",
-          "statusHints": [
-            "접수중"
-          ]
+          "rawText": "2. 2026년 기업 맞춤형 다양성 교육 우수사례 공모전",
+          "statusHints": []
         },
         {
           "source": "ContestKorea",
@@ -299,9 +337,9 @@
         },
         {
           "source": "ContestKorea",
-          "title": "10. [TV CHOSUN] 2026 글로벌 리더스 포럼 대학생 서포터즈 모집",
+          "title": "3. [TV CHOSUN] 2026 글로벌 리더스 포럼 대학생 서포터즈 모집",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=040110001&int_gbn=2&str_no=202609300036",
-          "rawText": "10. [TV CHOSUN] 2026 글로벌 리더스 포럼 대학생 서포터즈 모집",
+          "rawText": "3. [TV CHOSUN] 2026 글로벌 리더스 포럼 대학생 서포터즈 모집",
           "statusHints": []
         },
         {
@@ -313,23 +351,16 @@
         },
         {
           "source": "ContestKorea",
-          "title": "9. [2026년 진천상공회의소 미래내일 일경험사업] 청년인턴 7기 모집",
-          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=040210001&int_gbn=2&str_no=202609300037",
-          "rawText": "9. [2026년 진천상공회의소 미래내일 일경험사업] 청년인턴 7기 모집",
-          "statusHints": []
-        },
-        {
-          "source": "ContestKorea",
-          "title": "7. [농림부/농어촌공사] 봉사도 여행도! 곡성 2박3일 농촌일손여행 청년 모집",
+          "title": "10. [농림부/농어촌공사] 봉사도 여행도! 곡성 2박3일 농촌일손여행 청년 모집",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=040210001&int_gbn=2&str_no=202610010011",
-          "rawText": "7. [농림부/농어촌공사] 봉사도 여행도! 곡성 2박3일 농촌일손여행 청년 모집",
+          "rawText": "10. [농림부/농어촌공사] 봉사도 여행도! 곡성 2박3일 농촌일손여행 청년 모집",
           "statusHints": []
         },
         {
           "source": "ContestKorea",
-          "title": "6. (본공고) KOICA-파라과이 산토도밍고 노인복지센터 운영 역량강화 프로젝트 봉사단 (9기)",
+          "title": "9. (본공고) KOICA-파라과이 산토도밍고 노인복지센터 운영 역량강화 프로젝트 봉사단 (9기)",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=040210001&int_gbn=2&str_no=202610010031",
-          "rawText": "6. (본공고) KOICA-파라과이 산토도밍고 노인복지센터 운영 역량강화 프로젝트 봉사단 (9기)",
+          "rawText": "9. (본공고) KOICA-파라과이 산토도밍고 노인복지센터 운영 역량강화 프로젝트 봉사단 (9기)",
           "statusHints": []
         },
         {
@@ -383,41 +414,55 @@
         },
         {
           "source": "ContestKorea",
-          "title": "8. 동그라미재단 AI 아카데미 7기(서울)",
-          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=040410001&int_gbn=2&str_no=202610010009",
-          "rawText": "8. 동그라미재단 AI 아카데미 7기(서울)",
-          "statusHints": []
-        },
-        {
-          "source": "ContestKorea",
-          "title": "2. 스위프 앱 6기 데모데이 네트워킹 행사",
+          "title": "5. 스위프 앱 6기 데모데이 네트워킹 행사",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=040410001&int_gbn=2&str_no=202610020001",
-          "rawText": "2. 스위프 앱 6기 데모데이 네트워킹 행사",
+          "rawText": "5. 스위프 앱 6기 데모데이 네트워킹 행사",
           "statusHints": []
         },
         {
           "source": "ContestKorea",
-          "title": "4. [구로청년이룸] 인성검사를 통해 자소서 어필 포인트 찾자! '제로베이스 5기' 모집",
+          "title": "7. [구로청년이룸] 인성검사를 통해 자소서 어필 포인트 찾자! '제로베이스 5기' 모집",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=040410001&int_gbn=2&str_no=202610020031",
-          "rawText": "4. [구로청년이룸] 인성검사를 통해 자소서 어필 포인트 찾자! '제로베이스 5기' 모집",
+          "rawText": "7. [구로청년이룸] 인성검사를 통해 자소서 어필 포인트 찾자! '제로베이스 5기' 모집",
           "statusHints": []
         },
         {
           "source": "ContestKorea",
-          "title": "3. [KDT] 국민 백신 알약개발사 이스트캠프 가디언즈 정보보안 과정 15기",
+          "title": "6. [KDT] 국민 백신 알약개발사 이스트캠프 가디언즈 정보보안 과정 15기",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=040410001&int_gbn=2&str_no=202610040001",
-          "rawText": "3. [KDT] 국민 백신 알약개발사 이스트캠프 가디언즈 정보보안 과정 15기",
+          "rawText": "6. [KDT] 국민 백신 알약개발사 이스트캠프 가디언즈 정보보안 과정 15기",
           "statusHints": []
         },
         {
           "source": "ContestKorea",
-          "title": "1. 자바 풀스택 & 생성형AI 서비스개발 기업 프로젝트 완성 과정 7기 훈련생 모집",
+          "title": "4. [서강대 판교캠퍼스] \"SoC반도체 설계자 교육과정\" 모집",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=040410001&int_gbn=2&str_no=202610060057",
+          "rawText": "4. [서강대 판교캠퍼스] \"SoC반도체 설계자 교육과정\" 모집",
+          "statusHints": []
+        },
+        {
+          "source": "ContestKorea",
+          "title": "3. 자바 풀스택 & 생성형AI 서비스개발 기업 프로젝트 완성 과정 7기 훈련생 모집",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=040410001&int_gbn=2&str_no=202610060075",
-          "rawText": "1. 자바 풀스택 & 생성형AI 서비스개발 기업 프로젝트 완성 과정 7기 훈련생 모집",
+          "rawText": "3. 자바 풀스택 & 생성형AI 서비스개발 기업 프로젝트 완성 과정 7기 훈련생 모집",
+          "statusHints": []
+        },
+        {
+          "source": "ContestKorea",
+          "title": "2. GLOBAL CAREER TALK",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=040410001&int_gbn=2&str_no=202610060082",
+          "rawText": "2. GLOBAL CAREER TALK",
+          "statusHints": []
+        },
+        {
+          "source": "ContestKorea",
+          "title": "1. 글로벌 크루즈 채용설명회",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=040410001&int_gbn=2&str_no=202610060083",
+          "rawText": "1. 글로벌 크루즈 채용설명회",
           "statusHints": []
         }
       ],
-      "count": 53,
+      "count": 59,
       "actionableItems": [
         {
           "source": "ContestKorea",
@@ -430,42 +475,34 @@
         },
         {
           "source": "ContestKorea",
-          "title": "아이디어•건축•창업 문화·관광·콘텐츠 분야 대국민 연구 아이디어 공모 4",
+          "title": "학문•과학•IT 2026년 10월 KESEL 영어 말하기 대회 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030310001&int_gbn=1&str_no=202610060078",
+          "rawText": "학문•과학•IT 2026년 10월 KESEL 영어 말하기 대회 0 주최 . 한국영어말하기평가연구소(KESEL) 대상 . 초등학생 접수 10.19~10.31 심사 11.01~11.09 발표 11.09 D-24 접수예정 ￦ 유료 접수",
+          "statusHints": [
+            "접수예정",
+            "예정"
+          ]
+        },
+        {
+          "source": "ContestKorea",
+          "title": "아이디어•건축•창업 문화·관광·콘텐츠 분야 대국민 연구 아이디어 공모 6",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202607090072",
-          "rawText": "아이디어•건축•창업 문화·관광·콘텐츠 분야 대국민 연구 아이디어 공모 4 주최 . 한국문화관광연구원 대상 . 대학생 , 대학원생 , 일반인 접수 10.05~10.23 심사 10.26~11.06 발표 11.13 D-16 접수중",
+          "rawText": "아이디어•건축•창업 문화·관광·콘텐츠 분야 대국민 연구 아이디어 공모 6 주최 . 한국문화관광연구원 대상 . 대학생 , 대학원생 , 일반인 접수 10.05~10.23 심사 10.26~11.06 발표 11.13 D-16 접수중",
           "statusHints": [
             "접수중"
           ]
         },
         {
           "source": "ContestKorea",
-          "title": "아이디어•건축•창업 [국립해양생물자원관] 해양바이오뱅크 산업·연구 활용 아이디어 발굴 공모전 0",
-          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202610060003",
-          "rawText": "아이디어•건축•창업 [국립해양생물자원관] 해양바이오뱅크 산업·연구 활용 아이디어 발굴 공모전 0 주최 . 국립해양생물자원관 대상 . 대학생 , 대학원생 , 일반인 , 해당자 ▶ 접수 09.30~10.25 심사 10.26~11.06 발표 11.20 D-18 접수중",
-          "statusHints": [
-            "접수중"
-          ]
-        },
-        {
-          "source": "ContestKorea",
-          "title": "아이디어•건축•창업 2026년 대국민 공공의료 공모전 0",
-          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202610060053",
-          "rawText": "아이디어•건축•창업 2026년 대국민 공공의료 공모전 0 주최 . 보건복지부 대상 . 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 접수 10.06~11.05 심사 11.09~11.30 발표 11.02 D-29 접수중",
-          "statusHints": [
-            "접수중"
-          ]
-        },
-        {
-          "source": "ContestKorea",
-          "title": "아이디어•건축•창업 2026년 기업 맞춤형 다양성 교육 우수사례 공모전 0",
-          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202610060070",
-          "rawText": "아이디어•건축•창업 2026년 기업 맞춤형 다양성 교육 우수사례 공모전 0 주최 . 한국양성평등교육진흥원 대상 . 해당자 ▶ 접수 10.06~10.26 심사 10.27~10.30 발표 11.30 D-19 접수중",
+          "title": "아이디어•건축•창업 사회서비스 현장 ESG 우수사례 공모전 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202609280053",
+          "rawText": "아이디어•건축•창업 사회서비스 현장 ESG 우수사례 공모전 0 주최 . 전북사회서비스원 대상 . 일반인 , 해당자 ▶ 접수 09.28~10.23 심사 10.26~11.27 발표 11.30 D-16 접수중",
           "statusHints": [
             "접수중"
           ]
         }
       ],
-      "actionableCount": 5,
+      "actionableCount": 4,
       "shadow": false
     },
     "daconCompetitions": {
@@ -2462,7 +2499,7 @@
           "source": "DACON",
           "title": "항만 문제해결을 위한 AI 기술 공모전",
           "url": "https://www.dacon.io/competitions/official/236771/overview",
-          "rawText": "항만 문제해결을 위한 AI 기술 공모전 알고리즘 | 코드 제출 평가 | 개체 매칭 | 해운물류 참가신청중 시작까지 D-5279명 상금 950 만원",
+          "rawText": "항만 문제해결을 위한 AI 기술 공모전 알고리즘 | 코드 제출 평가 | 개체 매칭 | 해운물류 참가신청중 시작까지 D-4286명 상금 950 만원",
           "statusHints": [
             "참가신청중"
           ]
@@ -2509,7 +2546,7 @@
           "source": "DACON",
           "title": "항만 문제해결을 위한 AI 기술 공모전",
           "url": "https://www.dacon.io/competitions/official/236771/overview",
-          "rawText": "항만 문제해결을 위한 AI 기술 공모전 알고리즘 | 코드 제출 평가 | 개체 매칭 | 해운물류 참가신청중 시작까지 D-5279명 상금 950 만원",
+          "rawText": "항만 문제해결을 위한 AI 기술 공모전 알고리즘 | 코드 제출 평가 | 개체 매칭 | 해운물류 참가신청중 시작까지 D-4286명 상금 950 만원",
           "statusHints": [
             "참가신청중"
           ]
@@ -2531,21 +2568,21 @@
           "source": "DAKER",
           "title": "2026 3rd MixUp Agent 개발 해커톤",
           "url": "https://daker.ai/public/hackathons/2026-3rd-mixup-agent-development-hackathon",
-          "rawText": "종료 B BITAmin, Prometheus, Tobig's Track 1: 2026 3rd MixUp Agent 개발 해커톤 총 상금 60만원 15팀 참가 2,187 종료됨",
+          "rawText": "종료 B BITAmin, Prometheus, Tobig's Track 1: 2026 3rd MixUp Agent 개발 해커톤 총 상금 60만원 15팀 참가 2,188 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "2026 AI를 활용한 메이커 아이디어톤 캠프",
           "url": "https://daker.ai/public/hackathons/2026-ai-maker-ideathon-local-solutions",
-          "rawText": "종료 E EDUPIA삼척교육발전사업단 / 강원대학교/ 데이콘 프리미엄 2026 AI를 활용한 메이커 아이디어톤 캠프 7팀 참가 2,226 종료됨",
+          "rawText": "종료 E EDUPIA삼척교육발전사업단 / 강원대학교/ 데이콘 프리미엄 2026 AI를 활용한 메이커 아이디어톤 캠프 7팀 참가 2,230 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래",
           "url": "https://daker.ai/public/hackathons/2026-finance-ai-challenge",
-          "rawText": "진행중 심사 15시간 남음 금 금융보안원 프리미엄 2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래 총 상금 3,500만원 1,388팀 참가 153,351 진행중",
+          "rawText": "진행중 심사 13시간 남음 금 금융보안원 프리미엄 2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래 총 상금 3,500만원 1,388팀 참가 153,394 진행중",
           "statusHints": [
             "진행중"
           ]
@@ -2554,7 +2591,7 @@
           "source": "DAKER",
           "title": "2026 K-Health 미개방 의료데이터 활용 경진대회",
           "url": "https://daker.ai/public/hackathons/2026-k-health-unreleased-data-utilization-competit",
-          "rawText": "진행중 심사 D-29 건 건양대학교의료원, 과학기술정보통신부, 정보통신산업진흥원, 대전정보문화산업진흥원, 대구디지털혁신진흥원, 대구·광주테크노파크 프리미엄 2026 K-Health 미개방 의료데이터 활용 경진대회 총 상금 750만원 417팀 참가 39,666 진행중",
+          "rawText": "진행중 심사 D-29 건 건양대학교의료원, 과학기술정보통신부, 정보통신산업진흥원, 대전정보문화산업진흥원, 대구디지털혁신진흥원, 대구·광주테크노파크 프리미엄 2026 K-Health 미개방 의료데이터 활용 경진대회 총 상금 750만원 417팀 참가 39,683 진행중",
           "statusHints": [
             "진행중"
           ]
@@ -2563,28 +2600,28 @@
           "source": "DAKER",
           "title": "2026 스마트 공장 운영 시스템 MVP 개발 해커톤",
           "url": "https://daker.ai/public/hackathons/2026-smart-factory-ai-platform-mvp-hackathon",
-          "rawText": "종료 차 차세대융합기술연구원 메이커스페이스 프리미엄 2026 스마트 공장 운영 시스템 MVP 개발 해커톤 총 상금 125만원 161팀 참가 15,080 종료됨",
+          "rawText": "종료 차 차세대융합기술연구원 메이커스페이스 프리미엄 2026 스마트 공장 운영 시스템 MVP 개발 해커톤 총 상금 125만원 161팀 참가 15,082 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "AI·SW마에스트로 제 17기 프롬프트 경진대회",
           "url": "https://daker.ai/public/hackathons/2026-sw-maestro-prompt-engineering-hackathon",
-          "rawText": "종료 한 한국정보산업협회 프리미엄 AI·SW마에스트로 제 17기 프롬프트 경진대회 74팀 참가 7,427 종료됨",
+          "rawText": "종료 한 한국정보산업협회 프리미엄 AI·SW마에스트로 제 17기 프롬프트 경진대회 74팀 참가 7,429 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 예선",
           "url": "https://daker.ai/public/hackathons/4th-jump-ai-agentic-drug-challenge",
-          "rawText": "종료 보 보건복지부/한국보건산업진흥원/고려대학교의과대학/한국제약바이오협회 프리미엄 제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 예선 총 상금 3,350만원 509팀 참가 79,293 종료됨",
+          "rawText": "종료 보 보건복지부/한국보건산업진흥원/고려대학교의과대학/한국제약바이오협회 프리미엄 제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 예선 총 상금 3,350만원 509팀 참가 79,296 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 본선",
           "url": "https://daker.ai/public/hackathons/4th-jump-ai-agentic-drug-challenge-finals-1",
-          "rawText": "진행중 심사 D-24 보 보건복지부/한국보건산업진흥원/고려대학교의과대학/한국제약바이오협회 프리미엄 제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 본선 총 상금 3,350만원 15팀 참가 7,093 진행중",
+          "rawText": "진행중 심사 D-24 보 보건복지부/한국보건산업진흥원/고려대학교의과대학/한국제약바이오협회 프리미엄 제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 본선 총 상금 3,350만원 15팀 참가 7,112 진행중",
           "statusHints": [
             "진행중"
           ]
@@ -2593,14 +2630,14 @@
           "source": "DAKER",
           "title": "연세대학교 인공지능학회 YAI",
           "url": "https://daker.ai/public/hackathons/agent-24-hackathon",
-          "rawText": "종료 연 연세대학교 인공지능학회 YAI AGENT:24 총 상금 340만원 37팀 참가 4,860 종료됨",
+          "rawText": "종료 연 연세대학교 인공지능학회 YAI AGENT:24 총 상금 340만원 37팀 참가 4,862 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge",
           "url": "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims",
-          "rawText": "모집중 D-18 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 61팀 참가 3,281 참가 신청하기",
+          "rawText": "모집중 D-18 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 61팀 참가 3,351 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2609,14 +2646,14 @@
           "source": "DAKER",
           "title": "AI·SW마에스트로 제 17기 부산센터 프롬프트 경진대회",
           "url": "https://daker.ai/public/hackathons/ai-sw-maestro-busan-center-17th-prompt-competition-1",
-          "rawText": "종료 한 한국정보산업협회 프리미엄 AI·SW마에스트로 제 17기 부산센터 프롬프트 경진대회 49팀 참가 6,351 종료됨",
+          "rawText": "종료 한 한국정보산업협회 프리미엄 AI·SW마에스트로 제 17기 부산센터 프롬프트 경진대회 49팀 참가 6,353 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "월간 해커톤: 마약류 문제 예방과 피해 감소를 위한 아이디어 챌린지",
           "url": "https://daker.ai/public/hackathons/csafcas",
-          "rawText": "종료 데 데이콘 프리미엄 월간 해커톤: 마약류 문제 예방과 피해 감소를 위한 아이디어 챌린지 총 상금 100만원 277팀 참가 13,347 종료됨",
+          "rawText": "종료 데 데이콘 프리미엄 월간 해커톤: 마약류 문제 예방과 피해 감소를 위한 아이디어 챌린지 총 상금 100만원 277팀 참가 13,372 종료됨",
           "statusHints": []
         },
         {
@@ -2630,21 +2667,21 @@
           "source": "DAKER",
           "title": "월간 해커톤 : 투자 데이터를 시각화하라- Skills 기반 대시보드 설계",
           "url": "https://daker.ai/public/hackathons/hackathon-investment-data-skills-dashboard",
-          "rawText": "종료 D DACON 프리미엄 월간 해커톤 : 투자 데이터를 시각화하라- Skills 기반 대시보드 설계 총 상금 100만원 321팀 참가 29,983 종료됨",
+          "rawText": "종료 D DACON 프리미엄 월간 해커톤 : 투자 데이터를 시각화하라- Skills 기반 대시보드 설계 총 상금 100만원 321팀 참가 29,985 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "JB금융그룹 Fin:AI Challenge",
           "url": "https://daker.ai/public/hackathons/jb-fin-ai-challenge",
-          "rawText": "종료 J JB금융그룹 프리미엄 JB금융그룹 Fin:AI Challenge 총 상금 1억원 519팀 참가 77,427 종료됨",
+          "rawText": "종료 J JB금융그룹 프리미엄 JB금융그룹 Fin:AI Challenge 총 상금 1억원 519팀 참가 77,429 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "국부펀드 KIC, AI 에이전트 공모전",
           "url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
-          "rawText": "모집중 D-36 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 191팀 참가 9,610 참가 신청하기",
+          "rawText": "모집중 D-35 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 196팀 참가 9,949 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2653,35 +2690,35 @@
           "source": "DAKER",
           "title": "한국언론진흥재단",
           "url": "https://daker.ai/public/hackathons/media-stats-analysis-competition",
-          "rawText": "종료 한 한국언론진흥재단 언론 통계 분석·활용 경진대회 총 상금 200만원 312팀 참가 25,243 종료됨",
+          "rawText": "종료 한 한국언론진흥재단 언론 통계 분석·활용 경진대회 총 상금 200만원 312팀 참가 25,245 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "월간 해커톤 : 긴급 인수인계 해커톤 - 문서만 남기고 사라졌다",
           "url": "https://daker.ai/public/hackathons/monthly-hackathon-emergency-handover-docs",
-          "rawText": "종료 D DACON 프리미엄 월간 해커톤 : 긴급 인수인계 해커톤 - 문서만 남기고 사라졌다 총 상금 100만원 370팀 참가 19,526 종료됨",
+          "rawText": "종료 D DACON 프리미엄 월간 해커톤 : 긴급 인수인계 해커톤 - 문서만 남기고 사라졌다 총 상금 100만원 370팀 참가 19,531 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "월간 해커톤 : 10분 안에 중독시켜라 - 웹 미니게임 챌린지",
           "url": "https://daker.ai/public/hackathons/monthly-hackathon-web-minigame-challenge",
-          "rawText": "종료 D DACON 프리미엄 월간 해커톤 : 10분 안에 중독시켜라 - 웹 미니게임 챌린지 총 상금 100만원 280팀 참가 28,556 종료됨",
+          "rawText": "종료 D DACON 프리미엄 월간 해커톤 : 10분 안에 중독시켜라 - 웹 미니게임 챌린지 총 상금 100만원 280팀 참가 28,558 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "Quantum Reframing Challenge 2026",
           "url": "https://daker.ai/public/hackathons/quantum-service-innovation-challenge-megazonecloud",
-          "rawText": "종료 메 메가존 클라우드, KISTI, 한국양자융합센터 프리미엄 Quantum Reframing Challenge 2026 총 상금 2,000만원 72팀 참가 32,097 종료됨",
+          "rawText": "종료 메 메가존 클라우드, KISTI, 한국양자융합센터 프리미엄 Quantum Reframing Challenge 2026 총 상금 2,000만원 72팀 참가 32,107 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "합성 미세구조 기반 재료 물성 예측 AI 경진대회",
           "url": "https://daker.ai/public/hackathons/synthetic-microstructure-property-prediction-ai",
-          "rawText": "모집중 알고리즘 D-12 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 250팀 참가 12,131 참가 신청하기",
+          "rawText": "모집중 알고리즘 D-11 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 252팀 참가 12,308 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2690,14 +2727,14 @@
           "source": "DAKER",
           "title": "DACON",
           "url": "https://daker.ai/public/hackathons/vibe-coding-improvement-ai-idea-competition",
-          "rawText": "종료 D DACON 월간 해커톤: 바이브 코딩 개선 AI 아이디어 공모전 총 상금 100만원 195팀 참가 13,208 종료됨",
+          "rawText": "종료 D DACON 월간 해커톤: 바이브 코딩 개선 AI 아이디어 공모전 총 상금 100만원 195팀 참가 13,210 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "월간 해커톤: 내가 축구 감독이라면 - 월드컵 전술 웹서비스 챌린지",
           "url": "https://daker.ai/public/hackathons/world-cup-manager-tactics-web-challenge",
-          "rawText": "종료 데 데이콘 월간 해커톤: 내가 축구 감독이라면 - 월드컵 전술 웹서비스 챌린지 총 상금 100만원 159팀 참가 18,878 종료됨",
+          "rawText": "종료 데 데이콘 월간 해커톤: 내가 축구 감독이라면 - 월드컵 전술 웹서비스 챌린지 총 상금 100만원 159팀 참가 18,880 종료됨",
           "statusHints": []
         }
       ],
@@ -2707,7 +2744,7 @@
           "source": "DAKER",
           "title": "2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge",
           "url": "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims",
-          "rawText": "모집중 D-18 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 61팀 참가 3,281 참가 신청하기",
+          "rawText": "모집중 D-18 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 61팀 참가 3,351 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2716,7 +2753,7 @@
           "source": "DAKER",
           "title": "국부펀드 KIC, AI 에이전트 공모전",
           "url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
-          "rawText": "모집중 D-36 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 191팀 참가 9,610 참가 신청하기",
+          "rawText": "모집중 D-35 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 196팀 참가 9,949 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2725,7 +2762,7 @@
           "source": "DAKER",
           "title": "합성 미세구조 기반 재료 물성 예측 AI 경진대회",
           "url": "https://daker.ai/public/hackathons/synthetic-microstructure-property-prediction-ai",
-          "rawText": "모집중 알고리즘 D-12 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 250팀 참가 12,131 참가 신청하기",
+          "rawText": "모집중 알고리즘 D-11 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 252팀 참가 12,308 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2743,7 +2780,7 @@
           "source": "Devpost",
           "title": "Build, Ship, Shape: Amazon Developer Hackathon",
           "url": "https://amazonappdev2026.devpost.com/",
-          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 17 days left Online $138,000 in prizes 49169 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
+          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 17 days left Online $138,000 in prizes 49561 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
           "statusHints": [
             "days left"
           ]
@@ -2779,7 +2816,7 @@
           "source": "Devpost",
           "title": "FEATURED",
           "url": "https://gitlab-transcend.devpost.com/",
-          "rawText": "FEATURED Life After Code 21 days left Online $45,000 in prizes 899 participants GitLab Oct 05 - 27, 2026 Managed by Devpost DevOpsMachine Learning/AIProductivity",
+          "rawText": "FEATURED Life After Code 20 days left Online $45,000 in prizes 916 participants GitLab Oct 05 - 27, 2026 Managed by Devpost DevOpsMachine Learning/AIProductivity",
           "statusHints": [
             "days left"
           ]
@@ -2797,7 +2834,7 @@
           "source": "Devpost",
           "title": "Build With AI: Basics",
           "url": "https://learn-ai-basics.devpost.com/",
-          "rawText": "Build With AI: Basics 20 days left Online $2,500 in prizes 2621 participants Devpost Sep 22 - Oct 26, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyEducation",
+          "rawText": "Build With AI: Basics 20 days left Online $2,500 in prizes 2627 participants Devpost Sep 22 - Oct 26, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyEducation",
           "statusHints": [
             "days left"
           ]
@@ -2806,7 +2843,7 @@
           "source": "Devpost",
           "title": "ML Empowerment Build Challenge 3.0 - ($400,000 in prizes!)",
           "url": "https://ml-build-challenge-3.devpost.com/",
-          "rawText": "ML Empowerment Build Challenge 3.0 - ($400,000 in prizes!) 3 days left Online $0 in prizes 701 participants ML Empowerment Foundation Sep 05 - Oct 10, 2026 Beginner FriendlyMachine Learning/AISocial Good",
+          "rawText": "ML Empowerment Build Challenge 3.0 - ($400,000 in prizes!) 3 days left Online 3 non-cash prizes 703 participants ML Empowerment Foundation Sep 05 - Oct 10, 2026 Beginner FriendlyMachine Learning/AISocial Good",
           "statusHints": [
             "days left"
           ]
@@ -2815,7 +2852,7 @@
           "source": "Devpost",
           "title": "MLAI Hackathon 2026",
           "url": "https://mlai-hackathon.devpost.com/",
-          "rawText": "MLAI Hackathon 2026 10 days left Online 4 non-cash prizes 961 participants Mạng Lưới AI Sep 18 - Oct 16, 2026 DatabasesMachine Learning/AI",
+          "rawText": "MLAI Hackathon 2026 10 days left Online 4 non-cash prizes 962 participants Mạng Lưới AI Sep 18 - Oct 16, 2026 DatabasesMachine Learning/AI",
           "statusHints": [
             "days left"
           ]
@@ -2824,7 +2861,7 @@
           "source": "Devpost",
           "title": "Multimodal AI Hackathon 2026",
           "url": "https://multimodal-ai-hackathon-2026-7.devpost.com/",
-          "rawText": "Multimodal AI Hackathon 2026 8 days left Online ₹ 100,000 in prizes 2718 participants Kamand Prompt, IIT Mandi Sep 29 - Oct 14, 2026 Machine Learning/AI",
+          "rawText": "Multimodal AI Hackathon 2026 8 days left Online ₹ 100,000 in prizes 2723 participants Kamand Prompt, IIT Mandi Sep 29 - Oct 14, 2026 Machine Learning/AI",
           "statusHints": [
             "days left"
           ]
@@ -2833,7 +2870,7 @@
           "source": "Devpost",
           "title": "Nebius x NVIDIA Global AI Hackathon",
           "url": "https://nebiusglobalaihackathon.devpost.com/",
-          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 19075 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
+          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 19102 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
           "statusHints": [
             "days left"
           ]
@@ -2842,7 +2879,7 @@
           "source": "Devpost",
           "title": "OpenCV AI Competition 2026, powered by AWS",
           "url": "https://opencv26.devpost.com/",
-          "rawText": "OpenCV AI Competition 2026, powered by AWS 20 days left Online $20,250 in prizes 4173 participants OpenCV Aug 26 - Oct 27, 2026 IoTMachine Learning/AIServerless",
+          "rawText": "OpenCV AI Competition 2026, powered by AWS 20 days left Online $20,250 in prizes 4177 participants OpenCV Aug 26 - Oct 27, 2026 IoTMachine Learning/AIServerless",
           "statusHints": [
             "days left"
           ]
@@ -2851,14 +2888,14 @@
           "source": "Devpost",
           "title": "FEATURED",
           "url": "https://paypalaihackathon.devpost.com/",
-          "rawText": "FEATURED PayPal AI Hackathon about 1 month left Online $67,500 in prizes 8072 participants PayPal Oct 01 - Nov 12, 2026 Managed by Devpost Low/No CodeMachine Learning/AIWeb",
+          "rawText": "FEATURED PayPal AI Hackathon about 1 month left Online $67,500 in prizes 8135 participants PayPal Oct 01 - Nov 12, 2026 Managed by Devpost Low/No CodeMachine Learning/AIWeb",
           "statusHints": []
         },
         {
           "source": "Devpost",
           "title": "FEATURED",
           "url": "https://qloo.devpost.com/",
-          "rawText": "FEATURED Qloo Agentic Hackathon 24 days left Online $25,000 in prizes 642 participants Qloo Sep 30 - Oct 30, 2026 Machine Learning/AI",
+          "rawText": "FEATURED Qloo Agentic Hackathon 24 days left Online $25,000 in prizes 653 participants Qloo Sep 30 - Oct 30, 2026 Machine Learning/AI",
           "statusHints": [
             "days left"
           ]
@@ -2867,7 +2904,7 @@
           "source": "Devpost",
           "title": "Meta VR Start Developer Competition 2026",
           "url": "https://start-developer-competition-26.devpost.com/",
-          "rawText": "Meta VR Start Developer Competition 2026 about 1 month left Online $1,000,000 in prizes 2407 participants Meta Sep 24 - Nov 18, 2026 Managed by Devpost AR/VRMachine Learning/AIWeb",
+          "rawText": "Meta VR Start Developer Competition 2026 about 1 month left Online $1,000,000 in prizes 2417 participants Meta Sep 24 - Nov 18, 2026 Managed by Devpost AR/VRMachine Learning/AIWeb",
           "statusHints": []
         },
         {
@@ -2883,7 +2920,7 @@
           "source": "Devpost",
           "title": "WarriorHacks 2.0",
           "url": "https://warriorhacks-2-0.devpost.com/",
-          "rawText": "WarriorHacks 2.0 7 days left Online 8 non-cash prizes 1865 participants Westwood Computer Science Club Sep 28 - Oct 14, 2026 Beginner FriendlyMachine Learning/AIOpen Ended",
+          "rawText": "WarriorHacks 2.0 7 days left Online 8 non-cash prizes 1869 participants Westwood Computer Science Club Sep 28 - Oct 14, 2026 Beginner FriendlyMachine Learning/AIOpen Ended",
           "statusHints": [
             "days left"
           ]
@@ -2892,7 +2929,7 @@
           "source": "Devpost",
           "title": "FEATURED",
           "url": "https://youcam-api-skin-ai-ecommerce.devpost.com/",
-          "rawText": "FEATURED YouCam API Skin AI & eCommerce VTO Hackathon 27 days left Online $6,000 in prizes 694 participants Perfect Corp Sep 29 - Nov 02, 2026 AR/VRE-commerce/RetailMachine Learning/AI",
+          "rawText": "FEATURED YouCam API Skin AI & eCommerce VTO Hackathon 27 days left Online $6,000 in prizes 695 participants Perfect Corp Sep 29 - Nov 02, 2026 AR/VRE-commerce/RetailMachine Learning/AI",
           "statusHints": [
             "days left"
           ]
@@ -2904,7 +2941,7 @@
           "source": "Devpost",
           "title": "Build, Ship, Shape: Amazon Developer Hackathon",
           "url": "https://amazonappdev2026.devpost.com/",
-          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 17 days left Online $138,000 in prizes 49169 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
+          "rawText": "Build, Ship, Shape: Amazon Developer Hackathon 17 days left Online $138,000 in prizes 49561 participants Amazon Aug 31 - Oct 23, 2026 Managed by Devpost Machine Learning/AIOpen EndedProductivity",
           "statusHints": [
             "days left"
           ]
@@ -2940,7 +2977,7 @@
           "source": "Devpost",
           "title": "FEATURED",
           "url": "https://gitlab-transcend.devpost.com/",
-          "rawText": "FEATURED Life After Code 21 days left Online $45,000 in prizes 899 participants GitLab Oct 05 - 27, 2026 Managed by Devpost DevOpsMachine Learning/AIProductivity",
+          "rawText": "FEATURED Life After Code 20 days left Online $45,000 in prizes 916 participants GitLab Oct 05 - 27, 2026 Managed by Devpost DevOpsMachine Learning/AIProductivity",
           "statusHints": [
             "days left"
           ]
@@ -2958,7 +2995,7 @@
           "source": "Devpost",
           "title": "Build With AI: Basics",
           "url": "https://learn-ai-basics.devpost.com/",
-          "rawText": "Build With AI: Basics 20 days left Online $2,500 in prizes 2621 participants Devpost Sep 22 - Oct 26, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyEducation",
+          "rawText": "Build With AI: Basics 20 days left Online $2,500 in prizes 2627 participants Devpost Sep 22 - Oct 26, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyEducation",
           "statusHints": [
             "days left"
           ]
@@ -2967,7 +3004,7 @@
           "source": "Devpost",
           "title": "ML Empowerment Build Challenge 3.0 - ($400,000 in prizes!)",
           "url": "https://ml-build-challenge-3.devpost.com/",
-          "rawText": "ML Empowerment Build Challenge 3.0 - ($400,000 in prizes!) 3 days left Online $0 in prizes 701 participants ML Empowerment Foundation Sep 05 - Oct 10, 2026 Beginner FriendlyMachine Learning/AISocial Good",
+          "rawText": "ML Empowerment Build Challenge 3.0 - ($400,000 in prizes!) 3 days left Online 3 non-cash prizes 703 participants ML Empowerment Foundation Sep 05 - Oct 10, 2026 Beginner FriendlyMachine Learning/AISocial Good",
           "statusHints": [
             "days left"
           ]
@@ -2976,7 +3013,7 @@
           "source": "Devpost",
           "title": "MLAI Hackathon 2026",
           "url": "https://mlai-hackathon.devpost.com/",
-          "rawText": "MLAI Hackathon 2026 10 days left Online 4 non-cash prizes 961 participants Mạng Lưới AI Sep 18 - Oct 16, 2026 DatabasesMachine Learning/AI",
+          "rawText": "MLAI Hackathon 2026 10 days left Online 4 non-cash prizes 962 participants Mạng Lưới AI Sep 18 - Oct 16, 2026 DatabasesMachine Learning/AI",
           "statusHints": [
             "days left"
           ]
@@ -2985,7 +3022,7 @@
           "source": "Devpost",
           "title": "Multimodal AI Hackathon 2026",
           "url": "https://multimodal-ai-hackathon-2026-7.devpost.com/",
-          "rawText": "Multimodal AI Hackathon 2026 8 days left Online ₹ 100,000 in prizes 2718 participants Kamand Prompt, IIT Mandi Sep 29 - Oct 14, 2026 Machine Learning/AI",
+          "rawText": "Multimodal AI Hackathon 2026 8 days left Online ₹ 100,000 in prizes 2723 participants Kamand Prompt, IIT Mandi Sep 29 - Oct 14, 2026 Machine Learning/AI",
           "statusHints": [
             "days left"
           ]
@@ -2994,7 +3031,7 @@
           "source": "Devpost",
           "title": "Nebius x NVIDIA Global AI Hackathon",
           "url": "https://nebiusglobalaihackathon.devpost.com/",
-          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 19075 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
+          "rawText": "Nebius x NVIDIA Global AI Hackathon 24 days left Online $50,000 in prizes 19102 participants nebius Aug 26 - Oct 30, 2026 Managed by Devpost Machine Learning/AIBeginner FriendlyRobotic Process Automation",
           "statusHints": [
             "days left"
           ]
@@ -3003,7 +3040,7 @@
           "source": "Devpost",
           "title": "OpenCV AI Competition 2026, powered by AWS",
           "url": "https://opencv26.devpost.com/",
-          "rawText": "OpenCV AI Competition 2026, powered by AWS 20 days left Online $20,250 in prizes 4173 participants OpenCV Aug 26 - Oct 27, 2026 IoTMachine Learning/AIServerless",
+          "rawText": "OpenCV AI Competition 2026, powered by AWS 20 days left Online $20,250 in prizes 4177 participants OpenCV Aug 26 - Oct 27, 2026 IoTMachine Learning/AIServerless",
           "statusHints": [
             "days left"
           ]
@@ -3012,14 +3049,14 @@
           "source": "Devpost",
           "title": "FEATURED",
           "url": "https://paypalaihackathon.devpost.com/",
-          "rawText": "FEATURED PayPal AI Hackathon about 1 month left Online $67,500 in prizes 8072 participants PayPal Oct 01 - Nov 12, 2026 Managed by Devpost Low/No CodeMachine Learning/AIWeb",
+          "rawText": "FEATURED PayPal AI Hackathon about 1 month left Online $67,500 in prizes 8135 participants PayPal Oct 01 - Nov 12, 2026 Managed by Devpost Low/No CodeMachine Learning/AIWeb",
           "statusHints": []
         },
         {
           "source": "Devpost",
           "title": "FEATURED",
           "url": "https://qloo.devpost.com/",
-          "rawText": "FEATURED Qloo Agentic Hackathon 24 days left Online $25,000 in prizes 642 participants Qloo Sep 30 - Oct 30, 2026 Machine Learning/AI",
+          "rawText": "FEATURED Qloo Agentic Hackathon 24 days left Online $25,000 in prizes 653 participants Qloo Sep 30 - Oct 30, 2026 Machine Learning/AI",
           "statusHints": [
             "days left"
           ]
@@ -3028,7 +3065,7 @@
           "source": "Devpost",
           "title": "Meta VR Start Developer Competition 2026",
           "url": "https://start-developer-competition-26.devpost.com/",
-          "rawText": "Meta VR Start Developer Competition 2026 about 1 month left Online $1,000,000 in prizes 2407 participants Meta Sep 24 - Nov 18, 2026 Managed by Devpost AR/VRMachine Learning/AIWeb",
+          "rawText": "Meta VR Start Developer Competition 2026 about 1 month left Online $1,000,000 in prizes 2417 participants Meta Sep 24 - Nov 18, 2026 Managed by Devpost AR/VRMachine Learning/AIWeb",
           "statusHints": []
         },
         {
@@ -3044,7 +3081,7 @@
           "source": "Devpost",
           "title": "WarriorHacks 2.0",
           "url": "https://warriorhacks-2-0.devpost.com/",
-          "rawText": "WarriorHacks 2.0 7 days left Online 8 non-cash prizes 1865 participants Westwood Computer Science Club Sep 28 - Oct 14, 2026 Beginner FriendlyMachine Learning/AIOpen Ended",
+          "rawText": "WarriorHacks 2.0 7 days left Online 8 non-cash prizes 1869 participants Westwood Computer Science Club Sep 28 - Oct 14, 2026 Beginner FriendlyMachine Learning/AIOpen Ended",
           "statusHints": [
             "days left"
           ]
@@ -3053,7 +3090,7 @@
           "source": "Devpost",
           "title": "FEATURED",
           "url": "https://youcam-api-skin-ai-ecommerce.devpost.com/",
-          "rawText": "FEATURED YouCam API Skin AI & eCommerce VTO Hackathon 27 days left Online $6,000 in prizes 694 participants Perfect Corp Sep 29 - Nov 02, 2026 AR/VRE-commerce/RetailMachine Learning/AI",
+          "rawText": "FEATURED YouCam API Skin AI & eCommerce VTO Hackathon 27 days left Online $6,000 in prizes 695 participants Perfect Corp Sep 29 - Nov 02, 2026 AR/VRE-commerce/RetailMachine Learning/AI",
           "statusHints": [
             "days left"
           ]
@@ -3076,16 +3113,9 @@
         },
         {
           "source": "Grantly",
-          "title": "Devmento",
-          "url": "https://grantly.kr/opportunities/13828",
-          "rawText": "Devmento · 10월 7일 마감 온톨로지, 어디서부터 시작해야 하나 : 에이전틱 AI를 위한 기업 온톨로지 구축 실전 로드맵",
-          "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "2026 스타트트랙: 오픈토크 - 지능이 몸을 갖는 순간: 피지컬AI와 휴머노이드가 여는 물리적 지능의 시대",
+          "title": "(주)오픈놀",
           "url": "https://grantly.kr/opportunities/14322",
-          "rawText": "2026 스타트트랙: 오픈토크 - 지능이 몸을 갖는 순간: 피지컬AI와 휴머노이드가 여는 물리적 지능의 시대",
+          "rawText": "(주)오픈놀 · 10월 7일 마감 2026 스타트트랙: 오픈토크 - 지능이 몸을 갖는 순간: 피지컬AI와 휴머노이드가 여는 물리적 지능의 시대",
           "statusHints": []
         },
         {
@@ -3100,6 +3130,13 @@
           "title": "(주)오픈놀",
           "url": "https://grantly.kr/opportunities/14782",
           "rawText": "(주)오픈놀 · 10월 7일 마감 2026 스타트트랙: 스타트업 포럼_AI 시대, 다시 쓰이는 실리콘밸리의 성공 방정식",
+          "statusHints": []
+        },
+        {
+          "source": "Grantly",
+          "title": "[충북] 충주시 2026년 여성친화기업 인증 및 지원 재공고",
+          "url": "https://grantly.kr/opportunities/15643",
+          "rawText": "[충북] 충주시 2026년 여성친화기업 인증 및 지원 재공고",
           "statusHints": []
         },
         {
@@ -3240,16 +3277,9 @@
       "actionableItems": [
         {
           "source": "Grantly",
-          "title": "Devmento",
-          "url": "https://grantly.kr/opportunities/13828",
-          "rawText": "Devmento · 10월 7일 마감 온톨로지, 어디서부터 시작해야 하나 : 에이전틱 AI를 위한 기업 온톨로지 구축 실전 로드맵",
-          "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "2026 스타트트랙: 오픈토크 - 지능이 몸을 갖는 순간: 피지컬AI와 휴머노이드가 여는 물리적 지능의 시대",
+          "title": "(주)오픈놀",
           "url": "https://grantly.kr/opportunities/14322",
-          "rawText": "2026 스타트트랙: 오픈토크 - 지능이 몸을 갖는 순간: 피지컬AI와 휴머노이드가 여는 물리적 지능의 시대",
+          "rawText": "(주)오픈놀 · 10월 7일 마감 2026 스타트트랙: 오픈토크 - 지능이 몸을 갖는 순간: 피지컬AI와 휴머노이드가 여는 물리적 지능의 시대",
           "statusHints": []
         },
         {
@@ -3309,7 +3339,7 @@
           "statusHints": []
         }
       ],
-      "actionableCount": 10,
+      "actionableCount": 9,
       "shadow": false
     },
     "hackathonKorea": {
@@ -3450,15 +3480,6 @@
       "items": [
         {
           "source": "K-Startup",
-          "title": "2026년 투자 유치 역량 강화 특강 오늘마감",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179183&schM=view",
-          "rawText": "2026년 투자 유치 역량 강화 특강 오늘마감",
-          "statusHints": [
-            "오늘마감"
-          ]
-        },
-        {
-          "source": "K-Startup",
           "title": "2026년 블록체인 기업성장허브 입주기업 모집 오늘마감",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179303&schM=view",
           "rawText": "2026년 블록체인 기업성장허브 입주기업 모집 오늘마감",
@@ -3471,6 +3492,15 @@
           "title": "[창업BuS x Station C] 2026년 강원BRIDGE 배치프로그램 2차 창업기업 모집 오늘마감",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179305&schM=view",
           "rawText": "[창업BuS x Station C] 2026년 강원BRIDGE 배치프로그램 2차 창업기업 모집 오늘마감",
+          "statusHints": [
+            "오늘마감"
+          ]
+        },
+        {
+          "source": "K-Startup",
+          "title": "2026년 제 5회 김해 스타트업 IR「G-row UP! IR Stage」 오픈리그 오늘마감",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179333&schM=view",
+          "rawText": "2026년 제 5회 김해 스타트업 IR「G-row UP! IR Stage」 오픈리그 오늘마감",
           "statusHints": [
             "오늘마감"
           ]
@@ -3569,345 +3599,373 @@
     },
     "sotong24Contests": {
       "key": "sotong24Contests",
-      "status": "OK",
-      "url": "https://sotong.go.kr/front/epilogue/epilogueBbsList.do",
-      "items": [
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 09:00 ~ 2026-10-31 18:00] 【해양경찰청】 소형레저기구 표류사고 예방 퀴즈 이벤트 해양경찰청 서해지방해양경찰청 여수해양경찰서 기획운영과 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=0020670e346c42a6b0dc993b34bfe876&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 09:00 ~ 2026-10-31 18:00] 【해양경찰청】 소형레저기구 표류사고 예방 퀴즈 이벤트 해양경찰청 서해지방해양경찰청 여수해양경찰서 기획운영과 의견 작성 수0 공유 수0",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 00:00 ~ 2026-11-10 17:00] 【서울특별시】 제12회 서울 29초 영화제 서울특별시 홍보기획관 홍보담당관 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=1bd7e2dabb80469fa1597d4cae85f6bd&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 00:00 ~ 2026-11-10 17:00] 【서울특별시】 제12회 서울 29초 영화제 서울특별시 홍보기획관 홍보담당관 의견 작성 수0 공유 수0",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【감사원】 국민제안 감사 아이디어 공모 감사원 대변인 홍보담당관 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=2d5934930c3e4b9a8a9fe40cdb81bdf9&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【감사원】 국민제안 감사 아이디어 공모 감사원 대변인 홍보담당관 의견 작성 수0 공유 수0",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【행정안전부】 제7차 열린정부 실행계획 국민제안공모 행정안전부 참여혁신조직실 참여혁신국 혁신기획과 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=5657d4f1636f406182359c88f0847e49&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【행정안전부】 제7차 열린정부 실행계획 국민제안공모 행정안전부 참여혁신조직실 참여혁신국 혁신기획과 의견 작성 수0 공유 수0",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【행정안전부】 2026 모바일신분증 아이디어 공모전 행정안전부 인공지능정부실 인공지능정부서비스국 국민맞춤서비스과 의견 작성 수0 공유 수1",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=567b5562322d43f0b806794dfc27bdd9&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【행정안전부】 2026 모바일신분증 아이디어 공모전 행정안전부 인공지능정부실 인공지능정부서비스국 국민맞춤서비스과 의견 작성 수0 공유 수1",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-09-30 10:00 ~ 2026-10-27 17:00] 【서울특별시】 2026 서울영상공모전 <서울 밤로그> 서울특별시 홍보기획관 콘텐츠담당관 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=7e4fe7c5d65f483f819e35ad1abcd608&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-09-30 10:00 ~ 2026-10-27 17:00] 【서울특별시】 2026 서울영상공모전 <서울 밤로그> 서울특별시 홍보기획관 콘텐츠담당관 의견 작성 수0 공유 수0",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【동두천시】 2026 영상공모전 ‘PLAY 동두천!’ 경기도 동두천시 홍보미래담당관 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=81a73915bb7a4fd4b2412af97bb2c0fb&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【동두천시】 2026 영상공모전 ‘PLAY 동두천!’ 경기도 동두천시 홍보미래담당관 의견 작성 수0 공유 수0",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-09-29 15:00 ~ 2026-10-14 19:00] 【국가철도공단】 철도산업 규제ㆍ애로 개선제안 공모 국가철도공단 기획본부 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=c24f5002e9424991bdfe52e3bd4e10ae&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-09-29 15:00 ~ 2026-10-14 19:00] 【국가철도공단】 철도산업 규제ㆍ애로 개선제안 공모 국가철도공단 기획본부 의견 작성 수0 공유 수0",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 09:00 ~ 2026-10-14 23:59] 【서울특별시】 제3회 서울특별시 강서구 캐릭터 새로미 굿즈 공모전(연장) 서울특별시 강서구 기획재정국 홍보소통과 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=d544637c156442d8b12e646941fd6f7d&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 09:00 ~ 2026-10-14 23:59] 【서울특별시】 제3회 서울특별시 강서구 캐릭터 새로미 굿즈 공모전(연장) 서울특별시 강서구 기획재정국 홍보소통과 의견 작성 수0 공유 수0",
-          "statusHints": []
-        }
-      ],
-      "count": 9,
-      "actionableItems": [
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【감사원】 국민제안 감사 아이디어 공모 감사원 대변인 홍보담당관 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=2d5934930c3e4b9a8a9fe40cdb81bdf9&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【감사원】 국민제안 감사 아이디어 공모 감사원 대변인 홍보담당관 의견 작성 수0 공유 수0",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【행정안전부】 제7차 열린정부 실행계획 국민제안공모 행정안전부 참여혁신조직실 참여혁신국 혁신기획과 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=5657d4f1636f406182359c88f0847e49&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【행정안전부】 제7차 열린정부 실행계획 국민제안공모 행정안전부 참여혁신조직실 참여혁신국 혁신기획과 의견 작성 수0 공유 수0",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【행정안전부】 2026 모바일신분증 아이디어 공모전 행정안전부 인공지능정부실 인공지능정부서비스국 국민맞춤서비스과 의견 작성 수0 공유 수1",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=567b5562322d43f0b806794dfc27bdd9&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【행정안전부】 2026 모바일신분증 아이디어 공모전 행정안전부 인공지능정부실 인공지능정부서비스국 국민맞춤서비스과 의견 작성 수0 공유 수1",
-          "statusHints": []
-        },
-        {
-          "source": "소통24",
-          "title": "[2026-09-29 15:00 ~ 2026-10-14 19:00] 【국가철도공단】 철도산업 규제ㆍ애로 개선제안 공모 국가철도공단 기획본부 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=c24f5002e9424991bdfe52e3bd4e10ae&menu_id=527&pagetype=bbs",
-          "rawText": "[2026-09-29 15:00 ~ 2026-10-14 19:00] 【국가철도공단】 철도산업 규제ㆍ애로 개선제안 공모 국가철도공단 기획본부 의견 작성 수0 공유 수0",
-          "statusHints": []
-        }
-      ],
-      "actionableCount": 4,
+      "status": "FAILED",
+      "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://sotong.go.kr/front/epilogue/epilogueBbsList.do\", waiting until \"domcontentloaded\"\n\n    at crawlSotong24 (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:285:14)\n    at /home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:489:31\n    at safeCrawl (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:218:18)\n    at runEntry (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:488:30)\n    at async main (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:500:27)",
+      "items": [],
+      "count": 0,
+      "actionableItems": [],
+      "actionableCount": 0,
       "shadow": false
     }
   },
   "shadowSources": {
     "bizinfo": {
       "key": "bizinfo",
-      "status": "OK",
-      "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200View.do?pblancArea=400",
-      "items": [
-        {
-          "source": "기업마당",
-          "title": "1429 수출 [울산ㆍ경남] 2026년 인도네시아 자카르타 K-뷰티ㆍ푸드 소비재 수출상담회 지역 수출컨소시엄 참여기업 모집 연장 재공고 2026-08-21 ~ 2026-10-14 경상남도 진주바이오산업진흥원 2026-10-06 858",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127009&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1429 수출 [울산ㆍ경남] 2026년 인도네시아 자카르타 K-뷰티ㆍ푸드 소비재 수출상담회 지역 수출컨소시엄 참여기업 모집 연장 재공고 2026-08-21 ~ 2026-10-14 경상남도 진주바이오산업진흥원 2026-10-06 858",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1430 기술 2026년 2차 우수연구개발 혁신제품 지정 기간연장(1차 연장) 공고 2026-10-02 ~ 2026-10-19 과학기술정보통신부 한국산업기술진흥협회 2026-10-06 974",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127010&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1430 기술 2026년 2차 우수연구개발 혁신제품 지정 기간연장(1차 연장) 공고 2026-10-02 ~ 2026-10-19 과학기술정보통신부 한국산업기술진흥협회 2026-10-06 974",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1431 기술 2026년 2차 우수연구개발 혁신제품 지정 기간연장(2차 연장) 공고 2026-10-02 ~ 2026-10-19 과학기술정보통신부 한국산업기술진흥협회 2026-10-06 1009",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127011&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1431 기술 2026년 2차 우수연구개발 혁신제품 지정 기간연장(2차 연장) 공고 2026-10-02 ~ 2026-10-19 과학기술정보통신부 한국산업기술진흥협회 2026-10-06 1009",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1432 금융 [강원] 2026년 하반기 농어촌진흥기금 지원계획 공고 2026-10-02 ~ 2026-10-30 강원특별자치도 직접수행 2026-10-06 914",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127012&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1432 금융 [강원] 2026년 하반기 농어촌진흥기금 지원계획 공고 2026-10-02 ~ 2026-10-30 강원특별자치도 직접수행 2026-10-06 914",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1433 인력 [서울ㆍ인천ㆍ경기] 2026년 미래내일 일경험(인턴형) 마케팅전략디자인 직무 참여기업 모집 공고 2026-10-02 ~ 2026-10-19 고용노동부 인사이드아웃 사회적협동조합 2026-10-06 1232",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127013&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1433 인력 [서울ㆍ인천ㆍ경기] 2026년 미래내일 일경험(인턴형) 마케팅전략디자인 직무 참여기업 모집 공고 2026-10-02 ~ 2026-10-19 고용노동부 인사이드아웃 사회적협동조합 2026-10-06 1232",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1434 경영 [경북] 2026년 지역특화형(방산ㆍ모빌리티) 스마트공장 보급확산 사업(기초단계) 참여기업 모집 공고 2026-10-12 ~ 2026-10-27 경상북도 경북테크노파크 2026-10-06 944",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127014&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1434 경영 [경북] 2026년 지역특화형(방산ㆍ모빌리티) 스마트공장 보급확산 사업(기초단계) 참여기업 모집 공고 2026-10-12 ~ 2026-10-27 경상북도 경북테크노파크 2026-10-06 944",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1435 기술 수성알파시티 기업 전용 5G 기반 통신망 서비스 지원 대상 기업 2차 모집 공고 2026-10-06 ~ 2026-10-27 국토교통부 대구테크노파크 2026-10-06 975",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127015&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1435 기술 수성알파시티 기업 전용 5G 기반 통신망 서비스 지원 대상 기업 2차 모집 공고 2026-10-06 ~ 2026-10-27 국토교통부 대구테크노파크 2026-10-06 975",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1436 창업 2026년 한국도로공사 상생형 창업ㆍ벤처기업 지원사업 모집 공고 2026-10-06 ~ 2026-10-28 국토교통부 한국도로공사 2026-10-06 1385",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127016&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1436 창업 2026년 한국도로공사 상생형 창업ㆍ벤처기업 지원사업 모집 공고 2026-10-06 ~ 2026-10-28 국토교통부 한국도로공사 2026-10-06 1385",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1437 기술 [전북] 김제시 2026년 4차 미래 Special 차Car세대 성장프로젝트 지원기업 모집 공고(시군구연고산업육성 협업프로젝트) 2026-10-02 ~ 2026-10-12 중소벤처기업부 전북테크노파크 2026-10-06 885",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127017&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1437 기술 [전북] 김제시 2026년 4차 미래 Special 차Car세대 성장프로젝트 지원기업 모집 공고(시군구연고산업육성 협업프로젝트) 2026-10-02 ~ 2026-10-12 중소벤처기업부 전북테크노파크 2026-10-06 885",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1438 수출 [경기] 용인시 2026년 3차 해외진출 종합지원사업(해외물류비) 공고 2026-10-13 ~ 2026-10-20 경기도 용인시산업진흥원 2026-10-06 978",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127018&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1438 수출 [경기] 용인시 2026년 3차 해외진출 종합지원사업(해외물류비) 공고 2026-10-13 ~ 2026-10-20 경기도 용인시산업진흥원 2026-10-06 978",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1439 경영 제주 K-뷰티 글로벌 라운지 입점 업체 모집 공고 2026-10-06 ~ 2026-10-19 중소벤처기업부 제주테크노파크 2026-10-06 1027",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127019&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1439 경영 제주 K-뷰티 글로벌 라운지 입점 업체 모집 공고 2026-10-06 ~ 2026-10-19 중소벤처기업부 제주테크노파크 2026-10-06 1027",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1440 기술 [충남] 2026년 4차 예비수소전문기업지원사업 수소산업분야 기술사업화(비R&D) 수혜기업 모집 공고 2026-10-06 ~ 2026-10-08 충청남도 충남테크노파크 2026-10-06 966",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127020&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1440 기술 [충남] 2026년 4차 예비수소전문기업지원사업 수소산업분야 기술사업화(비R&D) 수혜기업 모집 공고 2026-10-06 ~ 2026-10-08 충청남도 충남테크노파크 2026-10-06 966",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1441 창업 [경북] 정보보호 스타트업 육성사업 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 경상북도 포항테크노파크 2026-10-06 1020",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127021&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1441 창업 [경북] 정보보호 스타트업 육성사업 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 경상북도 포항테크노파크 2026-10-06 1020",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1442 경영 [경북] 정보보호 맞춤형 패키지 지원사업 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 경상북도 포항테크노파크 2026-10-06 1045",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127022&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1442 경영 [경북] 정보보호 맞춤형 패키지 지원사업 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 경상북도 포항테크노파크 2026-10-06 1045",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1443 내수 [경기] 2026년 10월 동행축제 소상공인 라이브커머스 참가기업 모집 공고 2026-10-02 ~ 2026-10-16 중소벤처기업부 경기지방중소벤처기업청 2026-10-06 1146",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127023&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1443 내수 [경기] 2026년 10월 동행축제 소상공인 라이브커머스 참가기업 모집 공고 2026-10-02 ~ 2026-10-16 중소벤처기업부 경기지방중소벤처기업청 2026-10-06 1146",
-          "statusHints": []
-        }
-      ],
-      "count": 15,
-      "actionableItems": [
-        {
-          "source": "기업마당",
-          "title": "1429 수출 [울산ㆍ경남] 2026년 인도네시아 자카르타 K-뷰티ㆍ푸드 소비재 수출상담회 지역 수출컨소시엄 참여기업 모집 연장 재공고 2026-08-21 ~ 2026-10-14 경상남도 진주바이오산업진흥원 2026-10-06 858",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127009&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1429 수출 [울산ㆍ경남] 2026년 인도네시아 자카르타 K-뷰티ㆍ푸드 소비재 수출상담회 지역 수출컨소시엄 참여기업 모집 연장 재공고 2026-08-21 ~ 2026-10-14 경상남도 진주바이오산업진흥원 2026-10-06 858",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1430 기술 2026년 2차 우수연구개발 혁신제품 지정 기간연장(1차 연장) 공고 2026-10-02 ~ 2026-10-19 과학기술정보통신부 한국산업기술진흥협회 2026-10-06 974",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127010&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1430 기술 2026년 2차 우수연구개발 혁신제품 지정 기간연장(1차 연장) 공고 2026-10-02 ~ 2026-10-19 과학기술정보통신부 한국산업기술진흥협회 2026-10-06 974",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1431 기술 2026년 2차 우수연구개발 혁신제품 지정 기간연장(2차 연장) 공고 2026-10-02 ~ 2026-10-19 과학기술정보통신부 한국산업기술진흥협회 2026-10-06 1009",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127011&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1431 기술 2026년 2차 우수연구개발 혁신제품 지정 기간연장(2차 연장) 공고 2026-10-02 ~ 2026-10-19 과학기술정보통신부 한국산업기술진흥협회 2026-10-06 1009",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1432 금융 [강원] 2026년 하반기 농어촌진흥기금 지원계획 공고 2026-10-02 ~ 2026-10-30 강원특별자치도 직접수행 2026-10-06 914",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127012&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1432 금융 [강원] 2026년 하반기 농어촌진흥기금 지원계획 공고 2026-10-02 ~ 2026-10-30 강원특별자치도 직접수행 2026-10-06 914",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1433 인력 [서울ㆍ인천ㆍ경기] 2026년 미래내일 일경험(인턴형) 마케팅전략디자인 직무 참여기업 모집 공고 2026-10-02 ~ 2026-10-19 고용노동부 인사이드아웃 사회적협동조합 2026-10-06 1232",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127013&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1433 인력 [서울ㆍ인천ㆍ경기] 2026년 미래내일 일경험(인턴형) 마케팅전략디자인 직무 참여기업 모집 공고 2026-10-02 ~ 2026-10-19 고용노동부 인사이드아웃 사회적협동조합 2026-10-06 1232",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1434 경영 [경북] 2026년 지역특화형(방산ㆍ모빌리티) 스마트공장 보급확산 사업(기초단계) 참여기업 모집 공고 2026-10-12 ~ 2026-10-27 경상북도 경북테크노파크 2026-10-06 944",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127014&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1434 경영 [경북] 2026년 지역특화형(방산ㆍ모빌리티) 스마트공장 보급확산 사업(기초단계) 참여기업 모집 공고 2026-10-12 ~ 2026-10-27 경상북도 경북테크노파크 2026-10-06 944",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1435 기술 수성알파시티 기업 전용 5G 기반 통신망 서비스 지원 대상 기업 2차 모집 공고 2026-10-06 ~ 2026-10-27 국토교통부 대구테크노파크 2026-10-06 975",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127015&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1435 기술 수성알파시티 기업 전용 5G 기반 통신망 서비스 지원 대상 기업 2차 모집 공고 2026-10-06 ~ 2026-10-27 국토교통부 대구테크노파크 2026-10-06 975",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1436 창업 2026년 한국도로공사 상생형 창업ㆍ벤처기업 지원사업 모집 공고 2026-10-06 ~ 2026-10-28 국토교통부 한국도로공사 2026-10-06 1385",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127016&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1436 창업 2026년 한국도로공사 상생형 창업ㆍ벤처기업 지원사업 모집 공고 2026-10-06 ~ 2026-10-28 국토교통부 한국도로공사 2026-10-06 1385",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1437 기술 [전북] 김제시 2026년 4차 미래 Special 차Car세대 성장프로젝트 지원기업 모집 공고(시군구연고산업육성 협업프로젝트) 2026-10-02 ~ 2026-10-12 중소벤처기업부 전북테크노파크 2026-10-06 885",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127017&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1437 기술 [전북] 김제시 2026년 4차 미래 Special 차Car세대 성장프로젝트 지원기업 모집 공고(시군구연고산업육성 협업프로젝트) 2026-10-02 ~ 2026-10-12 중소벤처기업부 전북테크노파크 2026-10-06 885",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1438 수출 [경기] 용인시 2026년 3차 해외진출 종합지원사업(해외물류비) 공고 2026-10-13 ~ 2026-10-20 경기도 용인시산업진흥원 2026-10-06 978",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127018&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1438 수출 [경기] 용인시 2026년 3차 해외진출 종합지원사업(해외물류비) 공고 2026-10-13 ~ 2026-10-20 경기도 용인시산업진흥원 2026-10-06 978",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1439 경영 제주 K-뷰티 글로벌 라운지 입점 업체 모집 공고 2026-10-06 ~ 2026-10-19 중소벤처기업부 제주테크노파크 2026-10-06 1027",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127019&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1439 경영 제주 K-뷰티 글로벌 라운지 입점 업체 모집 공고 2026-10-06 ~ 2026-10-19 중소벤처기업부 제주테크노파크 2026-10-06 1027",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1440 기술 [충남] 2026년 4차 예비수소전문기업지원사업 수소산업분야 기술사업화(비R&D) 수혜기업 모집 공고 2026-10-06 ~ 2026-10-08 충청남도 충남테크노파크 2026-10-06 966",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127020&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1440 기술 [충남] 2026년 4차 예비수소전문기업지원사업 수소산업분야 기술사업화(비R&D) 수혜기업 모집 공고 2026-10-06 ~ 2026-10-08 충청남도 충남테크노파크 2026-10-06 966",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1441 창업 [경북] 정보보호 스타트업 육성사업 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 경상북도 포항테크노파크 2026-10-06 1020",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127021&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1441 창업 [경북] 정보보호 스타트업 육성사업 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 경상북도 포항테크노파크 2026-10-06 1020",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1442 경영 [경북] 정보보호 맞춤형 패키지 지원사업 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 경상북도 포항테크노파크 2026-10-06 1045",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127022&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1442 경영 [경북] 정보보호 맞춤형 패키지 지원사업 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 경상북도 포항테크노파크 2026-10-06 1045",
-          "statusHints": []
-        },
-        {
-          "source": "기업마당",
-          "title": "1443 내수 [경기] 2026년 10월 동행축제 소상공인 라이브커머스 참가기업 모집 공고 2026-10-02 ~ 2026-10-16 중소벤처기업부 경기지방중소벤처기업청 2026-10-06 1146",
-          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127023&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1443 내수 [경기] 2026년 10월 동행축제 소상공인 라이브커머스 참가기업 모집 공고 2026-10-02 ~ 2026-10-16 중소벤처기업부 경기지방중소벤처기업청 2026-10-06 1146",
-          "statusHints": []
-        }
-      ],
-      "actionableCount": 15,
-      "shadow": true
-    },
-    "kised": {
-      "key": "kised",
       "status": "FAILED",
-      "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.kised.or.kr/misAnnouncement/index.es?mid=a10302000000\", waiting until \"domcontentloaded\"\n\n    at crawlGeneric (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:421:14)\n    at /home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:490:41\n    at safeCrawl (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:218:18)\n    at runEntry (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:488:30)\n    at async main (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:514:25)",
+      "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.bizinfo.go.kr/sii/siia/selectSIIA200View.do?pblancArea=400\", waiting until \"domcontentloaded\"\n\n    at crawlGeneric (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:421:14)\n    at /home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:490:41\n    at safeCrawl (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:218:18)\n    at runEntry (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:488:30)\n    at async main (/home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:514:25)",
       "items": [],
       "count": 0,
       "actionableItems": [],
       "actionableCount": 0,
       "shadow": true
+    },
+    "kised": {
+      "key": "kised",
+      "status": "OK",
+      "url": "https://www.kised.or.kr/misAnnouncement/index.es?mid=a10302000000",
+      "items": [
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "[Startup Korea Special Visa] Announcement on Application for Recommendations for the “Startup Korea Special Visa”",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=171419&schM=view",
+          "rawText": "[Startup Korea Special Visa] Announcement on Application for Recommendations for the “Startup Korea Special Visa” 기관명 : 창업진흥원 마감일자 : 2026-12-31 00:00:00 진행중 D-85 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026년 중앙부처 및 지자체 창업지원사업 통합공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=175783&schM=view",
+          "rawText": "2026년 중앙부처 및 지자체 창업지원사업 통합공고 기관명 : 창업진흥원 마감일자 : 2026-12-31 23:59:00 진행중 D-85 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026년 팁스(TIPS) 창업기업 지원계획 수정 공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=176076&schM=view",
+          "rawText": "2026년 팁스(TIPS) 창업기업 지원계획 수정 공고 기관명 : 창업진흥원 마감일자 : 2026-12-31 18:00:00 진행중 D-85 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "민간기업 분야 우수인재 특별귀화 추천 신청 모집 공고 (Announcement on the Call for Applications for Recommendation for Special Naturalization of Outstanding Private-Sector Talent)",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=176286&schM=view",
+          "rawText": "민간기업 분야 우수인재 특별귀화 추천 신청 모집 공고 (Announcement on the Call for Applications for Recommendation for Special Naturalization of Outstanding Private-Sector Talent) 기관명 : 창업진흥원 마감일자 : 2026-10-01 18:00:00 종료 자세히 보기",
+          "statusHints": []
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "창업지원사업 예비위원단 재모집 (신산업분야)",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=176391&schM=view",
+          "rawText": "창업지원사업 예비위원단 재모집 (신산업분야) 기관명 : 창업진흥원 마감일자 : 2026-08-31 18:00:00 종료 자세히 보기",
+          "statusHints": []
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026년 스타트업 법률지원사업 참여기업 모집공고(수정)",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=176938&schM=view",
+          "rawText": "2026년 스타트업 법률지원사업 참여기업 모집공고(수정) 기관명 : 창업진흥원 마감일자 : 2026-12-31 18:00:00 진행중 D-85 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026년 스타트업 원스톱 지원센터 참여기업 모집공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=177328&schM=view",
+          "rawText": "2026년 스타트업 원스톱 지원센터 참여기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-12-31 18:00:00 진행중 D-85 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026년 재창업 활성화 유공포상 공고(재창업기업, 재창업 지원 부문)",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178506&schM=view",
+          "rawText": "2026년 재창업 활성화 유공포상 공고(재창업기업, 재창업 지원 부문) 기관명 : 창업진흥원 마감일자 : 2026-08-26 16:00:00 종료 자세히 보기",
+          "statusHints": []
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026년 창업진흥원 정책 아이디어 공모전",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178709&schM=view",
+          "rawText": "2026년 창업진흥원 정책 아이디어 공모전 기관명 : 창업진흥원 마감일자 : 2026-09-03 16:00:00 종료 자세히 보기",
+          "statusHints": []
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026 SVC Seoul 멤버십(확장형) 모집공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178802&schM=view",
+          "rawText": "2026 SVC Seoul 멤버십(확장형) 모집공고 기관명 : 창업진흥원 마감일자 : 2026-12-11 17:00:00 진행중 D-65 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026 SVC Seoul Membership(Global) Recruitment Announcement",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178803&schM=view",
+          "rawText": "2026 SVC Seoul Membership(Global) Recruitment Announcement 기관명 : 창업진흥원 마감일자 : 2026-12-11 17:00:00 진행중 D-65 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "모두의 창업 프로젝트 2기 AI 솔루션 공급기업 모집공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178856&schM=view",
+          "rawText": "모두의 창업 프로젝트 2기 AI 솔루션 공급기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-08-27 15:00:00 종료 자세히 보기",
+          "statusHints": []
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "「민관협력 오픈이노베이션 지원」'공공데이터 활용 지원' 공공기관 제안 협업 과제(Top-Down) 모집공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178873&schM=view",
+          "rawText": "「민관협력 오픈이노베이션 지원」'공공데이터 활용 지원' 공공기관 제안 협업 과제(Top-Down) 모집공고 기관명 : 창업진흥원 마감일자 : 2026-08-31 16:00:00 종료 자세히 보기",
+          "statusHints": []
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "「민관협력 오픈이노베이션 지원」 '공공데이터 활용 지원' 창업기업 제안 협업 과제(Bottom-Up) 모집공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178875&schM=view",
+          "rawText": "「민관협력 오픈이노베이션 지원」 '공공데이터 활용 지원' 창업기업 제안 협업 과제(Bottom-Up) 모집공고 기관명 : 창업진흥원 마감일자 : 2026-08-31 16:00:00 종료 자세히 보기",
+          "statusHints": []
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026 대전 팁스타운 팁스 링크 일본 파트너 초청 상담회",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178892&schM=view",
+          "rawText": "2026 대전 팁스타운 팁스 링크 일본 파트너 초청 상담회 기관명 : 창업진흥원 마감일자 : 2026-08-31 18:00:00 종료 자세히 보기",
+          "statusHints": []
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026년 모두의 창업 글로벌 재외국민 프로그램 참여자 모집 공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178896&schM=view",
+          "rawText": "2026년 모두의 창업 글로벌 재외국민 프로그램 참여자 모집 공고 기관명 : 창업진흥원 마감일자 : 2026-09-28 18:00:00 종료 자세히 보기",
+          "statusHints": []
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "「모두의 창업 프로젝트」통합 모집공고 2차",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178952&schM=view",
+          "rawText": "「모두의 창업 프로젝트」통합 모집공고 2차 기관명 : 창업진흥원 마감일자 : 2026-09-17 16:00:00 종료 자세히 보기",
+          "statusHints": []
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026년 Tokyo PMF·GTM 프로그램 창업기업 모집 공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178953&schM=view",
+          "rawText": "2026년 Tokyo PMF·GTM 프로그램 창업기업 모집 공고 기관명 : 창업진흥원 마감일자 : 2026-09-03 18:00:00 종료 자세히 보기",
+          "statusHints": []
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "「민관협력 오픈이노베이션 지원」2026년 '규제자유특구 지원' 창업기업 모집공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178975&schM=view",
+          "rawText": "「민관협력 오픈이노베이션 지원」2026년 '규제자유특구 지원' 창업기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-09-09 16:00:00 종료 자세히 보기",
+          "statusHints": []
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026년 제3차 대전 팁스타운 입주기업 모집 공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178981&schM=view",
+          "rawText": "2026년 제3차 대전 팁스타운 입주기업 모집 공고 기관명 : 창업진흥원 마감일자 : 2026-09-28 16:00:00 종료 자세히 보기",
+          "statusHints": []
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026년도 딥테크 특화 창업중심대학 추천형 창업기업 모집공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178985&schM=view",
+          "rawText": "2026년도 딥테크 특화 창업중심대학 추천형 창업기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-09-04 16:00:00 종료 자세히 보기",
+          "statusHints": []
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "베트남 테크페스트(TECHFEST 2026) K-스타트업 통합관 참가기업 모집공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179192&schM=view",
+          "rawText": "베트남 테크페스트(TECHFEST 2026) K-스타트업 통합관 참가기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-09-17 16:00:00 종료 자세히 보기",
+          "statusHints": []
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "「2026년 스타트업 법률지원사업 대구광역시 법률상담회」 참여기업 모집 안내",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179197&schM=view",
+          "rawText": "「2026년 스타트업 법률지원사업 대구광역시 법률상담회」 참여기업 모집 안내 기관명 : 창업진흥원 마감일자 : 2026-09-15 17:00:00 종료 자세히 보기",
+          "statusHints": []
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026년 SVC Seoul 인턴십 프로그램 학생인턴 모집공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179200&schM=view",
+          "rawText": "2026년 SVC Seoul 인턴십 프로그램 학생인턴 모집공고 기관명 : 창업진흥원 마감일자 : 2026-09-17 17:00:00 종료 자세히 보기",
+          "statusHints": []
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "「민관협력 오픈이노베이션 지원」 '공공데이터 활용 지원' 공공기관 제안형(Top-Down) 창업기업 모집공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179232&schM=view",
+          "rawText": "「민관협력 오픈이노베이션 지원」 '공공데이터 활용 지원' 공공기관 제안형(Top-Down) 창업기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-10-06 16:00:00 종료 자세히 보기",
+          "statusHints": []
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2027년도 초격차 스타트업 프로젝트 기술 사업화 및 투자유치 주관기관 모집 공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179287&schM=view",
+          "rawText": "2027년도 초격차 스타트업 프로젝트 기술 사업화 및 투자유치 주관기관 모집 공고 기관명 : 창업진흥원 마감일자 : 2026-10-12 15:00:00 진행중 D-5 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026 Silicon Valley GTM(Go-To-Market) Program - Public Announcement for Service Provider",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179293&schM=view",
+          "rawText": "2026 Silicon Valley GTM(Go-To-Market) Program - Public Announcement for Service Provider 기관명 : 창업진흥원 마감일자 : 2026-10-01 18:00:00 종료 자세히 보기",
+          "statusHints": []
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026년 실리콘밸리 GTM(Go-To-Market) 프로그램 창업기업 모집공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179294&schM=view",
+          "rawText": "2026년 실리콘밸리 GTM(Go-To-Market) 프로그램 창업기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-10-09 18:00:00 진행중 D-2 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "「민관협력 오픈이노베이션 지원」2026년 제2차 상호 자율탐색형(바이오 분야) 참여기업 모집공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179408&schM=view",
+          "rawText": "「민관협력 오픈이노베이션 지원」2026년 제2차 상호 자율탐색형(바이오 분야) 참여기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-11-02 16:00:00 진행중 D-26 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026년 스타트업 법률지원사업 대전광역시 법률상담회 참여 기업 모집 안내",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179439&schM=view",
+          "rawText": "2026년 스타트업 법률지원사업 대전광역시 법률상담회 참여 기업 모집 안내 기관명 : 창업진흥원 마감일자 : 2026-10-13 18:00:00 진행중 D-6 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        }
+      ],
+      "count": 30,
+      "actionableItems": [
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "[Startup Korea Special Visa] Announcement on Application for Recommendations for the “Startup Korea Special Visa”",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=171419&schM=view",
+          "rawText": "[Startup Korea Special Visa] Announcement on Application for Recommendations for the “Startup Korea Special Visa” 기관명 : 창업진흥원 마감일자 : 2026-12-31 00:00:00 진행중 D-85 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026년 중앙부처 및 지자체 창업지원사업 통합공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=175783&schM=view",
+          "rawText": "2026년 중앙부처 및 지자체 창업지원사업 통합공고 기관명 : 창업진흥원 마감일자 : 2026-12-31 23:59:00 진행중 D-85 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026년 팁스(TIPS) 창업기업 지원계획 수정 공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=176076&schM=view",
+          "rawText": "2026년 팁스(TIPS) 창업기업 지원계획 수정 공고 기관명 : 창업진흥원 마감일자 : 2026-12-31 18:00:00 진행중 D-85 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026년 스타트업 법률지원사업 참여기업 모집공고(수정)",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=176938&schM=view",
+          "rawText": "2026년 스타트업 법률지원사업 참여기업 모집공고(수정) 기관명 : 창업진흥원 마감일자 : 2026-12-31 18:00:00 진행중 D-85 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026년 스타트업 원스톱 지원센터 참여기업 모집공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=177328&schM=view",
+          "rawText": "2026년 스타트업 원스톱 지원센터 참여기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-12-31 18:00:00 진행중 D-85 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026 SVC Seoul 멤버십(확장형) 모집공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178802&schM=view",
+          "rawText": "2026 SVC Seoul 멤버십(확장형) 모집공고 기관명 : 창업진흥원 마감일자 : 2026-12-11 17:00:00 진행중 D-65 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026 SVC Seoul Membership(Global) Recruitment Announcement",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178803&schM=view",
+          "rawText": "2026 SVC Seoul Membership(Global) Recruitment Announcement 기관명 : 창업진흥원 마감일자 : 2026-12-11 17:00:00 진행중 D-65 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2027년도 초격차 스타트업 프로젝트 기술 사업화 및 투자유치 주관기관 모집 공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179287&schM=view",
+          "rawText": "2027년도 초격차 스타트업 프로젝트 기술 사업화 및 투자유치 주관기관 모집 공고 기관명 : 창업진흥원 마감일자 : 2026-10-12 15:00:00 진행중 D-5 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026년 실리콘밸리 GTM(Go-To-Market) 프로그램 창업기업 모집공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179294&schM=view",
+          "rawText": "2026년 실리콘밸리 GTM(Go-To-Market) 프로그램 창업기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-10-09 18:00:00 진행중 D-2 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "「민관협력 오픈이노베이션 지원」2026년 제2차 상호 자율탐색형(바이오 분야) 참여기업 모집공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179408&schM=view",
+          "rawText": "「민관협력 오픈이노베이션 지원」2026년 제2차 상호 자율탐색형(바이오 분야) 참여기업 모집공고 기관명 : 창업진흥원 마감일자 : 2026-11-02 16:00:00 진행중 D-26 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        },
+        {
+          "source": "창업진흥원 사업공고",
+          "title": "2026년 스타트업 법률지원사업 대전광역시 법률상담회 참여 기업 모집 안내",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179439&schM=view",
+          "rawText": "2026년 스타트업 법률지원사업 대전광역시 법률상담회 참여 기업 모집 안내 기관명 : 창업진흥원 마감일자 : 2026-10-13 18:00:00 진행중 D-6 자세히 보기",
+          "statusHints": [
+            "진행중"
+          ]
+        }
+      ],
+      "actionableCount": 11,
+      "shadow": true
     }
   },
   "totals": {
-    "contestKorea": 53,
-    "contestKoreaActionable": 5,
+    "contestKorea": 59,
+    "contestKoreaActionable": 4,
     "daconCompetitions": 289,
     "daconCompetitionsActionable": 1,
     "dakerHackathons": 23,
@@ -3915,12 +3973,12 @@
     "devpostOpen": 18,
     "devpostOpenActionable": 18,
     "grantlySupport": 24,
-    "grantlySupportActionable": 10,
+    "grantlySupportActionable": 9,
     "hackathonKorea": 12,
     "hackathonKoreaActionable": 5,
     "kStartupHighlights": 10,
     "kStartupHighlightsActionable": 4,
-    "sotong24Contests": 9,
-    "sotong24ContestsActionable": 4
+    "sotong24Contests": 0,
+    "sotong24ContestsActionable": 0
   }
 }
