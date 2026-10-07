@@ -317,25 +317,199 @@ function renderHome() {
   const openContests = contests.filter(isOpenItem);
   const openSupport = support.filter(isOpenItem);
   const newToday = items => items.filter(isNewToday).length;
-  const updatedToday = items => items.filter(isUpdatedToday).length;
   const totalNewToday = newToday(contests) + newToday(news) + newToday(discovery) + newToday(support);
 
-  $("#homeContestCount").textContent = "신규 " + newToday(contests) + " · 진행중 " + openContests.length;
-  $("#homeAiCount").textContent = "신규 " + newToday(news) + " · 업데이트 " + updatedToday(news);
-  $("#homeDiscoveryCount").textContent = "신규 " + newToday(discovery) + " · 전체 " + discovery.length;
-  $("#homeSupportCount").textContent = "신규 " + newToday(support) + " · 진행중 " + openSupport.length;
+  $("#homeDateLabel").textContent = state.data.date;
+  $("#homeTotalCount").textContent = state.all.length;
   $("#homeNewTotal").textContent = totalNewToday;
   $("#homeOpenTotal").textContent = openContests.length + openSupport.length;
   $("#homeDiscoveryTotal").textContent = discovery.length;
-  $("#homeNewsTotal").textContent = news.length;
 
-  renderFeatured(openContests, openSupport);
-  renderCompact("#homeContestList", opportunityPriority(openContests).slice(0, 4), "contest");
-  renderCompact("#homeAiList", newsPriority(news).slice(0, 5), "ai");
-  renderCompact("#homeDiscoveryList", discovery.slice().sort((a,b) => discoveryRank(b) - discoveryRank(a)).slice(0, 5), "discovery");
-  renderCompact("#homeSupportList", opportunityPriority(openSupport).slice(0, 4), "support");
+  renderHomeTopSignals();
+  renderHomeTrending();
+  renderHomeSources();
+  renderHomeExplore();
+  renderHomeAllSignals();
+  renderHomeResources();
+  renderHomeUpcoming();
   renderArchiveStrip("#homeArchiveDays", state.data.archive || []);
+}
 
+function homeSignalScore(item) {
+  const kind = itemKind(item);
+  if (kind === "discovery") {
+    return 90 + discoveryRank(item) + (isNewToday(item) ? 18 : 0);
+  }
+  if (kind === "ai") {
+    return 78 + (isNewToday(item) ? 28 : 0) + (isUpdatedToday(item) ? 18 : 0);
+  }
+  if (!isOpenItem(item)) return 5;
+  const d = ddayNumber(item);
+  const urgency = d === null ? 8 : Math.max(0, 46 - Math.min(d, 46));
+  return 42 + urgency + (isNewToday(item) ? 18 : 0);
+}
+
+function homeSignalLabel(item) {
+  const kind = itemKind(item);
+  if (kind === "ai") return "AI NEWS";
+  if (kind === "discovery") return discoveryTypeLabel(item.discoveryType).toUpperCase();
+  if (kind === "support") return "SUPPORT";
+  return "CONTEST";
+}
+
+function homeSignalStatus(item) {
+  const kind = itemKind(item);
+  if (kind === "discovery") {
+    return discoveryLabel(DISCOVERY_TREND_LABELS, item.trend) || discoveryLabel(DISCOVERY_NEWS_LABELS, item.newsState);
+  }
+  if (kind === "ai") {
+    if (isNewToday(item)) return "NEW";
+    if (isUpdatedToday(item)) return "UPDATED";
+    return "TRACKED";
+  }
+  return !isOpenItem(item) ? "CLOSED" : (item.dDay || "OPEN");
+}
+
+function homeSignalMeta(item) {
+  const kind = itemKind(item);
+  if (kind === "discovery") {
+    return [discoveryTypeLabel(item.discoveryType), (item.categories || []).slice(0,2).join(" · ")].filter(Boolean).join(" · ");
+  }
+  if (kind === "ai") return (item.tags || []).slice(0,3).join(" · ") || "AI";
+  return item.deadlineText || item.dDay || item.categoryLabel || "";
+}
+
+function rankedHomeSignals(limit) {
+  return state.all.slice().sort((a,b) => {
+    const score = homeSignalScore(b) - homeSignalScore(a);
+    if (score) return score;
+    return latestDateValue(b).localeCompare(latestDateValue(a));
+  }).slice(0, limit);
+}
+
+function wireHomeRows(root) {
+  if (!root) return;
+  root.querySelectorAll("[data-id]").forEach(row => {
+    row.addEventListener("click", () => {
+      const item = state.all.find(x => x.id === row.dataset.id);
+      if (!item) return;
+      state.lastRoute = "#/";
+      location.hash = itemRoute(item);
+    });
+  });
+}
+
+function renderHomeTopSignals() {
+  const el = $("#homeTopSignals");
+  const items = rankedHomeSignals(6);
+  el.innerHTML = items.map((item,index) =>
+    '<article class="top-signal-row" data-id="' + esc(item.id) + '">' +
+      '<div class="signal-rank">' + String(index + 1).padStart(2,"0") + '</div>' +
+      '<div class="signal-main"><div class="signal-kicker"><span>' + esc(homeSignalLabel(item)) + '</span><span>' + esc(homeSignalStatus(item)) + '</span></div>' +
+      '<h3>' + esc(item.title) + '</h3><p>' + esc(item.summary || "") + '</p>' +
+      (item.why ? '<div class="why-line"><b>WHY</b><span>' + esc(cut(item.why, 155)) + '</span></div>' : '') + '</div>' +
+      '<div class="signal-arrow">↗</div>' +
+    '</article>'
+  ).join("");
+  wireHomeRows(el);
+}
+
+function renderHomeTrending() {
+  const scores = new Map();
+  const add = (label, weight = 1) => {
+    const key = String(label || "").trim();
+    if (!key || /^(ai|site|showcase|resource)$/i.test(key)) return;
+    scores.set(key, (scores.get(key) || 0) + weight);
+  };
+
+  (state.data.aiNews || []).forEach(item => (item.tags || []).forEach(tag => add(tag, isNewToday(item) || isUpdatedToday(item) ? 2 : 1)));
+  (state.data.aiDiscovery || []).forEach(item => {
+    const weight = String(item.trend || "").toUpperCase() === "HOT" ? 4 : String(item.trend || "").toUpperCase() === "RISING" ? 3 : 1;
+    (item.categories || []).forEach(tag => add(tag, weight));
+  });
+
+  const rows = [...scores.entries()].sort((a,b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0,6);
+  $("#homeTrending").innerHTML = rows.map(([label,count],index) =>
+    '<div class="rail-row"><span class="rail-rank">' + String(index + 1).padStart(2,"0") + '</span><strong>' + esc(label) + '</strong><span class="rail-value">' + count + '</span></div>'
+  ).join("");
+}
+
+function renderHomeSources() {
+  const counts = new Map();
+  state.all.forEach(item => (item.links || []).forEach(link => {
+    try {
+      const domain = new URL(link.url).hostname.replace(/^www\./, "");
+      if (domain) counts.set(domain, (counts.get(domain) || 0) + 1);
+    } catch (_) {}
+  }));
+  const rows = [...counts.entries()].sort((a,b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0,6);
+  $("#homeSources").innerHTML = rows.map(([domain,count]) =>
+    '<div class="rail-row source-row"><strong>' + esc(domain) + '</strong><span class="rail-value">' + count + '</span></div>'
+  ).join("");
+}
+
+function renderHomeExplore() {
+  const discovery = state.data.aiDiscovery || [];
+  const openContests = (state.data.contests || []).filter(isOpenItem);
+  const openSupport = (state.data.support || []).filter(isOpenItem);
+  const groups = [
+    {title:"AI News", href:"#/ai-news", count:(state.data.aiNews || []).length, items:newsPriority(state.data.aiNews || []).slice(0,3)},
+    {title:"AI Discovery", href:"#/ai-discovery", count:discovery.length, items:discovery.slice().sort((a,b)=>discoveryRank(b)-discoveryRank(a)).slice(0,3)},
+    {title:"GitHub · Open Source", href:"#/ai-discovery", count:discovery.filter(x=>String(x.discoveryType||"").toLowerCase()==="github").length, items:discovery.filter(x=>String(x.discoveryType||"").toLowerCase()==="github").slice(0,3)},
+    {title:"Tools · Workflows", href:"#/ai-discovery", count:discovery.filter(x=>["skill","mcp","agent","workflow","site","platform"].includes(String(x.discoveryType||"").toLowerCase())).length, items:discovery.filter(x=>["skill","mcp","agent","workflow","site","platform"].includes(String(x.discoveryType||"").toLowerCase())).slice(0,3)},
+    {title:"공모전 · 해커톤", href:"#/contests", count:openContests.length, items:opportunityPriority(openContests).slice(0,3)},
+    {title:"창업 · 지원사업", href:"#/support", count:openSupport.length, items:opportunityPriority(openSupport).slice(0,3)}
+  ];
+
+  $("#homeExplore").innerHTML = groups.map(group =>
+    '<section class="explore-cell"><a class="explore-cell-head" href="' + group.href + '"><h3>' + esc(group.title) + '</h3><span>' + group.count + '</span></a>' +
+    '<div class="explore-items">' + (group.items.length ? group.items.map(item =>
+      '<div class="explore-item" data-id="' + esc(item.id) + '"><span>' + esc(item.title) + '</span><b>→</b></div>'
+    ).join("") : '<div class="explore-empty">표시할 항목 없음</div>') + '</div></section>'
+  ).join("");
+  wireHomeRows($("#homeExplore"));
+}
+
+function renderHomeAllSignals() {
+  const items = rankedHomeSignals(18);
+  $("#homeSignalCount").textContent = "showing " + items.length + " of " + state.all.length;
+  const el = $("#homeAllSignals");
+  el.innerHTML = items.map(item =>
+    '<article class="signal-table-row" data-id="' + esc(item.id) + '">' +
+      '<div class="signal-type">' + esc(homeSignalLabel(item)) + '</div>' +
+      '<div class="signal-title"><strong>' + esc(item.title) + '</strong><span>' + esc(cut(item.summary || "", 105)) + '</span></div>' +
+      '<div class="signal-meta">' + esc(cut(homeSignalMeta(item), 72)) + '</div>' +
+      '<div class="signal-status">' + esc(homeSignalStatus(item)) + '</div>' +
+    '</article>'
+  ).join("");
+  wireHomeRows(el);
+}
+
+function renderHomeResources() {
+  const items = (state.data.aiDiscovery || []).slice().sort((a,b)=>discoveryRank(b)-discoveryRank(a)).slice(0,6);
+  const el = $("#homeResources");
+  el.innerHTML = items.map(item => {
+    let domain = "";
+    try { domain = new URL((item.links || [])[0]?.url || "").hostname.replace(/^www\./, ""); } catch (_) {}
+    return '<article class="resource-item" data-id="' + esc(item.id) + '"><div><strong>' + esc(item.title) + '</strong><span>' + esc(discoveryTypeLabel(item.discoveryType)) + '</span></div><small>' + esc(domain) + '</small></article>';
+  }).join("");
+  wireHomeRows(el);
+}
+
+function renderHomeUpcoming() {
+  const items = [].concat(state.data.contests || [], state.data.support || [])
+    .filter(item => isOpenItem(item) && ddayNumber(item) !== null && ddayNumber(item) >= 0)
+    .sort((a,b) => ddayNumber(a) - ddayNumber(b))
+    .slice(0,7);
+  const el = $("#homeUpcoming");
+  if (!items.length) {
+    el.innerHTML = '<div class="empty-state">현재 D-day가 확인된 진행 중 마감이 없습니다.</div>';
+    return;
+  }
+  el.innerHTML = items.map(item =>
+    '<article class="upcoming-row" data-id="' + esc(item.id) + '"><span class="upcoming-date">' + esc(item.dDay || "OPEN") + '</span><strong>' + esc(item.title) + '</strong><span class="upcoming-kind">' + (itemKind(item) === "support" ? "지원사업" : "공모전") + '</span><span class="signal-arrow">↗</span></article>'
+  ).join("");
+  wireHomeRows(el);
 }
 
 function renderFeatured(contests, support) {
@@ -953,8 +1127,8 @@ function renderDiscoveryHub() {
 
   el.innerHTML =
     '<header class="discovery-head">' +
-      '<div><p class="section-eyebrow">AI Discovery</p><h1>놓치기 아까운 AI 도구와 방법들</h1>' +
-      '<p>사이트, 오픈소스, Skill, MCP, Agent, Workflow를 한곳에 모으고 지금 왜 볼 가치가 있는지까지 정리합니다.</p></div>' +
+      '<div><p class="section-eyebrow">TOOLS · OPEN SOURCE · WORKFLOWS</p><h1>AI Discovery</h1>' +
+      '<p>도구, 오픈소스, Skill, MCP, Agent, Workflow를 유형별로 정리하고 현재 신호와 참고 이유를 함께 기록합니다.</p></div>' +
       '<div class="discovery-stats">' +
         '<div><span>오늘 새로 발견</span><strong>' + todayNew + '</strong></div>' +
         '<div><span>상승 신호</span><strong>' + rising + '</strong></div>' +
@@ -963,7 +1137,7 @@ function renderDiscoveryHub() {
     '</header>' +
 
     '<section class="discovery-top">' +
-      '<div class="discovery-section-head"><div><p class="section-eyebrow">먼저 볼 것</p><h2>Top Finds</h2></div><span>신호와 새 소식을 함께 반영</span></div>' +
+      '<div class="discovery-section-head"><div><p class="section-eyebrow">TOP SIGNALS</p><h2>주요 발견</h2></div><span>신호와 새 소식을 함께 반영</span></div>' +
       '<div class="discovery-top-grid">' + top.map(discoveryTopCard).join("") + '</div>' +
     '</section>' +
 
@@ -975,7 +1149,7 @@ function renderDiscoveryHub() {
     '</div>' +
 
     '<section class="discovery-all">' +
-      '<div class="discovery-section-head"><div><p class="section-eyebrow">전체 기록</p><h2>Everything</h2></div><span>수집 단계에서는 버리지 않음</span></div>' +
+      '<div class="discovery-section-head"><div><p class="section-eyebrow">CATALOG</p><h2>전체 항목</h2></div><span>수집 단계에서는 버리지 않음</span></div>' +
       '<div class="discovery-filter-row" id="discoveryFilters">' +
         [["all","전체"],["new","오늘 발견"],["rising","상승 신호"],["site","사이트"],["directory","디렉터리"],["github","GitHub"],["skill","Skill"],["mcp","MCP"],["agent","Agent"],["workflow","Workflow"]]
           .map(([key,label]) => '<button class="filter-chip ' + (state.discoveryFilter === key ? "active" : "") + '" data-filter="' + key + '">' + label + '</button>').join("") +
@@ -1209,7 +1383,8 @@ function setupInteractions() {
 
   window.addEventListener("pagehide", () => saveViewState(state.activeRoute));
 
-  $("#mobileMenu").addEventListener("click", () => document.body.classList.toggle("menu-open"));
+  const mobileMenu = $("#mobileMenu");
+  if (mobileMenu) mobileMenu.addEventListener("click", () => document.body.classList.toggle("menu-open"));
   document.querySelectorAll(".nav-item").forEach(a => a.addEventListener("click", () => document.body.classList.remove("menu-open")));
 
   $("#backButton").addEventListener("click", () => {

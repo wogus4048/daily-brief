@@ -11,133 +11,117 @@
 </head>
 <body>
   <div class="app-shell">
-    <aside class="sidebar" id="sidebar">
-      <a class="brand" href="#/" aria-label="daily-brief 홈">
-        <span class="brand-dot"></span>
-        <span>
-          <strong>daily-brief</strong>
-          <small>PUBLIC SIGNAL DESK</small>
-        </span>
-      </a>
-
-      <nav class="side-nav" aria-label="메인 메뉴">
-        <a class="nav-item" href="#/" data-route="home">
-          <span class="nav-icon">01</span><span>오늘</span>
-        </a>
-        <a class="nav-item" href="#/contests" data-route="contests">
-          <span class="nav-icon">02</span><span>공모전 · 해커톤</span><span class="nav-count" id="navContestCount">0</span>
-        </a>
-        <a class="nav-item" href="#/ai-news" data-route="ai-news">
-          <span class="nav-icon">03</span><span>AI 뉴스</span><span class="nav-count" id="navAiCount">0</span>
-        </a>
-        <a class="nav-item" href="#/ai-discovery" data-route="ai-discovery">
-          <span class="nav-icon">04</span><span>AI Discovery</span><span class="nav-count" id="navDiscoveryCount">0</span>
-        </a>
-        <a class="nav-item" href="#/support" data-route="support" id="supportNav">
-          <span class="nav-icon">05</span><span>창업 · 지원사업</span><span class="nav-count" id="navSupportCount">0</span>
-        </a>
-        <a class="nav-item" href="#/archive" data-route="archive">
-          <span class="nav-icon">06</span><span>아카이브</span>
-        </a>
-      </nav>
-
-      <div class="sidebar-foot">
-        <span class="live-dot"></span>
-        <span>PUBLIC · DAILY UPDATE</span>
-      </div>
-    </aside>
-
     <div class="workspace">
-      <header class="topbar">
-        <button class="mobile-menu" id="mobileMenu" aria-label="메뉴">☰</button>
-        <button class="topbar-search" id="searchButton" type="button">
-          <span>⌕</span>
-          <span>브리핑 검색</span>
-          <kbd>⌘ K</kbd>
-        </button>
-        <div class="topbar-date" id="topbarDate">불러오는 중</div>
+      <header class="site-header">
+        <div class="header-row">
+          <a class="brand" href="#/" aria-label="daily-brief 홈">
+            <strong>daily-brief</strong>
+            <small>AI · DEV · OPEN SOURCE · OPPORTUNITIES</small>
+          </a>
+          <button class="topbar-search" id="searchButton" type="button">
+            <span class="search-icon">/</span>
+            <span>검색</span>
+            <kbd>⌘ K</kbd>
+          </button>
+          <div class="topbar-date" id="topbarDate">불러오는 중</div>
+        </div>
+        <nav class="site-nav" aria-label="메인 메뉴">
+          <a class="nav-item" href="#/" data-route="home"><span>오늘</span></a>
+          <a class="nav-item" href="#/ai-news" data-route="ai-news"><span>AI 뉴스</span><span class="nav-count" id="navAiCount">0</span></a>
+          <a class="nav-item" href="#/ai-discovery" data-route="ai-discovery"><span>AI Discovery</span><span class="nav-count" id="navDiscoveryCount">0</span></a>
+          <a class="nav-item" href="#/contests" data-route="contests"><span>공모전 · 해커톤</span><span class="nav-count" id="navContestCount">0</span></a>
+          <a class="nav-item" href="#/support" data-route="support" id="supportNav"><span>창업 · 지원사업</span><span class="nav-count" id="navSupportCount">0</span></a>
+          <a class="nav-item" href="#/archive" data-route="archive"><span>아카이브</span></a>
+        </nav>
       </header>
 
       <main>
         <section class="view" id="homeView" hidden>
-          <section class="brief-hero">
-            <div class="brief-hero-copy">
-              <p class="section-eyebrow">DAILY SIGNALS / CURATED FOR BUILDERS</p>
-              <h1>개발자가 오늘<br />확인할 신호</h1>
-              <p class="hero-sub">AI, 오픈소스, 개발 도구와 실제 지원 기회까지. 많이 모으는 대신 지금 볼 가치가 있는 변화부터 정리합니다.</p>
+          <section class="home-intro">
+            <div>
+              <p class="section-eyebrow">TODAY / <span id="homeDateLabel">—</span></p>
+              <h1>오늘 개발자가 알아둘 것</h1>
+              <p class="hero-sub">AI, 오픈소스, 개발 도구, 공모전과 지원사업에서 지금 확인할 가치가 있는 변화만 정리합니다.</p>
             </div>
-            <div class="hero-stats" aria-label="오늘의 브리핑 요약">
-              <div><span>오늘 신규</span><strong id="homeNewTotal">0</strong></div>
-              <div><span>진행중 기회</span><strong id="homeOpenTotal">0</strong></div>
-              <div><span>AI Discovery</span><strong id="homeDiscoveryTotal">0</strong></div>
-              <div><span>AI 이슈</span><strong id="homeNewsTotal">0</strong></div>
+            <div class="home-stats" aria-label="오늘의 브리핑 요약">
+              <span><b id="homeTotalCount">0</b> indexed</span>
+              <span><b id="homeNewTotal">0</b> new today</span>
+              <span><b id="homeOpenTotal">0</b> open opportunities</span>
+              <span><b id="homeDiscoveryTotal">0</b> discoveries</span>
             </div>
           </section>
 
-          <section class="featured-wrap">
-            <div class="section-head">
+          <section class="home-top-grid">
+            <div class="top-signals">
+              <div class="section-head compact-head">
+                <div>
+                  <p class="section-eyebrow">TOP SIGNALS</p>
+                  <h2>먼저 볼 것</h2>
+                </div>
+              </div>
+              <div class="top-signal-list" id="homeTopSignals"></div>
+            </div>
+
+            <aside class="home-rail">
+              <section class="rail-section">
+                <div class="rail-head"><h2>Trending now</h2><span>오늘 수집 기준</span></div>
+                <div class="trend-list" id="homeTrending"></div>
+              </section>
+              <section class="rail-section">
+                <div class="rail-head"><h2>Active sources</h2><span>링크 출처</span></div>
+                <div class="source-list" id="homeSources"></div>
+              </section>
+            </aside>
+          </section>
+
+          <section class="home-section explore-section">
+            <div class="section-head compact-head">
               <div>
-                <p class="section-eyebrow">UPCOMING / TIME-SENSITIVE</p>
-                <h2>가장 가까운 마감</h2>
+                <p class="section-eyebrow">EXPLORE</p>
+                <h2>분야별로 훑기</h2>
               </div>
             </div>
-            <article class="featured-card" id="featuredOpportunity">
-              <div class="skeleton-line wide"></div>
-              <div class="skeleton-line"></div>
-            </article>
+            <div class="explore-grid" id="homeExplore"></div>
           </section>
 
-          <section class="dashboard-grid">
-            <article class="dashboard-panel">
-              <div class="panel-head">
-                <div>
-                  <p class="section-eyebrow">진행 중인 기회</p>
-                  <div class="section-title-line"><h2>공모전 · 해커톤</h2><span class="section-today-count" id="homeContestCount">오늘 신규 0건</span></div>
-                </div>
-                <a href="#/contests" class="view-all">전체 보기 →</a>
-              </div>
-              <div class="compact-list" id="homeContestList"></div>
-            </article>
-
-            <article class="dashboard-panel">
-              <div class="panel-head">
-                <div>
-                  <p class="section-eyebrow">새 이슈 · 후속 업데이트</p>
-                  <div class="section-title-line"><h2>AI 뉴스</h2><span class="section-today-count" id="homeAiCount">오늘 신규 0건</span></div>
-                </div>
-                <a href="#/ai-news" class="view-all">전체 보기 →</a>
-              </div>
-              <div class="compact-list" id="homeAiList"></div>
-            </article>
-            <article class="dashboard-panel discovery-preview">
-              <div class="panel-head">
-                <div>
-                  <p class="section-eyebrow">TOOLS / OPEN SOURCE / WORKFLOWS</p>
-                  <div class="section-title-line"><h2>AI Discovery</h2><span class="section-today-count" id="homeDiscoveryCount">오늘 신규 0건</span></div>
-                </div>
-                <a href="#/ai-discovery" class="view-all">전체 보기 →</a>
-              </div>
-              <div class="compact-list" id="homeDiscoveryList"></div>
-            </article>
-
-            <article class="dashboard-panel support-preview" id="homeSupportPanel">
-              <div class="panel-head">
-                <div>
-                  <p class="section-eyebrow">OPEN PROGRAMS / SUPPORT</p>
-                  <div class="section-title-line"><h2>창업 · 지원사업</h2><span class="section-today-count" id="homeSupportCount">오늘 신규 0건</span></div>
-                </div>
-                <a href="#/support" class="view-all">전체 보기 →</a>
-              </div>
-              <div class="compact-list" id="homeSupportList"></div>
-            </article>
-          </section>
-
-          <section class="archive-preview">
-            <div class="panel-head">
+          <section class="home-section all-signals-section">
+            <div class="section-head compact-head">
               <div>
-                <p class="section-eyebrow">ARCHIVE / DAILY SNAPSHOTS</p>
-                <h2>지난 브리핑</h2>
+                <p class="section-eyebrow">ALL SIGNALS</p>
+                <h2>전체 신호</h2>
               </div>
+              <span class="section-note" id="homeSignalCount">0 results</span>
+            </div>
+            <div class="signal-table-head" aria-hidden="true">
+              <span>TYPE</span><span>SIGNAL</span><span>META</span><span>STATUS</span>
+            </div>
+            <div class="signal-table" id="homeAllSignals"></div>
+          </section>
+
+          <section class="home-section resources-section">
+            <div class="section-head compact-head">
+              <div>
+                <p class="section-eyebrow">DISCOVERED RESOURCES</p>
+                <h2>계속 참고할 리소스</h2>
+              </div>
+              <a href="#/ai-discovery" class="view-all">AI Discovery 전체 →</a>
+            </div>
+            <div class="resource-grid" id="homeResources"></div>
+          </section>
+
+          <section class="home-section upcoming-section">
+            <div class="section-head compact-head">
+              <div>
+                <p class="section-eyebrow">UPCOMING</p>
+                <h2>다가오는 마감</h2>
+              </div>
+            </div>
+            <div class="upcoming-list" id="homeUpcoming"></div>
+          </section>
+
+          <section class="home-section archive-preview">
+            <div class="section-head compact-head">
+              <div><p class="section-eyebrow">ARCHIVE</p><h2>지난 브리핑</h2></div>
               <a href="#/archive" class="view-all">전체 보기 →</a>
             </div>
             <div class="archive-strip" id="homeArchiveDays"></div>
@@ -211,15 +195,6 @@
     </div>
   </div>
 
-
-  <nav class="mobile-bottom-nav" aria-label="모바일 메뉴">
-    <a href="#/" class="mobile-tab" data-route="home"><span>⌂</span><small>오늘</small></a>
-    <a href="#/contests" class="mobile-tab" data-route="contests"><span>◇</span><small>공모전</small></a>
-    <a href="#/ai-news" class="mobile-tab" data-route="ai-news"><span>✦</span><small>AI 뉴스</small></a>
-    <a href="#/ai-discovery" class="mobile-tab" data-route="ai-discovery"><span>◎</span><small>Discovery</small></a>
-    <a href="#/support" class="mobile-tab" data-route="support" id="mobileSupportNav"><span>○</span><small>창업지원</small></a>
-    <a href="#/archive" class="mobile-tab" data-route="archive"><span>□</span><small>아카이브</small></a>
-  </nav>
 
   <dialog id="searchDialog" class="search-dialog">
     <div class="search-head">
