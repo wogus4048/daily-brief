@@ -1,8 +1,10 @@
 # daily-brief Apple Platform Design System
 
-`daily-brief` should look and behave like an Apple-platform information app, not a generic web dashboard.
+`daily-brief` should use an Apple-HIG-inspired web implementation, not claim to be a native Apple UI.
 
 The page-level visual source of truth is Apple Human Interface Guidelines (HIG), with an iPadOS-style split view on wide screens and an iOS-style single-pane/tab-bar layout on compact screens.
+
+Important: this is a web recreation of Apple interaction/layout patterns. It does **not** use UIKit, SwiftUI, or Apple-provided native components directly.
 
 `@primer/css` remains loaded only as a legacy/reset layer for existing markup. It is **not** the visual source of truth. `assets/apple-ui.css` must win visually.
 
@@ -298,11 +300,11 @@ Compact layouts:
 
 Honor `prefers-reduced-motion`.
 
-## 15. Dark mode
+## 15. Color scheme
 
-All navigation materials, grouped backgrounds, labels, fills, separators, and controls must adapt to `prefers-color-scheme: dark`.
+Use a light-only interface for this product unless a concrete product requirement for dark mode appears later.
 
-Do not duplicate hard-coded light-only values in components.
+Do not add automatic dark mode just because Apple platforms support it.
 
 ## 16. Review gate
 
@@ -317,5 +319,5 @@ Before merging UI changes:
 7. verify mobile targets are usable
 8. verify search and segmented controls work
 9. verify no large yellow/blue/green semantic category backgrounds remain
-10. verify light and dark color schemes
+10. verify the light color scheme remains coherent and readable
 11. keep `assets/apple-ui.css` as the final visual authority

@@ -7,7 +7,7 @@
  */
 
 body.apple-shell{
-  --ios-blue:#0088ff;
+  --ios-blue:#007aff;
   --ios-red:#ff383c;
   --ios-orange:#ff8d28;
   --ios-green:#34c759;
@@ -38,25 +38,6 @@ body.apple-shell{
   letter-spacing:-.015em;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
-}
-
-@media(prefers-color-scheme:dark){
-  body.apple-shell{
-    --ios-bg:#1c1c1e;
-    --ios-group:#2c2c2e;
-    --ios-elevated:#3a3a3c;
-    --ios-fill:rgba(118,118,128,.24);
-    --ios-fill-strong:rgba(118,118,128,.36);
-    --ios-label:#ffffff;
-    --ios-secondary-label:rgba(235,235,245,.64);
-    --ios-tertiary-label:rgba(235,235,245,.38);
-    --ios-separator:rgba(84,84,88,.54);
-    --ios-opaque-separator:#38383a;
-    --ios-glass:rgba(28,28,30,.72);
-    --ios-glass-strong:rgba(44,44,46,.84);
-    --ios-shadow:0 12px 36px rgba(0,0,0,.28);
-    --ios-shadow-soft:0 2px 12px rgba(0,0,0,.24);
-  }
 }
 
 body.apple-shell *{box-sizing:border-box}
