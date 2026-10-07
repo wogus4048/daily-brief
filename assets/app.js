@@ -472,7 +472,7 @@ function renderHomeExplore() {
 
 function renderHomeAllSignals() {
   const items = rankedHomeSignals(18);
-  $("#homeSignalCount").textContent = "showing " + items.length + " of " + state.all.length;
+  $("#homeSignalCount").textContent = "전체 " + state.all.length + "개 중 " + items.length + "개 표시";
   const el = $("#homeAllSignals");
   el.innerHTML = items.map(item =>
     '<article class="signal-table-row" data-id="' + esc(item.id) + '">' +
@@ -633,7 +633,7 @@ function renderCategory(type) {
     "ai-discovery": {
       eyebrow:"새 도구 · 사이트 · 저장소 · 워크플로",
       title:"AI Discovery",
-      description:"사이트, GitHub, Skill, MCP, Agent, Workflow와 커뮤니티 발견을 하나의 카탈로그로 정리하고 도입 가치를 함께 기록합니다."
+      description:"사이트, GitHub, Skill, MCP, Agent, Workflow를 한곳에 모아 무엇에 쓰는지와 최근 변화까지 함께 정리합니다."
     },
     support: {
       eyebrow:"현재 신청 가능",
@@ -688,9 +688,9 @@ function filterDefs(type) {
     ["skill","Skill"],
     ["mcp","MCP"],
     ["workflow","Workflow"],
-    ["hot","HOT"],
-    ["rising","RISING"],
-    ["mainstream","WELL_KNOWN"]
+    ["hot","급부상"],
+    ["rising","관심 증가"],
+    ["mainstream","많이 알려짐"]
   ];
   return [
     ["open","진행중"],
@@ -943,7 +943,7 @@ function renderCategoryList(type) {
         '<h3 class="category-item-title">' + esc(item.title) + '</h3>' +
         '<p class="category-item-summary">' + esc(item.summary || "") + '</p>' +
         tagsHtml(item.tags) +
-        '<div class="category-explainer"><span>왜 볼 가치가 있나</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
+        '<div class="category-explainer"><span>눈여겨볼 점</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
         '<div class="category-action">상세 정보와 링크 보기 <span>→</span></div>' +
       '</article>'
     ).join("");
@@ -999,22 +999,22 @@ const DISCOVERY_TYPE_LABELS = {
 };
 
 const DISCOVERY_AWARENESS_LABELS = {
-  WELL_KNOWN: "널리 알려짐",
-  SPECIALIZED: "특정 분야 중심",
-  EARLY: "초기"
+  WELL_KNOWN: "많이 알려짐",
+  SPECIALIZED: "일부 커뮤니티 중심",
+  EARLY: "아직 초기"
 };
 
 const DISCOVERY_TREND_LABELS = {
   HOT: "급부상",
-  RISING: "상승세",
-  STEADY: "꾸준함",
-  RESURFACED: "재부상"
+  RISING: "관심 증가",
+  STEADY: "꾸준히 언급",
+  RESURFACED: "다시 주목"
 };
 
 const DISCOVERY_NEWS_LABELS = {
   NEW_RELEASE: "새로 등장",
-  NEWLY_DISCOVERED: "새로 발견",
-  UPDATED: "주요 업데이트",
+  NEWLY_DISCOVERED: "오늘 처음 찾음",
+  UPDATED: "최근 업데이트",
   BASELINE: "기존 주요 항목"
 };
 
@@ -1068,7 +1068,7 @@ function discoveryTopCard(item, index) {
     discoverySignalBadges(item) +
     '<h3>' + esc(item.title) + '</h3>' +
     '<p>' + esc(item.summary || "") + '</p>' +
-    '<div class="discovery-why"><span>왜 볼 가치가 있나</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
+    '<div class="discovery-why"><span>눈여겨볼 점</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
     '<div class="discovery-card-action">자세히 보기 <span>→</span></div>' +
   '</article>';
 }
@@ -1082,7 +1082,7 @@ function discoveryRow(item) {
       tagsHtml(item.categories || item.tags) +
     '</div>' +
     '<div class="discovery-row-side">' +
-      '<span>왜 볼 가치가 있나</span>' +
+      '<span>눈여겨볼 점</span>' +
       '<p>' + esc(cut(item.why || item.description || item.summary, 150)) + '</p>' +
     '</div>' +
   '</article>';
@@ -1104,7 +1104,7 @@ function renderDiscoveryHub() {
   const el = $("#discoveryHub");
 
   if (!items.length) {
-    el.innerHTML = '<header class="discovery-head"><p class="section-eyebrow">AI Discovery</p><h1>AI Discovery</h1><p>새로운 도구와 워크플로를 발견하면 여기에 누적합니다.</p></header><div class="empty-state">아직 수집된 항목이 없습니다.</div>';
+    el.innerHTML = '<header class="discovery-head"><p class="section-eyebrow">AI Discovery</p><h1>AI Discovery</h1><p>새로운 도구와 워크플로를 찾으면 여기에 차곡차곡 정리합니다.</p></header><div class="empty-state">아직 모아둔 항목이 없습니다.</div>';
     return;
   }
 
@@ -1127,17 +1127,17 @@ function renderDiscoveryHub() {
 
   el.innerHTML =
     '<header class="discovery-head">' +
-      '<div><p class="section-eyebrow">TOOLS · OPEN SOURCE · WORKFLOWS</p><h1>AI Discovery</h1>' +
-      '<p>도구, 오픈소스, Skill, MCP, Agent, Workflow를 유형별로 정리하고 현재 신호와 참고 이유를 함께 기록합니다.</p></div>' +
+      '<div><p class="section-eyebrow">도구 · 오픈소스 · 워크플로</p><h1>AI Discovery</h1>' +
+      '<p>AI 도구와 오픈소스, Skill, MCP, Agent, Workflow를 모아두고 무엇에 쓰는지와 요즘 얼마나 주목받는지 함께 정리합니다.</p></div>' +
       '<div class="discovery-stats">' +
-        '<div><span>오늘 새로 발견</span><strong>' + todayNew + '</strong></div>' +
-        '<div><span>상승 신호</span><strong>' + rising + '</strong></div>' +
+        '<div><span>오늘 새로 찾음</span><strong>' + todayNew + '</strong></div>' +
+        '<div><span>요즘 뜨는 항목</span><strong>' + rising + '</strong></div>' +
         '<div><span>전체</span><strong>' + items.length + '</strong></div>' +
       '</div>' +
     '</header>' +
 
     '<section class="discovery-top">' +
-      '<div class="discovery-section-head"><div><p class="section-eyebrow">TOP SIGNALS</p><h2>주요 발견</h2></div><span>신호와 새 소식을 함께 반영</span></div>' +
+      '<div class="discovery-section-head"><div><p class="section-eyebrow">먼저 볼 것</p><h2>주요 발견</h2></div><span>최근 변화와 관심도를 함께 반영</span></div>' +
       '<div class="discovery-top-grid">' + top.map(discoveryTopCard).join("") + '</div>' +
     '</section>' +
 
@@ -1149,9 +1149,9 @@ function renderDiscoveryHub() {
     '</div>' +
 
     '<section class="discovery-all">' +
-      '<div class="discovery-section-head"><div><p class="section-eyebrow">CATALOG</p><h2>전체 항목</h2></div><span>수집 단계에서는 버리지 않음</span></div>' +
+      '<div class="discovery-section-head"><div><p class="section-eyebrow">전체 모음</p><h2>모든 항목</h2></div><span>찾은 항목은 빠짐없이 모아둡니다</span></div>' +
       '<div class="discovery-filter-row" id="discoveryFilters">' +
-        [["all","전체"],["new","오늘 발견"],["rising","상승 신호"],["site","사이트"],["directory","디렉터리"],["github","GitHub"],["skill","Skill"],["mcp","MCP"],["agent","Agent"],["workflow","Workflow"]]
+        [["all","전체"],["new","오늘 찾은 것"],["rising","요즘 뜨는 것"],["site","사이트"],["directory","디렉터리"],["github","GitHub"],["skill","Skill"],["mcp","MCP"],["agent","Agent"],["workflow","Workflow"]]
           .map(([key,label]) => '<button class="filter-chip ' + (state.discoveryFilter === key ? "active" : "") + '" data-filter="' + key + '">' + label + '</button>').join("") +
       '</div>' +
       '<div class="discovery-all-list" id="discoveryAllList"></div>' +
@@ -1304,13 +1304,13 @@ function renderDiscoveryDetail(item) {
   ).join("");
 
   $("#detailContent").innerHTML =
-    infoBlock("무엇인가","",[["설명", item.description || item.summary],["왜 볼 가치가 있나", item.why],["발견 이유", item.discoveryReason]]) +
-    infoBlock("현재 신호","",[
-      ["인지도", discoveryLabel(DISCOVERY_AWARENESS_LABELS, item.awareness)],
-      ["트렌드", discoveryLabel(DISCOVERY_TREND_LABELS, item.trend)],
-      ["새 소식", discoveryLabel(DISCOVERY_NEWS_LABELS, item.newsState)]
+    infoBlock("무엇인가","",[["설명", item.description || item.summary],["눈여겨볼 점", item.why],["어디서 찾았나", item.discoveryReason]]) +
+    infoBlock("요즘 분위기","",[
+      ["알려진 정도", discoveryLabel(DISCOVERY_AWARENESS_LABELS, item.awareness)],
+      ["관심도", discoveryLabel(DISCOVERY_TREND_LABELS, item.trend)],
+      ["최근 변화", discoveryLabel(DISCOVERY_NEWS_LABELS, item.newsState)]
     ]) +
-    infoBlock("신호","",[["발견 경로", (item.signals || []).join(" · ")],["카테고리", (item.categories || []).join(" · ")]]) +
+    infoBlock("어디서 봤나","",[["찾은 경로", (item.signals || []).join(" · ")],["분류", (item.categories || []).join(" · ")]]) +
     (related.length ? ideaBlock("연결된 항목", related) : "") +
     (links.length ? '<section class="detail-block"><h2>링크</h2><div class="official-link-list">' + links.map(l => '<a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer"><span>' + esc(l.label) + '</span><span>↗</span></a>').join("") + '</div></section>' : '');
 
