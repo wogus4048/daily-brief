@@ -748,10 +748,10 @@ function renderCategoryList(type) {
       '<article class="category-card ai-category-card" data-id="' + esc(item.id) + '">' +
         '<div class="card-meta-row"><div class="card-status-group">' +
           changeBadge(item, "discovery") +
-          '<span class="meta-label">' + esc(String(item.discoveryType || "site").toUpperCase()) + '</span>' +
-          (item.awareness ? '<span class="meta-label">' + esc(item.awareness) + '</span>' : '') +
-          (item.trend ? '<span class="meta-label">' + esc(item.trend) + '</span>' : '') +
-          (item.newsState ? '<span class="meta-label">' + esc(item.newsState) + '</span>' : '') +
+          '<span class="meta-label">' + esc(discoveryTypeLabel(item.discoveryType)) + '</span>' +
+          (item.awareness ? '<span class="meta-label">' + esc(discoveryLabel(DISCOVERY_AWARENESS_LABELS, item.awareness)) + '</span>' : '') +
+          (item.trend ? '<span class="meta-label">' + esc(discoveryLabel(DISCOVERY_TREND_LABELS, item.trend)) + '</span>' : '') +
+          (item.newsState ? '<span class="meta-label">' + esc(discoveryLabel(DISCOVERY_NEWS_LABELS, item.newsState)) + '</span>' : '') +
         '</div>' + dateMetaHtml(item, "ai") + '</div>' +
         '<h3 class="category-item-title">' + esc(item.title) + '</h3>' +
         '<p class="category-item-summary">' + esc(item.summary || "") + '</p>' +
@@ -827,7 +827,8 @@ const DISCOVERY_TREND_LABELS = {
 const DISCOVERY_NEWS_LABELS = {
   NEW_RELEASE: "새로 등장",
   NEWLY_DISCOVERED: "새로 발견",
-  UPDATED: "주요 업데이트"
+  UPDATED: "주요 업데이트",
+  BASELINE: "기존 주요 항목"
 };
 
 function discoveryLabel(map, value) {
@@ -856,7 +857,7 @@ function discoveryPrimaryGroup(item) {
 
 function discoveryRank(item) {
   const trendScore = { HOT: 50, RISING: 40, RESURFACED: 30, STEADY: 15 };
-  const newsScore = { NEW_RELEASE: 35, UPDATED: 30, NEWLY_DISCOVERED: 20 };
+  const newsScore = { NEW_RELEASE: 35, UPDATED: 30, NEWLY_DISCOVERED: 20, BASELINE: 5 };
   return (trendScore[String(item.trend || "").toUpperCase()] || 0) +
     (newsScore[String(item.newsState || "").toUpperCase()] || 0);
 }
@@ -963,7 +964,7 @@ function renderDiscoveryHub() {
     '<section class="discovery-all">' +
       '<div class="discovery-section-head"><div><p class="section-eyebrow">전체 기록</p><h2>Everything</h2></div><span>수집 단계에서는 버리지 않음</span></div>' +
       '<div class="discovery-filter-row" id="discoveryFilters">' +
-        [["all","전체"],["new","오늘 발견"],["rising","상승세"],["site","사이트"],["directory","디렉터리"],["github","GitHub"],["skill","Skill"],["mcp","MCP"],["agent","Agent"],["workflow","Workflow"]]
+        [["all","전체"],["new","오늘 발견"],["rising","상승 신호"],["site","사이트"],["directory","디렉터리"],["github","GitHub"],["skill","Skill"],["mcp","MCP"],["agent","Agent"],["workflow","Workflow"]]
           .map(([key,label]) => '<button class="filter-chip ' + (state.discoveryFilter === key ? "active" : "") + '" data-filter="' + key + '">' + label + '</button>').join("") +
       '</div>' +
       '<div class="discovery-all-list" id="discoveryAllList"></div>' +
@@ -1104,10 +1105,10 @@ function renderDiscoveryDetail(item) {
   const related = item.related || [];
   $("#detailHeader").innerHTML =
     '<div class="detail-kicker">' + changeBadge(item, "discovery") +
-      '<span class="detail-pill">' + esc(String(item.discoveryType || "site").toUpperCase()) + '</span>' +
-      (item.awareness ? '<span class="detail-pill">' + esc(item.awareness) + '</span>' : '') +
-      (item.trend ? '<span class="detail-pill">' + esc(item.trend) + '</span>' : '') +
-      (item.newsState ? '<span class="detail-pill">' + esc(item.newsState) + '</span>' : '') +
+      '<span class="detail-pill">' + esc(discoveryTypeLabel(item.discoveryType)) + '</span>' +
+      (item.awareness ? '<span class="detail-pill">' + esc(discoveryLabel(DISCOVERY_AWARENESS_LABELS, item.awareness)) + '</span>' : '') +
+      (item.trend ? '<span class="detail-pill">' + esc(discoveryLabel(DISCOVERY_TREND_LABELS, item.trend)) + '</span>' : '') +
+      (item.newsState ? '<span class="detail-pill">' + esc(discoveryLabel(DISCOVERY_NEWS_LABELS, item.newsState)) + '</span>' : '') +
     '</div><h1>' + esc(item.title) + '</h1><p>' + esc(item.summary || "") + '</p>' +
     '<div class="detail-date-line"><span><b>발견일</b> ' + esc(shortDate(item.firstSeenDate)) + '</span><span><b>최종 확인</b> ' + esc(shortDate(item.lastUpdatedDate || item.firstSeenDate)) + '</span></div>';
 
@@ -1117,7 +1118,11 @@ function renderDiscoveryDetail(item) {
 
   $("#detailContent").innerHTML =
     infoBlock("무엇인가","",[["설명", item.description || item.summary],["왜 볼 가치가 있나", item.why],["발견 이유", item.discoveryReason]]) +
-    infoBlock("현재 신호","",[["인지도", item.awareness],["트렌드", item.trend],["새 소식", item.newsState]]) +
+    infoBlock("현재 신호","",[
+      ["인지도", discoveryLabel(DISCOVERY_AWARENESS_LABELS, item.awareness)],
+      ["트렌드", discoveryLabel(DISCOVERY_TREND_LABELS, item.trend)],
+      ["새 소식", discoveryLabel(DISCOVERY_NEWS_LABELS, item.newsState)]
+    ]) +
     infoBlock("신호","",[["발견 경로", (item.signals || []).join(" · ")],["카테고리", (item.categories || []).join(" · ")]]) +
     (related.length ? ideaBlock("연결된 항목", related) : "") +
     (links.length ? '<section class="detail-block"><h2>링크</h2><div class="official-link-list">' + links.map(l => '<a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer"><span>' + esc(l.label) + '</span><span>↗</span></a>').join("") + '</div></section>' : '');

@@ -77,7 +77,7 @@ Required fields:
 - `discoveryReason`: compact explanation of the discovery evidence
 - `awareness`: one of `WELL_KNOWN`, `SPECIALIZED`, `EARLY`
 - `trend`: one of `HOT`, `RISING`, `STEADY`, `RESURFACED`
-- `newsState`: one of `NEW_RELEASE`, `NEWLY_DISCOVERED`, `UPDATED`
+- `newsState`: one of `NEW_RELEASE`, `NEWLY_DISCOVERED`, `UPDATED`, `BASELINE`
 - optional `related[]` references to related sites/repos/skills/workflows
 
 Collection policy:
@@ -90,7 +90,7 @@ Collection policy:
   - awareness: how broadly known it is (`awareness`)
   - trend: how attention is changing now (`trend`)
   - news state: why it appears in today's brief (`newsState`)
-- Do not infer popularity from the fact that the user only just discovered an item. A long-popular project may be `WELL_KNOWN · HOT · NEWLY_DISCOVERED`.
+- Do not infer popularity from the fact that the user only just discovered an item. Do not mark an item `NEWLY_DISCOVERED` merely because it was newly added to this catalog. Use `BASELINE` for important projects the user/system already knew before cataloging. A long-popular but newly cataloged project may be `WELL_KNOWN · HOT · BASELINE`.
 - Every daily refresh must produce both a ranked Top Finds view and the full discovery catalog; ranking may hide nothing from storage.
 - High-value recurring sources discovered through an item should feed back into Source Radar: discovery -> candidate -> SHADOW -> ACTIVE, using the existing source lifecycle engine where technically crawlable.
 - Rank by signal strength, novelty, practical usefulness, reproducibility, openness and maintenance activity. This ranking is for presentation only and must not become an internal adoption/status field.

@@ -50,7 +50,7 @@ for item in data['aiDiscovery']:
         assert item.get(field), f"aiDiscovery.{item['id']} missing {field}"
     assert item['awareness'] in ('WELL_KNOWN', 'SPECIALIZED', 'EARLY'), f"aiDiscovery.{item['id']}.awareness invalid"
     assert item['trend'] in ('HOT', 'RISING', 'STEADY', 'RESURFACED'), f"aiDiscovery.{item['id']}.trend invalid"
-    assert item['newsState'] in ('NEW_RELEASE', 'NEWLY_DISCOVERED', 'UPDATED'), f"aiDiscovery.{item['id']}.newsState invalid"
+    assert item['newsState'] in ('NEW_RELEASE', 'NEWLY_DISCOVERED', 'UPDATED', 'BASELINE'), f"aiDiscovery.{item['id']}.newsState invalid"
     ids.append(item['id'])
 
 assert len(ids) == len(set(ids)), 'duplicate item id'
