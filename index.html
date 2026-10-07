@@ -102,10 +102,10 @@
                     <div class="filter-row" id="categoryTopicFilters"></div>
                   </div>
                 </div>
-                <select id="categorySort" class="form-select sort-select" aria-label="정렬">
-                  <option value="deadline">마감 임박순</option>
-                  <option value="default">기본순</option>
-                </select>
+                <ion-select id="categorySort" class="sort-select" mode="ios" interface="popover" aria-label="정렬" value="deadline">
+                  <ion-select-option value="deadline">마감 임박순</ion-select-option>
+                  <ion-select-option value="default">기본순</ion-select-option>
+                </ion-select>
               </div>
               <ion-list class="category-list" id="categoryList" mode="ios" inset="true"></ion-list>
             </section>
