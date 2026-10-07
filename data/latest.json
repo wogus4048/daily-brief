@@ -3887,8 +3887,6 @@
         "최근 Remotion·Claude Code 기반 Skill 사례가 계속 추가됨"
       ],
       "discoveryReason": "사용자 제보로 최초 발견 후 공식 사이트와 최근 Skill 사례를 재검증",
-      "adoption": "ADOPT",
-      "relevance": "daily-brief Source Radar의 고정 관찰 후보이자 motion-video Skill 설계 참고원",
       "links": [
         {
           "label": "Official",
@@ -3903,7 +3901,10 @@
         "Remotion Prompt Showcase",
         "Cinetic",
         "product-film-skill"
-      ]
+      ],
+      "marketPosition": "NICHE",
+      "momentum": "RISING",
+      "discoveryState": "NEW_TO_US"
     },
     {
       "id": "mosaic-lab-agent-directory",
@@ -3927,8 +3928,6 @@
         "lab-tested 표방"
       ],
       "discoveryReason": "AI Agent Skill/MCP 디렉터리 탐색 쿼리에서 발견",
-      "adoption": "USE",
-      "relevance": "Source Radar의 Skill/MCP 신규 후보 발굴용 핵심 반복 소스 후보",
       "links": [
         {
           "label": "Official",
@@ -3938,7 +3937,10 @@
       "related": [
         "Skills CLI",
         "MCP directories"
-      ]
+      ],
+      "marketPosition": "NICHE",
+      "momentum": "RISING",
+      "discoveryState": "NEW_TO_US"
     },
     {
       "id": "cookies-for-ai",
@@ -3962,8 +3964,6 @@
         "llms.txt 및 MCP 제공"
       ],
       "discoveryReason": "Agent Skill/MCP 디렉터리 비교 검색에서 발견",
-      "adoption": "ADOPT",
-      "relevance": "신규 Skill/MCP/AI coding tool 발견과 소스 자동 확장에 바로 활용 가능",
       "links": [
         {
           "label": "Official",
@@ -3973,7 +3973,10 @@
       "related": [
         "Skill directories",
         "MCP directories"
-      ]
+      ],
+      "marketPosition": "NICHE",
+      "momentum": "RISING",
+      "discoveryState": "NEW_TO_US"
     },
     {
       "id": "remotion-prompt-showcase",
@@ -3996,8 +3999,6 @@
         "Claude Code·Codex·OpenCode 사례 명시"
       ],
       "discoveryReason": "Prompt Motion 주변 생태계 교차검증 중 공식 Remotion 소스에서 발견",
-      "adoption": "USE",
-      "relevance": "코드 기반 영상/모션 Skill과 workflow 신규 사례의 반복 수집원",
       "links": [
         {
           "label": "Official",
@@ -4007,7 +4008,10 @@
       "related": [
         "Prompt Motion",
         "Remotion Skills"
-      ]
+      ],
+      "marketPosition": "MAINSTREAM",
+      "momentum": "STABLE",
+      "discoveryState": "NEW_TO_US"
     }
   ],
   "support": [
