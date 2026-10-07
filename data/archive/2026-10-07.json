@@ -4012,6 +4012,170 @@
       "awareness": "WELL_KNOWN",
       "trend": "STEADY",
       "newsState": "NEWLY_DISCOVERED"
+    },
+    {
+      "id": "superpowers-obra",
+      "title": "Superpowers",
+      "summary": "코딩 에이전트가 설계, 계획, TDD, 서브에이전트 실행, 리뷰를 일관된 절차로 따르게 만드는 Agent Skill 프레임워크",
+      "discoveryType": "github",
+      "description": "Jesse Vincent와 Prime Radiant 팀이 만든 오픈소스 프로젝트로, Claude Code·Codex·Cursor·OpenCode 등 여러 코딩 에이전트에 공통 개발 방법론과 composable skills를 적용한다.",
+      "why": "단일 프롬프트가 아니라 설계 승인, 구현 계획, TDD, 서브에이전트 개발, 리뷰까지 개발 흐름 전체를 Skill과 hook으로 강제하는 대표 사례라 Agent Harness 설계 비교 기준으로 보기 좋다.",
+      "firstSeenDate": "2026-10-07",
+      "lastUpdatedDate": "2026-10-07",
+      "categories": [
+        "Agent",
+        "Harness",
+        "Skill",
+        "Workflow",
+        "Dev Tool"
+      ],
+      "signals": [
+        "GitHub 약 29.6만 stars",
+        "Claude와 Codex 공식 플러그인 설치 경로 제공",
+        "2026-10-06까지 활발한 업데이트"
+      ],
+      "discoveryReason": "코딩 에이전트 Skill/Harness 생태계에서 반복적으로 언급되는 대표 프로젝트를 기존 Discovery 구조에 편입",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/obra/superpowers"
+        },
+        {
+          "label": "Release Notes",
+          "url": "https://github.com/obra/superpowers/blob/main/RELEASE-NOTES.md"
+        }
+      ],
+      "related": [
+        "Claude Code",
+        "Codex",
+        "Agent Skills",
+        "Subagent-driven development"
+      ],
+      "awareness": "WELL_KNOWN",
+      "trend": "HOT",
+      "newsState": "NEWLY_DISCOVERED"
+    },
+    {
+      "id": "artex-autumn27",
+      "title": "ARTEX",
+      "summary": "여러 AI Agent가 침투 테스트 작업을 수행하면서 자산, 도구 호출, 승인, 결과와 증거 흐름을 함께 관리하는 보안 Agent 시스템",
+      "discoveryType": "github",
+      "description": "Go 백엔드와 Next.js UI로 구성된 self-hosted 보안 연구 시스템으로, 다중 work agent, 도구 실행, 승인 인터셉트, 트래픽 기록, 취약점과 evidence chain을 한곳에서 관리한다.",
+      "why": "보안 용도 자체보다 Agent 작업의 실행 기록, 승인, evidence, 재검증 구조가 잘 드러나 있어 증거 기반 Harness와 verifier 설계를 연구할 때 참고 가치가 크다.",
+      "firstSeenDate": "2026-10-07",
+      "lastUpdatedDate": "2026-10-07",
+      "categories": [
+        "Agent",
+        "Security",
+        "Harness",
+        "Evidence",
+        "Workflow"
+      ],
+      "signals": [
+        "GitHub 1.7k+ stars",
+        "최근 외부 실험 리뷰에서 단기간 star 증가 관측",
+        "증거·승인·세션·도구 호출을 명시적으로 모델링"
+      ],
+      "discoveryReason": "Agent evidence/approval/harness 패턴 조사 과정에서 발견한 프로젝트를 Discovery 카탈로그에 편입",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/Autumn-27/ARTEX"
+        },
+        {
+          "label": "Demo",
+          "url": "https://artex-demo.vercel.app/"
+        }
+      ],
+      "related": [
+        "Evidence chain",
+        "Human-in-the-loop approval",
+        "Agent audit"
+      ],
+      "awareness": "SPECIALIZED",
+      "trend": "RISING",
+      "newsState": "NEWLY_DISCOVERED"
+    },
+    {
+      "id": "k-humanizer-evergreentree97",
+      "title": "K-Humanizer",
+      "summary": "사실, 수치, 직무 용어를 보존하면서 AI가 쓴 한국어의 번역투와 기계적인 문장 구조를 자연스럽게 다듬는 Agent Skill",
+      "discoveryType": "skill",
+      "description": "한국어 이력서, 경력기술서, 포트폴리오, 문서와 메시지 등을 대상으로 의미와 사실을 유지하면서 번역투, 추상적 표현, 과도한 성과 표현과 기계적인 구조를 줄이는 오픈소스 Skill이다.",
+      "why": "영어권 Humanizer를 그대로 번역하는 방식이 아니라 한국어 글의 리듬과 직무 문서 특성을 별도로 다루는 재사용 가능한 Skill이라 한국어 글쓰기 도구 생태계를 볼 때 좋은 기준점이다.",
+      "firstSeenDate": "2026-10-07",
+      "lastUpdatedDate": "2026-10-07",
+      "categories": [
+        "Skill",
+        "Writing",
+        "Korean",
+        "Quality"
+      ],
+      "signals": [
+        "2026-08 Cursor 커뮤니티 공개",
+        "MIT 라이선스",
+        "Agent Skill 형태로 배포"
+      ],
+      "discoveryReason": "사용자가 직접 언급한 한국어 Humanizer 프로젝트를 공식 저장소와 Skill 문서로 확인",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/evergreentree97/K-Humanizer"
+        },
+        {
+          "label": "Skill",
+          "url": "https://www.skills.sh/evergreentree97/k-humanizer"
+        }
+      ],
+      "related": [
+        "Korean writing",
+        "Humanizer",
+        "Resume writing"
+      ],
+      "awareness": "EARLY",
+      "trend": "STEADY",
+      "newsState": "NEWLY_DISCOVERED"
+    },
+    {
+      "id": "geullint",
+      "title": "GeulLint",
+      "summary": "문서를 외부 서버로 보내지 않고 맞춤법, 띄어쓰기, 문법, 문체를 검사하는 로컬 우선 한국어 Linter",
+      "discoveryType": "github",
+      "description": "Rust 기반 규칙 엔진을 WebAssembly, VS Code, CLI, LSP, CI에서 공통으로 사용하며 JSON·SARIF 출력, 사용자 사전, 프로젝트 rule pack 같은 자동화 기능을 제공한다.",
+      "why": "일반 맞춤법 웹서비스와 달리 로컬 실행, 재현 가능한 규칙 ID, CLI·LSP·CI 통합을 제공해 한국어 문서 품질 검사를 개발 파이프라인에 넣는 사례로 가치가 있다.",
+      "firstSeenDate": "2026-10-07",
+      "lastUpdatedDate": "2026-10-07",
+      "categories": [
+        "Writing",
+        "Quality",
+        "Lint",
+        "Korean",
+        "Dev Tool"
+      ],
+      "signals": [
+        "공개 버전 v0.4.0-beta.1",
+        "2026-10-01까지 저장소 업데이트",
+        "Web·VS Code·CLI·LSP·CI 동일 엔진"
+      ],
+      "discoveryReason": "사용자가 직접 언급한 한국어 교정 오픈소스를 공식 저장소에서 확인",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/binibinibin123/geullint"
+        },
+        {
+          "label": "Web",
+          "url": "https://binibinibin123.github.io/geullint/"
+        }
+      ],
+      "related": [
+        "Korean lint",
+        "LSP",
+        "Writing quality"
+      ],
+      "awareness": "EARLY",
+      "trend": "STEADY",
+      "newsState": "NEWLY_DISCOVERED"
     }
   ],
   "support": [

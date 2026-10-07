@@ -567,10 +567,14 @@
           "AI agent tool showcase directory Claude Code Codex skills October 2026"
         ],
         "github": [
-          "GitHub new AI agent skill MCP Claude Code Codex October 2026"
+          "GitHub new AI agent skill MCP Claude Code Codex October 2026",
+          "obra superpowers GitHub agentic skills framework",
+          "Autumn-27 ARTEX GitHub AI agent evidence"
         ],
         "skillsMcpAgents": [
-          "Claude Code skill MCP agent new tool October 2026"
+          "Claude Code skill MCP agent new tool October 2026",
+          "evergreentree97 K-Humanizer Agent Skill",
+          "GeulLint Korean linter GitHub"
         ],
         "workflows": [
           "AI coding workflow Remotion Claude Code Codex showcase October 2026"
@@ -616,6 +620,30 @@
           "title": "Reusable Claude Code corrections workflow",
           "url": "https://www.reddit.com/r/ClaudeWorkflows/comments/1wy7myl/workflow_automating_claude_code_corrections/",
           "disposition": "NOT_RELEVANT"
+        },
+        {
+          "title": "Superpowers",
+          "url": "https://github.com/obra/superpowers",
+          "disposition": "PUBLISHED",
+          "id": "superpowers-obra"
+        },
+        {
+          "title": "ARTEX",
+          "url": "https://github.com/Autumn-27/ARTEX",
+          "disposition": "PUBLISHED",
+          "id": "artex-autumn27"
+        },
+        {
+          "title": "K-Humanizer",
+          "url": "https://github.com/evergreentree97/K-Humanizer",
+          "disposition": "PUBLISHED",
+          "id": "k-humanizer-evergreentree97"
+        },
+        {
+          "title": "GeulLint",
+          "url": "https://github.com/binibinibin123/geullint",
+          "disposition": "PUBLISHED",
+          "id": "geullint"
         }
       ]
     }
@@ -1049,7 +1077,11 @@
     "prompt-motion",
     "mosaic-lab-agent-directory",
     "cookies-for-ai",
-    "remotion-prompt-showcase"
+    "remotion-prompt-showcase",
+    "superpowers-obra",
+    "artex-autumn27",
+    "k-humanizer-evergreentree97",
+    "geullint"
   ],
   "reverificationFailures": [],
   "reverificationEvidence": [
