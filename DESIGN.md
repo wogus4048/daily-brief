@@ -151,20 +151,20 @@ Desktop-first.
 
 - maximum content width: about 1460px
 - sticky top header
-- home uses a Product Hunt-inspired three-column shell
+- all primary routes use a Product Hunt-inspired three-column shell
 - left rail = navigation / scope selection
 - center = the primary feed and the visual focus of the page
 - right rail = time-sensitive/contextual information
-- category/detail pages may keep their current simpler layout until they are separately migrated
+- only the center content changes between home, category, discovery, archive, and detail routes
 
-Home order:
+Global shell:
 
 1. header: brand + search + date
 2. left rail: categories, quick views, archive
-3. center: one continuous ranked/dated feed
+3. center: route-specific primary content
 4. right rail: upcoming deadlines, new items, trending topics, recent updates
 
-Do not rebuild the old stacked home sections (`priority`, `category cards`, `all items`, `resources`, `deadlines`, `archive`) as separate blocks. Their information is redistributed across the three-column shell.
+Home uses one continuous ranked/dated feed. Category, discovery, archive, and detail routes use the same shell and should keep their center content flat and row-oriented instead of reverting to full-width dashboard/card layouts.
 
 The current Product Hunt homepage is the visual reference for home typography and surface treatment. The reference values observed on 2026-10-07 include:
 

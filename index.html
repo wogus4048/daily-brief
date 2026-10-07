@@ -26,53 +26,45 @@
           </button>
           <div class="topbar-date" id="topbarDate">불러오는 중</div>
         </div>
-        <nav class="site-nav" aria-label="메인 메뉴">
-          <a class="nav-item" href="#/" data-route="home"><span>오늘</span></a>
-          <a class="nav-item" href="#/ai-news" data-route="ai-news"><span>AI 뉴스</span><span class="nav-count" id="topNavAiCount">0</span></a>
-          <a class="nav-item" href="#/ai-discovery" data-route="ai-discovery"><span>AI Discovery</span><span class="nav-count" id="topNavDiscoveryCount">0</span></a>
-          <a class="nav-item" href="#/contests" data-route="contests"><span>공모전 · 해커톤</span><span class="nav-count" id="topNavContestCount">0</span></a>
-          <a class="nav-item" href="#/support" data-route="support" id="supportNav"><span>창업 · 지원사업</span><span class="nav-count" id="topNavSupportCount">0</span></a>
-          <a class="nav-item" href="#/archive" data-route="archive"><span>아카이브</span></a>
-        </nav>
       </header>
 
       <main>
-        <section class="view" id="homeView" hidden>
-          <div class="home-shell">
-            <aside class="home-left" aria-label="탐색">
-              <nav class="side-nav">
-                <div class="side-group">
-                  <a class="side-link nav-item active" href="#/" data-route="home"><span>오늘</span><b id="leftTodayCount">0</b></a>
-                </div>
+        <div class="global-shell">
+          <aside class="global-left" aria-label="탐색">
+            <nav class="side-nav">
+              <div class="side-group">
+                <a class="side-link nav-item active" href="#/" data-route="home"><span>오늘</span><b id="leftTodayCount">0</b></a>
+              </div>
 
-                <div class="side-group">
-                  <h2>분야</h2>
-                  <a class="side-link nav-item" href="#/ai-news" data-route="ai-news"><span>AI 뉴스</span><b id="navAiCount">0</b></a>
-                  <a class="side-link" href="#/ai-discovery" data-discovery-filter="tools"><span>AI 도구 · 서비스</span><b id="leftToolCount">0</b></a>
-                  <a class="side-link" href="#/ai-discovery" data-discovery-filter="github"><span>GitHub · 오픈소스</span><b id="leftGithubCount">0</b></a>
-                  <a class="side-link" href="#/ai-discovery" data-discovery-filter="agents"><span>MCP · Skill · Agent</span><b id="leftAgentCount">0</b></a>
-                  <a class="side-link nav-item" href="#/contests" data-route="contests"><span>공모전 · 해커톤</span><b id="navContestCount">0</b></a>
-                  <a class="side-link nav-item" href="#/support" data-route="support"><span>창업 · 지원사업</span><b id="navSupportCount">0</b></a>
-                </div>
+              <div class="side-group">
+                <h2>분야</h2>
+                <a class="side-link nav-item" href="#/ai-news" data-route="ai-news"><span>AI 뉴스</span><b id="navAiCount">0</b></a>
+                <a class="side-link nav-item" href="#/ai-discovery" data-route="ai-discovery" data-discovery-filter="tools"><span>AI 도구 · 서비스</span><b id="leftToolCount">0</b></a>
+                <a class="side-link" href="#/ai-discovery" data-discovery-filter="github"><span>GitHub · 오픈소스</span><b id="leftGithubCount">0</b></a>
+                <a class="side-link" href="#/ai-discovery" data-discovery-filter="agents"><span>MCP · Skill · Agent</span><b id="leftAgentCount">0</b></a>
+                <a class="side-link nav-item" href="#/contests" data-route="contests"><span>공모전 · 해커톤</span><b id="navContestCount">0</b></a>
+                <a class="side-link nav-item" href="#/support" data-route="support"><span>창업 · 지원사업</span><b id="navSupportCount">0</b></a>
+              </div>
 
-                <div class="side-group">
-                  <h2>빠른 보기</h2>
-                  <button class="side-link side-filter active" type="button" data-home-filter="all"><span>전체</span></button>
-                  <button class="side-link side-filter" type="button" data-home-filter="new"><span>오늘 새로</span><b id="leftNewCount">0</b></button>
-                  <button class="side-link side-filter" type="button" data-home-filter="updated"><span>최근 업데이트</span><b id="leftUpdatedCount">0</b></button>
-                  <button class="side-link side-filter" type="button" data-home-filter="rising"><span>관심 증가</span><b id="leftRisingCount">0</b></button>
-                  <button class="side-link side-filter" type="button" data-home-filter="urgent"><span>마감 임박</span><b id="leftUrgentCount">0</b></button>
-                </div>
+              <div class="side-group">
+                <h2>빠른 보기</h2>
+                <button class="side-link side-filter active" type="button" data-home-filter="all"><span>전체</span></button>
+                <button class="side-link side-filter" type="button" data-home-filter="new"><span>오늘 새로</span><b id="leftNewCount">0</b></button>
+                <button class="side-link side-filter" type="button" data-home-filter="updated"><span>최근 업데이트</span><b id="leftUpdatedCount">0</b></button>
+                <button class="side-link side-filter" type="button" data-home-filter="rising"><span>관심 증가</span><b id="leftRisingCount">0</b></button>
+                <button class="side-link side-filter" type="button" data-home-filter="urgent"><span>마감 임박</span><b id="leftUrgentCount">0</b></button>
+              </div>
 
-                <div class="side-group side-archive-group">
-                  <h2>지난 기록</h2>
-                  <div id="homeLeftArchive"></div>
-                  <a class="side-link nav-item" href="#/archive" data-route="archive"><span>아카이브 전체</span></a>
-                </div>
-              </nav>
-            </aside>
+              <div class="side-group side-archive-group">
+                <h2>지난 기록</h2>
+                <div id="homeLeftArchive"></div>
+                <a class="side-link nav-item" href="#/archive" data-route="archive"><span>아카이브 전체</span></a>
+              </div>
+            </nav>
+          </aside>
 
-            <section class="home-main">
+          <section class="global-center">
+            <section class="view" id="homeView" hidden>
               <header class="feed-head">
                 <div>
                   <p class="section-eyebrow">오늘 · <span id="homeDateLabel">—</span></p>
@@ -88,85 +80,82 @@
               <div class="product-feed" id="homeFeed"></div>
             </section>
 
-            <aside class="home-right" aria-label="오늘의 보조 정보">
-              <section class="right-section">
-                <div class="right-head"><h2>마감 임박</h2><a href="#/contests">전체 보기</a></div>
-                <div class="right-list" id="homeRightUpcoming"></div>
-              </section>
-              <section class="right-section">
-                <div class="right-head"><h2>오늘 새로</h2><span id="homeRightNewCount">0</span></div>
-                <div class="right-list" id="homeRightNew"></div>
-              </section>
-              <section class="right-section">
-                <div class="right-head"><h2>주목 주제</h2><span>오늘 기준</span></div>
-                <div class="right-list" id="homeTrending"></div>
-              </section>
-              <section class="right-section">
-                <div class="right-head"><h2>최근 업데이트</h2><span>후속 소식</span></div>
-                <div class="right-list" id="homeRightUpdated"></div>
-              </section>
-            </aside>
-          </div>
-        </section>
+            <section class="view category-view" id="categoryView" hidden>
+              <header class="category-head">
+                <div>
+                  <p class="section-eyebrow" id="categoryEyebrow">CATEGORY</p>
+                  <h1 id="categoryTitle">카테고리</h1>
+                  <p id="categoryDescription"></p>
+                </div>
+                <div class="category-count" id="categoryCount">0건</div>
+              </header>
 
-        <section class="view category-view" id="categoryView" hidden>
-          <header class="category-head">
-            <div>
-              <p class="section-eyebrow" id="categoryEyebrow">CATEGORY</p>
-              <h1 id="categoryTitle">카테고리</h1>
-              <p id="categoryDescription"></p>
-            </div>
-            <div class="category-count" id="categoryCount">0건</div>
-          </header>
-
-          <div class="category-toolbar">
-            <div class="category-filter-stack">
-              <div class="filter-line">
-                <span class="filter-label">상태</span>
-                <div class="filter-row" id="categoryFilters"></div>
+              <div class="category-toolbar">
+                <div class="category-filter-stack">
+                  <div class="filter-line">
+                    <span class="filter-label">상태</span>
+                    <div class="filter-row" id="categoryFilters"></div>
+                  </div>
+                  <div class="filter-line" id="categoryTopicRow" hidden>
+                    <span class="filter-label">분야</span>
+                    <div class="filter-row" id="categoryTopicFilters"></div>
+                  </div>
+                </div>
+                <select id="categorySort" class="form-select sort-select" aria-label="정렬">
+                  <option value="deadline">마감 임박순</option>
+                  <option value="default">기본순</option>
+                </select>
               </div>
-              <div class="filter-line" id="categoryTopicRow" hidden>
-                <span class="filter-label">분야</span>
-                <div class="filter-row" id="categoryTopicFilters"></div>
+              <div class="category-list" id="categoryList"></div>
+            </section>
+
+            <section class="view discovery-view" id="discoveryView" hidden>
+              <div id="discoveryHub"></div>
+            </section>
+
+            <section class="view archive-view" id="archiveView" hidden>
+              <header class="category-head">
+                <div>
+                  <p class="section-eyebrow">지난 기록</p>
+                  <h1>지난 브리핑</h1>
+                  <p>날짜를 선택하면 당시의 스냅샷을 그대로 볼 수 있습니다.</p>
+                </div>
+              </header>
+              <div class="archive-page-grid" id="archivePageGrid"></div>
+            </section>
+
+            <section class="view detail-view" id="detailView" hidden>
+              <button class="btn btn-sm back-link" id="backButton">← 이전 화면</button>
+              <header class="detail-page-head">
+                <div class="detail-page-title" id="detailHeader"></div>
+                <div class="detail-actions-top" id="detailTopActions"></div>
+              </header>
+              <div class="detail-layout">
+                <article class="detail-content" id="detailContent"></article>
+                <aside class="detail-aside" id="detailAside"></aside>
               </div>
-            </div>
-            <select id="categorySort" class="form-select sort-select" aria-label="정렬">
-              <option value="deadline">마감 임박순</option>
-              <option value="default">기본순</option>
-            </select>
-          </div>
+            </section>
+          </section>
 
-          <div class="category-list" id="categoryList"></div>
-        </section>
-
-        <section class="view discovery-view" id="discoveryView" hidden>
-          <div id="discoveryHub"></div>
-        </section>
-
-        <section class="view archive-view" id="archiveView" hidden>
-          <header class="category-head">
-            <div>
-              <p class="section-eyebrow">지난 기록</p>
-              <h1>지난 브리핑</h1>
-              <p>날짜를 선택하면 당시의 스냅샷을 그대로 볼 수 있습니다.</p>
-            </div>
-          </header>
-          <div class="archive-page-grid" id="archivePageGrid"></div>
-        </section>
-
-        <section class="view detail-view" id="detailView" hidden>
-          <button class="btn btn-sm back-link" id="backButton">← 이전 화면</button>
-
-          <header class="detail-page-head">
-            <div class="detail-page-title" id="detailHeader"></div>
-            <div class="detail-actions-top" id="detailTopActions"></div>
-          </header>
-
-          <div class="detail-layout">
-            <article class="detail-content" id="detailContent"></article>
-            <aside class="detail-aside" id="detailAside"></aside>
-          </div>
-        </section>
+          <aside class="global-right" aria-label="오늘의 보조 정보">
+            <section class="right-section">
+              <div class="right-head"><h2>마감 임박</h2><a href="#/contests">전체 보기</a></div>
+              <div class="right-list" id="homeRightUpcoming"></div>
+            </section>
+            <section class="right-section">
+              <div class="right-head"><h2>오늘 새로</h2><span id="homeRightNewCount">0</span></div>
+              <div class="right-list" id="homeRightNew"></div>
+            </section>
+            <section class="right-section">
+              <div class="right-head"><h2>주목 주제</h2><span>오늘 기준</span></div>
+              <div class="right-list" id="homeTrending"></div>
+            </section>
+            <section class="right-section">
+              <div class="right-head"><h2>최근 업데이트</h2><span>후속 소식</span></div>
+              <div class="right-list" id="homeRightUpdated"></div>
+            </section>
+          </aside>
+        </div>
       </main>
 
       <footer>
