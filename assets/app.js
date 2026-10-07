@@ -6,7 +6,8 @@ const state = {
   categoryTopicFilter: "all",
   categorySort: "deadline",
   activeRoute: null,
-  viewStates: {}
+  viewStates: {},
+  discoveryFilter: "all"
 };
 
 const $ = (s) => document.querySelector(s);
@@ -215,7 +216,7 @@ function renderShared() {
 }
 
 function hideAllViews() {
-  ["#homeView","#categoryView","#archiveView","#detailView"].forEach(id => $(id).hidden = true);
+  ["#homeView","#categoryView","#discoveryView","#archiveView","#detailView"].forEach(id => $(id).hidden = true);
 }
 
 function setActiveNav(routeName) {
@@ -262,8 +263,8 @@ function route() {
 
   if (hash === "#/ai-discovery") {
     setActiveNav("ai-discovery");
-    $("#categoryView").hidden = false;
-    renderCategory("ai-discovery");
+    $("#discoveryView").hidden = false;
+    renderDiscoveryHub();
     document.title = "AI Discovery | daily-brief";
     state.lastRoute = hash;
     completeRoute(hash);
@@ -756,7 +757,7 @@ function renderCategoryList(type) {
         '<p class="category-item-summary">' + esc(item.summary || "") + '</p>' +
         tagsHtml(item.tags) +
         '<div class="category-explainer"><span>왜 볼 가치가 있나</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
-        '<div class="category-action">링크와 도입 판단 보기 <span>→</span></div>' +
+        '<div class="category-action">상세 정보와 링크 보기 <span>→</span></div>' +
       '</article>'
     ).join("");
   } else {
@@ -795,6 +796,222 @@ function renderCategoryList(type) {
 
 function tagsHtml(tags) {
   return '<div class="category-tags">' + (tags || []).slice(0,4).map(t => '<span class="category-tag">' + esc(t) + '</span>').join("") + '</div>';
+}
+
+
+const DISCOVERY_TYPE_LABELS = {
+  site: "사이트",
+  directory: "디렉터리",
+  github: "GitHub",
+  skill: "Skill",
+  mcp: "MCP",
+  agent: "Agent",
+  workflow: "Workflow",
+  discussion: "커뮤니티",
+  platform: "플랫폼"
+};
+
+const DISCOVERY_AWARENESS_LABELS = {
+  WELL_KNOWN: "널리 알려짐",
+  SPECIALIZED: "특정 분야 중심",
+  EARLY: "초기"
+};
+
+const DISCOVERY_TREND_LABELS = {
+  HOT: "급부상",
+  RISING: "상승세",
+  STEADY: "꾸준함",
+  RESURFACED: "재부상"
+};
+
+const DISCOVERY_NEWS_LABELS = {
+  NEW_RELEASE: "새로 등장",
+  NEWLY_DISCOVERED: "새로 발견",
+  UPDATED: "주요 업데이트"
+};
+
+function discoveryLabel(map, value) {
+  const key = String(value || "").toUpperCase();
+  return map[key] || String(value || "");
+}
+
+function discoveryPrimaryGroup(item) {
+  const type = String(item.discoveryType || "").toLowerCase();
+  if (type === "github") return "github";
+  if (["skill","mcp","agent"].includes(type)) return "agents";
+  if (type === "workflow") return "workflows";
+  if (["site","directory","platform"].includes(type)) return "sites";
+
+  const categories = (item.categories || []).map(v => String(v).toLowerCase());
+  if (categories.some(v => ["skill","mcp","agent"].includes(v))) return "agents";
+  if (categories.some(v => ["workflow","showcase","automation"].includes(v))) return "workflows";
+  return "sites";
+}
+
+function discoveryRank(item) {
+  const trendScore = { HOT: 50, RISING: 40, RESURFACED: 30, STEADY: 15 };
+  const newsScore = { NEW_RELEASE: 35, UPDATED: 30, NEWLY_DISCOVERED: 20 };
+  return (trendScore[String(item.trend || "").toUpperCase()] || 0) +
+    (newsScore[String(item.newsState || "").toUpperCase()] || 0);
+}
+
+function discoverySignalBadges(item) {
+  const parts = [
+    discoveryLabel(DISCOVERY_TYPE_LABELS, String(item.discoveryType || "").toLowerCase()),
+    discoveryLabel(DISCOVERY_AWARENESS_LABELS, item.awareness),
+    discoveryLabel(DISCOVERY_TREND_LABELS, item.trend),
+    discoveryLabel(DISCOVERY_NEWS_LABELS, item.newsState)
+  ].filter(Boolean);
+
+  return '<div class="discovery-signals">' +
+    parts.map((v,i) => '<span class="discovery-signal ' + (i === 2 ? "trend" : i === 3 ? "news" : "") + '">' + esc(v) + '</span>').join("") +
+  '</div>';
+}
+
+function discoveryTopCard(item, index) {
+  return '<article class="discovery-top-card ' + (index === 0 ? "primary" : "") + '" data-id="' + esc(item.id) + '">' +
+    '<div class="discovery-top-index">0' + (index + 1) + '</div>' +
+    discoverySignalBadges(item) +
+    '<h3>' + esc(item.title) + '</h3>' +
+    '<p>' + esc(item.summary || "") + '</p>' +
+    '<div class="discovery-why"><span>왜 볼 가치가 있나</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
+    '<div class="discovery-card-action">자세히 보기 <span>→</span></div>' +
+  '</article>';
+}
+
+function discoveryRow(item) {
+  return '<article class="discovery-row" data-id="' + esc(item.id) + '">' +
+    '<div class="discovery-row-main">' +
+      discoverySignalBadges(item) +
+      '<h3>' + esc(item.title) + '</h3>' +
+      '<p>' + esc(item.summary || "") + '</p>' +
+      tagsHtml(item.categories || item.tags) +
+    '</div>' +
+    '<div class="discovery-row-side">' +
+      '<span>왜 볼 가치가 있나</span>' +
+      '<p>' + esc(cut(item.why || item.description || item.summary, 150)) + '</p>' +
+    '</div>' +
+  '</article>';
+}
+
+function discoveryGroup(title, eyebrow, items) {
+  if (!items.length) return "";
+  return '<section class="discovery-group">' +
+    '<div class="discovery-section-head">' +
+      '<div><p class="section-eyebrow">' + esc(eyebrow) + '</p><h2>' + esc(title) + '</h2></div>' +
+      '<span>' + items.length + '개</span>' +
+    '</div>' +
+    '<div class="discovery-group-list">' + items.map(discoveryRow).join("") + '</div>' +
+  '</section>';
+}
+
+function renderDiscoveryHub() {
+  const items = state.data.aiDiscovery || [];
+  const el = $("#discoveryHub");
+
+  if (!items.length) {
+    el.innerHTML = '<header class="discovery-head"><p class="section-eyebrow">AI Discovery</p><h1>AI Discovery</h1><p>새로운 도구와 워크플로를 발견하면 여기에 누적합니다.</p></header><div class="empty-state">아직 수집된 항목이 없습니다.</div>';
+    return;
+  }
+
+  const ranked = items.slice().sort((a,b) => {
+    const score = discoveryRank(b) - discoveryRank(a);
+    if (score) return score;
+    return String(b.firstSeenDate || "").localeCompare(String(a.firstSeenDate || ""));
+  });
+  const top = ranked.slice(0, Math.min(3, ranked.length));
+
+  const groups = {
+    sites: items.filter(x => discoveryPrimaryGroup(x) === "sites"),
+    github: items.filter(x => discoveryPrimaryGroup(x) === "github"),
+    agents: items.filter(x => discoveryPrimaryGroup(x) === "agents"),
+    workflows: items.filter(x => discoveryPrimaryGroup(x) === "workflows")
+  };
+
+  const todayNew = items.filter(isNewToday).length;
+  const rising = items.filter(x => ["HOT","RISING","RESURFACED"].includes(String(x.trend || "").toUpperCase())).length;
+
+  el.innerHTML =
+    '<header class="discovery-head">' +
+      '<div><p class="section-eyebrow">AI Discovery</p><h1>놓치기 아까운 AI 도구와 방법들</h1>' +
+      '<p>사이트, 오픈소스, Skill, MCP, Agent, Workflow를 한곳에 모으고 지금 왜 볼 가치가 있는지까지 정리합니다.</p></div>' +
+      '<div class="discovery-stats">' +
+        '<div><span>오늘 새로 발견</span><strong>' + todayNew + '</strong></div>' +
+        '<div><span>상승 신호</span><strong>' + rising + '</strong></div>' +
+        '<div><span>전체</span><strong>' + items.length + '</strong></div>' +
+      '</div>' +
+    '</header>' +
+
+    '<section class="discovery-top">' +
+      '<div class="discovery-section-head"><div><p class="section-eyebrow">먼저 볼 것</p><h2>Top Finds</h2></div><span>신호와 새 소식을 함께 반영</span></div>' +
+      '<div class="discovery-top-grid">' + top.map(discoveryTopCard).join("") + '</div>' +
+    '</section>' +
+
+    '<div class="discovery-groups">' +
+      discoveryGroup("사이트 · 디렉터리", "찾아볼 곳", groups.sites) +
+      discoveryGroup("GitHub · 오픈소스", "코드로 볼 것", groups.github) +
+      discoveryGroup("Skill · MCP · Agent", "에이전트 생태계", groups.agents) +
+      discoveryGroup("Workflow · Showcase", "사용법과 조합", groups.workflows) +
+    '</div>' +
+
+    '<section class="discovery-all">' +
+      '<div class="discovery-section-head"><div><p class="section-eyebrow">전체 기록</p><h2>Everything</h2></div><span>수집 단계에서는 버리지 않음</span></div>' +
+      '<div class="discovery-filter-row" id="discoveryFilters">' +
+        [["all","전체"],["new","오늘 발견"],["rising","상승세"],["site","사이트"],["directory","디렉터리"],["github","GitHub"],["skill","Skill"],["mcp","MCP"],["agent","Agent"],["workflow","Workflow"]]
+          .map(([key,label]) => '<button class="filter-chip ' + (state.discoveryFilter === key ? "active" : "") + '" data-filter="' + key + '">' + label + '</button>').join("") +
+      '</div>' +
+      '<div class="discovery-all-list" id="discoveryAllList"></div>' +
+    '</section>';
+
+  renderDiscoveryAllList();
+
+  el.querySelectorAll(".discovery-top-card, .discovery-row").forEach(card => {
+    card.addEventListener("click", () => {
+      state.lastRoute = "#/ai-discovery";
+      const item = state.all.find(x => x.id === card.dataset.id);
+      location.hash = itemRoute(item);
+    });
+  });
+
+  $("#discoveryFilters").querySelectorAll("[data-filter]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      state.discoveryFilter = btn.dataset.filter;
+      $("#discoveryFilters").querySelectorAll("[data-filter]").forEach(x => x.classList.toggle("active", x.dataset.filter === state.discoveryFilter));
+      renderDiscoveryAllList();
+    });
+  });
+}
+
+function matchesDiscoveryFilter(item, filter) {
+  if (filter === "all") return true;
+  if (filter === "new") return isNewToday(item);
+  if (filter === "rising") return ["HOT","RISING","RESURFACED"].includes(String(item.trend || "").toUpperCase());
+  return String(item.discoveryType || "").toLowerCase() === filter;
+}
+
+function renderDiscoveryAllList() {
+  const el = $("#discoveryAllList");
+  if (!el) return;
+
+  const items = (state.data.aiDiscovery || [])
+    .filter(item => matchesDiscoveryFilter(item, state.discoveryFilter))
+    .sort((a,b) => {
+      const score = discoveryRank(b) - discoveryRank(a);
+      if (score) return score;
+      return String(b.firstSeenDate || "").localeCompare(String(a.firstSeenDate || ""));
+    });
+
+  el.innerHTML = items.length
+    ? items.map(discoveryRow).join("")
+    : '<div class="empty-state">이 조건에 해당하는 Discovery가 없습니다.</div>';
+
+  el.querySelectorAll(".discovery-row").forEach(card => {
+    card.addEventListener("click", () => {
+      state.lastRoute = "#/ai-discovery";
+      const item = state.all.find(x => x.id === card.dataset.id);
+      location.hash = itemRoute(item);
+    });
+  });
 }
 
 function renderArchivePage() {
@@ -1006,8 +1223,11 @@ function setupInteractions() {
   input.addEventListener("input", e => {
     const q = e.target.value.trim().toLowerCase();
     const results = !q ? [] : state.all.filter(x =>
-      [x.title,x.summary,x.description,x.why]
+      [x.title,x.summary,x.description,x.why,x.discoveryReason]
         .concat(x.tags || [])
+        .concat(x.categories || [])
+        .concat(x.signals || [])
+        .concat(x.related || [])
         .concat((x.updates || []).map(u => [u.label,u.text].join(" ")))
         .join(" ").toLowerCase().includes(q)
     ).slice(0,12);
