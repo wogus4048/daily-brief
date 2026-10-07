@@ -500,7 +500,9 @@ function filterDefs(type) {
     ["skill","Skill"],
     ["mcp","MCP"],
     ["workflow","Workflow"],
-    ["watch","WATCH"]
+    ["hot","HOT"],
+    ["rising","RISING"],
+    ["mainstream","MAINSTREAM"]
   ];
   return [
     ["open","진행중"],
@@ -677,7 +679,9 @@ function matchesFilter(item, type, filter) {
   if (filter === "coding") return /coding|코딩|개발자|engineering/i.test(hay);
   if (filter === "security") return /security|보안|threat|위협|anomaly|관측/i.test(hay);
   if (type === "ai-discovery" && ["site","github","skill","mcp","workflow"].includes(filter)) return String(item.discoveryType || "").toLowerCase() === filter;
-  if (filter === "watch") return type === "ai-discovery" && String(item.adoption || "").toUpperCase() === "WATCH";
+  if (filter === "hot") return type === "ai-discovery" && String(item.momentum || "").toUpperCase() === "HOT";
+  if (filter === "rising") return type === "ai-discovery" && String(item.momentum || "").toUpperCase() === "RISING";
+  if (filter === "mainstream") return type === "ai-discovery" && String(item.marketPosition || "").toUpperCase() === "MAINSTREAM";
   if (filter === "opensource") return /open.?source|오픈소스|github|hugging face|mcp/i.test(hay);
   return true;
 }
@@ -744,7 +748,9 @@ function renderCategoryList(type) {
         '<div class="card-meta-row"><div class="card-status-group">' +
           changeBadge(item, "discovery") +
           '<span class="meta-label">' + esc(String(item.discoveryType || "site").toUpperCase()) + '</span>' +
-          (item.adoption ? '<span class="meta-label">' + esc(item.adoption) + '</span>' : '') +
+          (item.marketPosition ? '<span class="meta-label">' + esc(item.marketPosition) + '</span>' : '') +
+          (item.momentum ? '<span class="meta-label">' + esc(item.momentum) + '</span>' : '') +
+          (item.discoveryState ? '<span class="meta-label">' + esc(item.discoveryState) + '</span>' : '') +
         '</div>' + dateMetaHtml(item, "ai") + '</div>' +
         '<h3 class="category-item-title">' + esc(item.title) + '</h3>' +
         '<p class="category-item-summary">' + esc(item.summary || "") + '</p>' +
@@ -876,7 +882,9 @@ function renderDiscoveryDetail(item) {
   $("#detailHeader").innerHTML =
     '<div class="detail-kicker">' + changeBadge(item, "discovery") +
       '<span class="detail-pill">' + esc(String(item.discoveryType || "site").toUpperCase()) + '</span>' +
-      (item.adoption ? '<span class="detail-pill">' + esc(item.adoption) + '</span>' : '') +
+      (item.marketPosition ? '<span class="detail-pill">' + esc(item.marketPosition) + '</span>' : '') +
+      (item.momentum ? '<span class="detail-pill">' + esc(item.momentum) + '</span>' : '') +
+      (item.discoveryState ? '<span class="detail-pill">' + esc(item.discoveryState) + '</span>' : '') +
     '</div><h1>' + esc(item.title) + '</h1><p>' + esc(item.summary || "") + '</p>' +
     '<div class="detail-date-line"><span><b>발견일</b> ' + esc(shortDate(item.firstSeenDate)) + '</span><span><b>최종 확인</b> ' + esc(shortDate(item.lastUpdatedDate || item.firstSeenDate)) + '</span></div>';
 
@@ -885,7 +893,8 @@ function renderDiscoveryDetail(item) {
   ).join("");
 
   $("#detailContent").innerHTML =
-    infoBlock("무엇인가","",[["설명", item.description || item.summary],["발견 이유", item.discoveryReason],["도입 판단", item.adoption],["우리에게", item.relevance]]) +
+    infoBlock("무엇인가","",[["설명", item.description || item.summary],["왜 볼 가치가 있나", item.why],["발견 이유", item.discoveryReason]]) +
+    infoBlock("현재 위치","",[["생태계 위치", item.marketPosition],["움직임", item.momentum],["발견 상태", item.discoveryState]]) +
     infoBlock("신호","",[["발견 경로", (item.signals || []).join(" · ")],["카테고리", (item.categories || []).join(" · ")]]) +
     (related.length ? ideaBlock("연결된 항목", related) : "") +
     (links.length ? '<section class="detail-block"><h2>링크</h2><div class="official-link-list">' + links.map(l => '<a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer"><span>' + esc(l.label) + '</span><span>↗</span></a>').join("") + '</div></section>' : '');
