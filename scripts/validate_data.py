@@ -11,7 +11,7 @@ def assert_date(value, label):
     assert isinstance(value, str) and DATE_RE.match(value), f'{label} must be YYYY-MM-DD'
 
 assert_date(data.get('date'), 'date')
-for key in ('contests', 'aiNews', 'support', 'archive'):
+for key in ('contests', 'aiNews', 'aiDiscovery', 'support', 'archive'):
     assert isinstance(data.get(key), list), f'{key} must be a list'
 
 ids = []
@@ -39,11 +39,22 @@ for item in data['aiNews']:
         assert_date(update['date'], f"aiNews.{item['id']}.updates[{i}].date")
     ids.append(item['id'])
 
+for item in data['aiDiscovery']:
+    for field in ('id', 'title', 'summary', 'discoveryType', 'firstSeenDate', 'lastUpdatedDate', 'links'):
+        assert item.get(field), f'aiDiscovery item missing {field}'
+    assert item['discoveryType'] in ('site', 'github', 'skill', 'mcp', 'agent', 'workflow', 'directory', 'discussion', 'platform'), f"aiDiscovery.{item['id']}.discoveryType invalid"
+    assert_date(item['firstSeenDate'], f"aiDiscovery.{item['id']}.firstSeenDate")
+    assert_date(item['lastUpdatedDate'], f"aiDiscovery.{item['id']}.lastUpdatedDate")
+    assert isinstance(item['links'], list) and item['links'], f"aiDiscovery.{item['id']}.links must be non-empty"
+    if item.get('adoption'):
+        assert item['adoption'] in ('USE', 'ADOPT', 'STUDY', 'WATCH', 'IGNORE'), f"aiDiscovery.{item['id']}.adoption invalid"
+    ids.append(item['id'])
+
 assert len(ids) == len(set(ids)), 'duplicate item id'
 for d in data['archive']:
     assert_date(d, 'archive item')
 
 print(
     f"OK: {path} "
-    f"({len(data['contests'])} contests, {len(data['aiNews'])} aiNews, {len(data['support'])} support)"
+    f"({len(data['contests'])} contests, {len(data['aiNews'])} aiNews, {len(data['aiDiscovery'])} aiDiscovery, {len(data['support'])} support)"
 )
