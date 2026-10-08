@@ -236,6 +236,9 @@ Use the component that matches the browsing task.
 
 - AI/news/discovery timelines: Ionic `ion-list` + `ion-item`
 - contests/support opportunities: Ionic `ion-card` in a three-column desktop grid
+- cards are **browse cards**, not miniature detail pages
+- card hierarchy: icon/category + D-day → title → short summary → up to three tags → deadline footer
+- reward, participation requirements, eligibility detail, discovery date, and long metadata stay on the detail page
 - cards should be ordinary contained cards, not full-width horizontal card-news strips
 - desktop card grid: 3 columns
 - tablet card grid: 2 columns
