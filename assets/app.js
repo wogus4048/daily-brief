@@ -1036,6 +1036,19 @@ function matchesFilter(item, type, filter) {
   return true;
 }
 
+function opportunityListMeta(item, kind) {
+  const parts = [];
+  const deadline = item.deadlineText || item.dDay;
+  const benefit = item.reward || item.aiSupport;
+  const participation = item.participation;
+
+  if (deadline) parts.push("마감 " + txt(deadline, ""));
+  if (benefit) parts.push((kind === "support" ? "지원 " : "보상 ") + cut(benefit, 64));
+  if (participation) parts.push(cut(participation, 64));
+
+  return parts.filter(Boolean).slice(0, 3);
+}
+
 function renderCategoryList(type) {
   const source = sourceFor(type);
   let items = source.filter(item => matchesFilter(item, type, state.categoryFilter));
@@ -1111,27 +1124,30 @@ function renderCategoryList(type) {
     ).join("");
   } else {
     const kind = type === "support" ? "support" : "contest";
-    el.innerHTML = items.map(item =>
-      '<ion-item class="category-card tone-' + kind + ' ' + (!isOpenItem(item) ? "is-closed" : "") + '" button="true" detail="false" lines="inset" mode="ios" data-id="' + esc(item.id) + '">' +
-        '<div class="card-meta-row">' +
-          '<div class="card-status-group">' +
-            changeBadge(item, kind) +
-            '<span class="meta-status ' + (isOpenItem(item) ? dangerClass(item) : "") + '">' + esc(!isOpenItem(item) ? "종료" : (item.dDay || "접수중")) + '</span>' +
-            '<span class="meta-label">' + (kind === "support" ? "창업 · 지원사업" : contestTopicLabel(item)) + '</span>' +
+    el.innerHTML = items.map(item => {
+      const meta = opportunityListMeta(item, kind);
+      const status = !isOpenItem(item) ? "종료" : (item.dDay || "접수중");
+      return '<ion-item class="category-card opportunity-item tone-' + kind + ' ' + (!isOpenItem(item) ? "is-closed" : "") + '" button="true" detail="false" lines="inset" mode="ios" data-id="' + esc(item.id) + '">' +
+        '<div class="opportunity-row-content">' +
+          '<div class="opportunity-row-main">' +
+            '<div class="card-meta-row compact">' +
+              '<div class="card-status-group">' +
+                changeBadge(item, kind) +
+                '<span class="meta-label">' + esc(kind === "support" ? "창업 · 지원사업" : contestTopicLabel(item)) + '</span>' +
+              '</div>' +
+              dateMetaHtml(item, kind) +
+            '</div>' +
+            '<h3 class="category-item-title">' + esc(item.title) + '</h3>' +
+            '<p class="category-item-summary">' + esc(item.summary || "") + '</p>' +
+            (meta.length ? '<div class="opportunity-meta-line">' + meta.map(v => '<span>' + esc(v) + '</span>').join("") + '</div>' : '') +
           '</div>' +
-          dateMetaHtml(item, kind) +
+          '<div class="opportunity-row-trailing ' + (isOpenItem(item) ? dangerClass(item) : "") + '">' +
+            '<strong>' + esc(status) + '</strong>' +
+            '<span>' + esc(cut(item.deadlineText || "", 28)) + '</span>' +
+          '</div>' +
         '</div>' +
-        '<h3 class="category-item-title">' + esc(item.title) + '</h3>' +
-        '<p class="category-item-summary">' + esc(item.summary || "") + '</p>' +
-        tagsHtml(item.tags) +
-        '<div class="category-facts-flow">' +
-          '<div class="flow-fact"><span>마감</span><strong>' + esc(txt(item.deadlineText || item.dDay)) + '</strong></div>' +
-          '<div class="flow-fact"><span>' + (kind === "support" ? "지원 / 혜택" : "상금 / 보상") + '</span><strong>' + esc(txt(item.reward || item.aiSupport)) + '</strong></div>' +
-          '<div class="flow-fact"><span>' + (kind === "support" ? "지원 대상" : "참가 조건") + '</span><strong>' + esc(txt(item.participation)) + '</strong></div>' +
-        '</div>' +
-        '<div class="category-action">상세 내용 보기 <span>→</span></div>' +
-      '</ion-item>'
-    ).join("");
+      '</ion-item>';
+    }).join("");
   }
 
   el.querySelectorAll(".category-card").forEach(row => {
@@ -1644,22 +1660,12 @@ function setupInteractions() {
   });
 }
 
-async function bootstrap() {
-  try {
-    await Promise.all([
-      "ion-searchbar",
-      "ion-segment",
-      "ion-select",
-      "ion-item",
-      "ion-tab-bar",
-      "ion-icon"
-    ].map(tag => customElements.whenDefined(tag)));
-    setupInteractions();
-    await loadData();
-  } catch (err) {
+function bootstrap() {
+  setupInteractions();
+  loadData().catch(err => {
     console.error(err);
-    document.querySelector("main").innerHTML = '<div class="empty-state">브리핑 화면을 불러오지 못했습니다.</div>';
-  }
+    document.querySelector("main").innerHTML = '<div class="empty-state">브리핑 데이터를 불러오지 못했습니다.</div>';
+  });
 }
 
 bootstrap();
