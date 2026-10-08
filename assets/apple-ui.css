@@ -147,7 +147,7 @@ body.apple-shell main{
   background:var(--ios-bg)!important;
 }
 body.apple-shell .global-shell{
-  width:min(1460px,100%);
+  width:min(1760px,100%);
   margin:0 auto;
   display:grid;
   grid-template-columns:220px minmax(0,1fr) 260px;
