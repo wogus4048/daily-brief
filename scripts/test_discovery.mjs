@@ -1,0 +1,30 @@
+import {chromium} from 'playwright';
+import assert from 'node:assert/strict';
+import {serve,launchOptions,ready} from './ui_helpers.mjs';
+const host=await serve(),browser=await chromium.launch(launchOptions),page=await browser.newPage();
+let requests=0;
+try {
+ await page.route('https://api.github.com/repos/**',r=>{requests++;return r.fulfill({json:{stargazers_count:1234,forks_count:0}});});
+ await page.goto(host.base+'/#/ai-discovery');await ready(page);
+ const mosaic=page.locator('[data-id="mosaic-lab-agent-directory"]');
+ assert.ok((await mosaic.locator('.catalog-type').innerText()).includes('도구 모음'));
+ assert.ok((await page.locator('[data-id="prompt-motion"] .catalog-type').innerText()).includes('제작 사례'));
+ await page.waitForFunction(()=>document.querySelector('.github-metrics')?.textContent.includes('1,234'));
+ assert.ok((await page.locator('[data-id="superpowers-obra"] .github-metrics').innerText()).includes('포크 0'));
+ await page.locator('[data-axis="source"][data-filter="github"]').click();
+ assert.equal(await page.locator('.catalog-card').count(),4,'GitHub includes a Skill hosted in a repository');
+ await page.locator('[data-axis="type"][data-filter="agents"]').click();
+ assert.equal(await page.locator('.catalog-card').count(),2,'Source intersects independently with purpose');
+ assert.equal(requests,4,'Filter changes reuse in-flight/cached metrics');
+ await page.locator('#resetDiscoveryFilters').click();
+ assert.equal(await page.locator('.catalog-card').count(),8);
+ await page.goto(host.base+'/?date=2026-10-07#/ai-discovery');await ready(page);
+ assert.equal(await page.locator('.github-metrics').count(),0,'Historical briefing does not show current repository counts');
+ await page.unroute('https://api.github.com/repos/**');
+ await page.route('https://api.github.com/repos/**',r=>r.fulfill({status:403,json:{message:'rate limited'}}));
+ await page.evaluate(()=>sessionStorage.clear());
+ await page.goto(host.base+'/#/ai-discovery');await ready(page);
+ await page.waitForFunction(()=>document.querySelector('.github-metrics')?.textContent.includes('조회 불가'));
+ assert.ok(!(await page.locator('.github-metrics').first().innerText()).includes('별 0'),'Failure is not rendered as zero');
+ console.log('PASS: purpose/source classification, GitHub counts, zero, cache, archive and failure states');
+}finally{await browser.close();await host.close();}

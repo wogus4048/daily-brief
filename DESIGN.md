@@ -1,347 +1,183 @@
-# daily-brief Apple Platform Design System
+# Daily Brief UI system
 
-`daily-brief` should use an Apple-HIG-inspired web implementation, not claim to be a native Apple UI.
+Daily Brief is a public desktop website for browsing AI news, tools, open source, contests and startup support. Scheduled GPT research supplies JSON snapshots; the website is the reading and discovery surface, not an automation dashboard.
 
-The page-level visual source of truth is Apple Human Interface Guidelines (HIG), with an iPadOS-style split view on wide screens and an iOS-style single-pane/tab-bar layout on compact screens.
+## Runtime and data contract
 
-Important: this is a web implementation, not UIKit or SwiftUI. Native Apple components cannot run directly in a browser.
+- Static HTML and JavaScript, with Ionic Core 9.0.6 Web Components and Ionicons. All components use iOS mode via global configuration and explicit component attributes.
+- `data/latest.json` is the current snapshot. `?date=YYYY-MM-DD` reads `data/archive/YYYY-MM-DD.json`.
+- Keep the snapshot schema, research evidence, promotion workflow, and Pages deployment unchanged. A data-only update requires no frontend build.
+- Show the snapshot date as the briefing date, not the viewer's clock. Historical snapshots include a return-to-latest link.
+- Ionic supplies actual search, segments, select popovers, list items, buttons, chips, cards, and icons. No decorative imitations of native controls.
+- `assets/styles.css` is the single product style source. Primer and the legacy Apple UI override layer have been removed.
+- The full Ionic bundle assumes an app viewport and fixes the body. This website explicitly restores `position: static; height: auto; overflow: visible` on the body so browser scrolling and route scroll restoration work.
+- References: [Ionic item content and actions](https://ionicframework.com/docs/api/item). Wrap composed row content in a single slotted element; do not style undocumented shadow parts.
 
-The component foundation is now **Ionic Core 9.0.6 in explicit `mode="ios"`**, loaded as standalone Web Components. Ionic supplies the actual component structure, iOS-mode control chrome, interaction states, and Ionicons. The current production UI uses real `ion-searchbar`, `ion-segment`, `ion-list`, `ion-item`, `ion-chip`, `ion-select`, `ion-button`, `ion-tab-bar`, `ion-tab-button`, and `ion-icon` elements.
+## Shared visual rules
 
-`@primer/css` remains loaded only for legacy compatibility with older markup. It is **not** the visual source of truth.
+| Token | Value / rule |
+| --- | --- |
+| Workspace | Header, body and footer share a centered 1240px maximum frame; 28px internal desktop gutters |
+| Paper | #ffffff |
+| Neutral surface | #fbfbfd masthead; #edeef3 recessed controls; white continuous reading area |
+| Title text | `--text-title`: #292535, headings and item titles |
+| Key labels | `--text-label`: #343445, weight 600 for fact/filter labels |
+| Body text | `--text-body`: #343844, summaries and fact values |
+| Secondary text | `--text-secondary`: #606775, supporting UI descriptions |
+| Record metadata | `--text-meta`: #687180, registration/verification/update dates |
+| Divider | #e1e1e7 |
+| Action / selection | #5b3fc4 |
+| Urgency | #b42318 |
+| Type | Self-hosted Wanted Sans Variable 1.0.3 with system fallback; SIL OFL license in assets/fonts/WantedSans-OFL.txt |
+| Page title | 34px categories and Home; 30px detail |
+| Section / item | 22px / 19–20px |
+| Body / metadata | 16px / 13px; descriptions and summaries remain 16px on mobile |
+| Spacing | 8px base; 24px card padding; 32–48px section gaps |
+| Geometry | 12px opportunity cards; 7–9px controls; reading lists and detail sections use dividers, not boxes |
 
-Ownership order:
+Use a compact neutral masthead, continuous white reading surfaces, restrained dividers, left-aligned text, and clear title hierarchy. Violet identifies actions and selection; red is reserved for urgency. Content can wrap; never shrink text to squeeze it in. The approved brand direction below defines decorative materials.
 
-1. Ionic iOS mode owns standard component appearance and behavior.
-2. `assets/apple-ui.css` owns Daily Brief layout, density, sizing, and semantic product tokens around Ionic components.
-3. Custom CSS must not redraw an Ionic component when Ionic already provides the needed control.
+### Information color and weight
 
-## 1. Product character
+Small text is not automatically secondary. Target, prize, deadline and benefit labels are scanning anchors: use `--text-label` at weight 600 on opportunity cards, detail summaries and detail tables. Filter group labels follow the same rule. Fact values and content summaries use `--text-body` at normal weight. Classification labels use `--text-label` at weight 500.
 
-The product should feel:
+Registration, verification and update dates use `--text-meta`. An application deadline is decision information, not record metadata: card deadline dates use `--text-body` at weight 500. Existing urgent status text retains red and an explicit deadline label; neutral statuses do not imply success. Source names stay readable secondary text. Do not assign arbitrary colors to target/prize categories or reduce text opacity to create hierarchy.
 
-- quiet
-- native
-- precise
-- information-dense without feeling cramped
-- layered rather than boxed
-- obvious to navigate
-- readable before decorative
+Semantic text tokens are defined once in the first `:root` of `assets/styles.css`; legacy `--ink`, `--muted` and `--meta` are aliases. Component rules select a role rather than inventing a gray. Maintain at least 4.5:1 contrast for normal text on its rendered surface, including card facts and filter backgrounds.
 
-It should not feel like:
+## Page composition
 
-- Windows 95/98/XP UI
-- a generic admin dashboard
-- a pile of colored status cards
-- a Product Hunt clone
-- a GitHub clone
-- an AI-generated SaaS landing page
-- a collection of unrelated component styles
+- Shared top identity/search row and horizontal primary navigation on every page. Archive is a persistent destination.
+- Home: briefing introduction, quick filters, real Ionic segment for sort, readable feed. Default ordering rotates news, discovery, contests and support so one subject cannot dominate. A secondary column contains a complete chronological deadline list, topics and archives; new and updated items remain accessible through the feed filters.
+- AI news: topic/status filters and sort, followed by a readable list. Each story shows a title, a short summary and nearby dates; context and tags remain available in detail. Reading width is capped at 1280px.
+- Discovery: three compact recommendations across different primary groups, category shortcuts that operate the existing filters, and one complete catalog. Do not repeat complete lists for each group.
+- Contests and support: two equal card columns on desktop and tablet, one below 700px. Cards contain category/status, title, short summary, source eligibility and reward fields, and deadline. Never clamp eligibility or benefits; the full conditions must remain readable.
+- Detail: same header/navigation, readable title and introduction, uncompressed source buttons, deadline/eligibility/benefits near the title, followed by detailed application conditions, history, ideas and links. Empty sections are omitted by the existing renderer.
+- Archive: date list with the same type/control language. Viewing a date preserves the underlying snapshot.
+- Compact screens are a fallback: horizontal top navigation, one content column, wrapped controls. They do not determine desktop proportions.
 
-## 2. Platform model
+## Interaction and accessibility
 
-### Wide desktop
+- Native links for navigation, source links, search results, and Ionic cards. Ionic list items keep native button behavior.
+- Filter chips support Enter and Space. Navigation exposes `aria-current` and interactive elements have visible focus.
+- Search supports the button, Ctrl/Cmd+K, and Escape.
+- Keep filter state when returning from detail; restore browser scroll at the document level.
+- Respect reduced motion and keep a light palette even when OS dark mode is enabled.
 
-Desktop is the primary presentation target for the public site.
+## Verification and captures
 
-- maximum workspace width: 1760px
-- use the available horizontal space for browseable content instead of keeping a mobile-webview-like narrow center
-- at large widths, contests and support programs use a three-column card grid
+`npm run test:ui` starts its own temporary static server and checks all routes at 1920×1080, 1440×900, 1280×800, plus a 390px fallback. It covers the shared 1240px frame, readable row geometry, two-column opportunity cards, overflow, unique IDs, filtering, sorting, keyboard navigation, search, all detail types, archive return, and consumption of an updated scheduled JSON snapshot.
 
-Use a split-view structure:
+`npm run capture:ui` writes 18 screenshots and an HTML gallery to `artifacts/ui-final/`. Capture files are local review artifacts and are ignored by Git. On Windows, the scripts use installed Edge; elsewhere install Playwright Chromium (`npx playwright install chromium`). `BROWSER_CHANNEL` overrides the browser channel.
 
-1. navigation/toolbar material at the top
-2. leading sidebar for navigation and scope
-3. primary content pane
-4. trailing inspector/context pane when space permits
+Before completion, inspect the screenshots, verify no browser errors, and run `python scripts/validate_data.py` and `python scripts/test_evolve_crawler_sources.py`. Screenshots alone do not prove interactions or scrolling work.
 
-The sidebar and inspector belong to the control/navigation layer and may use translucent material.
+## Service quality and Korean copy
 
-### Medium widths
+The product should feel like a dependable professional information service: consistent Korean typography, practical density, stable navigation, accurate status labels, and useful feedback. Enterprise quality does not require admin widgets, excessive decoration, or invented analytics.
 
-Use two panes and reduce card columns only when the viewport actually requires it:
+- The masthead stays available while reading. Section jumps clear it and focus the destination without changing the route.
+- Catalog filters show the number of matching results and offer a reset to the default scope. Upcoming opportunities are labeled “접수 예정”; the default “모집 중·예정” scope includes them.
+- Detail breadcrumbs identify the current category. “목록으로” always returns to that category, including when the detail URL was opened directly.
+- Search explains what can be searched before input and suggests another query when no results match.
+- Page titles and descriptions are factual: “오늘의 브리핑”, “공모전과 해커톤의 접수 일정, 참가 자격, 상금을 확인하세요.” Avoid promotional slogans and abstract translated phrasing.
+- `AUTOMATION.md` contains the same editorial standard for future generated content. Historical source data is not silently rewritten by the UI.
+- [Pretendard upstream](https://github.com/orioncactus/pretendard), pinned v1.3.9. Font files are served locally with font-display: swap, so no third-party font request is needed at runtime.
 
-1. sidebar
-2. primary content
+`npm test` runs both the layout/interaction suite and the focused UX suite. `npm run test:ux` checks filter feedback/reset, section jumps, search guidance, direct detail navigation, and upcoming status rendering.
 
-Hide the trailing inspector before compressing the main content too far.
+## iOS refinement
 
-### Compact / phone widths
+Desktop navigation uses real Ionicons and a clear blue selected state. Home filters use a compact segmented treatment; the existing Ionic sort segment, search, select popovers and cards remain functional components. Group whole reading lists rather than creating a dashboard of individual tiles. No blur or glass. Press feedback responds only to user action.
 
-Phone support is a responsive fallback, not the layout baseline.
+## Role separation and review
 
-Use a single content pane:
+Navigation uses blue selected location; filters use compact low-emphasis chips; sort and search retain real Ionic behavior. Opportunity cards use a quiet edge/shadow for side-by-side comparison. News, Home, Discovery catalog and detail use continuous reading surfaces. Avoid applying the same panel and shadow to every role.
 
-- hide sidebars
-- show a persistent bottom tab bar for top-level navigation
-- keep search in the top navigation area
-- preserve route state while moving between tabs
+At 1280×800, first opportunity cards should begin before 390px. Preserve legibility rather than reducing the font size. Keep all four subjects in Home's first four default entries. A deadline list must include today's deadlines regardless of which items are in the main feed.
 
-Do not squeeze a desktop sidebar into a phone layout.
+The 2026-10-07 Discovery copy was edited in both latest.json and its same-date archive: summary, description, why and discoveryReason only. IDs, links, dates, categories, signals and all other fields remain intact. Earlier archives remain unchanged. This is an explicit editorial change, not a rendering-time substitution.
 
-## 3. Materials
+Visual audit: artifacts/design-audit.md; re-audit: artifacts/design-reaudit.md. Automated checks do not replace the designer's visual verdict.
 
-Use Liquid-Glass-like material only for controls/navigation:
+## Reference-led material treatment
 
-- top toolbar
-- sidebar
-- trailing inspector
-- bottom tab bar
-- search sheet
+The two user-provided reference images supersede the earlier blanket avoidance of gradients. They establish layered white faces, narrow spectral edges and contact shadows rather than blur/glass. Preserve the audited desktop information structure.
 
-Implementation uses translucent backgrounds, `backdrop-filter`, subtle separators, and small shadows.
+- App frame: at most 1240px including internal gutters; header, main and footer share that width. Pearl outer canvas, solid white interior, subtle perimeter shadow. No backdrop blur.
+- Home: one compact document cover with a narrow spectral edge; continuous reading list with identical peer row surfaces. The deadline reference panel remains distinct.
+- Discovery recommendations: a colored sheet protrudes behind a solid reading face. Color stays at the edge; body text retains neutral contrast.
+- Opportunity cards: a raised title face over the comparison facts. All opportunity edges stay neutral; spectral emphasis is reserved for the Home header, detail summary and Discovery recommendations. Full source eligibility and benefits stay readable.
+- Detail: one edged summary face, followed by continuous information sections. Do not put every section in a raised card.
+- Controls: inset search and segment track; raised selected control; subtle directional light on primary buttons. No perpetual animations.
+- Material tokens live in the final material-system block of assets/styles.css. Readable geometry, three columns and keyboard behavior must pass alongside visual captures.
 
-Do **not** use glass inside the scrolling content layer.
+## Designer-directed implementation
 
-Content uses standard grouped surfaces:
+The current material system follows artifacts/designer-direction.md. No first-item emphasis, position-based recommendation colors, or abstract header ornament. Deadline panel styling is attached to its semantic class. Navigation and filter states are flat; exclusive segment selection uses a raised white thumb. Discovery recommendations share one brand-gradient back sheet behind opaque white faces. Material rules are consolidated in one replacement block, not appended exceptions. Metadata uses #687180 in place of the proposed #747B88 to maintain 4.5:1 contrast on light surfaces.
 
-- system grouped background
-- white/dark secondary grouped surfaces
-- inset grouped lists
-- subtle separators
+## Editorial grid refinement
 
-## 4. Dynamic color model
+The latest designer directives are artifacts/layout-options.md and artifacts/enterprise-design-gap.md. They supersede the earlier full-width news/discovery lists.
 
-Use light-mode semantic tokens defined in `assets/apple-ui.css`, with Ionic's primary color mapped to iOS system blue.
+- News: row-major two-column grid at desktop widths, maximum 1240px. Full titles, two-line summary preview, a single labeled updated/registered date. Metadata remains in detail. Thin row rules, no elevated news boxes.
+- Discovery: one catalog, maximum 1320px; three columns above 1359px, two below, one on compact mobile. Recommended/new/rising status intersects independently with the type filter. Recommendations preserve the original diverse ranked selection and gain the shared back-sheet treatment only when that filter is active. Reset restores both axes. Workflow discovery includes the existing primary-group classification.
+- No top recommendation duplicate, section-jump row or redundant group listing. Full source tags remain in detail; cards display two tags and a remainder count. Native card anchors preserve modifier-click navigation.
+- Shared filters are 36px. Viewing-order controls retain the actual Ionic segment. Informational states are neutral; existing withinWeek deadlines use urgency color. Home classification icons are flat and 28px; the brand mark alone retains raised-icon treatment.
+- Opportunity facts are 14px without clipping; title minimum height and the internal title-face shadow are removed. Sources pair their original label with a concise action. Record dates in detail include their original year. No inferred deadline time or date is generated.
 
-Light references:
+Verification includes two-axis filter combinations, reset, 3/2 catalog geometry, 2-column news row order, and first catalog at or above 350px on 1280. Screenshots: artifacts/ui-final. Designer re-review: artifacts/catalog-enterprise-review.md.
 
-```text
-system background       #f2f2f7
-secondary group         #ffffff
-system blue             #007aff
-system red              #ff383c
-primary label           #000000
-secondary label         rgba(60,60,67,.68)
-separator               rgba(60,60,67,.20)
-```
+## Approved brand direction: light along the paper edge
 
+The user approved the first direction in artifacts/brand-directions.md. Brand identity applies to ordinary entries, not only recommendations. Main violet #5B3FC4 identifies the brand, actions, selection and focus. Teal #4FAEAD is decorative edge light only, never small text or a safety state. Body ink is #292535 and outer pearl canvas #F2F1F7. Existing urgency/error meanings remain unchanged.
 
-Rules:
+Every catalog and opportunity card receives the same 3px violet-to-teal lower cross-section with a slight lower-right paper thickness and contact shadow. News uses the same direction in a 2px lower rule without turning each entry into a box. No position-based or random colors. Recommendation filtering adds an 8px rear sheet and an explicit 추천 label; ordinary cards retain their signature edge. Apricot #E6B09B is restricted to the Home/detail cover edge. All content faces stay opaque and neutral.
 
-- do not use category-specific colored blocks
-- blue means selection, navigation, link, or primary action
-- red means danger/urgency
-- use neutral fills for ordinary metadata
-- do not make AI/news/support/contest rows different background colors
-- color is not decoration
+The existing two-column news / three-or-two-column Discovery / three-column opportunities are preserved. Brand implementation changes CSS, the favicon color, and decorative non-interactive markup only; source data and collection contracts are unaffected.
 
-## 5. Typography
 
-Prefer the Apple system stack:
+## Current page layout: shared 1240px frame
 
-```css
--apple-system,
-BlinkMacSystemFont,
-"SF Pro Text",
-"SF Pro Display",
-system-ui,
-"Segoe UI",
-sans-serif
-```
+This section supersedes historical viewport-dependent widths and column counts above. The AI news reading width provided the reference for the user's requested common page size. Header, main and footer now have the same maximum border-box width of 1240px, centered within the viewport, with 28px internal desktop gutters. Narrow viewports reduce the frame and gutters without horizontal page overflow. Dialogs and auxiliary areas retain their functions.
 
-Do not bundle or redistribute Apple font files.
+The final shared-geometry block in assets/styles.css owns this layout through --page-max, --page-gutter and --layout-gap:
 
-When the page runs on Apple platforms, the system font should resolve to San Francisco/SF Pro. Other platforms use their native fallback while preserving Apple-like metrics and hierarchy.
+- Common header, navigation, page titles and footer use consistent left and right edges. Compact filter rows use dividers and preserve the existing controls.
+- Home retains the deadline sidebar at 272px, with 28px between it and the feed. Row status moves below the summary to give long headlines more room. Below 1000px the sidebar follows the feed.
+- AI news retains two reading columns, falling back to one below 850px.
+- Contests and support use two spacious comparison cards per row, falling back to one below 700px. Eligibility and rewards remain fully visible.
+- Discovery uses three columns above 1100px, two up to 1100px, and one below 700px. Column count no longer varies on large monitors once the page reaches its maximum width.
+- Detail keeps source actions next to its summary on desktop and below it on mobile; the reading content is capped at 960px inside the shared page frame.
 
-Recommended hierarchy:
+Validation: centered frame and aligned edges across all six primary routes at 1920, 1440 and 1280px, readable card geometry, mobile overflow, existing search/filter/navigation tests, and refreshed screenshots in artifacts/layout-1240-review.
 
-- large view title: 27–30px, 700
-- grouped section title: 18–20px, 700
-- primary row title: 16–17px, 600–650
-- descriptive text: 13–14px
-- metadata: 11–12px
-- tab labels: 10px
 
-Never shrink body copy to create density.
+## Daily summary and content structure
 
-## 6. Navigation components
+The current Home is a daily summary, not an inventory or sorting interface. It has three sections: new registrations on the snapshot date, existing entries updated on that date, and open opportunities closing within seven days of that date. Each section shows at most five items and its total count. Deadline items appear only in the deadline section, ordered by deadline; closed opportunities are excluded. Empty sections explicitly report no changes. Full catalogs remain accessible through navigation and the bottom browse links. The former alternating-subject/latest sort and Home filter controls have been removed. Snapshot dates remain visible and never derive from the viewer clock.
 
-### Top toolbar
+Opportunity cards separate summary, eligibility, benefits and deadline with neutral horizontal dividers. Two-column news has a neutral vertical divider inside the second cell of each row; it disappears in the single-column layout. This avoids clipping by Ionic's native item surface.
 
-Contains only global controls:
+Discovery separates three independent axes: editorial status, purpose, and source. Purpose labels are AI 도구, 도구 모음, Skill · MCP · Agent, 제작 사례. Directory is an internal source type, never a user-facing purpose label. Showcase collections (including Prompt Motion and Remotion) are 제작 사례; tool directories are 도구 모음. GitHub-hosted skill collections are Skill · MCP · Agent. The GitHub source filter includes every entry with a repository-root link, regardless of purpose. Reset clears all three axes. The original source schema is preserved.
 
-- app identity
-- search
-- date/context
+GitHub cards on the latest briefing fetch public repository stargazers_count and forks_count from the GitHub REST repository endpoint. Counts are current observations, not historical snapshot data: show a Korea-time retrieval timestamp. Successful requests are cached for 15 minutes in session storage and in-flight requests are shared. Failed requests display 조회 불가, never zero; genuine zero counts remain visible. Historical archive pages do not request or show current counts. No credentials are embedded in the client. See https://docs.github.com/en/rest/repos/repos#get-a-repository.
 
-Avoid repeating category navigation in the toolbar when the sidebar/tab bar already provides it.
+Tests cover purpose/source intersections, repository-backed skills, count formatting, zero counts, API failure, request reuse, historical isolation, empty daily summaries, actual update dates, deadline ordering and duplicate prevention. Captures: artifacts/content-structure-review.
 
-### Sidebar
 
-Sidebar is for app hierarchy, not analytics.
+## Reading scale
 
-Groups:
+Content descriptions, page introductions, Home section explanations, news summaries, Discovery descriptions, opportunity summaries and fact values, detail prose and timeline explanations use --font-body-size (16px), --line-body (1.65) and --text-body (#343844). Mobile layouts retain that scale. Key fact labels use --font-label-size (14px) and weight 600; metadata stays 13px. GitHub observation timestamps are also at least 13px.
 
-- Today
-- content areas
-- quick views
-- archive/history
+Descriptions wrap naturally instead of using CSS line clamps or smaller type to fit a card. The cards expand with content. Titles, controls and genuine record metadata have separate roles; a small label is not a reason to dim substantive prose. Typography properties in the existing component and mobile rules reference the shared tokens so later layout rules cannot silently shrink descriptions again.
 
-Selected rows:
 
-- subtle system-blue tint
-- system-blue icon/text
-- rounded selection shape
+## Larger global type scale
 
-No bright colored category icons.
+The user requested a further increase across the entire interface. This supersedes the previous 16px prose scale: body/descriptions/fact values are 18px, key labels and navigation/filter/sort controls are 16px, and record metadata is at least 14px. Card headlines are 22–23px and page headings are 36px on desktop (32px on compact screens). Mobile retains the 18px body and 16px controls. Controls grow to at least 44px tall, the sticky header has matching scroll clearance, and labels have wider columns. Opportunity titles wrap without clipping. Page width remains 1240px; content density yields to legibility.
 
-### Bottom tab bar
 
-Use Ionic's real `ion-tab-bar` and `ion-tab-button` components in `mode="ios"`.
+## Selected typeface
 
-Compact layout uses five top-level destinations:
-
-- Today
-- AI
-- Discover
-- Contests
-- Support
-
-The tab bar floats above content using translucent material and remains visible while navigating.
-
-## 7. Search
-
-Search is a primary global control.
-
-Use Ionic's real `ion-searchbar mode="ios"`.
-
-Its built-in search icon, clear-button behavior, native input geometry, and focus behavior should be preserved. Product CSS may change width and semantic colors, but should not rebuild the internal search field.
-
-The search dialog behaves visually like a sheet:
-
-- large rounded corners
-- translucent material
-- blurred backdrop
-- grouped result rows
-
-## 8. Segmented controls and filters
-
-Use Ionic's real `ion-segment` + `ion-segment-button` in iOS mode for a small single-choice set such as:
-
-- Recommended / Latest
-
-Use neutral pills for larger filter sets.
-
-Selected filter:
-
-- system blue text
-- very subtle blue tint
-
-Do not use yellow, green, purple, or blue category backgrounds.
-
-## 9. Lists and cards
-
-Use the component that matches the browsing task.
-
-- AI/news/discovery timelines: Ionic `ion-list` + `ion-item`
-- contests/support opportunities: Ionic `ion-card` in a three-column desktop grid
-- cards are **browse cards**, not miniature detail pages
-- card hierarchy: icon/category + D-day → title → short summary → up to three tags → deadline footer
-- reward, participation requirements, eligibility detail, discovery date, and long metadata stay on the detail page
-- cards should be ordinary contained cards, not full-width horizontal card-news strips
-- desktop card grid: 3 columns
-- tablet card grid: 2 columns
-- compact card grid: 1 column
-
-A list surface:
-
-- uses one rounded grouped container
-- contains multiple rows
-- separates rows with thin inset separators
-- uses consistent title/description/metadata alignment
-- uses neutral icons or thumbnails
-- applies a neutral pressed/hover state
-
-Home feed, category lists, discovery lists, and archive should all follow this grammar.
-
-## 10. Home feed
-
-Each row contains:
-
-1. rank/order
-2. icon
-3. title
-4. one-line description
-5. metadata
-6. compact status on wide layouts
-
-No category-colored backgrounds.
-
-The right-side status should remain secondary to the title.
-
-## 11. Detail views
-
-Detail pages keep the same global shell.
-
-Inside the content pane:
-
-- large navigation title
-- blue primary action
-- neutral secondary action
-- content divided into inset grouped sections
-- key/value rows use subtle separators
-- no decorative card colors
-- no separate dashboard-like facts panel unless the content genuinely needs it
-
-## 12. Inspector / right context pane
-
-On wide screens the trailing pane provides secondary context:
-
-- deadlines
-- new items
-- trending topics
-- recent updates
-
-Each block is an inset grouped section.
-
-Hide the inspector at medium widths before reducing primary content legibility.
-
-Do not show the inspector below primary content on iPhone. Compact layout uses the tab-bar/single-pane model instead.
-
-## 13. Icons
-
-Use **Ionicons**, which ships with Ionic, for application navigation and controls.
-
-- use outline variants for ordinary navigation
-- let icons inherit label/selection color
-- keep stroke weight consistent
-- do not use multicolor emoji as navigation chrome
-- do not maintain custom SVG-mask copies of common icons
-
-Do not redistribute SF Symbols assets or Apple font files.
-
-## 14. Touch and interaction
-
-Compact layouts:
-
-- primary navigation targets: at least about 44px
-- bottom tab items: 54px or larger
-- pressed state: subtle neutral fill or reduced opacity
-- avoid tiny text-only click targets
-
-Honor `prefers-reduced-motion`.
-
-## 15. Color scheme
-
-Use a light-only interface for this product unless a concrete product requirement for dark mode appears later.
-
-Do not add automatic dark mode just because Apple platforms support it.
-
-## 16. Review gate
-
-Before merging UI changes:
-
-1. render home, category, discovery, archive, and detail routes
-2. validate 1440px, tablet-width, and 390px layouts
-3. verify wide = 3-pane, medium = 2-pane, compact = 1-pane + tab bar
-4. verify no horizontal overflow
-5. verify no console/page errors
-6. verify no duplicate IDs
-7. verify mobile targets are usable
-8. verify the Ionic searchbar and Ionic segment emit the expected events
-9. verify mobile navigation is a real `ion-tab-bar`
-10. verify grouped routes render real `ion-list` / `ion-item` elements
-11. verify no large yellow/blue/green semantic category backgrounds remain
-12. verify the light color scheme remains coherent and readable
-13. verify custom CSS does not redraw standard Ionic controls
+Wanted Sans Variable v1.0.3 is the selected product font, self-hosted at assets/fonts/WantedSansVariable.woff2. Its supported weight range is 400–1000. The upstream SIL OFL license is retained at assets/fonts/WantedSans-OFL.txt. It replaces Pretendard while retaining the larger global type scale. The previous Pretendard asset remains available for the local comparison artifact only.

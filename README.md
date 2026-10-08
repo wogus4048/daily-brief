@@ -38,3 +38,17 @@ python -m http.server 8080
 
 ## GitHub Pages
 Repository Settings → Pages → Source를 `GitHub Actions`로 선택하면 됩니다.
+
+## UI 개발 및 검증
+
+Ionic Core의 실제 iOS 모드 Web Components와 Ionicons를 사용합니다. 스타일 규칙은 `DESIGN.md`, 구현은 `assets/styles.css`에 있습니다. 별도 프런트엔드 빌드 없이 JSON 갱신만으로 새 브리핑이 표시됩니다.
+
+```bash
+npm ci
+npm run test:ui
+npm run capture:ui
+```
+
+테스트와 캡처는 임시 로컬 서버를 자동으로 실행합니다. Windows는 설치된 Edge를 사용하며, 다른 환경에서는 `npx playwright install chromium`으로 테스트용 브라우저를 준비합니다. 캡처 결과는 `artifacts/ui-final/index.html`에서 볼 수 있습니다.
+
+GitHub 저장소 카드의 별·포크 수는 공개 GitHub API에서 조회하며, 조회 시점과 함께 표시합니다. 15분간 캐시하고, 조회 제한·실패 시에는 수치를 0으로 표시하지 않습니다. 과거 아카이브에는 현재 수치를 섞지 않습니다.

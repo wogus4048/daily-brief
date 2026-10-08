@@ -8,8 +8,8 @@ const state = {
   activeRoute: null,
   viewStates: {},
   discoveryFilter: "all",
-  homeFilter: "all",
-  homeSort: "recommended"
+  discoveryStatus: "all",
+  discoverySource: "all"
 };
 
 const $ = (s) => document.querySelector(s);
@@ -157,8 +157,8 @@ function newsPriority(items) {
 }
 
 function changeBadge(item, kind) {
-  if (isNewToday(item)) return '<span class="IssueLabel change-badge new">오늘 신규</span>';
-  if (kind === "ai" && isUpdatedToday(item)) return '<span class="IssueLabel change-badge updated">오늘 업데이트</span>';
+  if (isNewToday(item)) return '<span class="IssueLabel change-badge new">신규 등록</span>';
+  if (kind === "ai" && isUpdatedToday(item)) return '<span class="IssueLabel change-badge updated">당일 수정</span>';
   return "";
 }
 
@@ -167,10 +167,10 @@ function dateMetaHtml(item, kind) {
   const second = kind === "ai"
     ? shortDate(item.lastUpdatedDate || item.firstSeenDate)
     : shortDate(item.lastVerifiedDate || item.firstSeenDate);
-  const secondLabel = kind === "ai" ? "최종 업데이트" : "최종 확인";
+  const secondLabel = kind === "ai" ? "수정일" : "확인일";
 
   return '<div class="card-date-meta">' +
-    (first ? '<span><b>발견일</b> ' + esc(first) + '</span>' : '') +
+    (first ? '<span><b>등록일</b> ' + esc(first) + '</span>' : '') +
     (second ? '<span><b>' + secondLabel + '</b> ' + esc(second) + '</span>' : '') +
   '</div>';
 }
@@ -210,6 +210,10 @@ function formatDate(s) {
 function renderShared() {
   const data = state.data;
   $("#topbarDate").textContent = formatDate(data.date);
+  $("#topbarDate").setAttribute("datetime", data.date);
+  const archiveNotice = $("#archiveNotice");
+  archiveNotice.hidden = !requestedDate();
+  if (requestedDate()) archiveNotice.innerHTML = esc(formatDate(data.date)) + '에 저장된 브리핑입니다. <a href="' + esc(location.pathname) + '#/">최신 브리핑 보기</a>';
   $("#year").textContent = new Date().getFullYear();
   const set = (selector, value) => { const el = $(selector); if (el) el.textContent = value; };
   const contestCount = (data.contests || []).filter(isOpenItem).length;
@@ -264,6 +268,7 @@ function setActiveNav(routeName) {
     const selected = el.dataset.route === routeName;
     el.classList.toggle("active", selected);
     el.classList.toggle("selected", selected);
+    if (selected) el.setAttribute("aria-current", "page"); else el.removeAttribute("aria-current");
     if (el.tagName === "ION-TAB-BUTTON") el.selected = selected;
   });
 }
@@ -272,7 +277,7 @@ function route() {
   if (!state.data) return;
 
   const hash = location.hash || "#/";
-  document.body.classList.add("producthunt-shell", "apple-shell");
+  document.body.dataset.page = hash === "#/" || hash === "#" ? "home" : hash.split("/").length > 2 ? "detail" : hash.slice(2);
   hideAllViews();
   document.body.classList.remove("menu-open");
 
@@ -391,7 +396,7 @@ function homeSignalLabel(item) {
   if (kind === "discovery") {
     const type = String(item.discoveryType || "").toLowerCase();
     if (type === "github") return "오픈소스";
-    return discoveryTypeLabel(item.discoveryType) || "AI 자료";
+    return discoveryPurposeLabel(item) || "AI 자료";
   }
   if (kind === "support") return "지원사업";
   return "공모전";
@@ -422,7 +427,7 @@ function homeSignalStatus(item) {
 function homeSignalMeta(item) {
   const kind = itemKind(item);
   if (kind === "discovery") {
-    return [discoveryTypeLabel(item.discoveryType), (item.categories || []).slice(0,2).join(" · ")].filter(Boolean).join(" · ");
+    return [discoveryPurposeLabel(item), (item.categories || []).slice(0,2).join(" · ")].filter(Boolean).join(" · ");
   }
   if (kind === "ai") return (item.tags || []).slice(0,3).join(" · ") || "AI";
   return item.deadlineText || item.dDay || item.categoryLabel || "";
@@ -434,24 +439,6 @@ function rankedHomeSignals(limit) {
     if (score) return score;
     return latestDateValue(b).localeCompare(latestDateValue(a));
   }).slice(0, limit);
-}
-
-function homeFeedMatches(item) {
-  const filter = state.homeFilter;
-  if (filter === "all") return true;
-  if (filter === "new") return isNewToday(item);
-  if (filter === "updated") return isUpdatedToday(item) || (itemKind(item) === "discovery" && String(item.newsState || "").toUpperCase() === "UPDATED");
-  if (filter === "rising") return itemKind(item) === "discovery" && ["HOT","RISING","RESURFACED"].includes(String(item.trend || "").toUpperCase());
-  if (filter === "urgent") return ["contest","support"].includes(itemKind(item)) && isOpenItem(item) && withinWeek(item);
-  return true;
-}
-
-function homeFeedItems() {
-  const items = state.all.filter(homeFeedMatches);
-  if (state.homeSort === "latest") {
-    return items.sort((a,b) => latestDateValue(b).localeCompare(latestDateValue(a)) || homeSignalScore(b) - homeSignalScore(a));
-  }
-  return items.sort((a,b) => homeSignalScore(b) - homeSignalScore(a) || latestDateValue(b).localeCompare(latestDateValue(a)));
 }
 
 function homeFeedIcon(item) {
@@ -473,22 +460,22 @@ function homeFeedTags(item) {
   return values.slice(0,3).join(" · ") || homeSignalLabel(item);
 }
 
-function renderHomeFeed() {
-  const el = $("#homeFeed");
-  if (!el) return;
-  const items = homeFeedItems().slice(0, 40);
-  const note = $("#homeFeedFilterNote");
-  const labels = {all:"",new:"오늘 새로 추가된 정보",updated:"최근 업데이트된 정보",rising:"최근 관심이 늘어난 항목",urgent:"7일 안에 마감되는 항목"};
-  if (note) {
-    note.hidden = state.homeFilter === "all";
-    note.textContent = labels[state.homeFilter] ? labels[state.homeFilter] + " · " + items.length + "개" : "";
-  }
-  if (!items.length) {
-    el.innerHTML = '<div class="empty-state">이 조건에 해당하는 정보가 없습니다.</div>';
-    return;
-  }
-  el.innerHTML = items.map((item,index) =>
-    '<ion-item class="product-row" button="true" detail="false" lines="inset" mode="ios" data-id="' + esc(item.id) + '">' +
+function homeBriefingSections() {
+  const available = state.all.filter(item => !['contest','support'].includes(itemKind(item)) || isOpenItem(item));
+  const urgent = available.filter(item => ['contest','support'].includes(itemKind(item)) && withinWeek(item)).sort((a,b)=>ddayNumber(a)-ddayNumber(b));
+  const urgentIds = new Set(urgent.map(item=>item.id));
+  const fresh = available.filter(item=>isNewToday(item) && !urgentIds.has(item.id));
+  const updated = available.filter(item=>isUpdatedToday(item) && !isNewToday(item) && !urgentIds.has(item.id));
+  const rank = items => items.sort((a,b)=>homeSignalScore(b)-homeSignalScore(a));
+  return [
+    {id:'new',title:'새로 들어온 소식',description:'자료 기준일에 처음 등록된 정보',items:rank(fresh),empty:'자료 기준일에 새로 등록된 소식이 없습니다.'},
+    {id:'updated',title:'달라진 내용',description:'기존 항목 중 자료 기준일에 수정된 정보',items:rank(updated),empty:'자료 기준일에 수정된 내용이 없습니다.'},
+    {id:'urgent',title:'놓치기 전에',description:'자료 기준일부터 7일 이내 마감 · 가까운 일정순',items:urgent,empty:'7일 이내 마감되는 공모전·지원사업이 없습니다.'}
+  ];
+}
+
+function homeBriefingRow(item,index) {
+  return '<ion-item class="product-row" button="true" detail="false" lines="inset" mode="ios" data-id="' + esc(item.id) + '">' +
       '<div class="product-row-content">' +
         '<div class="product-rank">' + String(index + 1).padStart(2,"0") + '</div>' +
         '<div class="product-icon tone-' + homeSignalTone(item) + '"><ion-icon name="' + esc(homeFeedIcon(item)) + '" aria-hidden="true"></ion-icon></div>' +
@@ -497,11 +484,20 @@ function renderHomeFeed() {
           '<p>' + esc(cut(item.summary || item.description || "", 155)) + '</p>' +
           '<div class="product-meta"><span>' + esc(homeFeedTags(item)) + '</span></div>' +
         '</div>' +
-        '<div class="product-side"><strong>' + esc(homeSignalStatus(item)) + '</strong><span>' + esc(cut(homeSignalMeta(item), 44)) + '</span></div>' +
+        '<div class="product-side"><strong class="' + (['contest','support'].includes(itemKind(item)) && isOpenItem(item) && withinWeek(item) ? 'deadline-urgent' : '') + '">' + esc(homeSignalStatus(item)) + '</strong><span>' + esc(cut(homeSignalMeta(item), 44)) + '</span></div>' +
       '</div>' +
-    '</ion-item>'
-  ).join("");
+    '</ion-item>';
+}
+
+function renderHomeFeed() {
+  const el = $('#homeFeed');
+  if (!el) return;
+  el.innerHTML = homeBriefingSections().map(section => '<section class="briefing-section" data-briefing-section="'+section.id+'" aria-labelledby="briefing-'+section.id+'">'+
+    '<header class="briefing-section-head"><div><h2 id="briefing-'+section.id+'">'+section.title+'</h2><p>'+section.description+'</p></div><span>'+section.items.length+'개'+(section.items.length>5?' 중 5개':'')+'</span></header>'+
+    (section.items.length ? section.items.slice(0,5).map(homeBriefingRow).join('') : '<p class="briefing-empty">'+section.empty+'</p>')+'</section>').join('')+
+    '<nav class="briefing-browse" aria-label="전체 자료 탐색"><span>전체 자료 보기</span><a href="#/ai-news">AI 뉴스</a><a href="#/ai-discovery">Discovery</a><a href="#/contests">공모전</a><a href="#/support">지원사업</a></nav>';
   wireHomeRows(el);
+  renderHomeRightUpcoming();
 }
 
 function renderHomeRightUpcoming() {
@@ -522,7 +518,7 @@ function renderHomeRightNew() {
   const items = state.all.filter(isNewToday).sort((a,b) => homeSignalScore(b) - homeSignalScore(a)).slice(0,5);
   el.innerHTML = items.map(item =>
     '<a class="right-row simple" href="' + itemRoute(item) + '"><span>' + esc(item.title) + '</span><em>' + esc(homeSignalLabel(item)) + '</em></a>'
-  ).join("") || '<div class="right-empty">오늘 새로 추가된 정보가 없습니다.</div>';
+  ).join("") || '<div class="right-empty">해당 날짜에 등록된 정보가 없습니다.</div>';
 }
 
 function renderHomeRightUpdated() {
@@ -534,7 +530,7 @@ function renderHomeRightUpdated() {
     .slice(0,5);
   el.innerHTML = items.map(item =>
     '<a class="right-row simple" href="' + itemRoute(item) + '"><span>' + esc(item.title) + '</span><em>업데이트</em></a>'
-  ).join("") || '<div class="right-empty">오늘 후속 업데이트가 없습니다.</div>';
+  ).join("") || '<div class="right-empty">해당 날짜에 수정된 정보가 없습니다.</div>';
 }
 
 function renderHomeLeftArchive() {
@@ -568,7 +564,7 @@ function renderHomeTopSignals() {
       '<div class="signal-rank">' + String(index + 1).padStart(2,"0") + '</div>' +
       '<div class="signal-main"><div class="signal-kicker"><span class="IssueLabel signal-category tone-' + homeSignalTone(item) + '">' + esc(homeSignalLabel(item)) + '</span><span class="IssueLabel signal-state">' + esc(homeSignalStatus(item)) + '</span></div>' +
       '<h3>' + esc(item.title) + '</h3><p>' + esc(item.summary || "") + '</p>' +
-      (item.why ? '<div class="why-line"><b>눈여겨볼 점</b><span>' + esc(cut(item.why, 155)) + '</span></div>' : '') + '</div>' +
+      (item.why ? '<div class="why-line"><b>주요 특징</b><span>' + esc(cut(item.why, 155)) + '</span></div>' : '') + '</div>' +
       '<div class="signal-arrow">↗</div>' +
     '</a>'
   ).join("");
@@ -653,7 +649,7 @@ function renderHomeResources() {
     let domain = "";
     try { domain = new URL((item.links || [])[0]?.url || "").hostname.replace(/^www\./, ""); } catch (_) {}
     const tone = String(item.discoveryType || "").toLowerCase() === "github" ? "opensource" : "resource";
-    return '<a class="resource-item tone-' + tone + '" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '"><div><strong>' + esc(item.title) + '</strong><span>' + esc(discoveryTypeLabel(item.discoveryType)) + '</span></div><small>' + esc(domain) + '</small></a>';
+    return '<a class="resource-item tone-' + tone + '" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '"><div><strong>' + esc(item.title) + '</strong><span>' + esc(discoveryPurposeLabel(item)) + '</span></div><small>' + esc(domain) + '</small></a>';
   }).join("");
   wireHomeRows(el);
 }
@@ -733,7 +729,7 @@ function renderCompact(sel, items, kind) {
     const foot = isAi
       ? ((item.tags || []).slice(0,3).join(" · ") || "AI")
       : isDiscovery
-        ? [discoveryTypeLabel(item.discoveryType), discoveryLabel(DISCOVERY_AWARENESS_LABELS, item.awareness)].filter(Boolean).join(" · ")
+        ? [discoveryPurposeLabel(item), discoveryLabel(DISCOVERY_AWARENESS_LABELS, item.awareness)].filter(Boolean).join(" · ")
         : "마감 " + txt(item.deadlineText || item.dDay);
 
     return '<article class="compact-item compact-flow" data-id="' + esc(item.id) + '">' +
@@ -783,14 +779,14 @@ function renderCategory(type) {
 
   const configs = {
     contests: {
-      eyebrow:"지금 신청 가능",
+      eyebrow:"접수 일정 · 참가 자격",
       title:"공모전 · 해커톤",
-      description:"진행 중인 공고를 기본으로 보여드립니다. 새로 발견한 공고와 마감이 가까운 공고를 먼저 확인하세요."
+      description:"공모전과 해커톤의 접수 일정, 참가 자격, 상금을 확인하세요."
     },
     "ai-news": {
       eyebrow:"새 소식 · 후속 업데이트",
       title:"AI 뉴스",
-      description:"완전히 새로운 이슈는 추가하고, 같은 이슈의 후속 소식은 기존 항목에 업데이트로 이어서 기록합니다."
+      description:"AI 제품과 기술의 주요 발표, 후속 소식을 정리했습니다."
     },
     "ai-discovery": {
       eyebrow:"새 도구 · 사이트 · 저장소 · 워크플로",
@@ -798,9 +794,9 @@ function renderCategory(type) {
       description:"사이트, GitHub, Skill, MCP, Agent, Workflow를 한곳에 모아 무엇에 쓰는지와 최근 변화까지 함께 정리합니다."
     },
     support: {
-      eyebrow:"지금 신청 가능",
+      eyebrow:"지원 내용 · 신청 자격",
       title:"창업 · 지원사업",
-      description:"사업자등록 전 예비창업자도 검토할 수 있는 사업화·보육·실증·크레딧·개발지원 기회를 모읍니다. 종료된 공고도 이력으로 보관합니다."
+      description:"창업 지원금, 입주 공간, 교육과 개발 지원을 확인하세요."
     }
   };
 
@@ -814,11 +810,11 @@ function renderCategory(type) {
 
   const sort = $("#categorySort");
   if (type === "ai-news") {
-    sort.innerHTML = '<ion-select-option value="updated">최근 업데이트순</ion-select-option><ion-select-option value="discovered">최근 발견순</ion-select-option>';
+    sort.innerHTML = '<ion-select-option value="updated">최근 수정순</ion-select-option><ion-select-option value="discovered">등록일순</ion-select-option>';
   } else if (type === "ai-discovery") {
-    sort.innerHTML = '<ion-select-option value="discovered">최근 발견순</ion-select-option><ion-select-option value="updated">최근 업데이트순</ion-select-option>';
+    sort.innerHTML = '<ion-select-option value="discovered">등록일순</ion-select-option><ion-select-option value="updated">최근 수정순</ion-select-option>';
   } else {
-    sort.innerHTML = '<ion-select-option value="deadline">마감 임박순</ion-select-option><ion-select-option value="discovered">최근 발견순</ion-select-option><ion-select-option value="updated">최근 변경순</ion-select-option>';
+    sort.innerHTML = '<ion-select-option value="deadline">마감일순</ion-select-option><ion-select-option value="discovered">등록일순</ion-select-option><ion-select-option value="updated">최근 수정순</ion-select-option>';
   }
   sort.value = state.categorySort;
 
@@ -829,17 +825,17 @@ function renderCategory(type) {
 
 function filterDefs(type) {
   if (type === "contests") return [
-    ["open","진행중"],
-    ["new","오늘 신규"],
+    ["open","모집 중·예정"],
+    ["new","신규 등록"],
     ["urgent","7일 이내"],
     ["individual","개인·1인"],
     ["closed","종료"],
-    ["all","전체 누적"]
+    ["all","전체"]
   ];
   if (type === "ai-news") return [
     ["all","전체 이슈"],
-    ["new","오늘 신규"],
-    ["updated","오늘 업데이트"],
+    ["new","신규 등록"],
+    ["updated","당일 수정"],
     ["agent","에이전트"],
     ["coding","코딩 AI"],
     ["opensource","MCP·오픈소스"],
@@ -847,7 +843,7 @@ function filterDefs(type) {
   ];
   if (type === "ai-discovery") return [
     ["all","전체"],
-    ["new","오늘 신규"],
+    ["new","신규 등록"],
     ["site","사이트"],
     ["github","GitHub"],
     ["skill","Skill"],
@@ -858,26 +854,28 @@ function filterDefs(type) {
     ["mainstream","많이 알려짐"]
   ];
   return [
-    ["open","진행중"],
-    ["new","오늘 신규"],
+    ["open","모집 중·예정"],
+    ["new","신규 등록"],
     ["urgent","7일 이내"],
     ["prestart","예비창업"],
     ["closed","종료"],
-    ["all","전체 누적"]
+    ["all","전체"]
   ];
 }
 
 function renderFilterChips(type) {
   const el = $("#categoryFilters");
   el.innerHTML = filterDefs(type).map(([key,label]) =>
-    '<ion-chip class="filter-chip ' + (key === state.categoryFilter ? "selected active" : "") + '" data-filter="' + key + '" mode="ios"><ion-label>' + label + '</ion-label></ion-chip>'
+    '<ion-chip role="button" tabindex="0" aria-pressed="' + (key === state.categoryFilter) + '" class="filter-chip ' + (key === state.categoryFilter ? "selected active" : "") + '" data-filter="' + key + '" mode="ios"><ion-label>' + label + '</ion-label></ion-chip>'
   ).join("");
 
   el.querySelectorAll(".filter-chip").forEach(btn => {
     btn.addEventListener("click", () => {
+      const restoreFocus = document.activeElement === btn;
       state.categoryFilter = btn.dataset.filter;
       renderFilterChips(type);
       renderCategoryList(type);
+      if (restoreFocus) el.querySelector('[data-filter="' + state.categoryFilter + '"]')?.focus({preventScroll: true});
     });
   });
 }
@@ -994,14 +992,16 @@ function renderTopicChips(type) {
   }
 
   el.innerHTML = defs.map(([key,label]) =>
-    '<ion-chip class="filter-chip topic-chip ' + (key === state.categoryTopicFilter ? "active" : "") + '" data-topic="' + key + '" mode="ios"><ion-label>' + label + '</ion-label></ion-chip>'
+    '<ion-chip role="button" tabindex="0" aria-pressed="' + (key === state.categoryTopicFilter) + '" class="filter-chip topic-chip ' + (key === state.categoryTopicFilter ? "active" : "") + '" data-topic="' + key + '" mode="ios"><ion-label>' + label + '</ion-label></ion-chip>'
   ).join("");
 
   el.querySelectorAll(".topic-chip").forEach(btn => {
     btn.addEventListener("click", () => {
+      const restoreFocus = document.activeElement === btn;
       state.categoryTopicFilter = btn.dataset.topic;
       renderTopicChips(type);
       renderCategoryList(type);
+      if (restoreFocus) el.querySelector('[data-topic="' + state.categoryTopicFilter + '"]')?.focus({preventScroll: true});
     });
   });
 }
@@ -1064,43 +1064,45 @@ function renderCategoryList(type) {
   const newCount = source.filter(isNewToday).length;
   const updatedCount = source.filter(isUpdatedToday).length;
   if (type === "ai-news") {
-    $("#categoryCount").textContent = "전체 " + source.length + " · 오늘 신규 " + newCount + " · 업데이트 " + updatedCount;
+    $("#categoryCount").textContent = "전체 " + source.length + " · 신규 등록 " + newCount + " · 업데이트 " + updatedCount;
   } else if (type === "ai-discovery") {
-    $("#categoryCount").textContent = "전체 " + source.length + " · 오늘 신규 " + newCount;
+    $("#categoryCount").textContent = "전체 " + source.length + " · 신규 등록 " + newCount;
   } else {
     const openCount = source.filter(isOpenItem).length;
-    $("#categoryCount").textContent = "진행중 " + openCount + " · 오늘 신규 " + newCount + " · 전체 " + source.length;
+    $("#categoryCount").textContent = "모집 중·예정 " + openCount + " · 신규 등록 " + newCount + " · 전체 " + source.length;
   }
 
+  const resultLabel = type === "ai-news" ? "소식" : "공고";
+  $("#categoryResultCount").innerHTML = resultLabel + ' <strong>' + items.length + '</strong>건';
+  const defaultFilter = type === "ai-news" ? "all" : "open";
+  $("#resetCategoryFilters").disabled = state.categoryFilter === defaultFilter && state.categoryTopicFilter === "all";
   const el = $("#categoryList");
   if (!items.length) {
-    el.innerHTML = '<div class="empty-state">이 조건에 해당하는 정보가 없습니다.</div>';
+    el.innerHTML = '<div class="empty-state"><ion-icon name="filter-outline" aria-hidden="true"></ion-icon><strong>조건에 맞는 결과가 없습니다</strong><p>필터를 초기화하거나 다른 조건을 선택해 주세요.</p></div>';
     return;
   }
 
   if (type === "ai-news") {
     el.innerHTML = items.map(item =>
       '<ion-item class="category-card ai-category-card tone-ai" button="true" detail="false" lines="inset" mode="ios" data-id="' + esc(item.id) + '">' +
-        '<div class="card-meta-row">' +
+        '<div class="news-row-content"><div class="card-meta-row">' +
           '<div class="card-status-group">' +
             changeBadge(item, "ai") +
-            '<span class="meta-label">AI 뉴스</span>' +
           '</div>' +
-          dateMetaHtml(item, "ai") +
+          '<span class="news-date">' + (item.lastUpdatedDate ? '수정 ' : '등록 ') + esc(shortDate(item.lastUpdatedDate || item.firstSeenDate)) + '</span>' +
         '</div>' +
         '<h3 class="category-item-title">' + esc(item.title) + '</h3>' +
         '<p class="category-item-summary">' + esc(item.summary || "") + '</p>' +
         tagsHtml(item.tags) +
-        '<div class="category-explainer"><span>눈여겨볼 점</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
-        '<div class="category-action">업데이트 기록과 상세 내용 보기 <span>→</span></div>' +
+        '</div>' +
       '</ion-item>'
     ).join("");
   } else if (type === "ai-discovery") {
     el.innerHTML = items.map(item =>
       '<ion-item class="category-card ai-category-card tone-' + (String(item.discoveryType || "").toLowerCase() === "github" ? "opensource" : "resource") + '" button="true" detail="false" lines="inset" mode="ios" data-id="' + esc(item.id) + '">' +
-        '<div class="card-meta-row"><div class="card-status-group">' +
+        '<div class="news-row-content"><div class="card-meta-row"><div class="card-status-group">' +
           changeBadge(item, "discovery") +
-          '<span class="meta-label">' + esc(discoveryTypeLabel(item.discoveryType)) + '</span>' +
+          '<span class="meta-label">' + esc(discoveryPurposeLabel(item)) + '</span>' +
           (item.awareness ? '<span class="meta-label">' + esc(discoveryLabel(DISCOVERY_AWARENESS_LABELS, item.awareness)) + '</span>' : '') +
           (item.trend ? '<span class="meta-label">' + esc(discoveryLabel(DISCOVERY_TREND_LABELS, item.trend)) + '</span>' : '') +
           (item.newsState ? '<span class="meta-label">' + esc(discoveryLabel(DISCOVERY_NEWS_LABELS, item.newsState)) + '</span>' : '') +
@@ -1108,8 +1110,8 @@ function renderCategoryList(type) {
         '<h3 class="category-item-title">' + esc(item.title) + '</h3>' +
         '<p class="category-item-summary">' + esc(item.summary || "") + '</p>' +
         tagsHtml(item.tags) +
-        '<div class="category-explainer"><span>눈여겨볼 점</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
-        '<div class="category-action">상세 정보와 링크 보기 <span>→</span></div>' +
+        '<div class="category-explainer"><span>주요 특징</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
+        '<div class="category-action">상세 정보와 링크 보기</div></div>' +
       '</ion-item>'
     ).join("");
   } else {
@@ -1117,25 +1119,25 @@ function renderCategoryList(type) {
     const iconName = kind === "support" ? "briefcase-outline" : "trophy-outline";
 
     el.innerHTML = '<div class="opportunity-grid-inner">' + items.map(item => {
-      const status = !isOpenItem(item) ? "종료" : (item.dDay || "접수중");
+      const status = !isOpenItem(item) ? "종료" : String(item.status).toUpperCase() === "UPCOMING" ? "접수 예정" : (item.dDay || "접수 중");
       const category = kind === "support" ? "창업 · 지원사업" : contestTopicLabel(item);
       const tags = (item.tags || []).slice(0, 3);
       const deadline = item.deadlineText || item.dDay || "일정 확인";
 
-      return '<ion-card class="opportunity-card-v2 ' + (!isOpenItem(item) ? "is-closed" : "") + '" button="true" mode="ios" data-id="' + esc(item.id) + '">' +
+      return '<ion-card href="' + itemRoute(item) + '" class="opportunity-card-v2 ' + (!isOpenItem(item) ? "is-closed" : "") + '" button="true" mode="ios" data-id="' + esc(item.id) + '">' +
         '<ion-card-header>' +
           '<div class="opportunity-card-v2-top">' +
             '<div class="opportunity-card-v2-kind">' +
               '<span class="opportunity-card-v2-icon"><ion-icon name="' + iconName + '" aria-hidden="true"></ion-icon></span>' +
               '<ion-card-subtitle>' + esc(category) + '</ion-card-subtitle>' +
             '</div>' +
-            '<span class="opportunity-card-v2-status ' + (isOpenItem(item) ? dangerClass(item) : "") + '">' + esc(status) + '</span>' +
+            '<span class="opportunity-card-v2-status ' + (isOpenItem(item) && withinWeek(item) ? "danger" : "") + '">' + esc(status) + '</span>' +
           '</div>' +
           '<ion-card-title>' + esc(item.title) + '</ion-card-title>' +
         '</ion-card-header>' +
         '<ion-card-content>' +
           '<p class="opportunity-card-v2-summary">' + esc(item.summary || item.description || "") + '</p>' +
-          (tags.length ? '<div class="opportunity-card-v2-tags">' + tags.map(t => '<span>' + esc(t) + '</span>').join("") + '</div>' : '') +
+          '<dl class="opportunity-facts"><div><dt>대상</dt><dd>' + esc(item.participation || "공고문 확인") + '</dd></div><div><dt>' + (kind === "support" ? "지원" : "상금") + '</dt><dd>' + esc(item.reward || "공고문 확인") + '</dd></div></dl>' +
           '<div class="opportunity-card-v2-footer">' +
             '<span class="opportunity-card-v2-deadline"><ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>' + esc(deadline) + '</span>' +
             '<ion-icon class="opportunity-card-v2-chevron" name="chevron-forward-outline" aria-hidden="true"></ion-icon>' +
@@ -1150,7 +1152,7 @@ function renderCategoryList(type) {
       const item = state.all.find(x => x.id === row.dataset.id);
       if (!item) return;
       state.lastRoute = location.hash;
-      location.hash = itemRoute(item);
+      if (row.tagName !== "ION-CARD") location.hash = itemRoute(item);
     });
   });
 }
@@ -1162,7 +1164,7 @@ function tagsHtml(tags) {
 
 const DISCOVERY_TYPE_LABELS = {
   site: "사이트",
-  directory: "디렉터리",
+  directory: "도구 모음",
   github: "GitHub",
   skill: "Skill",
   mcp: "MCP",
@@ -1175,7 +1177,7 @@ const DISCOVERY_TYPE_LABELS = {
 const DISCOVERY_AWARENESS_LABELS = {
   WELL_KNOWN: "많이 알려짐",
   SPECIALIZED: "일부 커뮤니티 중심",
-  EARLY: "아직 초기"
+  EARLY: "초기 단계"
 };
 
 const DISCOVERY_TREND_LABELS = {
@@ -1186,10 +1188,10 @@ const DISCOVERY_TREND_LABELS = {
 };
 
 const DISCOVERY_NEWS_LABELS = {
-  NEW_RELEASE: "새로 등장",
-  NEWLY_DISCOVERED: "오늘 처음 찾음",
+  NEW_RELEASE: "신규 출시",
+  NEWLY_DISCOVERED: "신규 등록",
   UPDATED: "최근 업데이트",
-  BASELINE: "기존 주요 항목"
+  BASELINE: "기존 등록"
 };
 
 function discoveryLabel(map, value) {
@@ -1202,18 +1204,64 @@ function discoveryTypeLabel(value) {
   return DISCOVERY_TYPE_LABELS[key] || String(value || "");
 }
 
-function discoveryPrimaryGroup(item) {
-  const type = String(item.discoveryType || "").toLowerCase();
-  if (type === "github") return "github";
-  if (["skill","mcp","agent"].includes(type)) return "agents";
-  if (type === "workflow") return "workflows";
+function githubRepository(item) {
+  for (const link of item.links || []) {
+    try {
+      const url = new URL(link.url);
+      const parts = url.pathname.split('/').filter(Boolean);
+      if (url.hostname === 'github.com' && parts.length === 2 && /^[\w.-]+$/.test(parts[0]) && /^[\w.-]+$/.test(parts[1])) return parts.join('/').replace(/\.git$/, '');
+    } catch (_) {}
+  }
+  return null;
+}
 
+function discoveryPrimaryGroup(item) {
+  const type = String(item.discoveryType || '').toLowerCase();
   const categories = (item.categories || []).map(v => String(v).toLowerCase());
-  if (type === "directory" && categories.some(v => ["workflow","showcase"].includes(v))) return "workflows";
-  if (["site","directory","platform"].includes(type)) return "sites";
-  if (categories.some(v => ["skill","mcp","agent"].includes(v))) return "agents";
-  if (categories.some(v => ["workflow","showcase","automation"].includes(v))) return "workflows";
-  return "sites";
+  if (type === 'workflow' || categories.includes('showcase')) return 'workflows';
+  if (type === 'directory') return 'collections';
+  if (['skill','mcp','agent'].includes(type) || (githubRepository(item) && categories.includes('skill'))) return 'agents';
+  return 'sites';
+}
+
+function discoveryPurposeLabel(item) {
+  return {workflows:'제작 사례', collections:'도구 모음', agents:'Skill · MCP · Agent', sites:'AI 도구'}[discoveryPrimaryGroup(item)];
+}
+
+const githubMetricRequests = new Map();
+function fetchGithubMetrics(repo) {
+  if (githubMetricRequests.has(repo)) return githubMetricRequests.get(repo);
+  const request = (async () => {
+    const key = 'daily-brief:github:' + repo;
+    try {
+      const cached = JSON.parse(sessionStorage.getItem(key) || 'null');
+      if (cached && Number.isInteger(cached.stars) && cached.stars >= 0 && Number.isInteger(cached.forks) && cached.forks >= 0 && Date.now()-cached.fetchedAt >= 0 && Date.now()-cached.fetchedAt < 900000) return cached;
+    } catch (_) {}
+    const response = await fetch('https://api.github.com/repos/' + repo, {headers:{Accept:'application/vnd.github+json'}, signal:AbortSignal.timeout(8000)});
+    if (!response.ok) throw new Error('GitHub unavailable');
+    const data = await response.json();
+    if (![data.stargazers_count,data.forks_count].every(n=>Number.isInteger(n) && n>=0)) throw new Error('Invalid metrics');
+    const result = {stars:data.stargazers_count,forks:data.forks_count,fetchedAt:Date.now()};
+    try {sessionStorage.setItem(key,JSON.stringify(result));} catch (_) {}
+    return result;
+  })();
+  githubMetricRequests.set(repo, request);
+  // Bound in-memory caching too, including failed requests.
+  setTimeout(()=>githubMetricRequests.delete(repo),900000);
+  return request;
+}
+
+function hydrateGithubMetrics(root) {
+  root.querySelectorAll('[data-github-repo]').forEach(async node => {
+    try {
+      const counts = await fetchGithubMetrics(node.dataset.githubRepo);
+      if (!node.isConnected) return;
+      const date = new Date(counts.fetchedAt).toLocaleString('ko-KR',{timeZone:'Asia/Seoul'});
+      node.innerHTML = '<span>☆ 별 '+counts.stars.toLocaleString('ko-KR')+'</span><span>⑂ 포크 '+counts.forks.toLocaleString('ko-KR')+'</span><small>현재 수치 · '+esc(date)+' 조회</small>';
+    } catch (_) {
+      if (node.isConnected) node.textContent = 'GitHub 수치 조회 불가';
+    }
+  });
 }
 
 function discoveryRank(item) {
@@ -1225,7 +1273,7 @@ function discoveryRank(item) {
 
 function discoverySignalBadges(item) {
   const parts = [
-    discoveryTypeLabel(item.discoveryType),
+    discoveryPurposeLabel(item),
     discoveryLabel(DISCOVERY_AWARENESS_LABELS, item.awareness),
     discoveryLabel(DISCOVERY_TREND_LABELS, item.trend),
     discoveryLabel(DISCOVERY_NEWS_LABELS, item.newsState)
@@ -1236,132 +1284,53 @@ function discoverySignalBadges(item) {
   '</div>';
 }
 
-function discoveryTopCard(item, index) {
-  return '<a class="discovery-top-card ' + (index === 0 ? "primary" : "") + '" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '">' +
-    '<div class="discovery-top-index">0' + (index + 1) + '</div>' +
-    discoverySignalBadges(item) +
-    '<h3>' + esc(item.title) + '</h3>' +
-    '<p>' + esc(item.summary || "") + '</p>' +
-    '<div class="discovery-why"><span>눈여겨볼 점</span><p>' + esc(txt(item.why || item.description || item.summary, "")) + '</p></div>' +
-    '<div class="discovery-card-action">자세히 보기 <span>→</span></div>' +
-  '</a>';
+function discoveryRecommendations() {
+  const ranked = (state.data.aiDiscovery || []).slice().sort((a,b) => discoveryRank(b)-discoveryRank(a) || latestDateValue(b).localeCompare(latestDateValue(a)));
+  const top = [], types = new Set();
+  ranked.forEach(item => { const group = discoveryPrimaryGroup(item); if (!types.has(group) && top.length < 3) {top.push(item);types.add(group);} });
+  ranked.forEach(item => {if(top.length < 3 && !top.includes(item)) top.push(item);});
+  return top;
 }
 
 function discoveryRow(item) {
-  return '<ion-item class="discovery-row" button="true" detail="false" lines="inset" mode="ios" data-id="' + esc(item.id) + '">' +
-    '<div class="discovery-row-main">' +
-      discoverySignalBadges(item) +
-      '<h3>' + esc(item.title) + '</h3>' +
-      '<p>' + esc(item.summary || "") + '</p>' +
-      tagsHtml(item.categories || item.tags) +
-    '</div>' +
-    '<div class="discovery-row-side">' +
-      '<span>눈여겨볼 점</span>' +
-      '<p>' + esc(cut(item.why || item.description || item.summary, 150)) + '</p>' +
-    '</div>' +
-  '</ion-item>';
-}
-
-function discoveryGroup(title, eyebrow, items) {
-  if (!items.length) return "";
-  return '<section class="discovery-group">' +
-    '<div class="discovery-section-head">' +
-      '<div><p class="section-eyebrow">' + esc(eyebrow) + '</p><h2>' + esc(title) + '</h2></div>' +
-      '<span>' + items.length + '개</span>' +
-    '</div>' +
-    '<ion-list class="discovery-group-list" mode="ios" inset="true">' + items.map(discoveryRow).join("") + '</ion-list>' +
-  '</section>';
+  const tags = item.categories || item.tags || [];
+  const recommended = state.discoveryStatus === "recommended";
+  const repo = githubRepository(item);
+  return '<a class="discovery-row catalog-card' + (recommended ? ' is-recommended' : '') + '" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '">' +
+    '<div class="catalog-type"><ion-icon name="' + esc(homeFeedIcon(item)) + '" aria-hidden="true"></ion-icon><span>' + esc(discoveryPurposeLabel(item)) + '</span>' + (recommended ? '<span class="catalog-recommendation">추천</span>' : '') + (isNewToday(item) ? '<span class="catalog-new">신규</span>' : '') + '</div>' +
+    '<h3>' + esc(item.title) + '</h3><p>' + esc(item.summary || "") + '</p>' +
+    '<div class="catalog-tags">' + tags.slice(0,2).map(tag=>'<span>'+esc(tag)+'</span>').join('') + (tags.length>2 ? '<span aria-label="추가 태그 '+(tags.length-2)+'개">+'+(tags.length-2)+'</span>' : '') + '</div>' + (repo && !requestedDate() ? '<div class="github-metrics" data-github-repo="'+esc(repo)+'" aria-live="polite">GitHub 수치 불러오는 중</div>' : '') + '<span class="paper-edge" aria-hidden="true"></span></a>';
 }
 
 function renderDiscoveryHub() {
   const items = state.data.aiDiscovery || [];
-  const el = $("#discoveryHub");
-
-  if (!items.length) {
-    el.innerHTML = '<header class="discovery-head"><p class="section-eyebrow">AI Discovery</p><h1>AI Discovery</h1><p>새로운 도구와 워크플로를 찾으면 여기에 차곡차곡 정리합니다.</p></header><div class="empty-state">아직 모아둔 항목이 없습니다.</div>';
-    return;
-  }
-
-  const ranked = items.slice().sort((a,b) => {
-    const score = discoveryRank(b) - discoveryRank(a);
-    if (score) return score;
-    return String(b.firstSeenDate || "").localeCompare(String(a.firstSeenDate || ""));
-  });
-  const top = ranked.slice(0, Math.min(3, ranked.length));
-
-  const groups = {
-    sites: items.filter(x => discoveryPrimaryGroup(x) === "sites"),
-    github: items.filter(x => discoveryPrimaryGroup(x) === "github"),
-    agents: items.filter(x => discoveryPrimaryGroup(x) === "agents"),
-    workflows: items.filter(x => discoveryPrimaryGroup(x) === "workflows")
-  };
-
-  const todayNew = items.filter(isNewToday).length;
-  const rising = items.filter(x => ["HOT","RISING","RESURFACED"].includes(String(x.trend || "").toUpperCase())).length;
-
-  el.innerHTML =
-    '<header class="discovery-head">' +
-      '<div><p class="section-eyebrow">도구 · 오픈소스 · 워크플로</p><h1>AI Discovery</h1>' +
-      '<p>AI 도구와 오픈소스, Skill, MCP, Agent, Workflow를 모아두고 무엇에 쓰는지와 요즘 얼마나 주목받는지 함께 정리합니다.</p></div>' +
-      '<div class="discovery-stats">' +
-        '<div><span>오늘 새로 찾음</span><strong>' + todayNew + '</strong></div>' +
-        '<div><span>요즘 뜨는 항목</span><strong>' + rising + '</strong></div>' +
-        '<div><span>전체</span><strong>' + items.length + '</strong></div>' +
-      '</div>' +
-    '</header>' +
-
-    '<section class="discovery-top">' +
-      '<div class="discovery-section-head"><div><p class="section-eyebrow">먼저 볼 것</p><h2>주요 발견</h2></div><span>최근 변화와 관심도를 함께 반영</span></div>' +
-      '<div class="discovery-top-grid">' + top.map(discoveryTopCard).join("") + '</div>' +
-    '</section>' +
-
-    '<div class="discovery-groups">' +
-      discoveryGroup("사이트 · 디렉터리", "찾아볼 곳", groups.sites) +
-      discoveryGroup("GitHub · 오픈소스", "코드로 볼 것", groups.github) +
-      discoveryGroup("Skill · MCP · Agent", "에이전트 생태계", groups.agents) +
-      discoveryGroup("Workflow · Showcase", "사용법과 조합", groups.workflows) +
-    '</div>' +
-
-    '<section class="discovery-all">' +
-      '<div class="discovery-section-head"><div><p class="section-eyebrow">전체 모음</p><h2>모든 항목</h2></div><span>찾은 항목은 빠짐없이 모아둡니다</span></div>' +
-      '<div class="discovery-filter-row" id="discoveryFilters">' +
-        [["all","전체"],["new","오늘 찾은 것"],["rising","요즘 뜨는 것"],["tools","도구 · 서비스"],["github","GitHub"],["agents","MCP · Skill · Agent"],["workflow","Workflow"]]
-          .map(([key,label]) => '<ion-chip class="filter-chip ' + (state.discoveryFilter === key ? "selected active" : "") + '" data-filter="' + key + '" mode="ios"><ion-label>' + label + '</ion-label></ion-chip>').join("") +
-      '</div>' +
-      '<ion-list class="discovery-all-list" id="discoveryAllList" mode="ios" inset="true"></ion-list>' +
-    '</section>';
-
+  if (["new","rising","recommended"].includes(state.discoveryFilter)) {state.discoveryStatus=state.discoveryFilter;state.discoveryFilter="all";}
+  const chips = (options,axis) => options.map(([key,label]) => '<ion-chip mode="ios" role="button" tabindex="0" aria-pressed="' + ((axis==='status'?state.discoveryStatus:axis==='source'?state.discoverySource:state.discoveryFilter)===key) + '" class="filter-chip ' + (((axis==='status'?state.discoveryStatus:axis==='source'?state.discoverySource:state.discoveryFilter)===key)?'active':'') + '" data-axis="'+axis+'" data-filter="'+key+'"><ion-label>'+label+'</ion-label></ion-chip>').join('');
+  $("#discoveryHub").innerHTML = '<header class="discovery-head"><div><h1>AI Discovery</h1><p>용도에 맞는 AI 도구와 오픈소스를 찾아보세요.</p></div><p class="discovery-stats">전체 '+items.length+'개</p></header>' +
+    '<section class="discovery-all" id="discoveryCatalog" tabindex="-1"><div class="catalog-toolbar" id="discoveryFilters">' +
+    '<div class="filter-line"><span class="filter-label">상태</span><div class="filter-row">'+chips([["all","전체"],["recommended","추천"],["new","신규 등록"],["rising","주목받는 도구"]],'status')+'</div></div>'+
+    '<div class="filter-line"><span class="filter-label">용도</span><div class="filter-row">'+chips([["all","전체"],["tools","AI 도구"],["collections","도구 모음"],["agents","Skill · MCP · Agent"],["workflow","제작 사례"]],'type')+'</div></div>'+
+    '<div class="filter-line"><span class="filter-label">출처</span><div class="filter-row">'+chips([["all","전체"],["github","GitHub"]],'source')+'</div></div></div>'+
+    '<div class="catalog-results"><p id="discoveryResultCount" role="status" aria-live="polite"></p><button id="resetDiscoveryFilters" type="button">필터 초기화</button></div><p class="recommendation-note" id="recommendationNote" hidden>최근 업데이트와 관심도를 바탕으로 서로 다른 분야의 도구를 골랐습니다.</p>'+
+    '<div class="discovery-all-list catalog-grid" id="discoveryAllList"></div></section>';
+  $("#discoveryFilters").querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
+    if(button.dataset.axis==='status') state.discoveryStatus=button.dataset.filter; else if(button.dataset.axis==='source') state.discoverySource=button.dataset.filter; else state.discoveryFilter=button.dataset.filter;
+    $("#discoveryFilters").querySelectorAll('[data-filter]').forEach(chip=>{const selected=(chip.dataset.axis==='status'?state.discoveryStatus:chip.dataset.axis==='source'?state.discoverySource:state.discoveryFilter)===chip.dataset.filter;chip.classList.toggle('active',selected);chip.setAttribute('aria-pressed',String(selected));});
+    renderDiscoveryAllList();
+  }));
+  $("#resetDiscoveryFilters").addEventListener('click',()=>{state.discoveryFilter='all';state.discoveryStatus='all';state.discoverySource='all';renderDiscoveryHub();$('#discoveryFilters [data-axis=status][data-filter=all]').focus();});
   renderDiscoveryAllList();
-
-  el.querySelectorAll(".discovery-top-card, .discovery-row").forEach(card => {
-    card.addEventListener("click", () => {
-      state.lastRoute = "#/ai-discovery";
-      if (card.tagName === "ION-ITEM") {
-        const item = state.all.find(x => x.id === card.dataset.id);
-        if (item) location.hash = itemRoute(item);
-      }
-    });
-  });
-
-  $("#discoveryFilters").querySelectorAll("[data-filter]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      state.discoveryFilter = btn.dataset.filter;
-      $("#discoveryFilters").querySelectorAll("[data-filter]").forEach(x => {
-        const selected = x.dataset.filter === state.discoveryFilter;
-        x.classList.toggle("active", selected);
-        x.classList.toggle("selected", selected);
-      });
-      renderDiscoveryAllList();
-    });
-  });
 }
 
 function matchesDiscoveryFilter(item, filter) {
   if (filter === "all") return true;
   if (filter === "new") return isNewToday(item);
   if (filter === "rising") return ["HOT","RISING","RESURFACED"].includes(String(item.trend || "").toUpperCase());
-  if (filter === "tools") return ["site","directory","platform","workflow"].includes(String(item.discoveryType || "").toLowerCase());
-  if (filter === "agents") return ["mcp","skill","agent"].includes(String(item.discoveryType || "").toLowerCase());
+  if (filter === "tools") return discoveryPrimaryGroup(item) === "sites";
+  if (filter === "collections") return discoveryPrimaryGroup(item) === "collections";
+  if (filter === "github") return !!githubRepository(item);
+  if (filter === "agents") return discoveryPrimaryGroup(item) === "agents";
+  if (filter === "workflow") return discoveryPrimaryGroup(item) === "workflows";
   return String(item.discoveryType || "").toLowerCase() === filter;
 }
 
@@ -1370,22 +1339,25 @@ function renderDiscoveryAllList() {
   if (!el) return;
 
   const items = (state.data.aiDiscovery || [])
-    .filter(item => matchesDiscoveryFilter(item, state.discoveryFilter))
+    .filter(item => matchesDiscoveryFilter(item, state.discoverySource) && matchesDiscoveryFilter(item, state.discoveryFilter) && (state.discoveryStatus === "recommended" ? discoveryRecommendations().some(pick=>pick.id===item.id) : matchesDiscoveryFilter(item, state.discoveryStatus)))
     .sort((a,b) => {
       const score = discoveryRank(b) - discoveryRank(a);
       if (score) return score;
       return String(b.firstSeenDate || "").localeCompare(String(a.firstSeenDate || ""));
     });
 
+  $("#discoveryResultCount").textContent = "도구 " + items.length + "개";
+  $("#recommendationNote").hidden = state.discoveryStatus !== "recommended";
+  $("#resetDiscoveryFilters").disabled = state.discoveryFilter === "all" && state.discoveryStatus === "all" && state.discoverySource === "all";
   el.innerHTML = items.length
     ? items.map(discoveryRow).join("")
-    : '<div class="empty-state">이 조건에 해당하는 Discovery가 없습니다.</div>';
+    : '<div class="empty-state">선택한 조건에 맞는 도구가 없습니다.</div>';
 
+  hydrateGithubMetrics(el);
   el.querySelectorAll(".discovery-row").forEach(card => {
     card.addEventListener("click", () => {
       state.lastRoute = "#/ai-discovery";
-      const item = state.all.find(x => x.id === card.dataset.id);
-      location.hash = itemRoute(item);
+      // Native anchor preserves modifier clicks and keyboard navigation.
     });
   });
 }
@@ -1418,6 +1390,11 @@ function openArchiveDate(date) {
 
 function renderDetail(item) {
   const kind = itemKind(item);
+  const parentRoutes = {ai: ["#/ai-news", "AI 뉴스"], discovery: ["#/ai-discovery", "Discovery"], contest: ["#/contests", "공모전 · 해커톤"], support: ["#/support", "창업 · 지원사업"]};
+  const [parentRoute, parentLabel] = parentRoutes[kind];
+  $("#detailBreadcrumb").innerHTML = '<a href="#/">홈</a><ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon><a href="' + parentRoute + '">' + parentLabel + '</a><ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon><span>상세 정보</span>';
+  $("#backButton").setAttribute("href", parentRoute);
+  $("#backButton").innerHTML = '<ion-icon slot="start" name="arrow-back-outline" aria-hidden="true"></ion-icon>목록으로';
   const detailView = $("#detailView");
   detailView.classList.remove("tone-ai","tone-resource","tone-opensource","tone-contest","tone-support");
   detailView.classList.add("tone-" + homeSignalTone(item));
@@ -1434,14 +1411,17 @@ function renderOpportunityDetail(item, kind) {
   $("#detailHeader").innerHTML =
     '<div class="detail-kicker">' +
       changeBadge(item, kind) +
-      '<span class="IssueLabel detail-pill">' + esc(isOpenItem(item) ? (item.dDay || "진행중") : "종료") + '</span>' +
+      '<span class="IssueLabel detail-pill">' + esc(!isOpenItem(item) ? "종료" : String(item.status).toUpperCase() === "UPCOMING" ? "접수 예정" : (item.dDay || "접수 중")) + '</span>' +
       '<span class="IssueLabel detail-pill">' + category + '</span>' +
     '</div><h1>' + esc(item.title) + '</h1><p>' + esc(item.description || item.summary || "") + '</p>' +
-    '<div class="detail-date-line"><span><b>발견일</b> ' + esc(shortDate(item.firstSeenDate)) + '</span><span><b>최종 확인</b> ' + esc(shortDate(item.lastVerifiedDate || item.firstSeenDate)) + '</span>' +
-    (item.lastUpdatedDate ? '<span><b>정보 수정</b> ' + esc(shortDate(item.lastUpdatedDate)) + '</span>' : '') + '</div>';
+    '<div class="detail-date-line"><span><b>등록일</b> ' + esc(item.firstSeenDate) + '</span><span><b>확인일</b> ' + esc(item.lastVerifiedDate || item.firstSeenDate) + '</span>' +
+    (item.lastUpdatedDate ? '<span><b>수정일</b> ' + esc(item.lastUpdatedDate) + '</span>' : '') + '</div>';
+
+  const decisionFacts = [["마감", item.deadlineText || item.dDay], ["대상", item.participation], [kind === "support" ? "지원 내용" : "상금", item.reward]].filter(([,value]) => value);
+  $("#detailHeader").insertAdjacentHTML("beforeend", '<dl class="decision-facts">' + decisionFacts.map(([label,value]) => '<div><dt>' + label + '</dt><dd>' + esc(value) + '</dd></div>').join("") + '</dl>');
 
   $("#detailTopActions").innerHTML = links.slice(0,2).map((l,i) =>
-    '<ion-button mode="ios" size="small" class="' + (i === 0 ? "primary-link" : "secondary-link") + '" fill="' + (i === 0 ? "solid" : "clear") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + '<ion-icon slot="end" name="open-outline"></ion-icon></ion-button>'
+    '<div class="source-action"><span class="source-name">' + esc(l.label) + '</span><ion-button mode="ios" size="small" class="' + (i === 0 ? "primary-link" : "secondary-link") + '" fill="' + (i === 0 ? "solid" : "clear") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + (i === 0 ? '원문 보기' : '관련 자료') + '<ion-icon slot="end" name="open-outline"></ion-icon></ion-button></div>'
   ).join("");
 
   const core = [
@@ -1463,10 +1443,10 @@ function renderOpportunityDetail(item, kind) {
   ].filter(x => x[1]);
 
   $("#detailContent").innerHTML =
-    infoBlock("핵심 정보","신청 여부를 판단할 때 먼저 볼 내용입니다.",core) +
-    infoBlock("신청 자격","실제로 참여 가능한지 확인합니다.",eligible) +
+    infoBlock("접수 일정","",[["접수 / 일정", item.period]].filter(([,value]) => value)) +
+    infoBlock("신청 자격","",eligible) +
     infoBlock("진행 방식","",process) +
-    (ideas.length ? ideaBlock(kind === "support" ? "활용 아이디어" : "만들어볼 아이디어", ideas) : "") +
+    (ideas.length ? ideaBlock(kind === "support" ? "활용 아이디어" : "개발 아이디어", ideas) : "") +
     (links.length ? '<section class="detail-block"><h2>공식 링크</h2><div class="official-link-list">' + links.map(l => '<a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer"><span>' + esc(l.label) + '</span><span>↗</span></a>').join("") + '</div></section>' : '');
 
   $("#detailAside").innerHTML = "";
@@ -1477,25 +1457,25 @@ function renderDiscoveryDetail(item) {
   const related = item.related || [];
   $("#detailHeader").innerHTML =
     '<div class="detail-kicker">' + changeBadge(item, "discovery") +
-      '<span class="IssueLabel detail-pill">' + esc(discoveryTypeLabel(item.discoveryType)) + '</span>' +
+      '<span class="IssueLabel detail-pill">' + esc(discoveryPurposeLabel(item)) + '</span>' +
       (item.awareness ? '<span class="IssueLabel detail-pill">' + esc(discoveryLabel(DISCOVERY_AWARENESS_LABELS, item.awareness)) + '</span>' : '') +
       (item.trend ? '<span class="IssueLabel detail-pill">' + esc(discoveryLabel(DISCOVERY_TREND_LABELS, item.trend)) + '</span>' : '') +
       (item.newsState ? '<span class="IssueLabel detail-pill">' + esc(discoveryLabel(DISCOVERY_NEWS_LABELS, item.newsState)) + '</span>' : '') +
     '</div><h1>' + esc(item.title) + '</h1><p>' + esc(item.summary || "") + '</p>' +
-    '<div class="detail-date-line"><span><b>발견일</b> ' + esc(shortDate(item.firstSeenDate)) + '</span><span><b>최종 확인</b> ' + esc(shortDate(item.lastUpdatedDate || item.firstSeenDate)) + '</span></div>';
+    '<div class="detail-date-line"><span><b>등록일</b> ' + esc(item.firstSeenDate) + '</span><span><b>확인일</b> ' + esc(item.lastUpdatedDate || item.firstSeenDate) + '</span></div>';
 
   $("#detailTopActions").innerHTML = links.slice(0,2).map((l,i) =>
-    '<ion-button mode="ios" size="small" class="' + (i === 0 ? "primary-link" : "secondary-link") + '" fill="' + (i === 0 ? "solid" : "clear") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + '<ion-icon slot="end" name="open-outline"></ion-icon></ion-button>'
+    '<div class="source-action"><span class="source-name">' + esc(l.label) + '</span><ion-button mode="ios" size="small" class="' + (i === 0 ? "primary-link" : "secondary-link") + '" fill="' + (i === 0 ? "solid" : "clear") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + (i === 0 ? '원문 보기' : '관련 자료') + '<ion-icon slot="end" name="open-outline"></ion-icon></ion-button></div>'
   ).join("");
 
   $("#detailContent").innerHTML =
-    infoBlock("무엇인가","",[["설명", item.description || item.summary],["눈여겨볼 점", item.why],["어디서 찾았나", item.discoveryReason]]) +
-    infoBlock("요즘 분위기","",[
+    infoBlock("서비스 소개","",[["설명", item.description || item.summary],["주요 특징", item.why],["등록 경위", item.discoveryReason]]) +
+    infoBlock("이용 현황","",[
       ["알려진 정도", discoveryLabel(DISCOVERY_AWARENESS_LABELS, item.awareness)],
       ["관심도", discoveryLabel(DISCOVERY_TREND_LABELS, item.trend)],
       ["최근 변화", discoveryLabel(DISCOVERY_NEWS_LABELS, item.newsState)]
     ]) +
-    infoBlock("어디서 봤나","",[["찾은 경로", (item.signals || []).join(" · ")],["분류", (item.categories || []).join(" · ")]]) +
+    infoBlock("관련 정보","",[["출처", (item.signals || []).join(" · ")],["분류", (item.categories || []).join(" · ")]]) +
     (related.length ? ideaBlock("연결된 항목", related) : "") +
     (links.length ? '<section class="detail-block"><h2>링크</h2><div class="official-link-list">' + links.map(l => '<a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer"><span>' + esc(l.label) + '</span><span>↗</span></a>').join("") + '</div></section>' : '');
 
@@ -1511,17 +1491,17 @@ function renderNewsDetail(item) {
       changeBadge(item, "ai") +
       '<span class="IssueLabel detail-pill">AI 뉴스</span>' +
     '</div><h1>' + esc(item.title) + '</h1><p>' + esc(item.summary || "") + '</p>' +
-    '<div class="detail-date-line"><span><b>발견일</b> ' + esc(shortDate(item.firstSeenDate)) + '</span><span><b>최종 업데이트</b> ' + esc(shortDate(item.lastUpdatedDate || item.firstSeenDate)) + '</span></div>';
+    '<div class="detail-date-line"><span><b>등록일</b> ' + esc(item.firstSeenDate) + '</span><span><b>수정일</b> ' + esc(item.lastUpdatedDate || item.firstSeenDate) + '</span></div>';
 
   $("#detailTopActions").innerHTML = links.slice(0,2).map((l,i) =>
-    '<ion-button mode="ios" size="small" class="' + (i === 0 ? "primary-link" : "secondary-link") + '" fill="' + (i === 0 ? "solid" : "clear") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + '<ion-icon slot="end" name="open-outline"></ion-icon></ion-button>'
+    '<div class="source-action"><span class="source-name">' + esc(l.label) + '</span><ion-button mode="ios" size="small" class="' + (i === 0 ? "primary-link" : "secondary-link") + '" fill="' + (i === 0 ? "solid" : "clear") + '" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + (i === 0 ? '원문 보기' : '관련 자료') + '<ion-icon slot="end" name="open-outline"></ion-icon></ion-button></div>'
   ).join("");
 
   $("#detailContent").innerHTML =
     updateTimeline(item.updates || []) +
     infoBlock("핵심 내용","",[["내용",item.description || item.summary]]) +
-    infoBlock("눈여겨볼 점","",[["의미",item.why || item.description || item.summary]]) +
-    (ideas.length ? ideaBlock("직접 써볼 방법",ideas) : "") +
+    infoBlock("핵심 변화","",[["의미",item.why || item.description || item.summary]]) +
+    (ideas.length ? ideaBlock("활용 방법",ideas) : "") +
     (links.length ? '<section class="detail-block"><h2>공식 링크</h2><div class="official-link-list">' + links.map(l => '<a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer"><span>' + esc(l.label) + '</span><span>↗</span></a>').join("") + '</div></section>' : '');
 
   $("#detailAside").innerHTML = "";
@@ -1559,6 +1539,12 @@ function goBack() {
 
 function setupInteractions() {
   hydrateViewStates();
+  $(".skip-link")?.addEventListener("click", event => {
+    event.preventDefault();
+    const main = $("#mainContent");
+    main.focus({preventScroll: true});
+    main.scrollIntoView({block: "start"});
+  });
   if ("scrollRestoration" in history) history.scrollRestoration = "manual";
 
   window.addEventListener("hashchange", () => {
@@ -1572,33 +1558,30 @@ function setupInteractions() {
   if (mobileMenu) mobileMenu.addEventListener("click", () => document.body.classList.toggle("menu-open"));
   document.querySelectorAll(".nav-item").forEach(a => a.addEventListener("click", () => document.body.classList.remove("menu-open")));
 
-  document.querySelectorAll("[data-home-filter]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      state.homeFilter = btn.dataset.homeFilter || "all";
-      document.querySelectorAll("[data-home-filter]").forEach(x => x.classList.toggle("active", x === btn));
-      if (location.hash !== "#/" && location.hash !== "#") location.hash = "#/";
-      else renderHomeFeed();
-    });
-  });
-
-  const homeSort = $("#homeSort");
-  if (homeSort) {
-    homeSort.value = state.homeSort;
-    homeSort.addEventListener("ionChange", e => {
-      state.homeSort = e.detail.value || "recommended";
-      renderHomeFeed();
-    });
-  }
-
   document.querySelectorAll("[data-discovery-filter]").forEach(link => {
     link.addEventListener("click", () => {
       state.discoveryFilter = link.dataset.discoveryFilter || "all";
+      state.discoveryStatus = "all";
+      state.discoverySource = "all";
     });
   });
 
-  $("#backButton").addEventListener("click", () => {
-    if (history.length > 1) history.back();
-    else location.hash = state.lastRoute || "#/";
+  $("#resetCategoryFilters").addEventListener("click", () => {
+    const type = location.hash.slice(2);
+    state.categoryFilter = type === "ai-news" ? "all" : "open";
+    state.categoryTopicFilter = "all";
+    renderFilterChips(type);
+    renderTopicChips(type);
+    renderCategoryList(type);
+    $("#categoryFilters ion-chip")?.focus({preventScroll: true});
+  });
+
+  document.addEventListener("click", event => {
+    const sectionLink = event.target.closest?.("[data-scroll-target]");
+    if (!sectionLink) return;
+    const target = document.getElementById(sectionLink.dataset.scrollTarget);
+    target?.scrollIntoView({block: "start"});
+    target?.focus({preventScroll: true});
   });
 
   $("#categorySort").addEventListener("ionChange", e => {
@@ -1620,6 +1603,12 @@ function setupInteractions() {
   $("#searchClose").addEventListener("click", closeSearch);
 
   document.addEventListener("keydown", e => {
+    const chip = e.target.closest?.('ion-chip[role="button"]');
+    if (chip && (e.key === "Enter" || e.key === " ")) {
+      e.preventDefault();
+      chip.click();
+      return;
+    }
     if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
       e.preventDefault();
       openSearch();
@@ -1636,16 +1625,18 @@ function setupInteractions() {
         .concat(x.categories || [])
         .concat(x.signals || [])
         .concat(x.related || [])
+        .concat((x.links || []).map(link => link.label || ""))
         .concat((x.updates || []).map(u => [u.label,u.text].join(" ")))
         .join(" ").toLowerCase().includes(q)
     ).slice(0,12);
 
     $("#searchResults").innerHTML = results.length
-      ? results.map(x => '<div class="search-result" data-id="' + esc(x.id) + '"><b>' + esc(x.title) + '</b><span>' + esc(x.summary || "") + '</span></div>').join("")
-      : (q ? '<div class="empty-state">검색 결과가 없습니다.</div>' : '');
+      ? results.map(x => '<a class="search-result" href="' + itemRoute(x) + '" data-id="' + esc(x.id) + '"><b>' + esc(x.title) + '</b><span>' + esc(x.summary || "") + '</span></a>').join("")
+      : (q ? '<div class="empty-state"><strong>검색 결과가 없습니다</strong><p>검색어를 줄이거나 다른 단어로 검색해 주세요.</p></div>' : '<div class="search-guidance"><ion-icon name="search-outline" aria-hidden="true"></ion-icon><strong>찾으시는 정보를 검색하세요</strong><p>AI 뉴스, 개발 도구, 공모전, 지원사업을 검색할 수 있습니다.</p></div>');
 
     $("#searchResults").querySelectorAll(".search-result").forEach(row => {
-      row.addEventListener("click", () => {
+      row.addEventListener("click", event => {
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         const item = state.all.find(x => x.id === row.dataset.id);
         closeSearch();
         state.lastRoute = location.hash || "#/";
