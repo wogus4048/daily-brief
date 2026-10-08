@@ -18,8 +18,8 @@ All content arrays are cumulative catalogs, not replace-every-day feeds.
 ## Editorial selection: what belongs in each category
 
 Select information for the decision it helps the reader make:
-- `contests`: an opportunity the reader can realistically enter to build a product, gain a portfolio result, win a prize, or obtain useful expert feedback. Confirm eligibility, submission requirements, actionable dates, and rewards before inclusion. Idea/proposal contests remain eligible; a coding requirement is not mandatory.
-- `support`: a program the reader can realistically apply for to obtain funding, workspace, training, mentoring, commercialization support, or useful development credits. State the concrete benefit, eligibility, obligations, application steps, and deadline. Exclude generic events and unrelated notices even when open.
+- `contests`: collect all discoverable idea/proposal competitions and all competitions/hackathons involving program/software development, regardless of industry, AI relevance, prize size, or perceived portfolio value. Include app, web, game, automation, data/software and prototype-building events. Record eligibility, team requirements, region, submissions, dates and rewards; these are visible conditions, not implicit personal-fit exclusion filters. Do not claim exhaustive coverage of the entire web; record the sources searched and gaps.
+- `support`: collect all discoverable startup/pre-startup application opportunities except programs explicitly restricted to applicants who already have business registration at application time. Include recruitment/application programs such as 모두의창업, founder selection, pre-startup education, incubation, mentoring, commercialization, funding, workspace and developer credits, including programs without cash grants. Mixed pre-startup/existing-business programs qualify through the pre-startup track. Record regional, age, employment and other requirements rather than silently excluding on those grounds. Distinguish registration required at application from registration required after selection; the latter is not an exclusion. Mark unclear registration eligibility as requiring confirmation instead of guessing. Generic non-startup events remain outside this category.
 - `aiNews`: a recent AI topic attracting observable community attention, with an explanation of what happened, why people are discussing it, and what is verified. Follow the community-first policy below.
 - `aiDiscovery`: a reusable tool, repository, skill, MCP, agent, workflow, or curated collection the reader can actually inspect or try. State its specific use, entry point, availability/cost when known, and material limitations. Popularity alone is insufficient.
 
@@ -125,7 +125,7 @@ Suggested brief grouping:
 
 ### AI news
 
-AI news is a **community-first briefing of currently discussed AI topics**, not a chronological feed of vendor announcements. Include model/tool releases, hands-on reports, useful experiments, substantial comparisons, research results, pricing/access changes, and controversies when actual recent community attention is evidenced. An official announcement alone does not qualify as community-hot news.
+AI news is a **community-first collection of hot/popular AI posts and currently discussed AI topics**, not a chronological feed of vendor announcements. Popular posts, hands-on reports, tips, opinion pieces, comparisons and discussions qualify even without a new product announcement. Include model/tool releases, useful experiments, research results, pricing/access changes, and controversies when recent community attention is evidenced. An official announcement alone does not qualify as community-hot news.
 
 Discovery and recency:
 - Search recent community discussions first. Starting points include Hacker News, GeekNews, relevant Reddit communities such as LocalLLaMA, and accessible public developer/AI discussions on X, GitHub, Hugging Face and other relevant communities. These are starting points, not a whitelist. Cover both Korean-language and international discussion; record inaccessible sources and use accessible alternatives without bypassing access controls.
@@ -133,7 +133,7 @@ Discovery and recency:
 - Search results and summaries are leads. Open the actual discussion and inspect substantive comments or responses whenever accessible. A blocked thread or a search snippet alone is insufficient evidence to describe its reception.
 
 Evidence of community attention:
-- A topic qualifies with either (a) substantial, independently observed discussion in at least two distinct communities, or (b) a prominent/popular placement within one relevant community plus substantive independent responses. For (b), record the actual listing/rank or popularity indicator and the observed responses. Mere appearance in a latest/new feed does not qualify.
+- A topic qualifies with either (a) independently observed discussion in at least two distinct communities, or (b) an observed hot/popular placement or clear popularity indicator in one relevant community. For (b), record the actual listing/rank or visible popularity indicator; a second community is not required. Inspect substantive responses where available to describe reception accurately, but lack of comments alone does not disqualify a popular post. Mere appearance in a latest/new feed does not qualify.
 - Record the concrete reason for selection: observed placement, points/upvotes, comments, independent hands-on reports, or cross-community discussion. Use only visible metrics, with an observation timestamp; unavailable metrics remain unknown, never zero. Do not sum or directly compare raw counts across platforms. Do not infer momentum or growth from a single observation.
 - Reposts by the same author, syndicated copies, promotional replies, and duplicate links are not independent confirmation. A single viral promotional post or many low-information reactions is insufficient by itself.
 - Prefer topics with practical consequences for AI use, development, creative work, cost, availability, or understanding capabilities. Do not select pure engagement bait, repetitive brand arguments, or unsupported speculation merely because they attract reactions. Do not force a daily quota or fill a quiet day with older announcements.
@@ -229,9 +229,9 @@ For startup/support programs:
 
 For public/idea/industry-specialized contests:
 - Search independently from AI/data and code-heavy hackathons for `아이디어 공모전`, `국민참여 공모`, `서비스 기획 공모전`, `혁신 아이디어`, `산업 아이디어 공모전`, `기술·제품 공모전`, and combinations with `개인 참가`, `국민 누구나`, `상금`, `PoC`, `앱/웹`, `서비스`.
-- Include government ministries, public agencies, public corporations, sports/culture/transport/finance/identity and other industry-specific organizers when an individual can realistically enter.
-- Do not exclude a strong opportunity merely because a finished code submission is not mandatory. Idea/proposal-first contests belong in `contests` when they offer meaningful prize money, portfolio value, expert feedback, PoC support, commercialization, or product-building relevance.
-- Prefer items where an individual can enter directly; record whether PoC/prototype/demo is optional or mandatory.
+- Include government ministries, public agencies, public corporations, sports/culture/transport/finance/identity and other industry-specific organizers. Collect idea/proposal competitions across all subjects, including those unrelated to software.
+- Include idea/proposal contests regardless of cash prizes or perceived portfolio value. A finished code submission is not mandatory. Independently collect all program/software-development competitions.
+- Record individual/team, student, employment and regional conditions without narrowing collection to an assumed user profile; record whether PoC/prototype/demo is optional or mandatory.
 - Gather at least 10 materially distinct raw candidates or exhaust the relevant government/public and industry-specific source axes.
 
 ### Structured source enumeration
@@ -271,7 +271,7 @@ Search these three districts independently every refresh even when unrestricted 
 - 현금·바우처·응시료·주거/공간·교육비 등 실질 지원
 - 서울시/유관기관 사업을 구청이 재공고한 경우에도 현재 신청 가능하면 후보로 수집
 
-Do not publish generic festivals, leisure classes, children-only programs, unrelated welfare notices, or generic language/certification exam-fee reimbursements merely because they are open. Publish only items that materially fit the user's opportunity profile. Prefer opportunities that materially advance software/AI skills, job access, portfolio building, startup execution, workspace access, commercialization, funding, PoC, or product-building. If a district has no relevant OPEN item after checking its official pages, record that the district was checked rather than silently skipping it.
+Apply the same broad contest/startup scope to district sources: include idea/software competitions and startup recruitment/support admitting applicants without existing business registration. Record local, age and other conditions visibly instead of excluding for an assumed user profile. Generic festivals, leisure classes, unrelated welfare notices and generic exam-fee reimbursements remain outside the contest/startup scope. If a district has no relevant OPEN item after checking its official pages, record the check rather than silently skipping it.
 
 Adjacent Seoul district sites may be explored when broad discovery surfaces a relevant opportunity, but 노원·도봉·강북 remain the mandatory local baseline.
 
@@ -361,10 +361,10 @@ For each opportunity, verify and record:
 
 When a fact is not stated, record `명시 없음`, `공개 정보 없음`, or `확인 필요`; never infer permission or eligibility.
 
-### 6. Apply realistic-user eligibility only after verification
-- Keep opportunities realistically accessible to an individual / one-person team or no-registration pre-startup applicant.
-- Prefer nationwide/online/Seoul/capital-region-accessible programs.
-- Exclude existing-company-only and clearly non-capital-region-only programs when the user cannot apply.
+### 6. Record eligibility without silently narrowing collection
+- Keep idea/proposal and program/software-development contests across subjects, prize levels, regions and team requirements. Show the verified conditions.
+- For startup support, exclude only programs explicitly requiring an already registered business at application time. Keep pre-startup tracks, mixed programs admitting unregistered applicants, and programs requiring registration only after selection.
+- Keep startup application/recruitment programs such as 모두의창업 even without a cash grant. Record age, region, employment, prior-business and post-selection obligations; unclear eligibility is labelled `확인 필요`, not silently excluded or presented as confirmed eligibility.
 - Do not treat `대한민국 국민 누구나` as proof that employment has no restrictions; if no restriction is found, say `재직자 제한 명시 없음`.
 
 ### 7. Deduplicate and classify
@@ -378,7 +378,7 @@ Do not finish the opportunity refresh until all applicable gates pass:
 - If `support` has zero OPEN items, rerun startup/support discovery with new query variants and re-check K-Startup, 기업마당, SBA, NIPA/KISA and fintech/startup sources.
 - If OPEN contests are mostly AI/data, rerun the non-AI software-development track.
 - If there are no OPEN general-software/app/web/security/fintech/public-data opportunities, run another broad search across those categories before concluding none were found.
-- If there are no OPEN individual-accessible public/idea/industry-specialized contests with meaningful prize/portfolio/product value, rerun `아이디어 공모전` / `국민참여 공모` / `서비스 기획 공모전` / `산업 아이디어 공모전` searches and re-check 소통24 plus government/public-agency official sources.
+- If there are no OPEN public/idea/industry-specialized contests, rerun `아이디어 공모전` / `국민참여 공모` / `서비스 기획 공모전` / `산업 아이디어 공모전` searches and re-check 소통24 plus government/public-agency official sources, without applying a minimum prize or personal-fit filter.
 - Search separately for imminent application openings (`접수 예정`, `신청 시작`, `오픈 예정`, `선착순`, countdown pages) in the next 7 days. Any relevant same-day/next-24-hour or limited-capacity opening must not be omitted merely because registration is not open yet; publish it as `UPCOMING` with `openingAt`.
 - If a major source family could not be checked because of a tool/site failure, preserve existing verified data and record the gap rather than silently treating it as empty.
 - Do not satisfy a raw-candidate quota by counting obvious duplicates; candidate counts refer to materially distinct opportunities.
@@ -415,14 +415,13 @@ Before writing data:
 
 ## Eligibility
 
-Publish opportunities the user can realistically enter:
-- individual / one-person team, or eligible pre-startup applicant without required existing business registration
-- nationwide / online / Seoul / capital-region accessible
-- no explicit employee ban or full-time exclusivity
-- for startup/support programs, verify current-business-registration rules, past business-history restrictions, employee/side-job restrictions, and whether business registration becomes mandatory after selection
+Collect broadly within the user's explicit scope: all idea/proposal and software-development contests, and all startup application/support programs except those requiring existing business registration at application.
+- Show individual/team, age/student, region, employment and full-time/exclusivity conditions as verified facts; do not silently exclude for assumed personal fit.
+- For startup/support programs, verify registration requirements separately for application and post-selection. Include eligible pre-startup tracks of mixed programs and clearly label track-specific requirements.
+- Record past business-history restrictions and employee/side-job restrictions; do not assume these requirements are satisfied.
 - record whether cash support can officially be used for development, SaaS, cloud, GPU, API or AI expenses; when not stated, mark it as requiring confirmation
 
-Exclude existing-company-only programs and non-capital regional-only programs requiring local company/residence. If eligibility remains ambiguous after checking official notices/FAQ, do not publish it.
+Exclude startup/support programs only when existing business registration is explicitly mandatory for all relevant application tracks. If registration eligibility remains unclear, preserve the candidate with `확인 필요` and the official source; never claim confirmed eligibility. Registration after selection does not disqualify a program.
 
 It is valid for `support` to be empty.
 
