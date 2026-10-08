@@ -15,6 +15,18 @@ The main file is `data/latest.json` with:
 
 All content arrays are cumulative catalogs, not replace-every-day feeds.
 
+## Editorial selection: what belongs in each category
+
+Select information for the decision it helps the reader make:
+- `contests`: an opportunity the reader can realistically enter to build a product, gain a portfolio result, win a prize, or obtain useful expert feedback. Confirm eligibility, submission requirements, actionable dates, and rewards before inclusion. Idea/proposal contests remain eligible; a coding requirement is not mandatory.
+- `support`: a program the reader can realistically apply for to obtain funding, workspace, training, mentoring, commercialization support, or useful development credits. State the concrete benefit, eligibility, obligations, application steps, and deadline. Exclude generic events and unrelated notices even when open.
+- `aiNews`: a recent AI topic attracting observable community attention, with an explanation of what happened, why people are discussing it, and what is verified. Follow the community-first policy below.
+- `aiDiscovery`: a reusable tool, repository, skill, MCP, agent, workflow, or curated collection the reader can actually inspect or try. State its specific use, entry point, availability/cost when known, and material limitations. Popularity alone is insufficient.
+
+Meaningful updates include changed eligibility, opening/deadline, submission rules, prize/support, application availability, actual release/access, material pricing/license changes, reproducible new capabilities, corrections, or consequential changes in an ongoing story. A routine re-check, increased likes/stars, another repost, or unchanged marketing copy is not an update. Preserve `firstSeenDate`; use `lastUpdatedDate` only for substantive changes.
+
+When one event deserves both news and discovery coverage, news explains the current discussion and discovery explains the enduring practical asset. Cross-link them and avoid duplicating the same summary. Preserve historical catalog entries; do not relabel old news as newly hot or reset dates to fit the new policy.
+
 ## Research evidence gate
 
 Every scheduled refresh must also write `data/research/YYYY-MM-DD.json`. This is not optional logging; it is promotion evidence.
@@ -81,6 +93,9 @@ Required fields:
 - optional `related[]` references to related sites/repos/skills/workflows
 
 Collection policy:
+- For every new discovery, verify a working official/repository/demo/docs entry point and identify at least one concrete task it helps accomplish. Record setup/access requirements, price or free-tier limits, license and maintenance/release evidence when available; mark unknowns rather than guessing. Do not claim to have tested a tool unless it was actually tested.
+- Prefer a specific useful capability, a reproducible workflow, or a material improvement over an existing option. Exclude empty landing pages, duplicate wrappers with no evidenced distinction, broken/unavailable assets, and unsupported promotional claims. A small or unfamiliar project can qualify without high star counts.
+- A directory is a curated collection, not a catch-all category. Describe its subject, selection value and useful navigation. A discussion belongs in Discovery only when it contains a reusable technique or artifact; current debate belongs in AI news.
 - Optimize for coverage at ingestion time; do not discard lower-priority discoveries merely because they are not Top Finds.
 - Search independently across official ecosystem showcases/directories, GitHub, Reddit, Hacker News, Product Hunt, X/public social results when accessible, and official developer/platform channels.
 - Keep the existing broad-web principle: do not reduce discovery to a fixed whitelist. Credible newly found recurring sources must be recorded in `sourceDiscoveries` and evaluated for the source lifecycle.
@@ -109,6 +124,26 @@ Suggested brief grouping:
 - Source Radar (new recurring information sources discovered today)
 
 ### AI news
+
+AI news is a **community-first briefing of currently discussed AI topics**, not a chronological feed of vendor announcements. Include model/tool releases, hands-on reports, useful experiments, substantial comparisons, research results, pricing/access changes, and controversies when actual recent community attention is evidenced. An official announcement alone does not qualify as community-hot news.
+
+Discovery and recency:
+- Search recent community discussions first. Starting points include Hacker News, GeekNews, relevant Reddit communities such as LocalLLaMA, and accessible public developer/AI discussions on X, GitHub, Hugging Face and other relevant communities. These are starting points, not a whitelist. Cover both Korean-language and international discussion; record inaccessible sources and use accessible alternatives without bypassing access controls.
+- Prioritize discussions published or meaningfully revived within the last 72 hours of the run. Expand to 7 days when needed, explicitly stating the dates and current reason for renewed interest. Keep the original event date separate from the discussion date. Do not present an old release as new because a post about it is new.
+- Search results and summaries are leads. Open the actual discussion and inspect substantive comments or responses whenever accessible. A blocked thread or a search snippet alone is insufficient evidence to describe its reception.
+
+Evidence of community attention:
+- A topic qualifies with either (a) substantial, independently observed discussion in at least two distinct communities, or (b) a prominent/popular placement within one relevant community plus substantive independent responses. For (b), record the actual listing/rank or popularity indicator and the observed responses. Mere appearance in a latest/new feed does not qualify.
+- Record the concrete reason for selection: observed placement, points/upvotes, comments, independent hands-on reports, or cross-community discussion. Use only visible metrics, with an observation timestamp; unavailable metrics remain unknown, never zero. Do not sum or directly compare raw counts across platforms. Do not infer momentum or growth from a single observation.
+- Reposts by the same author, syndicated copies, promotional replies, and duplicate links are not independent confirmation. A single viral promotional post or many low-information reactions is insufficient by itself.
+- Prefer topics with practical consequences for AI use, development, creative work, cost, availability, or understanding capabilities. Do not select pure engagement bait, repetitive brand arguments, or unsupported speculation merely because they attract reactions. Do not force a daily quota or fill a quiet day with older announcements.
+
+Verification and writing:
+- Distinguish community attention from factual confidence. Verify release, pricing, access and capability claims against official announcements, repositories, papers, documentation, or the original experiment when available. For user experiments, report the author's method, limitations and what was actually shown; do not generalize a personal result into a proven product capability.
+- For a debate, accurately report the existence and substance of the debate. Attribute disputed claims and distinguish them from confirmed facts. Do not invent a community consensus from a few comments. Uncorroborated rumors do not qualify for publication as factual news.
+- Each news item should let the reader answer: what happened; why it is being discussed now; what it means in practice; and what remains uncertain. Use `summary` for the event, `why` for the evidenced reason it matters/is discussed, `description` for context and differing substantive reactions, and typed `links` for both the discussion and the primary source. Keep headlines factual and in natural Korean.
+- In each selected `tracks.aiNews.rawCandidates[]` audit entry, include `communityEvidence[]` with `platform`, `url`, `observedAt`, `discussionDate` when known, visible `metrics`/`placement` when available, and a concrete `attentionReason`. Include `verificationUrls` and `verificationNote` explaining which claims were checked and which remain uncertain. These are editorial evidence fields; the current validator does not independently verify attention quality or enforce these additional fields.
+- Retain the existing audit query axes (`officialProduct`, `githubReleases`, `huggingFace`, `researchLabs`, `communities`) for compatibility. Use community searches to discover topics and the other axes to find original evidence and relevant context. Execute and record actual queries for all required axes; those searches do not require publishing an item from every source type. Never fabricate a query to satisfy the validator.
 
 AI news is also cumulative. Do not create a second card for the same underlying product/release/topic when a follow-up appears.
 
@@ -241,8 +276,9 @@ Do not publish generic festivals, leisure classes, children-only programs, unrel
 Adjacent Seoul district sites may be explored when broad discovery surfaces a relevant opportunity, but 노원·도봉·강북 remain the mandatory local baseline.
 
 For AI news:
-- Search broadly across the web, GitHub releases/repos, Hugging Face, arXiv/research labs, official product updates, and developer communities.
-- Do not limit discovery to major AI vendors.
+- Start from recent Korean and international community discussion, applying the recency and observable-attention criteria in the AI news policy above.
+- Follow selected topics to GitHub releases/repos, Hugging Face, arXiv/research labs, official product updates, and original experiments for verification. These are evidence sources, not an automatic publication queue.
+- Do not limit discovery to major AI vendors; include independently useful experiments and discussions about smaller or open projects when they meet the same evidence standard.
 
 Discovery/community sources are for finding leads. Final published facts should be verified against primary official sources whenever available.
 
