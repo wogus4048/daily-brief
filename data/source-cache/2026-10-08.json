@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generatedAt": "2026-10-08T07:40:32.470Z",
+  "generatedAt": "2026-10-08T08:21:43.945Z",
   "timezone": "Asia/Seoul",
   "crawler": {
     "engine": "playwright-chromium",
@@ -80,39 +80,10 @@
         },
         {
           "source": "ContestKorea",
-          "title": "9. 제30회 우암전국백일장",
-          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030110001&int_gbn=1&str_no=202610060010",
-          "rawText": "9. 제30회 우암전국백일장",
-          "statusHints": []
-        },
-        {
-          "source": "ContestKorea",
-          "title": "문학•문예 오늘, 내 삶의 이름은 영천(영천시 생활인구 수기, 시, 사진 공모전) 0",
-          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030110001&int_gbn=1&str_no=202610060061",
-          "rawText": "문학•문예 오늘, 내 삶의 이름은 영천(영천시 생활인구 수기, 시, 사진 공모전) 0 주최 . 영천시 대상 . 누구나 , 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 10.01~11.13 심사 11.16~11.30 발표 11.30 D-36 접수중",
-          "statusHints": [
-            "접수중"
-          ]
-        },
-        {
-          "source": "ContestKorea",
-          "title": "문학•문예 소상공인의 날 기념 N행시 대학생 공모전 1",
+          "title": "7. 소상공인의 날 기념 N행시 대학생 공모전",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030110001&int_gbn=1&str_no=202610070011",
-          "rawText": "문학•문예 소상공인의 날 기념 N행시 대학생 공모전 1 주최 . 소상공인연합회 대상 . 대학생 접수 10.11~10.18 심사 10.19~10.24 발표 11.05 D-10 접수예정",
-          "statusHints": [
-            "접수예정",
-            "예정"
-          ]
-        },
-        {
-          "source": "ContestKorea",
-          "title": "문학•문예 제2회 AI전자그림책 공모전 'AI 이야기 숲' 1",
-          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030110001&int_gbn=1&str_no=202610070046",
-          "rawText": "문학•문예 제2회 AI전자그림책 공모전 'AI 이야기 숲' 1 주최 . 사단법인 한국독서문화재단 대상 . 대학생 , 대학원생 , 일반인 접수 11.02~11.16 심사 11.17~12.04 발표 12.11 D-39 접수예정",
-          "statusHints": [
-            "접수예정",
-            "예정"
-          ]
+          "rawText": "7. 소상공인의 날 기념 N행시 대학생 공모전",
+          "statusHints": []
         },
         {
           "source": "ContestKorea",
@@ -125,11 +96,31 @@
         },
         {
           "source": "ContestKorea",
+          "title": "문학•문예 2026 광주콘텐츠코리아랩 웹소설 원천 스토리 공모전 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030110001&int_gbn=1&str_no=202610070052",
+          "rawText": "문학•문예 2026 광주콘텐츠코리아랩 웹소설 원천 스토리 공모전 0 주최 . 광주정보문화산업진흥원 대상 . 대학생 , 대학원생 , 일반인 , 외국인 접수 11.17~11.19 심사 11.19~11.25 발표 12.10 D-42 접수예정",
+          "statusHints": [
+            "접수예정",
+            "예정"
+          ]
+        },
+        {
+          "source": "ContestKorea",
           "title": "문학•문예 직장인 사연 공모전 | 제2회 쉐어잇 빡춘문예 (총 100명 시상) 2",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030110001&int_gbn=1&str_no=202610070060",
           "rawText": "문학•문예 직장인 사연 공모전 | 제2회 쉐어잇 빡춘문예 (총 100명 시상) 2 주최 . 쉐어잇 대상 . 일반인 접수 09.22~11.01 심사 11.09~11.22 발표 11.25 D-24 접수중",
           "statusHints": [
             "접수중"
+          ]
+        },
+        {
+          "source": "ContestKorea",
+          "title": "문학•문예 제28회 문학축제-'한양의시선'(구 시 이어짓기대회) 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030110001&int_gbn=1&str_no=202610080009",
+          "rawText": "문학•문예 제28회 문학축제-'한양의시선'(구 시 이어짓기대회) 0 주최 . 한양대학교 ERICA 대상 . 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 10.12~11.15 심사 11.17~11.22 발표 11.24 D-38 접수예정",
+          "statusHints": [
+            "접수예정",
+            "예정"
           ]
         },
         {
@@ -162,9 +153,9 @@
         },
         {
           "source": "ContestKorea",
-          "title": "6. 2026년 10월 KESEL 영어 말하기 대회",
+          "title": "8. 2026년 10월 KESEL 영어 말하기 대회",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030310001&int_gbn=1&str_no=202610060078",
-          "rawText": "6. 2026년 10월 KESEL 영어 말하기 대회",
+          "rawText": "8. 2026년 10월 KESEL 영어 말하기 대회",
           "statusHints": []
         },
         {
@@ -194,6 +185,25 @@
         },
         {
           "source": "ContestKorea",
+          "title": "미술•디자인•웹툰 2026 세계아동그림대회 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030610001&int_gbn=1&str_no=202610080029",
+          "rawText": "미술•디자인•웹툰 2026 세계아동그림대회 0 주최 . 키드잡아동문화협회 대상 . 유치원 , 초등학생 접수 10.10~11.24 심사 11.24~12.08 발표 12.09 D-47 접수예정 ￦ 유료 접수",
+          "statusHints": [
+            "접수예정",
+            "예정"
+          ]
+        },
+        {
+          "source": "ContestKorea",
+          "title": "미술•디자인•웹툰 제1회 KEA FOUNDATION 신진 작가 공모 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=030610001&int_gbn=1&str_no=202610080032",
+          "rawText": "미술•디자인•웹툰 제1회 KEA FOUNDATION 신진 작가 공모 0 주최 . KEA FOUNDATION 대상 . 대학원생 , 일반인 접수 10.08~11.02 심사 11.03~11.12 발표 11.13 D-25 접수중",
+          "statusHints": [
+            "접수중"
+          ]
+        },
+        {
+          "source": "ContestKorea",
           "title": "2026 고성 해양심층수 브랜드...",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031210001&int_gbn=1&str_no=202607200008",
           "rawText": "D-11 2026 고성 해양심층수 브랜드...",
@@ -217,50 +227,41 @@
         },
         {
           "source": "ContestKorea",
-          "title": "10. 5극3특 성장엔진 미래지도 AI 영상 공모전",
-          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031210001&int_gbn=1&str_no=202609300020",
-          "rawText": "10. 5극3특 성장엔진 미래지도 AI 영상 공모전",
-          "statusHints": []
-        },
-        {
-          "source": "ContestKorea",
-          "title": "8. 국민콜110 「110을 알려줘!」 SNS 숏폼 콘텐츠 공모전",
+          "title": "10. 국민콜110 「110을 알려줘!」 SNS 숏폼 콘텐츠 공모전",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031210001&int_gbn=1&str_no=202610060038",
-          "rawText": "8. 국민콜110 「110을 알려줘!」 SNS 숏폼 콘텐츠 공모전",
+          "rawText": "10. 국민콜110 「110을 알려줘!」 SNS 숏폼 콘텐츠 공모전",
           "statusHints": []
         },
         {
           "source": "ContestKorea",
-          "title": "사진•영상•영화제 2026년 한국보훈복지의료공단 숏폼 영상 공모전 <내가 발견한 보훈공단, 60초에 담다> 0",
-          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031210001&int_gbn=1&str_no=202610070007",
-          "rawText": "사진•영상•영화제 2026년 한국보훈복지의료공단 숏폼 영상 공모전 <내가 발견한 보훈공단, 60초에 담다> 0 주최 . 한국보훈복지의료공단 대상 . 누구나 , 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 09.16~10.31 심사 11.01~12.04 발표 12.09 D-23 접수중",
-          "statusHints": [
-            "접수중"
-          ]
-        },
-        {
-          "source": "ContestKorea",
-          "title": "사진•영상•영화제 자전거 타기 좋은 서울 영상 공모전 0",
-          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031210001&int_gbn=1&str_no=202610070015",
-          "rawText": "사진•영상•영화제 자전거 타기 좋은 서울 영상 공모전 0 주최 . 서울특별시 대상 . 누구나 , 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 10.08~11.09 심사 11.10~11.24 발표 11.25 D-32 접수중",
-          "statusHints": [
-            "접수중"
-          ]
-        },
-        {
-          "source": "ContestKorea",
-          "title": "사진•영상•영화제 [한국보건복지인재원]「이런(e-Learn) 한 컷, 영상 공모전」 학습우수사례 영상공모전 0",
+          "title": "6. [한국보건복지인재원]「이런(e-Learn) 한 컷, 영상 공모전」 학습우수사례 영상공모전",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031210001&int_gbn=1&str_no=202610070047",
-          "rawText": "사진•영상•영화제 [한국보건복지인재원]「이런(e-Learn) 한 컷, 영상 공모전」 학습우수사례 영상공모전 0 주최 . 한국보건복지인재원 대상 . 대학생 , 대학원생 , 일반인 접수 10.06~11.15 심사 11.16~11.24 발표 11.25 D-38 접수중",
-          "statusHints": [
-            "접수중"
-          ]
+          "rawText": "6. [한국보건복지인재원]「이런(e-Learn) 한 컷, 영상 공모전」 학습우수사례 영상공모전",
+          "statusHints": []
         },
         {
           "source": "ContestKorea",
           "title": "사진•영상•영화제 롯데렌터카 T car 숏폼 영상 공모전 0",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031210001&int_gbn=1&str_no=202610070048",
           "rawText": "사진•영상•영화제 롯데렌터카 T car 숏폼 영상 공모전 0 주최 . 롯데렌터카 대상 . 누구나 , 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 10.01~10.31 심사 10.01~10.31 발표 11.30 D-23 접수중",
+          "statusHints": [
+            "접수중"
+          ]
+        },
+        {
+          "source": "ContestKorea",
+          "title": "사진•영상•영화제 환경과 조경이 어우러지는 직촬 사진 공모전 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031210001&int_gbn=1&str_no=202610080006",
+          "rawText": "사진•영상•영화제 환경과 조경이 어우러지는 직촬 사진 공모전 0 주최 . 세종사이버대학교 대상 . 일반인 접수 10.08~11.27 심사 11.28~12.31 발표 12.31 D-50 접수중",
+          "statusHints": [
+            "접수중"
+          ]
+        },
+        {
+          "source": "ContestKorea",
+          "title": "사진•영상•영화제 2026 농어촌 기본소득 숏폼 공모전_10월 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031210001&int_gbn=1&str_no=202610080030",
+          "rawText": "사진•영상•영화제 2026 농어촌 기본소득 숏폼 공모전_10월 0 주최 . 농림축산식품부 대상 . 누구나 , 유치원 , 초등학생 , 중학생 , 고등학생 , 대학생 , 대학원생 , 일반인 , 외국인 접수 10.05~10.25 심사 10.26~10.30 발표 10.30 D-17 접수중",
           "statusHints": [
             "접수중"
           ]
@@ -276,16 +277,16 @@
         },
         {
           "source": "ContestKorea",
-          "title": "7. 2026년 기업 맞춤형 다양성 교육 우수사례 공모전",
+          "title": "9. 2026년 기업 맞춤형 다양성 교육 우수사례 공모전",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202610060070",
-          "rawText": "7. 2026년 기업 맞춤형 다양성 교육 우수사례 공모전",
+          "rawText": "9. 2026년 기업 맞춤형 다양성 교육 우수사례 공모전",
           "statusHints": []
         },
         {
           "source": "ContestKorea",
-          "title": "1. 2026 제주 관광 데이터 활용사례 공모전",
+          "title": "3. 2026 제주 관광 데이터 활용사례 공모전",
           "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202610070008",
-          "rawText": "1. 2026 제주 관광 데이터 활용사례 공모전",
+          "rawText": "3. 2026 제주 관광 데이터 활용사례 공모전",
           "statusHints": []
         },
         {
@@ -2405,7 +2406,7 @@
           "source": "DACON",
           "title": "2026 인하 인공지능 챌린지",
           "url": "https://www.dacon.io/competitions/official/236736/overview",
-          "rawText": "2026 인하 인공지능 챌린지 알고리즘 | 로보틱스 | 이미지 | 영상 생성 | 월드 모델 | Action Sequence 연습 234명 상금 900만 원",
+          "rawText": "2026 인하 인공지능 챌린지 알고리즘 | 로보틱스 | 이미지 | 영상 생성 | 월드 모델 | Action Sequence 연습 235명 상금 900만 원",
           "statusHints": []
         },
         {
@@ -2447,7 +2448,7 @@
           "source": "DACON",
           "title": "항만 문제해결을 위한 AI 기술 공모전",
           "url": "https://www.dacon.io/competitions/official/236771/overview",
-          "rawText": "항만 문제해결을 위한 AI 기술 공모전 알고리즘 | 코드 제출 평가 | 개체 매칭 | 해운물류 참가신청중 시작까지 D-3332명 상금 950 만원",
+          "rawText": "항만 문제해결을 위한 AI 기술 공모전 알고리즘 | 코드 제출 평가 | 개체 매칭 | 해운물류 참가신청중 시작까지 D-3333명 상금 950 만원",
           "statusHints": [
             "참가신청중"
           ]
@@ -2494,7 +2495,7 @@
           "source": "DACON",
           "title": "항만 문제해결을 위한 AI 기술 공모전",
           "url": "https://www.dacon.io/competitions/official/236771/overview",
-          "rawText": "항만 문제해결을 위한 AI 기술 공모전 알고리즘 | 코드 제출 평가 | 개체 매칭 | 해운물류 참가신청중 시작까지 D-3332명 상금 950 만원",
+          "rawText": "항만 문제해결을 위한 AI 기술 공모전 알고리즘 | 코드 제출 평가 | 개체 매칭 | 해운물류 참가신청중 시작까지 D-3333명 상금 950 만원",
           "statusHints": [
             "참가신청중"
           ]
@@ -2530,7 +2531,7 @@
           "source": "DAKER",
           "title": "2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래",
           "url": "https://daker.ai/public/hackathons/2026-finance-ai-challenge",
-          "rawText": "진행중 심사 D-4 금 금융보안원 프리미엄 2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래 총 상금 3,500만원 1,388팀 참가 153,804 진행중",
+          "rawText": "진행중 심사 D-4 금 금융보안원 프리미엄 2026 금융 AI Challenge: 상상을 넘어 실제로, AI로 움직이는 금융의 미래 총 상금 3,500만원 1,388팀 참가 153,816 진행중",
           "statusHints": [
             "진행중"
           ]
@@ -2539,7 +2540,7 @@
           "source": "DAKER",
           "title": "2026 K-Health 미개방 의료데이터 활용 경진대회",
           "url": "https://daker.ai/public/hackathons/2026-k-health-unreleased-data-utilization-competit",
-          "rawText": "진행중 심사 D-28 건 건양대학교의료원, 과학기술정보통신부, 정보통신산업진흥원, 대전정보문화산업진흥원, 대구디지털혁신진흥원, 대구·광주테크노파크 프리미엄 2026 K-Health 미개방 의료데이터 활용 경진대회 총 상금 750만원 417팀 참가 39,817 진행중",
+          "rawText": "진행중 심사 D-28 건 건양대학교의료원, 과학기술정보통신부, 정보통신산업진흥원, 대전정보문화산업진흥원, 대구디지털혁신진흥원, 대구·광주테크노파크 프리미엄 2026 K-Health 미개방 의료데이터 활용 경진대회 총 상금 750만원 417팀 참가 39,826 진행중",
           "statusHints": [
             "진행중"
           ]
@@ -2555,21 +2556,21 @@
           "source": "DAKER",
           "title": "AI·SW마에스트로 제 17기 프롬프트 경진대회",
           "url": "https://daker.ai/public/hackathons/2026-sw-maestro-prompt-engineering-hackathon",
-          "rawText": "종료 한 한국정보산업협회 프리미엄 AI·SW마에스트로 제 17기 프롬프트 경진대회 74팀 참가 7,442 종료됨",
+          "rawText": "종료 한 한국정보산업협회 프리미엄 AI·SW마에스트로 제 17기 프롬프트 경진대회 74팀 참가 7,443 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 예선",
           "url": "https://daker.ai/public/hackathons/4th-jump-ai-agentic-drug-challenge",
-          "rawText": "종료 보 보건복지부/한국보건산업진흥원/고려대학교의과대학/한국제약바이오협회 프리미엄 제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 예선 총 상금 3,350만원 509팀 참가 79,343 종료됨",
+          "rawText": "종료 보 보건복지부/한국보건산업진흥원/고려대학교의과대학/한국제약바이오협회 프리미엄 제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 예선 총 상금 3,350만원 509팀 참가 79,344 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 본선",
           "url": "https://daker.ai/public/hackathons/4th-jump-ai-agentic-drug-challenge-finals-1",
-          "rawText": "진행중 심사 D-23 보 보건복지부/한국보건산업진흥원/고려대학교의과대학/한국제약바이오협회 프리미엄 제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 본선 총 상금 3,350만원 15팀 참가 7,259 진행중",
+          "rawText": "진행중 심사 D-23 보 보건복지부/한국보건산업진흥원/고려대학교의과대학/한국제약바이오협회 프리미엄 제 4회 인공지능(AI) 신약개발 경진대회(4th JUMP AI, fourth.py) 본선 총 상금 3,350만원 15팀 참가 7,264 진행중",
           "statusHints": [
             "진행중"
           ]
@@ -2578,14 +2579,14 @@
           "source": "DAKER",
           "title": "연세대학교 인공지능학회 YAI",
           "url": "https://daker.ai/public/hackathons/agent-24-hackathon",
-          "rawText": "종료 연 연세대학교 인공지능학회 YAI AGENT:24 총 상금 340만원 37팀 참가 4,883 종료됨",
+          "rawText": "종료 연 연세대학교 인공지능학회 YAI AGENT:24 총 상금 340만원 37팀 참가 4,884 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge",
           "url": "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims",
-          "rawText": "모집중 D-17 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 66팀 참가 4,066 참가 신청하기",
+          "rawText": "모집중 D-16 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 66팀 참가 4,087 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2629,7 +2630,7 @@
           "source": "DAKER",
           "title": "국부펀드 KIC, AI 에이전트 공모전",
           "url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
-          "rawText": "모집중 D-34 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 229팀 참가 12,638 참가 신청하기",
+          "rawText": "모집중 D-34 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 230팀 참가 12,723 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2645,14 +2646,14 @@
           "source": "DAKER",
           "title": "월간 해커톤 : 긴급 인수인계 해커톤 - 문서만 남기고 사라졌다",
           "url": "https://daker.ai/public/hackathons/monthly-hackathon-emergency-handover-docs",
-          "rawText": "종료 D DACON 프리미엄 월간 해커톤 : 긴급 인수인계 해커톤 - 문서만 남기고 사라졌다 총 상금 100만원 370팀 참가 19,588 종료됨",
+          "rawText": "종료 D DACON 프리미엄 월간 해커톤 : 긴급 인수인계 해커톤 - 문서만 남기고 사라졌다 총 상금 100만원 370팀 참가 19,589 종료됨",
           "statusHints": []
         },
         {
           "source": "DAKER",
           "title": "월간 해커톤 : 10분 안에 중독시켜라 - 웹 미니게임 챌린지",
           "url": "https://daker.ai/public/hackathons/monthly-hackathon-web-minigame-challenge",
-          "rawText": "종료 D DACON 프리미엄 월간 해커톤 : 10분 안에 중독시켜라 - 웹 미니게임 챌린지 총 상금 100만원 280팀 참가 28,576 종료됨",
+          "rawText": "종료 D DACON 프리미엄 월간 해커톤 : 10분 안에 중독시켜라 - 웹 미니게임 챌린지 총 상금 100만원 280팀 참가 28,579 종료됨",
           "statusHints": []
         },
         {
@@ -2666,7 +2667,7 @@
           "source": "DAKER",
           "title": "합성 미세구조 기반 재료 물성 예측 AI 경진대회",
           "url": "https://daker.ai/public/hackathons/synthetic-microstructure-property-prediction-ai",
-          "rawText": "모집중 알고리즘 D-10 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 274팀 참가 14,064 참가 신청하기",
+          "rawText": "모집중 알고리즘 D-10 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 276팀 참가 14,142 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2675,7 +2676,7 @@
           "source": "DAKER",
           "title": "DACON",
           "url": "https://daker.ai/public/hackathons/vibe-coding-improvement-ai-idea-competition",
-          "rawText": "종료 D DACON 월간 해커톤: 바이브 코딩 개선 AI 아이디어 공모전 총 상금 100만원 195팀 참가 13,225 종료됨",
+          "rawText": "종료 D DACON 월간 해커톤: 바이브 코딩 개선 AI 아이디어 공모전 총 상금 100만원 195팀 참가 13,226 종료됨",
           "statusHints": []
         },
         {
@@ -2692,7 +2693,7 @@
           "source": "DAKER",
           "title": "2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge",
           "url": "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims",
-          "rawText": "모집중 D-17 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 66팀 참가 4,066 참가 신청하기",
+          "rawText": "모집중 D-16 서 서울대학교 앵커사업단(캠퍼스타운 사업) 2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge 총 상금 100만원 66팀 참가 4,087 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2701,7 +2702,7 @@
           "source": "DAKER",
           "title": "국부펀드 KIC, AI 에이전트 공모전",
           "url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
-          "rawText": "모집중 D-34 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 229팀 참가 12,638 참가 신청하기",
+          "rawText": "모집중 D-34 한 한국투자공사 프리미엄 국부펀드 KIC, AI 에이전트 공모전 총 상금 1,500만원 230팀 참가 12,723 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2710,7 +2711,7 @@
           "source": "DAKER",
           "title": "합성 미세구조 기반 재료 물성 예측 AI 경진대회",
           "url": "https://daker.ai/public/hackathons/synthetic-microstructure-property-prediction-ai",
-          "rawText": "모집중 알고리즘 D-10 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 274팀 참가 14,064 참가 신청하기",
+          "rawText": "모집중 알고리즘 D-10 데 데이콘 스탠다드 합성 미세구조 기반 재료 물성 예측 AI 경진대회 276팀 참가 14,142 참가 신청하기",
           "statusHints": [
             "모집중"
           ]
@@ -2722,7 +2723,7 @@
     "devpostOpen": {
       "key": "devpostOpen",
       "status": "FAILED",
-      "error": "Error: Devpost HTTP 403: source unavailable or access blocked\n    at crawlDevpost (file:///home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:361:41)\n    at async safeCrawl (file:///home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:218:12)\n    at async runEntry (file:///home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:492:24)\n    at async Promise.all (index 3)\n    at async main (file:///home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:504:27)",
+      "error": "Error: Devpost HTTP 403: source unavailable or access blocked\n    at crawlDevpost (file:///home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:363:41)\n    at async safeCrawl (file:///home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:220:12)\n    at async runEntry (file:///home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:512:24)\n    at async Promise.all (index 3)\n    at async main (file:///home/runner/work/daily-brief/daily-brief/scripts/crawl_sources.mjs:524:27)",
       "items": [],
       "count": 0,
       "actionableItems": [],
@@ -2743,9 +2744,16 @@
         },
         {
           "source": "Grantly",
-          "title": "2026년 제10회 G밸리창업경진대회",
-          "url": "https://grantly.kr/opportunities/16225",
-          "rawText": "2026년 제10회 G밸리창업경진대회",
+          "title": "[서울] 관악구 2026년 소상공인 원스톱 지원사업 소상공인 모집 공고",
+          "url": "https://grantly.kr/opportunities/16262",
+          "rawText": "[서울] 관악구 2026년 소상공인 원스톱 지원사업 소상공인 모집 공고",
+          "statusHints": []
+        },
+        {
+          "source": "Grantly",
+          "title": "[경남] 남해군 청년 창업둥지 사업(청년 창업자 임차료 지원사업) 참여자 모집 공고",
+          "url": "https://grantly.kr/opportunities/16382",
+          "rawText": "[경남] 남해군 청년 창업둥지 사업(청년 창업자 임차료 지원사업) 참여자 모집 공고",
           "statusHints": []
         },
         {
@@ -2894,13 +2902,6 @@
           "url": "https://grantly.kr/opportunities/17261",
           "rawText": "[울산] 2026년 4차 PBL 협력 프로젝트 지원사업 참여기업 모집 공고(지역특화 제조데이터 활성화 사업)",
           "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "Physical AI",
-          "url": "https://grantly.kr/opportunities/17286",
-          "rawText": "Physical AI · 10월 8일 마감 피지컬 AI Tech Week",
-          "statusHints": []
         }
       ],
       "count": 24,
@@ -2914,9 +2915,9 @@
         },
         {
           "source": "Grantly",
-          "title": "2026년 제10회 G밸리창업경진대회",
-          "url": "https://grantly.kr/opportunities/16225",
-          "rawText": "2026년 제10회 G밸리창업경진대회",
+          "title": "[경남] 남해군 청년 창업둥지 사업(청년 창업자 임차료 지원사업) 참여자 모집 공고",
+          "url": "https://grantly.kr/opportunities/16382",
+          "rawText": "[경남] 남해군 청년 창업둥지 사업(청년 창업자 임차료 지원사업) 참여자 모집 공고",
           "statusHints": []
         },
         {
@@ -2939,16 +2940,9 @@
           "url": "https://grantly.kr/opportunities/16788",
           "rawText": "[경기] 안산시 2026년 로봇직업교육센터 구축사업 제조기업 로봇공정 성능개선 지원사업 추가 공고",
           "statusHints": []
-        },
-        {
-          "source": "Grantly",
-          "title": "Physical AI",
-          "url": "https://grantly.kr/opportunities/17286",
-          "rawText": "Physical AI · 10월 8일 마감 피지컬 AI Tech Week",
-          "statusHints": []
         }
       ],
-      "actionableCount": 6,
+      "actionableCount": 5,
       "shadow": false
     },
     "hackathonKorea": {
@@ -3089,12 +3083,10 @@
       "items": [
         {
           "source": "K-Startup",
-          "title": "2026 제10회 G밸리창업경진대회 참가기업 모집 오늘마감",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179309&schM=view",
-          "rawText": "2026 제10회 G밸리창업경진대회 참가기업 모집 오늘마감",
-          "statusHints": [
-            "오늘마감"
-          ]
+          "title": "2026년 실리콘밸리 GTM(Go-To-Market) 프로그램 창업기업 모집공고 내일마감",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179294&schM=view",
+          "rawText": "2026년 실리콘밸리 GTM(Go-To-Market) 프로그램 창업기업 모집공고 내일마감",
+          "statusHints": []
         },
         {
           "source": "K-Startup",
@@ -3107,28 +3099,19 @@
         },
         {
           "source": "K-Startup",
+          "title": "2026 제2회 반려동물 창업 아이디어 경진대회 참가자 모집 내일마감",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179323&schM=view",
+          "rawText": "2026 제2회 반려동물 창업 아이디어 경진대회 참가자 모집 내일마감",
+          "statusHints": []
+        },
+        {
+          "source": "K-Startup",
           "title": "[온라인] chatGPT로 만드는 내 퍼스널 브랜딩 플랫폼 만들기 | 바이브코딩 실전 클래스 오늘마감",
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179368&schM=view",
           "rawText": "[온라인] chatGPT로 만드는 내 퍼스널 브랜딩 플랫폼 만들기 | 바이브코딩 실전 클래스 오늘마감",
           "statusHints": [
             "오늘마감"
           ]
-        },
-        {
-          "source": "K-Startup",
-          "title": "2026년 한수원 우문현답 현장 클리닉센터 지원사업 「원전·에너지 분야 선택형 과제」참여기업 모집 공고 오늘마감",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179380&schM=view",
-          "rawText": "2026년 한수원 우문현답 현장 클리닉센터 지원사업 「원전·에너지 분야 선택형 과제」참여기업 모집 공고 오늘마감",
-          "statusHints": [
-            "오늘마감"
-          ]
-        },
-        {
-          "source": "K-Startup",
-          "title": "모두의 창업 등 정부지원사업 완벽 대비! 「1:1 맞춤형 창업 멘토링」 참가자 모집",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179422&schM=view",
-          "rawText": "모두의 창업 등 정부지원사업 완벽 대비! 「1:1 맞춤형 창업 멘토링」 참가자 모집",
-          "statusHints": []
         },
         {
           "source": "K-Startup",
@@ -3160,9 +3143,16 @@
         },
         {
           "source": "K-Startup",
-          "title": "2026년 대전 웰컴 스테이 지원사업 참여기업 모집 연장 공고",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179449&schM=view",
-          "rawText": "2026년 대전 웰컴 스테이 지원사업 참여기업 모집 연장 공고",
+          "title": "2026년 웰컴 투 팁스 6차 참가기업 모집 (전북권)",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179466&schM=view",
+          "rawText": "2026년 웰컴 투 팁스 6차 참가기업 모집 (전북권)",
+          "statusHints": []
+        },
+        {
+          "source": "K-Startup",
+          "title": "2026년 웰컴 투 팁스 7차 참가기업 모집 (제주권)",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179468&schM=view",
+          "rawText": "2026년 웰컴 투 팁스 7차 참가기업 모집 (제주권)",
           "statusHints": []
         }
       ],
@@ -3170,12 +3160,17 @@
       "actionableItems": [
         {
           "source": "K-Startup",
-          "title": "2026 제10회 G밸리창업경진대회 참가기업 모집 오늘마감",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179309&schM=view",
-          "rawText": "2026 제10회 G밸리창업경진대회 참가기업 모집 오늘마감",
-          "statusHints": [
-            "오늘마감"
-          ]
+          "title": "2026년 실리콘밸리 GTM(Go-To-Market) 프로그램 창업기업 모집공고 내일마감",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179294&schM=view",
+          "rawText": "2026년 실리콘밸리 GTM(Go-To-Market) 프로그램 창업기업 모집공고 내일마감",
+          "statusHints": []
+        },
+        {
+          "source": "K-Startup",
+          "title": "2026 제2회 반려동물 창업 아이디어 경진대회 참가자 모집 내일마감",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179323&schM=view",
+          "rawText": "2026 제2회 반려동물 창업 아이디어 경진대회 참가자 모집 내일마감",
+          "statusHints": []
         },
         {
           "source": "K-Startup",
@@ -3185,7 +3180,7 @@
           "statusHints": []
         }
       ],
-      "actionableCount": 2,
+      "actionableCount": 3,
       "shadow": false
     },
     "sotong24Contests": {
@@ -3300,107 +3295,107 @@
       "items": [
         {
           "source": "기업마당",
-          "title": "1474 기술 2026년 농림축산식품부 혁신제품 지정기간 연장(1차 연장) 공고 2026-10-06 ~ 2026-10-26 농림축산식품부 농림식품기술기획평가원 2026-10-08 252",
+          "title": "1474 기술 2026년 농림축산식품부 혁신제품 지정기간 연장(1차 연장) 공고 2026-10-06 ~ 2026-10-26 농림축산식품부 농림식품기술기획평가원 2026-10-08 397",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127074&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1474 기술 2026년 농림축산식품부 혁신제품 지정기간 연장(1차 연장) 공고 2026-10-06 ~ 2026-10-26 농림축산식품부 농림식품기술기획평가원 2026-10-08 252",
+          "rawText": "1474 기술 2026년 농림축산식품부 혁신제품 지정기간 연장(1차 연장) 공고 2026-10-06 ~ 2026-10-26 농림축산식품부 농림식품기술기획평가원 2026-10-08 397",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1475 수출 [경북] 성주군 2026년 중소기업 수출 스케일업 지원사업 해외무역사절단 참여기업 추가모집 공고 2026-10-07 ~ 2026-10-12 경상북도 경상북도경제진흥원 2026-10-08 266",
+          "title": "1475 수출 [경북] 성주군 2026년 중소기업 수출 스케일업 지원사업 해외무역사절단 참여기업 추가모집 공고 2026-10-07 ~ 2026-10-12 경상북도 경상북도경제진흥원 2026-10-08 403",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127075&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1475 수출 [경북] 성주군 2026년 중소기업 수출 스케일업 지원사업 해외무역사절단 참여기업 추가모집 공고 2026-10-07 ~ 2026-10-12 경상북도 경상북도경제진흥원 2026-10-08 266",
+          "rawText": "1475 수출 [경북] 성주군 2026년 중소기업 수출 스케일업 지원사업 해외무역사절단 참여기업 추가모집 공고 2026-10-07 ~ 2026-10-12 경상북도 경상북도경제진흥원 2026-10-08 403",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1476 기술 2026년 농림축산식품부 혁신제품 지정기간 연장(2차 연장) 공고 2026-10-06 ~ 2026-10-26 농림축산식품부 농림식품기술기획평가원 2026-10-08 253",
+          "title": "1476 기술 2026년 농림축산식품부 혁신제품 지정기간 연장(2차 연장) 공고 2026-10-06 ~ 2026-10-26 농림축산식품부 농림식품기술기획평가원 2026-10-08 392",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127076&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1476 기술 2026년 농림축산식품부 혁신제품 지정기간 연장(2차 연장) 공고 2026-10-06 ~ 2026-10-26 농림축산식품부 농림식품기술기획평가원 2026-10-08 253",
+          "rawText": "1476 기술 2026년 농림축산식품부 혁신제품 지정기간 연장(2차 연장) 공고 2026-10-06 ~ 2026-10-26 농림축산식품부 농림식품기술기획평가원 2026-10-08 392",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1477 경영 2026년 산업기술 정책금융 지원 유공자 포상 신청 공고 2026-10-07 ~ 2026-10-26 산업통상부 한국산업기술진흥원 2026-10-08 255",
+          "title": "1477 경영 2026년 산업기술 정책금융 지원 유공자 포상 신청 공고 2026-10-07 ~ 2026-10-26 산업통상부 한국산업기술진흥원 2026-10-08 396",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127077&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1477 경영 2026년 산업기술 정책금융 지원 유공자 포상 신청 공고 2026-10-07 ~ 2026-10-26 산업통상부 한국산업기술진흥원 2026-10-08 255",
+          "rawText": "1477 경영 2026년 산업기술 정책금융 지원 유공자 포상 신청 공고 2026-10-07 ~ 2026-10-26 산업통상부 한국산업기술진흥원 2026-10-08 396",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1478 경영 2026년 블록체인 퓨처 챌린지 기업 모집 공고(블록체인 기업 IR 경진대회) 2026-10-07 ~ 2026-10-22 과학기술정보통신부 한국인터넷진흥원 2026-10-08 259",
+          "title": "1478 경영 2026년 블록체인 퓨처 챌린지 기업 모집 공고(블록체인 기업 IR 경진대회) 2026-10-07 ~ 2026-10-22 과학기술정보통신부 한국인터넷진흥원 2026-10-08 405",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127078&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1478 경영 2026년 블록체인 퓨처 챌린지 기업 모집 공고(블록체인 기업 IR 경진대회) 2026-10-07 ~ 2026-10-22 과학기술정보통신부 한국인터넷진흥원 2026-10-08 259",
+          "rawText": "1478 경영 2026년 블록체인 퓨처 챌린지 기업 모집 공고(블록체인 기업 IR 경진대회) 2026-10-07 ~ 2026-10-22 과학기술정보통신부 한국인터넷진흥원 2026-10-08 405",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1479 수출 [경기] 2026년 지커넥션 비즈니스 데이 국내기업 추가모집 공고 2026-10-07 ~ 2026-10-28 경기도 경기콘텐츠진흥원 2026-10-08 279",
+          "title": "1479 수출 [경기] 2026년 지커넥션 비즈니스 데이 국내기업 추가모집 공고 2026-10-07 ~ 2026-10-28 경기도 경기콘텐츠진흥원 2026-10-08 421",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127079&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1479 수출 [경기] 2026년 지커넥션 비즈니스 데이 국내기업 추가모집 공고 2026-10-07 ~ 2026-10-28 경기도 경기콘텐츠진흥원 2026-10-08 279",
+          "rawText": "1479 수출 [경기] 2026년 지커넥션 비즈니스 데이 국내기업 추가모집 공고 2026-10-07 ~ 2026-10-28 경기도 경기콘텐츠진흥원 2026-10-08 421",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1480 경영 2026년 3차 중소ㆍ중견기업 재생에너지 사용 컨설팅 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 산업통상부 대한상공회의소 2026-10-08 278",
+          "title": "1480 경영 2026년 3차 중소ㆍ중견기업 재생에너지 사용 컨설팅 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 산업통상부 대한상공회의소 2026-10-08 429",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127080&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1480 경영 2026년 3차 중소ㆍ중견기업 재생에너지 사용 컨설팅 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 산업통상부 대한상공회의소 2026-10-08 278",
+          "rawText": "1480 경영 2026년 3차 중소ㆍ중견기업 재생에너지 사용 컨설팅 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 산업통상부 대한상공회의소 2026-10-08 429",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1481 기술 2026년 퀀텀(양자)플랫폼 KIST 양자기술활용연구거점사업단 양자공동연구실(JQL) 신규과제 공모 2026-10-06 ~ 2026-11-05 과학기술정보통신부 한국과학기술연구원 2026-10-08 261",
+          "title": "1481 기술 2026년 퀀텀(양자)플랫폼 KIST 양자기술활용연구거점사업단 양자공동연구실(JQL) 신규과제 공모 2026-10-06 ~ 2026-11-05 과학기술정보통신부 한국과학기술연구원 2026-10-08 404",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127081&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1481 기술 2026년 퀀텀(양자)플랫폼 KIST 양자기술활용연구거점사업단 양자공동연구실(JQL) 신규과제 공모 2026-10-06 ~ 2026-11-05 과학기술정보통신부 한국과학기술연구원 2026-10-08 261",
+          "rawText": "1481 기술 2026년 퀀텀(양자)플랫폼 KIST 양자기술활용연구거점사업단 양자공동연구실(JQL) 신규과제 공모 2026-10-06 ~ 2026-11-05 과학기술정보통신부 한국과학기술연구원 2026-10-08 404",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1482 경영 2026년 2차 지역서점 스마트 기기 지원 참여서점 모집 공고 2026-10-06 ~ 2026-10-15 문화체육관광부 한국서점연합회 2026-10-08 276",
+          "title": "1482 경영 2026년 2차 지역서점 스마트 기기 지원 참여서점 모집 공고 2026-10-06 ~ 2026-10-15 문화체육관광부 한국서점연합회 2026-10-08 426",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127082&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1482 경영 2026년 2차 지역서점 스마트 기기 지원 참여서점 모집 공고 2026-10-06 ~ 2026-10-15 문화체육관광부 한국서점연합회 2026-10-08 276",
+          "rawText": "1482 경영 2026년 2차 지역서점 스마트 기기 지원 참여서점 모집 공고 2026-10-06 ~ 2026-10-15 문화체육관광부 한국서점연합회 2026-10-08 426",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1483 경영 [충북] ESG경영 진단 및 컨설팅 지원사업 참여기업 모집 공고 2026-10-07 ~ 2026-10-14 충청북도 청주상공회의소 2026-10-08 281",
+          "title": "1483 경영 [충북] ESG경영 진단 및 컨설팅 지원사업 참여기업 모집 공고 2026-10-07 ~ 2026-10-14 충청북도 청주상공회의소 2026-10-08 421",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127083&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1483 경영 [충북] ESG경영 진단 및 컨설팅 지원사업 참여기업 모집 공고 2026-10-07 ~ 2026-10-14 충청북도 청주상공회의소 2026-10-08 281",
+          "rawText": "1483 경영 [충북] ESG경영 진단 및 컨설팅 지원사업 참여기업 모집 공고 2026-10-07 ~ 2026-10-14 충청북도 청주상공회의소 2026-10-08 421",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1484 기술 [전북] 2026년 탄소저감형 테스트베드 활용 지원 참여기업 모집 공고(디지털트윈 농ㆍ축산시설 탄소 배출량 통합관리 플랫폼 개발 및 실증사업) 2026-10-07 ~ 2026-10-21 산업통상부 한국전자기술연구원 2026-10-08 280",
+          "title": "1484 기술 [전북] 2026년 탄소저감형 테스트베드 활용 지원 참여기업 모집 공고(디지털트윈 농ㆍ축산시설 탄소 배출량 통합관리 플랫폼 개발 및 실증사업) 2026-10-07 ~ 2026-10-21 산업통상부 한국전자기술연구원 2026-10-08 419",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127084&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1484 기술 [전북] 2026년 탄소저감형 테스트베드 활용 지원 참여기업 모집 공고(디지털트윈 농ㆍ축산시설 탄소 배출량 통합관리 플랫폼 개발 및 실증사업) 2026-10-07 ~ 2026-10-21 산업통상부 한국전자기술연구원 2026-10-08 280",
+          "rawText": "1484 기술 [전북] 2026년 탄소저감형 테스트베드 활용 지원 참여기업 모집 공고(디지털트윈 농ㆍ축산시설 탄소 배출량 통합관리 플랫폼 개발 및 실증사업) 2026-10-07 ~ 2026-10-21 산업통상부 한국전자기술연구원 2026-10-08 419",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1485 기술 2026년 퀀텀(양자)플랫폼 KRISS 차세대양자연구거점사업단 양자공동연구실(JQL) 신규과제 공모 2026-10-06 ~ 2026-11-05 과학기술정보통신부 한국표준과학연구원 2026-10-08 268",
+          "title": "1485 기술 2026년 퀀텀(양자)플랫폼 KRISS 차세대양자연구거점사업단 양자공동연구실(JQL) 신규과제 공모 2026-10-06 ~ 2026-11-05 과학기술정보통신부 한국표준과학연구원 2026-10-08 409",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127085&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1485 기술 2026년 퀀텀(양자)플랫폼 KRISS 차세대양자연구거점사업단 양자공동연구실(JQL) 신규과제 공모 2026-10-06 ~ 2026-11-05 과학기술정보통신부 한국표준과학연구원 2026-10-08 268",
+          "rawText": "1485 기술 2026년 퀀텀(양자)플랫폼 KRISS 차세대양자연구거점사업단 양자공동연구실(JQL) 신규과제 공모 2026-10-06 ~ 2026-11-05 과학기술정보통신부 한국표준과학연구원 2026-10-08 409",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1486 기술 2026년 기술마켓 혁신제품 지정기간 연장(2차연장) 공고 2026-10-07 ~ 2026-10-19 과학기술정보통신부 한국지능정보사회진흥원 2026-10-08 291",
+          "title": "1486 기술 2026년 기술마켓 혁신제품 지정기간 연장(2차연장) 공고 2026-10-07 ~ 2026-10-19 과학기술정보통신부 한국지능정보사회진흥원 2026-10-08 439",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127086&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1486 기술 2026년 기술마켓 혁신제품 지정기간 연장(2차연장) 공고 2026-10-07 ~ 2026-10-19 과학기술정보통신부 한국지능정보사회진흥원 2026-10-08 291",
+          "rawText": "1486 기술 2026년 기술마켓 혁신제품 지정기간 연장(2차연장) 공고 2026-10-07 ~ 2026-10-19 과학기술정보통신부 한국지능정보사회진흥원 2026-10-08 439",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1487 내수 [충남] 2026년 찾아가는 미디어 소담 스튜디오 참여 업체 모집 공고 2026-10-01 ~ 2026-10-23 중소벤처기업부 충남경제진흥원 2026-10-08 274",
+          "title": "1487 내수 [충남] 2026년 찾아가는 미디어 소담 스튜디오 참여 업체 모집 공고 2026-10-01 ~ 2026-10-23 중소벤처기업부 충남경제진흥원 2026-10-08 415",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127087&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1487 내수 [충남] 2026년 찾아가는 미디어 소담 스튜디오 참여 업체 모집 공고 2026-10-01 ~ 2026-10-23 중소벤처기업부 충남경제진흥원 2026-10-08 274",
+          "rawText": "1487 내수 [충남] 2026년 찾아가는 미디어 소담 스튜디오 참여 업체 모집 공고 2026-10-01 ~ 2026-10-23 중소벤처기업부 충남경제진흥원 2026-10-08 415",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1488 내수 [충남] 2026년 디지털콘텐츠 제작지원(팔리는 상세페이지 제작지원) 모집 공고 2026-10-01 ~ 2026-10-23 중소벤처기업부 충남경제진흥원 2026-10-08 296",
+          "title": "1488 내수 [충남] 2026년 디지털콘텐츠 제작지원(팔리는 상세페이지 제작지원) 모집 공고 2026-10-01 ~ 2026-10-23 중소벤처기업부 충남경제진흥원 2026-10-08 439",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127088&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1488 내수 [충남] 2026년 디지털콘텐츠 제작지원(팔리는 상세페이지 제작지원) 모집 공고 2026-10-01 ~ 2026-10-23 중소벤처기업부 충남경제진흥원 2026-10-08 296",
+          "rawText": "1488 내수 [충남] 2026년 디지털콘텐츠 제작지원(팔리는 상세페이지 제작지원) 모집 공고 2026-10-01 ~ 2026-10-23 중소벤처기업부 충남경제진흥원 2026-10-08 439",
           "statusHints": []
         }
       ],
@@ -3408,107 +3403,107 @@
       "actionableItems": [
         {
           "source": "기업마당",
-          "title": "1474 기술 2026년 농림축산식품부 혁신제품 지정기간 연장(1차 연장) 공고 2026-10-06 ~ 2026-10-26 농림축산식품부 농림식품기술기획평가원 2026-10-08 252",
+          "title": "1474 기술 2026년 농림축산식품부 혁신제품 지정기간 연장(1차 연장) 공고 2026-10-06 ~ 2026-10-26 농림축산식품부 농림식품기술기획평가원 2026-10-08 397",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127074&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1474 기술 2026년 농림축산식품부 혁신제품 지정기간 연장(1차 연장) 공고 2026-10-06 ~ 2026-10-26 농림축산식품부 농림식품기술기획평가원 2026-10-08 252",
+          "rawText": "1474 기술 2026년 농림축산식품부 혁신제품 지정기간 연장(1차 연장) 공고 2026-10-06 ~ 2026-10-26 농림축산식품부 농림식품기술기획평가원 2026-10-08 397",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1475 수출 [경북] 성주군 2026년 중소기업 수출 스케일업 지원사업 해외무역사절단 참여기업 추가모집 공고 2026-10-07 ~ 2026-10-12 경상북도 경상북도경제진흥원 2026-10-08 266",
+          "title": "1475 수출 [경북] 성주군 2026년 중소기업 수출 스케일업 지원사업 해외무역사절단 참여기업 추가모집 공고 2026-10-07 ~ 2026-10-12 경상북도 경상북도경제진흥원 2026-10-08 403",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127075&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1475 수출 [경북] 성주군 2026년 중소기업 수출 스케일업 지원사업 해외무역사절단 참여기업 추가모집 공고 2026-10-07 ~ 2026-10-12 경상북도 경상북도경제진흥원 2026-10-08 266",
+          "rawText": "1475 수출 [경북] 성주군 2026년 중소기업 수출 스케일업 지원사업 해외무역사절단 참여기업 추가모집 공고 2026-10-07 ~ 2026-10-12 경상북도 경상북도경제진흥원 2026-10-08 403",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1476 기술 2026년 농림축산식품부 혁신제품 지정기간 연장(2차 연장) 공고 2026-10-06 ~ 2026-10-26 농림축산식품부 농림식품기술기획평가원 2026-10-08 253",
+          "title": "1476 기술 2026년 농림축산식품부 혁신제품 지정기간 연장(2차 연장) 공고 2026-10-06 ~ 2026-10-26 농림축산식품부 농림식품기술기획평가원 2026-10-08 392",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127076&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1476 기술 2026년 농림축산식품부 혁신제품 지정기간 연장(2차 연장) 공고 2026-10-06 ~ 2026-10-26 농림축산식품부 농림식품기술기획평가원 2026-10-08 253",
+          "rawText": "1476 기술 2026년 농림축산식품부 혁신제품 지정기간 연장(2차 연장) 공고 2026-10-06 ~ 2026-10-26 농림축산식품부 농림식품기술기획평가원 2026-10-08 392",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1477 경영 2026년 산업기술 정책금융 지원 유공자 포상 신청 공고 2026-10-07 ~ 2026-10-26 산업통상부 한국산업기술진흥원 2026-10-08 255",
+          "title": "1477 경영 2026년 산업기술 정책금융 지원 유공자 포상 신청 공고 2026-10-07 ~ 2026-10-26 산업통상부 한국산업기술진흥원 2026-10-08 396",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127077&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1477 경영 2026년 산업기술 정책금융 지원 유공자 포상 신청 공고 2026-10-07 ~ 2026-10-26 산업통상부 한국산업기술진흥원 2026-10-08 255",
+          "rawText": "1477 경영 2026년 산업기술 정책금융 지원 유공자 포상 신청 공고 2026-10-07 ~ 2026-10-26 산업통상부 한국산업기술진흥원 2026-10-08 396",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1478 경영 2026년 블록체인 퓨처 챌린지 기업 모집 공고(블록체인 기업 IR 경진대회) 2026-10-07 ~ 2026-10-22 과학기술정보통신부 한국인터넷진흥원 2026-10-08 259",
+          "title": "1478 경영 2026년 블록체인 퓨처 챌린지 기업 모집 공고(블록체인 기업 IR 경진대회) 2026-10-07 ~ 2026-10-22 과학기술정보통신부 한국인터넷진흥원 2026-10-08 405",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127078&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1478 경영 2026년 블록체인 퓨처 챌린지 기업 모집 공고(블록체인 기업 IR 경진대회) 2026-10-07 ~ 2026-10-22 과학기술정보통신부 한국인터넷진흥원 2026-10-08 259",
+          "rawText": "1478 경영 2026년 블록체인 퓨처 챌린지 기업 모집 공고(블록체인 기업 IR 경진대회) 2026-10-07 ~ 2026-10-22 과학기술정보통신부 한국인터넷진흥원 2026-10-08 405",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1479 수출 [경기] 2026년 지커넥션 비즈니스 데이 국내기업 추가모집 공고 2026-10-07 ~ 2026-10-28 경기도 경기콘텐츠진흥원 2026-10-08 279",
+          "title": "1479 수출 [경기] 2026년 지커넥션 비즈니스 데이 국내기업 추가모집 공고 2026-10-07 ~ 2026-10-28 경기도 경기콘텐츠진흥원 2026-10-08 421",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127079&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1479 수출 [경기] 2026년 지커넥션 비즈니스 데이 국내기업 추가모집 공고 2026-10-07 ~ 2026-10-28 경기도 경기콘텐츠진흥원 2026-10-08 279",
+          "rawText": "1479 수출 [경기] 2026년 지커넥션 비즈니스 데이 국내기업 추가모집 공고 2026-10-07 ~ 2026-10-28 경기도 경기콘텐츠진흥원 2026-10-08 421",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1480 경영 2026년 3차 중소ㆍ중견기업 재생에너지 사용 컨설팅 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 산업통상부 대한상공회의소 2026-10-08 278",
+          "title": "1480 경영 2026년 3차 중소ㆍ중견기업 재생에너지 사용 컨설팅 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 산업통상부 대한상공회의소 2026-10-08 429",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127080&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1480 경영 2026년 3차 중소ㆍ중견기업 재생에너지 사용 컨설팅 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 산업통상부 대한상공회의소 2026-10-08 278",
+          "rawText": "1480 경영 2026년 3차 중소ㆍ중견기업 재생에너지 사용 컨설팅 참여기업 모집 공고 2026-10-06 ~ 2026-10-20 산업통상부 대한상공회의소 2026-10-08 429",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1481 기술 2026년 퀀텀(양자)플랫폼 KIST 양자기술활용연구거점사업단 양자공동연구실(JQL) 신규과제 공모 2026-10-06 ~ 2026-11-05 과학기술정보통신부 한국과학기술연구원 2026-10-08 261",
+          "title": "1481 기술 2026년 퀀텀(양자)플랫폼 KIST 양자기술활용연구거점사업단 양자공동연구실(JQL) 신규과제 공모 2026-10-06 ~ 2026-11-05 과학기술정보통신부 한국과학기술연구원 2026-10-08 404",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127081&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1481 기술 2026년 퀀텀(양자)플랫폼 KIST 양자기술활용연구거점사업단 양자공동연구실(JQL) 신규과제 공모 2026-10-06 ~ 2026-11-05 과학기술정보통신부 한국과학기술연구원 2026-10-08 261",
+          "rawText": "1481 기술 2026년 퀀텀(양자)플랫폼 KIST 양자기술활용연구거점사업단 양자공동연구실(JQL) 신규과제 공모 2026-10-06 ~ 2026-11-05 과학기술정보통신부 한국과학기술연구원 2026-10-08 404",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1482 경영 2026년 2차 지역서점 스마트 기기 지원 참여서점 모집 공고 2026-10-06 ~ 2026-10-15 문화체육관광부 한국서점연합회 2026-10-08 276",
+          "title": "1482 경영 2026년 2차 지역서점 스마트 기기 지원 참여서점 모집 공고 2026-10-06 ~ 2026-10-15 문화체육관광부 한국서점연합회 2026-10-08 426",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127082&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1482 경영 2026년 2차 지역서점 스마트 기기 지원 참여서점 모집 공고 2026-10-06 ~ 2026-10-15 문화체육관광부 한국서점연합회 2026-10-08 276",
+          "rawText": "1482 경영 2026년 2차 지역서점 스마트 기기 지원 참여서점 모집 공고 2026-10-06 ~ 2026-10-15 문화체육관광부 한국서점연합회 2026-10-08 426",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1483 경영 [충북] ESG경영 진단 및 컨설팅 지원사업 참여기업 모집 공고 2026-10-07 ~ 2026-10-14 충청북도 청주상공회의소 2026-10-08 281",
+          "title": "1483 경영 [충북] ESG경영 진단 및 컨설팅 지원사업 참여기업 모집 공고 2026-10-07 ~ 2026-10-14 충청북도 청주상공회의소 2026-10-08 421",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127083&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1483 경영 [충북] ESG경영 진단 및 컨설팅 지원사업 참여기업 모집 공고 2026-10-07 ~ 2026-10-14 충청북도 청주상공회의소 2026-10-08 281",
+          "rawText": "1483 경영 [충북] ESG경영 진단 및 컨설팅 지원사업 참여기업 모집 공고 2026-10-07 ~ 2026-10-14 충청북도 청주상공회의소 2026-10-08 421",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1484 기술 [전북] 2026년 탄소저감형 테스트베드 활용 지원 참여기업 모집 공고(디지털트윈 농ㆍ축산시설 탄소 배출량 통합관리 플랫폼 개발 및 실증사업) 2026-10-07 ~ 2026-10-21 산업통상부 한국전자기술연구원 2026-10-08 280",
+          "title": "1484 기술 [전북] 2026년 탄소저감형 테스트베드 활용 지원 참여기업 모집 공고(디지털트윈 농ㆍ축산시설 탄소 배출량 통합관리 플랫폼 개발 및 실증사업) 2026-10-07 ~ 2026-10-21 산업통상부 한국전자기술연구원 2026-10-08 419",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127084&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1484 기술 [전북] 2026년 탄소저감형 테스트베드 활용 지원 참여기업 모집 공고(디지털트윈 농ㆍ축산시설 탄소 배출량 통합관리 플랫폼 개발 및 실증사업) 2026-10-07 ~ 2026-10-21 산업통상부 한국전자기술연구원 2026-10-08 280",
+          "rawText": "1484 기술 [전북] 2026년 탄소저감형 테스트베드 활용 지원 참여기업 모집 공고(디지털트윈 농ㆍ축산시설 탄소 배출량 통합관리 플랫폼 개발 및 실증사업) 2026-10-07 ~ 2026-10-21 산업통상부 한국전자기술연구원 2026-10-08 419",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1485 기술 2026년 퀀텀(양자)플랫폼 KRISS 차세대양자연구거점사업단 양자공동연구실(JQL) 신규과제 공모 2026-10-06 ~ 2026-11-05 과학기술정보통신부 한국표준과학연구원 2026-10-08 268",
+          "title": "1485 기술 2026년 퀀텀(양자)플랫폼 KRISS 차세대양자연구거점사업단 양자공동연구실(JQL) 신규과제 공모 2026-10-06 ~ 2026-11-05 과학기술정보통신부 한국표준과학연구원 2026-10-08 409",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127085&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1485 기술 2026년 퀀텀(양자)플랫폼 KRISS 차세대양자연구거점사업단 양자공동연구실(JQL) 신규과제 공모 2026-10-06 ~ 2026-11-05 과학기술정보통신부 한국표준과학연구원 2026-10-08 268",
+          "rawText": "1485 기술 2026년 퀀텀(양자)플랫폼 KRISS 차세대양자연구거점사업단 양자공동연구실(JQL) 신규과제 공모 2026-10-06 ~ 2026-11-05 과학기술정보통신부 한국표준과학연구원 2026-10-08 409",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1486 기술 2026년 기술마켓 혁신제품 지정기간 연장(2차연장) 공고 2026-10-07 ~ 2026-10-19 과학기술정보통신부 한국지능정보사회진흥원 2026-10-08 291",
+          "title": "1486 기술 2026년 기술마켓 혁신제품 지정기간 연장(2차연장) 공고 2026-10-07 ~ 2026-10-19 과학기술정보통신부 한국지능정보사회진흥원 2026-10-08 439",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127086&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1486 기술 2026년 기술마켓 혁신제품 지정기간 연장(2차연장) 공고 2026-10-07 ~ 2026-10-19 과학기술정보통신부 한국지능정보사회진흥원 2026-10-08 291",
+          "rawText": "1486 기술 2026년 기술마켓 혁신제품 지정기간 연장(2차연장) 공고 2026-10-07 ~ 2026-10-19 과학기술정보통신부 한국지능정보사회진흥원 2026-10-08 439",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1487 내수 [충남] 2026년 찾아가는 미디어 소담 스튜디오 참여 업체 모집 공고 2026-10-01 ~ 2026-10-23 중소벤처기업부 충남경제진흥원 2026-10-08 274",
+          "title": "1487 내수 [충남] 2026년 찾아가는 미디어 소담 스튜디오 참여 업체 모집 공고 2026-10-01 ~ 2026-10-23 중소벤처기업부 충남경제진흥원 2026-10-08 415",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127087&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1487 내수 [충남] 2026년 찾아가는 미디어 소담 스튜디오 참여 업체 모집 공고 2026-10-01 ~ 2026-10-23 중소벤처기업부 충남경제진흥원 2026-10-08 274",
+          "rawText": "1487 내수 [충남] 2026년 찾아가는 미디어 소담 스튜디오 참여 업체 모집 공고 2026-10-01 ~ 2026-10-23 중소벤처기업부 충남경제진흥원 2026-10-08 415",
           "statusHints": []
         },
         {
           "source": "기업마당",
-          "title": "1488 내수 [충남] 2026년 디지털콘텐츠 제작지원(팔리는 상세페이지 제작지원) 모집 공고 2026-10-01 ~ 2026-10-23 중소벤처기업부 충남경제진흥원 2026-10-08 296",
+          "title": "1488 내수 [충남] 2026년 디지털콘텐츠 제작지원(팔리는 상세페이지 제작지원) 모집 공고 2026-10-01 ~ 2026-10-23 중소벤처기업부 충남경제진흥원 2026-10-08 439",
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?cat=&condition=&condition1=&cpage=&hashCode=&keyword=&orderGb=&pblancId=PBLN_000000000127088&preKeywords=&rows=15&rowsSel=&schAreaDetailCodes=&schEndAt=N&schJrsdCodeTy=&schPblancDiv=&schWntyAt=&sort=",
-          "rawText": "1488 내수 [충남] 2026년 디지털콘텐츠 제작지원(팔리는 상세페이지 제작지원) 모집 공고 2026-10-01 ~ 2026-10-23 중소벤처기업부 충남경제진흥원 2026-10-08 296",
+          "rawText": "1488 내수 [충남] 2026년 디지털콘텐츠 제작지원(팔리는 상세페이지 제작지원) 모집 공고 2026-10-01 ~ 2026-10-23 중소벤처기업부 충남경제진흥원 2026-10-08 439",
           "statusHints": []
         }
       ],
@@ -3868,6 +3863,3124 @@
       ],
       "actionableCount": 12,
       "shadow": true
+    },
+    "hackerNewsTop": {
+      "key": "hackerNewsTop",
+      "status": "OK",
+      "url": "https://news.ycombinator.com/",
+      "observedAt": "2026-10-08T08:22:21.482Z",
+      "coverage": {
+        "kind": "bounded-listing",
+        "limit": 30,
+        "description": "First listing page/top stories only; relevance and primary-source verification remain editorial work."
+      },
+      "items": [
+        {
+          "source": "Hacker News top stories",
+          "title": "“Math 2.0” will need to value mathematical progress more holistically",
+          "url": "https://news.ycombinator.com/item?id=50002008",
+          "discussionUrl": "https://news.ycombinator.com/item?id=50002008",
+          "primaryUrl": "https://mathstodon.xyz/@tao/117395269325940185",
+          "publishedAt": "2026-10-08T05:14:14.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 243,
+            "comments": 178
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 1,
+            "label": "HN top stories"
+          },
+          "rawText": "“Math 2.0” will need to value mathematical progress more holistically",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Claude Haiku 5.5",
+          "url": "https://news.ycombinator.com/item?id=49996437",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49996437",
+          "primaryUrl": "https://www.anthropic.com/claude-haiku-5-5",
+          "publishedAt": "2026-10-07T18:01:32.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 849,
+            "comments": 413
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 2,
+            "label": "HN top stories"
+          },
+          "rawText": "Claude Haiku 5.5",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Living off-grid: Hundred Rabbits",
+          "url": "https://news.ycombinator.com/item?id=49970767",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49970767",
+          "primaryUrl": "https://100r.ca/site/home.html",
+          "publishedAt": "2026-10-05T21:08:33.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 182,
+            "comments": 44
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 3,
+            "label": "HN top stories"
+          },
+          "rawText": "Living off-grid: Hundred Rabbits",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "The 15-year search for a band that charted once and vanished",
+          "url": "https://news.ycombinator.com/item?id=49959280",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49959280",
+          "primaryUrl": "https://shahidhussain.com/writing/search-for-salvage/",
+          "publishedAt": "2026-10-05T00:06:43.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 71,
+            "comments": 25
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 4,
+            "label": "HN top stories"
+          },
+          "rawText": "The 15-year search for a band that charted once and vanished",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Margaret Hamilton has died",
+          "url": "https://news.ycombinator.com/item?id=49998895",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49998895",
+          "primaryUrl": "https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007",
+          "publishedAt": "2026-10-07T21:16:18.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 1393,
+            "comments": 156
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 5,
+            "label": "HN top stories"
+          },
+          "rawText": "Margaret Hamilton has died",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "GPT‑6 and Intelligent UI for everyone",
+          "url": "https://news.ycombinator.com/item?id=49996425",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49996425",
+          "primaryUrl": "https://openai.com/index/gpt-6-for-everyone/",
+          "publishedAt": "2026-10-07T18:00:58.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 607,
+            "comments": 328
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 6,
+            "label": "HN top stories"
+          },
+          "rawText": "GPT‑6 and Intelligent UI for everyone",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "How did Rosalind Franklin miss the helix in her iconic DNA image? She didn't",
+          "url": "https://news.ycombinator.com/item?id=49969073",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49969073",
+          "primaryUrl": "https://www.science.org/content/article/how-did-rosalind-franklin-miss-helix-her-iconic-dna-image-she-didn-t",
+          "publishedAt": "2026-10-05T19:07:07.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 158,
+            "comments": 59
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 7,
+            "label": "HN top stories"
+          },
+          "rawText": "How did Rosalind Franklin miss the helix in her iconic DNA image? She didn't",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "'Jonathan' is the oldest land animal on Earth",
+          "url": "https://news.ycombinator.com/item?id=49998066",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49998066",
+          "primaryUrl": "https://www.404media.co/oldest-living-land-animal-jonathan-the-tortoise/",
+          "publishedAt": "2026-10-07T20:01:37.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 139,
+            "comments": 59
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 8,
+            "label": "HN top stories"
+          },
+          "rawText": "'Jonathan' is the oldest land animal on Earth",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Cleo (Mathematician)",
+          "url": "https://news.ycombinator.com/item?id=49982445",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49982445",
+          "primaryUrl": "https://en.wikipedia.org/wiki/Cleo_(mathematician)",
+          "publishedAt": "2026-10-06T18:49:45.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 133,
+            "comments": 25
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 9,
+            "label": "HN top stories"
+          },
+          "rawText": "Cleo (Mathematician)",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Analog Computer Simulator in the Browser",
+          "url": "https://news.ycombinator.com/item?id=49966866",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49966866",
+          "primaryUrl": "https://pavel-krivanek.github.io/The-Analog-Thing-Simulator/public/",
+          "publishedAt": "2026-10-05T16:19:11.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 17,
+            "comments": 5
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 10,
+            "label": "HN top stories"
+          },
+          "rawText": "Analog Computer Simulator in the Browser",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Shipping JPEG XL in Chrome",
+          "url": "https://news.ycombinator.com/item?id=49991227",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49991227",
+          "primaryUrl": "https://developer.chrome.com/blog/jpeg-xl-in-chrome",
+          "publishedAt": "2026-10-07T11:25:02.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 542,
+            "comments": 357
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 11,
+            "label": "HN top stories"
+          },
+          "rawText": "Shipping JPEG XL in Chrome",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "The Mathocalypse",
+          "url": "https://news.ycombinator.com/item?id=49997718",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49997718",
+          "primaryUrl": "https://scottaaronson.blog/?p=10169",
+          "publishedAt": "2026-10-07T19:33:40.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 210,
+            "comments": 245
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 12,
+            "label": "HN top stories"
+          },
+          "rawText": "The Mathocalypse",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app",
+          "url": "https://news.ycombinator.com/item?id=49994443",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49994443",
+          "primaryUrl": "https://bigwords.page/",
+          "publishedAt": "2026-10-07T15:44:21.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 476,
+            "comments": 135
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 13,
+            "label": "HN top stories"
+          },
+          "rawText": "Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "In Vienna and Beijing, the first (thorium) nuclear clocks begin to tick",
+          "url": "https://news.ycombinator.com/item?id=49996406",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49996406",
+          "primaryUrl": "https://www.nytimes.com/2026/10/07/science/first-nuclear-clocks-thorium-229.html",
+          "publishedAt": "2026-10-07T17:59:34.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 93,
+            "comments": 13
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 14,
+            "label": "HN top stories"
+          },
+          "rawText": "In Vienna and Beijing, the first (thorium) nuclear clocks begin to tick",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Docker Agent",
+          "url": "https://news.ycombinator.com/item?id=49996259",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49996259",
+          "primaryUrl": "https://github.com/docker/docker-agent",
+          "publishedAt": "2026-10-07T17:48:38.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 227,
+            "comments": 106
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 15,
+            "label": "HN top stories"
+          },
+          "rawText": "Docker Agent",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Classic PC demoscene productions running natively in the browser",
+          "url": "https://news.ycombinator.com/item?id=50002426",
+          "discussionUrl": "https://news.ycombinator.com/item?id=50002426",
+          "primaryUrl": "https://treylorswift.github.io/demoscene-recomp/web/",
+          "publishedAt": "2026-10-08T06:29:25.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 4,
+            "comments": 0
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 16,
+            "label": "HN top stories"
+          },
+          "rawText": "Classic PC demoscene productions running natively in the browser",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "A 100x faster* alternative to homebrew",
+          "url": "https://news.ycombinator.com/item?id=50001580",
+          "discussionUrl": "https://news.ycombinator.com/item?id=50001580",
+          "primaryUrl": "https://github.com/zerobrewhq/zerobrew",
+          "publishedAt": "2026-10-08T03:23:08.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 77,
+            "comments": 59
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 17,
+            "label": "HN top stories"
+          },
+          "rawText": "A 100x faster* alternative to homebrew",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "New repository settings for configuring pull request access",
+          "url": "https://news.ycombinator.com/item?id=49975158",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49975158",
+          "primaryUrl": "https://github.blog/changelog/2026-02-13-new-repository-settings-for-configuring-pull-request-access/",
+          "publishedAt": "2026-10-06T07:01:51.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 4,
+            "comments": 2
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 18,
+            "label": "HN top stories"
+          },
+          "rawText": "New repository settings for configuring pull request access",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "A minimal kernel in Swift, running in QEMU",
+          "url": "https://news.ycombinator.com/item?id=49977351",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49977351",
+          "primaryUrl": "https://carette.xyz/posts/minimal_swift_kernel_on_qemu/",
+          "publishedAt": "2026-10-06T12:20:03.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 72,
+            "comments": 12
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 19,
+            "label": "HN top stories"
+          },
+          "rawText": "A minimal kernel in Swift, running in QEMU",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Push ifs up and fors down: The idiom, its algebra, and its limits",
+          "url": "https://news.ycombinator.com/item?id=49997073",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49997073",
+          "primaryUrl": "https://debasishg.github.io/blog/push-ifs-up-fors-down/",
+          "publishedAt": "2026-10-07T18:43:18.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 144,
+            "comments": 66
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 20,
+            "label": "HN top stories"
+          },
+          "rawText": "Push ifs up and fors down: The idiom, its algebra, and its limits",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Sharing AI progress in mathematics",
+          "url": "https://news.ycombinator.com/item?id=49984923",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49984923",
+          "primaryUrl": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+          "publishedAt": "2026-10-06T22:17:21.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 1277,
+            "comments": 1450
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 21,
+            "label": "HN top stories"
+          },
+          "rawText": "Sharing AI progress in mathematics",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "The people holding up the internet",
+          "url": "https://news.ycombinator.com/item?id=50002494",
+          "discussionUrl": "https://news.ycombinator.com/item?id=50002494",
+          "primaryUrl": "https://sheets.works/data-viz/holding-up-the-internet",
+          "publishedAt": "2026-10-08T06:41:35.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 99,
+            "comments": 38
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 22,
+            "label": "HN top stories"
+          },
+          "rawText": "The people holding up the internet",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Dat-ecosystem: high level applications built on top of P2P protocols",
+          "url": "https://news.ycombinator.com/item?id=50002505",
+          "discussionUrl": "https://news.ycombinator.com/item?id=50002505",
+          "primaryUrl": "https://dat-ecosystem.org/",
+          "publishedAt": "2026-10-08T06:43:13.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 7,
+            "comments": 2
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 23,
+            "label": "HN top stories"
+          },
+          "rawText": "Dat-ecosystem: high level applications built on top of P2P protocols",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Animated ASCII Art for Web Pages",
+          "url": "https://news.ycombinator.com/item?id=49993857",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49993857",
+          "primaryUrl": "https://ascii.rest/",
+          "publishedAt": "2026-10-07T15:05:37.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 345,
+            "comments": 61
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 24,
+            "label": "HN top stories"
+          },
+          "rawText": "Animated ASCII Art for Web Pages",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Port of the TypeScript compiler, checker and lsp to Rust, by LLM",
+          "url": "https://news.ycombinator.com/item?id=50000676",
+          "discussionUrl": "https://news.ycombinator.com/item?id=50000676",
+          "primaryUrl": "https://github.com/pingdotgg/ts-rust",
+          "publishedAt": "2026-10-08T00:46:00.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 50,
+            "comments": 80
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 25,
+            "label": "HN top stories"
+          },
+          "rawText": "Port of the TypeScript compiler, checker and lsp to Rust, by LLM",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "How machines learned precision",
+          "url": "https://news.ycombinator.com/item?id=49980626",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49980626",
+          "primaryUrl": "https://glinscott.github.io/how-machines-learned-precision/",
+          "publishedAt": "2026-10-06T16:14:42.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 157,
+            "comments": 62
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 26,
+            "label": "HN top stories"
+          },
+          "rawText": "How machines learned precision",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Why were Victorian elites so effective?",
+          "url": "https://news.ycombinator.com/item?id=49993908",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49993908",
+          "primaryUrl": "https://worksinprogress.co/issue/the-seven-vices-of-highly-effective-victorians/",
+          "publishedAt": "2026-10-07T15:09:33.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 145,
+            "comments": 237
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 27,
+            "label": "HN top stories"
+          },
+          "rawText": "Why were Victorian elites so effective?",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "House with 15m underground tunnels for sale for 300k",
+          "url": "https://news.ycombinator.com/item?id=49992125",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49992125",
+          "primaryUrl": "https://www.readingchronicle.co.uk/news/26612080.house-15m-underground-tunnels-sale-300k/",
+          "publishedAt": "2026-10-07T12:57:10.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 199,
+            "comments": 188
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 28,
+            "label": "HN top stories"
+          },
+          "rawText": "House with 15m underground tunnels for sale for 300k",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Navier–Stokes Lost in Translation",
+          "url": "https://news.ycombinator.com/item?id=49994145",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49994145",
+          "primaryUrl": "https://arxiv.org/abs/2610.08144",
+          "publishedAt": "2026-10-07T15:24:38.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 300,
+            "comments": 182
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 29,
+            "label": "HN top stories"
+          },
+          "rawText": "Navier–Stokes Lost in Translation",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "ENIAC Programmers (2011)",
+          "url": "https://news.ycombinator.com/item?id=49971347",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49971347",
+          "primaryUrl": "https://www.columbia.edu/cu/computinghistory/eniac.html",
+          "publishedAt": "2026-10-05T21:50:23.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 13,
+            "comments": 1
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 30,
+            "label": "HN top stories"
+          },
+          "rawText": "ENIAC Programmers (2011)",
+          "statusHints": []
+        }
+      ],
+      "count": 30,
+      "actionableItems": [
+        {
+          "source": "Hacker News top stories",
+          "title": "“Math 2.0” will need to value mathematical progress more holistically",
+          "url": "https://news.ycombinator.com/item?id=50002008",
+          "discussionUrl": "https://news.ycombinator.com/item?id=50002008",
+          "primaryUrl": "https://mathstodon.xyz/@tao/117395269325940185",
+          "publishedAt": "2026-10-08T05:14:14.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 243,
+            "comments": 178
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 1,
+            "label": "HN top stories"
+          },
+          "rawText": "“Math 2.0” will need to value mathematical progress more holistically",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Claude Haiku 5.5",
+          "url": "https://news.ycombinator.com/item?id=49996437",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49996437",
+          "primaryUrl": "https://www.anthropic.com/claude-haiku-5-5",
+          "publishedAt": "2026-10-07T18:01:32.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 849,
+            "comments": 413
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 2,
+            "label": "HN top stories"
+          },
+          "rawText": "Claude Haiku 5.5",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Living off-grid: Hundred Rabbits",
+          "url": "https://news.ycombinator.com/item?id=49970767",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49970767",
+          "primaryUrl": "https://100r.ca/site/home.html",
+          "publishedAt": "2026-10-05T21:08:33.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 182,
+            "comments": 44
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 3,
+            "label": "HN top stories"
+          },
+          "rawText": "Living off-grid: Hundred Rabbits",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "The 15-year search for a band that charted once and vanished",
+          "url": "https://news.ycombinator.com/item?id=49959280",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49959280",
+          "primaryUrl": "https://shahidhussain.com/writing/search-for-salvage/",
+          "publishedAt": "2026-10-05T00:06:43.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 71,
+            "comments": 25
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 4,
+            "label": "HN top stories"
+          },
+          "rawText": "The 15-year search for a band that charted once and vanished",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Margaret Hamilton has died",
+          "url": "https://news.ycombinator.com/item?id=49998895",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49998895",
+          "primaryUrl": "https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007",
+          "publishedAt": "2026-10-07T21:16:18.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 1393,
+            "comments": 156
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 5,
+            "label": "HN top stories"
+          },
+          "rawText": "Margaret Hamilton has died",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "GPT‑6 and Intelligent UI for everyone",
+          "url": "https://news.ycombinator.com/item?id=49996425",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49996425",
+          "primaryUrl": "https://openai.com/index/gpt-6-for-everyone/",
+          "publishedAt": "2026-10-07T18:00:58.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 607,
+            "comments": 328
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 6,
+            "label": "HN top stories"
+          },
+          "rawText": "GPT‑6 and Intelligent UI for everyone",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "How did Rosalind Franklin miss the helix in her iconic DNA image? She didn't",
+          "url": "https://news.ycombinator.com/item?id=49969073",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49969073",
+          "primaryUrl": "https://www.science.org/content/article/how-did-rosalind-franklin-miss-helix-her-iconic-dna-image-she-didn-t",
+          "publishedAt": "2026-10-05T19:07:07.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 158,
+            "comments": 59
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 7,
+            "label": "HN top stories"
+          },
+          "rawText": "How did Rosalind Franklin miss the helix in her iconic DNA image? She didn't",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "'Jonathan' is the oldest land animal on Earth",
+          "url": "https://news.ycombinator.com/item?id=49998066",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49998066",
+          "primaryUrl": "https://www.404media.co/oldest-living-land-animal-jonathan-the-tortoise/",
+          "publishedAt": "2026-10-07T20:01:37.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 139,
+            "comments": 59
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 8,
+            "label": "HN top stories"
+          },
+          "rawText": "'Jonathan' is the oldest land animal on Earth",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Cleo (Mathematician)",
+          "url": "https://news.ycombinator.com/item?id=49982445",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49982445",
+          "primaryUrl": "https://en.wikipedia.org/wiki/Cleo_(mathematician)",
+          "publishedAt": "2026-10-06T18:49:45.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 133,
+            "comments": 25
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 9,
+            "label": "HN top stories"
+          },
+          "rawText": "Cleo (Mathematician)",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Analog Computer Simulator in the Browser",
+          "url": "https://news.ycombinator.com/item?id=49966866",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49966866",
+          "primaryUrl": "https://pavel-krivanek.github.io/The-Analog-Thing-Simulator/public/",
+          "publishedAt": "2026-10-05T16:19:11.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 17,
+            "comments": 5
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 10,
+            "label": "HN top stories"
+          },
+          "rawText": "Analog Computer Simulator in the Browser",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Shipping JPEG XL in Chrome",
+          "url": "https://news.ycombinator.com/item?id=49991227",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49991227",
+          "primaryUrl": "https://developer.chrome.com/blog/jpeg-xl-in-chrome",
+          "publishedAt": "2026-10-07T11:25:02.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 542,
+            "comments": 357
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 11,
+            "label": "HN top stories"
+          },
+          "rawText": "Shipping JPEG XL in Chrome",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "The Mathocalypse",
+          "url": "https://news.ycombinator.com/item?id=49997718",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49997718",
+          "primaryUrl": "https://scottaaronson.blog/?p=10169",
+          "publishedAt": "2026-10-07T19:33:40.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 210,
+            "comments": 245
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 12,
+            "label": "HN top stories"
+          },
+          "rawText": "The Mathocalypse",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app",
+          "url": "https://news.ycombinator.com/item?id=49994443",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49994443",
+          "primaryUrl": "https://bigwords.page/",
+          "publishedAt": "2026-10-07T15:44:21.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 476,
+            "comments": 135
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 13,
+            "label": "HN top stories"
+          },
+          "rawText": "Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "In Vienna and Beijing, the first (thorium) nuclear clocks begin to tick",
+          "url": "https://news.ycombinator.com/item?id=49996406",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49996406",
+          "primaryUrl": "https://www.nytimes.com/2026/10/07/science/first-nuclear-clocks-thorium-229.html",
+          "publishedAt": "2026-10-07T17:59:34.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 93,
+            "comments": 13
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 14,
+            "label": "HN top stories"
+          },
+          "rawText": "In Vienna and Beijing, the first (thorium) nuclear clocks begin to tick",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Docker Agent",
+          "url": "https://news.ycombinator.com/item?id=49996259",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49996259",
+          "primaryUrl": "https://github.com/docker/docker-agent",
+          "publishedAt": "2026-10-07T17:48:38.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 227,
+            "comments": 106
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 15,
+            "label": "HN top stories"
+          },
+          "rawText": "Docker Agent",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Classic PC demoscene productions running natively in the browser",
+          "url": "https://news.ycombinator.com/item?id=50002426",
+          "discussionUrl": "https://news.ycombinator.com/item?id=50002426",
+          "primaryUrl": "https://treylorswift.github.io/demoscene-recomp/web/",
+          "publishedAt": "2026-10-08T06:29:25.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 4,
+            "comments": 0
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 16,
+            "label": "HN top stories"
+          },
+          "rawText": "Classic PC demoscene productions running natively in the browser",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "A 100x faster* alternative to homebrew",
+          "url": "https://news.ycombinator.com/item?id=50001580",
+          "discussionUrl": "https://news.ycombinator.com/item?id=50001580",
+          "primaryUrl": "https://github.com/zerobrewhq/zerobrew",
+          "publishedAt": "2026-10-08T03:23:08.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 77,
+            "comments": 59
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 17,
+            "label": "HN top stories"
+          },
+          "rawText": "A 100x faster* alternative to homebrew",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "New repository settings for configuring pull request access",
+          "url": "https://news.ycombinator.com/item?id=49975158",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49975158",
+          "primaryUrl": "https://github.blog/changelog/2026-02-13-new-repository-settings-for-configuring-pull-request-access/",
+          "publishedAt": "2026-10-06T07:01:51.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 4,
+            "comments": 2
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 18,
+            "label": "HN top stories"
+          },
+          "rawText": "New repository settings for configuring pull request access",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "A minimal kernel in Swift, running in QEMU",
+          "url": "https://news.ycombinator.com/item?id=49977351",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49977351",
+          "primaryUrl": "https://carette.xyz/posts/minimal_swift_kernel_on_qemu/",
+          "publishedAt": "2026-10-06T12:20:03.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 72,
+            "comments": 12
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 19,
+            "label": "HN top stories"
+          },
+          "rawText": "A minimal kernel in Swift, running in QEMU",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Push ifs up and fors down: The idiom, its algebra, and its limits",
+          "url": "https://news.ycombinator.com/item?id=49997073",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49997073",
+          "primaryUrl": "https://debasishg.github.io/blog/push-ifs-up-fors-down/",
+          "publishedAt": "2026-10-07T18:43:18.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 144,
+            "comments": 66
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 20,
+            "label": "HN top stories"
+          },
+          "rawText": "Push ifs up and fors down: The idiom, its algebra, and its limits",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Sharing AI progress in mathematics",
+          "url": "https://news.ycombinator.com/item?id=49984923",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49984923",
+          "primaryUrl": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+          "publishedAt": "2026-10-06T22:17:21.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 1277,
+            "comments": 1450
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 21,
+            "label": "HN top stories"
+          },
+          "rawText": "Sharing AI progress in mathematics",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "The people holding up the internet",
+          "url": "https://news.ycombinator.com/item?id=50002494",
+          "discussionUrl": "https://news.ycombinator.com/item?id=50002494",
+          "primaryUrl": "https://sheets.works/data-viz/holding-up-the-internet",
+          "publishedAt": "2026-10-08T06:41:35.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 99,
+            "comments": 38
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 22,
+            "label": "HN top stories"
+          },
+          "rawText": "The people holding up the internet",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Dat-ecosystem: high level applications built on top of P2P protocols",
+          "url": "https://news.ycombinator.com/item?id=50002505",
+          "discussionUrl": "https://news.ycombinator.com/item?id=50002505",
+          "primaryUrl": "https://dat-ecosystem.org/",
+          "publishedAt": "2026-10-08T06:43:13.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 7,
+            "comments": 2
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 23,
+            "label": "HN top stories"
+          },
+          "rawText": "Dat-ecosystem: high level applications built on top of P2P protocols",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Animated ASCII Art for Web Pages",
+          "url": "https://news.ycombinator.com/item?id=49993857",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49993857",
+          "primaryUrl": "https://ascii.rest/",
+          "publishedAt": "2026-10-07T15:05:37.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 345,
+            "comments": 61
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 24,
+            "label": "HN top stories"
+          },
+          "rawText": "Animated ASCII Art for Web Pages",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Port of the TypeScript compiler, checker and lsp to Rust, by LLM",
+          "url": "https://news.ycombinator.com/item?id=50000676",
+          "discussionUrl": "https://news.ycombinator.com/item?id=50000676",
+          "primaryUrl": "https://github.com/pingdotgg/ts-rust",
+          "publishedAt": "2026-10-08T00:46:00.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 50,
+            "comments": 80
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 25,
+            "label": "HN top stories"
+          },
+          "rawText": "Port of the TypeScript compiler, checker and lsp to Rust, by LLM",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "How machines learned precision",
+          "url": "https://news.ycombinator.com/item?id=49980626",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49980626",
+          "primaryUrl": "https://glinscott.github.io/how-machines-learned-precision/",
+          "publishedAt": "2026-10-06T16:14:42.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 157,
+            "comments": 62
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 26,
+            "label": "HN top stories"
+          },
+          "rawText": "How machines learned precision",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Why were Victorian elites so effective?",
+          "url": "https://news.ycombinator.com/item?id=49993908",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49993908",
+          "primaryUrl": "https://worksinprogress.co/issue/the-seven-vices-of-highly-effective-victorians/",
+          "publishedAt": "2026-10-07T15:09:33.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 145,
+            "comments": 237
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 27,
+            "label": "HN top stories"
+          },
+          "rawText": "Why were Victorian elites so effective?",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "House with 15m underground tunnels for sale for 300k",
+          "url": "https://news.ycombinator.com/item?id=49992125",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49992125",
+          "primaryUrl": "https://www.readingchronicle.co.uk/news/26612080.house-15m-underground-tunnels-sale-300k/",
+          "publishedAt": "2026-10-07T12:57:10.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 199,
+            "comments": 188
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 28,
+            "label": "HN top stories"
+          },
+          "rawText": "House with 15m underground tunnels for sale for 300k",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "Navier–Stokes Lost in Translation",
+          "url": "https://news.ycombinator.com/item?id=49994145",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49994145",
+          "primaryUrl": "https://arxiv.org/abs/2610.08144",
+          "publishedAt": "2026-10-07T15:24:38.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 300,
+            "comments": 182
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 29,
+            "label": "HN top stories"
+          },
+          "rawText": "Navier–Stokes Lost in Translation",
+          "statusHints": []
+        },
+        {
+          "source": "Hacker News top stories",
+          "title": "ENIAC Programmers (2011)",
+          "url": "https://news.ycombinator.com/item?id=49971347",
+          "discussionUrl": "https://news.ycombinator.com/item?id=49971347",
+          "primaryUrl": "https://www.columbia.edu/cu/computinghistory/eniac.html",
+          "publishedAt": "2026-10-05T21:50:23.000Z",
+          "observedAt": "2026-10-08T08:22:21.482Z",
+          "metrics": {
+            "points": 13,
+            "comments": 1
+          },
+          "placement": {
+            "listUrl": "https://news.ycombinator.com/",
+            "rank": 30,
+            "label": "HN top stories"
+          },
+          "rawText": "ENIAC Programmers (2011)",
+          "statusHints": []
+        }
+      ],
+      "actionableCount": 30,
+      "shadow": true
+    },
+    "githubTrending": {
+      "key": "githubTrending",
+      "status": "OK",
+      "url": "https://github.com/trending?since=daily",
+      "observedAt": "2026-10-08T08:22:21.562Z",
+      "coverage": {
+        "kind": "bounded-listing",
+        "limit": 30,
+        "description": "First listing page/top stories only; relevance and primary-source verification remain editorial work."
+      },
+      "items": [
+        {
+          "source": "GitHub daily trending",
+          "title": "morluto / rea",
+          "url": "https://github.com/morluto/rea",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 1,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Star morluto / rea Reverse engineer anything with agents, from app behavior down to native binaries. TypeScript 18,059 1,893 Built by 4,655 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 18059,
+            "forks": 1893
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "mattpocock / skills",
+          "url": "https://github.com/mattpocock/skills",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 2,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Sponsor Star mattpocock / skills Skills for Real Engineers. Straight from my .agents directory. Shell 280,216 23,481 Built by 1,403 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 280216,
+            "forks": 23481
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "boykopovar / AnyPS5",
+          "url": "https://github.com/boykopovar/AnyPS5",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 3,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Star boykopovar / AnyPS5 Tool for automatic PS5 executables porting to Linux and Windows C++ 11,953 911 Built by 2,716 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 11953,
+            "forks": 911
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "ayghri / i-have-adhd",
+          "url": "https://github.com/ayghri/i-have-adhd",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 4,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Star ayghri / i-have-adhd A skill to stop your coding agent from burying the answer. ADHD-friendly output. Python 55,452 3,169 Built by 619 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 55452,
+            "forks": 3169
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "cathrynlavery / diagram-design",
+          "url": "https://github.com/cathrynlavery/diagram-design",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 5,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Sponsor Star cathrynlavery / diagram-design Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop. HTML 45,397 2,913 Built by 825 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 45397,
+            "forks": 2913
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "addyosmani / agent-skills",
+          "url": "https://github.com/addyosmani/agent-skills",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 6,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Star addyosmani / agent-skills Production-grade engineering skills for AI coding agents. JavaScript 103,070 10,790 Built by 677 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 103070,
+            "forks": 10790
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "EpicGames / raddebugger",
+          "url": "https://github.com/EpicGames/raddebugger",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 7,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Star EpicGames / raddebugger A native, user-mode, multi-process, graphical debugger. C 7,953 388 Built by 90 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 7953,
+            "forks": 388
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "thedotmack / claude-mem",
+          "url": "https://github.com/thedotmack/claude-mem",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 8,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Sponsor Star thedotmack / claude-mem Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More TypeScript 97,951 8,613 Built by 578 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 97951,
+            "forks": 8613
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "manaflow-ai / cmux",
+          "url": "https://github.com/manaflow-ai/cmux",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 9,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Star manaflow-ai / cmux Open source Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents. Built for multitasking, organization, and programmability. Swift 27,966 2,467 Built by 44 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 27966,
+            "forks": 2467
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "trycua / cua",
+          "url": "https://github.com/trycua/cua",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 10,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Sponsor Star trycua / cua Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation. Rust 28,918 2,044 Built by 228 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 28918,
+            "forks": 2044
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "cloudflare / security-audit-skill",
+          "url": "https://github.com/cloudflare/security-audit-skill",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 11,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Star cloudflare / security-audit-skill A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings JavaScript 26,301 1,580 Built by 576 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 26301,
+            "forks": 1580
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "tester-army / e2e",
+          "url": "https://github.com/tester-army/e2e",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 12,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Star tester-army / e2e Next generation e2e testing framework for web and mobile apps. TypeScript 7,854 357 Built by 1,390 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 7854,
+            "forks": 357
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "DuarteSantos8 / openGym",
+          "url": "https://github.com/DuarteSantos8/openGym",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 13,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Sponsor Star DuarteSantos8 / openGym Self-hosted gym & body-weight tracker — plan routines, log workouts (supersets, warm-ups, cardio), see which muscles are trained, fatigued or detrained, import from FitNotes/Strong/Hevy, passkey login. Your data, your server. JavaScript 7,470 965 Built by 1,493 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 7470,
+            "forks": 965
+          }
+        }
+      ],
+      "count": 13,
+      "actionableItems": [
+        {
+          "source": "GitHub daily trending",
+          "title": "morluto / rea",
+          "url": "https://github.com/morluto/rea",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 1,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Star morluto / rea Reverse engineer anything with agents, from app behavior down to native binaries. TypeScript 18,059 1,893 Built by 4,655 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 18059,
+            "forks": 1893
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "mattpocock / skills",
+          "url": "https://github.com/mattpocock/skills",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 2,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Sponsor Star mattpocock / skills Skills for Real Engineers. Straight from my .agents directory. Shell 280,216 23,481 Built by 1,403 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 280216,
+            "forks": 23481
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "boykopovar / AnyPS5",
+          "url": "https://github.com/boykopovar/AnyPS5",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 3,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Star boykopovar / AnyPS5 Tool for automatic PS5 executables porting to Linux and Windows C++ 11,953 911 Built by 2,716 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 11953,
+            "forks": 911
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "ayghri / i-have-adhd",
+          "url": "https://github.com/ayghri/i-have-adhd",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 4,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Star ayghri / i-have-adhd A skill to stop your coding agent from burying the answer. ADHD-friendly output. Python 55,452 3,169 Built by 619 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 55452,
+            "forks": 3169
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "cathrynlavery / diagram-design",
+          "url": "https://github.com/cathrynlavery/diagram-design",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 5,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Sponsor Star cathrynlavery / diagram-design Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop. HTML 45,397 2,913 Built by 825 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 45397,
+            "forks": 2913
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "addyosmani / agent-skills",
+          "url": "https://github.com/addyosmani/agent-skills",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 6,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Star addyosmani / agent-skills Production-grade engineering skills for AI coding agents. JavaScript 103,070 10,790 Built by 677 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 103070,
+            "forks": 10790
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "EpicGames / raddebugger",
+          "url": "https://github.com/EpicGames/raddebugger",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 7,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Star EpicGames / raddebugger A native, user-mode, multi-process, graphical debugger. C 7,953 388 Built by 90 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 7953,
+            "forks": 388
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "thedotmack / claude-mem",
+          "url": "https://github.com/thedotmack/claude-mem",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 8,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Sponsor Star thedotmack / claude-mem Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More TypeScript 97,951 8,613 Built by 578 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 97951,
+            "forks": 8613
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "manaflow-ai / cmux",
+          "url": "https://github.com/manaflow-ai/cmux",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 9,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Star manaflow-ai / cmux Open source Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents. Built for multitasking, organization, and programmability. Swift 27,966 2,467 Built by 44 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 27966,
+            "forks": 2467
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "trycua / cua",
+          "url": "https://github.com/trycua/cua",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 10,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Sponsor Star trycua / cua Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation. Rust 28,918 2,044 Built by 228 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 28918,
+            "forks": 2044
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "cloudflare / security-audit-skill",
+          "url": "https://github.com/cloudflare/security-audit-skill",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 11,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Star cloudflare / security-audit-skill A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings JavaScript 26,301 1,580 Built by 576 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 26301,
+            "forks": 1580
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "tester-army / e2e",
+          "url": "https://github.com/tester-army/e2e",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 12,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Star tester-army / e2e Next generation e2e testing framework for web and mobile apps. TypeScript 7,854 357 Built by 1,390 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 7854,
+            "forks": 357
+          }
+        },
+        {
+          "source": "GitHub daily trending",
+          "title": "DuarteSantos8 / openGym",
+          "url": "https://github.com/DuarteSantos8/openGym",
+          "observedAt": "2026-10-08T08:22:21.562Z",
+          "placement": {
+            "listUrl": "https://github.com/trending?since=daily",
+            "rank": 13,
+            "label": "GitHub daily trending"
+          },
+          "rawText": "Sponsor Star DuarteSantos8 / openGym Self-hosted gym & body-weight tracker — plan routines, log workouts (supersets, warm-ups, cardio), see which muscles are trained, fatigued or detrained, import from FitNotes/Strong/Hevy, passkey login. Your data, your server. JavaScript 7,470 965 Built by 1,493 stars today",
+          "statusHints": [],
+          "metrics": {
+            "stars": 7470,
+            "forks": 965
+          }
+        }
+      ],
+      "actionableCount": 13,
+      "shadow": true
+    },
+    "huggingFaceModels": {
+      "key": "huggingFaceModels",
+      "status": "OK",
+      "url": "https://huggingface.co/models?sort=trending",
+      "observedAt": "2026-10-08T08:22:21.558Z",
+      "coverage": {
+        "kind": "bounded-listing",
+        "limit": 30,
+        "description": "First listing page/top stories only; relevance and primary-source verification remain editorial work."
+      },
+      "items": [
+        {
+          "source": "Hugging Face trending models",
+          "title": "autotrust/JEV-27B-VL",
+          "url": "https://huggingface.co/autotrust/JEV-27B-VL",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 1,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "autotrust/JEV-27B-VL Image-Text-to-Text • 28B • Updated about 6 hours ago • 1.53M • 2.35k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Cloudflare/clef",
+          "url": "https://huggingface.co/Cloudflare/clef",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 2,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Cloudflare/clef Image-Text-to-Text • 27B • Updated about 17 hours ago • 9.51k • 1.85k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "autotrust/GEV-26B-Decide",
+          "url": "https://huggingface.co/autotrust/GEV-26B-Decide",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 3,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "autotrust/GEV-26B-Decide Text Classification • 26B • Updated 5 days ago • 896k • 1.51k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "google/embeddinggemma-2",
+          "url": "https://huggingface.co/google/embeddinggemma-2",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 4,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "google/embeddinggemma-2 Feature Extraction • 0.7B • Updated 1 day ago • 7.56k • 1.06k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Aleph-Alpha/Kolibri-1",
+          "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 5,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Aleph-Alpha/Kolibri-1 Text Generation • 78B • Updated 5 days ago • 5.78k • 791",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
+          "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 6,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF Text-to-Image • 7B • Updated 10 days ago • 1.82M • 3.62k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Cloudflare/clef-flash",
+          "url": "https://huggingface.co/Cloudflare/clef-flash",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 7,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Cloudflare/clef-flash Image-Text-to-Text • 9B • Updated about 17 hours ago • 15.7k • 672",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Venastine-Research/Xing4.0-29B-A4B-GGUF",
+          "url": "https://huggingface.co/Venastine-Research/Xing4.0-29B-A4B-GGUF",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 8,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Venastine-Research/Xing4.0-29B-A4B-GGUF Text Generation • 31B • Updated 10 days ago • 33.6k • 637",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "jialinyyzz/humanizer",
+          "url": "https://huggingface.co/jialinyyzz/humanizer",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 9,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "jialinyyzz/humanizer Text Generation • 12B • Updated about 2 hours ago • 19.5k • 533",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Lightricks/LTX-2.5",
+          "url": "https://huggingface.co/Lightricks/LTX-2.5",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 10,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Lightricks/LTX-2.5 Image-to-Video • Updated 5 days ago • 1.67M • 6.84k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "convaiinnovations/laya",
+          "url": "https://huggingface.co/convaiinnovations/laya",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 11,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "convaiinnovations/laya Text Classification • 0.4B • Updated 5 days ago • 28.5k • 5.36k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Qwen/Qwen3.8-27B",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 12,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Qwen/Qwen3.8-27B Image-Text-to-Text • 28B • Updated Aug 14 • 6.76M • • 17.2k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "canberkkkkkk/ema-lightning",
+          "url": "https://huggingface.co/canberkkkkkk/ema-lightning",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 13,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "canberkkkkkk/ema-lightning Text-to-Speech • Updated 1 day ago • 2.72k • 280",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+          "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 14,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF Image-Text-to-Text • 177B • Updated 9 days ago • 3.08M • 706",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Qwen/Qwen-Image-2.1",
+          "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 15,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Qwen/Qwen-Image-2.1 Text-to-Image • 7B • Updated 8 days ago • 109k • 3.11k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
+          "url": "https://huggingface.co/Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 16,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw Text Generation • 146B • Updated 7 days ago • 1.9k • 292",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "TaichuAI/ZDTaichu5.0-9B",
+          "url": "https://huggingface.co/TaichuAI/ZDTaichu5.0-9B",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 17,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "TaichuAI/ZDTaichu5.0-9B Image-Text-to-Text • 10B • Updated 18 days ago • 13k • 2.92k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "orcarouter/OrcaSAQ-2-Cyber-27B-Uncensored-GGUF",
+          "url": "https://huggingface.co/orcarouter/OrcaSAQ-2-Cyber-27B-Uncensored-GGUF",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 18,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "orcarouter/OrcaSAQ-2-Cyber-27B-Uncensored-GGUF Text Generation • 27B • Updated 6 days ago • 19k • 467",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "unsloth/embeddinggemma-2-GGUF",
+          "url": "https://huggingface.co/unsloth/embeddinggemma-2-GGUF",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 19,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "unsloth/embeddinggemma-2-GGUF Feature Extraction • 0.3B • Updated 1 day ago • 11.5k • 181",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Alissonerdx/BFS-Best-Face-Swap",
+          "url": "https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 20,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Alissonerdx/BFS-Best-Face-Swap Image-to-Image • Updated 10 days ago • 239k • 1.31k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Qwen/Qwen3.8-Flash-Next",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 21,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Qwen/Qwen3.8-Flash-Next Image-Text-to-Text • 180B • Updated Aug 27 • 1.61M • • 6.03k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "deepseek-ai/DeepSeek-V4.1-Flash",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 22,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "deepseek-ai/DeepSeek-V4.1-Flash Image-Text-to-Text • 763B • Updated 7 days ago • 1.26M • • 4.24k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "prism-ml/Ternary-Bonsai-2-27B-gguf",
+          "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 23,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "prism-ml/Ternary-Bonsai-2-27B-gguf Text Generation • 27B • Updated 12 days ago • 4.27M • 2.54k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+          "url": "https://huggingface.co/DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 24,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF Image-Text-to-Text • 27B • Updated 13 days ago • 2.09M • 1.56k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Cactus-Compute/whistle",
+          "url": "https://huggingface.co/Cactus-Compute/whistle",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 25,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Cactus-Compute/whistle Automatic Speech Recognition • Updated 6 days ago • 2.25k • 152",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "autotrust/GEV-26B-Decide-NVFP4",
+          "url": "https://huggingface.co/autotrust/GEV-26B-Decide-NVFP4",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 26,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "autotrust/GEV-26B-Decide-NVFP4 Text Classification • 14B • Updated 3 days ago • 15k • 163",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+          "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 27,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF Image-Text-to-Text • 27B • Updated Sep 2 • 1.55M • 2.05k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "orcarouter/Qwen3.8-Flash-Next-Uncensored-GGUF",
+          "url": "https://huggingface.co/orcarouter/Qwen3.8-Flash-Next-Uncensored-GGUF",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 28,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "orcarouter/Qwen3.8-Flash-Next-Uncensored-GGUF Image-Text-to-Text • 177B • Updated 6 days ago • 431k • 655",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Viggle/Qwen-Image-2.1-viggle-turbo",
+          "url": "https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 29,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Viggle/Qwen-Image-2.1-viggle-turbo Text-to-Image • 7B • Updated 7 days ago • 327k • 668",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF",
+          "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 30,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF Image-Text-to-Text • 117B • Updated 9 days ago • 554k • 345",
+          "statusHints": []
+        }
+      ],
+      "count": 30,
+      "actionableItems": [
+        {
+          "source": "Hugging Face trending models",
+          "title": "autotrust/JEV-27B-VL",
+          "url": "https://huggingface.co/autotrust/JEV-27B-VL",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 1,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "autotrust/JEV-27B-VL Image-Text-to-Text • 28B • Updated about 6 hours ago • 1.53M • 2.35k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Cloudflare/clef",
+          "url": "https://huggingface.co/Cloudflare/clef",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 2,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Cloudflare/clef Image-Text-to-Text • 27B • Updated about 17 hours ago • 9.51k • 1.85k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "autotrust/GEV-26B-Decide",
+          "url": "https://huggingface.co/autotrust/GEV-26B-Decide",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 3,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "autotrust/GEV-26B-Decide Text Classification • 26B • Updated 5 days ago • 896k • 1.51k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "google/embeddinggemma-2",
+          "url": "https://huggingface.co/google/embeddinggemma-2",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 4,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "google/embeddinggemma-2 Feature Extraction • 0.7B • Updated 1 day ago • 7.56k • 1.06k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Aleph-Alpha/Kolibri-1",
+          "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 5,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Aleph-Alpha/Kolibri-1 Text Generation • 78B • Updated 5 days ago • 5.78k • 791",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
+          "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 6,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF Text-to-Image • 7B • Updated 10 days ago • 1.82M • 3.62k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Cloudflare/clef-flash",
+          "url": "https://huggingface.co/Cloudflare/clef-flash",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 7,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Cloudflare/clef-flash Image-Text-to-Text • 9B • Updated about 17 hours ago • 15.7k • 672",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Venastine-Research/Xing4.0-29B-A4B-GGUF",
+          "url": "https://huggingface.co/Venastine-Research/Xing4.0-29B-A4B-GGUF",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 8,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Venastine-Research/Xing4.0-29B-A4B-GGUF Text Generation • 31B • Updated 10 days ago • 33.6k • 637",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "jialinyyzz/humanizer",
+          "url": "https://huggingface.co/jialinyyzz/humanizer",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 9,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "jialinyyzz/humanizer Text Generation • 12B • Updated about 2 hours ago • 19.5k • 533",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Lightricks/LTX-2.5",
+          "url": "https://huggingface.co/Lightricks/LTX-2.5",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 10,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Lightricks/LTX-2.5 Image-to-Video • Updated 5 days ago • 1.67M • 6.84k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "convaiinnovations/laya",
+          "url": "https://huggingface.co/convaiinnovations/laya",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 11,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "convaiinnovations/laya Text Classification • 0.4B • Updated 5 days ago • 28.5k • 5.36k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Qwen/Qwen3.8-27B",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 12,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Qwen/Qwen3.8-27B Image-Text-to-Text • 28B • Updated Aug 14 • 6.76M • • 17.2k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "canberkkkkkk/ema-lightning",
+          "url": "https://huggingface.co/canberkkkkkk/ema-lightning",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 13,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "canberkkkkkk/ema-lightning Text-to-Speech • Updated 1 day ago • 2.72k • 280",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+          "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 14,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF Image-Text-to-Text • 177B • Updated 9 days ago • 3.08M • 706",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Qwen/Qwen-Image-2.1",
+          "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 15,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Qwen/Qwen-Image-2.1 Text-to-Image • 7B • Updated 8 days ago • 109k • 3.11k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
+          "url": "https://huggingface.co/Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 16,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw Text Generation • 146B • Updated 7 days ago • 1.9k • 292",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "TaichuAI/ZDTaichu5.0-9B",
+          "url": "https://huggingface.co/TaichuAI/ZDTaichu5.0-9B",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 17,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "TaichuAI/ZDTaichu5.0-9B Image-Text-to-Text • 10B • Updated 18 days ago • 13k • 2.92k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "orcarouter/OrcaSAQ-2-Cyber-27B-Uncensored-GGUF",
+          "url": "https://huggingface.co/orcarouter/OrcaSAQ-2-Cyber-27B-Uncensored-GGUF",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 18,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "orcarouter/OrcaSAQ-2-Cyber-27B-Uncensored-GGUF Text Generation • 27B • Updated 6 days ago • 19k • 467",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "unsloth/embeddinggemma-2-GGUF",
+          "url": "https://huggingface.co/unsloth/embeddinggemma-2-GGUF",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 19,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "unsloth/embeddinggemma-2-GGUF Feature Extraction • 0.3B • Updated 1 day ago • 11.5k • 181",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Alissonerdx/BFS-Best-Face-Swap",
+          "url": "https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 20,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Alissonerdx/BFS-Best-Face-Swap Image-to-Image • Updated 10 days ago • 239k • 1.31k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Qwen/Qwen3.8-Flash-Next",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 21,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Qwen/Qwen3.8-Flash-Next Image-Text-to-Text • 180B • Updated Aug 27 • 1.61M • • 6.03k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "deepseek-ai/DeepSeek-V4.1-Flash",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 22,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "deepseek-ai/DeepSeek-V4.1-Flash Image-Text-to-Text • 763B • Updated 7 days ago • 1.26M • • 4.24k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "prism-ml/Ternary-Bonsai-2-27B-gguf",
+          "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 23,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "prism-ml/Ternary-Bonsai-2-27B-gguf Text Generation • 27B • Updated 12 days ago • 4.27M • 2.54k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+          "url": "https://huggingface.co/DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 24,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF Image-Text-to-Text • 27B • Updated 13 days ago • 2.09M • 1.56k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Cactus-Compute/whistle",
+          "url": "https://huggingface.co/Cactus-Compute/whistle",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 25,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Cactus-Compute/whistle Automatic Speech Recognition • Updated 6 days ago • 2.25k • 152",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "autotrust/GEV-26B-Decide-NVFP4",
+          "url": "https://huggingface.co/autotrust/GEV-26B-Decide-NVFP4",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 26,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "autotrust/GEV-26B-Decide-NVFP4 Text Classification • 14B • Updated 3 days ago • 15k • 163",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+          "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 27,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF Image-Text-to-Text • 27B • Updated Sep 2 • 1.55M • 2.05k",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "orcarouter/Qwen3.8-Flash-Next-Uncensored-GGUF",
+          "url": "https://huggingface.co/orcarouter/Qwen3.8-Flash-Next-Uncensored-GGUF",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 28,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "orcarouter/Qwen3.8-Flash-Next-Uncensored-GGUF Image-Text-to-Text • 177B • Updated 6 days ago • 431k • 655",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "Viggle/Qwen-Image-2.1-viggle-turbo",
+          "url": "https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 29,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Viggle/Qwen-Image-2.1-viggle-turbo Text-to-Image • 7B • Updated 7 days ago • 327k • 668",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending models",
+          "title": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF",
+          "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF",
+          "observedAt": "2026-10-08T08:22:21.558Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/models?sort=trending",
+            "rank": 30,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF Image-Text-to-Text • 117B • Updated 9 days ago • 554k • 345",
+          "statusHints": []
+        }
+      ],
+      "actionableCount": 30,
+      "shadow": true
+    },
+    "huggingFaceSpaces": {
+      "key": "huggingFaceSpaces",
+      "status": "OK",
+      "url": "https://huggingface.co/spaces?sort=trending",
+      "observedAt": "2026-10-08T08:22:21.561Z",
+      "coverage": {
+        "kind": "bounded-listing",
+        "limit": 30,
+        "description": "First listing page/top stories only; relevance and primary-source verification remain editorial work."
+      },
+      "items": [
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "MiniMax H3 Turbo LoRA",
+          "url": "https://huggingface.co/spaces/Pepe104/MiniMax-H3-Turbo-Lora-UNCENSORED",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 1,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO Agents 1.23k MiniMax H3 Turbo LoRA 🎬 Video generation with a synchronized soundtrack Pepe104 Aug 16",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "The ultimate guide to multi-harness RL",
+          "url": "https://huggingface.co/spaces/FineEnvs/multi-harness-rl",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 2,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running 199 The ultimate guide to multi-harness RL 🔀 Train open models with RL inside real agent harnesses FineEnvs 3 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Jev Decision Index",
+          "url": "https://huggingface.co/spaces/multimodalart/jev-decision-index",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 3,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running Featured 520 Jev Decision Index 🔬 Benchmarks and news on various repros of TypeSafe's Jev multimodalart about 14 hours ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Qwen Image 2.1 Uncensored GGUF Studio",
+          "url": "https://huggingface.co/spaces/arudradey/qwen-image-2.1-uncensored-gguf",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 4,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 364 Qwen Image 2.1 Uncensored GGUF Studio 🎨 Qwen-Image-2.1 Uncensored GGUF demo on ZeroGPU arudradey 12 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Wan2.2 14B Preview",
+          "url": "https://huggingface.co/spaces/kulkas2pintu/wan777",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 5,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 375 Wan2.2 14B Preview 🐌 generate a video from an image with a text prompt kulkas2pintu Aug 23",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Model Pulse",
+          "url": "https://huggingface.co/spaces/tardellirs/model-pulse",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 6,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running Featured 129 Model Pulse 📈 Hugging Face model download stats, history & trends tardellirs 31 minutes ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Qwen Image 2.1 Uncensored All-In-One LoRA Studio",
+          "url": "https://huggingface.co/spaces/arudradey/qwen-image-2.1-uncensored-aio-loras",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 7,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 210 Qwen Image 2.1 Uncensored All-In-One LoRA Studio 🚀 Uncensored Qwen 2.1 with All-In-One LoRAs arudradey 12 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "BFS Best Face Swap",
+          "url": "https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 8,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 119 BFS Best Face Swap 🎭 Head swap with the BFS LoRA on Qwen-Image-2.1 (+turbo) hugging-apps 10 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Viggle Turbo for Qwen-Image-2.1",
+          "url": "https://huggingface.co/spaces/Viggle/Qwen-Image-2.1-viggle-turbo",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 9,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO Agents 217 Viggle Turbo for Qwen-Image-2.1 ⚡ 6-step Qwen-Image-2.1, T2I + editing, vs-base comparison Viggle 7 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "JEV-27B Live Demo",
+          "url": "https://huggingface.co/spaces/autotrust/JEV-27B-Demo",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 10,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running 97 JEV-27B Live Demo 🎮 Play Mario, Rubik's Cube and Tetris with JEV-27B autotrust 8 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "JEV-9B — typed decisions",
+          "url": "https://huggingface.co/spaces/autotrust/jev-9b-decision-demo",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 11,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 91 JEV-9B — typed decisions ⚖ Calibrated typed decisions + System 2 reasoning autotrust 12 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "LTX 2.3 10Eros Image-to-Video",
+          "url": "https://huggingface.co/spaces/00000tt/LTX-2.3-10Eros",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 12,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO Agents 169 LTX 2.3 10Eros Image-to-Video 🎬 ltx 2.3 improved image-to-video with 10eros & native audio 00000tt Aug 17",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "QIE-2511 Rapid-AIO LoRAs Fast (Experimental)",
+          "url": "https://huggingface.co/spaces/aet256/Qwen-Image-Edit-Rapid-AIO-Loras-Experimental",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 13,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 402 QIE-2511 Rapid-AIO LoRAs Fast (Experimental) ⚡ Demo of the Collection of Qwen Image Edit LoRAs aet256 13 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Omni Video Factory",
+          "url": "https://huggingface.co/spaces/vamo455/Omni-videos-custom-auto_prompt_high-quality",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 14,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO Agents 195 Omni Video Factory 🏆 text to video, image to video, video extend vamo455 Aug 30",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "ChessFly",
+          "url": "https://huggingface.co/spaces/mlabonne/chessfly",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 15,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running Featured 137 ChessFly 🪰 Just a fruit fly's brain, playing chess mlabonne 21 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Qwen-Image-2.1",
+          "url": "https://huggingface.co/spaces/Qwen/Qwen-Image-2.1",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 16,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO Agents 394 Qwen-Image-2.1 🎨 Generate or edit images from text and photos Qwen 11 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "KV Image to Clip",
+          "url": "https://huggingface.co/spaces/kulkas2pintu/kv-i2v",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 17,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 128 KV Image to Clip 🎬 Wan 2.2 image-to-clip with KV adapters kulkas2pintu 3 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Qwen-Image-Edit-2511-LoRAs-Fast",
+          "url": "https://huggingface.co/spaces/kulkas2pintu/QWEN_EDIT_IMAGE",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 18,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 667 Qwen-Image-Edit-2511-LoRAs-Fast 🎃 AnyPose pose still with a strong pose-reference lock kulkas2pintu 13 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Wan2.2 14B Fast",
+          "url": "https://huggingface.co/spaces/zerogpu-aoti/wan2-2-fp8da-aoti-faster",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 19,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 3.71k Wan2.2 14B Fast 🎥 generate a video from an image with a text prompt zerogpu-aoti Aug 25",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "FLUX.2 Klein Multi LoRA V2",
+          "url": "https://huggingface.co/spaces/M3st3rJ4k3l/FLUX.2-Klein-Multi-LoRA-v2",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 20,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 95 FLUX.2 Klein Multi LoRA V2 🌍 Experimental space for image editing with FLUX.2 Klein 9B M3st3rJ4k3l 3 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Wan2.2 14B Cum explosion lora",
+          "url": "https://huggingface.co/spaces/simru66/wan2-2-fp8da-aoti-preview-2c-finishing",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 21,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 49 Wan2.2 14B Cum explosion lora 🐌 generate a video from an image with a text prompt with text simru66 Jul 28",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "EmbeddingGemma 2 WebGPU",
+          "url": "https://huggingface.co/spaces/webml-community/embeddinggemma-2-webgpu",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 22,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running 38 EmbeddingGemma 2 WebGPU 🌄 Search similar media using local embeddings webml-community 1 day ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "MiniMax-H3 Character Swap LoRA",
+          "url": "https://huggingface.co/spaces/hugging-apps/minimax-h3-character-swap-lora",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 23,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO Agents 72 MiniMax-H3 Character Swap LoRA 🎭 Swap one character in a clip for a reference character hugging-apps 9 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Krea 2 Turbo Image Generator",
+          "url": "https://huggingface.co/spaces/Aura1in/Krea-2-Turbo_v2",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 24,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO Agents 36 Krea 2 Turbo Image Generator 🖌 Krea 2 Turbo text2image and image editing Aura1in 24 days ago",
+          "statusHints": []
+        }
+      ],
+      "count": 24,
+      "actionableItems": [
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "MiniMax H3 Turbo LoRA",
+          "url": "https://huggingface.co/spaces/Pepe104/MiniMax-H3-Turbo-Lora-UNCENSORED",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 1,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO Agents 1.23k MiniMax H3 Turbo LoRA 🎬 Video generation with a synchronized soundtrack Pepe104 Aug 16",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "The ultimate guide to multi-harness RL",
+          "url": "https://huggingface.co/spaces/FineEnvs/multi-harness-rl",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 2,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running 199 The ultimate guide to multi-harness RL 🔀 Train open models with RL inside real agent harnesses FineEnvs 3 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Jev Decision Index",
+          "url": "https://huggingface.co/spaces/multimodalart/jev-decision-index",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 3,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running Featured 520 Jev Decision Index 🔬 Benchmarks and news on various repros of TypeSafe's Jev multimodalart about 14 hours ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Qwen Image 2.1 Uncensored GGUF Studio",
+          "url": "https://huggingface.co/spaces/arudradey/qwen-image-2.1-uncensored-gguf",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 4,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 364 Qwen Image 2.1 Uncensored GGUF Studio 🎨 Qwen-Image-2.1 Uncensored GGUF demo on ZeroGPU arudradey 12 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Wan2.2 14B Preview",
+          "url": "https://huggingface.co/spaces/kulkas2pintu/wan777",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 5,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 375 Wan2.2 14B Preview 🐌 generate a video from an image with a text prompt kulkas2pintu Aug 23",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Model Pulse",
+          "url": "https://huggingface.co/spaces/tardellirs/model-pulse",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 6,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running Featured 129 Model Pulse 📈 Hugging Face model download stats, history & trends tardellirs 31 minutes ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Qwen Image 2.1 Uncensored All-In-One LoRA Studio",
+          "url": "https://huggingface.co/spaces/arudradey/qwen-image-2.1-uncensored-aio-loras",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 7,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 210 Qwen Image 2.1 Uncensored All-In-One LoRA Studio 🚀 Uncensored Qwen 2.1 with All-In-One LoRAs arudradey 12 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "BFS Best Face Swap",
+          "url": "https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 8,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 119 BFS Best Face Swap 🎭 Head swap with the BFS LoRA on Qwen-Image-2.1 (+turbo) hugging-apps 10 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Viggle Turbo for Qwen-Image-2.1",
+          "url": "https://huggingface.co/spaces/Viggle/Qwen-Image-2.1-viggle-turbo",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 9,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO Agents 217 Viggle Turbo for Qwen-Image-2.1 ⚡ 6-step Qwen-Image-2.1, T2I + editing, vs-base comparison Viggle 7 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "JEV-27B Live Demo",
+          "url": "https://huggingface.co/spaces/autotrust/JEV-27B-Demo",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 10,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running 97 JEV-27B Live Demo 🎮 Play Mario, Rubik's Cube and Tetris with JEV-27B autotrust 8 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "JEV-9B — typed decisions",
+          "url": "https://huggingface.co/spaces/autotrust/jev-9b-decision-demo",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 11,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 91 JEV-9B — typed decisions ⚖ Calibrated typed decisions + System 2 reasoning autotrust 12 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "LTX 2.3 10Eros Image-to-Video",
+          "url": "https://huggingface.co/spaces/00000tt/LTX-2.3-10Eros",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 12,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO Agents 169 LTX 2.3 10Eros Image-to-Video 🎬 ltx 2.3 improved image-to-video with 10eros & native audio 00000tt Aug 17",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "QIE-2511 Rapid-AIO LoRAs Fast (Experimental)",
+          "url": "https://huggingface.co/spaces/aet256/Qwen-Image-Edit-Rapid-AIO-Loras-Experimental",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 13,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 402 QIE-2511 Rapid-AIO LoRAs Fast (Experimental) ⚡ Demo of the Collection of Qwen Image Edit LoRAs aet256 13 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Omni Video Factory",
+          "url": "https://huggingface.co/spaces/vamo455/Omni-videos-custom-auto_prompt_high-quality",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 14,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO Agents 195 Omni Video Factory 🏆 text to video, image to video, video extend vamo455 Aug 30",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "ChessFly",
+          "url": "https://huggingface.co/spaces/mlabonne/chessfly",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 15,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running Featured 137 ChessFly 🪰 Just a fruit fly's brain, playing chess mlabonne 21 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Qwen-Image-2.1",
+          "url": "https://huggingface.co/spaces/Qwen/Qwen-Image-2.1",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 16,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO Agents 394 Qwen-Image-2.1 🎨 Generate or edit images from text and photos Qwen 11 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "KV Image to Clip",
+          "url": "https://huggingface.co/spaces/kulkas2pintu/kv-i2v",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 17,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 128 KV Image to Clip 🎬 Wan 2.2 image-to-clip with KV adapters kulkas2pintu 3 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Qwen-Image-Edit-2511-LoRAs-Fast",
+          "url": "https://huggingface.co/spaces/kulkas2pintu/QWEN_EDIT_IMAGE",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 18,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 667 Qwen-Image-Edit-2511-LoRAs-Fast 🎃 AnyPose pose still with a strong pose-reference lock kulkas2pintu 13 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Wan2.2 14B Fast",
+          "url": "https://huggingface.co/spaces/zerogpu-aoti/wan2-2-fp8da-aoti-faster",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 19,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 3.71k Wan2.2 14B Fast 🎥 generate a video from an image with a text prompt zerogpu-aoti Aug 25",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "FLUX.2 Klein Multi LoRA V2",
+          "url": "https://huggingface.co/spaces/M3st3rJ4k3l/FLUX.2-Klein-Multi-LoRA-v2",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 20,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 95 FLUX.2 Klein Multi LoRA V2 🌍 Experimental space for image editing with FLUX.2 Klein 9B M3st3rJ4k3l 3 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Wan2.2 14B Cum explosion lora",
+          "url": "https://huggingface.co/spaces/simru66/wan2-2-fp8da-aoti-preview-2c-finishing",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 21,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO MCP 49 Wan2.2 14B Cum explosion lora 🐌 generate a video from an image with a text prompt with text simru66 Jul 28",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "EmbeddingGemma 2 WebGPU",
+          "url": "https://huggingface.co/spaces/webml-community/embeddinggemma-2-webgpu",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 22,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running 38 EmbeddingGemma 2 WebGPU 🌄 Search similar media using local embeddings webml-community 1 day ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "MiniMax-H3 Character Swap LoRA",
+          "url": "https://huggingface.co/spaces/hugging-apps/minimax-h3-character-swap-lora",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 23,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO Agents 72 MiniMax-H3 Character Swap LoRA 🎭 Swap one character in a clip for a reference character hugging-apps 9 days ago",
+          "statusHints": []
+        },
+        {
+          "source": "Hugging Face trending Spaces",
+          "title": "Krea 2 Turbo Image Generator",
+          "url": "https://huggingface.co/spaces/Aura1in/Krea-2-Turbo_v2",
+          "observedAt": "2026-10-08T08:22:21.561Z",
+          "placement": {
+            "listUrl": "https://huggingface.co/spaces?sort=trending",
+            "rank": 24,
+            "label": "Hugging Face trending"
+          },
+          "rawText": "Running on ZERO Agents 36 Krea 2 Turbo Image Generator 🖌 Krea 2 Turbo text2image and image editing Aura1in 24 days ago",
+          "statusHints": []
+        }
+      ],
+      "actionableCount": 24,
+      "shadow": true
     }
   },
   "totals": {
@@ -3880,11 +6993,11 @@
     "devpostOpen": 0,
     "devpostOpenActionable": 0,
     "grantlySupport": 24,
-    "grantlySupportActionable": 6,
+    "grantlySupportActionable": 5,
     "hackathonKorea": 12,
     "hackathonKoreaActionable": 5,
     "kStartupHighlights": 10,
-    "kStartupHighlightsActionable": 2,
+    "kStartupHighlightsActionable": 3,
     "sotong24Contests": 9,
     "sotong24ContestsActionable": 4
   }
