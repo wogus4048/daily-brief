@@ -2,13 +2,10 @@ name: Crawl daily-brief source inventories
 
 on:
   schedule:
-    # 08:50 Asia/Seoul (UTC+9), ten minutes before the 09:00 ChatGPT refresh.
-    - cron: '50 23 * * *'
-  push:
-    branches:
-      - 'automation/source-crawl-trigger'
-    paths:
-      - '.automation/source-crawl-trigger.txt'
+    # 05:17 and 07:17 Asia/Seoul. Leave room for delayed scheduled runs
+    # and a second attempt before the 09:00 editorial refresh.
+    - cron: '17 20 * * *'
+    - cron: '17 22 * * *'
   workflow_dispatch:
 
 permissions:
@@ -16,7 +13,7 @@ permissions:
 
 concurrency:
   group: daily-brief-source-crawl
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   crawl:

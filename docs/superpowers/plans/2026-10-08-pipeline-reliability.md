@@ -14,3 +14,5 @@ Evidence: Oct 8 scheduled crawl ran at 11:59 KST rather than 08:50; cache exists
 Execution: continue inline under existing user authorization to implement and deploy. Preserve pre-existing local editorial/data changes.
 
 Verification: pipeline fixture tests pass, live authenticated collection succeeded for all four repositories, 135 UI checks plus UX/discovery regressions pass, data and crawler lifecycle validators pass, workflow YAML parses. Health checker exits 1 as expected for the real Oct 8 publication gap and Devpost failure. Independent code review identified a misleading pending label on failed metrics; corrected to an unavailable label.
+
+Confirmed root cause from the user-provided ChatGPT run result: the 09:00 task had no same-day cache, its force-reset fallback was rejected by tool safety checks, and it paused its own schedule. Advance prewarming to 05:17/07:17, replace branch mutation with normal workflow dispatch, and document preserving the enabled schedule. Resuming the hosted ChatGPT task requires access to that task; repository changes cannot do it.

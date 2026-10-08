@@ -4,11 +4,13 @@ The ChatGPT task **daily-brief 매일 갱신** performs editorial research. GitH
 
 ## Health checks
 
-- `crawl-sources.yml` is scheduled for 08:50 Seoul. GitHub scheduled runs may be delayed. Required source failures stop cache promotion; their diagnostics are retained as an Actions artifact. Optional failures preserve usable cache results but the final health step fails the run and lists each source in the Actions summary. The editorial task should read source statuses and record gaps, as required by `AUTOMATION.md`.
+- `crawl-sources.yml` is scheduled for 05:17 and 07:17 Seoul, providing an early run and a second attempt before the 09:00 editorial refresh. GitHub scheduled runs may be delayed. Required source failures stop cache promotion; their diagnostics are retained as an Actions artifact. Optional failures preserve usable cache results but the final health step fails the run and lists each source in the Actions summary. The editorial task should read source statuses and record gaps, as required by `AUTOMATION.md`.
 - `pipeline-health.yml` checks at 10:37 Seoul and can be dispatched manually. It reports collection date, publication date, and source health independently. A missing current-day publication after 10:00 or any active source failure produces a failed run. GitHub workflow notifications depend on the account's notification settings.
 - Devpost HTTP errors/security challenges are source failures, never evidence of an empty inventory. Inspect through the existing editorial fallback; do not bypass access controls or remove previously verified opportunities.
 
 For overdue publication, inspect the ChatGPT task's latest run first. Then check for `automation/daily-brief-YYYY-MM-DD-data`, the research audit, the promotion run, and Pages deployment. If the candidate does not exist, rerunning Pages or the inventory crawler cannot replace the missing research. Do not advance `data/latest.json.date` or fabricate an audit to clear the check.
+
+If the cache is absent and no crawler run is pending, use Actions **Run workflow** on `crawl-sources.yml` against `main` (or `gh workflow run crawl-sources.yml --ref main`). The former force-reset trigger-branch fallback has been removed. If the ChatGPT integration cannot dispatch Actions, report the limitation rather than trying alternate branch writes. Keep the recurring ChatGPT task enabled after an isolated failure unless the user requests a pause. An already-paused ChatGPT task must be resumed in ChatGPT; changing these workflows does not enable it.
 
 ## Repository metrics
 
