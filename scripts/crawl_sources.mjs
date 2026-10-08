@@ -1,6 +1,7 @@
 import { chromium } from "playwright";
 import fs from "node:fs/promises";
 import path from "node:path";
+import { hasUsableCache } from "./pipeline_health.mjs";
 
 const SEOUL_TZ = "Asia/Seoul";
 const OUTPUT_DIR = path.resolve("data/source-cache");
@@ -463,6 +464,22 @@ async function main() {
   await fs.mkdir(OUTPUT_DIR, { recursive: true });
 
   const manifest = JSON.parse(await fs.readFile(MANIFEST_PATH, "utf8"));
+  // The second scheduled attempt is a fallback, not a replacement for evidence
+  // that the editorial task may already be using. Explicit dispatch still refreshes.
+  if (process.env.GITHUB_EVENT_NAME === "schedule") {
+    try {
+      const [latest, daily] = await Promise.all([
+        fs.readFile(path.join(OUTPUT_DIR, "latest.json"), "utf8"),
+        fs.readFile(path.join(OUTPUT_DIR, `${date}.json`), "utf8"),
+      ]);
+      if (latest === daily && hasUsableCache(JSON.parse(daily), manifest, date)) {
+        console.log(`Reusing verified same-day source cache: ${date}`);
+        return;
+      }
+    } catch (error) {
+      console.log(`No reusable same-day cache: ${error.code || error.name}`);
+    }
+  }
 
   const builtIns = new Map([
     ["daconCompetitions", crawlDacon],

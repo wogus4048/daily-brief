@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { collectMetrics, repositories } from './collect_github_metrics.mjs';
-import { assessHealth } from './pipeline_health.mjs';
+import { assessHealth, hasUsableCache } from './pipeline_health.mjs';
 
 const brief = {aiDiscovery:[{links:[{url:'https://github.com/owner/project.git'},{url:'https://github.com/owner/project/issues'}]},{links:[{url:'https://github.com/owner/project'}]}]};
 assert.deepEqual(repositories(brief), ['owner/project']);
@@ -18,6 +18,12 @@ const invalid = await collectMetrics(brief, {}, async()=>({ok:true,json:async()=
 assert.equal(invalid.repositories['owner/project'].status,'FAILED');
 const manifest = {active:[{key:'required',required:true},{key:'optional'}]};
 const cache = {date:'2026-10-08',sources:{required:{status:'OK',count:3},optional:{status:'FAILED',count:0,error:'HTTP 403'}}};
+const usable={...cache,crawler:{engine:'playwright-chromium'},sources:{optional:{status:'FAILED',count:0,items:[],actionableCount:0,actionableItems:[]},required:{status:'OK',count:1,items:[{url:'https://example.com'}],actionableCount:0,actionableItems:[]}}};
+assert.equal(hasUsableCache(usable,manifest,'2026-10-08'),true);
+assert.equal(hasUsableCache(usable,manifest,'2026-10-09'),false);
+assert.equal(hasUsableCache({...usable,crawler:{}},manifest,'2026-10-08'),false);
+assert.equal(hasUsableCache({...usable,sources:{}},manifest,'2026-10-08'),false);
+assert.equal(hasUsableCache({...usable,sources:{...usable.sources,optional:{status:'FAILED'}}},manifest,'2026-10-08'),false);
 let health=assessHealth(cache,manifest,{date:'2026-10-07'},now);
 assert.equal(health.publication.status,'STALE');
 assert.equal(health.sources.status,'PARTIAL');

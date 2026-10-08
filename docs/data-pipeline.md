@@ -12,6 +12,8 @@ For overdue publication, inspect the ChatGPT task's latest run first. Then check
 
 If the cache is absent and no crawler run is pending, use Actions **Run workflow** on `crawl-sources.yml` against `main` (or `gh workflow run crawl-sources.yml --ref main`). The former force-reset trigger-branch fallback has been removed. If the ChatGPT integration cannot dispatch Actions, report the limitation rather than trying alternate branch writes. Keep the recurring ChatGPT task enabled after an isolated failure unless the user requests a pause. An already-paused ChatGPT task must be resumed in ChatGPT; changing these workflows does not enable it.
 
+Scheduled attempts reuse matching current-day cache files with valid inventories and successful required sources. This keeps a delayed second attempt from overwriting evidence during editorial research. Optional source failures still appear in the health report. Manual dispatch intentionally refreshes the cache.
+
 ## Repository metrics
 
 `collect-github-metrics.yml` runs after inventory collection or candidate promotion completes, and supports manual dispatch. It reads repository links from the published discovery catalog, uses the Actions token to collect stars/forks, saves `data/github-metrics.json`, and explicitly dispatches Pages (bot pushes alone do not trigger another push workflow).

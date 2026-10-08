@@ -1,6 +1,17 @@
 import fs from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
 
+export function hasUsableCache(cache, manifest, date) {
+  if(cache?.date!==date || cache?.crawler?.engine!=='playwright-chromium') return false;
+  const active=(manifest.active||[]).filter(e=>e.status!=='DEGRADED');
+  return active.length>0 && active.every(entry=>{
+    const source=cache.sources?.[entry.key];
+    return source && ['OK','FAILED'].includes(source.status) && Array.isArray(source.items) && Array.isArray(source.actionableItems)
+      && source.count===source.items.length && source.actionableCount===source.actionableItems.length
+      && (!entry.required || (source.status==='OK' && source.count>0));
+  });
+}
+
 export function assessHealth(cache, manifest, brief, now = new Date()) {
   const today = new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(now);
   const hour = Number(new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Seoul',hour:'2-digit',hourCycle:'h23'}).format(now));
