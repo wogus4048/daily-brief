@@ -70,24 +70,30 @@ Do not delete an opportunity just because today's search did not surface it. Re-
 
 ### Discovery browsing taxonomy: work category and asset form
 
-The user wants broad task-oriented categories, including design, shorts, video, images and writing. Keep the work category separate from asset form (MCP, plugin, prompt, site, etc.) and from popularity/recency signals. A video tool can be a site, a plugin or an MCP; a well-established asset can also be trending.
+The user wants broad, expandable task-oriented categories with parent/child navigation. Keep the work category separate from asset form (MCP, plugin, prompt, site, etc.) and from popularity/recency signals. A video tool can be a site, a plugin or an MCP; a well-established asset can also be trending.
 
 Use the following Korean task categories as an initial expandable vocabulary:
-- Creative: `디자인`, `이미지`, `영상`, `쇼츠`, `글쓰기`, `음악·오디오`, `음성·더빙`, `프레젠테이션`.
+- Creative: `디자인`, `이미지`, `영상`, `글쓰기`, `음악·오디오`, `음성·더빙`, `프레젠테이션`.
 - Publishing and communication: `마케팅·광고`, `SNS·콘텐츠 운영`, `번역·현지화`.
 - Building and productivity: `코딩·개발`, `업무 자동화`, `문서·PDF`, `데이터 분석`, `리서치·검색`, `학습·교육`, `생산성·일정 관리`.
-- Specialized creation: `3D·게임`, `웹사이트 제작`.
+- Specialized creation: `에셋`, `게임 제작`, `웹사이트 제작`.
+
+Confirmed parent/child structure:
+- `영상` is the parent category for short-form and other video work. `쇼츠` is a child of video, not a competing top-level category.
+- `에셋` is the parent category for reusable creative assets. `2D` and `3D` are its initial children. Examples include sprites, icons, illustrations and textures for 2D; models, materials, rigs and animations for 3D. Classify the actual reusable output or library, not just whether a marketing screenshot looks two- or three-dimensional.
+- A parent selection should cover both directly classified items and all descendants. Selecting a child narrows that parent. Assets supporting both 2D and 3D may have both child memberships. General image/video creation and asset creation may overlap when actual capabilities justify both.
+- During editorial collection, keep compatible parent labels in `categories[]` and record child proposals explicitly in the research candidate evidence, such as `categoryPaths: [["에셋", "2D"]]`. This is audit metadata, not a new required published-data field. Do not invent an unsupported published schema or UI behavior.
 
 Classification rules:
 - Classify by evidenced capabilities and user tasks, not words appearing in marketing copy. Multiple work categories are allowed; do not force a multi-purpose asset into one bucket.
 - `디자인` covers UI/UX, layout, branding, typography and visual communication. `이미지` covers image generation, editing, restoration and manipulation. Add both only when both capabilities are supported.
-- `영상` covers video generation, editing and post-production. Add `쇼츠` when there are concrete short-form features such as clip extraction, vertical reframing, short-form captioning or short-form production workflows; not every video tool belongs in shorts.
+- `영상` covers video generation, editing and post-production, including shorts. Propose the `영상 > 쇼츠` child when there are concrete short-form features such as clip extraction, vertical reframing, short-form captioning or short-form production workflows; not every video tool belongs in that child.
 - `글쓰기` covers drafting, rewriting, editing, scripts and long-form writing. A script-writing asset may also belong in shorts/video when that use is specifically supported. Distinguish audio/music creation from speech synthesis, dubbing and transcription.
 - Preserve existing technical tags such as MCP, Skill or Automation where applicable. Add the work-category labels to `categories[]` without changing the existing `discoveryType` enum or forcing a schema migration during editorial refresh.
-- Introduce additional categories when a distinct recurring task warrants them; reuse existing labels for synonyms. These groups are navigation aids, not a source whitelist or a requirement to fill every category daily.
+- On every refresh, assess newly discovered assets for missing categories. Add a category label when there is a distinct useful task/output that existing categories cannot describe; one clearly evidenced discovery can justify it, and an arbitrary minimum item count is not required. Prefer a child when the new concept belongs under an existing parent. Reuse canonical labels for synonyms and avoid adding product/vendor names or temporary trends as categories. Record proposed parent, name, definition, reason and example item IDs in the research evidence. Categories may grow as discoveries warrant them; do not force all discoveries into the initial vocabulary or fill categories merely for completeness.
 - For each discovery, explain the supported task, asset form/host environment, actual entry point, cost/access limits when known, and evidence for established/trending/newly discovered status. Do not infer popularity from category membership.
 
-This vocabulary guides collection immediately. Richer category filters and first-class plugin/prompt asset forms require a coordinated UI/schema change; scheduled editorial tasks must not change UI or invent enum values to implement them.
+This vocabulary and expansion policy guide collection immediately. Parent/child filters, automatic navigation from collected categories, and first-class plugin/prompt asset forms still require a coordinated UI/schema change; scheduled editorial tasks must not change UI or invent enum values to implement them.
 
 Discovery types:
 - `site`: standalone service/showcase/tool website
