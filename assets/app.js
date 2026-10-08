@@ -1127,7 +1127,7 @@ function renderCategoryList(type) {
     ).join("");
   } else {
     const kind = type === "support" ? "support" : "contest";
-    el.innerHTML = items.map(item => {
+    el.innerHTML = '<div class="opportunity-grid-inner">' + items.map(item => {
       const meta = opportunityListMeta(item, kind);
       const status = !isOpenItem(item) ? "종료" : (item.dDay || "접수중");
       const category = kind === "support" ? "창업 · 지원사업" : contestTopicLabel(item);
@@ -1149,7 +1149,7 @@ function renderCategoryList(type) {
           '</div>' +
         '</ion-card-content>' +
       '</ion-card>';
-    }).join("");
+    }).join("") + '</div>';
   }
 
   el.querySelectorAll(".category-card, .opportunity-card").forEach(row => {
