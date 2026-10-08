@@ -809,6 +809,9 @@ function renderCategory(type) {
   $("#categoryTitle").textContent = cfg.title;
   $("#categoryDescription").textContent = cfg.description;
 
+  const categoryList = $("#categoryList");
+  categoryList.classList.toggle("opportunity-grid", type === "contests" || type === "support");
+
   const sort = $("#categorySort");
   if (type === "ai-news") {
     sort.innerHTML = '<ion-select-option value="updated">최근 업데이트순</ion-select-option><ion-select-option value="discovered">최근 발견순</ion-select-option>';
@@ -1127,30 +1130,29 @@ function renderCategoryList(type) {
     el.innerHTML = items.map(item => {
       const meta = opportunityListMeta(item, kind);
       const status = !isOpenItem(item) ? "종료" : (item.dDay || "접수중");
-      return '<ion-item class="category-card opportunity-item tone-' + kind + ' ' + (!isOpenItem(item) ? "is-closed" : "") + '" button="true" detail="false" lines="inset" mode="ios" data-id="' + esc(item.id) + '">' +
-        '<div class="opportunity-row-content">' +
-          '<div class="opportunity-row-main">' +
-            '<div class="card-meta-row compact">' +
-              '<div class="card-status-group">' +
-                changeBadge(item, kind) +
-                '<span class="meta-label">' + esc(kind === "support" ? "창업 · 지원사업" : contestTopicLabel(item)) + '</span>' +
-              '</div>' +
-              dateMetaHtml(item, kind) +
-            '</div>' +
-            '<h3 class="category-item-title">' + esc(item.title) + '</h3>' +
-            '<p class="category-item-summary">' + esc(item.summary || "") + '</p>' +
-            (meta.length ? '<div class="opportunity-meta-line">' + meta.map(v => '<span>' + esc(v) + '</span>').join("") + '</div>' : '') +
+      const category = kind === "support" ? "창업 · 지원사업" : contestTopicLabel(item);
+
+      return '<ion-card class="opportunity-card ' + (!isOpenItem(item) ? "is-closed" : "") + '" button="true" mode="ios" data-id="' + esc(item.id) + '">' +
+        '<ion-card-header>' +
+          '<div class="opportunity-card-top">' +
+            '<ion-card-subtitle>' + esc(category) + '</ion-card-subtitle>' +
+            '<span class="opportunity-card-status ' + (isOpenItem(item) ? dangerClass(item) : "") + '">' + esc(status) + '</span>' +
           '</div>' +
-          '<div class="opportunity-row-trailing ' + (isOpenItem(item) ? dangerClass(item) : "") + '">' +
-            '<strong>' + esc(status) + '</strong>' +
-            '<span>' + esc(cut(item.deadlineText || "", 28)) + '</span>' +
+          '<ion-card-title>' + esc(item.title) + '</ion-card-title>' +
+        '</ion-card-header>' +
+        '<ion-card-content>' +
+          '<p class="opportunity-card-summary">' + esc(item.summary || "") + '</p>' +
+          (meta.length ? '<div class="opportunity-card-meta">' + meta.map(v => '<span>' + esc(v) + '</span>').join("") + '</div>' : '') +
+          '<div class="opportunity-card-footer">' +
+            '<span>' + esc(shortDate(item.firstSeenDate)) + '</span>' +
+            '<ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>' +
           '</div>' +
-        '</div>' +
-      '</ion-item>';
+        '</ion-card-content>' +
+      '</ion-card>';
     }).join("");
   }
 
-  el.querySelectorAll(".category-card").forEach(row => {
+  el.querySelectorAll(".category-card, .opportunity-card").forEach(row => {
     row.addEventListener("click", () => {
       const item = state.all.find(x => x.id === row.dataset.id);
       if (!item) return;
