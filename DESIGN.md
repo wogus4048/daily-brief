@@ -40,9 +40,15 @@ It should not feel like:
 
 ## 2. Platform model
 
-### Wide desktop / tablet landscape
+### Wide desktop
 
-Use an iPadOS-style split view:
+Desktop is the primary presentation target for the public site.
+
+- maximum workspace width: 1760px
+- use the available horizontal space for browseable content instead of keeping a mobile-webview-like narrow center
+- at large widths, contests and support programs use a three-column card grid
+
+Use a split-view structure:
 
 1. navigation/toolbar material at the top
 2. leading sidebar for navigation and scope
@@ -53,7 +59,7 @@ The sidebar and inspector belong to the control/navigation layer and may use tra
 
 ### Medium widths
 
-Use two panes:
+Use two panes and reduce card columns only when the viewport actually requires it:
 
 1. sidebar
 2. primary content
@@ -62,7 +68,9 @@ Hide the trailing inspector before compressing the main content too far.
 
 ### Compact / phone widths
 
-Use an iOS-style single content pane:
+Phone support is a responsive fallback, not the layout baseline.
+
+Use a single content pane:
 
 - hide sidebars
 - show a persistent bottom tab bar for top-level navigation
@@ -222,9 +230,16 @@ Selected filter:
 
 Do not use yellow, green, purple, or blue category backgrounds.
 
-## 9. Lists and tables
+## 9. Lists and cards
 
-Information-heavy routes should use Ionic `ion-list` + `ion-item` grouped lists rather than cards for every row.
+Use the component that matches the browsing task.
+
+- AI/news/discovery timelines: Ionic `ion-list` + `ion-item`
+- contests/support opportunities: Ionic `ion-card` in a three-column desktop grid
+- cards should be ordinary contained cards, not full-width horizontal card-news strips
+- desktop card grid: 3 columns
+- tablet card grid: 2 columns
+- compact card grid: 1 column
 
 A list surface:
 
