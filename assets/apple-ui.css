@@ -1436,17 +1436,16 @@ body.apple-shell ion-item.opportunity-item .category-action{
 
 /* Desktop opportunity cards: contests/support are browseable card collections. */
 body.apple-shell ion-list.category-list.opportunity-grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:16px;
   padding:0;
   background:transparent!important;
   border-radius:0!important;
   overflow:visible;
   box-shadow:none;
 }
-body.apple-shell ion-list.category-list.opportunity-grid::part(container){
-  display:contents;
+body.apple-shell .opportunity-grid-inner{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
 }
 body.apple-shell ion-card.opportunity-card{
   min-width:0;
@@ -1566,13 +1565,13 @@ body.apple-shell .opportunity-card-footer ion-icon{
 }
 
 @media(max-width:1100px){
-  body.apple-shell ion-list.category-list.opportunity-grid{
+  body.apple-shell .opportunity-grid-inner{
     grid-template-columns:repeat(2,minmax(0,1fr));
   }
 }
 
 @media(max-width:700px){
-  body.apple-shell ion-list.category-list.opportunity-grid{
+  body.apple-shell .opportunity-grid-inner{
     grid-template-columns:1fr;
     gap:12px;
   }
