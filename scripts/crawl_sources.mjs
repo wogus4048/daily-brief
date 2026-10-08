@@ -357,8 +357,12 @@ async function crawlGrantly(page) {
 
 async function crawlDevpost(page) {
   const url = "https://devpost.com/hackathons?status=open";
-  await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
+  const response = await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
+  if (response && !response.ok()) throw new Error(`Devpost HTTP ${response.status()}: source unavailable or access blocked`);
   await page.waitForTimeout(1200);
+  if (/verify you are human|performing security verification|보안 확인 수행|just a moment/i.test(await page.locator('body').innerText())) {
+    throw new Error('Devpost access blocked by security verification');
+  }
   const selector = 'a[href*="devpost.com"]';
   await scrollListing(page, selector, 25);
   const items = (await collectAnchors(page, selector, "Devpost"))
@@ -500,13 +504,6 @@ async function main() {
     const sourceEntries = await Promise.all(activeEntries.map(entry => runEntry(entry, false)));
     const sources = Object.fromEntries(sourceEntries);
 
-    for (const entry of activeEntries.filter(entry => entry.required)) {
-      const source = sources[entry.key];
-      if (!source || source.status !== "OK") {
-        throw new Error(`mandatory crawler failed: ${entry.key}: ${source?.error || "missing"}`);
-      }
-    }
-
     const shadowEntries = [
       ...(manifest.nextCandidates || []).filter(entry => entry.status === "SHADOW" && entry.crawlerSpec),
       ...(manifest.degraded || []).filter(entry => builtIns.has(entry.key) || entry.crawlerSpec),
@@ -535,12 +532,19 @@ async function main() {
     await fs.writeFile(path.join(OUTPUT_DIR, `${date}.json`), json, "utf8");
     await fs.writeFile(path.join(OUTPUT_DIR, "latest.json"), json, "utf8");
 
-    console.log("OK: source cache", date);
+    console.log("Saved source cache", date);
     for (const [key, value] of Object.entries(sources)) {
       console.log(`active ${key}: ${value.status} ${value.count || 0}/${value.actionableCount || 0} actionable`);
     }
     for (const [key, value] of Object.entries(shadowSources)) {
       console.log(`shadow ${key}: ${value.status} ${value.count || 0}/${value.actionableCount || 0} actionable`);
+    }
+    // Persist diagnostics before failing so Actions can retain evidence of required-source failures.
+    for (const entry of activeEntries.filter(entry => entry.required)) {
+      const source = sources[entry.key];
+      if (!source || source.status !== "OK" || !source.count) {
+        throw new Error(`mandatory crawler failed: ${entry.key}: ${source?.error || "empty or missing"}`);
+      }
     }
   } finally {
     await browser.close();

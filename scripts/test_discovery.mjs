@@ -4,7 +4,10 @@ import {serve,launchOptions,ready} from './ui_helpers.mjs';
 const host=await serve(),browser=await chromium.launch(launchOptions),page=await browser.newPage();
 let requests=0;
 try {
- await page.route('https://api.github.com/repos/**',r=>{requests++;return r.fulfill({json:{stargazers_count:1234,forks_count:0}});});
+ let directRequests=0;
+ await page.route('https://api.github.com/repos/**',r=>{directRequests++;return r.abort();});
+ const repositories=Object.fromEntries(['obra/superpowers','Autumn-27/ARTEX','evergreentree97/K-Humanizer','binibinibin123/geullint'].map(repo=>[repo,{stars:1234,forks:0,status:'OK',fetchedAt:new Date().toISOString()}]));
+ await page.route('**/data/github-metrics.json',r=>{requests++;return r.fulfill({json:{repositories}});});
  await page.goto(host.base+'/#/ai-discovery');await ready(page);
  const mosaic=page.locator('[data-id="mosaic-lab-agent-directory"]');
  assert.ok((await mosaic.locator('.catalog-type').innerText()).includes('도구 모음'));
@@ -15,16 +18,20 @@ try {
  assert.equal(await page.locator('.catalog-card').count(),4,'GitHub includes a Skill hosted in a repository');
  await page.locator('[data-axis="type"][data-filter="agents"]').click();
  assert.equal(await page.locator('.catalog-card').count(),2,'Source intersects independently with purpose');
- assert.equal(requests,4,'Filter changes reuse in-flight/cached metrics');
+ assert.equal(requests,1,'All cards and filters share one collected snapshot');
+ assert.equal(directRequests,0,'Visitors never call the GitHub API');
  await page.locator('#resetDiscoveryFilters').click();
  assert.equal(await page.locator('.catalog-card').count(),8);
  await page.goto(host.base+'/?date=2026-10-07#/ai-discovery');await ready(page);
  assert.equal(await page.locator('.github-metrics').count(),0,'Historical briefing does not show current repository counts');
- await page.unroute('https://api.github.com/repos/**');
- await page.route('https://api.github.com/repos/**',r=>r.fulfill({status:403,json:{message:'rate limited'}}));
- await page.evaluate(()=>sessionStorage.clear());
+ repositories['obra/superpowers'].status='STALE';
+ await page.goto(host.base+'/?test=stale#/ai-discovery');await ready(page);
+ await page.waitForFunction(()=>document.querySelector('[data-id="superpowers-obra"] .github-metrics')?.textContent.includes('갱신 지연'));
+ assert.ok((await page.locator('[data-id="superpowers-obra"] .github-metrics').innerText()).includes('1,234'));
+ await page.unroute('**/data/github-metrics.json');
+ await page.route('**/data/github-metrics.json',r=>r.fulfill({status:503,json:{}}));
  await page.goto(host.base+'/#/ai-discovery');await ready(page);
- await page.waitForFunction(()=>document.querySelector('.github-metrics')?.textContent.includes('조회 불가'));
+ await page.waitForFunction(()=>document.querySelector('.github-metrics')?.textContent.includes('확인 불가'));
  assert.ok(!(await page.locator('.github-metrics').first().innerText()).includes('별 0'),'Failure is not rendered as zero');
  console.log('PASS: purpose/source classification, GitHub counts, zero, cache, archive and failure states');
 }finally{await browser.close();await host.close();}

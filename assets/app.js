@@ -1228,27 +1228,16 @@ function discoveryPurposeLabel(item) {
   return {workflows:'제작 사례', collections:'도구 모음', agents:'Skill · MCP · Agent', sites:'AI 도구'}[discoveryPrimaryGroup(item)];
 }
 
-const githubMetricRequests = new Map();
-function fetchGithubMetrics(repo) {
-  if (githubMetricRequests.has(repo)) return githubMetricRequests.get(repo);
-  const request = (async () => {
-    const key = 'daily-brief:github:' + repo;
-    try {
-      const cached = JSON.parse(sessionStorage.getItem(key) || 'null');
-      if (cached && Number.isInteger(cached.stars) && cached.stars >= 0 && Number.isInteger(cached.forks) && cached.forks >= 0 && Date.now()-cached.fetchedAt >= 0 && Date.now()-cached.fetchedAt < 900000) return cached;
-    } catch (_) {}
-    const response = await fetch('https://api.github.com/repos/' + repo, {headers:{Accept:'application/vnd.github+json'}, signal:AbortSignal.timeout(8000)});
-    if (!response.ok) throw new Error('GitHub unavailable');
-    const data = await response.json();
-    if (![data.stargazers_count,data.forks_count].every(n=>Number.isInteger(n) && n>=0)) throw new Error('Invalid metrics');
-    const result = {stars:data.stargazers_count,forks:data.forks_count,fetchedAt:Date.now()};
-    try {sessionStorage.setItem(key,JSON.stringify(result));} catch (_) {}
-    return result;
-  })();
-  githubMetricRequests.set(repo, request);
-  // Bound in-memory caching too, including failed requests.
-  setTimeout(()=>githubMetricRequests.delete(repo),900000);
-  return request;
+let githubMetricsSnapshot;
+async function fetchGithubMetrics(repo) {
+  if (!githubMetricsSnapshot) {
+    githubMetricsSnapshot = fetch('data/github-metrics.json', {cache:'no-cache',signal:AbortSignal.timeout(8000)})
+      .then(response=>{if(!response.ok) throw new Error('Metrics unavailable');return response.json();});
+    setTimeout(()=>{githubMetricsSnapshot=undefined;},300000);
+  }
+  const counts = (await githubMetricsSnapshot).repositories?.[repo];
+  if (!counts || !['OK','STALE'].includes(counts.status) || ![counts.stars,counts.forks].every(n=>Number.isSafeInteger(n)&&n>=0) || !Number.isFinite(Date.parse(counts.fetchedAt))) throw new Error('Metrics unavailable');
+  return counts;
 }
 
 function hydrateGithubMetrics(root) {
@@ -1257,9 +1246,10 @@ function hydrateGithubMetrics(root) {
       const counts = await fetchGithubMetrics(node.dataset.githubRepo);
       if (!node.isConnected) return;
       const date = new Date(counts.fetchedAt).toLocaleString('ko-KR',{timeZone:'Asia/Seoul'});
-      node.innerHTML = '<span>☆ 별 '+counts.stars.toLocaleString('ko-KR')+'</span><span>⑂ 포크 '+counts.forks.toLocaleString('ko-KR')+'</span><small>현재 수치 · '+esc(date)+' 조회</small>';
+      const stale = counts.status==='STALE' || Date.now()-Date.parse(counts.fetchedAt)>36*60*60*1000;
+      node.innerHTML = '<span>☆ 별 '+counts.stars.toLocaleString('ko-KR')+'</span><span>⑂ 포크 '+counts.forks.toLocaleString('ko-KR')+'</span><small>'+ (stale?'갱신 지연 · ':'') +esc(date)+' 수집</small>';
     } catch (_) {
-      if (node.isConnected) node.textContent = 'GitHub 수치 조회 불가';
+      if (node.isConnected) node.textContent = 'GitHub 수치 확인 불가';
     }
   });
 }

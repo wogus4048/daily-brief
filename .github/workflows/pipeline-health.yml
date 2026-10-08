@@ -1,0 +1,28 @@
+name: Check daily publication health
+
+on:
+  schedule:
+    # 10:37 Seoul: allow the 09:00 editorial task time to finish.
+    - cron: '37 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/test_pipeline.mjs
+      - run: node scripts/pipeline_health.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pipeline-health
+          path: artifacts/pipeline-health.json

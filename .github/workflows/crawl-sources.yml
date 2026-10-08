@@ -45,6 +45,14 @@ jobs:
       - name: Crawl source inventories
         run: npm run crawl:sources
 
+      - name: Preserve crawler diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-cache-${{ github.run_id }}
+          path: data/source-cache/latest.json
+          retention-days: 14
+
       - name: Validate source cache
         shell: bash
         run: |
@@ -116,3 +124,9 @@ jobs:
           git commit -m "Refresh source cache for $date"
           git pull --rebase origin main
           git push origin HEAD:main
+
+      # Run after committing usable partial results. Optional failures remain visible
+      # as a failed run without preventing other sources from being published.
+      - name: Report individual source health
+        if: always()
+        run: node scripts/pipeline_health.mjs --sources-only
