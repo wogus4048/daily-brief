@@ -1039,19 +1039,6 @@ function matchesFilter(item, type, filter) {
   return true;
 }
 
-function opportunityListMeta(item, kind) {
-  const parts = [];
-  const deadline = item.deadlineText || item.dDay;
-  const benefit = item.reward || item.aiSupport;
-  const participation = item.participation;
-
-  if (deadline) parts.push("마감 " + txt(deadline, ""));
-  if (benefit) parts.push((kind === "support" ? "지원 " : "보상 ") + cut(benefit, 64));
-  if (participation) parts.push(cut(participation, 64));
-
-  return parts.filter(Boolean).slice(0, 3);
-}
-
 function renderCategoryList(type) {
   const source = sourceFor(type);
   let items = source.filter(item => matchesFilter(item, type, state.categoryFilter));
@@ -1127,32 +1114,38 @@ function renderCategoryList(type) {
     ).join("");
   } else {
     const kind = type === "support" ? "support" : "contest";
+    const iconName = kind === "support" ? "briefcase-outline" : "trophy-outline";
+
     el.innerHTML = '<div class="opportunity-grid-inner">' + items.map(item => {
-      const meta = opportunityListMeta(item, kind);
       const status = !isOpenItem(item) ? "종료" : (item.dDay || "접수중");
       const category = kind === "support" ? "창업 · 지원사업" : contestTopicLabel(item);
+      const tags = (item.tags || []).slice(0, 3);
+      const deadline = item.deadlineText || item.dDay || "일정 확인";
 
-      return '<ion-card class="opportunity-card ' + (!isOpenItem(item) ? "is-closed" : "") + '" button="true" mode="ios" data-id="' + esc(item.id) + '">' +
+      return '<ion-card class="opportunity-card-v2 ' + (!isOpenItem(item) ? "is-closed" : "") + '" button="true" mode="ios" data-id="' + esc(item.id) + '">' +
         '<ion-card-header>' +
-          '<div class="opportunity-card-top">' +
-            '<ion-card-subtitle>' + esc(category) + '</ion-card-subtitle>' +
-            '<span class="opportunity-card-status ' + (isOpenItem(item) ? dangerClass(item) : "") + '">' + esc(status) + '</span>' +
+          '<div class="opportunity-card-v2-top">' +
+            '<div class="opportunity-card-v2-kind">' +
+              '<span class="opportunity-card-v2-icon"><ion-icon name="' + iconName + '" aria-hidden="true"></ion-icon></span>' +
+              '<ion-card-subtitle>' + esc(category) + '</ion-card-subtitle>' +
+            '</div>' +
+            '<span class="opportunity-card-v2-status ' + (isOpenItem(item) ? dangerClass(item) : "") + '">' + esc(status) + '</span>' +
           '</div>' +
           '<ion-card-title>' + esc(item.title) + '</ion-card-title>' +
         '</ion-card-header>' +
         '<ion-card-content>' +
-          '<p class="opportunity-card-summary">' + esc(item.summary || "") + '</p>' +
-          (meta.length ? '<div class="opportunity-card-meta">' + meta.map(v => '<span>' + esc(v) + '</span>').join("") + '</div>' : '') +
-          '<div class="opportunity-card-footer">' +
-            '<span>' + esc(shortDate(item.firstSeenDate)) + '</span>' +
-            '<ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>' +
+          '<p class="opportunity-card-v2-summary">' + esc(item.summary || item.description || "") + '</p>' +
+          (tags.length ? '<div class="opportunity-card-v2-tags">' + tags.map(t => '<span>' + esc(t) + '</span>').join("") + '</div>' : '') +
+          '<div class="opportunity-card-v2-footer">' +
+            '<span class="opportunity-card-v2-deadline"><ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>' + esc(deadline) + '</span>' +
+            '<ion-icon class="opportunity-card-v2-chevron" name="chevron-forward-outline" aria-hidden="true"></ion-icon>' +
           '</div>' +
         '</ion-card-content>' +
       '</ion-card>';
     }).join("") + '</div>';
   }
 
-  el.querySelectorAll(".category-card, .opportunity-card").forEach(row => {
+  el.querySelectorAll(".category-card, .opportunity-card-v2").forEach(row => {
     row.addEventListener("click", () => {
       const item = state.all.find(x => x.id === row.dataset.id);
       if (!item) return;
