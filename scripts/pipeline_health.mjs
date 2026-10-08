@@ -4,10 +4,13 @@ import { pathToFileURL } from 'node:url';
 export function hasUsableCache(cache, manifest, date) {
   if(cache?.date!==date || cache?.crawler?.engine!=='playwright-chromium') return false;
   const active=(manifest.active||[]).filter(e=>e.status!=='DEGRADED');
-  return active.length>0 && active.every(entry=>{
+  const validResult=source=>source && ['OK','FAILED'].includes(source.status) && Array.isArray(source.items) && Array.isArray(source.actionableItems)
+    && source.count===source.items.length && source.actionableCount===source.actionableItems.length
+    && (source.status!=='OK'||source.count>0);
+  const shadow=(manifest.nextCandidates||[]).filter(e=>e.status==='SHADOW'&&e.crawlerSpec);
+  return shadow.every(e=>validResult(cache.shadowSources?.[e.key])) && active.length>0 && active.every(entry=>{
     const source=cache.sources?.[entry.key];
-    return source && ['OK','FAILED'].includes(source.status) && Array.isArray(source.items) && Array.isArray(source.actionableItems)
-      && source.count===source.items.length && source.actionableCount===source.actionableItems.length
+    return validResult(source)
       && (!entry.required || (source.status==='OK' && source.count>0));
   });
 }

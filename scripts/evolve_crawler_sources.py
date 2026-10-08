@@ -30,6 +30,13 @@ else:
 assert audit.get("date") == date, "research audit date mismatch"
 assert cache.get("date") == date, "source cache date mismatch"
 
+# Promotion requires evidence across daily research snapshots, not repeated
+# workflow dispatches of the same snapshot. Never count a retry as a new day.
+if state.get("lastDate") == date:
+    print("OK: source evolution already evaluated for", date)
+    sys.exit(0)
+assert not state.get("lastDate") or state["lastDate"] < date, "cannot evolve from an older research snapshot"
+
 policy = manifest.get("policy", {})
 promote_policy = policy.get("autoPromote", {})
 degrade_policy = policy.get("autoDegrade", {})
@@ -340,6 +347,8 @@ for entry in candidates:
             "required": False,
             "managed": True,
             "crawlerSpec": entry["crawlerSpec"],
+            "category": entry.get("category", "unclassified"),
+            "sourceTracks": entry.get("sourceTracks", []),
             "promotedAt": date,
             "promotionEvidence": {
                 "discoverySightings": m["discoverySightings"],

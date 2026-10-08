@@ -413,6 +413,92 @@
       "score": 0,
       "recommendation": "NEEDS_CRAWLER_SPEC",
       "category": "startupSupport"
+    },
+    {
+      "key": "hackerNewsTop",
+      "name": "Hacker News top stories",
+      "url": "https://news.ycombinator.com/",
+      "category": "aiNews",
+      "sourceTracks": [
+        "aiNews"
+      ],
+      "reason": "Official public API; preserves discussion URL, original URL, score, comments, publication time and observed rank.",
+      "status": "SHADOW",
+      "discoveredAt": "2026-10-08",
+      "crawlerSpec": {
+        "adapter": "hackerNewsTop",
+        "url": "https://news.ycombinator.com/",
+        "limit": 30
+      },
+      "recommendation": "CONTINUE_SHADOW"
+    },
+    {
+      "key": "githubTrending",
+      "name": "GitHub daily trending",
+      "url": "https://github.com/trending?since=daily",
+      "category": "aiDiscovery",
+      "sourceTracks": [
+        "aiDiscovery",
+        "aiNews"
+      ],
+      "reason": "Public daily trending list; repository links, description, observed rank and visible stars/forks. AI relevance requires editorial review.",
+      "status": "SHADOW",
+      "discoveredAt": "2026-10-08",
+      "crawlerSpec": {
+        "adapter": "githubTrending",
+        "url": "https://github.com/trending?since=daily",
+        "limit": 30
+      },
+      "recommendation": "CONTINUE_SHADOW"
+    },
+    {
+      "key": "huggingFaceModels",
+      "name": "Hugging Face trending models",
+      "url": "https://huggingface.co/models?sort=trending",
+      "category": "aiDiscovery",
+      "sourceTracks": [
+        "aiDiscovery",
+        "aiNews"
+      ],
+      "reason": "Public trending model inventory; original repository links and observed placement. No popularity growth inferred from one sample.",
+      "status": "SHADOW",
+      "discoveredAt": "2026-10-08",
+      "crawlerSpec": {
+        "adapter": "huggingFaceModels",
+        "url": "https://huggingface.co/models?sort=trending",
+        "limit": 30
+      },
+      "recommendation": "CONTINUE_SHADOW"
+    },
+    {
+      "key": "huggingFaceSpaces",
+      "name": "Hugging Face trending Spaces",
+      "url": "https://huggingface.co/spaces?sort=trending",
+      "category": "aiDiscovery",
+      "sourceTracks": [
+        "aiDiscovery"
+      ],
+      "reason": "Public trending demo/app inventory across creative and productivity tasks; each app needs usefulness/access verification.",
+      "status": "SHADOW",
+      "discoveredAt": "2026-10-08",
+      "crawlerSpec": {
+        "adapter": "huggingFaceSpaces",
+        "url": "https://huggingface.co/spaces?sort=trending",
+        "limit": 30
+      },
+      "recommendation": "CONTINUE_SHADOW"
+    },
+    {
+      "key": "geekNewsCommunity",
+      "name": "GeekNews",
+      "url": "https://news.hada.io/",
+      "category": "aiNews",
+      "sourceTracks": [
+        "aiNews"
+      ],
+      "status": "WATCH_ONLY",
+      "reason": "Browser collection returned HTTP 403 on 2026-10-08. Use accessible editorial discovery; do not bypass access controls.",
+      "recommendation": "WATCH_ONLY"
     }
   ],
   "lastEvolvedDate": "2026-10-07",

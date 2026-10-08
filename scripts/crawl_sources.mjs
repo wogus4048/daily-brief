@@ -2,6 +2,7 @@ import { chromium } from "playwright";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { hasUsableCache } from "./pipeline_health.mjs";
+import { crawlDiscoverySource } from "./discovery_sources.mjs";
 
 const SEOUL_TZ = "Asia/Seoul";
 const OUTPUT_DIR = path.resolve("data/source-cache");
@@ -418,12 +419,14 @@ async function crawlKStartup(page) {
 }
 
 async function crawlGeneric(page, key, name, spec) {
+  if (spec.adapter) return crawlDiscoverySource(page, key, name, spec);
   const url = spec.url;
   if (!url || !spec.linkSelector) {
     throw new Error(`generic crawler ${key} missing url/linkSelector`);
   }
 
-  await page.goto(url, { waitUntil: "domcontentloaded", timeout: spec.timeoutMs || 60000 });
+  const response = await page.goto(url, { waitUntil: "domcontentloaded", timeout: spec.timeoutMs || 60000 });
+  if (response && !response.ok()) throw new Error(`${key} HTTP ${response.status()}: source unavailable or access blocked`);
   await page.waitForTimeout(spec.waitMs || 1200);
 
   if (spec.expand !== false) {

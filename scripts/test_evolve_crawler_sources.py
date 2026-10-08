@@ -70,6 +70,8 @@ with tempfile.TemporaryDirectory() as td:
             {
                 "key": "promoteSource",
                 "name": "Promote",
+                "category": "aiDiscovery",
+                "sourceTracks": ["aiDiscovery"],
                 "url": "https://promote.example/list",
                 "status": "SHADOW",
                 "crawlerSpec": {
@@ -225,6 +227,8 @@ with tempfile.TemporaryDirectory() as td:
     assert "unstableSource" not in active, "unstable non-required source should auto-degrade"
     assert "unstableSource" in degraded, "unstable source missing from degraded bucket"
     assert "promoteSource" in active, "stable/high-yield shadow candidate should auto-promote"
+    assert active["promoteSource"].get("category") == "aiDiscovery", "promotion must preserve source category"
+    assert active["promoteSource"].get("sourceTracks") == ["aiDiscovery"], "promotion must preserve editorial tracks"
     assert "promoteSource" not in candidates, "promoted candidate should leave candidate bucket"
     assert "recoverSource" in active, "degraded source should auto-recover after shadow stability"
     assert "recoverSource" not in degraded, "recovered source should leave degraded bucket"
@@ -233,5 +237,11 @@ with tempfile.TemporaryDirectory() as td:
         "startup support discovery must retain its category"
     )
     assert candidates["startup-source-example"].get("sourceTracks") == ["startupSupport"]
+
+    before_manifest = manifest_path.read_bytes()
+    before_state = state_path.read_bytes()
+    subprocess.run([sys.executable, str(SCRIPT), str(audit_path), str(cache_path)], check=True, env=env)
+    assert manifest_path.read_bytes() == before_manifest, "same-day retries must not manufacture source promotion evidence"
+    assert state_path.read_bytes() == before_state, "same-day retries must not inflate stability/yield counters"
 
     print("OK: crawler source lifecycle promotion/degradation/recovery/category tracking")

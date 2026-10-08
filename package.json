@@ -7,7 +7,7 @@
     "test:ui": "node scripts/test_ui.mjs",
     "capture:ui": "node scripts/capture_ui.mjs",
     "test:ux": "node scripts/test_ux.mjs",
-    "test": "node scripts/test_pipeline.mjs && node scripts/test_ui.mjs && node scripts/test_ux.mjs && node scripts/test_discovery.mjs"
+    "test": "node scripts/test_pipeline.mjs && node scripts/test_discovery_sources.mjs && node scripts/test_ui.mjs && node scripts/test_ux.mjs && node scripts/test_discovery.mjs"
   },
   "devDependencies": {
     "playwright": "^1.56.0"

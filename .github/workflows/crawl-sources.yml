@@ -39,6 +39,9 @@ jobs:
       - name: Test crawler source lifecycle engine
         run: python scripts/test_evolve_crawler_sources.py
 
+      - name: Test discovery source extraction
+        run: node scripts/test_discovery_sources.mjs
+
       - name: Crawl source inventories
         run: npm run crawl:sources
 
