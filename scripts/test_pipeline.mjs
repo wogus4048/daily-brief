@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { collectMetrics, repositories } from './collect_github_metrics.mjs';
+import { actionableMetricFailures, collectMetrics, repositories } from './collect_github_metrics.mjs';
 import { assessHealth, hasUsableCache } from './pipeline_health.mjs';
 
 const brief = {aiDiscovery:[{links:[{url:'https://github.com/owner/project.git'},{url:'https://github.com/owner/project/issues'}]},{links:[{url:'https://github.com/owner/project'}]}]};
@@ -16,6 +16,49 @@ assert.equal(missing.repositories['owner/project'].status,'FAILED');
 assert.equal(missing.repositories['owner/project'].stars,undefined);
 const invalid = await collectMetrics(brief, {}, async()=>({ok:true,json:async()=>({stargazers_count:-1,forks_count:0})}),now);
 assert.equal(invalid.repositories['owner/project'].status,'FAILED');
+
+// First 404 signals a new problem and keeps the previous good sample.
+const first404 = await collectMetrics(brief, good, async()=>({ok:false,status:404}), new Date('2026-10-09T03:00:00Z'));
+assert.equal(first404.repositories['owner/project'].status,'STALE');
+assert.equal(first404.repositories['owner/project'].stars,1234);
+assert.equal(first404.repositories['owner/project'].forks,0);
+assert.equal(first404.repositories['owner/project'].fetchedAt,now.toISOString());
+assert.deepEqual(actionableMetricFailures(first404,good).map(([repo])=>repo),['owner/project']);
+
+// Other repositories still alert even when their 404 repeats.
+const repeated404 = await collectMetrics(brief, first404, async()=>({ok:false,status:404}), new Date('2026-10-10T03:00:00Z'));
+assert.equal(repeated404.repositories['owner/project'].status,'STALE');
+assert.equal(repeated404.repositories['owner/project'].stars,1234);
+assert.equal(repeated404.repositories['owner/project'].fetchedAt,now.toISOString());
+assert.deepEqual(actionableMetricFailures(repeated404,first404).map(([repo])=>repo),['owner/project']);
+
+// ARTEX alone is the explicitly acknowledged repeated-404 exception.
+const artexPrior = {repositories:{'Autumn-27/ARTEX':first404.repositories['owner/project']}};
+const artexRepeat = {repositories:{'Autumn-27/ARTEX':repeated404.repositories['owner/project']}};
+assert.deepEqual(actionableMetricFailures(artexRepeat,artexPrior),[]);
+
+// Missing original metrics are never made up; unrelated repositories always alert.
+const unknown404 = await collectMetrics(brief, {}, async()=>({ok:false,status:404}),now);
+assert.deepEqual(actionableMetricFailures(unknown404,{}).map(([repo])=>repo),['owner/project']);
+const repeatedUnknown404 = await collectMetrics(brief, unknown404, async()=>({ok:false,status:404}),new Date('2026-10-10T03:00:00Z'));
+assert.equal(repeatedUnknown404.repositories['owner/project'].status,'FAILED');
+assert.deepEqual(actionableMetricFailures(repeatedUnknown404,unknown404).map(([repo])=>repo),['owner/project']);
+
+// A different error and non-404 failures must still alert.
+const newly403 = await collectMetrics(brief, repeated404, async()=>({ok:false,status:403}),new Date('2026-10-11T03:00:00Z'));
+assert.deepEqual(actionableMetricFailures(newly403,repeated404).map(([repo])=>repo),['owner/project']);
+assert.deepEqual(actionableMetricFailures(failed,good).map(([repo])=>repo),['owner/project']);
+
+// Recovery resets 404 acknowledgement. Its next 404 is actionable again.
+const recovered = await collectMetrics(brief,repeated404,async()=>({ok:true,json:async()=>({stargazers_count:1240,forks_count:1})}),new Date('2026-10-11T04:00:00Z'));
+assert.equal(recovered.repositories['owner/project'].status,'OK');
+const afterRecovery404 = await collectMetrics(brief,recovered,async()=>({ok:false,status:404}),new Date('2026-10-11T05:00:00Z'));
+assert.deepEqual(actionableMetricFailures(afterRecovery404,recovered).map(([repo])=>repo),['owner/project']);
+
+// One known 404 does not suppress a new failure from another repository.
+const mixedNow = {repositories:{...artexRepeat.repositories,'new/problem':newly403.repositories['owner/project']}};
+const mixedBefore = artexPrior;
+assert.deepEqual(actionableMetricFailures(mixedNow,mixedBefore).map(([repo])=>repo),['new/problem']);
 const manifest = {active:[{key:'required',required:true},{key:'optional'}]};
 const cache = {date:'2026-10-08',sources:{required:{status:'OK',count:3},optional:{status:'FAILED',count:0,error:'HTTP 403'}}};
 const usable={...cache,crawler:{engine:'playwright-chromium'},sources:{optional:{status:'FAILED',count:0,items:[],actionableCount:0,actionableItems:[]},required:{status:'OK',count:1,items:[{url:'https://example.com'}],actionableCount:0,actionableItems:[]}}};
