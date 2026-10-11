@@ -3,8 +3,10 @@ import json
 import pathlib
 import sys
 import re
-from datetime import date as date_cls, datetime, timedelta
-from urllib.parse import urlsplit, urlunsplit
+from datetime import datetime
+from urllib.parse import urlsplit
+from zoneinfo import ZoneInfo
+from research_rules import is_reverification_due, normalize_url
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
@@ -29,66 +31,14 @@ assert audit.get("completedAt"), "research audit missing completedAt"
 assert isinstance(audit.get("sourceDiscoveries"), list), "research audit sourceDiscoveries must be a list"
 assert source_cache.get("date") == snapshot_date, "source cache date must match snapshot date"
 assert source_cache.get("crawler", {}).get("engine") == "playwright-chromium", "source cache must come from Playwright crawler"
-
-
-def normalize_url(value):
-    parsed = urlsplit(value)
-    path = parsed.path[:-1] if len(parsed.path) > 1 and parsed.path.endswith("/") else parsed.path
-    return urlunsplit((parsed.scheme, parsed.netloc, path, "", ""))
-
-
-def _parse_iso_date(value):
-    if not value:
-        return None
-    try:
-        return datetime.fromisoformat(str(value).replace("Z", "+00:00")).date()
-    except ValueError:
-        try:
-            return date_cls.fromisoformat(str(value)[:10])
-        except ValueError:
-            return None
-
-
-def _nearest_deadline_date(item, today):
-    candidates = []
-    for field in ("deadlineText", "period"):
-        text = str(item.get(field) or "")
-        for y, m, d in re.findall(r"(?:(20\d{2})[.\-/])?(\d{1,2})[.\-/](\d{1,2})", text):
-            year = int(y) if y else today.year
-            try:
-                dt = date_cls(year, int(m), int(d))
-            except ValueError:
-                continue
-            if dt < today and not y:
-                try:
-                    dt = date_cls(today.year + 1, int(m), int(d))
-                except ValueError:
-                    continue
-            if dt >= today:
-                candidates.append(dt)
-    return min(candidates) if candidates else None
-
-
-def _reverify_due(item, snapshot_date):
-    today = date_cls.fromisoformat(snapshot_date)
-    last = _parse_iso_date(item.get("lastVerifiedDate"))
-    if last is None:
-        return True
-
-    if item.get("status") == "UPCOMING":
-        opening = _parse_iso_date(item.get("openingAt"))
-        interval_days = 1 if opening and opening <= today + timedelta(days=1) else 2
-    else:
-        deadline = _nearest_deadline_date(item, today)
-        days_left = (deadline - today).days if deadline else None
-        if days_left is not None and days_left <= 3:
-            interval_days = 1
-        elif days_left is not None and days_left <= 14:
-            interval_days = 2
-        else:
-            interval_days = 7
-
-    return (today - last).days >= interval_days
+manifest = json.loads((ROOT / "data/crawler-sources.json").read_text(encoding="utf-8"))
+for source_entry in manifest.get("active", []):
+    key = source_entry["key"]
+    result = source_cache.get("sources", {}).get(key)
+    assert isinstance(result, dict), f"source cache missing active source {key}"
+    if source_entry.get("required"):
+        assert result.get("status") == "OK" and result.get("items"), f"required crawler not healthy: {key}"
+        assert isinstance(result.get("actionableItems"), list), f"required crawler inventory missing: {key}"
 
 
 TRACKS = {
@@ -122,9 +72,10 @@ TRACKS = {
     },
 }
 
-# AI Discovery was introduced on 2026-10-07 after that day's scheduled evidence had already
-# completed. Enforce its independent evidence track from the next daily snapshot onward.
-if snapshot_date < "2026-10-08":
+# AI Discovery was introduced on 2026-10-07 after that day's scheduled evidence
+# had already completed. Before 10-08 the track is optional, but if submitted
+# it MUST pass the normal track validation before its candidate IDs count.
+if snapshot_date < "2026-10-08" and not isinstance(audit.get("tracks", {}).get("aiDiscovery"), dict):
     TRACKS.pop("aiDiscovery", None)
 
 tracks = audit.get("tracks")
@@ -289,18 +240,35 @@ candidate_ids = {
 }
 
 if baseline is not None:
+    for group in ("contests", "support", "aiNews", "aiDiscovery"):
+        old_by_id = {x["id"]: x for x in baseline.get(group, []) if x.get("id")}
+        new_by_id = {x["id"]: x for x in data.get(group, []) if x.get("id")}
+        removed = set(old_by_id) - set(new_by_id)
+        assert not removed, f"{group}: cumulative items were removed: {sorted(removed)}"
+        changed_first_seen = [
+            item_id for item_id, previous in old_by_id.items()
+            if new_by_id[item_id].get("firstSeenDate") != previous.get("firstSeenDate")
+        ]
+        assert not changed_first_seen, f"{group}: firstSeenDate changed: {sorted(changed_first_seen)}"
     baseline_ids = {
         item["id"]
         for group in ("contests", "support", "aiNews", "aiDiscovery")
         for item in baseline.get(group, [])
         if item.get("id")
     }
-    new_ids = {
-        item["id"]
+    added_items = [
+        item
         for group in ("contests", "support", "aiNews", "aiDiscovery")
         for item in data.get(group, [])
-        if item.get("id") and item["id"] not in baseline_ids and item.get("firstSeenDate") == snapshot_date
-    }
+        if item.get("id") and item["id"] not in baseline_ids
+    ]
+    stale_first_seen = [
+        item["id"] for item in added_items if item.get("firstSeenDate") != snapshot_date
+    ]
+    assert not stale_first_seen, (
+        f"new ids must have firstSeenDate={snapshot_date}: {sorted(stale_first_seen)}"
+    )
+    new_ids = {item["id"] for item in added_items}
     published_set = set(published_ids)
     if baseline.get("date") == snapshot_date:
         same_day_baseline_ids = {
@@ -329,7 +297,7 @@ if baseline is not None:
         for item in baseline.get(group, [])
         if item.get("id")
         and item.get("status") in ("OPEN", "UPCOMING")
-        and _reverify_due(item, snapshot_date)
+        and is_reverification_due(item, snapshot_date)
     }
 
     current_by_id = {
@@ -371,8 +339,36 @@ if baseline is not None:
         assert isinstance(item, dict), f"reverificationEvidence[{i}] must be an object"
         item_id = item.get("id")
         assert item_id and item_id not in evidence_by_id, f"invalid/duplicate reverificationEvidence id: {item_id!r}"
-        assert item.get("primarySourceUrl"), f"reverificationEvidence[{i}] missing primarySourceUrl"
-        assert item.get("verifiedAt"), f"reverificationEvidence[{i}] missing verifiedAt"
+        source_url = item.get("primarySourceUrl")
+        assert isinstance(source_url, str), f"reverificationEvidence[{i}] missing primarySourceUrl"
+        parsed_url = urlsplit(source_url)
+        hostname = parsed_url.hostname or ""
+        try:
+            ascii_host = hostname.encode("idna").decode("ascii")
+        except UnicodeError:
+            ascii_host = ""
+        valid_hostname = (
+            0 < len(ascii_host) <= 253
+            and all(
+                re.fullmatch(r"[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?", label)
+                for label in ascii_host.split(".")
+            )
+        )
+        assert parsed_url.scheme in ("http", "https") and valid_hostname and parsed_url.username is None, (
+            f"reverificationEvidence[{i}] invalid primarySourceUrl"
+        )
+        stamp = item.get("verifiedAt")
+        assert isinstance(stamp, str), f"reverificationEvidence[{i}] missing verifiedAt"
+        try:
+            observed_at = datetime.fromisoformat(stamp.replace("Z", "+00:00"))
+        except ValueError:
+            raise AssertionError(f"reverificationEvidence[{i}] invalid verifiedAt timestamp") from None
+        assert observed_at.tzinfo is not None and observed_at.utcoffset() is not None, (
+            f"reverificationEvidence[{i}] verifiedAt must include a timezone"
+        )
+        assert observed_at.astimezone(ZoneInfo("Asia/Seoul")).date().isoformat() == snapshot_date, (
+            f"reverificationEvidence[{i}] verifiedAt must be on snapshot date in Asia/Seoul"
+        )
         evidence_by_id[item_id] = item
 
     same_day_material_fields = (
@@ -380,9 +376,20 @@ if baseline is not None:
         "openingAt",
         "deadlineText",
         "period",
+        "title",
+        "summary",
+        "description",
+        "tags",
         "participation",
         "reward",
         "businessRegistration",
+        "preStartup",
+        "employment",
+        "evaluation",
+        "aiSupport",
+        "ideas",
+        "links",
+        "categoryLabel",
     )
     same_day_corrected = {
         item_id
@@ -398,7 +405,24 @@ if baseline is not None:
         )
     }
 
-    allowed_reverified = effective_due | same_day_corrected
+    # A crawler/search change signal can require official verification before
+    # the ordinary cadence expires. Accept these *only* with real evidence,
+    # not as a way of bypassing the due gate.
+    extra_officially_reverified = {
+        item_id
+        for item_id in reverified_set
+        if item_id in baseline_by_id
+        and (
+            baseline_by_id[item_id].get("status") in ("OPEN", "UPCOMING")
+            or (
+                baseline_by_id[item_id].get("status") == "CLOSED"
+                and current_by_id.get(item_id, {}).get("status") in ("OPEN", "UPCOMING")
+            )
+        )
+        and current_by_id.get(item_id, {}).get("lastVerifiedDate") == snapshot_date
+        and item_id in evidence_by_id
+    }
+    allowed_reverified = effective_due | same_day_corrected | extra_officially_reverified
     unexpected_reverified = reverified_set - allowed_reverified
     assert not unexpected_reverified, (
         f"research audit reverifiedIds contains non-due/non-correction ids: {sorted(unexpected_reverified)}"
@@ -406,6 +430,29 @@ if baseline is not None:
     missing_evidence = reverified_set - set(evidence_by_id)
     assert not missing_evidence, (
         f"research audit reverifiedIds missing primary-source evidence: {sorted(missing_evidence)}"
+    )
+
+    changed_opportunities = {
+        item_id
+        for item_id, previous in baseline_by_id.items()
+        if item_id in current_by_id
+        and (
+            previous.get("status") in ("OPEN", "UPCOMING")
+            or current_by_id[item_id].get("status") in ("OPEN", "UPCOMING")
+        )
+        and any(previous.get(field) != current_by_id[item_id].get(field) for field in same_day_material_fields)
+    }
+    unverified_changes = changed_opportunities - reverified_set
+    assert not unverified_changes, (
+        f"material opportunity changes require official re-verification: {sorted(unverified_changes)}"
+    )
+    missing_update_dates = {
+        item_id
+        for item_id in changed_opportunities
+        if current_by_id[item_id].get("lastUpdatedDate") != snapshot_date
+    }
+    assert not missing_update_dates, (
+        f"material opportunity changes require lastUpdatedDate={snapshot_date}: {sorted(missing_update_dates)}"
     )
 
     failures = audit.get("reverificationFailures", [])
