@@ -124,6 +124,25 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "bananahacks-tech",
+      "name": "bananahacks.tech",
+      "url": "https://bananahacks.tech/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "generalSoftware",
+        "upcomingOpenings"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.bananahacks.tech/"
+      ],
+      "score": 12,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "bizinfo",
       "name": "기업마당",
       "reason": "Official Bizinfo support-program listing; broad startup/support discovery with structured detail URLs and application periods",
@@ -141,6 +160,44 @@
         "expand": false,
         "waitMs": 1200
       }
+    },
+    {
+      "key": "blaybus-com",
+      "name": "blaybus.com",
+      "url": "https://blaybus.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "aiData",
+        "generalSoftware",
+        "upcomingOpenings"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.blaybus.com/v2/activity/1122/landing"
+      ],
+      "score": 14,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "cockroachlabs-com",
+      "name": "cockroachlabs.com",
+      "url": "https://cockroachlabs.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "aiNews",
+      "sourceTracks": [
+        "aiNews"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.cockroachlabs.com/blog/experiment-running-hospital-code/"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
       "key": "cookiesforai-app",
@@ -175,6 +232,63 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "dmcportal-kr",
+      "name": "dmcportal.kr",
+      "url": "https://dmcportal.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea",
+        "startupSupport",
+        "upcomingOpenings"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://dmcportal.kr/dic"
+      ],
+      "score": 14,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "docs-google-com",
+      "name": "docs.google.com",
+      "url": "https://docs.google.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea",
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://docs.google.com/forms/d/e/1FAIpQLSf3Etf03XGJ0kVbBxy8rQm52XMO-7hbwvDBz9r3HWGUFqbsAQ/viewform"
+      ],
+      "score": 12,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "epoch-ai",
+      "name": "epoch.ai",
+      "url": "https://epoch.ai/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "aiNews",
+      "sourceTracks": [
+        "aiNews"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://epoch.ai/publications/innovationeval"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "eventus",
       "name": "이벤터스",
       "reason": "JS-heavy searchable event catalog; exact public search API/URL filtering needs inspection",
@@ -195,6 +309,38 @@
       ],
       "score": 12,
       "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "gbmaru-com",
+      "name": "gbmaru.com",
+      "url": "https://gbmaru.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea",
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.gbmaru.com/"
+      ],
+      "score": 12,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "geekNewsCommunity",
+      "name": "GeekNews",
+      "url": "https://news.hada.io/",
+      "category": "aiNews",
+      "sourceTracks": [
+        "aiNews"
+      ],
+      "status": "WATCH_ONLY",
+      "reason": "Browser collection returned HTTP 403 on 2026-10-08. Use accessible editorial discovery; do not bypass access controls.",
+      "recommendation": "WATCH_ONLY",
+      "score": 0
     },
     {
       "key": "github-com",
@@ -218,6 +364,26 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "githubTrending",
+      "name": "GitHub daily trending",
+      "url": "https://github.com/trending?since=daily",
+      "category": "aiDiscovery",
+      "sourceTracks": [
+        "aiDiscovery",
+        "aiNews"
+      ],
+      "reason": "Public daily trending list; repository links, description, observed rank and visible stars/forks. AI relevance requires editorial review.",
+      "status": "SHADOW",
+      "discoveredAt": "2026-10-08",
+      "crawlerSpec": {
+        "adapter": "githubTrending",
+        "url": "https://github.com/trending?since=daily",
+        "limit": 30
+      },
+      "recommendation": "CONTINUE_SHADOW",
+      "score": 0
+    },
+    {
       "key": "gitlab-transcend-devpost-com",
       "name": "gitlab-transcend.devpost.com",
       "url": "https://gitlab-transcend.devpost.com/",
@@ -229,6 +395,24 @@
         "https://gitlab-transcend.devpost.com/"
       ],
       "score": 14,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "gwto-or-kr",
+      "name": "gwto.or.kr",
+      "url": "https://gwto.or.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.gwto.or.kr/www/selectBbsNttView.do?bbsNo=3&integrDeptCode=-+%EC%A4%80%EA%B3%B5%EA%B4%80%EB%A0%A8%28%EA%B4%91%EA%B3%A0%29&key=23&nttNo=3070&pageIndex=1&searchCnd=all&searchCtgry=&searchKrwd="
+      ],
+      "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -246,6 +430,141 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "hackathon-imaginationgroup-co-kr",
+      "name": "hackathon.imaginationgroup.co.kr",
+      "url": "https://hackathon.imaginationgroup.co.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "aiData",
+        "generalSoftware",
+        "upcomingOpenings"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://hackathon.imaginationgroup.co.kr/nongnet"
+      ],
+      "score": 14,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "hackerNewsTop",
+      "name": "Hacker News top stories",
+      "url": "https://news.ycombinator.com/",
+      "category": "aiNews",
+      "sourceTracks": [
+        "aiNews"
+      ],
+      "reason": "Official public API; preserves discussion URL, original URL, score, comments, publication time and observed rank.",
+      "status": "SHADOW",
+      "discoveredAt": "2026-10-08",
+      "crawlerSpec": {
+        "adapter": "hackerNewsTop",
+        "url": "https://news.ycombinator.com/",
+        "limit": 30
+      },
+      "recommendation": "CONTINUE_SHADOW",
+      "score": 58
+    },
+    {
+      "key": "huggingFaceModels",
+      "name": "Hugging Face trending models",
+      "url": "https://huggingface.co/models?sort=trending",
+      "category": "aiDiscovery",
+      "sourceTracks": [
+        "aiDiscovery",
+        "aiNews"
+      ],
+      "reason": "Public trending model inventory; original repository links and observed placement. No popularity growth inferred from one sample.",
+      "status": "SHADOW",
+      "discoveredAt": "2026-10-08",
+      "crawlerSpec": {
+        "adapter": "huggingFaceModels",
+        "url": "https://huggingface.co/models?sort=trending",
+        "limit": 30
+      },
+      "recommendation": "CONTINUE_SHADOW",
+      "score": 52
+    },
+    {
+      "key": "huggingFaceSpaces",
+      "name": "Hugging Face trending Spaces",
+      "url": "https://huggingface.co/spaces?sort=trending",
+      "category": "aiDiscovery",
+      "sourceTracks": [
+        "aiDiscovery"
+      ],
+      "reason": "Public trending demo/app inventory across creative and productivity tasks; each app needs usefulness/access verification.",
+      "status": "SHADOW",
+      "discoveredAt": "2026-10-08",
+      "crawlerSpec": {
+        "adapter": "huggingFaceSpaces",
+        "url": "https://huggingface.co/spaces?sort=trending",
+        "limit": 30
+      },
+      "recommendation": "CONTINUE_SHADOW",
+      "score": 10
+    },
+    {
+      "key": "jn-se-kr",
+      "name": "jn-se.kr",
+      "url": "https://jn-se.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea",
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://jn-se.kr/bbs/board.php?bo_table=nco4_1&w=u&wr_id=1360"
+      ],
+      "score": 42,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "kcaia-kr",
+      "name": "kcaia.kr",
+      "url": "https://kcaia.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea",
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.kcaia.kr/notice/17"
+      ],
+      "score": 42,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "kdata-or-kr",
+      "name": "kdata.or.kr",
+      "url": "https://kdata.or.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "aiData",
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.kdata.or.kr/kr/board/notice_01/boardView.do?bbsIdx=39016"
+      ],
+      "score": 12,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "keitNotices",
       "name": "한국산업기술기획평가원(KEIT) 공지사항",
       "url": "https://www.keit.re.kr/board.es?bid=0009&mid=a10301010000",
@@ -254,6 +573,26 @@
       "status": "NEEDS_SPEC",
       "discoveredAt": "2026-10-07",
       "score": 44,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "kinfa-or-kr",
+      "name": "kinfa.or.kr",
+      "url": "https://kinfa.or.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "generalSoftware",
+        "publicIdea",
+        "upcomingOpenings"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.kinfa.or.kr/customerService/exhibitionDetail.do?seq=30532"
+      ],
+      "score": 14,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -281,8 +620,26 @@
         "expand": false,
         "waitMs": 1200
       },
-      "score": 0,
+      "score": 10,
       "recommendation": "CONTINUE_SHADOW"
+    },
+    {
+      "key": "kuk-virtual-hackathon-devpost-com",
+      "name": "kuk-virtual-hackathon.devpost.com",
+      "url": "https://kuk-virtual-hackathon.devpost.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "generalSoftware"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://kuk-virtual-hackathon.devpost.com/rules"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
       "key": "learn-ai-basics-devpost-com",
@@ -307,12 +664,69 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "luma-com",
+      "name": "luma.com",
+      "url": "https://luma.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "generalSoftware",
+        "upcomingOpenings"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://luma.com/06x2etd7"
+      ],
+      "score": 12,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "lumaMeetup",
       "name": "Luma / Meetup",
       "reason": "use location/query discovery rather than blind full-site crawl",
       "status": "WATCH_ONLY",
       "score": 0,
       "recommendation": "WATCH_ONLY"
+    },
+    {
+      "key": "manycp-com",
+      "name": "manycp.com",
+      "url": "https://manycp.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "aiDiscovery",
+      "sourceTracks": [
+        "aiDiscovery"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://manycp.com/guides/mcp-server-directories"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "mois-go-kr",
+      "name": "mois.go.kr",
+      "url": "https://mois.go.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "generalSoftware",
+        "publicIdea",
+        "upcomingOpenings"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.mois.go.kr/frt/bbs/type013/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000006&nttId=129458"
+      ],
+      "score": 14,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
       "key": "mosaiclab-net",
@@ -340,6 +754,24 @@
       "score": 0,
       "recommendation": "NEEDS_CRAWLER_SPEC",
       "category": "startupSupport"
+    },
+    {
+      "key": "nishtahir-com",
+      "name": "nishtahir.com",
+      "url": "https://nishtahir.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "aiNews",
+      "sourceTracks": [
+        "aiNews"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://nishtahir.com/build-your-own-decision-model/"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
       "key": "onoffmix",
@@ -370,6 +802,26 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "pola-or-kr",
+      "name": "pola.or.kr",
+      "url": "https://pola.or.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "generalSoftware",
+        "publicIdea",
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.pola.or.kr/web/cop/bbs/selectBoardArticle.do?adminSearchYn=N&bbsId=BBSMSTR_000000000018&nttId=11236&pageIndex=1&searchCnd=0&searchWrd="
+      ],
+      "score": 14,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "prompt-motion-com",
       "name": "prompt-motion.com",
       "url": "https://prompt-motion.com/",
@@ -385,6 +837,25 @@
         "https://www.prompt-motion.com/"
       ],
       "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "rea-tools",
+      "name": "rea.tools",
+      "url": "https://rea.tools/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "aiNews",
+      "sourceTracks": [
+        "aiDiscovery",
+        "aiNews"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://rea.tools/"
+      ],
+      "score": 42,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -415,92 +886,64 @@
       "category": "startupSupport"
     },
     {
-      "key": "hackerNewsTop",
-      "name": "Hacker News top stories",
-      "url": "https://news.ycombinator.com/",
-      "category": "aiNews",
+      "key": "startup-plus-kr",
+      "name": "startup-plus.kr",
+      "url": "https://startup-plus.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
       "sourceTracks": [
-        "aiNews"
+        "publicIdea",
+        "startupSupport"
       ],
-      "reason": "Official public API; preserves discussion URL, original URL, score, comments, publication time and observed rank.",
-      "status": "SHADOW",
-      "discoveredAt": "2026-10-08",
-      "crawlerSpec": {
-        "adapter": "hackerNewsTop",
-        "url": "https://news.ycombinator.com/",
-        "limit": 30
-      },
-      "recommendation": "CONTINUE_SHADOW"
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.startup-plus.kr/project/PRJ007528"
+      ],
+      "score": 42,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
-      "key": "githubTrending",
-      "name": "GitHub daily trending",
-      "url": "https://github.com/trending?since=daily",
-      "category": "aiDiscovery",
+      "key": "xn-299alkwa683hrtfsfp2mn8g3zd53kbtag2cdzeds0aqoj3nl9jq-com",
+      "name": "xn--299alkwa683hrtfsfp2mn8g3zd53kbtag2cdzeds0aqoj3nl9jq.com",
+      "url": "https://xn--299alkwa683hrtfsfp2mn8g3zd53kbtag2cdzeds0aqoj3nl9jq.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
       "sourceTracks": [
-        "aiDiscovery",
-        "aiNews"
+        "aiData",
+        "generalSoftware",
+        "upcomingOpenings"
       ],
-      "reason": "Public daily trending list; repository links, description, observed rank and visible stars/forks. AI relevance requires editorial review.",
-      "status": "SHADOW",
-      "discoveredAt": "2026-10-08",
-      "crawlerSpec": {
-        "adapter": "githubTrending",
-        "url": "https://github.com/trending?since=daily",
-        "limit": 30
-      },
-      "recommendation": "CONTINUE_SHADOW"
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.xn--299alkwa683hrtfsfp2mn8g3zd53kbtag2cdzeds0aqoj3nl9jq.com/"
+      ],
+      "score": 14,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
-      "key": "huggingFaceModels",
-      "name": "Hugging Face trending models",
-      "url": "https://huggingface.co/models?sort=trending",
-      "category": "aiDiscovery",
+      "key": "ybs-ypa-or-kr",
+      "name": "ybs.ypa.or.kr",
+      "url": "https://ybs.ypa.or.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
       "sourceTracks": [
-        "aiDiscovery",
-        "aiNews"
+        "publicIdea",
+        "startupSupport"
       ],
-      "reason": "Public trending model inventory; original repository links and observed placement. No popularity growth inferred from one sample.",
-      "status": "SHADOW",
-      "discoveredAt": "2026-10-08",
-      "crawlerSpec": {
-        "adapter": "huggingFaceModels",
-        "url": "https://huggingface.co/models?sort=trending",
-        "limit": 30
-      },
-      "recommendation": "CONTINUE_SHADOW"
-    },
-    {
-      "key": "huggingFaceSpaces",
-      "name": "Hugging Face trending Spaces",
-      "url": "https://huggingface.co/spaces?sort=trending",
-      "category": "aiDiscovery",
-      "sourceTracks": [
-        "aiDiscovery"
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-11",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://ybs.ypa.or.kr/application.do"
       ],
-      "reason": "Public trending demo/app inventory across creative and productivity tasks; each app needs usefulness/access verification.",
-      "status": "SHADOW",
-      "discoveredAt": "2026-10-08",
-      "crawlerSpec": {
-        "adapter": "huggingFaceSpaces",
-        "url": "https://huggingface.co/spaces?sort=trending",
-        "limit": 30
-      },
-      "recommendation": "CONTINUE_SHADOW"
-    },
-    {
-      "key": "geekNewsCommunity",
-      "name": "GeekNews",
-      "url": "https://news.hada.io/",
-      "category": "aiNews",
-      "sourceTracks": [
-        "aiNews"
-      ],
-      "status": "WATCH_ONLY",
-      "reason": "Browser collection returned HTTP 403 on 2026-10-08. Use accessible editorial discovery; do not bypass access controls.",
-      "recommendation": "WATCH_ONLY"
+      "score": 12,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
     }
   ],
-  "lastEvolvedDate": "2026-10-07",
-  "lastEvolvedAt": "2026-10-07T01:55:47.129499Z"
+  "lastEvolvedDate": "2026-10-11",
+  "lastEvolvedAt": "2026-10-11T05:09:05.482272Z"
 }
