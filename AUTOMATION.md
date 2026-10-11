@@ -320,6 +320,8 @@ This checklist is a completion gate, not a suggestion. A daily refresh is incomp
 
 ### 1. Re-verify existing OPEN and UPCOMING opportunities by risk cadence
 Do not spend every daily run reopening every long-lived unchanged item. Re-verify items that are due under this deterministic cadence, plus any item whose crawler/search evidence materially changed:
+- When a repository shell is available, run python3 scripts/research_worklist.py --date YYYY-MM-DD --json after confirming the current-day source cache. This read-only worklist enumerates pending official rechecks, actionable URLs and crawler gaps, but is NOT evidence of any actual page visit. Never copy its pending items into the audit as if checked.
+- If a shell is unavailable, derive the same pending worklist from current main and the cache; do not omit a track or treat machine-discovered URLs as verified.
 - `OPEN` with nearest actionable deadline within 3 days: every day.
 - `OPEN` with nearest actionable deadline 4–14 days away: at least every 2 days.
 - `OPEN` with deadline more than 14 days away or no parseable deadline: at least every 7 days.

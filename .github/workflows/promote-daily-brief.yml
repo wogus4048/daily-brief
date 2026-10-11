@@ -60,6 +60,7 @@ jobs:
           set -euo pipefail
           date='${{ steps.candidate.outputs.date }}'
           git fetch origin main
+          python scripts/test_research_rules.py
           python scripts/validate_data.py data/latest.json
           test -f "data/archive/$date.json"
           test -f "data/research/$date.json"
