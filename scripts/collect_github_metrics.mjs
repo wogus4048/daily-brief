@@ -35,6 +35,21 @@ export async function collectMetrics(brief, previous = {}, request = fetch, now 
   return {generatedAt:checkedAt,repositories:Object.fromEntries(rows)};
 }
 
+// Only the specifically acknowledged ARTEX 404 is a known availability gap.
+// Keep true STALE/FAILED statuses. Other repositories always signal failures,
+// as do changed errors and a regression after ARTEX has recovered.
+export function actionableMetricFailures(current, previous = {}) {
+  return Object.entries(current.repositories || {}).filter(([repo, row]) => {
+    if (row.status === 'OK') return false;
+    const old = previous.repositories?.[repo];
+    const repeated404 = repo === 'Autumn-27/ARTEX'
+      && row.error === 'HTTP 404'
+      && (old?.status === 'STALE' || old?.status === 'FAILED')
+      && old.error === 'HTTP 404';
+    return !repeated404;
+  });
+}
+
 async function main() {
   const brief = JSON.parse(await fs.readFile('data/latest.json','utf8'));
   let previous = {};
@@ -43,10 +58,13 @@ async function main() {
   await fs.writeFile('data/github-metrics.json.tmp',JSON.stringify(result,null,2)+'\n');
   await fs.rename('data/github-metrics.json.tmp','data/github-metrics.json');
   const failed = Object.entries(result.repositories).filter(([,r])=>r.status!=='OK');
+  const actionable = actionableMetricFailures(result, previous);
   const summary = ['## GitHub repository metrics','',...Object.entries(result.repositories).map(([repo,r])=>`- ${repo}: ${r.status} (${r.stars??'unknown'} stars, ${r.forks??'unknown'} forks)`)].join('\n')+'\n';
   console.log(summary);
-  if (process.env.GITHUB_STEP_SUMMARY) await fs.appendFile(process.env.GITHUB_STEP_SUMMARY,summary);
+  if (process.env.GITHUB_STEP_SUMMARY) await fs.appendFile(process.env.GITHUB_STEP_SUMMARY,summary
+    + '\nUnavailable or stale repositories: ' + failed.length
+    + '\nNew or changed failures requiring attention: ' + actionable.length + '\n');
   for (const [repo,r] of failed) console.error(`::warning::${repo}: ${r.error}`);
-  if (failed.length) process.exitCode=1;
+  if (actionable.length) process.exitCode=1;
 }
 if (process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href) await main();
