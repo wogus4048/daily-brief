@@ -1,33 +1,61 @@
 {
-  "generatedAt": "2026-10-11T01:02:27.670Z",
+  "generatedAt": "2026-10-11T05:09:22.260Z",
   "repositories": {
     "Autumn-27/ARTEX": {
       "stars": 2139,
       "forks": 593,
       "fetchedAt": "2026-10-08T08:22:42.444Z",
-      "checkedAt": "2026-10-11T01:02:27.670Z",
+      "checkedAt": "2026-10-11T05:09:22.260Z",
       "status": "STALE",
       "error": "HTTP 404"
+    },
+    "BeatAPI/BeatDesign": {
+      "stars": 143,
+      "forks": 20,
+      "fetchedAt": "2026-10-11T05:09:22.260Z",
+      "checkedAt": "2026-10-11T05:09:22.260Z",
+      "status": "OK"
     },
     "binibinibin123/geullint": {
       "stars": 0,
       "forks": 0,
-      "fetchedAt": "2026-10-11T01:02:27.670Z",
-      "checkedAt": "2026-10-11T01:02:27.670Z",
+      "fetchedAt": "2026-10-11T05:09:22.260Z",
+      "checkedAt": "2026-10-11T05:09:22.260Z",
       "status": "OK"
     },
     "evergreentree97/K-Humanizer": {
       "stars": 8,
       "forks": 0,
-      "fetchedAt": "2026-10-11T01:02:27.670Z",
-      "checkedAt": "2026-10-11T01:02:27.670Z",
+      "fetchedAt": "2026-10-11T05:09:22.260Z",
+      "checkedAt": "2026-10-11T05:09:22.260Z",
+      "status": "OK"
+    },
+    "frankxai/prompt-library": {
+      "stars": 2,
+      "forks": 0,
+      "fetchedAt": "2026-10-11T05:09:22.260Z",
+      "checkedAt": "2026-10-11T05:09:22.260Z",
+      "status": "OK"
+    },
+    "laurentvv/generator-assets": {
+      "stars": 6,
+      "forks": 0,
+      "fetchedAt": "2026-10-11T05:09:22.260Z",
+      "checkedAt": "2026-10-11T05:09:22.260Z",
       "status": "OK"
     },
     "obra/superpowers": {
-      "stars": 297243,
-      "forks": 26533,
-      "fetchedAt": "2026-10-11T01:02:27.670Z",
-      "checkedAt": "2026-10-11T01:02:27.670Z",
+      "stars": 297299,
+      "forks": 26536,
+      "fetchedAt": "2026-10-11T05:09:22.260Z",
+      "checkedAt": "2026-10-11T05:09:22.260Z",
+      "status": "OK"
+    },
+    "rociiu/talorys": {
+      "stars": 459,
+      "forks": 31,
+      "fetchedAt": "2026-10-11T05:09:22.260Z",
+      "checkedAt": "2026-10-11T05:09:22.260Z",
       "status": "OK"
     }
   }
