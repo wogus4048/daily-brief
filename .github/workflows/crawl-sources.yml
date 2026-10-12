@@ -126,7 +126,7 @@ jobs:
           git push origin HEAD:main
 
       # Run after committing usable partial results. Optional failures remain visible
-      # as a failed run without preventing other sources from being published.
+      # as annotations and PARTIAL in the summary; only required failures fail the job.
       - name: Report individual source health
         if: always()
         run: node scripts/pipeline_health.mjs --sources-only

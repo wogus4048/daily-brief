@@ -14,6 +14,7 @@ on:
 permissions:
   contents: write
   actions: write
+  pages: read
 
 concurrency:
   group: daily-brief-promote
@@ -60,7 +61,13 @@ jobs:
           set -euo pipefail
           date='${{ steps.candidate.outputs.date }}'
           git fetch origin main
+          current_date="$(git show origin/main:data/latest.json | python -c 'import json,sys; print(json.load(sys.stdin)["date"])')"
+          if [[ "$date" < "$current_date" ]]; then
+            echo "Refusing older snapshot $date: main already contains $current_date" >&2
+            exit 1
+          fi
           python scripts/test_research_rules.py
+          python scripts/test_publication_bundle.py
           python scripts/validate_data.py data/latest.json
           test -f "data/archive/$date.json"
           test -f "data/research/$date.json"
@@ -105,6 +112,11 @@ jobs:
           date='${{ steps.candidate.outputs.date }}'
           git fetch origin "$candidate" main
           git checkout -B main origin/main
+          current_date="$(python -c 'import json; print(json.load(open("data/latest.json", encoding="utf-8"))["date"])')"
+          if [[ "$date" < "$current_date" ]]; then
+            echo "Refusing older snapshot $date: current main is $current_date" >&2
+            exit 1
+          fi
           git checkout "origin/$candidate" -- data/latest.json "data/archive/$date.json" "data/research/$date.json"
           python scripts/validate_data.py data/latest.json
           cmp --silent data/latest.json "data/archive/$date.json"
@@ -127,58 +139,84 @@ jobs:
           echo "sha=$sha" >> "$GITHUB_OUTPUT"
 
       - name: Dispatch Pages validation and deployment
+        id: pages_dispatch
         shell: bash
         run: |
           set -euo pipefail
-          gh workflow run pages.yml --ref main
+          # The official workflow-dispatch API returns the exact run ID.
+          # Avoid guessing from timestamps/SHAs while repository metrics advance main.
+          response="$(gh api --method POST \
+            "repos/${{ github.repository }}/actions/workflows/pages.yml/dispatches" \
+            -H 'X-GitHub-Api-Version: 2022-11-28' \
+            -f ref=main \
+            -f 'inputs[expected_date]=${{ steps.candidate.outputs.date }}' \
+            -F return_run_details=true)"
+          run_id="$(printf '%s' "$response" | jq -er '.workflow_run_id')"
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
 
       - name: Wait for Pages workflow
         shell: bash
         run: |
           set -euo pipefail
-          target='${{ steps.promote.outputs.sha }}'
-          run_id=""
-          for _ in {1..30}; do
-            run_id="$(gh run list               --workflow pages.yml               --branch main               --event workflow_dispatch               --limit 20               --json databaseId,headSha,createdAt               --jq ".[] | select(.headSha == \"$target\") | .databaseId"               | head -n1)"
-            if [[ -n "$run_id" ]]; then
-              break
-            fi
-            sleep 2
-          done
-          if [[ -z "$run_id" ]]; then
-            echo "Could not find dispatched Pages run for $target" >&2
+          run_id='${{ steps.pages_dispatch.outputs.run_id }}'
+          if gh run watch "$run_id" --exit-status; then
+            exit 0
+          fi
+          # GitHub concurrency may evict a pending Pages run when metrics-only
+          # refreshes are queued. Retry this exact cancelled run once; a failed
+          # validator/deployment is never retried automatically.
+          conclusion="$(gh run view "$run_id" --json conclusion --jq '.conclusion')"
+          if [[ "$conclusion" != "cancelled" ]]; then
             exit 1
           fi
+          echo "::warning::Dated Pages run $run_id was cancelled while queued; rerunning once."
+          gh run rerun "$run_id"
           gh run watch "$run_id" --exit-status
 
-      - name: Dispatch crawler source evolution
+      - name: Verify public site has the promoted daily snapshot
+        shell: bash
+        env:
+          EXPECTED_DATE: ${{ steps.candidate.outputs.date }}
+        run: |
+          set -euo pipefail
+          site_url="$(gh api "repos/${{ github.repository }}/pages" --jq '.html_url')"
+          export LIVE_JSON_URL="${site_url%/}/data/latest.json"
+          python - <<'PY'
+          import hashlib, json, os, time
+          from pathlib import Path
+          from urllib.parse import urlencode
+          from urllib.request import Request, urlopen
+
+          expected = os.environ['EXPECTED_DATE']
+          local_bytes = Path('data/latest.json').read_bytes()
+          expected_hash = hashlib.sha256(local_bytes).hexdigest()
+          url = os.environ['LIVE_JSON_URL']
+          for attempt in range(8):
+              try:
+                  query = urlencode({'verification': str(time.time_ns())})
+                  req = Request(f'{url}?{query}', headers={'Cache-Control': 'no-cache'})
+                  with urlopen(req, timeout=15) as response:
+                      content = response.read()
+                  actual_date = json.loads(content)['date']
+                  if actual_date == expected and hashlib.sha256(content).hexdigest() == expected_hash:
+                      print(f'PUBLICATION VERIFIED: {expected}, SHA256 {expected_hash}')
+                      break
+                  print(f'Public snapshot mismatch (attempt {attempt+1}/8): {actual_date}')
+              except Exception as error:
+                  print(f'Public snapshot read failed (attempt {attempt+1}/8): {error}')
+              if attempt == 7:
+                  raise SystemExit(f'Pages workflow completed but public snapshot {expected} was not verified')
+              time.sleep(5)
+          PY
+
+      # Evolution is separate maintenance. It must not retroactively fail a
+      # successfully validated and deployed editorial publication.
+      - name: Dispatch crawler source evolution (best effort)
+        continue-on-error: true
         shell: bash
         run: |
           set -euo pipefail
-          gh workflow run evolve-crawler-sources.yml --ref main
-
-      - name: Wait for crawler source evolution
-        shell: bash
-        run: |
-          set -euo pipefail
-          target='${{ steps.promote.outputs.sha }}'
-          run_id=""
-          for _ in {1..30}; do
-            run_id="$(gh run list \
-              --workflow evolve-crawler-sources.yml \
-              --branch main \
-              --event workflow_dispatch \
-              --limit 20 \
-              --json databaseId,headSha,createdAt \
-              --jq ".[] | select(.headSha == \"$target\") | .databaseId" \
-              | head -n1)"
-            if [[ -n "$run_id" ]]; then
-              break
-            fi
-            sleep 2
-          done
-          if [[ -z "$run_id" ]]; then
-            echo "Could not find dispatched crawler evolution run for $target" >&2
+          if ! gh workflow run evolve-crawler-sources.yml --ref main; then
+            echo '::warning::Crawler evolution dispatch failed; editorial publication was already deployed.'
             exit 1
           fi
-          gh run watch "$run_id" --exit-status
