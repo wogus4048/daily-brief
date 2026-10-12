@@ -1,4 +1,5 @@
 name: Deploy daily-brief to GitHub Pages
+run-name: Deploy daily-brief ${{ inputs.expected_date || 'latest' }}
 on:
   push:
     branches: [main]
@@ -7,13 +8,19 @@ on:
       - 'data/crawler-sources.json'
       - 'data/crawler-source-state.json'
   workflow_dispatch:
+    inputs:
+      expected_date:
+        description: 'Dated editorial snapshot to verify (YYYY-MM-DD); omit for metrics-only refresh'
+        required: false
+        type: string
 permissions:
   contents: read
   pages: write
   id-token: write
 concurrency:
   group: pages
-  cancel-in-progress: true
+  # Metrics refreshes must not cancel a dated editorial deployment in progress.
+  cancel-in-progress: false
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -23,6 +30,32 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/validate_data.py
+      - name: Verify dated editorial payload when requested
+        shell: bash
+        env:
+          EXPECTED_DATE: ${{ inputs.expected_date }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$EXPECTED_DATE" ]]; then
+            echo "Metrics/site refresh: no new editorial publication claimed."
+            exit 0
+          fi
+          if [[ ! "$EXPECTED_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "Invalid expected date" >&2
+            exit 1
+          fi
+          test -f "data/archive/$EXPECTED_DATE.json"
+          test -f "data/research/$EXPECTED_DATE.json"
+          cmp --silent data/latest.json "data/archive/$EXPECTED_DATE.json"
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          expected = os.environ['EXPECTED_DATE']
+          snapshot = json.loads(Path('data/latest.json').read_text(encoding='utf-8'))
+          audit = json.loads(Path(f'data/research/{expected}.json').read_text(encoding='utf-8'))
+          assert snapshot.get('date') == expected, 'Pages snapshot date mismatch'
+          assert audit.get('date') == expected and audit.get('completedAt'), 'Pages research evidence missing or wrong date'
+          PY
   deploy:
     needs: validate
     environment:
