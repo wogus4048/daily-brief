@@ -2,6 +2,8 @@
 
 The single active `daily-brief 매일 갱신` automation owns the full refresh. It updates data only unless the user explicitly asks for UI changes.
 
+The run order, per-step completion criteria and the only valid stop conditions are in `docs/daily-runbook.md`. Read that file in full first, then read each section of this contract that a runbook step references when starting that step.
+
 ## Data model
 
 The main file is `data/latest.json` with:
