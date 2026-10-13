@@ -381,7 +381,7 @@
         "limit": 30
       },
       "recommendation": "CONTINUE_SHADOW",
-      "score": 0
+      "score": 10
     },
     {
       "key": "gitlab-transcend-devpost-com",
@@ -466,7 +466,7 @@
         "limit": 30
       },
       "recommendation": "CONTINUE_SHADOW",
-      "score": 58
+      "score": 68
     },
     {
       "key": "huggingFaceModels",
@@ -486,7 +486,7 @@
         "limit": 30
       },
       "recommendation": "CONTINUE_SHADOW",
-      "score": 52
+      "score": 62
     },
     {
       "key": "huggingFaceSpaces",
@@ -505,7 +505,7 @@
         "limit": 30
       },
       "recommendation": "CONTINUE_SHADOW",
-      "score": 10
+      "score": 20
     },
     {
       "key": "jn-se-kr",
@@ -620,8 +620,26 @@
         "expand": false,
         "waitMs": 1200
       },
-      "score": 10,
+      "score": 20,
       "recommendation": "CONTINUE_SHADOW"
+    },
+    {
+      "key": "kmubiz-kookmin-ac-kr",
+      "name": "kmubiz.kookmin.ac.kr",
+      "url": "https://kmubiz.kookmin.ac.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "startupSupport",
+      "sourceTracks": [
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-13",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://kmubiz.kookmin.ac.kr/template-a/etc-board/board01.do?mode=view&pid=12452"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
       "key": "kuk-virtual-hackathon-devpost-com",
@@ -886,6 +904,24 @@
       "category": "startupSupport"
     },
     {
+      "key": "seongnam-go-kr",
+      "name": "seongnam.go.kr",
+      "url": "https://seongnam.go.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-13",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.seongnam.go.kr/pm010201/6437"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "startup-plus-kr",
       "name": "startup-plus.kr",
       "url": "https://startup-plus.kr/",
@@ -902,6 +938,24 @@
         "https://www.startup-plus.kr/project/PRJ007528"
       ],
       "score": 42,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "thecompanyc-com",
+      "name": "thecompanyc.com",
+      "url": "https://thecompanyc.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-10-13",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://thecompanyc.com/web/contents/recruitment/view.php?ed_id=114"
+      ],
+      "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -944,6 +998,6 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     }
   ],
-  "lastEvolvedDate": "2026-10-11",
-  "lastEvolvedAt": "2026-10-11T05:09:05.482272Z"
+  "lastEvolvedDate": "2026-10-13",
+  "lastEvolvedAt": "2026-10-13T04:46:41.305449Z"
 }
