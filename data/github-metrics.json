@@ -1,61 +1,61 @@
 {
-  "generatedAt": "2026-10-12T01:22:33.534Z",
+  "generatedAt": "2026-10-13T02:06:38.442Z",
   "repositories": {
     "Autumn-27/ARTEX": {
       "stars": 2139,
       "forks": 593,
       "fetchedAt": "2026-10-08T08:22:42.444Z",
-      "checkedAt": "2026-10-12T01:22:33.534Z",
+      "checkedAt": "2026-10-13T02:06:38.442Z",
       "status": "STALE",
       "error": "HTTP 404"
     },
     "BeatAPI/BeatDesign": {
-      "stars": 143,
+      "stars": 148,
       "forks": 20,
-      "fetchedAt": "2026-10-12T01:22:33.534Z",
-      "checkedAt": "2026-10-12T01:22:33.534Z",
+      "fetchedAt": "2026-10-13T02:06:38.442Z",
+      "checkedAt": "2026-10-13T02:06:38.442Z",
       "status": "OK"
     },
     "binibinibin123/geullint": {
       "stars": 0,
       "forks": 0,
-      "fetchedAt": "2026-10-12T01:22:33.534Z",
-      "checkedAt": "2026-10-12T01:22:33.534Z",
+      "fetchedAt": "2026-10-13T02:06:38.442Z",
+      "checkedAt": "2026-10-13T02:06:38.442Z",
       "status": "OK"
     },
     "evergreentree97/K-Humanizer": {
       "stars": 8,
       "forks": 0,
-      "fetchedAt": "2026-10-12T01:22:33.534Z",
-      "checkedAt": "2026-10-12T01:22:33.534Z",
+      "fetchedAt": "2026-10-13T02:06:38.442Z",
+      "checkedAt": "2026-10-13T02:06:38.442Z",
       "status": "OK"
     },
     "frankxai/prompt-library": {
       "stars": 2,
       "forks": 0,
-      "fetchedAt": "2026-10-12T01:22:33.534Z",
-      "checkedAt": "2026-10-12T01:22:33.534Z",
+      "fetchedAt": "2026-10-13T02:06:38.442Z",
+      "checkedAt": "2026-10-13T02:06:38.442Z",
       "status": "OK"
     },
     "laurentvv/generator-assets": {
       "stars": 6,
       "forks": 0,
-      "fetchedAt": "2026-10-12T01:22:33.534Z",
-      "checkedAt": "2026-10-12T01:22:33.534Z",
+      "fetchedAt": "2026-10-13T02:06:38.442Z",
+      "checkedAt": "2026-10-13T02:06:38.442Z",
       "status": "OK"
     },
     "obra/superpowers": {
-      "stars": 297739,
-      "forks": 26597,
-      "fetchedAt": "2026-10-12T01:22:33.534Z",
-      "checkedAt": "2026-10-12T01:22:33.534Z",
+      "stars": 298226,
+      "forks": 26652,
+      "fetchedAt": "2026-10-13T02:06:38.442Z",
+      "checkedAt": "2026-10-13T02:06:38.442Z",
       "status": "OK"
     },
     "rociiu/talorys": {
-      "stars": 752,
-      "forks": 57,
-      "fetchedAt": "2026-10-12T01:22:33.534Z",
-      "checkedAt": "2026-10-12T01:22:33.534Z",
+      "stars": 904,
+      "forks": 78,
+      "fetchedAt": "2026-10-13T02:06:38.442Z",
+      "checkedAt": "2026-10-13T02:06:38.442Z",
       "status": "OK"
     }
   }
