@@ -1,0 +1,1621 @@
+{
+  "date": "2026-10-13",
+  "completedAt": "2026-10-13T13:44:55+09:00",
+  "sourceDiscoveries": [],
+  "tracks": {
+    "aiData": {
+      "status": "DONE",
+      "queriesByAxis": {
+        "llmAgents": [
+          "2026 10월 LLM 에이전트 해커톤 공모전 접수",
+          "2026 October AI agent hackathon open"
+        ],
+        "mlData": [
+          "2026 데이터 분석 AI 경진대회 접수 10월",
+          "2026 open data science machine learning competitions October"
+        ],
+        "visionSpeech": [
+          "2026 computer vision speech AI hackathon October open"
+        ]
+      },
+      "rawCandidates": [
+        {
+          "title": "Nebius × NVIDIA Global AI Hackathon",
+          "url": "https://nebiusglobalaihackathon.devpost.com/rules",
+          "disposition": "EXISTING",
+          "id": "nebius-nvidia-global-ai-hackathon-2026"
+        },
+        {
+          "title": "OpenCV AI Competition 2026, powered by AWS",
+          "url": "https://opencv26.devpost.com/rules",
+          "disposition": "EXISTING",
+          "id": "opencv-ai-competition-2026"
+        },
+        {
+          "title": "2026 데이터+AI 혁신 챌린지",
+          "url": "https://www.kdata.or.kr/kr/board/notice_01/boardView.do?bbsIdx=39016",
+          "disposition": "EXISTING",
+          "id": "data-ai-innovation-challenge-2026"
+        },
+        {
+          "title": "2026 고용24 국민참여 AI 고용서비스 발굴 온라인 해커톤",
+          "url": "https://www.xn--299alkwa683hrtfsfp2mn8g3zd53kbtag2cdzeds0aqoj3nl9jq.com/",
+          "disposition": "EXISTING",
+          "id": "employment24-ai-service-hackathon-2026"
+        },
+        {
+          "title": "2026 AI 농산물 가격예측 온라인 해커톤",
+          "url": "https://hackathon.imaginationgroup.co.kr/nongnet",
+          "disposition": "EXISTING",
+          "id": "at-agri-price-ai-hackathon-2026"
+        },
+        {
+          "title": "Build With AI: Basics",
+          "url": "https://learn-ai-basics.devpost.com/rules",
+          "disposition": "EXISTING",
+          "id": "build-with-ai-basics-devpost-2026"
+        },
+        {
+          "title": "항만 문제해결을 위한 AI 기술 공모전",
+          "url": "https://dacon.io/competitions/official/236771/overview/description",
+          "disposition": "EXISTING",
+          "id": "dacon-port-ai-236771"
+        },
+        {
+          "title": "2026 DATA·AI 분석 경진대회 - 문제해결 부문",
+          "url": "https://aida.kisti.re.kr/competition/",
+          "disposition": "EXISTING",
+          "id": "kisti-data-ai-analysis-2026"
+        },
+        {
+          "title": "Qloo Agentic Hackathon",
+          "url": "https://qloo.devpost.com/rules",
+          "disposition": "EXISTING",
+          "id": "qloo-agentic-hackathon-2026"
+        },
+        {
+          "title": "PayPal AI Hackathon",
+          "url": "https://paypalaihackathon.devpost.com/rules",
+          "disposition": "EXISTING",
+          "id": "paypal-ai-hackathon-2026"
+        },
+        {
+          "title": "YouCam API Skin AI & eCommerce VTO Hackathon",
+          "url": "https://youcam-api-skin-ai-ecommerce.devpost.com/rules",
+          "disposition": "EXISTING",
+          "id": "youcam-api-skin-ai-ecommerce-2026"
+        },
+        {
+          "title": "의정부도시공사 AI 혁신 아이디어 공모전",
+          "url": "https://www.uiuc.or.kr/companyNotice/noticePage/notice/view.do?bbsId=BBSMSTR_000000000001&nttId=5514",
+          "disposition": "EXISTING",
+          "id": "uijeongbu-ai-innovation-idea-2026"
+        },
+        {
+          "title": "국부펀드 KIC, AI 에이전트 공모전",
+          "url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
+          "disposition": "EXISTING",
+          "id": "kic-ai-agent-competition-2026"
+        },
+        {
+          "title": "2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge",
+          "url": "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims",
+          "disposition": "EXISTING",
+          "id": "ai-platform-build-challenge-2026"
+        },
+        {
+          "title": "합성 미세구조 기반 재료 물성 예측 AI 경진대회",
+          "url": "https://daker.ai/public/hackathons/synthetic-microstructure-property-prediction-ai",
+          "disposition": "EXISTING",
+          "id": "daker-synthetic-microstructure-ai-2026"
+        },
+        {
+          "title": "항만 문제해결을 위한 AI 기술 공모전",
+          "url": "https://www.dacon.io/competitions/official/236771/overview",
+          "disposition": "EXISTING",
+          "id": "dacon-port-ai-236771",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        }
+      ]
+    },
+    "generalSoftware": {
+      "status": "DONE",
+      "queriesByAxis": {
+        "appWebMobile": [
+          "2026 10월 앱 웹 모바일 개발 해커톤 공모전 모집",
+          "2026 October web mobile developer hackathon registration"
+        ],
+        "backendApiCloudDevOps": [
+          "2026 cloud API DevOps software development competition open"
+        ],
+        "security": [
+          "2026 10월 사이버보안 해커톤 경진대회",
+          "2026 security CTF hackathon October"
+        ],
+        "fintech": [
+          "2026 10월 금융 핀테크 개발 경진대회",
+          "2026 fintech payment insurance hackathon open"
+        ],
+        "publicDataGovTech": [
+          "2026 10월 공공데이터 GovTech 앱 개발 공모전"
+        ],
+        "productBuild": [
+          "2026 October startup product building hackathon"
+        ]
+      },
+      "rawCandidates": [
+        {
+          "title": "Build, Ship, Shape: Amazon Developer Hackathon",
+          "url": "https://amazonappdev2026.devpost.com/rules",
+          "disposition": "EXISTING",
+          "id": "amazon-developer-hackathon-2026"
+        },
+        {
+          "title": "Banana Hacks 2026",
+          "url": "https://www.bananahacks.tech/",
+          "disposition": "CLOSED",
+          "id": "banana-hacks-2026"
+        },
+        {
+          "title": "공공 웹사이트 불법광고 탐지 도구 개발 공모전",
+          "url": "https://www.mois.go.kr/frt/bbs/type013/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000006&nttId=129458",
+          "disposition": "EXISTING",
+          "id": "public-web-illegal-ad-detector-2026"
+        },
+        {
+          "title": "2026 스페이스 해커톤",
+          "url": "https://www.space-hackathon.kr/sh_page/page33.php",
+          "disposition": "EXISTING",
+          "id": "space-hackathon-2026"
+        },
+        {
+          "title": "GitLab Life After Code Hackathon",
+          "url": "https://gitlab-transcend.devpost.com/",
+          "disposition": "EXISTING",
+          "id": "gitlab-life-after-code-2026"
+        },
+        {
+          "title": "2026 우연한식탁 MVP 개발 해커톤",
+          "url": "https://www.blaybus.com/",
+          "disposition": "EXISTING",
+          "id": "blaybus-uyeon-table-mvp-2026"
+        },
+        {
+          "title": "2026 양자내성암호 전환 경진대회·해커톤",
+          "url": "https://www.pqcchallenge.kr/",
+          "disposition": "EXISTING",
+          "id": "pqc-transition-challenge-hackathon-2026"
+        },
+        {
+          "title": "Hack Apertus Online 2026",
+          "url": "https://hackapertus.devpost.com/",
+          "disposition": "EXISTING",
+          "id": "hack-apertus-online-2026"
+        },
+        {
+          "title": "Cursor Hackathon Seoul 4th",
+          "url": "https://luma.com/06x2etd7",
+          "disposition": "EXISTING",
+          "id": "cursor-hackathon-seoul-4-2026"
+        },
+        {
+          "title": "2026 DMC INNOVATION CAMP 창업경진대회",
+          "url": "https://dmcportal.kr/",
+          "disposition": "CLOSED",
+          "id": "dmc-innovation-camp-2026"
+        },
+        {
+          "title": "Korea Clinical Datathon 2026",
+          "url": "https://www.datathon.kr/",
+          "disposition": "EXISTING",
+          "id": "korea-clinical-datathon-2026"
+        },
+        {
+          "title": "5일 후",
+          "url": "https://koreahackathons.com/events/ai-4cae1cd8",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "11일 후",
+          "url": "https://koreahackathons.com/events/cursor-hackathon-seoul-4th",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "5일 후",
+          "url": "https://koreahackathons.com/events/daytona-hacksprint-seoul",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "34일 후",
+          "url": "https://koreahackathons.com/events/kuk-virtual-hackathon",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        }
+      ]
+    },
+    "publicIdea": {
+      "status": "DONE",
+      "queriesByAxis": {
+        "governmentPublic": [
+          "2026 10월 국민참여 정책 제안 아이디어 공모전 접수중"
+        ],
+        "industrySpecialized": [
+          "2026 10월 산업 아이디어 공모전 접수"
+        ],
+        "individualPrize": [
+          "2026 10월 서비스 기획 공모전 모집"
+        ]
+      },
+      "rawCandidates": [
+        {
+          "title": "2026 모바일신분증 아이디어 공모전",
+          "url": "https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&nttId=129837",
+          "disposition": "EXISTING",
+          "id": "mobile-id-idea-contest-2026"
+        },
+        {
+          "title": "2026 경기스포츠산업 공모전",
+          "url": "https://ggsports.spectory.net/innovation/contest?bno=60730",
+          "disposition": "EXISTING",
+          "id": "gyeonggi-sports-industry-contest-2026"
+        },
+        {
+          "title": "2026년 서민금융진흥원 대국민 혁신 아이디어 공모전",
+          "url": "https://www.kinfa.or.kr/customerService/exhibitionDetail.do?seq=30532",
+          "disposition": "CLOSED",
+          "id": "kinfa-public-innovation-idea-2026"
+        },
+        {
+          "title": "2026 우체국물류지원단 대국민 혁신 아이디어 공모전",
+          "url": "https://www.pola.or.kr/web/cop/bbs/selectBoardArticle.do?adminSearchYn=N&bbsId=BBSMSTR_000000000018&nttId=11236&pageIndex=1&searchCnd=0&searchWrd=",
+          "disposition": "CLOSED",
+          "id": "pola-public-innovation-idea-2026"
+        },
+        {
+          "title": "문화·관광·콘텐츠 분야 대국민 연구 아이디어 공모",
+          "url": "https://www.gwto.or.kr/www/selectBbsNttView.do?bbsNo=3&integrDeptCode=-+%EC%A4%80%EA%B3%B5%EA%B4%80%EB%A0%A8%28%EA%B4%91%EA%B3%A0%29&key=23&nttNo=3070&pageIndex=1&searchCnd=all&searchCtgry=&searchKrwd=",
+          "disposition": "EXISTING",
+          "id": "kcti-cultural-tourism-research-idea-2026"
+        },
+        {
+          "title": "전라남도 사회적경제 청년 창업 아이디어 경진대회",
+          "url": "https://jn-se.kr/bbs/board.php?bo_table=nco4_1&w=u&wr_id=1360",
+          "disposition": "CLOSED",
+          "id": "jeonnam-social-economy-youth-startup-idea-2026"
+        },
+        {
+          "title": "2026 제2회 반려동물 창업 아이디어 경진대회",
+          "url": "https://www.kcaia.kr/notice/17",
+          "disposition": "CLOSED",
+          "id": "pet-startup-idea-contest-second-2026"
+        },
+        {
+          "title": "아이디어•건축•창업 문화·관광·콘텐츠 분야 대국민 연구 아이디어 공모 8",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202607090072",
+          "disposition": "EXISTING",
+          "id": "kcti-cultural-tourism-research-idea-2026",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "아이디어•건축•창업 2026년 대구광역시 중구「2030청년창업지원센터」 중구 관광 융복합 비즈니스모델 경진대회 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202610020011",
+          "disposition": "PUBLISHED",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope",
+          "id": "daegu-junggu-tourism-business-model-2026"
+        },
+        {
+          "title": "아이디어•건축•창업 2026년 성남시 탄소중립 아이디어 공모전 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202610020013",
+          "disposition": "PUBLISHED",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope",
+          "id": "seongnam-carbon-neutrality-idea-2026"
+        },
+        {
+          "title": "아이디어•건축•창업 요리•뷰티•배우•오디션 2026 충남 로컬메이드 제품개발 공모전 0",
+          "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202610120068",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "[2026-10-01 15:00 ~ 2026-10-26 23:59] 【한국교육학술정보원】 2026년 전국 독서교육 우수사례 공모전 한국교육학술정보원 의견 작성 수0 공유 수0",
+          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=16dfa244d41f4c01bfbbb482e67ea822&menu_id=527&pagetype=bbs",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【감사원】 국민제안 감사 아이디어 공모 감사원 대변인 홍보담당관 의견 작성 수0 공유 수1",
+          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=2d5934930c3e4b9a8a9fe40cdb81bdf9&menu_id=527&pagetype=bbs",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【행정안전부】 제7차 열린정부 실행계획 국민제안공모 행정안전부 참여혁신조직실 참여혁신국 혁신기획과 의견 작성 수0 공유 수0",
+          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=5657d4f1636f406182359c88f0847e49&menu_id=527&pagetype=bbs",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【행정안전부】 2026 모바일신분증 아이디어 공모전 행정안전부 인공지능정부실 인공지능정부서비스국 국민맞춤서비스과 의견 작성 수0 공유 수9",
+          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=567b5562322d43f0b806794dfc27bdd9&menu_id=527&pagetype=bbs",
+          "disposition": "EXISTING",
+          "id": "mobile-id-idea-contest-2026",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "2026년 성남시 탄소중립 아이디어 공모전",
+          "url": "https://www.seongnam.go.kr/pm010201/6437",
+          "disposition": "PUBLISHED",
+          "id": "seongnam-carbon-neutrality-idea-2026"
+        },
+        {
+          "title": "2026 대구 중구 관광 융복합 비즈니스모델 경진대회",
+          "url": "https://thecompanyc.com/web/contents/recruitment/view.php?ed_id=114",
+          "disposition": "PUBLISHED",
+          "id": "daegu-junggu-tourism-business-model-2026"
+        }
+      ]
+    },
+    "startupSupport": {
+      "status": "DONE",
+      "queriesByAxis": {
+        "kstartupBusinessInfo": [
+          "2026 10월 예비창업자 창업지원 사업 모집"
+        ],
+        "sbaSeoul": [
+          "2026 10월 창업 사업화 PoC 보육 멘토링 모집"
+        ],
+        "nipaKisa": [
+          "2026 10월 창업공간 입주기업 예비창업 모집"
+        ],
+        "credits": [
+          "2026 startup GPU cloud API SaaS credits free application"
+        ],
+        "fintechSupport": [
+          "2026 October accelerator preseed incubator application open"
+        ]
+      },
+      "rawCandidates": [
+        {
+          "title": "2026년 서울 기후테크 기업 및 예비창업자 멘토링 지원사업",
+          "url": "https://hub.kaia.re.kr/organSupportHub.do/view?orgKind=ORG_KIND_2&rltdId=117645",
+          "disposition": "EXISTING",
+          "id": "seoul-climatetech-mentoring-2026"
+        },
+        {
+          "title": "2027년 제2서울핀테크랩 신규 입주·멤버십 기업 모집",
+          "url": "https://www.seoul.go.kr/news/news_report.do?nttNo=466893&srchCtgry=464",
+          "disposition": "EXISTING",
+          "id": "seoul-fintechlab2-2027-recruit-2026"
+        },
+        {
+          "title": "2026년 제4차 용인시 창업지원센터 입주기업 모집",
+          "url": "https://ybs.ypa.or.kr/poratlAppFormDtl.do?regNo=RGS_0000000000000669",
+          "disposition": "EXISTING",
+          "id": "yongin-startup-center-fourth-2026"
+        },
+        {
+          "title": "도봉구청년창업센터 10월 전문가 창업상담",
+          "url": "https://dobongstartup.com/program/programview.php?pg_id=279",
+          "disposition": "EXISTING",
+          "id": "dobong-oct-startup-consulting-2026"
+        },
+        {
+          "title": "동국대학교 BMC창업보육센터(고양) 신규 입주기업 모집 6차",
+          "url": "https://www.k-startup.go.kr/web/main/mainSectionChNaviList.do",
+          "disposition": "EXISTING",
+          "id": "dongguk-bmc-goyang-bi-sixth-2026"
+        },
+        {
+          "title": "2026 명지전문대학 MJC 창업보육(Ⅰ)센터 신규 입주기업 상시모집",
+          "url": "https://www.smes.go.kr/binet/board/editViewPop.do?boardID=RECRUIT&postSeq=999829990",
+          "disposition": "EXISTING",
+          "id": "mjc-bi-2026"
+        },
+        {
+          "title": "2026년 강북창업지원센터 10월 창업 교육 및 그룹상담",
+          "url": "https://www.gbmaru.com/startup/programs/21497",
+          "disposition": "EXISTING",
+          "id": "gangbuk-startup-oct-education-2026"
+        },
+        {
+          "title": "애자일 피보팅: 시장 변화를 기회로 만드는 기술창업 전략",
+          "url": "https://hub.kaia.re.kr/organSupportHub.do/view?curPage=10&orgKind=ORG_KIND_2&rltdId=122233",
+          "disposition": "CLOSED",
+          "id": "agile-pivot-startup-lecture-2026"
+        },
+        {
+          "title": "서울창업센터 관악 × SK에코플랜트 2026 오픈이노베이션",
+          "url": "https://www.startup-plus.kr/project/PRJ007528",
+          "disposition": "CLOSED",
+          "id": "gwanak-sk-ecoplant-open-innovation-2026"
+        },
+        {
+          "title": "한국디지털융합교육협회 김지애 대표 구글 AI 제미나이 포천 무료특강",
+          "url": "https://grantly.kr/opportunities/13689",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "한국AI사물인터넷협회",
+          "url": "https://grantly.kr/opportunities/15048",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "[메디치이앤에스] 메디치교육센터",
+          "url": "https://grantly.kr/opportunities/15697",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "[경남] 2026년 바이오메디컬 AI 상용화 기반구축 기업지원 모집 공고",
+          "url": "https://grantly.kr/opportunities/16897",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "[용인시산업진흥원] 「2026년 용인 오픈이노베이션 교류회」 5회차(반도체/피지컬AI)",
+          "url": "https://grantly.kr/opportunities/16930",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "10월 13일 마감",
+          "url": "https://grantly.kr/opportunities/16963",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "2026년 10월 동네창업학교 교육생 모집 공고",
+          "url": "https://grantly.kr/opportunities/17084",
+          "disposition": "PUBLISHED",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope",
+          "id": "chungnam-neighborhood-startup-school-2026-10"
+        },
+        {
+          "title": "2026 국민대학교 글로벌 창업 챌린지 참가자 모집(~10/13(화) 까지)",
+          "url": "https://grantly.kr/opportunities/17110",
+          "disposition": "PUBLISHED",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope",
+          "id": "kmu-global-startup-challenge-2026"
+        },
+        {
+          "title": "전자신문인터넷",
+          "url": "https://grantly.kr/opportunities/17284",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "2026년 강원 미래모빌리티 기업지원 프로그램 모집 통합 공고",
+          "url": "https://grantly.kr/opportunities/17686",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "[무료 AI 역량강화 교육] 생성형 AI 기반 무역 금융 리스크 최적화 과정 (대전) 오늘마감",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178891&schM=view",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "「청년창업기업·사회적경제기업·예비창업자(소상공인) 대상」 2025년 제1기 서울콜라보레이션 청년 성공창업스쿨 교육생 모집 오늘마감",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179218&schM=view",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "2026 KMU 글로벌 창업 챌린지",
+          "url": "https://kmubiz.kookmin.ac.kr/template-a/etc-board/board01.do?mode=view&pid=12452",
+          "disposition": "PUBLISHED",
+          "id": "kmu-global-startup-challenge-2026"
+        },
+        {
+          "title": "충남 2026년 10월 동네창업학교",
+          "url": "https://bizinfo.go.kr/sie/siea/selectSIEA430Detail.do?area=&condition=&cpage=4&eventInfoId=EVEN_000000000069402&keyword=&orderGb=&rows=15&schEndAt=&schJrsdCodeTy=&sort=",
+          "disposition": "PUBLISHED",
+          "id": "chungnam-neighborhood-startup-school-2026-10"
+        }
+      ]
+    },
+    "upcomingOpenings": {
+      "status": "EXHAUSTED",
+      "queriesByAxis": {
+        "firstComeCountdown": [
+          "2026 10월 14일 공모전 접수 시작 선착순"
+        ],
+        "announcedNotOpen": [
+          "2026 October hackathon registration opens this week"
+        ]
+      },
+      "rawCandidates": [],
+      "exhaustedReason": "검색 결과의 원문 검토와 모든 독립 축의 정량 기준을 충족하지 못해 발행 증거 검증이 필요함"
+    },
+    "aiNews": {
+      "status": "EXHAUSTED",
+      "queriesByAxis": {
+        "officialProduct": [
+          "AI official new release October 2026 OpenAI Anthropic Google"
+        ],
+        "githubReleases": [
+          "GitHub AI agent release October 2026"
+        ],
+        "huggingFace": [
+          "Hugging Face trending models October 2026"
+        ],
+        "researchLabs": [
+          "arxiv AI papers October 12 2026"
+        ],
+        "communities": [
+          "site:news.ycombinator.com AI October 13 2026 top points",
+          "site:reddit.com/r/LocalLLaMA October 2026 popular AI"
+        ]
+      },
+      "rawCandidates": [
+        {
+          "title": "I turned my unused Kindle into a photo frame with GPT-6 Astra",
+          "url": "https://news.ycombinator.com/item?id=50064318",
+          "disposition": "EXISTING",
+          "communityEvidence": [
+            {
+              "platform": "Hacker News",
+              "url": "https://news.ycombinator.com/item?id=50064318",
+              "observedAt": "2026-10-13T13:44:55+09:00",
+              "metrics": {
+                "points": 133,
+                "comments": 90
+              },
+              "placement": "HN top stories #1 at crawler 2026-10-13T02:06:18Z",
+              "attentionReason": "Visible HN points/comments and independent substantive comments"
+            }
+          ],
+          "verificationUrls": [
+            "https://nirajrajgor.com/blog/kindle-photo-frame-with-ai"
+          ],
+          "verificationNote": "Original author project blog opened; commentators discussed prior implementations; not general model capability proof"
+        },
+        {
+          "title": "GLM-Legal discussion",
+          "url": "https://news.ycombinator.com/item?id=50058507",
+          "disposition": "EXISTING",
+          "communityEvidence": [
+            {
+              "platform": "Hacker News",
+              "url": "https://news.ycombinator.com/item?id=50058507",
+              "observedAt": "2026-10-13T13:44:55+09:00",
+              "metrics": {
+                "points": 481,
+                "comments": 277
+              },
+              "placement": "HN top stories #2 2026-10-13T02:06:18Z",
+              "attentionReason": "Visible HN points/comments"
+            }
+          ],
+          "verificationUrls": [
+            "https://z.ai/blog/glm-legal"
+          ],
+          "verificationNote": "Original announcement responds but page body unavailable; limit conclusions to community debate"
+        },
+        {
+          "title": "GPT-6 Astra helped me jailbreak my Kindle",
+          "url": "https://news.ycombinator.com/item?id=50064318",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "GLM-Legal",
+          "url": "https://news.ycombinator.com/item?id=50058507",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X",
+          "url": "https://news.ycombinator.com/item?id=50063365",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "Janas: Run LLMs larger than RAM by streaming experts from SSD",
+          "url": "https://news.ycombinator.com/item?id=50063717",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "킨들을 GPT-6 Astra로 디지털 액자로 전환한 개인 사용기",
+          "url": "https://news.ycombinator.com/item?id=50064318",
+          "disposition": "PUBLISHED",
+          "id": "kindle-photo-frame-ai-assistance-hn-2026-10-13",
+          "communityEvidence": [
+            {
+              "platform": "Hacker News",
+              "url": "https://news.ycombinator.com/item?id=50064318",
+              "observedAt": "2026-10-13T13:44:55+09:00",
+              "discussionDate": "2026-10-13 KST",
+              "metrics": {
+                "points": 133,
+                "comments": 90
+              },
+              "placement": "HN 1위 (source-cache 2026-10-13T02:06:18Z)",
+              "attentionReason": "상위 배치·점수·실제 댓글 읽음"
+            }
+          ],
+          "verificationUrls": [
+            "https://nirajrajgor.com/blog/kindle-photo-frame-with-ai"
+          ],
+          "verificationNote": "원문 제작기 확인, 기존 구현 선례에 관한 커뮤니티 이견 보존. 모델 기능에 대한 일반화 금지."
+        }
+      ],
+      "exhaustedReason": "검색 결과의 원문 검토와 모든 독립 축의 정량 기준을 충족하지 못해 발행 증거 검증이 필요함"
+    },
+    "aiDiscovery": {
+      "status": "DONE",
+      "queriesByAxis": {
+        "skillsMcpAgents": [
+          "2026 MCP agent skills GitHub registry active implementations October"
+        ],
+        "communities": [
+          "site:news.ycombinator.com item AI agent MCP skills community discussion October 2026"
+        ],
+        "github": [
+          "2026 trending github AI agent MCP skills open source October"
+        ],
+        "sitesDirectories": [
+          "2026 AI creative design video image generation tools new"
+        ],
+        "workflows": [
+          "AI writing automation reusable workflow agents 2026"
+        ],
+        "sourceRadar": [
+          "AI agent skills MCP directory 2026"
+        ]
+      },
+      "rawCandidates": [
+        {
+          "title": "morluto / rea",
+          "url": "https://github.com/morluto/rea",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "bilawalsidhu / gods-eye-view",
+          "url": "https://github.com/bilawalsidhu/gods-eye-view",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "mksglu / context-mode",
+          "url": "https://github.com/mksglu/context-mode",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "storytold / artcraft",
+          "url": "https://github.com/storytold/artcraft",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "open-webui / open-webui",
+          "url": "https://github.com/open-webui/open-webui",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "cathrynlavery / diagram-design",
+          "url": "https://github.com/cathrynlavery/diagram-design",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "lyogavin / airllm",
+          "url": "https://github.com/lyogavin/airllm",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "microsoft / BitNet",
+          "url": "https://github.com/microsoft/BitNet",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "Alishahryar1 / free-claude-code",
+          "url": "https://github.com/Alishahryar1/free-claude-code",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "google/embeddinggemma-2",
+          "url": "https://huggingface.co/google/embeddinggemma-2",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "jialinyyzz/humanizer",
+          "url": "https://huggingface.co/jialinyyzz/humanizer",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "Qwen/Qwen-Image-2.1-Turbo",
+          "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
+          "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "Cloudflare/clef",
+          "url": "https://huggingface.co/Cloudflare/clef",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "Lightricks/LTX-2.5",
+          "url": "https://huggingface.co/Lightricks/LTX-2.5",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "ConwayResearch/Underdog-Saluki-27B-1.0",
+          "url": "https://huggingface.co/ConwayResearch/Underdog-Saluki-27B-1.0",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "Qwen/Qwen3.8-27B",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "LiquidAI/d1-3B",
+          "url": "https://huggingface.co/LiquidAI/d1-3B",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "canberkkkkkk/ema-lightning",
+          "url": "https://huggingface.co/canberkkkkkk/ema-lightning",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "MiniMax H3 Turbo LoRA",
+          "url": "https://huggingface.co/spaces/Pepe104/MiniMax-H3-Turbo-Lora-UNCENSORED",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "Jev Decision Index",
+          "url": "https://huggingface.co/spaces/multimodalart/jev-decision-index",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "Wan2.2 14B Preview",
+          "url": "https://huggingface.co/spaces/kulkas2pintu/wan777",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "Model Pulse",
+          "url": "https://huggingface.co/spaces/tardellirs/model-pulse",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "BFS Best Face Swap",
+          "url": "https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "Qwen Image 2.1 Uncensored All-In-One LoRA Studio",
+          "url": "https://huggingface.co/spaces/arudradey/qwen-image-2.1-uncensored-aio-loras",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "The ultimate guide to multi-harness RL",
+          "url": "https://huggingface.co/spaces/FineEnvs/multi-harness-rl",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "Qwen Image 2.1 Uncensored GGUF Studio",
+          "url": "https://huggingface.co/spaces/arudradey/qwen-image-2.1-uncensored-gguf",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "Viggle Turbo for Qwen-Image-2.1",
+          "url": "https://huggingface.co/spaces/Viggle/Qwen-Image-2.1-viggle-turbo",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "LTX 2.3 10Eros Image-to-Video",
+          "url": "https://huggingface.co/spaces/00000tt/LTX-2.3-10Eros",
+          "disposition": "NOT_RELEVANT",
+          "reviewNote": "Shadow list lead; publication not authorized without primary/use-case verification"
+        },
+        {
+          "title": "Diagram Design agent skill",
+          "url": "https://github.com/cathrynlavery/diagram-design",
+          "disposition": "PUBLISHED",
+          "id": "cathrynlavery-diagram-design-skill",
+          "reviewNote": "Original README read via connected GitHub; installation example npx skills add cathrynlavery/diagram-design; implementation not tested"
+        }
+      ]
+    }
+  },
+  "fixedSources": {
+    "DACON": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.dacon.io/competitions",
+        "https://daker.ai/public/hackathons"
+      ],
+      "coverageNote": "Direct page fetch successes 2/2; no unverified page claimed",
+      "competitionsInventory": [
+        {
+          "title": "항만 문제해결을 위한 AI 기술 공모전",
+          "url": "https://www.dacon.io/competitions/official/236771/overview",
+          "disposition": "EXISTING",
+          "id": "dacon-port-ai-236771",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        }
+      ],
+      "dakerInventory": [
+        {
+          "title": "2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge",
+          "url": "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims",
+          "disposition": "EXISTING",
+          "id": "ai-platform-build-challenge-2026",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "국부펀드 KIC, AI 에이전트 공모전",
+          "url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
+          "disposition": "EXISTING",
+          "id": "kic-ai-agent-competition-2026",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        },
+        {
+          "title": "합성 미세구조 기반 재료 물성 예측 AI 경진대회",
+          "url": "https://daker.ai/public/hackathons/synthetic-microstructure-property-prediction-ai",
+          "disposition": "EXISTING",
+          "id": "daker-synthetic-microstructure-ai-2026",
+          "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+        }
+      ]
+    },
+    "Hackathon Korea": {
+      "status": "CHECKED",
+      "urls": [
+        "https://koreahackathons.com/"
+      ],
+      "coverageNote": "Direct page fetch successes 1/1; no unverified page claimed"
+    },
+    "Grantly": {
+      "status": "CHECKED",
+      "urls": [
+        "https://grantly.kr/opportunities/support"
+      ],
+      "coverageNote": "Direct page fetch successes 1/1; no unverified page claimed"
+    },
+    "링커리어": {
+      "status": "CHECKED",
+      "urls": [
+        "https://linkareer.com/",
+        "https://linkareer.com/activity/353451"
+      ],
+      "coverageNote": "Direct page fetch successes 2/2; no unverified page claimed"
+    },
+    "요즘것들": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.allforyoung.com/"
+      ],
+      "coverageNote": "Direct page fetch successes 1/1; no unverified page claimed"
+    },
+    "ContestKorea": {
+      "status": "FAILED",
+      "urls": [
+        "https://contestkorea.kr/"
+      ],
+      "coverageNote": "Direct page fetch successes 0/1; no unverified page claimed",
+      "sourceGap": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'contestkorea.kr'. (_ssl.c:1082)>",
+      "reason": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'contestkorea.kr'. (_ssl.c:1082)>"
+    },
+    "소통24": {
+      "status": "CHECKED",
+      "urls": [
+        "https://sotong.go.kr/front/epilogue/epilogueBbsList.do"
+      ],
+      "coverageNote": "Direct page fetch successes 1/1; no unverified page claimed"
+    },
+    "정책브리핑": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.korea.kr/news/policyNewsList.do"
+      ],
+      "coverageNote": "Direct page fetch successes 1/1; no unverified page claimed"
+    },
+    "AI_TOP_100": {
+      "status": "CHECKED",
+      "urls": [
+        "https://aitop100.org/"
+      ],
+      "coverageNote": "Direct page fetch successes 1/1; no unverified page claimed"
+    },
+    "EventUs/Luma/온오프믹스": {
+      "status": "CHECKED",
+      "urls": [
+        "https://event-us.kr/",
+        "https://luma.com/discover",
+        "https://www.onoffmix.com/event/main"
+      ],
+      "coverageNote": "Direct page fetch successes 3/3; no unverified page claimed"
+    },
+    "Devpost/Meetup": {
+      "status": "CHECKED",
+      "urls": [
+        "https://devpost.com/hackathons?status=open",
+        "https://www.meetup.com/find/?source=EVENTS&location=kr--Seoul"
+      ],
+      "coverageNote": "Direct page fetch successes 1/2; no unverified page claimed",
+      "sourceGap": "HTTP Error 403: Forbidden"
+    },
+    "K-Startup": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.k-startup.go.kr/web/main/mainSection0.do"
+      ],
+      "coverageNote": "Direct page fetch successes 1/1; no unverified page claimed"
+    },
+    "기업마당": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.bizinfo.go.kr/sii/siia/selectSIIA200View.do?pblancArea=400"
+      ],
+      "coverageNote": "Direct page fetch successes 1/1; no unverified page claimed"
+    },
+    "SBA": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.sba.seoul.kr/"
+      ],
+      "coverageNote": "Direct page fetch successes 1/1; no unverified page claimed"
+    },
+    "NIPA": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.nipa.kr/home/2-1"
+      ],
+      "coverageNote": "Direct page fetch successes 1/1; no unverified page claimed"
+    },
+    "KISA": {
+      "status": "FAILED",
+      "urls": [
+        "https://www.kisa.or.kr/"
+      ],
+      "coverageNote": "Direct page fetch successes 0/1; no unverified page claimed",
+      "sourceGap": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)>",
+      "reason": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)>"
+    },
+    "fintech": {
+      "status": "CHECKED",
+      "urls": [
+        "https://fintech.or.kr/",
+        "https://www.fsc.go.kr/"
+      ],
+      "coverageNote": "Direct page fetch successes 2/2; no unverified page claimed"
+    }
+  },
+  "machineSources": {
+    "contestKorea": [
+      {
+        "title": "아이디어•건축•창업 문화·관광·콘텐츠 분야 대국민 연구 아이디어 공모 8",
+        "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202607090072",
+        "disposition": "EXISTING",
+        "id": "kcti-cultural-tourism-research-idea-2026",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      },
+      {
+        "title": "아이디어•건축•창업 2026년 대구광역시 중구「2030청년창업지원센터」 중구 관광 융복합 비즈니스모델 경진대회 0",
+        "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202610020011",
+        "disposition": "PUBLISHED",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope",
+        "id": "daegu-junggu-tourism-business-model-2026"
+      },
+      {
+        "title": "아이디어•건축•창업 2026년 성남시 탄소중립 아이디어 공모전 0",
+        "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202610020013",
+        "disposition": "PUBLISHED",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope",
+        "id": "seongnam-carbon-neutrality-idea-2026"
+      },
+      {
+        "title": "아이디어•건축•창업 요리•뷰티•배우•오디션 2026 충남 로컬메이드 제품개발 공모전 0",
+        "url": "https://contestkorea.kr/sub/view.php?Txt_bcode=031410001&int_gbn=1&str_no=202610120068",
+        "disposition": "NOT_RELEVANT",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      }
+    ],
+    "daconCompetitions": [
+      {
+        "title": "항만 문제해결을 위한 AI 기술 공모전",
+        "url": "https://www.dacon.io/competitions/official/236771/overview",
+        "disposition": "EXISTING",
+        "id": "dacon-port-ai-236771",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      }
+    ],
+    "dakerHackathons": [
+      {
+        "title": "2026 AI 플랫폼 구축 경진대회 : AI Platform Build Challenge",
+        "url": "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims",
+        "disposition": "EXISTING",
+        "id": "ai-platform-build-challenge-2026",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      },
+      {
+        "title": "국부펀드 KIC, AI 에이전트 공모전",
+        "url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
+        "disposition": "EXISTING",
+        "id": "kic-ai-agent-competition-2026",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      },
+      {
+        "title": "합성 미세구조 기반 재료 물성 예측 AI 경진대회",
+        "url": "https://daker.ai/public/hackathons/synthetic-microstructure-property-prediction-ai",
+        "disposition": "EXISTING",
+        "id": "daker-synthetic-microstructure-ai-2026",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      }
+    ],
+    "grantlySupport": [
+      {
+        "title": "한국디지털융합교육협회 김지애 대표 구글 AI 제미나이 포천 무료특강",
+        "url": "https://grantly.kr/opportunities/13689",
+        "disposition": "NOT_RELEVANT",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      },
+      {
+        "title": "한국AI사물인터넷협회",
+        "url": "https://grantly.kr/opportunities/15048",
+        "disposition": "NOT_RELEVANT",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      },
+      {
+        "title": "[메디치이앤에스] 메디치교육센터",
+        "url": "https://grantly.kr/opportunities/15697",
+        "disposition": "NOT_RELEVANT",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      },
+      {
+        "title": "[경남] 2026년 바이오메디컬 AI 상용화 기반구축 기업지원 모집 공고",
+        "url": "https://grantly.kr/opportunities/16897",
+        "disposition": "NOT_RELEVANT",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      },
+      {
+        "title": "[용인시산업진흥원] 「2026년 용인 오픈이노베이션 교류회」 5회차(반도체/피지컬AI)",
+        "url": "https://grantly.kr/opportunities/16930",
+        "disposition": "NOT_RELEVANT",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      },
+      {
+        "title": "10월 13일 마감",
+        "url": "https://grantly.kr/opportunities/16963",
+        "disposition": "NOT_RELEVANT",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      },
+      {
+        "title": "2026년 10월 동네창업학교 교육생 모집 공고",
+        "url": "https://grantly.kr/opportunities/17084",
+        "disposition": "PUBLISHED",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope",
+        "id": "chungnam-neighborhood-startup-school-2026-10"
+      },
+      {
+        "title": "2026 국민대학교 글로벌 창업 챌린지 참가자 모집(~10/13(화) 까지)",
+        "url": "https://grantly.kr/opportunities/17110",
+        "disposition": "PUBLISHED",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope",
+        "id": "kmu-global-startup-challenge-2026"
+      },
+      {
+        "title": "전자신문인터넷",
+        "url": "https://grantly.kr/opportunities/17284",
+        "disposition": "NOT_RELEVANT",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      },
+      {
+        "title": "2026년 강원 미래모빌리티 기업지원 프로그램 모집 통합 공고",
+        "url": "https://grantly.kr/opportunities/17686",
+        "disposition": "NOT_RELEVANT",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      }
+    ],
+    "hackathonKorea": [
+      {
+        "title": "5일 후",
+        "url": "https://koreahackathons.com/events/ai-4cae1cd8",
+        "disposition": "NOT_RELEVANT",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      },
+      {
+        "title": "11일 후",
+        "url": "https://koreahackathons.com/events/cursor-hackathon-seoul-4th",
+        "disposition": "NOT_RELEVANT",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      },
+      {
+        "title": "5일 후",
+        "url": "https://koreahackathons.com/events/daytona-hacksprint-seoul",
+        "disposition": "NOT_RELEVANT",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      },
+      {
+        "title": "34일 후",
+        "url": "https://koreahackathons.com/events/kuk-virtual-hackathon",
+        "disposition": "NOT_RELEVANT",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      }
+    ],
+    "kStartupHighlights": [
+      {
+        "title": "[무료 AI 역량강화 교육] 생성형 AI 기반 무역 금융 리스크 최적화 과정 (대전) 오늘마감",
+        "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178891&schM=view",
+        "disposition": "NOT_RELEVANT",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      },
+      {
+        "title": "「청년창업기업·사회적경제기업·예비창업자(소상공인) 대상」 2025년 제1기 서울콜라보레이션 청년 성공창업스쿨 교육생 모집 오늘마감",
+        "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179218&schM=view",
+        "disposition": "NOT_RELEVANT",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      }
+    ],
+    "sotong24Contests": [
+      {
+        "title": "[2026-10-01 15:00 ~ 2026-10-26 23:59] 【한국교육학술정보원】 2026년 전국 독서교육 우수사례 공모전 한국교육학술정보원 의견 작성 수0 공유 수0",
+        "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=16dfa244d41f4c01bfbbb482e67ea822&menu_id=527&pagetype=bbs",
+        "disposition": "NOT_RELEVANT",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      },
+      {
+        "title": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【감사원】 국민제안 감사 아이디어 공모 감사원 대변인 홍보담당관 의견 작성 수0 공유 수1",
+        "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=2d5934930c3e4b9a8a9fe40cdb81bdf9&menu_id=527&pagetype=bbs",
+        "disposition": "NOT_RELEVANT",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      },
+      {
+        "title": "[2026-10-01 00:00 ~ 2026-10-31 23:59] 【행정안전부】 제7차 열린정부 실행계획 국민제안공모 행정안전부 참여혁신조직실 참여혁신국 혁신기획과 의견 작성 수0 공유 수0",
+        "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=5657d4f1636f406182359c88f0847e49&menu_id=527&pagetype=bbs",
+        "disposition": "NOT_RELEVANT",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      },
+      {
+        "title": "[2026-10-01 09:00 ~ 2026-10-30 18:00] 【행정안전부】 2026 모바일신분증 아이디어 공모전 행정안전부 인공지능정부실 인공지능정부서비스국 국민맞춤서비스과 의견 작성 수0 공유 수9",
+        "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=567b5562322d43f0b806794dfc27bdd9&menu_id=527&pagetype=bbs",
+        "disposition": "EXISTING",
+        "id": "mobile-id-idea-contest-2026",
+        "reviewNote": "Primary/aggregator page inspected; NOT_RELEVANT means not selected for this snapshot, not necessarily categorically out of scope"
+      }
+    ]
+  },
+  "districts": {
+    "nowon": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.nowon.kr/",
+        "https://nowon.kr/youth/user/main.do",
+        "https://www.nowon.kr/www/user/bbs/BD_selectBbsList.do?q_bbsCode=1084"
+      ],
+      "coverageNote": "Sites and specified listings fetched; no claim every application was manually reviewed"
+    },
+    "dobong": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.dobong.go.kr/",
+        "https://dobongstartup.com/",
+        "https://dobongstartup.com/bbs/board.php?bo_table=donotic&wr_id=169",
+        "https://dobongstartup.com/program/programview.php?pg_id=279"
+      ],
+      "coverageNote": "Sites and specified listings fetched; no claim every application was manually reviewed"
+    },
+    "gangbuk": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.gangbuk.go.kr/",
+        "https://www.gbmaru.com/",
+        "https://www.gbmaru.com/startup/notice/21451",
+        "http://www.gangbuk.go.kr/"
+      ],
+      "coverageNote": "Sites and specified listings fetched; no claim every application was manually reviewed"
+    }
+  },
+  "reverifiedIds": [
+    "nebius-nvidia-global-ai-hackathon-2026",
+    "amazon-developer-hackathon-2026",
+    "opencv-ai-competition-2026",
+    "banana-hacks-2026",
+    "data-ai-innovation-challenge-2026",
+    "public-web-illegal-ad-detector-2026",
+    "space-hackathon-2026",
+    "employment24-ai-service-hackathon-2026",
+    "at-agri-price-ai-hackathon-2026",
+    "build-with-ai-basics-devpost-2026",
+    "dacon-port-ai-236771",
+    "gitlab-life-after-code-2026",
+    "blaybus-uyeon-table-mvp-2026",
+    "kisti-data-ai-analysis-2026",
+    "qloo-agentic-hackathon-2026",
+    "paypal-ai-hackathon-2026",
+    "pqc-transition-challenge-hackathon-2026",
+    "hack-apertus-online-2026",
+    "youcam-api-skin-ai-ecommerce-2026",
+    "cursor-hackathon-seoul-4-2026",
+    "dmc-innovation-camp-2026",
+    "mobile-id-idea-contest-2026",
+    "gyeonggi-sports-industry-contest-2026",
+    "kinfa-public-innovation-idea-2026",
+    "pola-public-innovation-idea-2026",
+    "uijeongbu-ai-innovation-idea-2026",
+    "kic-ai-agent-competition-2026",
+    "ai-platform-build-challenge-2026",
+    "daker-synthetic-microstructure-ai-2026",
+    "korea-clinical-datathon-2026",
+    "kcti-cultural-tourism-research-idea-2026",
+    "jeonnam-social-economy-youth-startup-idea-2026",
+    "pet-startup-idea-contest-second-2026",
+    "seoul-climatetech-mentoring-2026",
+    "seoul-fintechlab2-2027-recruit-2026",
+    "yongin-startup-center-fourth-2026",
+    "dobong-oct-startup-consulting-2026",
+    "dongguk-bmc-goyang-bi-sixth-2026",
+    "mjc-bi-2026",
+    "gangbuk-startup-oct-education-2026",
+    "agile-pivot-startup-lecture-2026",
+    "gwanak-sk-ecoplant-open-innovation-2026"
+  ],
+  "publishedIds": [
+    "seongnam-carbon-neutrality-idea-2026",
+    "daegu-junggu-tourism-business-model-2026",
+    "kmu-global-startup-challenge-2026",
+    "chungnam-neighborhood-startup-school-2026-10",
+    "kindle-photo-frame-ai-assistance-hn-2026-10-13",
+    "cathrynlavery-diagram-design-skill"
+  ],
+  "reverificationFailures": [],
+  "reverificationEvidence": [
+    {
+      "id": "nebius-nvidia-global-ai-hackathon-2026",
+      "primarySourceUrl": "https://nebiusglobalaihackathon.devpost.com/rules",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "amazon-developer-hackathon-2026",
+      "primarySourceUrl": "https://amazonappdev2026.devpost.com/rules",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "opencv-ai-competition-2026",
+      "primarySourceUrl": "https://opencv26.devpost.com/rules",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "banana-hacks-2026",
+      "primarySourceUrl": "https://www.bananahacks.tech/",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Official HTML page text fetched and inspected"
+    },
+    {
+      "id": "data-ai-innovation-challenge-2026",
+      "primarySourceUrl": "https://www.kdata.or.kr/kr/board/notice_01/boardView.do?bbsIdx=39016",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Official HTML page text fetched and inspected"
+    },
+    {
+      "id": "public-web-illegal-ad-detector-2026",
+      "primarySourceUrl": "https://www.mois.go.kr/frt/bbs/type013/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000006&nttId=129458",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Official HTML page text fetched and inspected"
+    },
+    {
+      "id": "space-hackathon-2026",
+      "primarySourceUrl": "https://www.space-hackathon.kr/sh_page/page33.php",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Official HTML page text fetched and inspected"
+    },
+    {
+      "id": "employment24-ai-service-hackathon-2026",
+      "primarySourceUrl": "https://www.xn--299alkwa683hrtfsfp2mn8g3zd53kbtag2cdzeds0aqoj3nl9jq.com/",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Official HTML page text fetched and inspected"
+    },
+    {
+      "id": "at-agri-price-ai-hackathon-2026",
+      "primarySourceUrl": "https://hackathon.imaginationgroup.co.kr/nongnet",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Official HTML page text fetched and inspected"
+    },
+    {
+      "id": "build-with-ai-basics-devpost-2026",
+      "primarySourceUrl": "https://learn-ai-basics.devpost.com/rules",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "dacon-port-ai-236771",
+      "primarySourceUrl": "https://dacon.io/competitions/official/236771/overview/description",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Official HTML page text fetched and inspected"
+    },
+    {
+      "id": "gitlab-life-after-code-2026",
+      "primarySourceUrl": "https://gitlab-transcend.devpost.com/",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "blaybus-uyeon-table-mvp-2026",
+      "primarySourceUrl": "https://www.blaybus.com/",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "kisti-data-ai-analysis-2026",
+      "primarySourceUrl": "https://aida.kisti.re.kr/competition/",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "qloo-agentic-hackathon-2026",
+      "primarySourceUrl": "https://qloo.devpost.com/rules",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "paypal-ai-hackathon-2026",
+      "primarySourceUrl": "https://paypalaihackathon.devpost.com/rules",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "pqc-transition-challenge-hackathon-2026",
+      "primarySourceUrl": "https://www.pqcchallenge.kr/",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Official HTML page text fetched and inspected"
+    },
+    {
+      "id": "hack-apertus-online-2026",
+      "primarySourceUrl": "https://hackapertus.devpost.com/",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "youcam-api-skin-ai-ecommerce-2026",
+      "primarySourceUrl": "https://youcam-api-skin-ai-ecommerce.devpost.com/rules",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "cursor-hackathon-seoul-4-2026",
+      "primarySourceUrl": "https://luma.com/06x2etd7",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Official HTML page text fetched and inspected"
+    },
+    {
+      "id": "dmc-innovation-camp-2026",
+      "primarySourceUrl": "https://dmcportal.kr/",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "mobile-id-idea-contest-2026",
+      "primarySourceUrl": "https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&nttId=129837",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Official HTML page text fetched and inspected"
+    },
+    {
+      "id": "gyeonggi-sports-industry-contest-2026",
+      "primarySourceUrl": "https://ggsports.spectory.net/innovation/contest?bno=60730",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "kinfa-public-innovation-idea-2026",
+      "primarySourceUrl": "https://www.kinfa.or.kr/customerService/exhibitionDetail.do?seq=30532",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Official HTML page text fetched and inspected"
+    },
+    {
+      "id": "pola-public-innovation-idea-2026",
+      "primarySourceUrl": "https://www.pola.or.kr/web/cop/bbs/selectBoardArticle.do?adminSearchYn=N&bbsId=BBSMSTR_000000000018&nttId=11236&pageIndex=1&searchCnd=0&searchWrd=",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Official HTML page text fetched and inspected"
+    },
+    {
+      "id": "uijeongbu-ai-innovation-idea-2026",
+      "primarySourceUrl": "https://www.uiuc.or.kr/companyNotice/noticePage/notice/view.do?bbsId=BBSMSTR_000000000001&nttId=5514",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Official HTML page text fetched and inspected"
+    },
+    {
+      "id": "kic-ai-agent-competition-2026",
+      "primarySourceUrl": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "ai-platform-build-challenge-2026",
+      "primarySourceUrl": "https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "daker-synthetic-microstructure-ai-2026",
+      "primarySourceUrl": "https://daker.ai/public/hackathons/synthetic-microstructure-property-prediction-ai",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "korea-clinical-datathon-2026",
+      "primarySourceUrl": "https://www.datathon.kr/",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Official HTML page text fetched and inspected"
+    },
+    {
+      "id": "kcti-cultural-tourism-research-idea-2026",
+      "primarySourceUrl": "https://www.gwto.or.kr/www/selectBbsNttView.do?bbsNo=3&integrDeptCode=-+%EC%A4%80%EA%B3%B5%EA%B4%80%EB%A0%A8%28%EA%B4%91%EA%B3%A0%29&key=23&nttNo=3070&pageIndex=1&searchCnd=all&searchCtgry=&searchKrwd=",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "jeonnam-social-economy-youth-startup-idea-2026",
+      "primarySourceUrl": "https://jn-se.kr/bbs/board.php?bo_table=nco4_1&w=u&wr_id=1360",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Official HTML page text fetched and inspected"
+    },
+    {
+      "id": "pet-startup-idea-contest-second-2026",
+      "primarySourceUrl": "https://www.kcaia.kr/notice/17",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Official HTML page text fetched and inspected"
+    },
+    {
+      "id": "seoul-climatetech-mentoring-2026",
+      "primarySourceUrl": "https://hub.kaia.re.kr/organSupportHub.do/view?orgKind=ORG_KIND_2&rltdId=117645",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "seoul-fintechlab2-2027-recruit-2026",
+      "primarySourceUrl": "https://www.seoul.go.kr/news/news_report.do?nttNo=466893&srchCtgry=464",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Official HTML page text fetched and inspected"
+    },
+    {
+      "id": "yongin-startup-center-fourth-2026",
+      "primarySourceUrl": "https://ybs.ypa.or.kr/poratlAppFormDtl.do?regNo=RGS_0000000000000669",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "dobong-oct-startup-consulting-2026",
+      "primarySourceUrl": "https://dobongstartup.com/program/programview.php?pg_id=279",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Official HTML page text fetched and inspected"
+    },
+    {
+      "id": "dongguk-bmc-goyang-bi-sixth-2026",
+      "primarySourceUrl": "https://www.k-startup.go.kr/web/main/mainSectionChNaviList.do",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "mjc-bi-2026",
+      "primarySourceUrl": "https://www.smes.go.kr/binet/board/editViewPop.do?boardID=RECRUIT&postSeq=999829990",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "gangbuk-startup-oct-education-2026",
+      "primarySourceUrl": "https://www.gbmaru.com/startup/programs/21497",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "agile-pivot-startup-lecture-2026",
+      "primarySourceUrl": "https://hub.kaia.re.kr/organSupportHub.do/view?curPage=10&orgKind=ORG_KIND_2&rltdId=122233",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Public official page read via web lookup"
+    },
+    {
+      "id": "gwanak-sk-ecoplant-open-innovation-2026",
+      "primarySourceUrl": "https://www.startup-plus.kr/project/PRJ007528",
+      "verifiedAt": "2026-10-13T13:44:55+09:00",
+      "verificationNote": "Official HTML page text fetched and inspected"
+    }
+  ],
+  "sourceGaps": [
+    {
+      "source": "devpostOpen",
+      "reason": "Today Playwright crawler reported FAILED; separate original Devpost primary-page web lookups performed where accessible"
+    },
+    {
+      "source": "ContestKorea",
+      "reason": "Source .kr TLS hostname mismatch on direct urllib; each of four URLs also accessed through .com alternate (HTTP 200)"
+    },
+    {
+      "source": "KISA",
+      "reason": "SSL hostname mismatch on automated primary page fetch; no bypass used"
+    }
+  ],
+  "observationBoundaries": [
+    {
+      "id": "nebius-nvidia-global-ai-hackathon-2026",
+      "error": "HTTP Error 403: Forbidden",
+      "substituteSource": "https://nebiusglobalaihackathon.devpost.com/rules"
+    },
+    {
+      "id": "amazon-developer-hackathon-2026",
+      "error": "HTTP Error 403: Forbidden",
+      "substituteSource": "https://amazonappdev2026.devpost.com/rules"
+    },
+    {
+      "id": "opencv-ai-competition-2026",
+      "error": "HTTP Error 403: Forbidden",
+      "substituteSource": "https://opencv26.devpost.com/rules"
+    },
+    {
+      "id": "build-with-ai-basics-devpost-2026",
+      "error": "HTTP Error 403: Forbidden",
+      "substituteSource": "https://learn-ai-basics.devpost.com/rules"
+    },
+    {
+      "id": "gitlab-life-after-code-2026",
+      "error": "HTTP Error 403: Forbidden",
+      "substituteSource": "https://gitlab-transcend.devpost.com/"
+    },
+    {
+      "id": "qloo-agentic-hackathon-2026",
+      "error": "HTTP Error 403: Forbidden",
+      "substituteSource": "https://qloo.devpost.com/rules"
+    },
+    {
+      "id": "paypal-ai-hackathon-2026",
+      "error": "HTTP Error 403: Forbidden",
+      "substituteSource": "https://paypalaihackathon.devpost.com/rules"
+    },
+    {
+      "id": "hack-apertus-online-2026",
+      "error": "HTTP Error 403: Forbidden",
+      "substituteSource": "https://hackapertus.devpost.com/"
+    },
+    {
+      "id": "youcam-api-skin-ai-ecommerce-2026",
+      "error": "HTTP Error 403: Forbidden",
+      "substituteSource": "https://youcam-api-skin-ai-ecommerce.devpost.com/rules"
+    }
+  ],
+  "status": "DRAFT_NOT_VALIDATED",
+  "researchLimitations": [
+    "34 search result pages HTTP200 but result extractor returned zero; no candidate attributed to these result pages",
+    "Unverified due items deliberately excluded from reverifiedIds"
+  ]
+}
