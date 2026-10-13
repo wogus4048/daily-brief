@@ -36,6 +36,7 @@
 - 트랙: `aiData`(후보 10개 이상), `generalSoftware`(15개 이상), `publicIdea`(10개 이상), `startupSupport`(15개 이상), `upcomingOpenings`, `aiNews`, `aiDiscovery`.
 - 후보 수를 채우지 못하면 여러 검색 축을 소진했다는 사유를 기록한다. `aiNews`는 `officialProduct`, `githubReleases`, `huggingFace`, `researchLabs`, `communities` 축의 실제 검색어를 모두 기록한다.
 - 한 트랙에서 후보가 많이 나와도 다른 트랙은 생략하지 않는다.
+- 검색 결과 페이지는 열렸는데 추출된 결과가 0건이면 "후보 없음"으로 처리하지 않는다. 다른 검색 도구, 검색어 변형, 해당 사이트의 자체 검색으로 다시 시도한다. 그래도 결과를 얻지 못하면 그 검색어를 `sourceGaps`에 추출 실패로 기록한다.
 - 완료 기준: 모든 트랙에 실제 검색어, 후보 제목·URL, 처분(`PUBLISHED`/`EXISTING`/`DUPLICATE`/`INELIGIBLE`/`CLOSED`/`NOT_RELEVANT`)이 있다.
 
 ## 5. 고정 출처, 크롤러 목록, 지역 점검
@@ -57,6 +58,7 @@
 - 기존 id와 `firstSeenDate`를 보존한다. 단순 재확인은 `lastVerifiedDate`만 바꾼다. GitHub 별·포크 수는 손대지 않는다.
 
 ## 8. 검증과 복구 묶음
+- 검증 전에 research 기록의 서술을 최종 상태에 맞춘다. `status`는 `COMPLETE`로 쓰거나 생략한다. `DRAFT_NOT_VALIDATED` 같은 초안 표시가 남아 있으면 발행이 막힌다. `researchLimitations`에는 실제로 남은 한계만 남긴다.
 - 기준선: current main의 `data/latest.json` 사본을 `baseline-latest.json`으로 저장한다.
 - `python3 scripts/validate_data.py data/latest.json`
 - `python3 scripts/validate_research_audit.py data/research/YYYY-MM-DD.json data/latest.json baseline-latest.json`

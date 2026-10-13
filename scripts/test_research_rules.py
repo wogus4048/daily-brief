@@ -3,6 +3,7 @@
 
 import copy
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -14,6 +15,8 @@ from research_rules import is_reverification_due, nearest_deadline_date, normali
 from research_worklist import build_worklist
 
 ROOT = Path(__file__).resolve().parents[1]
+# Decode child output as UTF-8 regardless of the host locale (e.g. cp949 on Windows).
+UTF8_RUN = dict(capture_output=True, encoding="utf-8", env={**os.environ, "PYTHONIOENCODING": "utf-8"})
 
 
 class RiskRulesTest(unittest.TestCase):
@@ -61,14 +64,14 @@ class RiskRulesTest(unittest.TestCase):
                 ("data/source-cache/2026-10-11.json", "data/source-cache/2026-10-11.json"),
             ):
                 (root / target).write_bytes((ROOT / source).read_bytes())
-            sample_cache = json.loads((root / "data/source-cache/2026-10-11.json").read_text())
+            sample_cache = json.loads((root / "data/source-cache/2026-10-11.json").read_text(encoding="utf-8"))
             fixture_manifest = {
                 "active": [
                     {"key": key, "required": key in ("daconCompetitions", "dakerHackathons")}
                     for key in sample_cache["sources"]
                 ]
             }
-            (root / "data/crawler-sources.json").write_text(json.dumps(fixture_manifest))
+            (root / "data/crawler-sources.json").write_text(json.dumps(fixture_manifest), encoding="utf-8")
             plan = build_worklist("2026-10-11", root=root)
             self.assertTrue(plan["cachePresentAndCurrent"])
             self.assertEqual(plan["baselineDate"], "2026-10-07")
@@ -82,20 +85,20 @@ class RiskRulesTest(unittest.TestCase):
 class EvidenceGateIntegrationTest(unittest.TestCase):
     def make_fixture(self, directory):
         """Synthetic test-only evidence to isolate URL completeness enforcement."""
-        cache = json.loads((ROOT / "data/source-cache/2026-10-11.json").read_text())
+        cache = json.loads((ROOT / "data/source-cache/2026-10-11.json").read_text(encoding="utf-8"))
         (directory / "scripts").mkdir()
         (directory / "data/source-cache").mkdir(parents=True)
         for name in ("validate_research_audit.py", "research_rules.py"):
             (directory / "scripts" / name).write_bytes((ROOT / "scripts" / name).read_bytes())
-        (directory / "data/source-cache/2026-10-11.json").write_text(json.dumps(cache))
+        (directory / "data/source-cache/2026-10-11.json").write_text(json.dumps(cache), encoding="utf-8")
         (directory / "data/crawler-sources.json").write_text(json.dumps({
             "active": [
                 {"key": key, "required": key in ("daconCompetitions", "dakerHackathons")}
                 for key in cache["sources"]
             ]
-        }))
-        snapshot = json.loads((ROOT / "data/latest.json").read_text())
-        audit = json.loads((ROOT / "data/research/2026-10-07.json").read_text())
+        }), encoding="utf-8")
+        snapshot = json.loads((ROOT / "data/latest.json").read_text(encoding="utf-8"))
+        audit = json.loads((ROOT / "data/research/2026-10-07.json").read_text(encoding="utf-8"))
         snapshot["date"] = "2026-10-11"
         audit["date"] = "2026-10-11"
         audit["completedAt"] = "2026-10-11T13:00:00+09:00"
@@ -133,7 +136,7 @@ class EvidenceGateIntegrationTest(unittest.TestCase):
         return subprocess.run(
             [sys.executable, str(data_path.parent / "scripts/validate_research_audit.py"),
              str(audit_path), str(data_path)],
-            cwd=data_path.parent, capture_output=True, text=True,
+            cwd=data_path.parent, **UTF8_RUN,
         )
 
     def test_missing_distinct_query_item_is_blocked(self):
@@ -146,6 +149,21 @@ class EvidenceGateIntegrationTest(unittest.TestCase):
             bad = self.validate(data_path, audit_path)
             self.assertNotEqual(bad.returncode, 0)
             self.assertIn("kStartupHighlights crawler inventory not fully reviewed", bad.stderr)
+
+    def test_draft_status_marker_is_blocked(self):
+        # 2026-10-13 was promoted with a leftover "DRAFT_NOT_VALIDATED" marker.
+        with tempfile.TemporaryDirectory() as temp:
+            data_path, audit_path, audit = self.make_fixture(Path(temp))
+            for status in ("DRAFT_NOT_VALIDATED", "IN_PROGRESS", ""):
+                audit["status"] = status
+                audit_path.write_text(json.dumps(audit, ensure_ascii=False), encoding="utf-8")
+                bad = self.validate(data_path, audit_path)
+                self.assertNotEqual(bad.returncode, 0, status)
+                self.assertIn("research audit status must be COMPLETE", bad.stderr)
+            audit["status"] = "COMPLETE"
+            audit_path.write_text(json.dumps(audit, ensure_ascii=False), encoding="utf-8")
+            ok = self.validate(data_path, audit_path)
+            self.assertEqual(ok.returncode, 0, ok.stderr)
 
     def test_material_change_cannot_skip_official_verification(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -173,7 +191,7 @@ class EvidenceGateIntegrationTest(unittest.TestCase):
                 sys.executable, str(directory / "scripts/validate_research_audit.py"),
                 str(audit_path), str(data_path), str(baseline_path),
             ]
-            bad = subprocess.run(cmd, cwd=directory, capture_output=True, text=True)
+            bad = subprocess.run(cmd, cwd=directory, **UTF8_RUN)
             self.assertNotEqual(bad.returncode, 0)
             self.assertIn("material opportunity changes require official re-verification", bad.stderr)
 
@@ -187,7 +205,7 @@ class EvidenceGateIntegrationTest(unittest.TestCase):
             }]
             data_path.write_text(json.dumps(snapshot, ensure_ascii=False), encoding="utf-8")
             audit_path.write_text(json.dumps(audit, ensure_ascii=False), encoding="utf-8")
-            ok = subprocess.run(cmd, cwd=directory, capture_output=True, text=True)
+            ok = subprocess.run(cmd, cwd=directory, **UTF8_RUN)
             self.assertEqual(ok.returncode, 0, ok.stderr)
 
             for bad_url, bad_stamp, expected_error in (
@@ -204,7 +222,7 @@ class EvidenceGateIntegrationTest(unittest.TestCase):
                 audit["reverificationEvidence"][0]["primarySourceUrl"] = bad_url
                 audit["reverificationEvidence"][0]["verifiedAt"] = bad_stamp
                 audit_path.write_text(json.dumps(audit, ensure_ascii=False), encoding="utf-8")
-                result = subprocess.run(cmd, cwd=directory, capture_output=True, text=True)
+                result = subprocess.run(cmd, cwd=directory, **UTF8_RUN)
                 self.assertNotEqual(result.returncode, 0)
                 self.assertIn(expected_error, result.stderr)
 
@@ -225,7 +243,7 @@ class EvidenceGateIntegrationTest(unittest.TestCase):
             bad = subprocess.run(
                 [sys.executable, str(directory / "scripts/validate_research_audit.py"),
                  str(audit_path), str(data_path), str(baseline_path)],
-                cwd=directory, capture_output=True, text=True,
+                cwd=directory, **UTF8_RUN,
             )
             self.assertNotEqual(bad.returncode, 0)
             self.assertIn("new ids must have firstSeenDate=", bad.stderr)
@@ -252,7 +270,7 @@ class EvidenceGateIntegrationTest(unittest.TestCase):
             bad = subprocess.run(
                 [sys.executable, str(directory / "scripts/validate_research_audit.py"),
                  str(audit_path), str(data_path), str(baseline_path)],
-                cwd=directory, capture_output=True, text=True,
+                cwd=directory, **UTF8_RUN,
             )
             self.assertNotEqual(bad.returncode, 0)
             self.assertIn("every published id must appear in rawCandidates evidence", bad.stderr)
@@ -280,7 +298,7 @@ class EvidenceGateIntegrationTest(unittest.TestCase):
             bad = subprocess.run(
                 [sys.executable, str(directory / "scripts/validate_research_audit.py"),
                  str(audit_path), str(data_path), str(baseline_path)],
-                cwd=directory, capture_output=True, text=True,
+                cwd=directory, **UTF8_RUN,
             )
             self.assertNotEqual(bad.returncode, 0)
             self.assertIn("material opportunity changes require official re-verification", bad.stderr)
@@ -303,7 +321,7 @@ class EvidenceGateIntegrationTest(unittest.TestCase):
             bad = subprocess.run(
                 [sys.executable, str(directory / "scripts/validate_research_audit.py"),
                  str(audit_path), str(data_path), str(baseline_path)],
-                cwd=directory, capture_output=True, text=True,
+                cwd=directory, **UTF8_RUN,
             )
             self.assertNotEqual(bad.returncode, 0)
             self.assertIn("material opportunity changes require official re-verification", bad.stderr)
@@ -322,7 +340,7 @@ class EvidenceGateIntegrationTest(unittest.TestCase):
             good = subprocess.run(
                 [sys.executable, str(directory / "scripts/validate_research_audit.py"),
                  str(audit_path), str(data_path), str(baseline_path)],
-                cwd=directory, capture_output=True, text=True,
+                cwd=directory, **UTF8_RUN,
             )
             self.assertEqual(good.returncode, 0, good.stderr)
 
@@ -350,7 +368,7 @@ class EvidenceGateIntegrationTest(unittest.TestCase):
             bad = subprocess.run(
                 [sys.executable, str(directory / "scripts/validate_research_audit.py"),
                  str(audit_path), str(data_path), str(baseline_path)],
-                cwd=directory, capture_output=True, text=True,
+                cwd=directory, **UTF8_RUN,
             )
             self.assertNotEqual(bad.returncode, 0)
             self.assertIn("material opportunity changes require official re-verification", bad.stderr)

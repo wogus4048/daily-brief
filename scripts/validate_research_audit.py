@@ -29,6 +29,9 @@ source_cache = json.loads(cache_path.read_text(encoding="utf-8"))
 assert audit.get("date") == snapshot_date, "research audit date must match snapshot date"
 assert audit.get("completedAt"), "research audit missing completedAt"
 assert isinstance(audit.get("sourceDiscoveries"), list), "research audit sourceDiscoveries must be a list"
+# Optional, but a leftover drafting marker must not reach main as promotion evidence.
+assert "status" not in audit or audit["status"] == "COMPLETE", \
+    f"research audit status must be COMPLETE when present, got {audit['status']!r}"
 assert source_cache.get("date") == snapshot_date, "source cache date must match snapshot date"
 assert source_cache.get("crawler", {}).get("engine") == "playwright-chromium", "source cache must come from Playwright crawler"
 manifest = json.loads((ROOT / "data/crawler-sources.json").read_text(encoding="utf-8"))

@@ -35,6 +35,7 @@ Every scheduled refresh must also write `data/research/YYYY-MM-DD.json`. This is
 
 The audit must record:
 - `date`, `completedAt`
+- optional `status`; when present it must be `COMPLETE`. Drafting markers such as `DRAFT_NOT_VALIDATED` block promotion. Reconcile narrative fields such as `researchLimitations` with the final evidence before validation.
 - `sourceDiscoveries`: an array (possibly empty) of credible recurring/list-source discoveries considered during the current run
 - `reverifiedIds`: every previously OPEN/UPCOMING contest/support id actually re-opened and checked
 - `publishedIds`: every newly published contest/support/AI-news id for the snapshot date
