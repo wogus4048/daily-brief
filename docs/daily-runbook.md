@@ -34,6 +34,9 @@
 ## 4. 독립 검색 트랙
 - 참조: "Discovery", "Daily research checklist" §2·§4, "AI news", "AI Discovery / Source Radar".
 - 트랙: `aiData`(후보 10개 이상), `generalSoftware`(15개 이상), `publicIdea`(10개 이상), `startupSupport`(15개 이상), `upcomingOpenings`, `aiNews`, `aiDiscovery`.
+- 검색 축마다 서로 다른 검색어를 2개 이상 실행한다. 각 트랙에는 한국어 검색어와 영어 등 비한국어 검색어를 함께 넣는다(`publicIdea`는 한국어만). 10-14부터 검증 스크립트가 이 기준을 확인한다.
+- `aiNews`는 날짜를 넣은 검색으로 시작하지 않는다. 오늘자 캐시의 `shadowSources.hackerNewsTop` 목록 전부를 먼저 훑고, GeekNews 첫 화면과 관련 Reddit 커뮤니티의 hot/top 목록을 직접 연다. 그다음 다른 축으로 원문을 확인한다.
+- 네이밍·슬로건·표어·캐릭터, 문학(백일장·신춘문예·수기), 영상·사진, 미술·디자인·웹툰 공모전은 수집하지 않는다.
 - 후보 수를 채우지 못하면 여러 검색 축을 소진했다는 사유를 기록한다. `aiNews`는 `officialProduct`, `githubReleases`, `huggingFace`, `researchLabs`, `communities` 축의 실제 검색어를 모두 기록한다.
 - 한 트랙에서 후보가 많이 나와도 다른 트랙은 생략하지 않는다.
 - 검색 결과 페이지는 열렸는데 추출된 결과가 0건이면 "후보 없음"으로 처리하지 않는다. 다른 검색 도구, 검색어 변형, 해당 사이트의 자체 검색으로 다시 시도한다. 그래도 결과를 얻지 못하면 그 검색어를 `sourceGaps`에 추출 실패로 기록한다.

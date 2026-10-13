@@ -46,6 +46,9 @@ jobs:
       - name: Test discovery source extraction
         run: node scripts/test_discovery_sources.mjs
 
+      - name: Test crawler review-set scope
+        run: node scripts/test_actionability.mjs
+
       - name: Crawl source inventories
         run: npm run crawl:sources
 

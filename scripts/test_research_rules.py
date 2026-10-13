@@ -165,6 +165,49 @@ class EvidenceGateIntegrationTest(unittest.TestCase):
             ok = self.validate(data_path, audit_path)
             self.assertEqual(ok.returncode, 0, ok.stderr)
 
+    def retarget(self, directory, data_path, audit_path, audit, day):
+        """Move the fixture to another snapshot date with a matching cache."""
+        snapshot = json.loads(data_path.read_text(encoding="utf-8"))
+        cache = json.loads((directory / "data/source-cache/2026-10-11.json").read_text(encoding="utf-8"))
+        snapshot["date"] = cache["date"] = audit["date"] = day
+        audit["completedAt"] = f"{day}T13:00:00+09:00"
+        (directory / f"data/source-cache/{day}.json").write_text(json.dumps(cache), encoding="utf-8")
+        data_path.write_text(json.dumps(snapshot, ensure_ascii=False), encoding="utf-8")
+        audit_path.write_text(json.dumps(audit, ensure_ascii=False), encoding="utf-8")
+
+    def test_search_depth_requires_two_queries_per_axis_in_both_languages(self):
+        # 2026-10-13 passed with one query per axis; from 10-14 each axis needs
+        # two distinct queries, and each track Korean plus non-Korean variants.
+        with tempfile.TemporaryDirectory() as temp:
+            directory = Path(temp)
+            data_path, audit_path, audit = self.make_fixture(directory)
+            for track in audit["tracks"].values():
+                track["queriesByAxis"] = {
+                    axis: [f"{axis} 공모전 모집 2026", f"{axis} hackathon 2026"]
+                    for axis in track["queriesByAxis"]
+                }
+            self.retarget(directory, data_path, audit_path, audit, "2026-10-14")
+            ok = self.validate(data_path, audit_path)
+            self.assertEqual(ok.returncode, 0, ok.stderr)
+
+            shallow = copy.deepcopy(audit)
+            axis = next(iter(shallow["tracks"]["aiData"]["queriesByAxis"]))
+            shallow["tracks"]["aiData"]["queriesByAxis"][axis] = [f"{axis} 공모전 모집 2026"] * 2
+            audit_path.write_text(json.dumps(shallow, ensure_ascii=False), encoding="utf-8")
+            bad = self.validate(data_path, audit_path)
+            self.assertNotEqual(bad.returncode, 0)
+            self.assertIn(f"aiData.{axis} needs at least 2 distinct queries", bad.stderr)
+
+            korean_only = copy.deepcopy(audit)
+            korean_only["tracks"]["aiNews"]["queriesByAxis"] = {
+                axis: [f"{axis} 인기 글", f"{axis} 화제 토론"]
+                for axis in korean_only["tracks"]["aiNews"]["queriesByAxis"]
+            }
+            audit_path.write_text(json.dumps(korean_only, ensure_ascii=False), encoding="utf-8")
+            bad = self.validate(data_path, audit_path)
+            self.assertNotEqual(bad.returncode, 0)
+            self.assertIn("aiNews needs both Korean and non-Korean query variants", bad.stderr)
+
     def test_material_change_cannot_skip_official_verification(self):
         with tempfile.TemporaryDirectory() as temp:
             directory = Path(temp)

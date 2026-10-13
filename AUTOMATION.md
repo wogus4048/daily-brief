@@ -20,7 +20,7 @@ All content arrays are cumulative catalogs, not replace-every-day feeds.
 ## Editorial selection: what belongs in each category
 
 Select information for the decision it helps the reader make:
-- `contests`: collect all discoverable idea/proposal competitions and all competitions/hackathons involving program/software development, regardless of industry, AI relevance, prize size, or perceived portfolio value. Include app, web, game, automation, data/software and prototype-building events. Record eligibility, team requirements, region, submissions, dates and rewards; these are visible conditions, not implicit personal-fit exclusion filters. Do not claim exhaustive coverage of the entire web; record the sources searched and gaps.
+- `contests`: collect all discoverable idea/proposal competitions and all competitions/hackathons involving program/software development, regardless of industry, AI relevance, prize size, or perceived portfolio value. Include app, web, game, automation, data/software and prototype-building events. Naming/slogan/표어/character contests, literary contests (백일장, 신춘문예, 수기, 글쓰기), video/photo/film contests and art/design/webtoon contests are out of scope (user decision, 2026-10-13). Record eligibility, team requirements, region, submissions, dates and rewards; these are visible conditions, not implicit personal-fit exclusion filters. Do not claim exhaustive coverage of the entire web; record the sources searched and gaps.
 - `support`: collect all discoverable startup/pre-startup application opportunities except programs explicitly restricted to applicants who already have business registration at application time. Include recruitment/application programs such as 모두의창업, founder selection, pre-startup education, incubation, mentoring, commercialization, funding, workspace and developer credits, including programs without cash grants. Mixed pre-startup/existing-business programs qualify through the pre-startup track. Record regional, age, employment and other requirements rather than silently excluding on those grounds. Distinguish registration required at application from registration required after selection; the latter is not an exclusion. Mark unclear registration eligibility as requiring confirmation instead of guessing. Generic non-startup events remain outside this category.
 - `aiNews`: a recent AI topic attracting observable community attention, with an explanation of what happened, why people are discussing it, and what is verified. Follow the community-first policy below.
 - `aiDiscovery`: a reusable tool, repository, skill, MCP, agent, workflow, or curated collection the reader can actually inspect or try. State its specific use, entry point, availability/cost when known, and material limitations. Popularity alone is insufficient.
@@ -40,7 +40,7 @@ The audit must record:
 - `reverifiedIds`: every previously OPEN/UPCOMING contest/support id actually re-opened and checked
 - `publishedIds`: every newly published contest/support/AI-news id for the snapshot date
 - independent track evidence for `aiData`, `generalSoftware`, `publicIdea`, `startupSupport`, `upcomingOpenings`, and `aiNews`
-- for each track, the actual queries grouped by required search axis, raw candidate titles/URLs, and disposition (`PUBLISHED`, `EXISTING`, `DUPLICATE`, `INELIGIBLE`, `CLOSED`, `NOT_RELEVANT`)
+- for each track, the actual queries grouped by required search axis (from 2026-10-14: at least two distinct queries per axis, and Korean plus non-Korean variants in every track except Korea-only `publicIdea`), raw candidate titles/URLs, and disposition (`PUBLISHED`, `EXISTING`, `DUPLICATE`, `INELIGIBLE`, `CLOSED`, `NOT_RELEVANT`)
 - fixed-source evidence for every mandatory source family, including checked URLs or a concrete failure reason
 - district evidence for 노원, 도봉, 강북, including checked URLs or a concrete failure reason
 
@@ -263,7 +263,7 @@ For startup/support programs:
 
 For public/idea/industry-specialized contests:
 - Search independently from AI/data and code-heavy hackathons for `아이디어 공모전`, `국민참여 공모`, `서비스 기획 공모전`, `혁신 아이디어`, `산업 아이디어 공모전`, `기술·제품 공모전`, and combinations with `개인 참가`, `국민 누구나`, `상금`, `PoC`, `앱/웹`, `서비스`.
-- Include government ministries, public agencies, public corporations, sports/culture/transport/finance/identity and other industry-specific organizers. Collect idea/proposal competitions across all subjects, including those unrelated to software.
+- Include government ministries, public agencies, public corporations, sports/culture/transport/finance/identity and other industry-specific organizers. Collect idea/proposal competitions across all subjects, including those unrelated to software, except the naming/slogan, literary, video/photo and art contests excluded above.
 - Include idea/proposal contests regardless of cash prizes or perceived portfolio value. A finished code submission is not mandatory. Independently collect all program/software-development competitions.
 - Record individual/team, student, employment and regional conditions without narrowing collection to an assumed user profile; record whether PoC/prototype/demo is optional or mandatory.
 - Gather at least 10 materially distinct raw candidates or exhaust the relevant government/public and industry-specific source axes.
@@ -311,6 +311,7 @@ Adjacent Seoul district sites may be explored when broad discovery surfaces a re
 
 For AI news:
 - Start from recent Korean and international community discussion, applying the recency and observable-attention criteria in the AI news policy above.
+- Begin with popularity listings rather than dated search-engine queries: review every item of the current-day `shadowSources.hackerNewsTop` inventory, and open the GeekNews front page and the hot/top listings of relevant Reddit communities directly. Search engines rarely index what is popular right now.
 - Follow selected topics to GitHub releases/repos, Hugging Face, arXiv/research labs, official product updates, and original experiments for verification. These are evidence sources, not an automatic publication queue.
 - Do not limit discovery to major AI vendors; include independently useful experiments and discussions about smaller or open projects when they meet the same evidence standard.
 

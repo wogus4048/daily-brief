@@ -81,6 +81,14 @@ TRACKS = {
 if snapshot_date < "2026-10-08" and not isinstance(audit.get("tracks", {}).get("aiDiscovery"), dict):
     TRACKS.pop("aiDiscovery", None)
 
+# The 2026-10-13 run passed with one generic query per axis and missed
+# candidates. From 10-14 each axis needs two distinct queries, and each track
+# needs Korean and non-Korean variants (publicIdea is Korea-only).
+SEARCH_DEPTH_FROM = "2026-10-14"
+MIN_QUERIES_PER_AXIS = 2
+KOREAN_ONLY_TRACKS = {"publicIdea"}
+HANGUL = re.compile(r"[가-힣]")
+
 tracks = audit.get("tracks")
 assert isinstance(tracks, dict), "research audit tracks must be an object"
 
@@ -97,6 +105,18 @@ for track_id, rule in TRACKS.items():
         queries = queries_by_axis.get(axis)
         assert isinstance(queries, list) and queries, f"{track_id} missing executed queries for axis {axis}"
         assert all(isinstance(q, str) and q.strip() for q in queries), f"{track_id}.{axis} has invalid query evidence"
+        if snapshot_date >= SEARCH_DEPTH_FROM:
+            distinct_queries = {" ".join(q.lower().split()) for q in queries}
+            assert len(distinct_queries) >= MIN_QUERIES_PER_AXIS, (
+                f"{track_id}.{axis} needs at least {MIN_QUERIES_PER_AXIS} distinct queries"
+            )
+    if snapshot_date >= SEARCH_DEPTH_FROM:
+        track_queries = [q for axis in rule["axes"] for q in queries_by_axis[axis]]
+        assert any(HANGUL.search(q) for q in track_queries), f"{track_id} needs Korean query variants"
+        if track_id not in KOREAN_ONLY_TRACKS:
+            assert any(not HANGUL.search(q) for q in track_queries), (
+                f"{track_id} needs both Korean and non-Korean query variants"
+            )
 
     raw = track.get("rawCandidates")
     assert isinstance(raw, list), f"{track_id}.rawCandidates must be a list"
