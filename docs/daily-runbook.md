@@ -18,7 +18,7 @@
 ## 1. 입력 읽기와 캐시 확인
 - current main의 `data/latest.json`, `data/crawler-sources.json`, 가능하면 `data/crawler-source-state.json`을 읽는다.
 - `data/source-cache/YYYY-MM-DD.json`을 확인한다. 날짜가 오늘이고 `crawler.engine == playwright-chromium`이며 필수 출처가 `OK`이면 바로 2단계로 간다. 크롤러는 다시 실행하지 않는다.
-- 캐시가 없을 때만 `AUTOMATION.md` → "Source crawler preflight"를 따른다. 그동안 4단계 웹 조사는 먼저 진행할 수 있다.
+- 캐시가 없거나 필수 출처가 `FAILED`일 때만 `AUTOMATION.md` → "Source crawler preflight"를 따른다. 그동안 4단계 웹 조사는 먼저 진행할 수 있다.
 - 비필수 출처가 `FAILED`이면 `sourceGaps`에 기록하고 계속 진행한다. 비필수 출처 실패는 중단 사유가 아니다.
 
 ## 2. 작업 목록 만들기

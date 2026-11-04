@@ -1,6 +1,7 @@
 import { chromium } from "playwright";
 import fs from "node:fs/promises";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { hasUsableCache } from "./pipeline_health.mjs";
 import { crawlDiscoverySource } from "./discovery_sources.mjs";
 import { ACTIONABLE } from "./actionability.mjs";
@@ -90,6 +91,32 @@ function isActionableByHints(item) {
   if ((item.statusHints || []).length) return true;
   const text = cleanText(item.rawText);
   return /\bD-\d+\b/i.test(text);
+}
+
+const NAVIGATION_TIMEOUT_MS = 60000;
+const LISTING_TIMEOUT_MS = 30000;
+
+export async function gotoWithRetry(page, url, { timeout = NAVIGATION_TIMEOUT_MS, attempts = 2 } = {}) {
+  for (let attempt = 1; ; attempt += 1) {
+    try {
+      return await page.goto(url, { waitUntil: "domcontentloaded", timeout });
+    } catch (error) {
+      if (error.name !== "TimeoutError" || attempt >= attempts) throw error;
+      console.log(`Navigation timed out, retrying ${url}`);
+      // Cancel the stalled navigation, or it aborts the retry.
+      await page.goto("about:blank").catch(() => {});
+    }
+  }
+}
+
+// domcontentloaded can fire on a bot-check interstitial or an empty app shell, so
+// a fixed wait reads the page before the listing exists. Wait for the listing,
+// then settle. A listing that never appears falls through to the caller's zero-items error.
+export async function waitForListing(page, selector, settleMs, timeout = LISTING_TIMEOUT_MS) {
+  await page.locator(selector).first().waitFor({ state: "attached", timeout }).catch((error) => {
+    if (error.name !== "TimeoutError") throw error;
+  });
+  await page.waitForTimeout(settleMs);
 }
 
 async function expandListing(page, hrefSelector, label) {
@@ -216,6 +243,13 @@ function withActionable(base, predicate = isActionableByHints) {
   };
 }
 
+export function assertAnySourceSucceeded(sources) {
+  const results = Object.values(sources);
+  if (!results.some(source => source.status === "OK" && source.count > 0)) {
+    throw new Error(`every active crawler failed (${results.length}); keeping the previous cache`);
+  }
+}
+
 async function safeCrawl(key, fn) {
   try {
     return await fn();
@@ -232,11 +266,11 @@ async function safeCrawl(key, fn) {
   }
 }
 
-async function crawlDacon(page) {
+export async function crawlDacon(page) {
   const url = "https://www.dacon.io/competitions";
-  await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
-  await page.waitForTimeout(1800);
+  await gotoWithRetry(page, url);
   const selector = 'a[href*="/competitions/official/"]';
+  await waitForListing(page, selector, 1800);
   const expansion = await expandListing(page, selector, "DACON competitions");
   const items = (await collectAnchors(page, selector, "DACON"))
     .filter(item => new URL(item.url).hostname.endsWith("dacon.io"));
@@ -246,9 +280,9 @@ async function crawlDacon(page) {
 
 async function crawlDaker(page) {
   const url = "https://daker.ai/public/hackathons";
-  await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
-  await page.waitForTimeout(1800);
+  await gotoWithRetry(page, url);
   const selector = 'a[href*="/public/hackathons/"]';
+  await waitForListing(page, selector, 1800);
   const expansion = await expandListing(page, selector, "DAKER hackathons");
   const items = (await collectAnchors(page, selector, "DAKER"))
     .filter(item => {
@@ -264,9 +298,9 @@ async function crawlDaker(page) {
 
 async function crawlHackathonKorea(page) {
   const url = "https://koreahackathons.com/";
-  await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
-  await page.waitForTimeout(1000);
+  await gotoWithRetry(page, url);
   const selector = 'a[href*="/events/"]';
+  await waitForListing(page, selector, 1000);
   let items = await collectAnchors(page, selector, "Hackathon Korea");
   const hubPaths = new Set([
     "/hackathons/seoul", "/hackathons/busan", "/hackathons/daejeon", "/hackathons/daegu",
@@ -285,10 +319,9 @@ async function crawlHackathonKorea(page) {
 
 async function crawlSotong24(page) {
   const url = "https://sotong.go.kr/front/epilogue/epilogueBbsList.do";
-  await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
-  await page.waitForTimeout(1500);
-
+  await gotoWithRetry(page, url);
   const selector = 'a[href*="epilogueNewViewPage.do"]';
+  await waitForListing(page, selector, 1500);
   await expandListing(page, selector, "소통24 공모전");
   let items = (await collectAnchorsSafe(page, selector, "소통24"))
     .filter(item => item.url.includes("sotong.go.kr/front/epilogue/epilogueNewViewPage.do"));
@@ -335,9 +368,9 @@ async function crawlSotong24(page) {
 
 async function crawlGrantly(page) {
   const url = "https://grantly.kr/opportunities/support";
-  await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
-  await page.waitForTimeout(1400);
+  await gotoWithRetry(page, url);
   const selector = 'a[href*="/opportunities/"]';
+  await waitForListing(page, selector, 1400);
   await expandListing(page, selector, "Grantly support");
   const items = (await collectAnchors(page, selector, "Grantly"))
     .filter(item => {
@@ -354,7 +387,7 @@ async function crawlGrantly(page) {
 
 async function crawlDevpost(page) {
   const url = "https://devpost.com/hackathons?status=open";
-  const response = await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
+  const response = await gotoWithRetry(page, url);
   if (response && !response.ok()) throw new Error(`Devpost HTTP ${response.status()}: source unavailable or access blocked`);
   await page.waitForTimeout(1200);
   if (/verify you are human|performing security verification|보안 확인 수행|just a moment/i.test(await page.locator('body').innerText())) {
@@ -377,9 +410,9 @@ async function crawlDevpost(page) {
 
 async function crawlContestKorea(page) {
   const url = "https://contestkorea.kr/";
-  await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
-  await page.waitForTimeout(1000);
+  await gotoWithRetry(page, url);
   const selector = 'a[href*="/sub/view.php"], a[href*="sub/view.php"]';
+  await waitForListing(page, selector, 1000);
   const items = (await collectAnchors(page, selector, "ContestKorea"))
     .filter(item => new URL(item.url).hostname.includes("contestkorea"));
   if (!items.length) throw new Error("ContestKorea crawler returned zero items");
@@ -391,8 +424,8 @@ async function crawlContestKorea(page) {
 
 async function crawlKStartup(page) {
   const url = "https://www.k-startup.go.kr/web/main/mainSection0.do";
-  await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
-  await page.waitForTimeout(1800);
+  await gotoWithRetry(page, url);
+  await waitForListing(page, 'a[href*="bizpbanc-ongoing.do"]', 1800);
   const items = (await collectAnchors(page, "a[href]", "K-Startup"))
     .filter(item => {
       const u = new URL(item.url);
@@ -418,9 +451,9 @@ async function crawlGeneric(page, key, name, spec) {
     throw new Error(`generic crawler ${key} missing url/linkSelector`);
   }
 
-  const response = await page.goto(url, { waitUntil: "domcontentloaded", timeout: spec.timeoutMs || 60000 });
+  const response = await gotoWithRetry(page, url, { timeout: spec.timeoutMs || NAVIGATION_TIMEOUT_MS });
   if (response && !response.ok()) throw new Error(`${key} HTTP ${response.status()}: source unavailable or access blocked`);
-  await page.waitForTimeout(spec.waitMs || 1200);
+  await waitForListing(page, spec.linkSelector, spec.waitMs || 1200);
 
   if (spec.expand !== false) {
     await expandListing(page, spec.linkSelector, name || key);
@@ -552,19 +585,17 @@ async function main() {
     for (const [key, value] of Object.entries(shadowSources)) {
       console.log(`shadow ${key}: ${value.status} ${value.count || 0}/${value.actionableCount || 0} actionable`);
     }
-    // Persist diagnostics before failing so Actions can retain evidence of required-source failures.
-    for (const entry of activeEntries.filter(entry => entry.required)) {
-      const source = sources[entry.key];
-      if (!source || source.status !== "OK" || !source.count) {
-        throw new Error(`mandatory crawler failed: ${entry.key}: ${source?.error || "empty or missing"}`);
-      }
-    }
+    // Keep partial results: one source outage must not discard the others. Required
+    // failures stay blocked by hasUsableCache, the research gates and the daily health check.
+    assertAnySourceSucceeded(sources);
   } finally {
     await browser.close();
   }
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exit(1);
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+}

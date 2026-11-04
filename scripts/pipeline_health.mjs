@@ -44,11 +44,12 @@ export function assessHealth(cache, manifest, brief, now = new Date()) {
   };
 }
 
-// An optional source outage is visible in the step summary and annotations,
-// but must not turn a valid source-cache publication into a failed job.
+// Crawl attempts repeat through the night, so a source outage there is only reported
+// in the step summary and annotations. The daily health check is the single alarm.
 export function healthExitCode(health, { sourcesOnly = false } = {}) {
+  if (sourcesOnly) return 0;
   if (health.sources.status === 'FAILED') return 1;
-  if (!sourcesOnly && [health.collection.status, health.publication.status].some(status=>['STALE','INCOMPLETE'].includes(status))) return 1;
+  if ([health.collection.status, health.publication.status].some(status=>['STALE','INCOMPLETE'].includes(status))) return 1;
   return 0;
 }
 
@@ -79,6 +80,7 @@ async function main() {
       console.error(`::warning::${entry.key}: ${reason}`);
     }
   }
+  if(health.sources.status==='FAILED') lines.push('','A required source failed. Its partial cache stays saved, but editorial research and promotion remain blocked until a crawl succeeds.');
   if(health.sources.status==='PARTIAL') lines.push('','Some optional sources failed. Valid collected data remains usable; see warnings above and record source gaps during editorial research.');
   if(!sourcesOnly && health.publication.status==='STALE') lines.push('','Publication is overdue. Inspect the ChatGPT scheduled research task, then the dated candidate branch and promotion workflow. A successful crawl or Pages deployment does not publish a new briefing.');
   if(!sourcesOnly && health.publication.status==='INCOMPLETE') lines.push('','Publication is incomplete: '+health.publication.artifacts.reason+'. Do not interpret a successful Pages deploy as a verified daily publication.');

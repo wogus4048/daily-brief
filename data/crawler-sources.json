@@ -43,15 +43,6 @@
       "category": "contest"
     },
     {
-      "key": "devpostOpen",
-      "name": "Devpost open hackathons",
-      "url": "https://devpost.com/hackathons?status=open",
-      "role": "global online developer/AI hackathons",
-      "required": false,
-      "managed": true,
-      "category": "contest"
-    },
-    {
       "key": "grantlySupport",
       "name": "Grantly 지원사업",
       "url": "https://grantly.kr/opportunities/support",
@@ -90,7 +81,20 @@
       "category": "contest"
     }
   ],
-  "degraded": [],
+  "degraded": [
+    {
+      "key": "devpostOpen",
+      "name": "Devpost open hackathons",
+      "url": "https://devpost.com/hackathons?status=open",
+      "role": "global online developer/AI hackathons",
+      "required": false,
+      "managed": true,
+      "category": "contest",
+      "status": "DEGRADED",
+      "degradedAt": "2026-11-04",
+      "degradedReason": "26 of 28 daily crawls failed with a bot-check 403; lifecycle evolution has not run since 2026-10-13"
+    }
+  ],
   "nextCandidates": [
     {
       "key": "aitop100",
