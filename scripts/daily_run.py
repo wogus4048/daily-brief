@@ -26,6 +26,7 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from free_explore import run_explore, run_verify
 from research_rules import close_expired_out_of_scope
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -370,15 +371,41 @@ def run_publish(
         write_report(root, today, "publish", result)
 
 
+def run_explore_step(root, today):
+    log = RunLog(root, today, "explore")
+    log_environment(log, root, {})
+    with log.stage("explore"):
+        result = run_explore(root, today, log)
+    write_report(root, today, "explore", result)
+    log.event("run_end", status=result["status"], urlCount=result.get("urlCount"))
+    return 0
+
+
+def run_verify_step(root, today):
+    log = RunLog(root, today, "verify")
+    log_environment(log, root, {})
+    with log.stage("verify"):
+        result = run_verify(root, today, log)
+    write_report(root, today, "verify", result)
+    log.event("run_end", status=result["status"], items=result["items"])
+    return 0
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("prepare").add_argument("--no-pull", action="store_true", help="keep the current code")
+    commands.add_parser("explore")
+    commands.add_parser("verify")
     commands.add_parser("publish").add_argument("--no-push", action="store_true", help="stop after the checks")
     args = parser.parse_args()
     today = datetime.now(SEOUL).date().isoformat()
     if args.command == "prepare":
         return run_prepare(ROOT, today, no_pull=args.no_pull)
+    if args.command == "explore":
+        return run_explore_step(ROOT, today)
+    if args.command == "verify":
+        return run_verify_step(ROOT, today)
     return run_publish(ROOT, today, no_push=args.no_push)
 
 
