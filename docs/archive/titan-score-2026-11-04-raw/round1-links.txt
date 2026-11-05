@@ -1,0 +1,38 @@
+일반 텍스트
+
+번호 | URL
+1 | https://m.site.naver.com/2jBjG
+2 | https://app.gonghunt.com/contests?types=hackathon (포털)
+3 | https://www.space-hackathon.kr/
+4 | https://www.hf.go.kr/ko/sub04/sub04_05_02.do?articleNo=600648&mode=view
+5 | https://aida.kisti.re.kr/competition/main/competition/COMP_000000000000050/detail.do
+6 | https://onoffmix.com/event/351544
+7 | https://co-vill.imweb.me/
+8 | https://www.nia.or.kr/site/nia_kor/ex/bbs/View.do?bcIdx=30083&cbIdx=99835&parentSeq=30083
+9 | https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127281
+10 | https://www.kwaa.or.kr/K-awards2026/
+11 | https://www.kimst.re.kr/u/news/notice_01/board.do?bno=153421765145962&type=view
+12 | https://docs.google.com/forms/d/e/1FAIpQLSf5pMsBzP23OLGPqORL9c8EiQHELwd5BXeCGiL8N46Dt3Yw9Q/viewform
+13 | https://gcontest.co.kr/front/m/comp/view/38038 (포털)
+14 | https://onoffmix.com/event/351580
+15 | https://thinkyou.co.kr/mobile/contest/67684/ (포털)
+16 | https://thinkyou.co.kr/contest/idea.asp (포털)
+17 | https://ai-challenge.elice.page/home/main
+18 | https://daker.ai/public/hackathons/2026-materials-ai-hackathon
+19 | https://nibp.kr/board/notice/post?ntcOid=20000063
+20 | https://thinkyou.co.kr/mobile/contest/67834/ (포털)
+21 | https://appdevchallenge.auto-hmg.io/
+22 | https://www.gcgfcontest.co.kr/info.asp
+23 | https://www.blaybus.com/program/1148/landing
+24 | https://mediahub.seoul.go.kr/gongmo/2000785
+25 | https://www.mogefdatacontest.co.kr/info.jsp
+26 | https://www.ssis.or.kr/lay1/bbs/S1T1910C1976/B/101/view.do?article_seq=130235
+27 | https://www.jejusi.go.kr/citizen/cnte.do?mode=detail&cnte_uuid=4e96c5844fe1449dab9d5e9ff88672b5
+28 | https://nyj.go.kr/www/selectBbsNttView.do?bbsNo=31&key=2367&nttNo=549964
+29 | https://www.kspo.or.kr/kspo/bbs/B0000027/view.do?menuNo=200149&nttId=64358
+30 | https://www.openfiscaldata.go.kr/op/ko/pc/UOPKOPCA03?pageIndex=1&ofdBrdId=NOTICE&ofdBrdiSeq=51616
+31 | https://bit.ly/hanaw-contest-edm
+32 | https://docs.google.com/forms/d/e/1FAIpQLSf5_-RkrALEOlS18e5pK4bSo63ikXSG5pW3WRwE-c6mKwxyiw/viewform
+33 | https://www.onoffmix.com/event/351074
+34 | https://www.financeidea.co.kr/mobile/info.asp
+35 | https://commonz042.kr/bbs/board.php?bo_table=public_apply&wr_id=57

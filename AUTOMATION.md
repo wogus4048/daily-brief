@@ -127,7 +127,7 @@ Collection policy:
 - Prefer a specific useful capability, a reproducible workflow, or a material improvement over an existing option. Exclude empty landing pages, duplicate wrappers with no evidenced distinction, broken/unavailable assets, and unsupported promotional claims. A small or unfamiliar project can qualify without high star counts.
 - A directory is a curated collection, not a catch-all category. Describe its subject, selection value and useful navigation. A discussion belongs in Discovery only when it contains a reusable technique or artifact; current debate belongs in AI news.
 - Optimize for coverage at ingestion time; do not discard lower-priority discoveries merely because they are not Top Finds.
-- Search independently across official ecosystem showcases/directories, GitHub, Reddit, Hacker News, Product Hunt, X/public social results when accessible, and official developer/platform channels.
+- Search independently across official ecosystem showcases/directories, GitHub, Hacker News, Product Hunt, X/public social results when accessible, and official developer/platform channels.
 - Keep the existing broad-web principle: do not reduce discovery to a fixed whitelist. Credible newly found recurring sources must be recorded in `sourceDiscoveries` and evaluated for the source lifecycle.
 - Merge duplicate mentions into one entity while preserving independent signal counts/sources. A website and its GitHub repository may remain separate linked entities when each has independent utility.
 - Keep the three status axes separate:
@@ -158,7 +158,7 @@ Suggested brief grouping:
 AI news is a **community-first collection of hot/popular AI posts and currently discussed AI topics**, not a chronological feed of vendor announcements. Popular posts, hands-on reports, tips, opinion pieces, comparisons and discussions qualify even without a new product announcement. Include model/tool releases, useful experiments, research results, pricing/access changes, and controversies when recent community attention is evidenced. An official announcement alone does not qualify as community-hot news.
 
 Discovery and recency:
-- Search recent community discussions first. Starting points include Hacker News, GeekNews, relevant Reddit communities such as LocalLLaMA, and accessible public developer/AI discussions on X, GitHub, Hugging Face and other relevant communities. These are starting points, not a whitelist. Cover both Korean-language and international discussion; record inaccessible sources and use accessible alternatives without bypassing access controls.
+- Search recent community discussions first. Starting points include Hacker News, GeekNews, and accessible public developer/AI discussions on X, GitHub, Hugging Face and other relevant communities. These are starting points, not a whitelist. Cover both Korean-language and international discussion; record inaccessible sources and use accessible alternatives without bypassing access controls.
 - Prioritize discussions published or meaningfully revived within the last 72 hours of the run. Expand to 7 days when needed, explicitly stating the dates and current reason for renewed interest. Keep the original event date separate from the discussion date. Do not present an old release as new because a post about it is new.
 - Search results and summaries are leads. Open the actual discussion and inspect substantive comments or responses whenever accessible. A blocked thread or a search snippet alone is insufficient evidence to describe its reception.
 
@@ -286,7 +286,7 @@ DACON/DAKER are mandatory and stricter:
 
 For all opportunity tracks:
 - Start with unrestricted web search and inspect new domains.
-- Also check DACON, Hackathon Korea, Grantly, 링커리어, 요즘것들, ContestKorea, K-Startup, 기업마당, Luma/EventUs/온오프믹스/Devpost/Meetup and official organizer pages.
+- Also check DACON, Hackathon Korea, Grantly, 링커리어, 요즘것들, ContestKorea, K-Startup, 기업마당, Luma/EventUs/온오프믹스/Meetup and official organizer pages.
 - Also check 소통24 공모전, 대한민국 정책브리핑/정부부처 보도자료·공고, 공공기관·지자체 공모전 게시판, and industry-specific official contest pages as a safety net for public idea competitions that do not appear on developer-focused platforms.
 - Treat recurring high-value organizer/event sites as a watchlist even before applications open. At minimum, check `aitop100.org` (AI_TOP_100), Kakao Impact, and Brian Impact for newly announced AI competitions or application-opening countdowns.
 - Gather a broad raw candidate pool before applying filters.
@@ -311,7 +311,7 @@ Adjacent Seoul district sites may be explored when broad discovery surfaces a re
 
 For AI news:
 - Start from recent Korean and international community discussion, applying the recency and observable-attention criteria in the AI news policy above.
-- Begin with popularity listings rather than dated search-engine queries: review every item of the current-day `shadowSources.hackerNewsTop` inventory, and open the GeekNews front page and the hot/top listings of relevant Reddit communities directly. Search engines rarely index what is popular right now.
+- Begin with popularity listings rather than dated search-engine queries: review every item of the current-day `shadowSources.hackerNewsTop` inventory, and open the GeekNews front page directly. Search engines rarely index what is popular right now.
 - Follow selected topics to GitHub releases/repos, Hugging Face, arXiv/research labs, official product updates, and original experiments for verification. These are evidence sources, not an automatic publication queue.
 - Do not limit discovery to major AI vendors; include independently useful experiments and discussions about smaller or open projects when they meet the same evidence standard.
 
@@ -359,7 +359,7 @@ After broad search, separately inspect the known source families instead of trea
 - DACON, Hackathon Korea, Grantly, 링커리어, 요즘것들, ContestKorea
 - 소통24 공모전, 대한민국 정책브리핑, 중앙부처·공공기관·지자체 공식 공모/보도자료
 - AI_TOP_100 (`aitop100.org`), Kakao Impact and Brian Impact competition/program announcements
-- EventUs, Luma, 온오프믹스, Devpost, Meetup
+- EventUs, Luma, 온오프믹스, Meetup
 - K-Startup, 기업마당, SBA and Seoul startup programs
 - NIPA, KISA and other ICT/public agencies
 - fintech/financial-industry startup and developer programs

@@ -110,20 +110,7 @@
       "promotedAt": "2026-11-05"
     }
   ],
-  "degraded": [
-    {
-      "key": "devpostOpen",
-      "name": "Devpost open hackathons",
-      "url": "https://devpost.com/hackathons?status=open",
-      "role": "global online developer/AI hackathons",
-      "required": false,
-      "managed": true,
-      "category": "contest",
-      "status": "DEGRADED",
-      "degradedAt": "2026-11-04",
-      "degradedReason": "26 of 28 daily crawls failed with a bot-check 403; lifecycle evolution has not run since 2026-10-13"
-    }
-  ],
+  "degraded": [],
   "nextCandidates": [
     {
       "key": "aitop100",

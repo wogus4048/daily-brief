@@ -11,7 +11,15 @@ import unittest
 from datetime import date
 from pathlib import Path
 
-from research_rules import is_reverification_due, nearest_deadline_date, normalize_url, parse_seoul_date
+from research_rules import (
+    all_deadlines_passed,
+    close_expired_out_of_scope,
+    is_out_of_scope,
+    is_reverification_due,
+    nearest_deadline_date,
+    normalize_url,
+    parse_seoul_date,
+)
 from research_worklist import build_worklist
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -52,6 +60,34 @@ class RiskRulesTest(unittest.TestCase):
             {"status": "UPCOMING", "lastVerifiedDate": "2026-10-10", "openingAt": "2026-10-12T08:00:00+09:00"},
             "2026-10-11",
         ))
+
+    def test_out_of_scope_host_is_never_due(self):
+        devpost = {"status": "OPEN", "lastVerifiedDate": "2026-10-01", "links": [
+            {"url": "https://example.org/first"}, {"url": "https://nexus.devpost.com/"},
+        ]}
+        self.assertTrue(is_out_of_scope(devpost))
+        self.assertFalse(is_reverification_due(devpost, "2026-11-05"))
+        korean = {"status": "OPEN", "lastVerifiedDate": "2026-10-01", "links": [{"url": "https://example.org/"}]}
+        self.assertFalse(is_out_of_scope(korean))
+        self.assertTrue(is_reverification_due(korean, "2026-11-05"))
+
+    def test_all_deadlines_must_pass(self):
+        mixed = {"deadlineText": "10.31 23:59 KST 등록 마감 · 11.22 23:59 KST 결과물 제출"}
+        self.assertFalse(all_deadlines_passed(mixed, date(2026, 11, 22)))
+        self.assertTrue(all_deadlines_passed(mixed, date(2026, 11, 23)))
+        self.assertFalse(all_deadlines_passed({"deadlineText": "승인제 접수 중"}, date(2026, 11, 23)))
+
+    def test_only_expired_out_of_scope_items_close(self):
+        link = [{"url": "https://x.devpost.com/"}]
+        snapshot = {"contests": [
+            {"id": "gone", "status": "OPEN", "deadlineText": "10.31", "links": link},
+            {"id": "live", "status": "OPEN", "deadlineText": "11.13", "links": link},
+            {"id": "korean", "status": "OPEN", "deadlineText": "10.31", "links": [{"url": "https://example.org/"}]},
+        ], "support": []}
+        self.assertEqual(close_expired_out_of_scope(snapshot, "2026-11-05"), ["gone"])
+        closed, live, korean = snapshot["contests"]
+        self.assertEqual((closed["status"], closed["lastUpdatedDate"]), ("CLOSED", "2026-11-05"))
+        self.assertEqual((live["status"], korean["status"]), ("OPEN", "OPEN"))
 
     def test_worklist_is_not_audit(self):
         # Use fixed historical fixtures in a disposable root, not today's
@@ -107,16 +143,16 @@ class EvidenceGateIntegrationTest(unittest.TestCase):
         audit["reverificationEvidence"] = []
         audit["reverificationFailures"] = []
         audit["fixedSources"]["DACON"]["competitionsInventory"] = [
-            {**{"title": x["title"], "url": x["url"]}, "disposition": "NOT_RELEVANT"}
+            {**{"title": x["title"], "url": x["url"]}, "disposition": "NOT_RELEVANT", "reason": "synthetic"}
             for x in cache["sources"]["daconCompetitions"]["actionableItems"]
         ]
         audit["fixedSources"]["DACON"]["dakerInventory"] = [
-            {**{"title": x["title"], "url": x["url"]}, "disposition": "NOT_RELEVANT"}
+            {**{"title": x["title"], "url": x["url"]}, "disposition": "NOT_RELEVANT", "reason": "synthetic"}
             for x in cache["sources"]["dakerHackathons"]["actionableItems"]
         ]
         audit["machineSources"] = {
             key: [
-                {"title": x["title"], "url": x["url"], "disposition": "NOT_RELEVANT"}
+                {"title": x["title"], "url": x["url"], "disposition": "NOT_RELEVANT", "reason": "synthetic"}
                 for x in source["actionableItems"]
             ]
             for key, source in cache["sources"].items()
@@ -126,6 +162,9 @@ class EvidenceGateIntegrationTest(unittest.TestCase):
         for track in audit["tracks"].values():
             for candidate in track["rawCandidates"]:
                 candidate.pop("id", None)
+                if candidate.get("disposition") == "NOT_RELEVANT":
+                    candidate.setdefault("reason", "synthetic")
+        audit["fixedSources"]["Meetup"] = audit["fixedSources"].pop("Devpost/Meetup")
         data_path = directory / "snapshot.json"
         audit_path = directory / "audit.json"
         data_path.write_text(json.dumps(snapshot, ensure_ascii=False), encoding="utf-8")
@@ -415,6 +454,108 @@ class EvidenceGateIntegrationTest(unittest.TestCase):
             )
             self.assertNotEqual(bad.returncode, 0)
             self.assertIn("material opportunity changes require official re-verification", bad.stderr)
+
+    def run_with_baseline(self, directory, data_path, audit_path, baseline):
+        baseline_path = directory / "baseline.json"
+        baseline_path.write_text(json.dumps(baseline, ensure_ascii=False), encoding="utf-8")
+        return subprocess.run(
+            [sys.executable, str(directory / "scripts/validate_research_audit.py"),
+             str(audit_path), str(data_path), str(baseline_path)],
+            cwd=directory, **UTF8_RUN,
+        )
+
+    def closed_pair(self, data_path):
+        snapshot = json.loads(data_path.read_text(encoding="utf-8"))
+        baseline = copy.deepcopy(snapshot)
+        for group in ("contests", "support"):
+            for rows in (baseline[group], snapshot[group]):
+                for entry in rows:
+                    entry["status"] = "CLOSED"
+        return snapshot, baseline
+
+    def test_zero_actionable_needs_raw_items(self):
+        with tempfile.TemporaryDirectory() as temp:
+            directory = Path(temp)
+            data_path, audit_path, audit = self.make_fixture(directory)
+            cache_path = directory / "data/source-cache/2026-10-11.json"
+            cache = json.loads(cache_path.read_text(encoding="utf-8"))
+            cache["sources"]["daconCompetitions"]["actionableItems"] = []
+            cache["sources"]["daconCompetitions"]["actionableCount"] = 0
+            cache_path.write_text(json.dumps(cache), encoding="utf-8")
+            audit["fixedSources"]["DACON"]["competitionsInventory"] = []
+            audit_path.write_text(json.dumps(audit, ensure_ascii=False), encoding="utf-8")
+            ok = self.validate(data_path, audit_path)
+            self.assertEqual(ok.returncode, 0, ok.stderr)
+
+            cache["sources"]["daconCompetitions"]["items"] = []
+            cache_path.write_text(json.dumps(cache), encoding="utf-8")
+            bad = self.validate(data_path, audit_path)
+            self.assertNotEqual(bad.returncode, 0)
+
+    def test_failed_reverification_with_reason_passes(self):
+        with tempfile.TemporaryDirectory() as temp:
+            directory = Path(temp)
+            data_path, audit_path, audit = self.make_fixture(directory)
+            snapshot, baseline = self.closed_pair(data_path)
+            for rows in (baseline["contests"], snapshot["contests"]):
+                rows[0].update(status="OPEN", lastVerifiedDate="2026-10-01", deadlineText="2026-12-31")
+                rows[0]["links"] = [{"label": "Official", "url": "https://example.org/x"}]
+            data_path.write_text(json.dumps(snapshot, ensure_ascii=False), encoding="utf-8")
+            item_id = snapshot["contests"][0]["id"]
+            bad = self.run_with_baseline(directory, data_path, audit_path, baseline)
+            self.assertNotEqual(bad.returncode, 0)
+            self.assertIn("did not re-verify", bad.stderr)
+
+            audit["reverificationFailures"] = [{
+                "id": item_id, "primarySourceUrl": "https://example.org/x", "reason": "HTTP 403",
+            }]
+            audit_path.write_text(json.dumps(audit, ensure_ascii=False), encoding="utf-8")
+            ok = self.run_with_baseline(directory, data_path, audit_path, baseline)
+            self.assertEqual(ok.returncode, 0, ok.stderr)
+
+    def test_expired_out_of_scope_closes_without_official_proof(self):
+        with tempfile.TemporaryDirectory() as temp:
+            directory = Path(temp)
+            data_path, audit_path, _ = self.make_fixture(directory)
+            snapshot, baseline = self.closed_pair(data_path)
+            old, new = baseline["contests"][0], snapshot["contests"][0]
+            for row in (old, new):
+                row.update(deadlineText="10.05", lastVerifiedDate="2026-10-04")
+                row["links"] = [{"label": "Official", "url": "https://x.devpost.com/"}]
+            old["status"] = "OPEN"
+            new["lastUpdatedDate"] = "2026-10-11"
+            data_path.write_text(json.dumps(snapshot, ensure_ascii=False), encoding="utf-8")
+            ok = self.run_with_baseline(directory, data_path, audit_path, baseline)
+            self.assertEqual(ok.returncode, 0, ok.stderr)
+
+            for row in (old, new):
+                row["links"] = [{"label": "Official", "url": "https://example.org/x"}]
+            data_path.write_text(json.dumps(snapshot, ensure_ascii=False), encoding="utf-8")
+            bad = self.run_with_baseline(directory, data_path, audit_path, baseline)
+            self.assertNotEqual(bad.returncode, 0)
+
+    def test_not_relevant_requires_reason(self):
+        with tempfile.TemporaryDirectory() as temp:
+            data_path, audit_path, audit = self.make_fixture(Path(temp))
+            del audit["machineSources"]["kStartupHighlights"][0]["reason"]
+            audit_path.write_text(json.dumps(audit, ensure_ascii=False), encoding="utf-8")
+            bad = self.validate(data_path, audit_path)
+            self.assertNotEqual(bad.returncode, 0)
+            self.assertIn("NOT_RELEVANT requires a reason", bad.stderr)
+
+    def test_opportunity_tracks_are_korean_only(self):
+        with tempfile.TemporaryDirectory() as temp:
+            directory = Path(temp)
+            data_path, audit_path, audit = self.make_fixture(directory)
+            for track_id, track in audit["tracks"].items():
+                global_track = track_id in ("aiNews", "aiDiscovery")
+                track["queriesByAxis"] = {
+                    axis: [f"{axis} 공모전 모집", f"{axis} hackathon 2026" if global_track else f"{axis} 대회 2026"]
+                    for axis in track["queriesByAxis"]
+                }
+            self.retarget(directory, data_path, audit_path, audit, "2026-10-14")
+            ok = self.validate(data_path, audit_path)
+            self.assertEqual(ok.returncode, 0, ok.stderr)
 
 
 if __name__ == "__main__":

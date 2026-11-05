@@ -3,10 +3,10 @@ import json
 import pathlib
 import sys
 import re
-from datetime import datetime
+from datetime import date, datetime
 from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
-from research_rules import is_reverification_due, normalize_url
+from research_rules import can_close_without_verification, is_reverification_due, normalize_url
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
@@ -83,11 +83,20 @@ if snapshot_date < "2026-10-08" and not isinstance(audit.get("tracks", {}).get("
 
 # The 2026-10-13 run passed with one generic query per axis and missed
 # candidates. From 10-14 each axis needs two distinct queries, and each track
-# needs Korean and non-Korean variants (publicIdea is Korea-only).
+# needs Korean and non-Korean variants. Contests and support are Korea-only.
 SEARCH_DEPTH_FROM = "2026-10-14"
 MIN_QUERIES_PER_AXIS = 2
-KOREAN_ONLY_TRACKS = {"publicIdea"}
+KOREAN_ONLY_TRACKS = {"aiData", "generalSoftware", "publicIdea", "startupSupport", "upcomingOpenings"}
 HANGUL = re.compile(r"[가-힣]")
+
+
+
+def assert_not_relevant_has_reason(item, label):
+    if item.get("disposition") != "NOT_RELEVANT":
+        return
+    reason = item.get("reason")
+    assert isinstance(reason, str) and reason.strip(), f"{label} NOT_RELEVANT requires a reason"
+
 
 tracks = audit.get("tracks")
 assert isinstance(tracks, dict), "research audit tracks must be an object"
@@ -129,6 +138,7 @@ for track_id, rule in TRACKS.items():
         assert disposition in ("PUBLISHED", "EXISTING", "DUPLICATE", "INELIGIBLE", "CLOSED", "NOT_RELEVANT"), (
             f"{track_id}.rawCandidates[{i}] invalid disposition"
         )
+        assert_not_relevant_has_reason(candidate, f"{track_id}.rawCandidates[{i}]")
         distinct.add((candidate["title"].strip().lower(), normalize_url(candidate["url"])))
         if candidate.get("id"):
             all_candidate_ids.add(candidate["id"])
@@ -153,7 +163,7 @@ REQUIRED_SOURCES = [
     "정책브리핑",
     "AI_TOP_100",
     "EventUs/Luma/온오프믹스",
-    "Devpost/Meetup",
+    "Meetup",
     "K-Startup",
     "기업마당",
     "SBA",
@@ -182,22 +192,22 @@ assert normalize_url("https://daker.ai/public/hackathons") in checked_urls, "DAC
 
 allowed_dispositions = {"PUBLISHED", "EXISTING", "DUPLICATE", "INELIGIBLE", "CLOSED", "NOT_RELEVANT"}
 inventory_specs = [
-    (
-        "competitionsInventory",
-        source_cache.get("sources", {}).get("daconCompetitions", {}).get("actionableItems", []),
-        "DACON competitions",
-    ),
-    (
-        "dakerInventory",
-        source_cache.get("sources", {}).get("dakerHackathons", {}).get("actionableItems", []),
-        "DAKER hackathons",
-    ),
+    ("competitionsInventory", "daconCompetitions", "DACON competitions"),
+    ("dakerInventory", "dakerHackathons", "DAKER hackathons"),
 ]
 
-for field, cached_items, label in inventory_specs:
-    assert isinstance(cached_items, list) and cached_items, f"source cache missing {label} inventory"
+for field, source_key, label in inventory_specs:
+    cached_source = source_cache.get("sources", {}).get(source_key, {})
+    cached_items = cached_source.get("actionableItems", [])
+    # No open competition today is a valid result; an empty raw listing is not.
+    assert isinstance(cached_items, list), f"source cache missing {label} inventory"
+    assert cached_source.get("status") == "OK" and cached_source.get("items"), (
+        f"source cache missing {label} inventory"
+    )
     audit_inventory = dacon.get(field)
-    assert isinstance(audit_inventory, list) and audit_inventory, f"DACON CHECKED requires {field}"
+    assert isinstance(audit_inventory, list) and (audit_inventory or not cached_items), (
+        f"DACON CHECKED requires {field}"
+    )
 
     audit_urls = set()
     for i, item in enumerate(audit_inventory):
@@ -205,6 +215,7 @@ for field, cached_items, label in inventory_specs:
         assert item.get("title"), f"DACON.{field}[{i}] missing title"
         assert item.get("url"), f"DACON.{field}[{i}] missing url"
         assert item.get("disposition") in allowed_dispositions, f"DACON.{field}[{i}] invalid disposition"
+        assert_not_relevant_has_reason(item, f"DACON.{field}[{i}]")
         audit_urls.add(normalize_url(item["url"]))
 
     cache_urls = {normalize_url(item["url"]) for item in cached_items if item.get("url")}
@@ -232,6 +243,7 @@ for key, cached_source in source_cache.get("sources", {}).items():
         assert item.get("title"), f"machineSources.{key}[{i}] missing title"
         assert item.get("url"), f"machineSources.{key}[{i}] missing url"
         assert item.get("disposition") in allowed_dispositions, f"machineSources.{key}[{i}] invalid disposition"
+        assert_not_relevant_has_reason(item, f"machineSources.{key}[{i}]")
         audit_urls.add(normalize_url(item["url"]))
 
     cache_urls = {normalize_url(item["url"]) for item in cached_items if item.get("url")}
@@ -465,7 +477,19 @@ if baseline is not None:
         )
         and any(previous.get(field) != current_by_id[item_id].get(field) for field in same_day_material_fields)
     }
-    unverified_changes = changed_opportunities - reverified_set
+    expired_out_of_scope = {
+        item_id
+        for item_id in changed_opportunities
+        if can_close_without_verification(
+            baseline_by_id[item_id], current_by_id[item_id], date.fromisoformat(snapshot_date)
+        )
+        and all(
+            baseline_by_id[item_id].get(field) == current_by_id[item_id].get(field)
+            for field in same_day_material_fields
+            if field != "status"
+        )
+    }
+    unverified_changes = changed_opportunities - reverified_set - expired_out_of_scope
     assert not unverified_changes, (
         f"material opportunity changes require official re-verification: {sorted(unverified_changes)}"
     )
@@ -494,7 +518,9 @@ if baseline is not None:
     overlap = reverified_set & failed_ids
     assert not overlap, f"ids cannot be both reverified and failed: {sorted(overlap)}"
 
-    missing = effective_due - reverified_set
+    # An item that could not be opened today keeps its old verification date
+    # and its recorded reason; one blocked page must not stop the whole brief.
+    missing = effective_due - reverified_set - failed_ids
     assert not missing, (
         f"research audit did not re-verify due OPEN/UPCOMING ids: {sorted(missing)}; "
         f"recorded failures={sorted(failed_ids)}"
@@ -502,7 +528,7 @@ if baseline is not None:
 
     stale = [
         item_id
-        for item_id in effective_due
+        for item_id in effective_due - failed_ids
         if current_by_id.get(item_id, {}).get("lastVerifiedDate") != snapshot_date
     ]
     assert not stale, f"due reverified items must set lastVerifiedDate to snapshot date: {sorted(stale)}"

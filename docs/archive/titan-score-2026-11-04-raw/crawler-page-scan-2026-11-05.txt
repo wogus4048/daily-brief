@@ -1,0 +1,21 @@
+031410001 ms=105647 open=61 pages=1:11 2:10 3:9 4:8 5:2 6:5 7:1 8:1 9:1 10:2 11:2 13:2 14:1 15:2 16:1 18:1 21:1 29:1
+  dday samples 25= 심사중 | 50= 캠페인마감 | 75= 발표보기 | 100= 캠페인마감
+030310001 ms=111856 open=36 pages=1:12 2:6 3:5 4:1 5:2 6:2 7:1 8:1 9:3 17:1 19:1 23:1
+  dday samples 25= 캠페인마감 | 50= 캠페인마감 | 75= 캠페인마감 | 100= 캠페인마감
+wev 1 gp1 links=15 rows=16
+wev 1 gp2 links=9 rows=10
+wev 1 gp3 links=0 rows=1
+wev 1 total=24 ms=1829
+wev 20 gp1 links=11 rows=12
+wev 20 gp2 links=0 rows=1
+wev 20 total=11 ms=777
+wev 21 gp1 links=3 rows=4
+wev 21 gp2 links=0 rows=1
+wev 21 total=3 ms=893
+wev 22 gp1 links=2 rows=3
+wev 22 gp2 links=0 rows=1
+wev 22 total=2 ms=951
+wev 88 gp1 links=3 rows=4
+wev 88 gp2 links=0 rows=1
+wev 88 total=3 ms=761
+DONE

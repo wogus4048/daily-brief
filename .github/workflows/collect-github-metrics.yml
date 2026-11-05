@@ -1,9 +1,10 @@
 name: Collect GitHub repository metrics
 
 on:
-  workflow_run:
-    workflows: [Crawl daily-brief source inventories, Promote daily brief staging snapshot]
-    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - 'data/latest.json'
   workflow_dispatch:
 
 permissions:
