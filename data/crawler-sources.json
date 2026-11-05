@@ -113,6 +113,64 @@
   "degraded": [],
   "nextCandidates": [
     {
+      "key": "2bank-spectory-net",
+      "name": "2bank.spectory.net",
+      "url": "https://2bank.spectory.net/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://2bank.spectory.net/idea/contest?bno=61054"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "ai-challenge-elice-page",
+      "name": "ai-challenge.elice.page",
+      "url": "https://ai-challenge.elice.page/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "aiData"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://ai-challenge.elice.page/home/main"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "aichallenge4all-competitions",
+      "name": "AI Challenge for All 대회 목록(과기정통부 AI 챌린지)",
+      "url": "https://aichallenge4all.or.kr/competitions",
+      "reason": "과기정통부 주관 AI 챌린지·공모전이 시즌별로 반복 게시되는 공식 목록(자유 탐색에서 발견)",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "aik-board-d001",
+      "name": "AIK 게시판 d001",
+      "url": "https://www.aik.or.kr/board/?ncode=d001",
+      "reason": "용산국제업무지구 등 지역 아이디어 공모전이 게시된 기관 게시판(자유 탐색에서 발견)",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "aitop100",
       "name": "AI_TOP_100",
       "url": "https://aitop100.org/",
@@ -141,6 +199,42 @@
         "https://amazonappdev2026.devpost.com/"
       ],
       "score": 14,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "appdevchallenge-auto-hmg-io",
+      "name": "appdevchallenge.auto-hmg.io",
+      "url": "https://appdevchallenge.auto-hmg.io/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "generalSoftware"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "http://appdevchallenge.auto-hmg.io/"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "asvf-or-kr",
+      "name": "asvf.or.kr",
+      "url": "https://asvf.or.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "startupSupport",
+      "sourceTracks": [
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.asvf.or.kr/notice/26"
+      ],
+      "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -182,6 +276,17 @@
       }
     },
     {
+      "key": "bizinfo-startup-list",
+      "name": "기업마당 지원사업 공고 - 창업 분야",
+      "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200View.do?hashCode=09&rows=15",
+      "reason": "창업 분야 지원사업이 지역·기관별로 반복 게시되는 공식 목록(자유 탐색에서 43건 확인)",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "blaybus-com",
       "name": "blaybus.com",
       "url": "https://blaybus.com/",
@@ -199,6 +304,91 @@
         "https://www.blaybus.com/v2/activity/1122/landing"
       ],
       "score": 14,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "blaybus-contest",
+      "name": "블레이버스 공모전·해커톤 탐색",
+      "url": "https://www.blaybus.com/explore?tab=contest",
+      "reason": "KAIST 주관 등 해커톤·아이디어 공모전이 반복 게시되는 목록(자유 탐색에서 발견)",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "blog-naver-com",
+      "name": "blog.naver.com",
+      "url": "https://blog.naver.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "generalSoftware",
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://blog.naver.com/nitto_official/224458090500",
+        "https://blog.naver.com/ppspr/224439199284"
+      ],
+      "score": 42,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "brcn-go-kr",
+      "name": "brcn.go.kr",
+      "url": "https://brcn.go.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.brcn.go.kr/prog/eminwon/kor/BB/sub04_03_01/view.do?mgtno=57363"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "buyeostartup-kr",
+      "name": "buyeostartup.kr",
+      "url": "https://buyeostartup.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "http://buyeostartup.kr/"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "cbpm-cbnu-ac-kr",
+      "name": "cbpm.cbnu.ac.kr",
+      "url": "https://cbpm.cbnu.ac.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "startupSupport",
+      "sourceTracks": [
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://cbpm.cbnu.ac.kr/notice/notice/?mod=document&uid=1258"
+      ],
+      "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -220,6 +410,48 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "commonz042-kr",
+      "name": "commonz042.kr",
+      "url": "https://commonz042.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.commonz042.kr/bbs/board.php?bo_table=public_apply&wr_id=57"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "contestkorea-com",
+      "name": "contestkorea.com",
+      "url": "https://contestkorea.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "aiData",
+        "generalSoftware",
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=030310001&str_no=202610270001",
+        "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610200023",
+        "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610210006",
+        "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610280053",
+        "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610290007"
+      ],
+      "score": 48,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "cookiesforai-app",
       "name": "cookiesforai.app",
       "url": "https://cookiesforai.app/",
@@ -238,6 +470,24 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "cuk-ac-kr",
+      "name": "cuk.ac.kr",
+      "url": "https://cuk.ac.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "aiData"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.cuk.ac.kr/ko/campuslife/notice.do?articleNo=276913&mode=view&srCategoryId=21"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "datathon-kr",
       "name": "datathon.kr",
       "url": "https://datathon.kr/",
@@ -247,6 +497,24 @@
       "autoDiscovered": true,
       "evidenceUrls": [
         "https://www.datathon.kr/"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "dcnc-or-kr",
+      "name": "dcnc.or.kr",
+      "url": "https://dcnc.or.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "aiData"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.dcnc.or.kr/bbs/board.php?bo_table=notice&wr_id=193"
       ],
       "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
@@ -291,6 +559,60 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "drafthon-ai-kr",
+      "name": "drafthon.ai.kr",
+      "url": "https://drafthon.ai.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "aiData"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "http://drafthon.ai.kr/"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "e-junggu-or-kr",
+      "name": "e-junggu.or.kr",
+      "url": "https://e-junggu.or.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "http://www.e-junggu.or.kr/"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "epeople-go-kr",
+      "name": "epeople.go.kr",
+      "url": "https://epeople.go.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.epeople.go.kr/idea/ex/1AE-2610-0000546/detail.npaid"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "epoch-ai",
       "name": "epoch.ai",
       "url": "https://epoch.ai/",
@@ -314,6 +636,24 @@
       "reason": "JS-heavy searchable event catalog; exact public search API/URL filtering needs inspection",
       "status": "NEEDS_SPEC",
       "score": 0,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "forest-go-kr",
+      "name": "forest.go.kr",
+      "url": "https://forest.go.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "aiData"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.forest.go.kr/kfsweb/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_1855&mn=NKFS_06_08_07&nttId=3225569"
+      ],
+      "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -347,6 +687,24 @@
         "https://www.gbmaru.com/"
       ],
       "score": 12,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "gcgfcontest-co-kr",
+      "name": "gcgfcontest.co.kr",
+      "url": "https://gcgfcontest.co.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.gcgfcontest.co.kr/info.asp"
+      ],
+      "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -401,7 +759,7 @@
         "limit": 30
       },
       "recommendation": "CONTINUE_SHADOW",
-      "score": 10
+      "score": 20
     },
     {
       "key": "gitlab-transcend-devpost-com",
@@ -415,6 +773,24 @@
         "https://gitlab-transcend.devpost.com/"
       ],
       "score": 14,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "go-simsa-com",
+      "name": "go-simsa.com",
+      "url": "https://go-simsa.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "startupSupport",
+      "sourceTracks": [
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "http://www.go-simsa.com/recruit/Jozu4OXw"
+      ],
+      "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -486,7 +862,43 @@
         "limit": 30
       },
       "recommendation": "CONTINUE_SHADOW",
-      "score": 68
+      "score": 78
+    },
+    {
+      "key": "hanaw-com",
+      "name": "hanaw.com",
+      "url": "https://hanaw.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.hanaw.com/contest/contest.html"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "hub-kaia-re-kr",
+      "name": "hub.kaia.re.kr",
+      "url": "https://hub.kaia.re.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "startupSupport",
+      "sourceTracks": [
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://hub.kaia.re.kr/organSupportHub.do/view?orgKind=ORG_KIND_2&rltdId=95259"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
       "key": "huggingFaceModels",
@@ -506,7 +918,7 @@
         "limit": 30
       },
       "recommendation": "CONTINUE_SHADOW",
-      "score": 62
+      "score": 72
     },
     {
       "key": "huggingFaceSpaces",
@@ -525,7 +937,61 @@
         "limit": 30
       },
       "recommendation": "CONTINUE_SHADOW",
-      "score": 20
+      "score": 30
+    },
+    {
+      "key": "incheon-go-kr",
+      "name": "incheon.go.kr",
+      "url": "https://incheon.go.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "startupSupport",
+      "sourceTracks": [
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.incheon.go.kr/jobs/main/support/business/view.do?plcy_sprt_sn=5728"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "isc-kaist-ac-kr",
+      "name": "isc.kaist.ac.kr",
+      "url": "https://isc.kaist.ac.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://isc.kaist.ac.kr/sub0501/view/id/256"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "jcia-or-kr",
+      "name": "jcia.or.kr",
+      "url": "https://jcia.or.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "startupSupport",
+      "sourceTracks": [
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://jcia.or.kr/cf/Board/9950/detailView.do"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
       "key": "jn-se-kr",
@@ -544,6 +1010,42 @@
         "https://jn-se.kr/bbs/board.php?bo_table=nco4_1&w=u&wr_id=1360"
       ],
       "score": 42,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "jocodingax-ai",
+      "name": "jocodingax.ai",
+      "url": "https://jocodingax.ai/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "aiData"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "http://jocodingax.ai"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "kapco-or-kr",
+      "name": "kapco.or.kr",
+      "url": "https://kapco.or.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://kapco.or.kr/news/noticeView.php?notice_seq=3500"
+      ],
+      "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -596,6 +1098,24 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "kepco-enc-com",
+      "name": "kepco-enc.com",
+      "url": "https://kepco-enc.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "http://www.kepco-enc.com/board.es?mid=a10601000000&bid=0024&list_no=45199&act=view"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "kinfa-or-kr",
       "name": "kinfa.or.kr",
       "url": "https://kinfa.or.kr/",
@@ -625,6 +1145,24 @@
       "category": "startupSupport"
     },
     {
+      "key": "kisa-or-kr",
+      "name": "kisa.or.kr",
+      "url": "https://kisa.or.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "startupSupport",
+      "sourceTracks": [
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.kisa.or.kr/401/form?lang_type=KO&page=1&postSeq=3752"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "kised",
       "name": "창업진흥원 사업공고",
       "url": "https://www.kised.or.kr/misAnnouncement/index.es?mid=a10302000000",
@@ -640,7 +1178,7 @@
         "expand": false,
         "waitMs": 1200
       },
-      "score": 20,
+      "score": 30,
       "recommendation": "CONTINUE_SHADOW"
     },
     {
@@ -657,6 +1195,24 @@
       "autoDiscovered": true,
       "evidenceUrls": [
         "https://kmubiz.kookmin.ac.kr/template-a/etc-board/board01.do?mode=view&pid=12452"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "kspo-or-kr",
+      "name": "kspo.or.kr",
+      "url": "https://kspo.or.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "http://kspo.or.kr/contest"
       ],
       "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
@@ -699,6 +1255,24 @@
       "reason": "structured contest/activity catalog but pagination and anti-bot behavior need inspection",
       "status": "NEEDS_SPEC",
       "score": 0,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "litt-ly",
+      "name": "litt.ly",
+      "url": "https://litt.ly/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://litt.ly/hy.official.kr"
+      ],
+      "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -747,6 +1321,117 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "mcee-go-kr",
+      "name": "mcee.go.kr",
+      "url": "https://mcee.go.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.mcee.go.kr/home/web/board/read.do?boardId=1874010&boardMasterId=713&menuId=10392"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "mcp-explained-com",
+      "name": "mcp-explained.com",
+      "url": "https://mcp-explained.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "aiDiscovery",
+      "sourceTracks": [
+        "aiDiscovery"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://mcp-explained.com/"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "mediahub-seoul-go-kr",
+      "name": "mediahub.seoul.go.kr",
+      "url": "https://mediahub.seoul.go.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://mediahub.seoul.go.kr/gongmo/2000784",
+        "https://mediahub.seoul.go.kr/gongmo/2000785"
+      ],
+      "score": 42,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "mobislive-com",
+      "name": "mobislive.com",
+      "url": "https://mobislive.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "http://mobislive.com/category/6/view?momoid=114&id=3095&type=notice"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "modu-go-kr",
+      "name": "modu.go.kr",
+      "url": "https://modu.go.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://modu.go.kr/front/epilogue/epilogueBbsViewPage.do?bbs_id=fd95779fc73c48ec8a2a8643ccf9a4cf&miv_pageNo=1",
+        "https://modu.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=10cd564877b04abcb22c35cf62054cb6&menu_id=527&pagetype=bbs",
+        "https://modu.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=c73a0a9081bf48378808e142562daec6&menu_id=527&pagetype=bbs"
+      ],
+      "score": 44,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "mogefdatacontest-co-kr",
+      "name": "mogefdatacontest.co.kr",
+      "url": "https://mogefdatacontest.co.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "aiData"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://mogefdatacontest.co.kr/info.jsp"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "mois-go-kr",
       "name": "mois.go.kr",
       "url": "https://mois.go.kr/",
@@ -782,6 +1467,71 @@
         "https://mosaiclab.net/"
       ],
       "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "mpb-go-kr",
+      "name": "mpb.go.kr",
+      "url": "https://mpb.go.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.mpb.go.kr/web/main/bbs/b_0001/3125"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "nafi-re-kr",
+      "name": "nafi.re.kr",
+      "url": "https://nafi.re.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.nafi.re.kr/home/kor/board.do?act=detail&idx=4498&menuPos=38"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "nia-or-kr",
+      "name": "nia.or.kr",
+      "url": "https://nia.or.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://nia.or.kr/site/nia_kor/ex/bbs/View.do?bcIdx=30083&cbIdx=99835&parentSeq=30083"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "nibp-notice",
+      "name": "국가생명윤리정책원 공지 목록",
+      "url": "https://nibp.kr/board/notice",
+      "reason": "ESG·생명윤리 대국민 아이디어 공모전이 공지로 게시되는 기관 목록(자유 탐색에서 발견)",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "score": 8,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -860,6 +1610,24 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "project-seoul-go-kr",
+      "name": "project.seoul.go.kr",
+      "url": "https://project.seoul.go.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "http://project.seoul.go.kr/view/viewDetailCptt.do"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "prompt-motion-com",
       "name": "prompt-motion.com",
       "url": "https://prompt-motion.com/",
@@ -915,6 +1683,24 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "sangjufestival-com",
+      "name": "sangjufestival.com",
+      "url": "https://sangjufestival.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://sangjufestival.com/bbs/page.php?gr_id=G_02&hid=contest"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "sba",
       "name": "SBA",
       "reason": "public program listings split across multiple boards; source-specific board inventory needed",
@@ -922,6 +1708,42 @@
       "score": 0,
       "recommendation": "NEEDS_CRAWLER_SPEC",
       "category": "startupSupport"
+    },
+    {
+      "key": "sdm-go-kr",
+      "name": "sdm.go.kr",
+      "url": "https://sdm.go.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.sdm.go.kr/news/notice/notice.do?mode=view&sdmBoardConfSeq=82&sdmBoardSeq=316576"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "search-skku-edu",
+      "name": "search.skku.edu",
+      "url": "https://search.skku.edu/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://search.skku.edu/skku/campus/skk_comm/notice01.do?articleNo=140948&mode=view"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
       "key": "seongnam-go-kr",
@@ -937,6 +1759,60 @@
       "autoDiscovered": true,
       "evidenceUrls": [
         "https://www.seongnam.go.kr/pm010201/6437"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "seoullocalcamp-imweb-me",
+      "name": "seoullocalcamp.imweb.me",
+      "url": "https://seoullocalcamp.imweb.me/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "startupSupport",
+      "sourceTracks": [
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://seoullocalcamp.imweb.me/"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "snyouth-or-kr",
+      "name": "snyouth.or.kr",
+      "url": "https://snyouth.or.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.snyouth.or.kr/fmcs/289?action=read&action-value=79dc727035b9c04bee890ecabb8bc95b"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "sport-kookmin-ac-kr",
+      "name": "sport.kookmin.ac.kr",
+      "url": "https://sport.kookmin.ac.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "startupSupport",
+      "sourceTracks": [
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://sport.kookmin.ac.kr/sports/notice/calendar02.do?mode=view&pid=12560"
       ],
       "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
@@ -961,6 +1837,42 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "stcc-kr",
+      "name": "stcc.kr",
+      "url": "https://stcc.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.stcc.kr/news/notice_view/177"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "taekwondo-jj-ac-kr",
+      "name": "taekwondo.jj.ac.kr",
+      "url": "https://taekwondo.jj.ac.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://taekwondo.jj.ac.kr/taekwondo/community/notice-01.do?articleNo=533429&mode=view"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "thecompanyc-com",
       "name": "thecompanyc.com",
       "url": "https://thecompanyc.com/",
@@ -974,6 +1886,89 @@
       "autoDiscovered": true,
       "evidenceUrls": [
         "https://thecompanyc.com/web/contents/recruitment/view.php?ed_id=114"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "thinkyou-contest-2026",
+      "name": "싱크유 2026 공모전 목록",
+      "url": "https://thinkyou.co.kr/contest/2026.asp",
+      "reason": "공모전 모음 목록 사이트(자유 탐색에서 발견, 내용 품질은 확인 필요)",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "tourbiz-gtc-co-kr",
+      "name": "tourbiz.gtc.co.kr",
+      "url": "https://tourbiz.gtc.co.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "http://tourbiz.gtc.co.kr/notice/681"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "uiwang-go-kr",
+      "name": "uiwang.go.kr",
+      "url": "https://uiwang.go.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "startupSupport",
+      "sourceTracks": [
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.uiwang.go.kr/UWKORINFO0101/7006130"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "wando-go-kr",
+      "name": "wando.go.kr",
+      "url": "https://wando.go.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "http://www.wando.go.kr/wando/sub.cs?m=1031&nttId=31614"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "wma-co-kr",
+      "name": "wma.co.kr",
+      "url": "https://wma.co.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "aiData"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://wma.co.kr/ax"
       ],
       "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
@@ -1016,8 +2011,37 @@
       ],
       "score": 12,
       "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "yoill-contests",
+      "name": "요일 공모전 목록",
+      "url": "https://yoill.com/contests/",
+      "reason": "공모전 모음 목록 사이트(자유 탐색에서 발견, 내용 품질은 확인 필요)",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "zyx-co-kr",
+      "name": "zyx.co.kr",
+      "url": "https://zyx.co.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "generalSoftware"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-06",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.zyx.co.kr/zyxawards"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
     }
   ],
-  "lastEvolvedDate": "2026-10-13",
-  "lastEvolvedAt": "2026-10-13T04:46:41.305449Z"
+  "lastEvolvedDate": "2026-11-06",
+  "lastEvolvedAt": "2026-11-05T16:31:58.029587Z"
 }
