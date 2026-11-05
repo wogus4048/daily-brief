@@ -11,9 +11,12 @@ import os
 import re
 import time
 import uuid
+from datetime import date, timedelta
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
+
+from research_rules import normalize_url
 
 WAIT_SECONDS = 1800
 POLL_SECONDS = 15
@@ -22,18 +25,21 @@ VERIFY_WORKERS = 3
 EXPLORE_WORKERS = 2
 ITEMS_PER_WORKER = 5
 BATCH_SIZE = VERIFY_WORKERS * ITEMS_PER_WORKER
+# A listing seen this recently keeps its earlier decision; already-published items are
+# rechecked on their own schedule, so opening them again here would only repeat work.
+SEEN_DAYS = 14
 FINISHED_WORKER_STATES = {"sleeping", "finished", "failed"}
 URL_PATTERN = re.compile(r"https?://[^\s<>\"'`)\]|]+")
 
 # 2026-11-05: without these rules GPT used the Titan browser 6 times for 20 items, read two
 # tabs at once, stopped at the first timeout, and reported a page it had read as unread.
-BROWSER_RULES = """공식 페이지 확인 방법: 브라우저 도구(browser_tabs, browser_snapshot)로 직접 열어라. browser_tabs list로 브라우저별 탭을 보고, 이 대화의 URL이 있는 브라우저의 browserId만 써라. 다른 브라우저는 쓰지 마라. 탭은 한 번에 하나만 new로 열고, 다 읽은 뒤 close로 닫고 다음 탭을 열어라. 동시에 읽지 마라. browser_snapshot이 실패하면 오류 안내대로 다시 연결해 2번까지 다시 시도해라. 실제로 읽은 페이지를 못 읽었다고 적지 마라."""
+BROWSER_RULES = """공식 정보 확인 방법: 먼저 네 웹 검색으로 주최 기관의 공고를 찾아 대조해라. 검색으로 확인되면 페이지를 따로 열지 마라. 검색으로 안 나오거나 값이 어긋날 때만 브라우저 도구(browser_tabs, browser_snapshot)로 직접 열어라. browser_tabs list로 브라우저별 탭을 보고, 이 대화의 URL이 있는 브라우저의 browserId만 써라. 다른 브라우저는 쓰지 마라. 탭은 한 번에 하나만 new로 열고, 다 읽은 뒤 close로 닫고 다음 탭을 열어라. 동시에 읽지 마라. browser_snapshot이 실패하면 오류 안내대로 다시 연결해 2번까지 다시 시도해라. 실제로 읽은 페이지를 못 읽었다고 적지 마라."""
 
 PRIME_PROMPT = """worker를 {workers}개 띄워 아래 일을 나눠 맡겨라. 네가 직접 조사하지 마라. 일이 겹치지 않게 나누고, 아래 지시를 각 worker에게 빠짐없이 전해라. 각 worker는 맡은 결과를 전부 Prime에게 message로 보내고 finish해야 한다. 네가 결과를 합칠 필요는 없다.
 
 {work}"""
 
-VERIFY_PROMPT = """오늘은 {today}이다. 아래 공고 {count}건을 하나씩 공식 페이지(주최 기관의 공고나 접수 페이지)에서 확인해라. 모음 사이트 내용만 보고 적지 마라. 파일을 만들지 마라.
+VERIFY_PROMPT = """오늘은 {today}이다. 아래 공고 {count}건은 브리핑에 올릴 후보다. 크롤러가 모음 사이트에서 읽은 값이 적혀 있다. 이 값이 주최 기관의 공식 정보와 맞는지 대조해라. 파일을 만들지 마라.
 
 {browser_rules}
 
@@ -67,8 +73,16 @@ def build_prompt(manifest, today):
     return PRIME_PROMPT.format(workers=EXPLORE_WORKERS, work=work)
 
 
+def describe(item):
+    details = item.get("details") or {}
+    return ", ".join(f"{key}: {value}" for key, value in details.items()) or (item.get("listing") or "")[:160]
+
+
 def build_verify_prompt(items, today):
-    lines = "\n".join(f"{number}. {item.get('title')} | {item.get('url')}" for number, item in enumerate(items, 1))
+    lines = "\n".join(
+        f"{number}. {item.get('title')} | {item.get('url')} | {describe(item)}"
+        for number, item in enumerate(items, 1)
+    )
     work = VERIFY_PROMPT.format(today=today, count=len(items), browser_rules=BROWSER_RULES, items=lines)
     return PRIME_PROMPT.format(workers=VERIFY_WORKERS, work=work)
 
@@ -80,6 +94,24 @@ def candidate_items(cache):
             if item.get("url"):
                 by_url.setdefault(item["url"], item)
     return list(by_url.values())
+
+
+def earlier_decisions(root, today):
+    """Disposition of each listing URL recorded in the last SEEN_DAYS of research audits."""
+    decisions = {}
+    start = date.fromisoformat(today) - timedelta(days=SEEN_DAYS)
+    for path in sorted((root / "data/research").glob("*.json")):
+        if not start.isoformat() <= path.stem < today:
+            continue
+        audit = json.loads(path.read_text(encoding="utf-8"))
+        dacon = audit.get("fixedSources", {}).get("DACON", {})
+        groups = [*audit.get("machineSources", {}).values(),
+                  dacon.get("competitionsInventory", []), dacon.get("dakerInventory", [])]
+        for rows in groups:
+            for row in rows:
+                if row.get("url") and row.get("disposition"):
+                    decisions[normalize_url(row["url"])] = row
+    return decisions
 
 
 def extract_urls(text):
@@ -241,7 +273,19 @@ def run_verify(root, today, log, client_factory=TitanClient, batch_size=BATCH_SI
     """Ask GPT to confirm candidates on official pages, one chat per batch."""
     started = time.monotonic()
     cache = json.loads((root / f"data/source-cache/{today}.json").read_text(encoding="utf-8"))
-    items = candidate_items(cache)
+    decisions = earlier_decisions(root, today)
+    shortlist = root / f"artifacts/daily/{today}-shortlist.json"
+    all_items = (
+        json.loads(shortlist.read_text(encoding="utf-8")) if shortlist.exists() else candidate_items(cache)
+    )
+    items = [item for item in all_items if normalize_url(item["url"]) not in decisions]
+    carried = [
+        {**item, **{key: decisions[normalize_url(item["url"])].get(key) for key in ("disposition", "reason")}}
+        for item in all_items if normalize_url(item["url"]) in decisions
+    ]
+    (root / f"artifacts/daily/{today}-carried.json").write_text(
+        json.dumps(carried, ensure_ascii=False, indent=2) + "\n", encoding="utf-8",
+    )
     batches = []
     client = None
     for index, start in enumerate(range(0, len(items), batch_size), 1):
@@ -261,7 +305,7 @@ def run_verify(root, today, log, client_factory=TitanClient, batch_size=BATCH_SI
         batches.append(batch)
     failed = sum(batch["status"] != "OK" for batch in batches)
     status = "OK" if not failed else "FAILED" if failed == len(batches) else "PARTIAL"
-    return {"status": status, "items": len(items), "batches": batches,
+    return {"status": status, "items": len(items), "carried": len(carried), "batches": batches,
             "seconds": round(time.monotonic() - started, 1)}
 
 

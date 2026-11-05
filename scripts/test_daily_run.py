@@ -10,6 +10,7 @@ from pathlib import Path
 
 import daily_run
 import free_explore
+import read_details
 
 TODAY = "2026-11-05"
 SOURCE_MANIFEST = {"active": [
@@ -122,6 +123,54 @@ class ExploreTest(unittest.TestCase):
             self.assertEqual(free_explore.read_final_answer(folder), ("new", ["https://x.kr/1"]))
 
 
+class DetailTest(unittest.TestCase):
+    WEVITY = """
+    <!--li><span class="tit">참가자격</span>지운 줄</li-->
+    <li class="dday-area"><span class="tit">접수기간</span> 2026-06-15 ~ 2026-11-30 <span class="cil-dday">D-25</span></li>
+    <li><span class="tit">응모대상</span> 청소년, 기타 </li>
+    <li><span class="tit">주최/주관</span> 한국IT전문학교 </li>
+    <li><span class="tit">1등 상금</span> 30만원 </li>
+    <li><span class="tit">홈페이지</span> <a href="https://example.ac.kr/notice?id=1" target="_blank">바로가기</a></li>
+    """
+    CONTEST_KOREA = """
+    <tr><th scope="row">접수기간</th><td> 2026.06.11 ~ 2026.11.30 </td></tr>
+    <tr><th scope="row">주최 . 주관</th><td> 한국지방재정공제회 </td></tr>
+    <tr><th scope="row">참가대상</th><td> 일반인 , 대학생 </td></tr>
+    <tr><th scope="row">홈페이지</th><td><a href="javascript:void(0)"; class="homepage_go" val1="1" val2="http://www.example.or.kr ">바로가기</a></td></tr>
+    <tr><th scope="row">시상내역</th><td> 상금(총상금 : 300만원) </td></tr>
+    """
+
+    def test_wevity_fields(self):
+        details = read_details.parse_details(self.WEVITY)
+        self.assertEqual(details["period"], "2026-06-15 ~ 2026-11-30 D-25")
+        self.assertEqual(details["host"], "한국IT전문학교")
+        self.assertEqual(details["target"], "청소년, 기타")
+        self.assertEqual(details["prize"], "30만원")
+        self.assertEqual(details["homepage"], "https://example.ac.kr/notice?id=1")
+
+    def test_contest_korea_fields(self):
+        details = read_details.parse_details(self.CONTEST_KOREA)
+        self.assertEqual(details["period"], "2026.06.11 ~ 2026.11.30")
+        self.assertEqual(details["host"], "한국지방재정공제회")
+        self.assertEqual(details["target"], "일반인 , 대학생")
+        self.assertEqual(details["homepage"], "http://www.example.or.kr")
+
+    def test_one_failed_page_does_not_stop_the_rest(self):
+        def fetch(url):
+            if url.endswith("bad"):
+                raise OSError("timed out")
+            return self.CONTEST_KOREA
+
+        cache = {"sources": {"contestKorea": {"actionableItems": [
+            {"title": "a", "url": "https://x/bad"}, {"title": "b", "url": "https://x/ok"},
+        ]}, "kStartupHighlights": {"actionableItems": [{"title": "c", "url": "https://y/1"}]}}}
+        rows, failed = read_details.read_details(cache, fetch=fetch, gap_seconds=0)
+        self.assertEqual(failed, 1)
+        self.assertIn("timed out", rows[0]["detailError"])
+        self.assertEqual(rows[1]["details"]["host"], "한국지방재정공제회")
+        self.assertNotIn("details", rows[2])
+
+
 class VerifyTest(unittest.TestCase):
     class Client:
         def __init__(self, fail_on=None):
@@ -176,10 +225,55 @@ class VerifyTest(unittest.TestCase):
     def test_prompt_demands_one_tab_and_retry(self):
         client = self.Client()
         self.verify(client)
+        self.assertIn("검색", client.prompts[0])
         self.assertIn("한 번에 하나만", client.prompts[0])
-        self.assertIn("다시 시도", client.prompts[0])
         self.assertIn("worker를 3개", client.prompts[0])
         self.assertIn("https://example.org/0", client.prompts[0])
+
+    def test_shortlist_replaces_the_full_list(self):
+        client = self.Client()
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        root = Path(temp.name)
+        rows = [{"title": f"공고 {n}", "url": f"https://example.org/{n}"} for n in range(3)]
+        write_json(root / f"data/source-cache/{TODAY}.json", {"sources": {"wevity": {"actionableItems": rows}}})
+        write_json(root / f"artifacts/daily/{TODAY}-shortlist.json", [
+            {"title": "공고 1", "url": "https://example.org/1", "details": {"host": "주최사", "period": "~ 11.30"}},
+        ])
+        log = daily_run.RunLog(root, TODAY, "verify")
+        result = free_explore.run_verify(
+            root, TODAY, log, client_factory=lambda: client, wait_seconds=1, poll_seconds=0,
+        )
+        self.assertEqual(result["items"], 1)
+        self.assertIn("주최사", client.prompts[0])
+        self.assertIn("검색", client.prompts[0])
+        self.assertNotIn("example.org/0", client.prompts[0])
+
+    def test_items_handled_on_earlier_days_are_carried_not_rechecked(self):
+        client = self.Client()
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        root = Path(temp.name)
+        rows = [{"title": f"공고 {n}", "url": f"https://example.org/{n}?utm_source=x"} for n in range(3)]
+        write_json(root / f"data/source-cache/{TODAY}.json", {"sources": {"wevity": {"actionableItems": rows}}})
+        write_json(root / "data/research/2026-11-04.json", {"machineSources": {"wevity": [
+            {"title": "공고 0", "url": "https://example.org/0", "disposition": "NOT_RELEVANT", "reason": "영상"},
+        ]}, "fixedSources": {"DACON": {"dakerInventory": [
+            {"title": "공고 1", "url": "https://example.org/1", "disposition": "PUBLISHED"},
+        ]}}})
+        write_json(root / "data/research/2026-10-01.json", {"machineSources": {"wevity": [
+            {"title": "공고 2", "url": "https://example.org/2", "disposition": "CLOSED"},
+        ]}})
+        log = daily_run.RunLog(root, TODAY, "verify")
+        result = free_explore.run_verify(
+            root, TODAY, log, client_factory=lambda: client, batch_size=2, wait_seconds=1, poll_seconds=0,
+        )
+        self.assertEqual((result["items"], result["carried"]), (1, 2))
+        self.assertIn("https://example.org/2", client.prompts[0])
+        self.assertNotIn("example.org/0", client.prompts[0])
+        carried = json.loads((root / f"artifacts/daily/{TODAY}-carried.json").read_text(encoding="utf-8"))
+        self.assertEqual({row["disposition"] for row in carried}, {"NOT_RELEVANT", "PUBLISHED"})
+        self.assertIn("영상", {row.get("reason") for row in carried})
 
     def test_failed_batch_does_not_stop_the_rest(self):
         client = self.Client(fail_on=2)

@@ -27,6 +27,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from free_explore import run_explore, run_verify
+from read_details import write_details
 from research_rules import close_expired_out_of_scope
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -219,6 +220,8 @@ def run_prepare(root, today, no_pull=False, sync=sync_main, deps=check_dependenc
         manifest = json.loads((root / "data/crawler-sources.json").read_text(encoding="utf-8"))
         log.event("sources", sources=source_stats(cache))
         result.update(evaluate_sources(cache, manifest, today))
+        with log.stage("details"):
+            result.update(write_details(root, today, cache, log))
         if result["requiredFailed"]:
             raise StepFailed(f"required sources failed: {', '.join(result['requiredFailed'])}")
         result["status"] = "OK"
@@ -381,6 +384,16 @@ def run_explore_step(root, today):
     return 0
 
 
+def run_details_step(root, today):
+    log = RunLog(root, today, "details")
+    log_environment(log, root, {})
+    cache = json.loads((root / f"data/source-cache/{today}.json").read_text(encoding="utf-8"))
+    with log.stage("details"):
+        result = write_details(root, today, cache, log)
+    print(result)
+    return 0
+
+
 def run_verify_step(root, today):
     log = RunLog(root, today, "verify")
     log_environment(log, root, {})
@@ -395,6 +408,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("prepare").add_argument("--no-pull", action="store_true", help="keep the current code")
+    commands.add_parser("details")
     commands.add_parser("explore")
     commands.add_parser("verify")
     commands.add_parser("publish").add_argument("--no-push", action="store_true", help="stop after the checks")
@@ -402,6 +416,8 @@ def main():
     today = datetime.now(SEOUL).date().isoformat()
     if args.command == "prepare":
         return run_prepare(ROOT, today, no_pull=args.no_pull)
+    if args.command == "details":
+        return run_details_step(ROOT, today)
     if args.command == "explore":
         return run_explore_step(ROOT, today)
     if args.command == "verify":

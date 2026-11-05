@@ -37,6 +37,7 @@
 - 검색 축마다 서로 다른 검색어를 2개 이상 실행한다. 각 트랙에는 한국어 검색어와 영어 등 비한국어 검색어를 함께 넣는다(`aiNews`, `aiDiscovery` 외 공모전·지원사업 트랙은 한국어만). 10-14부터 검증 스크립트가 이 기준을 확인한다.
 - `aiNews`는 날짜를 넣은 검색으로 시작하지 않는다. 오늘자 캐시의 `shadowSources.hackerNewsTop` 목록 전부를 먼저 훑고, GeekNews 첫 화면을 직접 연다. 그다음 다른 축으로 원문을 확인한다.
 - 네이밍·슬로건·표어·캐릭터, 문학(백일장·신춘문예·수기), 영상·사진, 미술·디자인·웹툰 공모전은 수집하지 않는다.
+- `artifacts/daily/YYYY-MM-DD-carried.json`은 최근 14일 안에 이미 판단한 공고다. 다시 열지 않고 그 처분을 오늘 조사 기록에 옮겨 적는다.
 - `artifacts/daily/YYYY-MM-DD-explore.md`의 자유 탐색 답변은 후보로 넣어 공식 페이지로 확인하고, 새 목록 페이지는 `sourceDiscoveries`에 `key`와 `crawlerSpec`까지 적는다.
 - 후보 수를 채우지 못하면 소진 사유를 기록하고 넘어가는 것이 기본 경로다. 후보를 억지로 채우지 않는다. `aiNews`는 `officialProduct`, `githubReleases`, `huggingFace`, `researchLabs`, `communities` 축의 실제 검색어를 모두 기록한다.
 - 한 트랙에서 후보가 많이 나와도 다른 트랙은 생략하지 않는다.
