@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { actionableMetricFailures, collectMetrics, repositories } from './collect_github_metrics.mjs';
-import { assessHealth, assessPublicationArtifacts, hasUsableCache, healthExitCode } from './pipeline_health.mjs';
+import { assessHealth, assessPublicationArtifacts, hasUsableCache, healthExitCode, unfinishedListings } from './pipeline_health.mjs';
 
 const brief = {aiDiscovery:[{links:[{url:'https://github.com/owner/project.git'},{url:'https://github.com/owner/project/issues'}]},{links:[{url:'https://github.com/owner/project'}]}]};
 assert.deepEqual(repositories(brief), ['owner/project']);
@@ -93,4 +93,6 @@ assert.equal(assessPublicationArtifacts('2026-10-08',snapshotBytes,null,auditByt
 assert.equal(assessPublicationArtifacts('2026-10-08',snapshotBytes,Buffer.from('{}'),auditBytes).status,'INCOMPLETE');
 assert.equal(assessPublicationArtifacts('2026-10-08',snapshotBytes,snapshotBytes,Buffer.from('{}')).status,'INCOMPLETE');
 assert.equal(healthExitCode({sources:{status:'OK'},collection:{status:'OK'},publication:{status:'INCOMPLETE'}}),1);
+assert.deepEqual(unfinishedListings({coverage:[{url:'a',pagesRead:9,reachedEnd:false,stoppedBy:'error'},{url:'b',pagesRead:2,reachedEnd:true,stoppedBy:'empty'}]}),['a stopped at page 9 (error)'],'Only listings not read to their end are reported');
+assert.deepEqual(unfinishedListings({}),[],'A source without coverage has nothing to report');
 console.log('PASS: metrics success/zero/retention/errors and separate source/collection/publication health');

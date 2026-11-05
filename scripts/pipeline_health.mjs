@@ -46,6 +46,11 @@ export function assessHealth(cache, manifest, brief, now = new Date()) {
 
 // Crawl attempts repeat through the night, so a source outage there is only reported
 // in the step summary and annotations. The daily health check is the single alarm.
+export function unfinishedListings(source) {
+  return (source.coverage||[]).filter(listing=>!listing.reachedEnd)
+    .map(listing=>`${listing.url} stopped at page ${listing.pagesRead} (${listing.stoppedBy})`);
+}
+
 export function healthExitCode(health, { sourcesOnly = false } = {}) {
   if (sourcesOnly) return 0;
   if (health.sources.status === 'FAILED') return 1;
@@ -79,6 +84,7 @@ async function main() {
       const reason=(source?.error||'No source result').split('\n')[0].replace(/[\r\n]/g,' ');
       console.error(`::warning::${entry.key}: ${reason}`);
     }
+    for(const listing of unfinishedListings(source||{})) console.error(`::warning::${entry.key}: ${listing}`);
   }
   if(health.sources.status==='FAILED') lines.push('','A required source failed. Its partial cache stays saved, but editorial research and promotion remain blocked until a crawl succeeds.');
   if(health.sources.status==='PARTIAL') lines.push('','Some optional sources failed. Valid collected data remains usable; see warnings above and record source gaps during editorial research.');

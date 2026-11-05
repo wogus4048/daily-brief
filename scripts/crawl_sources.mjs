@@ -408,16 +408,97 @@ async function crawlDevpost(page) {
   return withActionable({ key: "devpostOpen", status: "OK", url, items }, ACTIONABLE.devpostOpen);
 }
 
-async function crawlContestKorea(page) {
-  const url = "https://contestkorea.kr/";
-  await gotoWithRetry(page, url);
-  const selector = 'a[href*="/sub/view.php"], a[href*="sub/view.php"]';
-  await waitForListing(page, selector, 1000);
-  const items = (await collectAnchors(page, selector, "ContestKorea"))
-    .filter(item => new URL(item.url).hostname.includes("contestkorea"));
+// The list holds years of closed contests in registration order. On 2026-11-05 open
+// rows were at most seven pages apart and none followed page 29 of the 140 read.
+const CONTEST_KOREA_CATEGORIES = ["031410001", "030310001"];
+const CONTEST_KOREA_CLOSED_RUN_LIMIT = 15;
+
+function keepUrlParams(url, keepParams) {
+  if (!keepParams) return url;
+  const parsed = new URL(url);
+  for (const key of [...parsed.searchParams.keys()]) {
+    if (!keepParams.includes(key)) parsed.searchParams.delete(key);
+  }
+  return parsed.toString();
+}
+
+// Reads each listing page by page and keeps only open items. A listing without
+// closedRunLimit ends at a page that stays blank when read twice; its first page
+// and any page of a closed-run listing (which runs far past its open rows) should
+// never be blank, so blank there means the read failed. keepParams drops the listing's
+// page and category from item URLs so one contest stays one item.
+async function collectPaged(page, linkSelector, label, { urls, param, maxPages, closedRunLimit, keepParams, waitMs = 300 }) {
+  const byUrl = new Map();
+  const coverage = [];
+  for (const url of urls) {
+    const seen = new Set();
+    let pagesRead = 0;
+    let closedRun = 0;
+    let lastOpenPage = 0;
+    let longestClosedRun = 0;
+    let stoppedBy = "maxPages";
+    for (let number = 1; number <= maxPages; number += 1) {
+      const target = new URL(url);
+      target.searchParams.set(param, number);
+      const readRows = async () => {
+        const response = await gotoWithRetry(page, target.toString());
+        if (response && !response.ok()) throw new Error(`${label} HTTP ${response.status()}: source unavailable or access blocked`);
+        await waitForListing(page, linkSelector, waitMs, 5000);
+        return (await collectAnchorsSafe(page, linkSelector, label))
+          .map(item => ({ ...item, url: keepUrlParams(item.url, keepParams) }));
+      };
+      let rows;
+      try {
+        rows = await readRows();
+        if (!rows.length && number > 1) rows = await readRows();
+      } catch (error) {
+        if (!byUrl.size) throw error;
+        stoppedBy = "error";
+        break;
+      }
+      pagesRead = number;
+      if (!rows.length) {
+        stoppedBy = closedRunLimit || number === 1 ? "blank" : "empty";
+        break;
+      }
+      if (rows.every(item => seen.has(item.url))) {
+        stoppedBy = "repeated";
+        break;
+      }
+      rows.forEach(item => seen.add(item.url));
+      const open = rows.filter(isActionableByHints);
+      open.forEach(item => byUrl.set(item.url, item));
+      if (open.length) {
+        lastOpenPage = number;
+        longestClosedRun = Math.max(longestClosedRun, closedRun);
+        closedRun = 0;
+      } else {
+        closedRun += 1;
+      }
+      if (closedRunLimit && closedRun >= closedRunLimit) {
+        stoppedBy = "closedRun";
+        break;
+      }
+    }
+    const reachedEnd = ["empty", "repeated", "closedRun"].includes(stoppedBy);
+    coverage.push({ url, pagesRead, reachedEnd, stoppedBy, lastOpenPage, longestClosedRun });
+  }
+  return { items: [...byUrl.values()].sort((a, b) => a.url.localeCompare(b.url)), coverage };
+}
+
+export async function crawlContestKorea(page) {
+  const urls = CONTEST_KOREA_CATEGORIES.map(code =>
+    `https://www.contestkorea.com/sub/list.php?int_gbn=1&Txt_bcode=${code}`);
+  const { items, coverage } = await collectPaged(page, ".list_style_2 a[href*='view.php']", "ContestKorea", {
+    urls,
+    param: "page",
+    maxPages: 100,
+    closedRunLimit: CONTEST_KOREA_CLOSED_RUN_LIMIT,
+    keepParams: ["int_gbn", "str_no"],
+  });
   if (!items.length) throw new Error("ContestKorea crawler returned zero items");
   return withActionable(
-    { key: "contestKorea", status: "OK", url, items },
+    { key: "contestKorea", status: "OK", url: urls[0], items, coverage },
     ACTIONABLE.contestKorea
   );
 }
@@ -444,25 +525,31 @@ async function crawlKStartup(page) {
   );
 }
 
-async function crawlGeneric(page, key, name, spec) {
+export async function crawlGeneric(page, key, name, spec) {
   if (spec.adapter) return crawlDiscoverySource(page, key, name, spec);
-  const url = spec.url;
+  const url = spec.url || spec.pagination?.urls?.[0];
   if (!url || !spec.linkSelector) {
     throw new Error(`generic crawler ${key} missing url/linkSelector`);
   }
 
-  const response = await gotoWithRetry(page, url, { timeout: spec.timeoutMs || NAVIGATION_TIMEOUT_MS });
-  if (response && !response.ok()) throw new Error(`${key} HTTP ${response.status()}: source unavailable or access blocked`);
-  await waitForListing(page, spec.linkSelector, spec.waitMs || 1200);
+  let items;
+  let coverage;
+  if (spec.pagination) {
+    ({ items, coverage } = await collectPaged(page, spec.linkSelector, name || key, spec.pagination));
+  } else {
+    const response = await gotoWithRetry(page, url, { timeout: spec.timeoutMs || NAVIGATION_TIMEOUT_MS });
+    if (response && !response.ok()) throw new Error(`${key} HTTP ${response.status()}: source unavailable or access blocked`);
+    await waitForListing(page, spec.linkSelector, spec.waitMs || 1200);
 
-  if (spec.expand !== false) {
-    await expandListing(page, spec.linkSelector, name || key);
-  }
-  if (spec.scrollRounds) {
-    await scrollListing(page, spec.linkSelector, spec.scrollRounds);
-  }
+    if (spec.expand !== false) {
+      await expandListing(page, spec.linkSelector, name || key);
+    }
+    if (spec.scrollRounds) {
+      await scrollListing(page, spec.linkSelector, spec.scrollRounds);
+    }
 
-  let items = await collectAnchorsSafe(page, spec.linkSelector, name || key);
+    items = await collectAnchorsSafe(page, spec.linkSelector, name || key);
+  }
 
   if (spec.hostSuffix) {
     items = items.filter(item => new URL(item.url).hostname.endsWith(spec.hostSuffix));
@@ -484,7 +571,7 @@ async function crawlGeneric(page, key, name, spec) {
   }
 
   const predicate = spec.actionability === "all" ? () => true : isActionableByHints;
-  return withActionable({ key, status: "OK", url, items }, predicate);
+  return withActionable({ key, status: "OK", url, items, ...(coverage ? { coverage } : {}) }, predicate);
 }
 
 async function main() {

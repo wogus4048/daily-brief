@@ -79,6 +79,35 @@
       "managed": true,
       "note": "Use server-rendered contest list endpoint; avoid JS-only NewListPage.",
       "category": "contest"
+    },
+    {
+      "key": "wevity",
+      "name": "위비티",
+      "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&mode=ing",
+      "role": "Korean contest aggregator; open listings per category, read page by page",
+      "required": false,
+      "managed": true,
+      "category": "contest",
+      "crawlerSpec": {
+        "linkSelector": ".ms-list ul.list a[href*='gbn=view']",
+        "pagination": {
+          "urls": [
+            "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&mode=ing",
+            "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&mode=ing",
+            "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&mode=ing",
+            "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&mode=ing",
+            "https://www.wevity.com/?c=find&s=1&gub=1&cidx=88&mode=ing"
+          ],
+          "param": "gp",
+          "maxPages": 20,
+          "keepParams": [
+            "c",
+            "gbn",
+            "ix"
+          ]
+        }
+      },
+      "promotedAt": "2026-11-05"
     }
   ],
   "degraded": [
