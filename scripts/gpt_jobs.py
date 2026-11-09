@@ -53,7 +53,7 @@ DISTRICTS = {"nowon": "노원구청", "dobong": "도봉구청", "gangbuk": "강�
 SCOPE_RULES = """범위: 공모전은 아이디어·제안 공모전과 프로그램·소프트웨어·AI·데이터 개발 대회, 해커톤, 창업 경진대회다. 지원사업은 창업·스타트업 지원 프로그램과 모집(입주, 액셀러레이팅, 사업화 자금, 교육)이다. 상금 규모나 개인 적합성으로 빼지 않는다. 수집하지 않는 것: 네이밍·슬로건·표어·캐릭터, 문학(백일장·수기), 영상·사진, 미술·디자인·웹툰 공모전, 공모가 아닌 행사·포럼·설명회."""
 ANSWER_RULES = """답 형식: 결과는 ```json 코드 블록 안에 한 줄에 JSON 객체 하나씩 적어라. Prime에게 보내는 메시지 하나는 3,500자를 넘기지 말고, 메시지마다 json 블록을 열고 닫아라. 블록 하나를 메시지 두 개에 걸쳐 쓰지 마라. 결과를 줄이거나 '등'으로 생략하지 마라."""
 DEADLINE_RULE = """deadline 칸: 신규 지원자가 신청해야 하는 날짜를 연도까지 "YYYY-MM-DD" 목록으로 적는다(부문마다 다르면 모두). 등록 마감 뒤 제출만 남으면 등록 마감일만 적는다. 행사·심사·발표일은 넣지 않는다. 고정 마감일이 없으면 "상시", "수시", "예산 소진 시", "선착순" 중 하나, 마감일을 알 수 없으면 "확인 필요"."""
-CARD_FIELDS = """카드 칸(모두 한국어): id(영문 소문자-하이픈, 연도로 끝남), title, summary(한 문장), description(공식 페이지에서 확인한 사실과 확인 못 한 점), categoryLabel("공모전 · 아이디어" 또는 "공모전 · 개발" 또는 "창업 · 지원사업"), icon(이모지 하나), tags(3~5개), period, deadlineText(사람이 읽는 마감 문구), deadline, participation, reward, businessRegistration, preStartup, employment, evaluation, aiSupport(명시 없으면 "명시 없음"), ideas(참가 아이디어 2개), links([{"label":"공식 공고","url":...}] 공식 링크 먼저), status("OPEN" 또는 접수 전이면 "UPCOMING"과 openingAt). 공식 페이지에 없는 사실은 지어내지 말고 "명시 없음"이나 "확인 필요"로 쓴다."""
+CARD_FIELDS = """카드 칸(모두 한국어): id(영문 소문자-하이픈, 연도로 끝남), title, summary(한 문장), description(두 문장 이내), categoryLabel("공모전 · 아이디어" 또는 "공모전 · 개발" 또는 "창업 · 지원사업"), icon(이모지 하나), tags(3~5개), period, deadlineText(사람이 읽는 마감 문구), deadline, participation, reward, businessRegistration, preStartup, employment, evaluation, aiSupport(명시 없으면 "명시 없음"), ideas(짧은 참가 아이디어 2개), links([{"label":"공식 공고","url":...}] 공식 링크 먼저), status("OPEN" 또는 접수 전이면 "UPCOMING"과 openingAt). 보이지 않는 사실은 지어내지 말고 "확인 필요"로 쓴다."""
 
 PRIME = """worker를 {workers}개 띄워 아래 일을 나눠 맡겨라. 네가 직접 조사하지 마라. 일이 겹치지 않게 나누고, 아래 지시를 각 worker에게 빠짐없이 전해라. 각 worker는 맡은 결과를 전부 Prime에게 message로 보내고 finish해야 한다. 네가 결과를 합칠 필요는 없다.
 
@@ -94,7 +94,7 @@ NEWS_PROMPT = """오늘은 {today}이다. 지난 브리핑({last}) 이후의 AI 
 - 도구 카드 {{"kind":"aiDiscovery","card":{{"id","title","summary","description","why","discoveryType":"site|github|skill|mcp|agent|workflow|directory|discussion|platform","categories":[...],"signals":[...],"discoveryReason","links":[...],"related":[],"awareness":"WELL_KNOWN|SPECIALIZED|EARLY","trend":"HOT|RISING|STEADY|RESURFACED","newsState":"NEW_RELEASE|NEWLY_DISCOVERED|UPDATED|BASELINE"}}}}"""
 
 CHECK_PROMPT = """오늘은 {today}이다. 아래 공고 후보 {count}건을 사이트에 올릴지 정하고, 올릴 것은 카드로 써라. 파일을 만들지 마라.
-웹 검색과 브라우저를 쓰지 마라. 페이지를 열지 말고, 아래 후보 줄에 적힌 정보만으로 판단하고 써라. 적혀 있지 않은 사실은 "명시 없음" 또는 "확인 필요"로 쓴다.
+웹 검색과 브라우저를 쓰지 마라. 페이지를 열지 말고, 아래 후보 줄에 보이는 정보만 그대로 적어라. 보이지 않는 칸은 "확인 필요"라고 적는다(사용자 결정 2026-11-09). 속도가 중요하니 문장은 짧게 쓴다.
 
 {scope}
 {deadline_rule}
