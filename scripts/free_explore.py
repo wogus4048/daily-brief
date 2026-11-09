@@ -109,6 +109,9 @@ def earlier_decisions(root, today):
                   dacon.get("competitionsInventory", []), dacon.get("dakerInventory", [])]
         for rows in groups:
             for row in rows:
+                # A lead nobody could judge (assemble_brief.RETRY) is sent again the next day.
+                if str(row.get("reason") or "").startswith("RETRY: "):
+                    continue
                 if row.get("url") and row.get("disposition"):
                     decisions[normalize_url(row["url"])] = row
     return decisions

@@ -106,11 +106,16 @@ for track_id, rule in TRACKS.items():
     track = tracks.get(track_id)
     assert isinstance(track, dict), f"research audit missing track {track_id}"
     status = track.get("status")
-    assert status in ("DONE", "EXHAUSTED"), f"{track_id}.status must be DONE or EXHAUSTED"
+    assert status in ("DONE", "EXHAUSTED", "FAILED"), f"{track_id}.status must be DONE, EXHAUSTED or FAILED"
+    # A search the GPT worker did not report is recorded, not invented (design 2026-11-09, user decision 2).
+    failed_track = status == "FAILED"
+    if failed_track:
+        reason = track.get("failureReason")
+        assert isinstance(reason, str) and reason.strip(), f"{track_id} FAILED requires failureReason"
 
     queries_by_axis = track.get("queriesByAxis")
     assert isinstance(queries_by_axis, dict), f"{track_id}.queriesByAxis must be an object"
-    for axis in rule["axes"]:
+    for axis in rule["axes"] if not failed_track else []:
         queries = queries_by_axis.get(axis)
         assert isinstance(queries, list) and queries, f"{track_id} missing executed queries for axis {axis}"
         assert all(isinstance(q, str) and q.strip() for q in queries), f"{track_id}.{axis} has invalid query evidence"
@@ -119,7 +124,7 @@ for track_id, rule in TRACKS.items():
             assert len(distinct_queries) >= MIN_QUERIES_PER_AXIS, (
                 f"{track_id}.{axis} needs at least {MIN_QUERIES_PER_AXIS} distinct queries"
             )
-    if snapshot_date >= SEARCH_DEPTH_FROM:
+    if snapshot_date >= SEARCH_DEPTH_FROM and not failed_track:
         track_queries = [q for axis in rule["axes"] for q in queries_by_axis[axis]]
         assert any(HANGUL.search(q) for q in track_queries), f"{track_id} needs Korean query variants"
         if track_id not in KOREAN_ONLY_TRACKS:
@@ -179,7 +184,7 @@ for source in REQUIRED_SOURCES:
     status = evidence.get("status")
     assert status in ("CHECKED", "FAILED"), f"{source}.status must be CHECKED or FAILED"
     urls = evidence.get("urls")
-    assert isinstance(urls, list) and urls, f"{source} must record at least one checked URL"
+    assert isinstance(urls, list) and (urls or status == "FAILED"), f"{source} must record at least one checked URL"
     if status == "FAILED":
         reason = evidence.get("reason")
         assert isinstance(reason, str) and reason.strip(), f"{source} FAILED requires reason"
@@ -258,7 +263,7 @@ for district in ("nowon", "dobong", "gangbuk"):
     status = evidence.get("status")
     assert status in ("CHECKED", "FAILED"), f"{district}.status must be CHECKED or FAILED"
     urls = evidence.get("urls")
-    assert isinstance(urls, list) and urls, f"{district} must record at least one checked URL"
+    assert isinstance(urls, list) and (urls or status == "FAILED"), f"{district} must record at least one checked URL"
     if status == "FAILED":
         reason = evidence.get("reason")
         assert isinstance(reason, str) and reason.strip(), f"{district} FAILED requires reason"

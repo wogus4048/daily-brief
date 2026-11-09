@@ -2,7 +2,10 @@
 """Fixed local steps around the daily Claude run.
 
 prepare: refresh main, check dependencies, close expired out-of-scope items, crawl.
+research: GPT workers find, check, re-verify and write; a program assembles the brief
+  (docs/superpowers/specs/2026-11-09-gpt-research-design.md).
 publish: check the brief, push it straight to main, confirm the public site.
+all: prepare, research, publish in one run.
 
 Everything needed to debug or improve a run stays in artifacts/daily/ (not in git):
   YYYY-MM-DD.json             latest outcome of each step
@@ -26,9 +29,11 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from free_explore import run_explore, run_verify
+import gpt_jobs
+from assemble_brief import assemble
+from free_explore import POLL_SECONDS, WAIT_SECONDS, ExploreFailed, TitanClient, earlier_decisions, run_explore, run_verify
 from read_details import write_details
-from research_rules import apply_deadlines, close_expired_out_of_scope
+from research_rules import apply_deadlines, close_expired_out_of_scope, is_reverification_due
 
 ROOT = Path(__file__).resolve().parents[1]
 SEOUL = ZoneInfo("Asia/Seoul")
@@ -40,6 +45,11 @@ PUSH_ATTEMPTS = 3
 PUBLIC_WAIT_SECONDS = 600
 PUBLIC_POLL_SECONDS = 15
 OUTPUT_TAIL_CHARS = 2000
+TITAN_EXE = Path(os.environ.get("LOCALAPPDATA", "")) / "Programs/Titan/Titan.exe"
+CHROME_EXE = Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe")
+# This project's own Chrome profile with the Titan extension (not the Naver one; findings 2026-11-09).
+CHROME_PROFILE = Path(r"D:\daily-brief-ops\chrome-titan")
+BROWSER_WAIT_SECONDS = 120
 
 
 class StepFailed(Exception):
@@ -420,6 +430,93 @@ def run_verify_step(root, today):
     return 0
 
 
+def titan_status():
+    try:
+        return TitanClient().call("/v1/status")
+    except ExploreFailed:
+        return None
+
+
+def chrome_running(profile):
+    out = subprocess.run(["powershell", "-NoProfile", "-Command",
+                          "Get-CimInstance Win32_Process -Filter \"Name='chrome.exe'\" | ForEach-Object { $_.CommandLine }"],
+                         capture_output=True, text=True, encoding="utf-8", errors="replace").stdout
+    return str(profile).lower() in out.lower()
+
+
+def preflight(log, wait_seconds=BROWSER_WAIT_SECONDS):
+    """Start Titan and this project's Chrome when they are off, then wait for the browser bridge (user: "켜")."""
+    if titan_status() is None:
+        log.event("start_titan", path=str(TITAN_EXE))
+        subprocess.Popen([str(TITAN_EXE)])
+    if not chrome_running(CHROME_PROFILE):
+        log.event("start_chrome", profile=str(CHROME_PROFILE))
+        subprocess.Popen([str(CHROME_EXE), f"--user-data-dir={CHROME_PROFILE}", "--no-first-run", "about:blank"])
+    deadline = time.monotonic() + wait_seconds
+    while time.monotonic() < deadline:
+        status = titan_status()
+        if status and status.get("bridge", {}).get("present"):
+            log.event("browser_ready")
+            return
+        time.sleep(5)
+    raise StepFailed("Titan browser bridge did not come up")
+
+
+def run_research(root, today, client_factory=TitanClient, wait_seconds=WAIT_SECONDS, poll_seconds=POLL_SECONDS):
+    """GPT find, news, check and re-verify, then assemble. Each stage's result is saved as it ends."""
+    result = {"status": "FAILED"}
+    log = RunLog(root, today, "research")
+    log_environment(log, root, {})
+    state_path = root / f"artifacts/daily/{today}-gpt.json"
+    state = json.loads(state_path.read_text(encoding="utf-8")) if state_path.exists() else {}
+
+    def save():
+        state_path.write_text(json.dumps(state, ensure_ascii=False, indent=1) + chr(10), encoding="utf-8")
+
+    try:
+        with log.stage("preflight"):
+            preflight(log)
+        client = client_factory()
+        result["workers"] = gpt_jobs.worker_limit(client)
+        if "find" not in state:
+            with log.stage("find"):
+                state["find"] = gpt_jobs.run_find(root, today, client, log, wait_seconds, poll_seconds)
+                save()
+        if "news" not in state:
+            with log.stage("news"):
+                state["news"] = gpt_jobs.run_news(root, today, client, log, wait_seconds, poll_seconds)
+                save()
+        if "candidates" not in state:
+            details = json.loads((root / f"artifacts/daily/{today}-details.json").read_text(encoding="utf-8"))
+            state["candidates"], state["decided"] = gpt_jobs.build_candidates(
+                root, today, details, state["find"]["rows"], earlier_decisions(root, today))
+            latest = json.loads((root / "data/latest.json").read_text(encoding="utf-8"))
+            state["due"] = [x["id"] for g in ("contests", "support") for x in latest[g]
+                            if x.get("status") in ("OPEN", "UPCOMING") and is_reverification_due(x, today)]
+            save()
+        if "check" not in state:
+            with log.stage("check"):
+                state["check"] = gpt_jobs.run_check(root, today, state["candidates"], client, log, wait_seconds, poll_seconds)
+                save()
+        if "reverify" not in state:
+            latest = json.loads((root / "data/latest.json").read_text(encoding="utf-8"))
+            by_id = {x["id"]: x for g in ("contests", "support") for x in latest[g]}
+            with log.stage("reverify"):
+                state["reverify"] = gpt_jobs.run_reverify(root, today, [by_id[i] for i in state["due"]], client, log,
+                                                          wait_seconds, poll_seconds)
+                save()
+        with log.stage("assemble"):
+            result["brief"] = assemble(root, today)
+        result.update(status="OK", candidates=len(state["candidates"]), due=len(state["due"]),
+                      batches={k: state[k].get("batches") or state[k].get("jobs") for k in ("find", "check", "reverify")})
+        log.event("run_end", status="OK", **result["brief"])
+        return 0
+    except Exception as error:
+        return finish_failed(log, result, "research", error)
+    finally:
+        write_report(root, today, "research", result)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
@@ -428,6 +525,8 @@ def main():
     commands.add_parser("explore")
     commands.add_parser("verify")
     commands.add_parser("publish").add_argument("--no-push", action="store_true", help="stop after the checks")
+    commands.add_parser("research")
+    commands.add_parser("all")
     args = parser.parse_args()
     today = datetime.now(SEOUL).date().isoformat()
     if args.command == "prepare":
@@ -438,6 +537,13 @@ def main():
         return run_explore_step(ROOT, today)
     if args.command == "verify":
         return run_verify_step(ROOT, today)
+    if args.command == "research":
+        return run_research(ROOT, today)
+    if args.command == "all":
+        for step in (lambda: run_prepare(ROOT, today), lambda: run_research(ROOT, today), lambda: run_publish(ROOT, today)):
+            if step():
+                return 1
+        return 0
     return run_publish(ROOT, today, no_push=args.no_push)
 
 

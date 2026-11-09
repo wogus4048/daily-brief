@@ -162,6 +162,9 @@ def is_reverification_due(item, snapshot_date):
     last = parse_seoul_date(item.get("lastVerifiedDate"))
     if last is None:
         return True
+    # Published from portal data before the organizer's page was read: check again every day.
+    if item.get("officialCheck") == "PENDING":
+        return (today - last).days >= 1
 
     if item.get("status") == "UPCOMING":
         opening = parse_seoul_date(item.get("openingAt"))

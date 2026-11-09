@@ -120,6 +120,13 @@ function ddayText(item) {
   return item.dDay;
 }
 
+// Published from portal data before the organizer's page was read (user decision 2026-11-09).
+function pendingOfficialLabel(item, cls) {
+  return item.officialCheck === "PENDING"
+    ? '<span class="' + (cls || "opportunity-card-v2-status") + '">주최 측 확인 전</span>'
+    : "";
+}
+
 function deadlinePassed(item) {
   return Array.isArray(item.deadline) && item.deadline.length > 0 && !nextDeadline(item);
 }
@@ -1171,6 +1178,7 @@ function renderCategoryList(type) {
               '<ion-card-subtitle>' + esc(category) + '</ion-card-subtitle>' +
             '</div>' +
             '<span class="opportunity-card-v2-status ' + (isOpenItem(item) && withinWeek(item) ? "danger" : "") + '">' + esc(status) + '</span>' +
+            pendingOfficialLabel(item) +
           '</div>' +
           '<ion-card-title>' + esc(item.title) + '</ion-card-title>' +
         '</ion-card-header>' +
@@ -1442,6 +1450,7 @@ function renderOpportunityDetail(item, kind) {
       changeBadge(item, kind) +
       '<span class="IssueLabel detail-pill">' + esc(!isOpenItem(item) ? "종료" : String(item.status).toUpperCase() === "UPCOMING" ? "접수 예정" : (ddayText(item) || "접수 중")) + '</span>' +
       '<span class="IssueLabel detail-pill">' + category + '</span>' +
+      pendingOfficialLabel(item, "IssueLabel detail-pill") +
     '</div><h1>' + esc(item.title) + '</h1><p>' + esc(item.description || item.summary || "") + '</p>' +
     '<div class="detail-date-line"><span><b>등록일</b> ' + esc(item.firstSeenDate) + '</span><span><b>확인일</b> ' + esc(item.lastVerifiedDate || item.firstSeenDate) + '</span>' +
     (item.lastUpdatedDate ? '<span><b>수정일</b> ' + esc(item.lastUpdatedDate) + '</span>' : '') + '</div>';

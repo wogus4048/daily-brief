@@ -1,0 +1,19 @@
+{
+  "note": "매년 열리는 주요 대회와 창업 모집. GPT 찾기 단계(find-b)가 매번 공식 주소를 열어 이번 회차 공고가 있는지 본다. source: archive = 지난 발행본에 실린 공고, added = 2026-11-09 Claude가 더한 전국 단위 사업(주소는 K-Startup 진행 중 공고 목록에서 이름으로 찾는다).",
+  "contests": [
+    {"name": "AI TOP 100", "url": "https://aitop100.org/", "source": "archive", "memo": "2026년은 10-01 공지, 선착순으로 다음 날 마감"},
+    {"name": "모두의 창업 프로젝트", "url": "https://www.modoo.or.kr/", "source": "archive"},
+    {"name": "GovTech 창업경진대회", "url": "https://k-govtech.kr/common/main", "source": "archive"},
+    {"name": "핀테크 아이디어 공모전", "url": "https://fintech.or.kr/web/expo/idea.do?menu_id=10300", "source": "archive"},
+    {"name": "DMC INNOVATION CAMP 창업경진대회", "url": "https://dmcportal.kr/dic", "source": "archive"},
+    {"name": "DATA·AI 분석 경진대회(KISTI)", "url": "https://aida.kisti.re.kr/", "source": "archive"},
+    {"name": "양자내성암호 전환 경진대회·해커톤", "url": "https://www.pqcchallenge.kr/", "source": "archive"},
+    {"name": "G밸리창업경진대회", "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do", "source": "archive"},
+    {"name": "엘리스 AI 챌린지(과기정통부)", "url": "https://ai-challenge.elice.page/home/main", "source": "archive"},
+    {"name": "예비창업패키지", "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do", "source": "added"},
+    {"name": "초기창업패키지", "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do", "source": "added"},
+    {"name": "도전! K-스타트업", "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do", "source": "added"},
+    {"name": "청년창업사관학교", "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do", "source": "added"},
+    {"name": "공공데이터 활용 창업경진대회", "url": "https://www.data.go.kr/", "source": "added"}
+  ]
+}
