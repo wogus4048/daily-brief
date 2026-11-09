@@ -1,7 +1,302 @@
 {
-  "date": "2026-11-06",
-  "generatedAt": "2026-11-06T01:31:20+09:00",
+  "date": "2026-11-09",
+  "generatedAt": "2026-11-09T13:23:27+09:00",
   "contests": [
+    {
+      "id": "gyeongbuk-regulation-reform-idea-2026",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "📝",
+      "title": "2026년 경상북도 도민 대상 규제개선 공모전",
+      "summary": "경상북도가 도민에게 받는 규제개선 아이디어 공모로, 11월 16일까지 접수합니다",
+      "description": "경상북도 공식 보도자료에서 접수 기간(11월 2일~16일)과 참가 자격이 확인됐습니다. 대상 100만원 등 총상금 450만원입니다.",
+      "deadlineText": "2026.11.16 마감",
+      "tags": [
+        "규제개선",
+        "경북",
+        "총상금 450만원"
+      ],
+      "period": "2026.11.02 ~ 2026.11.16",
+      "reward": "총상금 450만원 · 대상 100만원 (경상북도지사 상장)",
+      "participation": "경북에 살거나 도내 직장·학교에 다니는 사람(공무원·공공기관 직원 제외). 개인/팀 구성은 확인 필요",
+      "preStartup": "사업자등록·예비창업 여부에 따른 제한 명시 없음",
+      "employment": "재직자 제한 명시 없음(도내 직장 재직자도 참가 가능, 공무원·공공기관 직원은 제외)",
+      "businessRegistration": "신청 시 사업자등록 요구 명시 없음",
+      "evaluation": "심사 기준 명시 없음(공식 공고 확인 필요)",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "ideas": [
+        "도민이 겪는 인허가 절차를 줄이는 규제 개선안",
+        "온라인 민원 처리 단계를 줄이는 제도 제안"
+      ],
+      "links": [
+        {
+          "label": "공식 공고",
+          "url": "https://www.gb.go.kr/page/10107/10004.do?boardNo=1370219"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "deadline": [
+        "2026-11-16"
+      ],
+      "dDay": "D-7"
+    },
+    {
+      "id": "kpii-ai-service-planning-2026",
+      "categoryLabel": "AI · 데이터",
+      "icon": "🤖",
+      "title": "2026 AI 서비스 기획 공모전",
+      "summary": "한국프로세스혁신협회가 여는 AI 서비스 기획 공모전으로, 지정 교육과정 신규 등록 예정자만 참가합니다",
+      "description": "협회 공식 페이지에서 접수기간(10.26~11.30)과 참가 조건이 확인됐습니다. 교육 신규 참여자만 참가할 수 있고 기등록자는 제외되며, 5~6개월 풀타임 참여가 어려운 재직·아르바이트 병행 예정자는 지원이 어렵다고 안내합니다. 상금과 제출물 세부는 확인하지 못했습니다.",
+      "deadlineText": "2026.11.30 마감",
+      "tags": [
+        "AI 서비스",
+        "기획",
+        "KDT"
+      ],
+      "period": "2026.10.26 ~ 2026.11.30",
+      "reward": "시상 내역 확인 필요",
+      "participation": "지정 KDT 교육과정 신규 등록 예정자(5~6개월 풀타임 참여 가능자). 기등록자 제외. 팀 요건 확인 필요",
+      "preStartup": "사업자등록·예비창업 여부에 따른 제한 명시 없음",
+      "employment": "재직·아르바이트 병행 예정자는 지원이 어렵다고 명시",
+      "businessRegistration": "신청 시 사업자등록 요구 명시 없음",
+      "evaluation": "심사 기준 명시 없음(공식 공고 확인 필요)",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "ideas": [
+        "교육 수료 후 실제 서비스로 이어질 AI 기능 기획",
+        "업무 자동화에 AI를 붙이는 서비스 아이디어"
+      ],
+      "links": [
+        {
+          "label": "공식 공고",
+          "url": "https://idea2026.kpii.or.kr/"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "deadline": [
+        "2026-11-30"
+      ],
+      "dDay": "D-21"
+    },
+    {
+      "id": "daejeon-transit-citizen-idea-2026",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🚇",
+      "title": "대전지역 대학생과 함께하는 시민체감 교통 아이디어 공모전",
+      "summary": "대전교통공사가 대전 지역 대학생 팀에게 받는 시민체감 교통 아이디어 공모입니다",
+      "description": "대전교통공사 공식 공고에서 접수 기간(11.2~11.29 23:59), 참가 자격, 제출물이 확인됐습니다. 심사 기준은 별도 공고문에 있어 확인하지 못했고 발표 평가와 시상은 12월 16일 예정입니다.",
+      "deadlineText": "2026.11.29 23:59 마감",
+      "tags": [
+        "교통",
+        "대전",
+        "대학생",
+        "팀"
+      ],
+      "period": "2026.11.02 ~ 2026.11.29 23:59",
+      "reward": "총상금 150만원(5팀) · 대전교통공사 사장 명의 상장",
+      "participation": "대전 소재 대학 재학·휴학생 2~5인 팀(대학원생·비학위 과정생 제외, 팀원 전원 해당)",
+      "preStartup": "사업자등록·예비창업 여부에 따른 제한 명시 없음",
+      "employment": "재직자 제한 명시 없음(대학 재학·휴학생 한정)",
+      "businessRegistration": "신청 시 사업자등록 요구 명시 없음",
+      "evaluation": "심사 기준 명시 없음(공식 공고 확인 필요)",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "ideas": [
+        "지하철 이용 불편을 줄이는 안내 개선안",
+        "환승·대기 시간을 체감하게 줄이는 서비스 제안"
+      ],
+      "links": [
+        {
+          "label": "공식 공고",
+          "url": "https://www.djtc.kr/kor/board.do?menuIdx=361&bbsIdx=22010"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "deadline": [
+        "2026-11-29"
+      ],
+      "dDay": "D-20"
+    },
+    {
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "status": "OPEN",
+      "id": "daegu-local-ai-ground-2026",
+      "categoryLabel": "AI · 데이터",
+      "icon": "🤖",
+      "title": "2026 대구 로컬AI그라운드 지역문제 해결형 AI활용 경진대회",
+      "summary": "AI로 지역문제를 풀 아이디어를 2~5인 팀으로 겨루는 대구 경진대회입니다",
+      "description": "대구정책연구원·대구광역시 창의도시재생지원센터 공고에서 접수기간과 참가자격을 확인했습니다. 제출물·평가·시상 세부는 첨부 공고문(hwpx)에 있어 읽지 못했습니다.",
+      "deadline": [
+        "2026-11-30"
+      ],
+      "deadlineText": "2026.11.30(월)까지(마감 시각 공고문 확인 필요)",
+      "tags": [
+        "AI",
+        "지역문제",
+        "팀 참가",
+        "대구"
+      ],
+      "period": "2026.11.06(금)~11.30(월)",
+      "reward": "총 1,000만원 규모(모음 사이트 표기, 공식 본문에는 금액 명시 없음)",
+      "participation": "대한민국 국민 누구나(거주지 제한 없음), 2~5인 팀. 개인 참가는 명시 없음",
+      "preStartup": "사업자등록·예비창업 여부에 따른 제한 명시 없음",
+      "employment": "재직자 제한 명시 없음",
+      "businessRegistration": "신청 시 사업자등록 요구 명시 없음",
+      "evaluation": "아이디어 멘토링 후 심사(세부 기준은 첨부 공고문 확인 필요)",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "ideas": [
+        "지역 민원·교통 데이터를 AI로 분석해 불편을 줄이는 서비스",
+        "골목상권 현황을 AI로 요약해 주는 지역 안내 도구"
+      ],
+      "links": [
+        {
+          "label": "공식 공고",
+          "url": "https://www.dgucenter.or.kr/bbs/board.php?bo_table=notice&wr_id=744"
+        }
+      ],
+      "dDay": "D-21"
+    },
+    {
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "status": "OPEN",
+      "id": "kisa-modu-idea-contest-2026",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🛡️",
+      "title": "[모두의 KISA] 슬로건·캐릭터·국민참여예산 아이디어 공모",
+      "summary": "KISA 공모 중 국민참여예산 아이디어 부문은 사업 아이디어를 이메일로 제출합니다",
+      "description": "KISA 공식 공지에서 접수기간, 부문, 제출 방식을 확인했습니다. 슬로건·캐릭터 부문은 수집 범위 밖이고 국민참여예산 아이디어 부문만 해당합니다. 참가자격은 공지 본문에 없고 첨부 붙임1에 있는 것으로 보이나 읽지 못했습니다.",
+      "deadline": [
+        "2026-11-10"
+      ],
+      "deadlineText": "2026.11.10(화) 23:59",
+      "tags": [
+        "KISA",
+        "국민참여예산",
+        "사업 아이디어",
+        "이메일 접수"
+      ],
+      "period": "2026.10.28(수)~11.10(화) 23:59",
+      "reward": "국민참여예산 아이디어 최우수 50만원(슬로건·캐릭터 각 30만원). 총 시상규모 200만원(모음 사이트 표기)",
+      "participation": "공지 본문에 참가자격 명시 없음(모음 사이트는 대상 제한 없음 표기), 부문당 1인 1건",
+      "preStartup": "사업자등록·예비창업 여부에 따른 제한 명시 없음",
+      "employment": "재직자 제한 명시 없음",
+      "businessRegistration": "신청 시 사업자등록 요구 명시 없음",
+      "evaluation": "심사 기준 명시 없음(붙임 공고문 확인 필요)",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "ideas": [
+        "국민이 겪는 개인정보 보호 불편 사례를 예산 사업으로 제안",
+        "보안 점검을 쉽게 알려 주는 국민 체감형 서비스 제안"
+      ],
+      "links": [
+        {
+          "label": "공식 공지",
+          "url": "https://www.kisa.or.kr/401/form?postSeq=3791&page=1"
+        }
+      ],
+      "dDay": "D-1"
+    },
+    {
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "status": "OPEN",
+      "id": "nasa-space-apps-seoul-2026",
+      "categoryLabel": "공공데이터",
+      "icon": "🚀",
+      "title": "2026 NASA International Space Apps Challenge Seoul",
+      "summary": "NASA 공개 데이터로 실제 문제를 푸는 국제 해커톤의 서울 지역 행사로 개인도 참가할 수 있습니다",
+      "description": "NASA Space Apps 공식 페이지에서 11월 14~15일 개최와 11월 15일까지 등록 가능을 확인했습니다. 서울 행사 세부(무료, 최대 6인 팀, 개인 가능)는 서울대 컴퓨터공학부가 전한 주최측 안내문으로 확인했고 서울 로컬 이벤트 페이지는 열지 못했습니다.",
+      "deadline": [
+        "2026-11-15"
+      ],
+      "deadlineText": "2026.11.15(일)까지 등록(해커톤 종료 시점)",
+      "tags": [
+        "NASA",
+        "해커톤",
+        "공개데이터",
+        "무료",
+        "개인 참가"
+      ],
+      "period": "해커톤 2026.11.14(토)~11.15(일), 등록은 11.15까지(공식 페이지)",
+      "reward": "공식 페이지에 서울 지역 상금 명시 없음(수상팀 시상식 진행 예정)",
+      "participation": "대학생·대학원생·고등학생·직장인 등 누구나, 전공 제한 없음, 팀 최대 6명, 개인 가능, 참가비 무료",
+      "preStartup": "사업자등록·예비창업 여부에 따른 제한 명시 없음",
+      "employment": "재직자 제한 명시 없음(직장인 참가 가능 안내)",
+      "businessRegistration": "신청 시 사업자등록 요구 명시 없음",
+      "evaluation": "지역 심사 후 글로벌 심사 대상 선정(세부 기준은 공식 페이지 확인 필요)",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "ideas": [
+        "NASA 위성 데이터로 도시 열섬 지도를 만드는 웹 서비스",
+        "우주 데이터 기반 재난 알림 앱 프로토타입"
+      ],
+      "links": [
+        {
+          "label": "NASA Space Apps 공식",
+          "url": "https://www.spaceappschallenge.org/2026/"
+        },
+        {
+          "label": "서울 참가 안내(서울대 컴퓨터공학부 공지)",
+          "url": "https://cse.snu.ac.kr/ko/community/notice/25514"
+        }
+      ],
+      "dDay": "D-6"
+    },
+    {
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "status": "OPEN",
+      "id": "korea-local-marketing-hackathon-2026",
+      "categoryLabel": "앱 · 웹 서비스",
+      "icon": "🗺️",
+      "title": "Korea Local Marketing Hackathon 2026",
+      "summary": "AI 도구로 외국인 여행자용 로컬 지도 MVP를 하루 동안 혼자 만드는 서울 오프라인 해커톤입니다",
+      "description": "해커온 행사 페이지에서 일정, 신청 마감, 개인전, 혜택을 확인했습니다. 참가자격과 주최 세부는 페이지에 명시가 없습니다. 선발 인원은 32명입니다.",
+      "deadline": [
+        "2026-11-16"
+      ],
+      "deadlineText": "2026.11.16(월)",
+      "tags": [
+        "해커톤",
+        "AI 도구",
+        "MVP",
+        "개인전",
+        "마포"
+      ],
+      "period": "신청 2026.11.07~11.16, 행사 11.21(토) 09:30~12:40(마포 인근, 장소 확정 후 안내)",
+      "reward": "상금 없음. 참가자 전원 ElevenLabs Creator 1개월, 종합 1위 Pro 3개월, 특별상 Scale 3개월",
+      "participation": "개인전(혼자 참가), 32명 선발. 연령은 모음 사이트에 만 14세 이상 표기, 공식 페이지에는 명시 없음",
+      "preStartup": "사업자등록·예비창업 여부에 따른 제한 명시 없음",
+      "employment": "재직자 제한 명시 없음",
+      "businessRegistration": "신청 시 사업자등록 요구 명시 없음",
+      "evaluation": "평가 기준 명시 없음(운영진이 MVP를 직접 사용해 본다고 안내)",
+      "aiSupport": "후원사 ElevenLabs 이용권 제공(OpenAI/Azure OpenAI 포함 여부 명시 없음)",
+      "ideas": [
+        "AI 음성 안내가 붙은 외국인용 동네 코스 지도",
+        "사진과 번역 설명을 한 화면에 보여 주는 로컬 장소 카드"
+      ],
+      "links": [
+        {
+          "label": "공식 행사 페이지",
+          "url": "https://hackon.kr/e/002e1704"
+        },
+        {
+          "label": "콘테스트코리아",
+          "url": "https://contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=030310001&str_no=202611070021"
+        }
+      ],
+      "dDay": "D-7"
+    },
     {
       "id": "mcee-resource-circulation-idea-2026",
       "categoryLabel": "공모전 · 아이디어",
@@ -73,13 +368,14 @@
           "url": "https://www.zyx.co.kr/zyxawards"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-08"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "ktng-asvf-korea-rep-2027",
@@ -88,7 +384,7 @@
       "title": "2027 KT&G 국제 대학생 창업교류전(ASVF) 한국대표 모집",
       "summary": "한국경제신문이 여는 국제 대학생 창업교류전의 한국대표 팀을 뽑는 공모입니다",
       "description": "일반부문은 12.11 14시, 군장병부문은 별도로 11.30 14시에 마감합니다. 두 부문 모두 전체 일정에 참여할 수 있어야 합니다.",
-      "dDay": "D-35",
+      "dDay": "D-21",
       "deadlineText": "12.11 14:00",
       "tags": [
         "대학생 창업",
@@ -130,7 +426,7 @@
       "title": "상주시 대표축제 대국민 아이디어 공모전",
       "summary": "상주시 대표 축제를 키울 아이디어를 받는 대형 상금 공모전입니다",
       "description": "주최 전용 사이트에서 온라인으로 접수하며, 법인·단체로 참가할 때는 사업자등록증 등을 내야 합니다. 마감이 2027.01.15라 시간 여유가 큽니다.",
-      "dDay": "D-70",
+      "dDay": "D-67",
       "deadlineText": "2027.01.15 18:00",
       "tags": [
         "축제",
@@ -171,7 +467,7 @@
       "title": "2026년 금연 정책제안 연구공모전",
       "summary": "서울금연지원센터가 받는 금연 정책 제안 연구 공모전입니다",
       "description": "접수는 이메일로 하며 전공·직업 제한이 없습니다. 연구형 제안서이므로 근거 자료를 함께 정리하는 것이 좋습니다.",
-      "dDay": "D-7",
+      "dDay": "D-4",
       "deadlineText": "11.13",
       "tags": [
         "금연",
@@ -199,7 +495,7 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-06",
       "deadline": [
         "2026-11-13"
@@ -237,13 +533,14 @@
           "url": "https://www.seongnam.go.kr/bbs010101/405144"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-06"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "kbank-kakaobank-owner-finance-idea-2026",
@@ -252,7 +549,7 @@
       "title": "사장님을 위한 금융 아이디어 공모전",
       "summary": "케이뱅크와 카카오뱅크가 함께 여는 소상공인 금융 아이디어 공모전입니다",
       "description": "공식 공모요강에서 접수 기간 11.16 18:00까지, 대상 전국 대학(원)생으로 확인됐습니다.",
-      "dDay": "D-10",
+      "dDay": "D-7",
       "deadlineText": "11.16 18:00",
       "tags": [
         "금융",
@@ -280,7 +577,7 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-06",
       "deadline": [
         "2026-11-16"
@@ -318,13 +615,14 @@
           "url": "https://taekwondo.jj.ac.kr/taekwondo/community/notice-01.do?articleNo=533429&mode=view"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-08"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "kaist-foreign-disinfo-idea-2026-2",
@@ -333,7 +631,7 @@
       "title": "2026년 2차 외국발 허위정보 대응 대학생 아이디어 공모전",
       "summary": "KAIST 안보융합원이 여는 외국발 허위정보 대응 아이디어 공모전입니다",
       "description": "공식 공고에서 공모 기간 11.17 18:00까지, 참여 대상 국내 대학(원) 재학·휴학생으로 확인됐습니다.",
-      "dDay": "D-11",
+      "dDay": "D-8",
       "deadlineText": "11.17 18:00",
       "tags": [
         "허위정보",
@@ -361,7 +659,7 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-06",
       "deadline": [
         "2026-11-17"
@@ -374,7 +672,7 @@
       "title": "2026 대구광역시 기후·환경·탄소중립 공공데이터 AI 활용대회",
       "summary": "대구 탄소중립지원센터가 여는 공공데이터·AI 활용 대회입니다",
       "description": "센터 공지 포스터에서 접수 기간 11.20 17:00까지, 대상 국민 누구나(개인)로 확인됐고, 양식을 내려받아 이메일로 접수합니다.",
-      "dDay": "D-14",
+      "dDay": "D-11",
       "deadlineText": "11.20 17:00",
       "tags": [
         "공공데이터",
@@ -415,7 +713,7 @@
       "title": "2026년 신규 MICE 행사 아이디어 공모전",
       "summary": "한국PCO협회가 받는 새 MICE 행사 기획 아이디어 공모전입니다",
       "description": "한국PCO협회 공지에서 공모 기간 11.15까지, 대상 대학(원)생 2인 이상 팀으로 확인됐습니다.",
-      "dDay": "D-9",
+      "dDay": "D-6",
       "deadlineText": "11.15",
       "tags": [
         "MICE",
@@ -442,7 +740,7 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-06",
       "deadline": [
         "2026-11-15"
@@ -481,13 +779,14 @@
           "url": "https://mediahub.seoul.go.kr/gongmo/2000784"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-08"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "seoul-admin-form-improve-idea-2026",
@@ -496,7 +795,7 @@
       "title": "서울특별시 행정서식 뚝딱뚝딱 개선 아이디어 공모전",
       "summary": "서울시 행정서식을 더 쉽게 고칠 개선 아이디어를 받는 공모전입니다",
       "description": "서울시 공고에서 응모 기간 11.20 23:59까지, 개인 자격만 가능하며 팀 제출은 안 된다고 안내돼 있습니다.",
-      "dDay": "D-14",
+      "dDay": "D-11",
       "deadlineText": "11.20 23:59",
       "tags": [
         "행정서식",
@@ -523,7 +822,7 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-06",
       "deadline": [
         "2026-11-20"
@@ -536,7 +835,7 @@
       "title": "이거 바뀌면 어때유? 대전 시민 생활·관계 개선 아이디어 공모전",
       "summary": "대전사회혁신센터가 시민 생활·관계를 좋게 할 아이디어를 받는 공모전입니다",
       "description": "주최 사이트에서 모집중과 신청 기간 11.13 18:00까지가 확인됐습니다. 상세 내용이 이미지·PDF라 참가 대상은 확인하지 못했습니다.",
-      "dDay": "D-7",
+      "dDay": "D-4",
       "deadlineText": "11.13 18:00",
       "tags": [
         "대전",
@@ -563,7 +862,7 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-06",
       "deadline": [
         "2026-11-13"
@@ -576,7 +875,7 @@
       "title": "소상공인 성장 및 재도약을 위한 정책 아이디어 공모전",
       "summary": "경기신용보증재단이 소상공인 재도약 정책 아이디어를 받는 공모전입니다",
       "description": "재단 전용 사이트에서 공모 기간 11.16까지, 대상 전 국민 개인 또는 3인 이내 팀으로 확인됐습니다.",
-      "dDay": "D-10",
+      "dDay": "D-7",
       "deadlineText": "11.16",
       "tags": [
         "소상공인",
@@ -603,7 +902,7 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-06",
       "deadline": [
         "2026-11-16"
@@ -616,7 +915,7 @@
       "title": "용산국제업무지구 스마트도시 아이디어 공모전",
       "summary": "서울시와 한국도시설계학회가 용산국제업무지구 스마트도시 아이디어를 받는 공모입니다",
       "description": "이번 자료에는 공식 확인 결과가 없어 모든 값은 모음 사이트 기준입니다. 접수 기간과 참가 자격은 공식 페이지에서 확인해야 합니다.",
-      "dDay": "D-14",
+      "dDay": "D-11",
       "deadlineText": "11.20",
       "tags": [
         "스마트도시",
@@ -656,7 +955,7 @@
       "title": "현대자동차그룹 차량용 앱 개발 공모전",
       "summary": "현대자동차그룹이 여는 차량용 앱 개발 대회입니다",
       "description": "이번 자료에는 공식 확인 결과가 없어 값은 모음 사이트 기준입니다. 공식 사이트(appdevchallenge.auto-hmg.io)에서 개발 환경과 제출 방식을 확인해야 합니다.",
-      "dDay": "D-9",
+      "dDay": "D-6",
       "deadlineText": "11.15",
       "tags": [
         "차량용 앱",
@@ -683,7 +982,7 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-06",
       "deadline": [
         "2026-11-15"
@@ -721,13 +1020,14 @@
           "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610200023"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-06"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "kosha-hazard-site-investigation-tech-idea-2026",
@@ -761,13 +1061,14 @@
           "url": "https://modu.go.kr/front/epilogue/epilogueBbsViewPage.do?bbs_id=fd95779fc73c48ec8a2a8643ccf9a4cf&miv_pageNo=1"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-08"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "kapae-univ-student-policy-idea-2026",
@@ -776,7 +1077,7 @@
       "title": "2026 대학생 정책 아이디어 공모전",
       "summary": "한국정책분석평가학회가 받는 대학생 정책 아이디어 공모전입니다",
       "description": "주최 학회 사이트가 보안 오류로 열리지 않아 공식 확인은 못 했습니다. 마감 11.26 23:59와 대상은 외부 공고 기준입니다.",
-      "dDay": "D-20",
+      "dDay": "D-17",
       "deadlineText": "11.26 23:59",
       "tags": [
         "정책 아이디어",
@@ -815,7 +1116,7 @@
       "title": "2026 사회보장 데이터를 활용한 AI 혁신 아이디어 경진대회",
       "summary": "한국사회보장정보원과 대구가톨릭대가 여는 사회보장 데이터 AI 아이디어 대회입니다",
       "description": "경기도청 공식 게시물에서 공모 기간 10.21~11.20, 참가 자격 국민 누구나(개인 또는 팀), 접수 wma.co.kr/ax로 확인됐습니다. 운영 페이지 본문은 읽히지 않았습니다.",
-      "dDay": "D-14",
+      "dDay": "D-11",
       "deadlineText": "11.20",
       "tags": [
         "사회보장 데이터",
@@ -855,7 +1156,7 @@
       "title": "[제10회 모모전] 현대모비스 창립 50주년 굿즈 아이디어 공모전",
       "summary": "현대모비스 창립 50주년 굿즈 아이디어를 받는 공모전입니다",
       "description": "공식 안내 페이지를 직접 열지 못해 접수 기간과 대상은 모음 사이트·외부 공고 기준입니다. 공식 페이지는 로그인 후 참여할 수 있다고 안내됩니다.",
-      "dDay": "D-12",
+      "dDay": "D-9",
       "deadlineText": "11.18",
       "tags": [
         "굿즈 아이디어",
@@ -920,13 +1221,14 @@
           "url": "https://nia.or.kr/site/nia_kor/ex/bbs/View.do?bcIdx=30083&cbIdx=99835&parentSeq=30083"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-08"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "gbtc-local-tourism-innovation-content-2026",
@@ -960,13 +1262,14 @@
           "url": "http://tourbiz.gtc.co.kr/notice/681"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-06"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "busan-marine-startup-spark-up-1876-2026",
@@ -975,7 +1278,7 @@
       "title": "2026년 해양 창업아이디어 공모전 Spark-up 1876",
       "summary": "부산항만공사 등이 여는 해양 분야 창업 아이디어 공모전입니다",
       "description": "이번 자료에는 공식 확인 결과가 없어 값은 모음 사이트 기준입니다. 창업 1년 미만 초기창업자도 참가 대상으로 안내돼 있습니다.",
-      "dDay": "D-10",
+      "dDay": "D-7",
       "deadlineText": "11.16",
       "tags": [
         "해양",
@@ -1016,7 +1319,7 @@
       "title": "2026 체육관련 규제개선 공모전",
       "summary": "국민체육진흥공단이 체육 분야 규제 개선 제안을 받는 공모전입니다",
       "description": "이번 자료에는 공식 확인 결과가 없어 값은 모음 사이트 기준입니다. 제출 방식은 공식 페이지에서 확인해야 합니다.",
-      "dDay": "D-16",
+      "dDay": "D-13",
       "deadlineText": "11.22",
       "tags": [
         "규제개선",
@@ -1024,8 +1327,8 @@
         "국민 누구나"
       ],
       "period": "2026.10.26 ~ 11.22 / 심사 11.25~11.30 / 발표 12.22 (모음 사이트 기준)",
-      "reward": "총상금 300만원 · 1위 50만원(모음 사이트 기준)",
-      "participation": "누구나(모음 사이트 기준)",
+      "reward": "최우수상 50만원(이사장상) · 우수상 3건 각 30만원 · 장려상 6건 각 20만원",
+      "participation": "대한민국 국민 개인 누구나",
       "preStartup": "사업자등록·예비창업 여부에 따른 제한 명시 없음",
       "employment": "재직자 제한 명시 없음",
       "businessRegistration": "신청 시 사업자등록 요구 명시 없음",
@@ -1043,8 +1346,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-22"
       ]
@@ -1081,13 +1384,14 @@
           "url": "http://www.e-junggu.or.kr/"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-08"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "buyeo-community-solverthon-2026",
@@ -1096,15 +1400,15 @@
       "title": "2026 지역문제해결 아이디어 발굴 부여 솔버톤 대회",
       "summary": "부여군 지역공동체활성화재단이 지역 문제의 해법을 모으는 솔버톤 대회입니다",
       "description": "이번 자료에는 공식 확인 결과가 없어 값은 모음 사이트 기준입니다. 지역 거주 여부 제한은 확인되지 않았습니다.",
-      "dDay": "D-5",
-      "deadlineText": "11.11",
+      "dDay": "D-2",
+      "deadlineText": "11.11 17:00",
       "tags": [
         "지역문제",
         "솔버톤",
         "부여"
       ],
-      "period": "2026.10.26 ~ 11.11 / 심사 11.12~11.13 / 발표 11.13 (모음 사이트 기준)",
-      "reward": "상금 및 이사장상(금액 명시 없음, 모음 사이트 기준)",
+      "period": "2026.10.26 ~ 11.11 17:00 / 심사 11.12~11.13 / 발표 11.13 (선발팀 11.21~22 캠프·피칭)",
+      "reward": "총지원금 3,000만원(상금 900만원 선발 15팀 + 실증비 2,100만원 상위 3팀)",
       "participation": "고등학생·대학생·대학원생·일반인(모음 사이트 기준)",
       "preStartup": "사업자등록·예비창업 여부에 따른 제한 명시 없음",
       "employment": "재직자 제한 명시 없음",
@@ -1123,8 +1427,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-11"
       ]
@@ -1136,7 +1440,7 @@
       "title": "[햇반 30주년] 갓 지은 AI디어 공모전",
       "summary": "CJ제일제당이 햇반 30주년을 맞아 여는 AI 활용 아이디어 공모전입니다",
       "description": "실제 접수 구글폼에서 참가 자격과 접수 기간 11.13 23:59까지가 확인됐습니다. 제출물의 구체적 형식은 확인하지 못했습니다.",
-      "dDay": "D-7",
+      "dDay": "D-4",
       "deadlineText": "11.13 23:59",
       "tags": [
         "햇반",
@@ -1164,7 +1468,7 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-06",
       "deadline": [
         "2026-11-13"
@@ -1177,7 +1481,7 @@
       "title": "2026년 ESG 대국민 아이디어 공모전",
       "summary": "국가생명윤리정책원이 ESG 관점 아이디어를 국민에게 받는 공모전입니다",
       "description": "정책원 공식 게시물에서 공모 기간 10.26~11.13이 확인됐습니다. 참가 자격 세부는 첨부 공고문 확인이 필요합니다.",
-      "dDay": "D-7",
+      "dDay": "D-4",
       "deadlineText": "11.13",
       "tags": [
         "ESG",
@@ -1204,7 +1508,7 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-06",
       "deadline": [
         "2026-11-13"
@@ -1217,7 +1521,7 @@
       "title": "2026 의왕시 청년 e-Room 창업 아이디어 공모전",
       "summary": "의왕시청이 청년의 지속가능발전 창업 아이디어를 받는 공모전입니다",
       "description": "의왕시청 공지에서 모집 기간 11.11 18:00까지, 신청은 공고문 QR코드로 한다고 확인됐습니다. 거주지 제한 여부는 문구에서 확인되지 않았습니다.",
-      "dDay": "D-5",
+      "dDay": "D-2",
       "deadlineText": "11.11 18:00",
       "tags": [
         "창업 아이디어",
@@ -1226,7 +1530,7 @@
       ],
       "period": "2026.10.16 ~ 11.11 18:00 / 심사 11.12~11.13 / 발표 11.16",
       "reward": "총상금 180만원 · 1위 100만원",
-      "participation": "지속가능발전 관련 창업 아이디어가 있는 만 19~39세 청년, 개인 또는 팀(의왕시 거주 요건은 확인 필요)",
+      "participation": "만 19~39세 청년, 개인 또는 팀(창업 아이디어 보유자, 거주 요건은 공고에 명시 없음)",
       "preStartup": "창업 아이디어 보유 청년 대상, 예비창업 여부 제한 명시 없음",
       "employment": "재직자 제한 명시 없음",
       "businessRegistration": "신청 시 사업자등록 요구 명시 없음",
@@ -1244,8 +1548,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-11"
       ]
@@ -1257,7 +1561,7 @@
       "title": "보령시 웰니스 정책 제안 공모전",
       "summary": "보령시가 웰니스 관련 정책 제안을 시민 누구나에게 받는 공모입니다",
       "description": "보령시 고시공고에서 접수 기간 10.12~11.11, 대상 보령 시정에 관심 있는 누구나로 확인됐습니다.",
-      "dDay": "D-5",
+      "dDay": "D-2",
       "deadlineText": "11.11",
       "tags": [
         "웰니스",
@@ -1284,7 +1588,7 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-06",
       "deadline": [
         "2026-11-11"
@@ -1297,7 +1601,7 @@
       "title": "국회 미래세대 미래의제 공모전",
       "summary": "국회미래연구원이 청년 세대가 제안하는 미래 의제를 받는 공모전입니다",
       "description": "국회미래연구원 공식 공지에서 제안 기간 11.25 15:00까지, 자격 만 19~39세 개인 또는 팀(최대 5인)으로 확인됐습니다.",
-      "dDay": "D-19",
+      "dDay": "D-16",
       "deadlineText": "11.25 15:00",
       "tags": [
         "미래의제",
@@ -1337,7 +1641,7 @@
       "title": "2026 다시, 다리다 유휴공간 활성화 아이디어 공모전",
       "summary": "유휴공간을 다시 살릴 아이디어를 받는 공모전으로, 주최 공식 공고는 확인하지 못했습니다",
       "description": "문화정원 자체 공식 공고를 찾지 못해 마감 시각과 접수 방법(이메일)은 2차 자료 기준입니다. 공식 확인이 필요합니다.",
-      "dDay": "D-3",
+      "dDay": "오늘 마감",
       "deadlineText": "11.09 16:00",
       "tags": [
         "유휴공간",
@@ -1377,7 +1681,7 @@
       "title": "2026 차세대통신 X 융합 창업 아이디어 경진대회",
       "summary": "차세대통신 혁신융합대학사업단이 여는 통신 융합 창업 아이디어 경진대회입니다",
       "description": "국민대 공식 공지에서 예선 온라인 접수 11.18까지, 대상 전국 대학·전문대 재학생(휴학생·대학원생 제외)으로 확인됐습니다.",
-      "dDay": "D-12",
+      "dDay": "D-9",
       "deadlineText": "11.18",
       "tags": [
         "차세대통신",
@@ -1386,7 +1690,7 @@
         "개인·2~4인"
       ],
       "period": "예선 접수 ~ 11.18 / 서면심사 11.19~12.17 / 본선 발표·시상 12.18",
-      "reward": "상금 명시 없음(모음 사이트에 \"없음\"으로 표기)",
+      "reward": "대상 300만원 · 최우수상 150만원 · 우수상 2팀 각 100만원 · 후원기업특별상(금액 미명시)",
       "participation": "전국 대학·전문대 재학생(휴학생·대학원생 제외), 개인 또는 2~4인 팀",
       "preStartup": "창업 단계 제한 명시 없음(대학 재학생 대상)",
       "employment": "재학생 대상 대회로 재직자 관련 규정 명시 없음",
@@ -1405,8 +1709,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-18"
       ]
@@ -1418,8 +1722,8 @@
       "title": "2026 대구 대학(원) AI 드래프톤",
       "summary": "대구광역시와 대구테크노파크가 여는 대학(원)생 AI 대회입니다",
       "description": "이번 자료에는 공식 확인 결과가 없어 값은 모음 사이트 기준입니다. 이름에 대구가 붙어 있어 대구 소재 대학 한정인지 공식 공고 확인이 필요합니다.",
-      "dDay": "D-9",
-      "deadlineText": "11.15",
+      "dDay": "D-6",
+      "deadlineText": "11.15 23:59",
       "tags": [
         "AI",
         "대구",
@@ -1427,7 +1731,7 @@
       ],
       "period": "2026.10.28 ~ 11.15 / 심사 11.25 / 발표 11.25 (모음 사이트 기준)",
       "reward": "총상금 950만원 · 1위 500만원 · 상장(모음 사이트 기준)",
-      "participation": "대학생·대학원생(대구 소재 여부는 확인 필요, 모음 사이트 기준)",
+      "participation": "대학(전문대 포함)·대학원 재학생 및 휴학생, 개인 또는 2~4인 팀(거주지 제한 없음, 11.25~26 무박 2일 전 일정 참석 필수)",
       "preStartup": "사업자등록·예비창업 여부에 따른 제한 명시 없음",
       "employment": "재직자 제한 명시 없음",
       "businessRegistration": "신청 시 사업자등록 요구 명시 없음",
@@ -1445,8 +1749,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-15"
       ]
@@ -1458,7 +1762,7 @@
       "title": "2026 AI활용 전국 대학생 창업 해커톤 대회",
       "summary": "교육부와 KERIS가 여는 AI 활용 대학생 창업 해커톤입니다",
       "description": "이번 자료에는 공식 확인 결과가 없어 값은 모음 사이트 기준입니다. 팀 인원과 제출물은 공식 공고에서 확인해야 합니다.",
-      "dDay": "D-5",
+      "dDay": "D-2",
       "deadlineText": "11.11",
       "tags": [
         "해커톤",
@@ -1524,13 +1828,14 @@
           "url": "http://www.kepco-enc.com/board.es?mid=a10601000000&bid=0024&list_no=45199&act=view"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-06"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "wando-depopulation-response-idea-2026",
@@ -1539,8 +1844,8 @@
       "title": "2026년 완도군 지방소멸 대응 아이디어 공모전",
       "summary": "완도군이 지방소멸에 맞설 아이디어를 받는 공모전입니다",
       "description": "이번 자료에는 공식 확인 결과가 없어 값은 모음 사이트 기준입니다.",
-      "dDay": "D-12",
-      "deadlineText": "11.18",
+      "dDay": "D-9",
+      "deadlineText": "11.18 18:00",
       "tags": [
         "지방소멸",
         "완도군",
@@ -1548,7 +1853,7 @@
       ],
       "period": "2026.10.29 ~ 11.18 / 심사 11.19~12.30 / 발표 12.31 (모음 사이트 기준)",
       "reward": "1위 70만원(총상금 명시 없음, 모음 사이트 기준)",
-      "participation": "누구나(모음 사이트 기준)",
+      "participation": "완도군 발전에 관심 있는 누구나",
       "preStartup": "사업자등록·예비창업 여부에 따른 제한 명시 없음",
       "employment": "재직자 제한 명시 없음",
       "businessRegistration": "신청 시 사업자등록 요구 명시 없음",
@@ -1566,8 +1871,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-18"
       ]
@@ -1579,7 +1884,7 @@
       "title": "제1회 메치니코프 신제품 공모전",
       "summary": "hy(한국야쿠르트)가 신제품 아이디어를 받는 공모전입니다",
       "description": "공식 프로필의 접수 링크는 네이버 로그인이 필요해 마감일과 참가 자격을 공식 원문으로 확인하지 못했습니다. 날짜는 모음 사이트 기준입니다.",
-      "dDay": "D-11",
+      "dDay": "D-8",
       "deadlineText": "11.17",
       "tags": [
         "신제품",
@@ -1619,7 +1924,7 @@
       "title": "2026년 대국민 재정교육 아이디어 공모전",
       "summary": "기획예산처가 쉽고 유익한 재정교육 콘텐츠·프로그램 아이디어를 받는 공모전입니다",
       "description": "기획예산처 공식 보도자료와 정책브리핑에서 기간 10.30~11.27이 확인됐습니다. 팀 인원 조건은 첨부 확인이 필요합니다.",
-      "dDay": "D-21",
+      "dDay": "D-18",
       "deadlineText": "11.27",
       "tags": [
         "재정교육",
@@ -1659,7 +1964,7 @@
       "title": "2026 성평등 AI 벤치마크 챌린지",
       "summary": "성평등가족부가 생성형 AI의 성평등 안전성을 평가하는 챌린지입니다",
       "description": "공식 대회 소개에서 접수 11.02~11.20, 개인 또는 5인 이내 팀으로 확인됐습니다. 외국인은 한국 국적자와 팀으로만 참여할 수 있습니다.",
-      "dDay": "D-14",
+      "dDay": "D-11",
       "deadlineText": "11.20",
       "tags": [
         "생성형 AI",
@@ -1686,7 +1991,7 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-06",
       "deadline": [
         "2026-11-20"
@@ -1699,7 +2004,7 @@
       "title": "2026 현장문제 AX 업무혁신 아이디어 해커톤",
       "summary": "충청남도 등이 여는 제조 현장 문제의 AI 전환(AX) 아이디어 해커톤입니다",
       "description": "공식 접수 사이트에서 신청 기간 11.17 23:59까지, AI·코딩 경험이 없어도 지원 가능하다고 확인됐습니다. 주관은 KAIST입니다.",
-      "dDay": "D-11",
+      "dDay": "D-8",
       "deadlineText": "11.17 23:59",
       "tags": [
         "제조 AX",
@@ -1727,7 +2032,7 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-06",
       "deadline": [
         "2026-11-17"
@@ -1740,7 +2045,7 @@
       "title": "제2회 Nitto Open Innovation Challenge",
       "summary": "한국닛또덴꼬(Nitto)가 여는 오픈이노베이션 아이디어 공모전입니다",
       "description": "공식 블로그에서 공모 기간 11.02~11.30, 참가 자격 누구나(최대 3인 1팀)로 확인됐고 아이디어는 구글폼으로 제출합니다. 주최는 한국 법인으로 표기돼 있습니다.",
-      "dDay": "D-24",
+      "dDay": "D-21",
       "deadlineText": "11.30",
       "tags": [
         "오픈이노베이션",
@@ -1781,7 +2086,7 @@
       "title": "AX인재전쟁 온라인 x 삼일PwC",
       "summary": "조코딩AX파트너스가 여는, AI 활용 역량으로 삼일PwC 채용까지 이어지는 온라인 대회입니다",
       "description": "이번 자료에는 공식 확인 결과가 없어 값은 모음 사이트 기준입니다. 과제 형식이 개발인지 평가형인지 확인하지 못했으므로 공식 사이트 확인이 필요합니다.",
-      "dDay": "D-9",
+      "dDay": "D-6",
       "deadlineText": "11.15",
       "tags": [
         "AI 역량",
@@ -1821,7 +2126,7 @@
       "title": "[산림청] 산림공공데이터 활용 사례 공모",
       "summary": "산림청이 산림 공공데이터를 활용한 사례를 받는 공모입니다",
       "description": "산림청 산림빅데이터팀 공식 게시에서 공모 기간 11.02~11.20, 대상 개인·팀으로 확인됐습니다.",
-      "dDay": "D-14",
+      "dDay": "D-11",
       "deadlineText": "11.20",
       "tags": [
         "공공데이터",
@@ -1848,7 +2153,7 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-06",
       "deadline": [
         "2026-11-20"
@@ -1861,8 +2166,8 @@
       "title": "소재연구데이터 AI 활용 해커톤",
       "summary": "한국화학연구원 프리미엄 소재연구데이터를 AI로 활용하는 DAKER 해커톤(과기정통부 주최, 데이콘 운영)",
       "description": "과학기술정보통신부 주최·한국연구재단/한국화학연구원 주관·데이콘 운영으로 열리는 소재 분야 AI 해커톤입니다. 참가 신청서 제출 기간은 10/30~11/13이며, 11/04에 참가자격 관련 추가 안내가 공지되어 신청 전 확인이 필요합니다.",
-      "dDay": "D-7",
-      "deadlineText": "11.13",
+      "dDay": "D-4",
+      "deadlineText": "11.13 12:00",
       "tags": [
         "AI",
         "소재·화학",
@@ -1870,8 +2175,8 @@
         "2~4인 팀",
         "DAKER"
       ],
-      "period": "참가 신청서 제출 2026.10.30 ~ 11.13",
-      "reward": "이번 수집 자료에는 명시 없음(공고문 확인 필요) (목록에는 프리미엄 표기만 확인)",
+      "period": "참가 신청서 제출 2026.10.30 10:00 ~ 11.13 12:00 / 예선 발표 11.15 / 온라인 예선 11.16~11.17 / 본선(오프라인) 11.26~11.27",
+      "reward": "별도 상금 없음(상금 0원). 1위 과학기술부총리상, 2위 한국연구재단 이사장상, 3위 한국화학연구원 원장상 각 1팀",
       "participation": "소재 분야 국내 대학(원) 재학생·박사후연구원 또는 국내 연구기관 학생·연수직, 팀당 2~4인. 11/04 자격 추가 안내 별도 확인 필요",
       "preStartup": "사업자등록 여부에 따른 제한 명시 없음",
       "employment": "명시 없음",
@@ -1890,8 +2195,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-13"
       ]
@@ -1903,7 +2208,7 @@
       "title": "제주 AI·빅데이터 활용 AI Agent 개발 챌린지",
       "summary": "제주테크노파크가 DAKER에서 여는 제주 AI·빅데이터 기반 AI 에이전트 개발 챌린지(총 상금 500만원)",
       "description": "DAKER 목록에서 확인한 공고입니다(제주테크노파크, 총 상금 500만원, 340팀 참가, D-14 표기). 세부 일정·자격·평가는 이번 수집에서 읽지 못해 공식 페이지 확인이 필요합니다.",
-      "dDay": "D-14 표기 (약 11.20, 확인 필요)",
+      "dDay": "마감 확인 필요",
       "deadlineText": "11.20 전후 (D-14 표기, 확인 필요)",
       "tags": [
         "AI Agent",
@@ -1968,13 +2273,14 @@
           "url": "https://grantly.kr/opportunities/19751"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-06"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "ai-healthcare-hackathon-2027h1-jobseekers",
@@ -1983,7 +2289,7 @@
       "title": "[튜토리얼 100% 제공] 2027 상반기 취업! 비전공자도 완성하는 AI 헬스케어 해커톤",
       "summary": "비전공자도 튜토리얼을 따라 AI 헬스케어 서비스를 완성하는 해커톤(취업 준비생 대상으로 보임)",
       "description": "Grantly 목록 제목만 확인했습니다. 비전공자 대상 튜토리얼 제공 해커톤이며 접수 기간·주최·상금은 확인하지 못했습니다.",
-      "dDay": "마감일 확인 필요",
+      "dDay": "마감 확인 필요",
       "deadlineText": "마감 명시 없음",
       "tags": [
         "AI",
@@ -2023,7 +2329,7 @@
       "title": "CAPTURE, EXPLAIN, DEFEND — AI Cybersecurity Hackathon 2026",
       "summary": "AI Builders 주최, 12/11 서울 오프라인 AI 사이버 보안 CTF 해커톤(무료)",
       "description": "AI 개발자·소프트웨어 엔지니어·보안 실무자·CTF 애호가를 위한 무료 오프라인 해커톤입니다. 주최 Luma 등록은 호스트 승인이 필요하며 신청 마감일은 공식 페이지에 표기되어 있지 않습니다. 12/11은 행사일입니다.",
-      "dDay": "신청 마감 명시 없음",
+      "dDay": "마감 확인 필요",
       "deadlineText": "행사 12.11 (신청 마감 명시 없음)",
       "tags": [
         "AI",
@@ -2068,7 +2374,7 @@
       "title": "MAWD START-UP HACKATHON (대학생)",
       "summary": "기획·마케팅·디자인·개발 대학생이 팀을 이뤄 11/14~15 서울에서 스타트업 아이디어를 구현하는 오프라인 해커톤(상금 300만원)",
       "description": "MAWD가 Luma에서 모집하는 대학생 스타트업 해커톤입니다. 등록은 승인제이며, 외부 자료에는 11/07 23:59 접수 마감으로 적혀 있으나 주최 페이지에서는 확인되지 않았습니다.",
-      "dDay": "마감 확인 필요 (외부 자료 11.07)",
+      "dDay": "마감 확인 필요",
       "deadlineText": "11.07 23:59 (외부 자료, 주최 확인 불가)",
       "tags": [
         "대학생",
@@ -2112,7 +2418,7 @@
       "title": "2026년 KEIT 대국민 혁신아이디어 공모전",
       "summary": "한국산업기술기획평가원이 국민에게 산업기술 혁신 아이디어를 받는 공모전",
       "description": "소통24에 올라온 KEIT 대국민 공모전입니다. 접수 기간 11/04 14:00 ~ 11/17 18:00, 상금 50만원(위비티 표기), 대상 제한 없음으로 확인했습니다. 공식 상세 본문은 이번에 읽지 못했습니다.",
-      "dDay": "D-11",
+      "dDay": "D-8",
       "deadlineText": "11.17 18:00",
       "tags": [
         "대국민",
@@ -2121,8 +2427,8 @@
         "KEIT"
       ],
       "period": "2026.11.04 14:00 ~ 11.17 18:00",
-      "reward": "상금 50만원 (위비티 표기, 공식 본문 확인 필요)",
-      "participation": "제한 없음 (위비티 표기)",
+      "reward": "상금 50만원은 위비티 표기, 공식 공고 본문에는 상금 명시 없음(안내 hwp 확인 필요)",
+      "participation": "대한민국 국민 누구나 (개인 또는 팀, 팀은 최대 3명)",
       "preStartup": "명시 없음",
       "employment": "명시 없음",
       "businessRegistration": "신청 시 사업자등록 요구 명시 없음",
@@ -2140,8 +2446,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-17"
       ]
@@ -2153,7 +2459,7 @@
       "title": "국가무형유산 상설공연 창작 콘텐츠 개발 대국민 아이디어 발굴대회",
       "summary": "국가유산청이 국가무형유산 상설공연에 쓸 창작 콘텐츠 아이디어를 국민에게 받는 대회(접수 11/09 시작)",
       "description": "국가유산청 무형유산예능과 공고 본문은 접수 기간을 11/09 09:00 ~ 11/18 17:00으로 적었습니다. 크롤러는 10/29 시작으로 읽었고 사이트 상단은 '진행 중'이라 시작일 표기가 엇갈립니다. 11/06 기준 접수 예정으로 처리했습니다.",
-      "dDay": "접수 예정 (마감 D-12)",
+      "dDay": "D-9",
       "deadlineText": "11.09 09:00 ~ 11.18 17:00",
       "tags": [
         "대국민",
@@ -2179,11 +2485,11 @@
           "url": "https://modu.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=10cd564877b04abcb22c35cf62054cb6&menu_id=527&pagetype=bbs"
         }
       ],
-      "status": "UPCOMING",
+      "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
-      "openingAt": "2026-11-09T09:00:00+09:00",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "openingAt": null,
       "deadline": [
         "2026-11-18"
       ]
@@ -2195,7 +2501,7 @@
       "title": "강원특별자치도 2026년도 「톡톡 Idea 공모전」",
       "summary": "강원특별자치도 도정에 관심 있는 주민 누구나 낼 수 있는 아이디어 공모전",
       "description": "강원특별자치도 기획조정실 정책기획관 공고입니다. 본문에는 11/23 18:00 마감만 표기되어 있고 시작일(11/05)은 크롤러 값이라 공식 본문으로는 확인하지 못했습니다.",
-      "dDay": "D-17",
+      "dDay": "D-14",
       "deadlineText": "11.23 18:00",
       "tags": [
         "강원",
@@ -2223,7 +2529,7 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-06",
       "deadline": [
         "2026-11-23"
@@ -2236,7 +2542,7 @@
       "title": "2026 조달청 AI 게임·콘텐츠 공모전",
       "summary": "조달청이 대한민국 국민 누구나(개인/팀) 대상으로 여는 AI 게임·콘텐츠 공모전(상금 200만원)",
       "description": "조달청 공식 블로그에서 접수 기간 10/12 ~ 11/22, 대상 대한민국 국민 누구나(개인/팀)를 확인했습니다. 제출물이 게임 개발인지 콘텐츠 제작인지 등 세부 부문은 이번에 읽지 못했습니다.",
-      "dDay": "D-16",
+      "dDay": "D-13",
       "deadlineText": "11.22",
       "tags": [
         "조달청",
@@ -2278,7 +2584,7 @@
       "title": "[한국도로공사] AI 활용 아이디어 공모전",
       "summary": "한국도로공사가 국민에게 AI 활용 아이디어를 받는 공모전(개인 또는 3인 이내 팀, 상금 100만원)",
       "description": "한국도로공사 국민생각함 공식 게시에서 공모 기간 10/19 ~ 11/15, 대상 대한민국 국민 누구나(개인 또는 3인 이내 팀)를 확인했습니다.",
-      "dDay": "D-9",
+      "dDay": "D-6",
       "deadlineText": "11.15",
       "tags": [
         "한국도로공사",
@@ -2287,7 +2593,7 @@
         "3인 이내"
       ],
       "period": "2026.10.19 ~ 11.15",
-      "reward": "상금 100만원 (위비티 표기)",
+      "reward": "총상금 250만원 (최우수 1건 100만원, 우수 2건 각 50만원, 장려 2건 각 25만원)",
       "participation": "대한민국 국민 누구나 (개인 또는 3인 이내 팀)",
       "preStartup": "명시 없음",
       "employment": "명시 없음",
@@ -2306,8 +2612,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-15"
       ]
@@ -2319,7 +2625,7 @@
       "title": "2026 글로벌 창업경진대회 Soulmate Pioneers 참가팀 모집",
       "summary": "서울 소재 대학 재학·휴학생이 대표인 2~5인 팀이 창업 아이디어로 겨루는 대회(총 상금 900만원, 성균관대 공지 기준)",
       "description": "서울앵커센터·성균관대 앵커사업단이 모집합니다(연세대 공지에는 캠퍼스타운사업단·카카오모빌리티 협력 표기). 서류 접수는 10/30 ~ 11/15이며, 기창업자는 사업자등록증을 내야 하고 법인 설립 6개월 이상 팀은 참가할 수 없습니다. 위비티는 상금 500만원으로 적어 표기가 엇갈립니다.",
-      "dDay": "D-9",
+      "dDay": "D-6",
       "deadlineText": "11.15",
       "tags": [
         "창업경진대회",
@@ -2347,7 +2653,7 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-06",
       "deadline": [
         "2026-11-15"
@@ -2360,7 +2666,7 @@
       "title": "제1회 홍제천 상상더하기 공모전",
       "summary": "서대문구청이 홍제천을 주제로 여는 제1회 아이디어 공모전(상금 50만원)",
       "description": "위비티 상세(기획/아이디어 분야)와 서대문구청 공지 링크만 확인했습니다. 구체 제출물과 평가 기준은 이번에 읽지 못했습니다.",
-      "dDay": "D-17",
+      "dDay": "D-14",
       "deadlineText": "11.23",
       "tags": [
         "서대문구",
@@ -2404,7 +2710,7 @@
       "title": "[한국체육산업개발(주)] 공공데이터 활용 경진대회",
       "summary": "한국체육산업개발이 여는 공공데이터 활용 경진대회(상금 300만원, 대상 제한 없음)",
       "description": "위비티 상세로만 확인했습니다. 접수 11/02 ~ 12/01, 상금 300만원, 대상 제한 없음이며 홈페이지 링크가 위비티 자체여서 공식 공고 위치와 제출물은 확인이 필요합니다.",
-      "dDay": "D-25",
+      "dDay": "D-22",
       "deadlineText": "12.01",
       "tags": [
         "공공데이터",
@@ -2444,7 +2750,7 @@
       "title": "2026 청년의 시간(성남 청년 참여 예산제) 참가팀 모집",
       "summary": "성남시청소년청년재단이 청년 참여 예산제에 쓸 사업 제안 팀을 모집(상금 100만원)",
       "description": "위비티 상세 기준으로 접수 10/30 ~ 11/22, 대상 일반인·대학생·기타입니다. 제안 형식·팀 규모는 이번에 읽지 못했습니다.",
-      "dDay": "D-16",
+      "dDay": "D-13",
       "deadlineText": "11.22",
       "tags": [
         "성남",
@@ -2489,7 +2795,7 @@
       "title": "제1회 하나증권 청년 금융 아이디어 공모전",
       "summary": "하나증권이 만 19세 이상 고졸 이상 개인에게 청년 금융 아이디어를 받는 공모전",
       "description": "자유 탐색에서 하나증권 공식 페이지로 확인했습니다. 마감은 11/30 17:00이며 개인 참가만 가능합니다.",
-      "dDay": "D-24",
+      "dDay": "D-21",
       "deadlineText": "11.30 17:00",
       "tags": [
         "하나증권",
@@ -2530,16 +2836,16 @@
       "title": "과학기술정보통신부 × 엘리스 AI 챌린지",
       "summary": "과기정통부·NIA·엘리스가 여는 AI 챌린지(개인 또는 최대 4인 팀, 청소년·성인 부문 분리)",
       "description": "자유 탐색에서 공식 페이지로 확인했습니다. 마감은 11/13(온오프믹스 23:59)이며 청소년과 성인이 분리되어 진행됩니다. 세부 과제와 시상은 확인하지 못했습니다.",
-      "dDay": "D-7",
-      "deadlineText": "11.13 23:59",
+      "dDay": "D-4",
+      "deadlineText": "11.13",
       "tags": [
         "과기정통부",
         "NIA",
         "AI 챌린지",
         "최대 4인"
       ],
-      "period": "마감 2026.11.13 23:59 (시작일 명시 없음)",
-      "reward": "이번 수집 자료에는 명시 없음(공고문 확인 필요)",
+      "period": "참가 접수 2026.10.23 ~ 11.13 / 기획안·PoC 제출 ~ 11.22 23:59:59 / 결과 발표 12.11",
+      "reward": "시상 4팀(청소년 2팀, 성인 2팀). 우수작 약 100만원 상당 헬피코드+ 크레딧·고도화 지원, 참가자 전원 헬피챗 500만 토큰·바이브 코딩 교육 콘텐츠·개인당 1만원 상당 크레딧(API 호출 사용 불가)",
       "participation": "대한민국 국민, 개인 또는 최대 4인 팀 (청소년·성인 분리)",
       "preStartup": "명시 없음",
       "employment": "명시 없음",
@@ -2558,8 +2864,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-13"
       ]
@@ -2596,13 +2902,14 @@
           "url": "https://www.cuk.ac.kr/ko/campuslife/notice.do?articleNo=276913&mode=view&srCategoryId=21"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-08"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "wanted-ai-championship-2026",
@@ -3320,13 +3627,14 @@
         }
       ],
       "firstSeenDate": "2026-09-21",
-      "status": "OPEN",
+      "status": "CLOSED",
       "lastVerifiedDate": "2026-10-13",
-      "lastUpdatedDate": "2026-10-11",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-10-22",
         "2026-10-26"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "public-web-illegal-ad-detector-2026",
@@ -3496,12 +3804,13 @@
         }
       ],
       "firstSeenDate": "2026-09-21",
-      "status": "OPEN",
+      "status": "CLOSED",
       "lastVerifiedDate": "2026-10-13",
-      "lastUpdatedDate": "2026-09-21",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-05"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "maplestory-worlds-global-dev-contest-2026",
@@ -3774,12 +4083,13 @@
         }
       ],
       "firstSeenDate": "2026-10-01",
-      "status": "OPEN",
+      "status": "CLOSED",
       "lastVerifiedDate": "2026-10-13",
-      "lastUpdatedDate": "2026-10-01",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-02"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "gitlab-life-after-code-2026",
@@ -3989,12 +4299,13 @@
         }
       ],
       "firstSeenDate": "2026-10-01",
-      "status": "OPEN",
+      "status": "CLOSED",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-10-01",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-06"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "qloo-agentic-hackathon-2026",
@@ -4048,7 +4359,7 @@
       "title": "PayPal AI Hackathon",
       "summary": "PayPal 개발자 플랫폼과 AI를 함께 사용해 결제·커머스·에이전트 경험을 만드는 글로벌 온라인 해커톤",
       "description": "PayPal의 무료 sandbox와 AI 도구·모델을 결합해 실제 동작하는 앱·에이전트·자동화 서비스를 구현하는 글로벌 온라인 해커톤입니다. 개인 참가가 가능하고, 공개 GitHub 저장소·실행 가능한 데모·3분 미만 데모 영상을 제출해야 합니다.",
-      "dDay": "D-37",
+      "dDay": "D-4",
       "deadlineText": "11.13 07:00 KST",
       "tags": [
         "PayPal",
@@ -4624,12 +4935,13 @@
         }
       ],
       "firstSeenDate": "2026-10-06",
-      "status": "OPEN",
+      "status": "CLOSED",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-10-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-08"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "kic-ai-agent-competition-2026",
@@ -4638,7 +4950,7 @@
       "title": "국부펀드 KIC, AI 에이전트 공모전",
       "summary": "투자·금융 업무 혁신용 AI Agent를 기획하고 본선에서 실제 작동하는 MVP로 구현하는 한국투자공사 공모전",
       "description": "한국투자공사(KIC)가 투자·금융 현장의 리서치·분석·문서 검색·업무 자동화를 위한 AI Agent를 공모합니다. 예선은 10페이지 이내 기획서, 본선은 실행 코드·데모 URL·발표자료를 제출하며 개인 참가도 가능합니다.",
-      "dDay": "D-36",
+      "dDay": "D-3",
       "deadlineText": "11.12 10:00",
       "tags": [
         "AI Agent",
@@ -4668,7 +4980,7 @@
       ],
       "firstSeenDate": "2026-10-06",
       "status": "OPEN",
-      "lastVerifiedDate": "2026-10-13",
+      "lastVerifiedDate": "2026-11-09",
       "lastUpdatedDate": "2026-10-06",
       "deadline": [
         "2026-11-12"
@@ -4710,12 +5022,13 @@
         }
       ],
       "firstSeenDate": "2026-10-06",
-      "status": "OPEN",
+      "status": "CLOSED",
       "lastVerifiedDate": "2026-10-13",
-      "lastUpdatedDate": "2026-10-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-10-25"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "daker-synthetic-microstructure-ai-2026",
@@ -4753,12 +5066,13 @@
         }
       ],
       "firstSeenDate": "2026-10-06",
-      "status": "OPEN",
+      "status": "CLOSED",
       "lastVerifiedDate": "2026-10-13",
-      "lastUpdatedDate": "2026-10-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-10-19"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "korea-clinical-datathon-2026",
@@ -4924,12 +5238,13 @@
         }
       ],
       "firstSeenDate": "2026-10-07",
-      "status": "OPEN",
+      "status": "CLOSED",
       "lastVerifiedDate": "2026-10-07",
-      "lastUpdatedDate": "2026-10-07",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-10-31"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "kcti-cultural-tourism-research-idea-2026",
@@ -5083,12 +5398,13 @@
         }
       ],
       "firstSeenDate": "2026-10-11",
-      "status": "OPEN",
+      "status": "CLOSED",
       "lastVerifiedDate": "2026-10-11",
-      "lastUpdatedDate": "2026-10-11",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-10-31"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "youth-fishing-village-startup-idea-2026",
@@ -5122,12 +5438,13 @@
         }
       ],
       "firstSeenDate": "2026-10-11",
-      "status": "OPEN",
+      "status": "CLOSED",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-10-11",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-08"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "audit-office-public-audit-idea-2026",
@@ -5165,12 +5482,13 @@
         }
       ],
       "firstSeenDate": "2026-10-11",
-      "status": "OPEN",
+      "status": "CLOSED",
       "lastVerifiedDate": "2026-10-11",
-      "lastUpdatedDate": "2026-10-11",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-10-31"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "open-government-action-plan-seven-2026",
@@ -5280,6 +5598,162 @@
     }
   ],
   "aiNews": [
+    {
+      "id": "goldman-claude-code-restriction-2026-11",
+      "categoryLabel": "AI 뉴스",
+      "icon": "📰",
+      "title": "Goldman Sachs, 은행원·트레이더의 Claude Code 사용 제한…엔지니어 중심으로 축소 보도",
+      "summary": "Bloomberg 보도를 인용한 2차 매체들에 따르면 Goldman Sachs가 10월 개정한 내부 지침으로 Claude Code와 GitHub 도구를 엔지니어에게만 허용하고, 대부분의 트레이더·은행원은 쓰지 못하게 했습니다. 퀀트 직군(strats)은 예외로 알려졌습니다.",
+      "description": "기사들은 Goldman이 생산성과 위험을 검토했다는 점만 전하며, 구체적 사유(정보 장벽, 검토되지 않은 코드, 토큰 비용)는 매체의 해석입니다. 영향 인원은 매체마다 다르게 보도돼 정확한 수치는 불명입니다. HN 댓글에서는 '비개발 직군의 업무 PC에서 반자율 에이전트를 돌리면 민감 정보와 외부 입력이 만나는 위험'이라는 해석과, '엔지니어도 코드를 읽는 능력을 잃고 있다'는 반박, Goldman이 Anthropic 상장 주관사라는 점을 짚는 댓글이 있었습니다. Bloomberg 원문과 Goldman 공식 입장은 직접 확인하지 못했습니다.",
+      "why": "금융권에서 코딩 에이전트 권한을 직군별로 나누는 사례가 드러났다는 점에서 기업 도입 정책을 논의할 때 참고가 되지만, 근거가 익명 소식통 기반 2차 보도라는 한계가 있습니다.",
+      "updatedAgo": "오늘",
+      "tags": [
+        "Goldman Sachs",
+        "Claude Code",
+        "기업 도입"
+      ],
+      "ideas": [
+        "우리 조직의 에이전트 사용 범위를 직군·데이터 접근 권한별로 구분해 점검하기"
+      ],
+      "links": [
+        {
+          "label": "HN 토론",
+          "url": "https://news.ycombinator.com/item?id=50415628"
+        },
+        {
+          "label": "GeekNews",
+          "url": "https://news.hada.io/topic?id=36827"
+        },
+        {
+          "label": "State of AI 기사",
+          "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers"
+        }
+      ],
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "updates": [
+        {
+          "date": "2026-11-09",
+          "label": "처음 발견",
+          "text": "Bloomberg 보도를 인용한 2차 매체들에 따르면 Goldman Sachs가 10월 개정한 내부 지침으로 Claude Code와 GitHub 도구를 엔지니어에게만 허용하고, 대부분의 트레이더·은행원은 쓰지 못하게 했습니다. 퀀트 직군(strats)은 예외로 알려졌습니다."
+        }
+      ]
+    },
+    {
+      "id": "claude-code-settings-local-secrets-2026-11",
+      "categoryLabel": "AI 뉴스",
+      "icon": "📰",
+      "title": "Apiiro, Claude Code 허용 규칙 파일이 공개 GitHub 파일 1,122개에 비밀값을 노출했다고 주장",
+      "summary": "보안업체 Apiiro가 Claude Code의 허용 규칙 파일(.claude/settings.local.json)이 GitHub 저장소에 올라가며 비밀값이 노출된 사례를 1,122개 파일에서 찾았다는 글이 HN에서 화제가 됐습니다(HN 제목 기준 수치).",
+      "description": "Apiiro 원문은 Cloudflare 차단으로 열지 못해 수치·방법은 HN 제목과 댓글로만 확인했습니다. Claude Code 팀의 Boris Cherny라고 밝힌 댓글 작성자는 이 파일이 로컬용이며 Claude가 생성할 때 자동으로 gitignore에 추가하므로 해당 파일들은 수동 생성·커밋된 경우라고 설명하고, 지금까지 비밀값 스크러빙은 하지 않았지만 방지 방안을 검토 중이라고 밝혔습니다(계정 진위는 미확인). 다른 댓글은 '공개'가 아니라 저장소 안에 있을 뿐일 수 있다고 지적했고, 일부는 글이 반복적이라고 비판했습니다.",
+      "why": "허용 규칙에 명령어 전체가 저장될 때 비밀값이 섞일 수 있다는 주장이므로 팀 저장소에서 해당 파일과 시크릿 스캔 설정을 점검할 근거가 됩니다. 다만 규모와 원인은 Apiiro 원문 미확인 상태입니다.",
+      "updatedAgo": "오늘",
+      "tags": [
+        "Claude Code",
+        "보안",
+        "시크릿"
+      ],
+      "ideas": [
+        "저장소에서 .claude/settings.local.json 추적 여부와 GitHub 시크릿 스캔 활성화 확인하기"
+      ],
+      "links": [
+        {
+          "label": "HN 토론",
+          "url": "https://news.ycombinator.com/item?id=50407882"
+        },
+        {
+          "label": "Apiiro 블로그(원문, 접근 차단됨)",
+          "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again"
+        }
+      ],
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "updates": [
+        {
+          "date": "2026-11-09",
+          "label": "처음 발견",
+          "text": "보안업체 Apiiro가 Claude Code의 허용 규칙 파일(.claude/settings.local.json)이 GitHub 저장소에 올라가며 비밀값이 노출된 사례를 1,122개 파일에서 찾았다는 글이 HN에서 화제가 됐습니다(HN 제목 기준 수치)."
+        }
+      ]
+    },
+    {
+      "id": "goodbye-claude-hello-pi-2026-11",
+      "categoryLabel": "AI 뉴스",
+      "icon": "📰",
+      "title": "'Claude Code에서 Pi로 갈아탔다'는 글이 HN 상위·GeekNews에 오름…AGENTS.md·IDE 연동·잦은 변경 불만",
+      "summary": "한 개발자가 Claude Code에서 오픈소스 코딩 하네스 Pi로 옮긴 이유를 정리한 글이 HN 상위에 올랐고 GeekNews에도 올랐습니다. 이유는 AGENTS.md 처리, VS Code 연동 한계, 기능 비대화, 잦은 릴리스(글쓴이 집계 올해 244회) 등입니다.",
+      "description": "수치(릴리스 244회, Bash 도구 설명 약 3천 토큰 등)는 글쓴이 본인의 집계·추정이며 독립 검증은 못 했습니다. HN 댓글은 갈립니다. Pi는 구독 인증 사용 시 약관 위반 위험이 있다는 지적, 위험 행동을 막는 auto 모드가 없다는 지적, 하네스를 직접 통제할 수 있어 좋다는 경험담, 저렴한 모델과 다른 하네스를 쓴다는 사례가 있었습니다. 글쓴이가 불만으로 든 AGENTS.md 지원은 Anthropic이 이후 추가했다고 글에 적혀 있습니다.",
+      "why": "코딩 에이전트 선택에서 모델과 하네스를 분리해 볼 수 있다는 개인 경험담과 그 반론을 한곳에서 볼 수 있습니다. 개인 사례이므로 일반화는 어렵습니다.",
+      "updatedAgo": "오늘",
+      "tags": [
+        "Claude Code",
+        "Pi",
+        "코딩 에이전트"
+      ],
+      "ideas": [
+        "현재 하네스의 시스템 프롬프트·도구 설명 토큰을 직접 측정해 보기"
+      ],
+      "links": [
+        {
+          "label": "HN 토론",
+          "url": "https://news.ycombinator.com/item?id=50410107"
+        },
+        {
+          "label": "GeekNews",
+          "url": "https://news.hada.io/topic?id=36795"
+        },
+        {
+          "label": "원문 블로그",
+          "url": "https://caleb.software/posts/claude-to-pi.html"
+        }
+      ],
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "updates": [
+        {
+          "date": "2026-11-09",
+          "label": "처음 발견",
+          "text": "한 개발자가 Claude Code에서 오픈소스 코딩 하네스 Pi로 옮긴 이유를 정리한 글이 HN 상위에 올랐고 GeekNews에도 올랐습니다. 이유는 AGENTS.md 처리, VS Code 연동 한계, 기능 비대화, 잦은 릴리스(글쓴이 집계 올해 244회) 등입니다."
+        }
+      ]
+    },
+    {
+      "id": "llama-modchip-284b-64gb-2026-11",
+      "categoryLabel": "AI 뉴스",
+      "icon": "📰",
+      "title": "llama-modchip, 284B DeepSeek-V4-Flash를 GPU 없이 64GB RAM에서 돌린다고 주장…극단적 양자화 논쟁",
+      "summary": "llama.cpp 커널 패치·양자화 도구 모음인 llama-modchip이 DeepSeek-V4-Flash(284B)를 약 56.56GiB(1.71bpw)로 줄여 64GB RAM CPU 전용 환경에서 실행한다고 주장합니다. README 수치는 디코드 약 9~10 tok/s(드래프터 사용 시 11.5~14.7)입니다.",
+      "description": "수치는 모두 저장소 자체 보고이며(Ryzen 9 9955HX 기준) 품질 지표는 수정된 체크포인트와의 비교라 원본 대비 품질은 확인되지 않았습니다. HN 댓글은 1비트급 양자화의 품질 저하 우려, 양자화 비트 수가 README에서 불명확하다는 불만, 더 저렴한 구성으로도 비슷하게 돌린다는 경험, llama.cpp 업스트림 PR 적체 문제를 언급했습니다. 일부 모델은 패치된 바이너리가 필요합니다.",
+      "why": "대형 MoE 모델을 로컬 CPU 환경에서 시험할 수 있는 하한이 낮아졌다는 주장이지만, 체감 속도와 품질은 직접 검증이 필요합니다.",
+      "updatedAgo": "오늘",
+      "tags": [
+        "로컬 LLM",
+        "양자화",
+        "DeepSeek"
+      ],
+      "ideas": [
+        "64GB 머신에서 동일 프롬프트로 속도·품질을 저비트 모델과 비교하기"
+      ],
+      "links": [
+        {
+          "label": "HN 토론",
+          "url": "https://news.ycombinator.com/item?id=50411961"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/synchopate/llama-modchip"
+        }
+      ],
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "updates": [
+        {
+          "date": "2026-11-09",
+          "label": "처음 발견",
+          "text": "llama.cpp 커널 패치·양자화 도구 모음인 llama-modchip이 DeepSeek-V4-Flash(284B)를 약 56.56GiB(1.71bpw)로 줄여 64GB RAM CPU 전용 환경에서 실행한다고 주장합니다. README 수치는 디코드 약 9~10 tok/s(드래프터 사용 시 11.5~14.7)입니다."
+        }
+      ]
+    },
     {
       "id": "kimi-k3-1-pro-open-weights-2026-11",
       "categoryLabel": "AI 뉴스",
@@ -7267,6 +7741,97 @@
   ],
   "aiDiscovery": [
     {
+      "id": "synchopate-llama-modchip",
+      "title": "llama-modchip",
+      "summary": "llama.cpp 기반으로 대형 MoE 모델을 CPU 전용·저메모리 환경에서 돌리기 위한 커널 패치·양자화 도구",
+      "discoveryType": "github",
+      "description": "ggml/llama.cpp 커널 패치, 양자화 도구, 런타임 유틸리티 모음입니다. AVX-512 타일링, FlashAttention 변형, n-gram 드래프터 기반 추측 디코딩을 포함하며 Linux x86_64 바이너리·Windows 팩·Apple Silicon 설정을 제공합니다. 라이선스 Apache-2.0, v2.4.0. 일부 모델은 패치된 바이너리가 필요하고 미패치 llama.cpp·Ollama·LM Studio는 해당 형식을 읽지 못한다고 README가 밝힙니다. 직접 실행해 보지는 않았습니다.",
+      "why": "GPU 없이 64GB RAM에서 284B MoE를 실험해 볼 수 있는 구체적 진입점입니다. 디코드 약 9~10 tok/s로 대화형보다 배치형에 가깝고 속도·품질은 자체 보고입니다.",
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "categories": [
+        "Dev Tool",
+        "Automation"
+      ],
+      "signals": [
+        "HN 상위 목록 17위(캐시 기준 386점/172댓글)",
+        "GitHub 스타 538(페이지 확인 시점)"
+      ],
+      "discoveryReason": "HN 상위 노출 후 저장소 README 확인",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/synchopate/llama-modchip"
+        },
+        {
+          "label": "HN",
+          "url": "https://news.ycombinator.com/item?id=50411961"
+        }
+      ],
+      "related": [],
+      "awareness": "EARLY",
+      "trend": "RISING",
+      "newsState": "NEWLY_DISCOVERED"
+    },
+    {
+      "id": "ranxianglei-billion-context",
+      "title": "billion-context",
+      "summary": "코딩 에이전트와 모델 API 사이에서 모델이 직접 컨텍스트를 접고 복원하게 하는 압축 프록시/플러그인",
+      "discoveryType": "github",
+      "description": "프록시가 compress·decompress·search_context·acp_status 도구를 주입해 모델이 메시지 구간을 요약·복원합니다. pi, opencode, claude, codex 등 네이티브 플러그인 또는 `bili <client>` 런처, base URL 변경 방식을 지원하고 `npm install -g billion-context`로 설치합니다. 벤치마크(ContextBench 1위, 5배 적은 토큰 등)는 README 자체 주장입니다. 프록시에 인증이 없어 신뢰 네트워크에서만 쓰라는 경고와, Claude Desktop Code 탭이 프록시를 우회한다는 제한이 있습니다. 직접 설치해 보지는 않았습니다.",
+      "why": "장기 단일 세션에서 컨텍스트 비용을 줄이려는 작업에 적용해 볼 수 있습니다. 인증 없음과 master 브랜치 불안정 경고를 확인해야 합니다.",
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "categories": [
+        "Agent",
+        "Dev Tool"
+      ],
+      "signals": [
+        "GitHub Trending 목록 등장(캐시 11-09)",
+        "스타 5.3k, 포크 413(페이지 확인 시점)"
+      ],
+      "discoveryReason": "GitHub 트렌딩과 README 확인",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/ranxianglei/billion-context"
+        }
+      ],
+      "related": [],
+      "awareness": "SPECIALIZED",
+      "trend": "RISING",
+      "newsState": "NEWLY_DISCOVERED"
+    },
+    {
+      "id": "meta-astryx",
+      "title": "Astryx (Meta)",
+      "summary": "React 19·StyleX 기반으로, 사람과 AI 코딩 에이전트가 같은 문서·CLI로 쓰도록 설계한 오픈소스 디자인 시스템",
+      "discoveryType": "github",
+      "description": "150개 이상의 접근성 컴포넌트, 테마, 다크 모드, 템플릿, CLI를 제공하며 MIT 라이선스입니다. 현재 베타이고 vega·charts 패키지는 canary 태그에서만, lab은 npm 미배포 실험 단계입니다. 설치는 `npm install @astryxdesign/core @astryxdesign/theme-neutral @stylexjs/stylex`. 직접 사용해 보지는 않았고 릴리스 날짜는 확인하지 못했습니다.",
+      "why": "에이전트가 일관된 UI 컴포넌트를 쓰도록 하는 기반으로 검토할 수 있습니다. 베타 상태와 React 19 요구사항이 제약입니다.",
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "categories": [
+        "Dev Tool",
+        "Showcase"
+      ],
+      "signals": [
+        "GitHub Trending 목록 등장(캐시 11-09)",
+        "스타 17.3k, 포크 1.4k(페이지 확인 시점)"
+      ],
+      "discoveryReason": "GitHub 트렌딩과 README 확인",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/meta/astryx"
+        }
+      ],
+      "related": [],
+      "awareness": "SPECIALIZED",
+      "trend": "RISING",
+      "newsState": "NEWLY_DISCOVERED"
+    },
+    {
       "id": "vercel-labs-agent-desktop",
       "title": "agent-desktop (Vercel Labs)",
       "summary": "접근성 트리를 JSON으로 읽어 AI 에이전트가 데스크톱 앱을 조작하게 하는 CLI·C 라이브러리·MCP 서버",
@@ -7996,13 +8561,744 @@
   ],
   "support": [
     {
+      "id": "seocho-startup-station-brand-edu-2026-11",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "🎓",
+      "title": "[서초창업스테이션] 11월 창업 교육 - 초기 스타트업을 위한 브랜드 만들기",
+      "summary": "서초창업스테이션이 (예비)창업자에게 여는 11월 브랜드 만들기 교육으로 11월 9일에 접수가 끝납니다",
+      "description": "서울시 청년몽땅정보통에 모집기간 2026.10.26~11.9와 홈페이지 접수가 게시돼 있고 운영기관 원문 링크가 명시됩니다. 마감 시각은 표기되지 않았습니다.",
+      "deadlineText": "2026.11.09 마감(시각 미표기)",
+      "tags": [
+        "창업교육",
+        "브랜드",
+        "서초구"
+      ],
+      "period": "2026.10.26 ~ 2026.11.09(시각 미표기)",
+      "reward": "교육 프로그램 참여(비용 등 확인 필요)",
+      "participation": "센터 멤버십 회원, (예비)창업자 및 교육 희망자(서초구 거주자·소재 기업 우대)",
+      "preStartup": "가능. (예비)창업자 포함",
+      "employment": "재직자 제한 명시 없음",
+      "businessRegistration": "신청 시 사업자등록 요구 명시 없음",
+      "evaluation": "심사 기준 명시 없음(공식 공고 확인 필요)",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "links": [
+        {
+          "label": "공식 공고",
+          "url": "https://www.xn--2i4bieu3bszgvtc6wlunby2r.com/sub_program/operate_view.php?idx=70"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "deadline": [
+        "2026-11-09"
+      ],
+      "dDay": "오늘 마감"
+    },
+    {
+      "id": "jindo-youth-fishing-village-settlement-2027",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "🐟",
+      "title": "진도군 2027년 청년어촌정착지원사업 모집",
+      "summary": "진도군에 사는 40세 미만 청년어업인과 예정자를 위한 어촌 정착 지원사업입니다",
+      "description": "진도군청 고시 제2026-958호(2026.11.05)와 기업마당에서 접수기간 2026.11.05~11.30이 확인됐습니다. 지원 금액·내용은 이번에 확인하지 못했습니다.",
+      "deadlineText": "2026.11.30 마감",
+      "tags": [
+        "어촌정착",
+        "청년어업인",
+        "진도군"
+      ],
+      "period": "2026.11.05 ~ 2026.11.30",
+      "reward": "지원 내용 확인 필요",
+      "participation": "만 40세 미만, 수산업경영 3년 이하의 진도군 관내 거주 청년어업인 및 예정자(어업·양식·유통·가공·해양레저관광 포함)",
+      "preStartup": "예정자 포함 가능",
+      "employment": "재직자 제한 명시 없음",
+      "businessRegistration": "신청 시 사업자등록 필수 여부 확인 필요",
+      "evaluation": "심사 기준 명시 없음(공식 공고 확인 필요)",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "links": [
+        {
+          "label": "공식 공고",
+          "url": "https://www.jindo.go.kr/home/gosi/general.cs?act=view&notAncmtMgtNo=26376"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "deadline": [
+        "2026-11-30"
+      ],
+      "dDay": "D-21"
+    },
+    {
+      "id": "wando-youth-fishing-village-settlement-2027",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "🐟",
+      "title": "완도군 2027년 청년어촌정착지원 사업자 모집",
+      "summary": "완도군에 사는 청년 어업인과 예정자를 모집하는 어촌 정착 지원사업입니다",
+      "description": "기업마당 공식 목록과 완도군 공고 제2026-1076호에서 신청기간 2026.11.09~12.02가 확인됐습니다. 지원 금액·내용은 이번에 확인하지 못했습니다.",
+      "deadlineText": "2026.12.02 마감",
+      "tags": [
+        "어촌정착",
+        "청년어업인",
+        "완도군"
+      ],
+      "period": "2026.11.09 ~ 2026.12.02",
+      "reward": "지원 내용 확인 필요",
+      "participation": "2027년 기준 만 18세 이상 40세 미만(1987.01.01~2009.12.31 출생), 해당 지역 거주, 수산업 독립경영 3년 이하 또는 예정자",
+      "preStartup": "예정자 포함 가능",
+      "employment": "재직자 제한 명시 없음",
+      "businessRegistration": "신청 시 사업자등록 필수 여부 확인 필요",
+      "evaluation": "심사 기준 명시 없음(공식 공고 확인 필요)",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "links": [
+        {
+          "label": "공식 공고",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127729"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "deadline": [
+        "2026-12-02"
+      ],
+      "dDay": "D-23"
+    },
+    {
+      "id": "chungbuk-youth-farmer-smartfarm-startup-2027",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "🌱",
+      "title": "2027년 충북 청년농업인 스마트팜 창업 지원사업 공모",
+      "summary": "충청북도가 도내 청년농업인과 정착 희망자의 스마트팜 창업을 지원하는 공모입니다",
+      "description": "기업마당 공식 목록에서 접수 2026.11.09~12.31, 충청북도 직접수행이 확인됐습니다. 대상 시군은 제천·보은·옥천·영동·괴산·단양입니다. 지원 금액·내용은 확인하지 못했습니다.",
+      "deadlineText": "2026.12.31 마감",
+      "tags": [
+        "스마트팜",
+        "청년농업인",
+        "충북"
+      ],
+      "period": "2026.11.09 ~ 2026.12.31",
+      "reward": "지원 내용 확인 필요",
+      "participation": "도내 청년농업인 및 정착 희망자, 사업신청년도 기준 19~49세, 대상 6개 시군. 관외 거주자는 선정 후 교부결정 전 전입",
+      "preStartup": "정착 희망자 포함 가능",
+      "employment": "재직자 제한 명시 없음",
+      "businessRegistration": "신청 시 사업자등록 필수 여부 확인 필요",
+      "evaluation": "심사 기준 명시 없음(공식 공고 확인 필요)",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "links": [
+        {
+          "label": "공식 공고",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127669"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "deadline": [
+        "2026-12-31"
+      ],
+      "dDay": "D-52"
+    },
+    {
+      "id": "dangjin-youth-design-improvement-2026",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "🎨",
+      "title": "당진 청년 취·창업 디자인 개선 지원",
+      "summary": "충남산학융합원이 당진시 청년 대표 기업의 제품 디자인 개선 등을 돕는 사업으로 예산이 소진될 때까지 받습니다",
+      "description": "충남산학융합원 제2026-55호 공고와 기업마당에서 신청기간 예산 소진 시까지, 지원 규모 6개사가 확인됐습니다. 사업자등록 필수 여부는 공고에 명시가 없어 확인이 필요하며, 창업 7년 이내 기업과 판매 제품 보유 요건이 있어 기창업자 중심일 수 있습니다.",
+      "deadlineText": "예산 소진 시까지(확정 마감일 없음)",
+      "tags": [
+        "디자인개선",
+        "당진",
+        "청년",
+        "해외판매"
+      ],
+      "period": "예산 소진 시까지",
+      "reward": "6개사 지원(금액·내용 확인 필요)",
+      "participation": "당진시 소재 창업 7년 이내, 공고일 기준 대표자 만 39세 이하, 자체 판매·생산제품 보유 및 Shopee 입점·해외 판매 가능 기업(모든 조건 충족)",
+      "preStartup": "예비창업자 가능 여부 확인 필요(제품 보유 요건 있음)",
+      "employment": "재직자 제한 명시 없음",
+      "businessRegistration": "사업자등록 필수 여부 공고에 명시 없음(확인 필요)",
+      "evaluation": "심사 기준 명시 없음(공식 공고 확인 필요)",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "links": [
+        {
+          "label": "공식 공고",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126349"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "deadline": "예산 소진 시",
+      "dDay": "예산 소진 시"
+    },
+    {
+      "id": "jinju-disabled-family-startup-consulting-2026",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "🤝",
+      "title": "경남 진주시 발달장애인 가족창업 컨설팅",
+      "summary": "장애인기업종합지원센터가 진주시 발달장애인 가족공동 창업기업과 예비창업자를 컨설팅해 주는 사업입니다",
+      "description": "장애인기업종합지원센터 공고 제26-161호에서 2026.8.31부터 예산 소진 시까지 선착순 접수, 지원 규모 10개업체 내외가 확인됐습니다. 실제 잔여 접수 여부는 확인하지 못했습니다.",
+      "deadlineText": "예산 소진 시까지(선착순 마감)",
+      "tags": [
+        "가족창업",
+        "발달장애인",
+        "진주시",
+        "컨설팅"
+      ],
+      "period": "2026.08.31 ~ 예산 소진 시까지(선착순)",
+      "reward": "컨설팅 지원(10개업체 내외, 상세 확인 필요)",
+      "participation": "진주시 지역 발달장애인 가족공동 창업기업, 발달장애인 예비창업자 및 창업특화교육 참여 교육생",
+      "preStartup": "가능. 예비창업자 포함",
+      "employment": "재직자 제한 명시 없음",
+      "businessRegistration": "신청 시 사업자등록 요구 명시 없음(예비창업자 포함)",
+      "evaluation": "심사 기준 명시 없음(공식 공고 확인 필요)",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "links": [
+        {
+          "label": "공식 공고",
+          "url": "https://www.debc.or.kr/cop/bbs/selectBoardArticle.do?bbsId=BIZ_PBANC_BBS&menuNo=311&nttId=90410&pageIndex=3"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "deadline": "예산 소진 시",
+      "dDay": "예산 소진 시"
+    },
+    {
+      "id": "jeonnam-3d-printing-prototype-ip-2026",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "🖨️",
+      "title": "전남 3D프린팅 모형설계·후가공 지원",
+      "summary": "전남테크노파크가 IP창업Zone 수료생의 3D프린팅 시제품 설계·후가공을 돕는 사업입니다",
+      "description": "기업마당 공식 공고에서 사업수행기관 전남테크노파크, 신청기간 예산 소진 시까지가 확인됐습니다. 지원 대상이 2025~2026년 IP창업Zone 수료생 중 IP디딤돌 권리화 지원 수혜자로 좁아 일반 신청은 어렵습니다.",
+      "deadlineText": "예산 소진 시까지(확정 마감일 없음)",
+      "tags": [
+        "3D프린팅",
+        "시제품",
+        "IP",
+        "전남"
+      ],
+      "period": "예산 소진 시까지",
+      "reward": "3D프린팅 모형설계·후가공 지원(상세 확인 필요)",
+      "participation": "2025~2026년 IP창업Zone 수료생 중 IP디딤돌 권리화 지원사업 수혜자(개인·기창업자 등), 출력 가능한 시제품 아이템(일반 피규어 제외)",
+      "preStartup": "수혜자 요건 충족 시 가능(개인 포함)",
+      "employment": "재직자 제한 명시 없음",
+      "businessRegistration": "신청 시 사업자등록 요구 명시 없음(확인 필요)",
+      "evaluation": "심사 기준 명시 없음(공식 공고 확인 필요)",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "links": [
+        {
+          "label": "공식 공고",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121247"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "deadline": "예산 소진 시",
+      "dDay": "예산 소진 시"
+    },
+    {
+      "id": "seoul-startup-hub-mplus-second-half-2026",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "🏢",
+      "title": "(하반기) 2026년 서울창업허브 M+ 입주기업 모집",
+      "summary": "서울경제진흥원이 예비창업자와 스타트업을 받는 서울창업허브 M+ 하반기 입주 모집입니다",
+      "description": "스타트업플러스 공식 페이지에서 접수기간 2026-11-02 09:00~2026-11-14 00:00, 사업대상 예비창업자·스타트업, 기관 서울경제진흥원이 확인됐습니다. 종료 시각이 11월 14일 0시라 실제 마지막 접수일은 11월 13일입니다.",
+      "deadlineText": "2026.11.14 00:00 마감(마지막 접수일 11.13)",
+      "tags": [
+        "입주",
+        "서울창업허브",
+        "예비창업자"
+      ],
+      "period": "2026.11.02 09:00 ~ 2026.11.14 00:00",
+      "reward": "입주 공간 등(상세 확인 필요)",
+      "participation": "예비창업자, 스타트업",
+      "preStartup": "가능. 예비창업자 포함",
+      "employment": "재직자 제한 명시 없음",
+      "businessRegistration": "사업자등록 필수 여부 확인 필요(예비창업자 포함이라 신청 시 필수는 아님)",
+      "evaluation": "심사 기준 명시 없음(공식 공고 확인 필요)",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "links": [
+        {
+          "label": "공식 공고",
+          "url": "https://mplus.startup-plus.kr/project/PRJ007682"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "deadline": [
+        "2026-11-13"
+      ],
+      "dDay": "D-4"
+    },
+    {
+      "id": "intops-accelerating-6th-2026",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "🚀",
+      "title": "인탑스 액셀러레이팅 6기",
+      "summary": "인탑스(페이퍼프로그램)가 프로토타입 이상 제품 개발 기업을 받는 액셀러레이팅 6기입니다",
+      "description": "주최 페이지에서 모집기간 2026.10.19~11.22와 지원 자격이 확인됐습니다. 사업자등록 필수 여부와 지원 내용은 확인하지 못했습니다.",
+      "deadlineText": "2026.11.22 마감",
+      "tags": [
+        "액셀러레이팅",
+        "인탑스",
+        "프로토타입"
+      ],
+      "period": "2026.10.19 ~ 2026.11.22",
+      "reward": "지원 내용 확인 필요",
+      "participation": "국내외 중소벤처기업 / 엔젤 이상의 투자 유치 기업 / 프로토타입 이상의 제품 개발 기업",
+      "preStartup": "예비창업자 가능 여부 확인 필요",
+      "employment": "재직자 제한 명시 없음",
+      "businessRegistration": "사업자등록 필수 여부 확인 필요(중소벤처기업 대상 표기)",
+      "evaluation": "심사 기준 명시 없음(공식 공고 확인 필요)",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "links": [
+        {
+          "label": "공식 공고",
+          "url": "https://paperprogram.imweb.me/apply-accelerating"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "deadline": [
+        "2026-11-22"
+      ],
+      "dDay": "D-13"
+    },
+    {
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "status": "OPEN",
+      "id": "nest-gvalley-4th-2026",
+      "icon": "🏢",
+      "title": "NEST G밸리 4기 입주기업 모집",
+      "summary": "창업 4년 이내 스타트업과 예비창업자가 구로 G밸리 독립 사무공간과 보증·투자 연계를 지원받는 입주 모집입니다",
+      "description": "K-Startup에 게시된 신용보증기금 스케일업금융센터 공고로 접수기간과 대상을 확인했습니다. 신보 On-Biz 온라인 접수입니다.",
+      "deadline": [
+        "2026-11-20"
+      ],
+      "deadlineText": "2026.11.20(금) 14:00",
+      "tags": [
+        "입주",
+        "예비창업자",
+        "보증",
+        "구로"
+      ],
+      "period": "2026.11.06(금) 10:00~11.20(금) 14:00",
+      "reward": "독립형 사무공간(6~8평, 6인실·8인실 각 1개), 맞춤 보증상품, VC 투자 연계, 컨설팅·데모데이. 입회비 100만원(VAT 별도, 6개월 기준)",
+      "participation": "창업 4년 이내 혁신 스타트업(예비창업자 포함). 정부·지자체 창업공간 지원을 현재 받는 기업과 신보 NEST Space·창업드림센터 입주 이력 기업은 제외",
+      "preStartup": "가능. 예비창업자 신청 가능",
+      "businessRegistration": "사업자등록증은 예비창업자를 제외하고 제출",
+      "evaluation": "1차 서류심사(필요 시 현장실사), 2차 발표평가",
+      "ideas": [
+        "입주 신청용 사업계획서에 보증 활용 계획 넣기",
+        "구로 G밸리 기업과의 협업 아이디어 정리"
+      ],
+      "links": [
+        {
+          "label": "K-Startup 공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179733"
+        }
+      ],
+      "categoryLabel": "창업 · 지원사업",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "employment": "재직자 제한 명시 없음",
+      "dDay": "D-11"
+    },
+    {
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "status": "OPEN",
+      "id": "itp-one-person-creative-center-2027h1-1st",
+      "icon": "💼",
+      "title": "2027 1인 창조기업 지원센터 상반기 신규 입주기업 1차 모집(인천)",
+      "summary": "인천 제물포스마트타운에서 예비창업자도 월 5만5천원에 공유형 사무공간을 쓰는 입주 모집입니다",
+      "description": "K-Startup에 게시된 인천테크노파크 공고로 접수기간, 대상, 비용을 확인했습니다. 이메일 접수이며 건강보험 직장가입자는 제외됩니다.",
+      "deadline": [
+        "2026-12-04"
+      ],
+      "deadlineText": "2026.12.04(금) 18:00",
+      "tags": [
+        "입주",
+        "예비창업자",
+        "인천",
+        "1인 창조기업"
+      ],
+      "period": "2026.11.06~12.04 18:00(세부 일정에는 접수 11.09 시작 표기)",
+      "reward": "공유형 사무공간(전용 책상·의자·사물함), 회의실, 교육·멘토링, 마케팅·지재권·시제품 지원. 월 55,000원, 입주 2027.01.01~12.31(최대 36개월 연장 가능), 약 10개사",
+      "participation": "대학생·일반인·1인 창조기업. 예비창업자 또는 업력 7년 미만. 건강보험 직장가입자(피보험자)는 제외",
+      "preStartup": "가능. 예비창업자는 사실증명원 제출",
+      "employment": "건강보험 직장가입자는 제외(재직자 제한에 해당할 수 있음)",
+      "businessRegistration": "기존 사업자는 사업자등록증, 예비창업자는 사실증명원 제출",
+      "evaluation": "서류심사 2026.12.10, 결과 12.11(변동 가능)",
+      "ideas": [
+        "1인 창업 아이템의 시제품 제작 지원 활용 계획 세우기",
+        "입주 후 인천 지역 기업과의 협업 후보 정리"
+      ],
+      "links": [
+        {
+          "label": "K-Startup 공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179748"
+        }
+      ],
+      "categoryLabel": "창업 · 지원사업",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "dDay": "D-25"
+    },
+    {
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "status": "OPEN",
+      "id": "svc-seoul-membership-expansion-2026",
+      "icon": "🌏",
+      "title": "2026 SVC Seoul 멤버십(확장형) 모집",
+      "summary": "글로벌 진출을 원하는 창업기업과 일부 예비창업자가 공유좌석과 IR 공간, 자문 바우처를 쓰는 멤버십입니다",
+      "description": "K-Startup에 게시된 창업진흥원 공고(제2026-63호)로 접수기간과 대상을 확인했습니다. 예비창업자는 예비창업패키지 또는 재도전성공패키지 협약 체결자만 신청할 수 있어 조건부입니다. 영문판 공고(Global)는 같은 사업이라 별도 항목으로 만들지 않았습니다.",
+      "deadline": [
+        "2026-12-11"
+      ],
+      "deadlineText": "2026.12.11(금) 17:00",
+      "tags": [
+        "글로벌",
+        "멤버십",
+        "공유좌석",
+        "IR"
+      ],
+      "period": "2026.08.06(목) 17:00~12.11(금) 17:00",
+      "reward": "공유좌석(월 120시간)·회의실·IR 공간, 자문 바우처, 글로벌 투자역량 강화·IR 기회. 이용요금 월 35만원, 최소 3개월",
+      "participation": "글로벌 진출 희망 창업기업(업력 7년 이내, 신산업 분야 중소기업 10년까지)과 예비창업자(2026 예비창업패키지·재도전성공패키지 협약 체결자에 한함)",
+      "preStartup": "조건부 가능. 예비창업패키지 또는 재도전성공패키지 협약 체결 예비창업자만",
+      "businessRegistration": "사업자등록 필수 여부는 공고에 명시 없음(확인 필요)",
+      "evaluation": "평가 방식 명시 없음(공고문 확인 필요)",
+      "ideas": [
+        "해외 투자자 대상 IR 자료 준비",
+        "글로벌 진출 계획에 맞춘 자문 바우처 활용안 작성"
+      ],
+      "links": [
+        {
+          "label": "K-Startup 공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178802"
+        }
+      ],
+      "categoryLabel": "창업 · 지원사업",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "employment": "재직자 제한 명시 없음",
+      "dDay": "D-32"
+    },
+    {
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "status": "OPEN",
+      "id": "seoul-north-women-startup-academy-4th-2026",
+      "icon": "🎓",
+      "title": "2026 제4차 북부창업아카데미 및 북부창업멘토링 DAY(여성 예비창업자)",
+      "summary": "정부지원사업 합격 전략을 다루는 무료 교육과 1:1 사업계획서 멘토링으로, 여성 (예비)창업자가 대상입니다",
+      "description": "K-Startup에 게시된 서울시북부여성발전센터 공고로 일정과 신청 방법을 확인했습니다. 대상이 여성으로 제한된 조건을 그대로 기록했습니다.",
+      "deadline": [
+        "2026-11-18"
+      ],
+      "deadlineText": "2026.11.18(수) 17:00",
+      "tags": [
+        "창업교육",
+        "멘토링",
+        "예비창업자",
+        "여성"
+      ],
+      "period": "접수 2026.11.06 09:00~11.18 17:00, 교육 11.25(수) 14:00~17:00, 멘토링 12.02 또는 12.08",
+      "reward": "교육(선착순 30명)과 멘토링 모두 무료. 사업계획서 제출자 중 4명에게 1:1 멘토링 2회",
+      "participation": "정부지원사업 지원(예정) 여성 (예비)창업자, 만 20세 이상, 업력 3년 미만 포함. 남성은 제외. 지역 제한 전국",
+      "preStartup": "가능. 예비창업자 대상",
+      "businessRegistration": "공고에 사업자등록 요건 명시 없음",
+      "evaluation": "멘토링은 11.18까지 낸 사업계획서로 4명 선발, 11.26 개별 연락",
+      "ideas": [
+        "2027 정부지원사업 지원용 사업계획서 초안 작성",
+        "교육 후 멘토링 신청용 계획서 제출"
+      ],
+      "links": [
+        {
+          "label": "K-Startup 공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179741"
+        }
+      ],
+      "categoryLabel": "창업 · 지원사업",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "employment": "재직자 제한 명시 없음",
+      "dDay": "D-9"
+    },
+    {
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "status": "OPEN",
+      "id": "kac-startup-incubator-2027",
+      "icon": "✈️",
+      "title": "한국공항공사 창업보육센터 입주기업 모집(서울 강서)",
+      "summary": "예비창업자와 창업 3년 미만 기업이 월세 없이 1년 입주하는 공항 인근 보육센터 모집입니다",
+      "description": "K-Startup에 게시된 한국공항공사 공고로 접수기간, 대상, 비용을 확인했습니다. 제출서류에 사업자등록증이 있어 예비창업자의 등록 요건은 확인이 필요합니다.",
+      "deadline": [
+        "2026-11-26"
+      ],
+      "deadlineText": "2026.11.26(목) 23:59",
+      "tags": [
+        "입주",
+        "예비창업자",
+        "무료",
+        "강서"
+      ],
+      "period": "2026.11.09(월) 08:00~11.26(목) 23:59",
+      "reward": "사무공간(약 30㎡), 회의실·라운지. 임대료 0원, 입주 1년(심사 연장 최대 3년). 개별 3실·공유 2실",
+      "participation": "예비창업자 또는 창업 3년 미만 초기 창업가. 개인·일반기업·1인 창조기업 포함",
+      "preStartup": "가능. 예비창업자 명시",
+      "businessRegistration": "사업자등록 요건 명시 없음. 제출서류에 사업자등록증 포함(예비창업자 처리 확인 필요)",
+      "evaluation": "서류심사(모집 2배수), 대면 발표, 최종 선정",
+      "ideas": [
+        "공항·항공 분야 서비스 아이템을 사업계획서로 정리",
+        "입주 후 공항 이용객 대상 시범 서비스 구상"
+      ],
+      "links": [
+        {
+          "label": "K-Startup 공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179731"
+        }
+      ],
+      "categoryLabel": "창업 · 지원사업",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "employment": "재직자 제한 명시 없음",
+      "dDay": "D-17"
+    },
+    {
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "status": "OPEN",
+      "id": "incheon-tourism-biz-center-2027",
+      "icon": "🧳",
+      "title": "2027 인천관광기업지원센터 입주기업 모집",
+      "summary": "인천 관광 분야 예비창업자와 업력 7년 이내 기업이 연수구 IBS타워에 입주하는 모집입니다",
+      "description": "K-Startup에 게시된 인천관광공사 공고(제2026-174호)로 접수기간과 대상을 확인했습니다. 이메일 접수이며 사무공간은 월 임대료가 있습니다.",
+      "deadline": [
+        "2026-11-25"
+      ],
+      "deadlineText": "2026.11.25(수) 18:00",
+      "tags": [
+        "입주",
+        "관광",
+        "예비창업자",
+        "인천"
+      ],
+      "period": "2026.11.05(목) 14:00~11.25(수) 18:00",
+      "reward": "사무공간·교육·컨설팅·네트워킹. 입주 2027.01.01~12.31, 공유형 월 약 60,800원부터(공고 확인 필요)",
+      "participation": "관광 분야 예비창업자, 업력 7년 이내 개인·법인사업자. 다른 정부 지원 보육센터 입주 기업은 제외. 인천 소재",
+      "preStartup": "가능. 예비창업자 명시",
+      "businessRegistration": "예비창업자 별도 등록 요건 명시 없음",
+      "evaluation": "서류심사 후 발표심사",
+      "ideas": [
+        "인천 관광 연계 서비스 아이템 사업계획서 작성",
+        "입주 후 지역 관광업계 협업 후보 정리"
+      ],
+      "links": [
+        {
+          "label": "K-Startup 공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179738"
+        }
+      ],
+      "categoryLabel": "창업 · 지원사업",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "employment": "재직자 제한 명시 없음",
+      "dDay": "D-16"
+    },
+    {
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "status": "OPEN",
+      "id": "goyang-print-culture-hub-2027",
+      "icon": "🖨️",
+      "title": "2027 고양인쇄문화허브센터 입주기업 모집",
+      "summary": "고양 인쇄·디자인 분야 소공인과 예비창업자가 무료로 입주하는 모집으로 3개사 내외를 뽑습니다",
+      "description": "K-Startup에 게시된 경기대진테크노파크 공고로 접수기간, 대상, 비용을 확인했습니다. 예비창업자는 입주 후 1개월 이내 사업자등록이 필요합니다.",
+      "deadline": [
+        "2026-11-23"
+      ],
+      "deadlineText": "2026.11.23(월) 23:59",
+      "tags": [
+        "입주",
+        "인쇄",
+        "디자인",
+        "고양"
+      ],
+      "period": "2026.11.05(목) 11:00~11.23(월) 23:59",
+      "reward": "1인석 사무공간, 회의실·미니스튜디오, 시제품 공동장비, 교육. 입주비용 없음, 입주 2027.01.01~12.31, 3개사 내외",
+      "participation": "고양시 인쇄·디자인 등 관련 분야 소공인 또는 예비창업자. 중견기업 이상·채무불이행 규제자·세금 체납자 제외",
+      "preStartup": "가능. 예비창업자 신청 가능(사실증명서 제출 시 가점 1점)",
+      "businessRegistration": "협약 후 사업자등록 필수, 예비창업자는 입주 후 1개월 이내 등록(선정 후 요건)",
+      "evaluation": "서류 미비 시 평가 제외, 세부 기준은 공고문 확인 필요",
+      "ideas": [
+        "인쇄·굿즈 분야 사업 아이템 정리",
+        "공동장비로 만들 시제품 계획 작성"
+      ],
+      "links": [
+        {
+          "label": "K-Startup 공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179729"
+        }
+      ],
+      "categoryLabel": "창업 · 지원사업",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "employment": "재직자 제한 명시 없음",
+      "dDay": "D-14"
+    },
+    {
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "status": "OPEN",
+      "id": "yongin-startup-center-fifth-biohealth-2026",
+      "icon": "🧬",
+      "title": "용인시산업진흥원 2026년 제5차 창업지원센터 입주기업 모집(바이오헬스)",
+      "summary": "바이오헬스 분야 예비창업자와 업력 7년 미만 기업이 용인 동백 창업지원센터에 입주하는 모집입니다",
+      "description": "K-Startup에 게시된 용인시산업진흥원 공고(제2026-181호)로 접수기간과 조건을 확인했습니다. 온라인 접수이며 바이오헬스 외 업종은 신청할 수 없습니다.",
+      "deadline": [
+        "2026-11-25"
+      ],
+      "deadlineText": "2026.11.25(수) 16:00",
+      "tags": [
+        "입주",
+        "바이오헬스",
+        "예비창업자",
+        "용인"
+      ],
+      "period": "2026.11.05(목) 00:00~11.25(수) 16:00",
+      "reward": "입주공간(6호 월 481,800원, 10호 월 446,600원), 공용시설·장비, 액셀러레이팅. 입주 2027.11.30까지, 연장 최대 4회",
+      "participation": "사업 개시 7년 미만 기업과 예비창업자, 바이오헬스 분야만. 도소매·음식·유통업 등 제외. 연령 제한 없음",
+      "preStartup": "가능. 예비창업자는 사실증명 제출",
+      "businessRegistration": "기존 사업자는 사업자등록증·중소기업확인서, 예비창업자는 사실증명 제출",
+      "evaluation": "평가에 용인시 관내 성장계획 포함, 세부 기준은 공고문 확인 필요",
+      "ideas": [
+        "바이오헬스 아이템의 용인 내 성장계획 작성",
+        "입주 후 액셀러레이팅 프로그램 활용 계획 정리"
+      ],
+      "links": [
+        {
+          "label": "K-Startup 공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179740"
+        }
+      ],
+      "categoryLabel": "창업 · 지원사업",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "employment": "재직자 제한 명시 없음",
+      "dDay": "D-16"
+    },
+    {
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "status": "OPEN",
+      "id": "nowon-youth-shop-3-4-founders-2026",
+      "icon": "🏪",
+      "title": "노원 청년가게 3호점·4호점 청년창업자 모집",
+      "summary": "노원구가 청년가게 두 곳에 입점할 청년창업자를 한 팀씩 뽑는 모집입니다",
+      "description": "노원구청 공식 공지 페이지에서 제목과 접수 마감을 확인했습니다. 대상·조건·지원 내용은 첨부 공고문 PDF에 있어 읽지 못했고, 연령은 구청 메인 안내문에서 만 19~39세로 확인했습니다. 마감이 가까워 사실 확인된 범위만 적었습니다.",
+      "deadline": [
+        "2026-11-10"
+      ],
+      "deadlineText": "2026.11.10(화) 18:00",
+      "tags": [
+        "노원구",
+        "청년창업",
+        "점포",
+        "만 19~39세"
+      ],
+      "period": "2026.10.21(수)~11.10(화) 18:00",
+      "reward": "공지 본문에 명시 없음(첨부 공고문 확인 필요)",
+      "participation": "구청 안내문 기준 만 19~39세 청년, 3호점·4호점 각 1명 또는 1팀. 거주 요건은 확인 필요",
+      "preStartup": "확인 필요",
+      "businessRegistration": "확인 필요(공고문 첨부)",
+      "evaluation": "확인 필요",
+      "ideas": [
+        "공고문 PDF에서 거주·사업자등록 조건 확인",
+        "운영 아이템 계획서 준비"
+      ],
+      "links": [
+        {
+          "label": "노원구청 공고",
+          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1003&q_bbscttSn=20261020144915274&q_estnColumn7=&q_estnColumn1=11&q_ntceSiteCode=11&q_clCode=0&q_rowPerPage=10&q_currPage=1"
+        }
+      ],
+      "categoryLabel": "창업 · 지원사업",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "employment": "재직자 제한 명시 없음",
+      "dDay": "D-1"
+    },
+    {
+      "firstSeenDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
+      "lastVerifiedDate": "2026-11-09",
+      "status": "OPEN",
+      "id": "nowon-youth-popup-store-summer-2027",
+      "icon": "🛍️",
+      "title": "노원구 청년 팝업스토어 하계점 신규 운영자 모집(2027)",
+      "summary": "노원구 청년이 월세·간판제작·창업교육 지원을 받아 팝업스토어를 운영하는 모집입니다",
+      "description": "노원구청 공식 공지 페이지에서 제목을 확인했습니다. 세부 조건은 첨부 공고문에 있어 읽지 못했고, 연령과 지원 항목은 구청 메인 안내문 기준입니다.",
+      "deadline": [
+        "2026-11-11"
+      ],
+      "deadlineText": "2026.11.11(수)",
+      "tags": [
+        "노원구",
+        "청년",
+        "팝업스토어",
+        "월세 지원"
+      ],
+      "period": "2026.10.20(화)~11.11(수)(마감 시각 확인 필요)",
+      "reward": "구청 안내문 기준 월세·간판제작·창업교육 지원(금액 확인 필요)",
+      "participation": "구청 안내문 기준 만 19~39세 청년. 거주 요건은 확인 필요",
+      "preStartup": "확인 필요",
+      "businessRegistration": "확인 필요(공고문 첨부)",
+      "evaluation": "확인 필요",
+      "ideas": [
+        "공고문 PDF에서 사업자등록·거주 조건 확인",
+        "판매 아이템과 운영 계획 정리"
+      ],
+      "links": [
+        {
+          "label": "노원구청 공고",
+          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1003&q_bbscttSn=20261020154610517&q_estnColumn1=11&q_ntceSiteCode=11&q_clCode=0"
+        }
+      ],
+      "categoryLabel": "창업 · 지원사업",
+      "aiSupport": "AI 도구·크레딧 지원 명시 없음",
+      "employment": "재직자 제한 명시 없음",
+      "dDay": "D-2"
+    },
+    {
       "id": "korealbs-location-info-consulting-2026",
       "categoryLabel": "창업 · 지원사업",
       "icon": "📍",
       "title": "2026 위치정보 맞춤형 컨설팅 참여기업 모집",
       "summary": "위치정보 분야 (예비)창업자와 중소사업자에게 무료 전문가 컨설팅과 투자자 미팅을 해 주는 프로그램입니다",
       "description": "KISA 공식 공지에서 신청 대상과 상시 접수가 확인됐습니다. 고정 마감일은 공식에서 확인되지 않았습니다.",
-      "dDay": "D-24",
+      "dDay": "상시",
       "deadlineText": "상시(모음 사이트 11.30)",
       "tags": [
         "위치정보",
@@ -8041,7 +9337,7 @@
       "title": "서울 앵커 지역현안문제해결 로컬크리에이터 발굴기초 캠프",
       "summary": "서울시립대 창업지원단이 여는 로컬 창업 입문 캠프로, 지역 현안 해결 아이디어를 겨룹니다",
       "description": "운영 접수 사이트와 행사 등록 페이지에서 신청 마감 11.15 23:55가 확인됐습니다. 운영 사이트 본문은 이미지 중심이라 날짜는 행사 등록 정보와 교차 확인했습니다.",
-      "dDay": "D-9",
+      "dDay": "D-6",
       "deadlineText": "11.15 23:55",
       "tags": [
         "로컬창업",
@@ -8049,9 +9345,9 @@
         "누구나",
         "서울"
       ],
-      "period": "신청 ~ 11.15 23:55 / 캠프 11.28~11.29",
+      "period": "신청 2026.10.27 ~ 11.15 / 결과 안내 11.17 / 캠프 12.05~12.06(11.28~29에서 변경, 서울시립대 창의혁신관)",
       "reward": "총상금 200만원 · 1위 100만원(모음 사이트 기준)",
-      "participation": "로컬창업에 관심 있는 누구나(소속·창업 경험 무관), 11.28~29 양일 참여 가능자",
+      "participation": "로컬창업에 관심 있는 누구나(소속·창업 경험 무관), 1인 구성 신청 가능(30명), 12.05~06 양일 참여 가능자",
       "preStartup": "가능. 소속·창업 경험 무관",
       "employment": "재직자 제한 명시 없음",
       "businessRegistration": "사업자등록 요구 명시 없음",
@@ -8069,8 +9365,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-15"
       ]
@@ -8082,7 +9378,7 @@
       "title": "2026년 삼육대학교 창업보육센터 입주기업 모집 공고",
       "summary": "삼육대 창업보육센터에 입주할 예비창업자·창업 7년 이내 기업 모집(입주 후 주사업장을 센터로 이전)",
       "description": "신청 기간은 11/04 00:00 ~ 11/15 23:59입니다. 예비창업자도 신청할 수 있고, 입주 후에는 주사업장 주소를 센터로 옮겨야 합니다. 기관 자체 최신 글은 확인하지 못해 K-Startup 게시와 벤처스퀘어 재게시를 대조했습니다.",
-      "dDay": "D-9",
+      "dDay": "D-6",
       "deadlineText": "11.15 23:59",
       "tags": [
         "예비창업자",
@@ -8091,7 +9387,7 @@
         "창업보육"
       ],
       "period": "2026.11.04 00:00 ~ 11.15 23:59",
-      "reward": "입주 공간·창업보육 지원 (세부 보육료·지원 범위는 공고문 확인)",
+      "reward": "입주 공간(세미나실·회의실 등 부대시설)·네트워킹·교육·사업화 지원. 입주 비용: 보육료 연 4,752,000원(30㎡ 1실 기준), 관리비 월 6만원, 입주 1년(매년 평가 후 연장)",
       "participation": "예비창업자 또는 창업 7년 이내 기업",
       "preStartup": "가능. 예비창업자도 신청 대상",
       "employment": "명시 없음",
@@ -8110,8 +9406,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-15"
       ]
@@ -8149,13 +9445,14 @@
           "url": "https://www.bizinfo.go.kr/biz/bizb/selectBIZB200Detail.do?condition=&cpage=1&keyword=&mvnEntrprsRcritPblancId=MVNP_000000000000732&rows=10"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-06"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "chungbuk-promaker-ai-manufacturing-startup-edu-2026",
@@ -8191,13 +9488,14 @@
           "url": "https://cbpm.cbnu.ac.kr/notice/notice/?mod=document&uid=1258"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-06"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "incheon-middle-aged-tech-startup-center-4th-2026",
@@ -8233,13 +9531,14 @@
           "url": "https://www.incheon.go.kr/jobs/main/support/business/view.do?plcy_sprt_sn=5728"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-06"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "business-plan-practical-startup-edu-2026",
@@ -8273,13 +9572,14 @@
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179628&schM=view"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-06"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "asan-startup-scale-up-2026",
@@ -8288,7 +9588,7 @@
       "title": "2026 아산 스타트업 Scale-UP 프로그램 참여기업 모집",
       "summary": "아산 스타트업의 성장(Scale-UP)을 돕는 프로그램 참여기업 모집",
       "description": "K-Startup 하이라이트 목록의 제목만 확인했습니다. 접수 기간·대상·지원 내용은 읽지 못했으므로 공고문 확인이 필요합니다.",
-      "dDay": "마감일 확인 필요",
+      "dDay": "마감 확인 필요",
       "deadlineText": "마감 확인 필요",
       "tags": [
         "아산",
@@ -8326,7 +9626,7 @@
       "title": "2026 아산 투자유치 Build-Up 프로그램 참여기업 모집",
       "summary": "아산 스타트업의 투자유치(Build-Up)를 돕는 프로그램 참여기업 모집",
       "description": "K-Startup 하이라이트 목록의 제목만 확인했습니다. 접수 기간·대상·지원 내용은 읽지 못했으므로 공고문 확인이 필요합니다.",
-      "dDay": "마감일 확인 필요",
+      "dDay": "마감 확인 필요",
       "deadlineText": "마감 확인 필요",
       "tags": [
         "아산",
@@ -8364,7 +9664,7 @@
       "title": "트레일 신산업 로컬창업지원 참여기업 모집",
       "summary": "트레일을 소재로 한 신산업 로컬창업 지원 참여기업 모집",
       "description": "Grantly 목록 제목만 확인했습니다. 접수 기간·대상·지원 내용은 읽지 못했으므로 공고 확인이 필요합니다.",
-      "dDay": "마감일 확인 필요",
+      "dDay": "마감 확인 필요",
       "deadlineText": "마감 확인 필요",
       "tags": [
         "로컬창업",
@@ -8428,13 +9728,14 @@
           "url": "https://hub.kaia.re.kr/organSupportHub.do/view?orgKind=ORG_KIND_2&rltdId=95259"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-06"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "jeonnam-gwangju-regional-resource-youth-startup-3",
@@ -8443,7 +9744,7 @@
       "title": "전남광주 제3기 지역자원 연계 청년창업 연장",
       "summary": "전남정보문화산업진흥원의 전남광주 제3기 지역자원 연계 청년창업 연장 — 대상: 청년 지역창업 예비창업자 또는 창업 7년 이내(19~45세, 13개 군 창업·이전)",
       "description": "전남정보문화산업진흥원 공고입니다. 대상은 청년 지역창업 예비창업자 또는 창업 7년 이내(19~45세, 13개 군 창업·이전)이며 마감은 11.12입니다.",
-      "dDay": "D-6",
+      "dDay": "D-3",
       "deadlineText": "11.12",
       "tags": [
         "청년창업",
@@ -8471,7 +9772,7 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-06",
       "deadline": [
         "2026-11-12"
@@ -8484,7 +9785,7 @@
       "title": "2027 청년쿡 푸드테크센터",
       "summary": "서울시·청년쿡푸드테크센터의 2027 청년쿡 푸드테크센터 — 대상: 만 19~39세 식품테크 기창업자, 서울 소재 또는 이전 기업",
       "description": "서울시·청년쿡푸드테크센터 공고입니다. 대상은 만 19~39세 식품테크 기창업자, 서울 소재 또는 이전 기업이며 마감은 11.20입니다.",
-      "dDay": "D-14",
+      "dDay": "D-11",
       "deadlineText": "11.20",
       "tags": [
         "푸드테크",
@@ -8492,8 +9793,8 @@
         "서울",
         "입주"
       ],
-      "period": "마감 11.20 (시작일 명시 없음)",
-      "reward": "지원 내용 세부는 이번 수집에서 확인하지 못함(공고문 확인 필요)",
+      "period": "신청 2026.11.02 ~ 11.20",
+      "reward": "인큐베이팅(초기사업화자금, 멘토링, 연구개발 지원) 및 오픈라운지·오픈키친·회의실 등 공간 지원, 선정 시 센터 내 주소지 이전 지원 가능",
       "participation": "만 19~39세 식품테크 기창업자, 서울 소재 또는 이전 기업",
       "preStartup": "예비창업자 가능 여부 확인 필요",
       "employment": "명시 없음",
@@ -8512,8 +9813,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-20"
       ]
@@ -8525,7 +9826,7 @@
       "title": "2027 청년쿡 비즈니스센터",
       "summary": "서울시·청년쿡비즈니스센터의 2027 청년쿡 비즈니스센터 — 대상: 만 19~39세 식품제조 예비·기창업자 (입주 조건 별도)",
       "description": "서울시·청년쿡비즈니스센터 공고입니다. 대상은 만 19~39세 식품제조 예비·기창업자 (입주 조건 별도)이며 마감은 11.20입니다.",
-      "dDay": "D-14",
+      "dDay": "D-11",
       "deadlineText": "11.20",
       "tags": [
         "식품제조",
@@ -8533,8 +9834,8 @@
         "서울",
         "예비창업자"
       ],
-      "period": "마감 11.20 (시작일 명시 없음)",
-      "reward": "지원 내용 세부는 이번 수집에서 확인하지 못함(공고문 확인 필요)",
+      "period": "신청 2026.11.02 ~ 11.20",
+      "reward": "기업당 센터 1석 공간·시설 및 인큐베이팅(사업화 자금 최대 100만원, 보육 프로그램)",
       "participation": "만 19~39세 식품제조 예비·기창업자 (입주 조건 별도)",
       "preStartup": "가능. 예비창업자 대상",
       "employment": "명시 없음",
@@ -8553,8 +9854,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-20"
       ]
@@ -8566,7 +9867,7 @@
       "title": "서울 키친인큐베이터 25·13기",
       "summary": "서울경제진흥원의 서울 키친인큐베이터 25·13기 — 대상: 서울 소재 창업 7년 이내 F&B 예비·기창업자",
       "description": "서울경제진흥원 공고입니다. 대상은 서울 소재 창업 7년 이내 F&B 예비·기창업자이며 마감은 11.26입니다.",
-      "dDay": "D-20",
+      "dDay": "D-17",
       "deadlineText": "11.26",
       "tags": [
         "F&B",
@@ -8607,7 +9908,7 @@
       "title": "대전 딥테크 스튜디오 플러스",
       "summary": "대전창조경제혁신센터의 대전 딥테크 스튜디오 플러스 — 대상: 공공기술 이전 예정 프로젝트 Pool 소속 예비창업자 또는 창업 7년 이내(신산업 10년)",
       "description": "대전창조경제혁신센터 공고입니다. 대상은 공공기술 이전 예정 프로젝트 Pool 소속 예비창업자 또는 창업 7년 이내(신산업 10년)이며 마감은 12.11입니다.",
-      "dDay": "D-35",
+      "dDay": "D-32",
       "deadlineText": "12.11",
       "tags": [
         "딥테크",
@@ -8648,7 +9949,7 @@
       "title": "구미 문화로 창업지원",
       "summary": "구미시의 구미 문화로 창업지원 — 대상: 문화로 자율상권 입점 창업 희망 청년·신중년(예비 포함)",
       "description": "구미시 공고입니다. 대상은 문화로 자율상권 입점 창업 희망 청년·신중년(예비 포함)이며 마감은 11.11입니다.",
-      "dDay": "D-5",
+      "dDay": "D-2",
       "deadlineText": "11.11",
       "tags": [
         "로컬창업",
@@ -8657,8 +9958,8 @@
         "신중년",
         "상권"
       ],
-      "period": "마감 11.11 (시작일 명시 없음)",
-      "reward": "지원 내용 세부는 이번 수집에서 확인하지 못함(공고문 확인 필요)",
+      "period": "신청 2026.11.02 ~ 11.11",
+      "reward": "교육, 컨설팅, 사업화 자금(최대 5천만원 이하) 지원",
       "participation": "문화로 자율상권 입점 창업 희망 청년·신중년(예비 포함)",
       "preStartup": "가능. 예비창업자 포함",
       "employment": "명시 없음",
@@ -8677,8 +9978,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-11"
       ]
@@ -8690,7 +9991,7 @@
       "title": "대구 창업도시 조성 프로젝트 (의료바이오)",
       "summary": "대구경북첨단의료산업진흥재단의 대구 창업도시 조성 프로젝트 (의료바이오) — 대상: 대구 의료바이오 예비창업자 및 창업기업",
       "description": "대구경북첨단의료산업진흥재단 공고입니다. 대상은 대구 의료바이오 예비창업자 및 창업기업이며 마감은 11.09입니다.",
-      "dDay": "D-3",
+      "dDay": "오늘 마감",
       "deadlineText": "11.09",
       "tags": [
         "의료바이오",
@@ -8698,8 +9999,8 @@
         "예비창업자",
         "창업도시"
       ],
-      "period": "마감 11.09 (시작일 명시 없음)",
-      "reward": "지원 내용 세부는 이번 수집에서 확인하지 못함(공고문 확인 필요)",
+      "period": "신청 2026.10.27 ~ 11.09",
+      "reward": "기술지원(의료·바이오 인증시험 분석, 기업당 최대 800만원), 창업사업화(제품고도화, 기업당 최대 900만원)",
       "participation": "대구 의료바이오 예비창업자 및 창업기업",
       "preStartup": "가능. 예비창업자 대상",
       "employment": "명시 없음",
@@ -8718,8 +10019,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-09"
       ]
@@ -8731,7 +10032,7 @@
       "title": "LGD Dream Play 9기",
       "summary": "서울경제진흥원·엔슬파트너스의 LGD Dream Play 9기 — 대상: 디스플레이 기술·신사업 스타트업",
       "description": "서울경제진흥원·엔슬파트너스 공고입니다. 대상은 디스플레이 기술·신사업 스타트업이며 마감은 11.13입니다.",
-      "dDay": "D-7",
+      "dDay": "D-4",
       "deadlineText": "11.13",
       "tags": [
         "디스플레이",
@@ -8739,8 +10040,8 @@
         "오픈이노베이션",
         "서울"
       ],
-      "period": "마감 11.13 (시작일 명시 없음)",
-      "reward": "지원 내용 세부는 이번 수집에서 확인하지 못함(공고문 확인 필요)",
+      "period": "신청 2026.10.22 ~ 11.13",
+      "reward": "LG디스플레이와 PoC 협업 과제, 기업당 최대 5,000만원 PoC 지원금, 엑셀러레이팅·후속지원 협력",
       "participation": "디스플레이 기술·신사업 스타트업",
       "preStartup": "예비창업자 가능 여부 확인 필요",
       "employment": "명시 없음",
@@ -8759,8 +10060,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-13"
       ]
@@ -8772,7 +10073,7 @@
       "title": "안성 도시재생 창업 추가모집",
       "summary": "안성시의 안성 도시재생 창업 추가모집 — 대상: 성남·옥천 지구 사업장 소재 또는 이전 예정 창업가",
       "description": "안성시 공고입니다. 대상은 성남·옥천 지구 사업장 소재 또는 이전 예정 창업가이며 마감은 11.13입니다.",
-      "dDay": "D-7",
+      "dDay": "D-4",
       "deadlineText": "11.13",
       "tags": [
         "도시재생",
@@ -8780,8 +10081,8 @@
         "로컬창업",
         "입점"
       ],
-      "period": "마감 11.13 (시작일 명시 없음)",
-      "reward": "지원 내용 세부는 이번 수집에서 확인하지 못함(공고문 확인 필요)",
+      "period": "신청 2026.10.23 ~ 11.13",
+      "reward": "구역 내 공실 리모델링·인테리어 사업화 자금 1명(팀)당 최대 2,000만원(자본형성 용도), 밀착형 고도화 컨설팅",
       "participation": "성남·옥천 지구 사업장 소재 또는 이전 예정 창업가",
       "preStartup": "확인 필요",
       "employment": "명시 없음",
@@ -8800,8 +10101,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-13"
       ]
@@ -8813,7 +10114,7 @@
       "title": "충남 관광스타트업",
       "summary": "충남문화관광재단의 충남 관광스타트업 — 대상: 관광 분야 예비창업자 또는 창업 7년 이내 기업",
       "description": "충남문화관광재단 공고입니다. 대상은 관광 분야 예비창업자 또는 창업 7년 이내 기업이며 마감은 11.16입니다.",
-      "dDay": "D-10",
+      "dDay": "D-7",
       "deadlineText": "11.16",
       "tags": [
         "관광",
@@ -8821,8 +10122,8 @@
         "예비창업자",
         "스타트업"
       ],
-      "period": "마감 11.16 (시작일 명시 없음)",
-      "reward": "지원 내용 세부는 이번 수집에서 확인하지 못함(공고문 확인 필요)",
+      "period": "신청 2026.10.22 ~ 11.16",
+      "reward": "사업화자금 1,000만~3,000만원 및 역량 강화 프로그램",
       "participation": "관광 분야 예비창업자 또는 창업 7년 이내 기업",
       "preStartup": "가능. 예비창업자 대상",
       "employment": "명시 없음",
@@ -8841,8 +10142,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-16"
       ]
@@ -8880,13 +10181,14 @@
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127467"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-06"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "seocheon-marine-bluebio-prestartup-2026",
@@ -8934,7 +10236,7 @@
       "title": "강원연구개발특구 배치 1기",
       "summary": "강원창조경제혁신센터의 강원연구개발특구 배치 1기 — 대상: 춘천·원주·강릉 특구 소재·이전·설립 예정 투자준비 예비·기창업자",
       "description": "강원창조경제혁신센터 공고입니다. 대상은 춘천·원주·강릉 특구 소재·이전·설립 예정 투자준비 예비·기창업자이며 마감은 11.11입니다.",
-      "dDay": "D-5",
+      "dDay": "D-2",
       "deadlineText": "11.11",
       "tags": [
         "특구",
@@ -8942,8 +10244,8 @@
         "투자준비",
         "예비창업자"
       ],
-      "period": "마감 11.11 (시작일 명시 없음)",
-      "reward": "지원 내용 세부는 이번 수집에서 확인하지 못함(공고문 확인 필요)",
+      "period": "신청 2026.10.21 ~ 11.11",
+      "reward": "센터 심사역 기업진단, 모의 IR 및 피드백, 센터 투자심의 등 지원(직접투자·후속 투자 연계 목적)",
       "participation": "춘천·원주·강릉 특구 소재·이전·설립 예정 투자준비 예비·기창업자",
       "preStartup": "가능. 예비창업자 포함",
       "employment": "명시 없음",
@@ -8962,8 +10264,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-11"
       ]
@@ -8975,7 +10277,7 @@
       "title": "2027 상반기 IBK창공",
       "summary": "IBK기업은행의 2027 상반기 IBK창공 — 대상: 업력 7년 이하 혁신기술·아이디어 보유 중소기업",
       "description": "IBK기업은행 공고입니다. 대상은 업력 7년 이하 혁신기술·아이디어 보유 중소기업이며 마감은 11.13입니다.",
-      "dDay": "D-7",
+      "dDay": "D-4",
       "deadlineText": "11.13",
       "tags": [
         "액셀러레이팅",
@@ -8983,9 +10285,9 @@
         "혁신기술",
         "7년 이하"
       ],
-      "period": "마감 11.13 (시작일 명시 없음)",
-      "reward": "지원 내용 세부는 이번 수집에서 확인하지 못함(공고문 확인 필요)",
-      "participation": "업력 7년 이하 혁신기술·아이디어 보유 중소기업",
+      "period": "신청 2026.10.19 ~ 11.13",
+      "reward": "투자 및 대출 등 금융서비스, 전용 오피스, 액셀러레이팅, IBK 1:1 멘토링, 판로 개척·해외진출 프로그램",
+      "participation": "공고 마감일 기준 업력 7년 이내 혁신기술·아이디어 보유 중소기업(마포·구로·대전·부산·전남광주·대구 중 소재 센터 지원, 사업자등록 필수 여부 확인 필요)",
       "preStartup": "예비창업자 가능 여부 확인 필요",
       "employment": "명시 없음",
       "businessRegistration": "기업 대상 — 사업자등록 요구 여부 확인 필요",
@@ -9003,8 +10305,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-13"
       ]
@@ -9016,7 +10318,7 @@
       "title": "TEL VC 충남 Nexus Connect 투자 밋업",
       "summary": "충남창조경제혁신센터의 TEL VC 충남 Nexus Connect 투자 밋업 — 대상: 전국 10년 미만 비상장 반도체 스타트업 (영어·일본어 대면 발표 가능)",
       "description": "충남창조경제혁신센터 공고입니다. 대상은 전국 10년 미만 비상장 반도체 스타트업 (영어·일본어 대면 발표 가능)이며 마감은 11.10입니다.",
-      "dDay": "D-4",
+      "dDay": "D-1",
       "deadlineText": "11.10",
       "tags": [
         "반도체",
@@ -9024,8 +10326,8 @@
         "스타트업",
         "충남"
       ],
-      "period": "마감 11.10 (시작일 명시 없음)",
-      "reward": "지원 내용 세부는 이번 수집에서 확인하지 못함(공고문 확인 필요)",
+      "period": "신청 2026.10.16 ~ 11.10",
+      "reward": "TEL VENTURE CAPITAL과 1:1 투자 밋업 및 전략적 투자 검토, 후속 프로그램(사업화·글로벌 진출·액셀러레이팅) 연계",
       "participation": "전국 10년 미만 비상장 반도체 스타트업 (영어·일본어 대면 발표 가능)",
       "preStartup": "예비창업자 가능 여부 확인 필요",
       "employment": "명시 없음",
@@ -9044,8 +10346,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-10"
       ]
@@ -9096,7 +10398,7 @@
       "title": "대구 남구다운 청년창업",
       "summary": "대구경북고용복지연구원의 대구 남구다운 청년창업 — 대상: 남구에 본사를 둘 창업 예정자·팀(대표·팀원 39세 이하)",
       "description": "대구경북고용복지연구원 공고입니다. 대상은 남구에 본사를 둘 창업 예정자·팀(대표·팀원 39세 이하)이며 마감은 11.12입니다.",
-      "dDay": "D-6",
+      "dDay": "D-3",
       "deadlineText": "11.12",
       "tags": [
         "청년창업",
@@ -9104,8 +10406,8 @@
         "39세 이하",
         "창업 예정"
       ],
-      "period": "마감 11.12 (시작일 명시 없음)",
-      "reward": "지원 내용 세부는 이번 수집에서 확인하지 못함(공고문 확인 필요)",
+      "period": "신청 2026.10.02 ~ 11.12",
+      "reward": "사업화 지원금 최대 2,000만원(예비·기창업), 협업프로젝트 공동상품·서비스 개발비 최대 3,000만원, 로컬브랜드 개발비 최대 3,000만원",
       "participation": "남구에 본사를 둘 창업 예정자·팀(대표·팀원 39세 이하)",
       "preStartup": "가능. 창업 예정자 대상",
       "employment": "명시 없음",
@@ -9124,8 +10426,8 @@
       ],
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
-      "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-11-12"
       ]
@@ -9293,7 +10595,7 @@
       "title": "안산 ICT·SW 창업 컨설팅",
       "summary": "경기테크노파크의 안산 ICT·SW 창업 컨설팅 — 대상: 안산 소재 ICT·SW 창업기업",
       "description": "경기테크노파크 공고입니다. 대상은 안산 소재 ICT·SW 창업기업이며 마감은 12.31입니다.",
-      "dDay": "D-55",
+      "dDay": "D-52",
       "deadlineText": "12.31",
       "tags": [
         "ICT",
@@ -9647,7 +10949,7 @@
       "title": "농식품 크라우드펀딩",
       "summary": "농업정책보험금융원의 농식품 크라우드펀딩 — 대상: 농식품 분야 예비창업자 또는 창업 7년 이내 기업",
       "description": "농업정책보험금융원 공고입니다. 대상은 농식품 분야 예비창업자 또는 창업 7년 이내 기업이며 마감은 12.31입니다.",
-      "dDay": "D-55",
+      "dDay": "D-52",
       "deadlineText": "12.31",
       "tags": [
         "농식품",
@@ -9766,7 +11068,7 @@
       "title": "경기 기술이전 창업지원 필요기술 발굴",
       "summary": "경기테크노파크의 경기 기술이전 창업지원 필요기술 발굴 — 대상: 경기도 예비창업자 또는 창업 7년 이내",
       "description": "경기테크노파크 공고입니다. 대상은 경기도 예비창업자 또는 창업 7년 이내이며 마감은 12.31입니다.",
-      "dDay": "D-55",
+      "dDay": "D-52",
       "deadlineText": "12.31",
       "tags": [
         "기술이전",
@@ -10126,7 +11428,7 @@
       "title": "2026년 서울 기후테크 기업 및 예비창업자 멘토링 지원사업",
       "summary": "서울 소재 기후테크 예비창업자·중소기업을 대상으로 전문가 맞춤형 멘토링을 무료 지원",
       "description": "국가녹색기술연구소 서울기후테크산업지원센터가 서울시 내 녹색분야 중소기업과 예비창업자에게 전문가 멘토링을 제공합니다.",
-      "dDay": "D-85",
+      "dDay": "D-52",
       "deadlineText": "12.31",
       "tags": [
         "예비창업자",
@@ -10367,12 +11669,13 @@
         }
       ],
       "firstSeenDate": "2026-09-23",
-      "status": "OPEN",
+      "status": "CLOSED",
       "lastVerifiedDate": "2026-10-13",
-      "lastUpdatedDate": "2026-09-23",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-10-13"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "ai-solo-founder-camp-7-2026",
@@ -10623,12 +11926,13 @@
         }
       ],
       "firstSeenDate": "2026-10-01",
-      "status": "OPEN",
+      "status": "CLOSED",
       "lastVerifiedDate": "2026-10-13",
-      "lastUpdatedDate": "2026-10-01",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-10-28"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "hongneung-venture-valley-bi-first-2026",
@@ -10678,7 +11982,7 @@
       "title": "2026 명지전문대학 MJC 창업보육(Ⅰ)센터 신규 입주기업 상시모집",
       "summary": "AI·SW·IT 등 기술기반 예비창업자와 10년 이내 기업을 위한 서울 서대문구 창업보육공간 상시 모집",
       "description": "명지전문대학 창업보육센터가 공실 11개 소진 시까지 예비창업자와 창업 10년 이내 기업을 모집합니다. AI·디지털전환 기반 기술·서비스를 우대하며 입주자는 입주 후 30일 이내 사업자등록증을 제출해야 합니다.",
-      "dDay": "D-85",
+      "dDay": "D-52",
       "deadlineText": "12.31 17:00 · 공실 소진 시 조기 마감",
       "tags": [
         "예비창업자",
@@ -10808,12 +12112,13 @@
         }
       ],
       "firstSeenDate": "2026-10-04",
-      "status": "OPEN",
+      "status": "CLOSED",
       "lastVerifiedDate": "2026-10-13",
-      "lastUpdatedDate": "2026-10-11",
+      "lastUpdatedDate": "2026-11-09",
       "deadline": [
         "2026-10-22"
-      ]
+      ],
+      "autoClosedDate": "2026-11-09"
     },
     {
       "id": "agile-pivot-startup-lecture-2026",
@@ -10963,6 +12268,7 @@
     }
   ],
   "archive": [
+    "2026-11-09",
     "2026-11-06",
     "2026-10-13",
     "2026-10-11",

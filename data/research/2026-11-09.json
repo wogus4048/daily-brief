@@ -1,0 +1,2673 @@
+{
+  "date": "2026-11-09",
+  "completedAt": "2026-11-09T13:23:27+09:00",
+  "status": "COMPLETE",
+  "sourceDiscoveries": [],
+  "tracks": {
+    "aiData": {
+      "status": "DONE",
+      "queriesByAxis": {
+        "llmAgents": [
+          "생성형 AI 에이전트 공모전 2026년 11월 접수 마감 12월",
+          "LLM RAG 해커톤 참가자 모집 2026 11월"
+        ],
+        "mlData": [
+          "데이터 분석 경진대회 2026 접수중 머신러닝 대회 11월 마감",
+          "AI 활용 데이터 챌린지 참가팀 모집 2026년 12월 마감"
+        ],
+        "visionSpeech": [
+          "컴퓨터 비전 음성 AI 경진대회 2026 참가 접수 11월",
+          "음성인식 영상 이미지 AI 알고리즘 대회 2026 신청 마감 12월"
+        ]
+      },
+      "rawCandidates": [
+        {
+          "title": "2026 대구 로컬AI그라운드 지역문제 해결형 AI활용 경진대회",
+          "url": "https://www.dgucenter.or.kr/bbs/board.php?bo_table=notice&wr_id=744",
+          "disposition": "EXISTING",
+          "reason": "공식 공고(dgucenter) 열람"
+        },
+        {
+          "title": "국부펀드 KIC AI 에이전트 공모전",
+          "url": "https://wikidocs.net/blog/@pandas_studio/32554/",
+          "disposition": "EXISTING",
+          "reason": "kic-ai-agent-competition-2026"
+        },
+        {
+          "title": "2026 AI활용 전국 대학생 창업 해커톤(한림대)",
+          "url": "https://www.hknu.ac.kr/bbs/kor/69/99505/artclView.do",
+          "disposition": "EXISTING",
+          "reason": "keris-ai-startup-hackathon-2026"
+        },
+        {
+          "title": "2026 DATA·AI 분석 경진대회(KISTI)",
+          "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=110023",
+          "disposition": "EXISTING",
+          "reason": "kisti-data-ai-analysis-2026"
+        },
+        {
+          "title": "2026 데이터+AI 혁신 챌린지 데이터안심구역",
+          "url": "https://thinkyou.co.kr/mobile/contest/66637/",
+          "disposition": "CLOSED",
+          "reason": "접수 10/22 종료"
+        },
+        {
+          "title": "TRILLION AGENT AI HACKATHON 2026",
+          "url": "https://cse.snu.ac.kr/ko/community/notice/25789",
+          "disposition": "CLOSED",
+          "reason": "모집 11/6 마감"
+        },
+        {
+          "title": "2026 AI Pilot Top Gun Challenge",
+          "url": "https://cse.snu.ac.kr/en/community/notice/25104",
+          "disposition": "NOT_RELEVANT",
+          "reason": "검색 요약만 확인, 공식 페이지 미확인"
+        },
+        {
+          "title": "AI 달인의 꿀팁 챌린지 시즌4(과기정통부)",
+          "url": "https://aichallenge4all.or.kr/competitions/master100_s4",
+          "disposition": "NOT_RELEVANT",
+          "reason": "제출물이 60초 이하 세로 영상(영상 공모전, 범위 밖)"
+        },
+        {
+          "title": "2026 국방 AI 경진대회",
+          "url": "https://ditoday.com/?p=152147",
+          "disposition": "CLOSED",
+          "reason": "접수 9월 종료"
+        },
+        {
+          "title": "2026 국립공원 위성 모니터링 AI 챌린지",
+          "url": "https://discuss.pytorch.kr/t/2026-ai/11603",
+          "disposition": "CLOSED",
+          "reason": "접수 10/6 종료"
+        },
+        {
+          "title": "2026 AI Co-Scientist Challenge Korea",
+          "url": "https://newsseoul.co.kr/news/view/1065591010311248",
+          "disposition": "NOT_RELEVANT",
+          "reason": "접수 기간 미확인, 공식 페이지 미확인"
+        },
+        {
+          "title": "2026 AI 플레이 콘텐츠 제작 공모전(중앙대)",
+          "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=111800",
+          "disposition": "NOT_RELEVANT",
+          "reason": "콘텐츠 제작형, 공식 페이지 미확인"
+        },
+        {
+          "title": "2026 성평등 AI 벤치마크 챌린지",
+          "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=112029",
+          "disposition": "EXISTING",
+          "reason": "mogef-gender-equality-ai-benchmark-2026"
+        },
+        {
+          "title": "2026 AI 공모전 최신 리스트(씽유)",
+          "url": "https://thinkyou.co.kr/mobile/info_room/6823/",
+          "disposition": "NOT_RELEVANT",
+          "reason": "2026-09 기준 모음 글, 영상·디자인 위주"
+        },
+        {
+          "title": "매경 AI 광고 공모전",
+          "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=112073",
+          "disposition": "NOT_RELEVANT",
+          "reason": "광고(디자인·영상) 공모전, 범위 밖"
+        },
+        {
+          "title": "CJ 햇반 30주년 갓 지은 AI디어",
+          "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=111912",
+          "disposition": "EXISTING",
+          "reason": "cj-hetbahn-30th-ai-idea-2026"
+        },
+        {
+          "title": "2026 AI 서비스 기획 공모전",
+          "url": "https://idea2026.kpii.or.kr/",
+          "disposition": "PUBLISHED",
+          "id": "kpii-ai-service-planning-2026"
+        },
+        {
+          "title": "2026 AI 서비스 기획 공모전",
+          "url": "https://idea2026.kpii.or.kr/",
+          "disposition": "PUBLISHED",
+          "id": "kpii-ai-service-planning-2026"
+        },
+        {
+          "title": "2026 대구 로컬AI그라운드 지역문제 해결형 AI활용 경진대회",
+          "url": "https://www.dgucenter.or.kr/bbs/board.php?bo_table=notice&wr_id=744",
+          "disposition": "PUBLISHED",
+          "id": "daegu-local-ai-ground-2026"
+        }
+      ]
+    },
+    "generalSoftware": {
+      "status": "DONE",
+      "queriesByAxis": {
+        "appWebMobile": [
+          "앱 개발 공모전 2026 모바일 웹 서비스 개발 참가 접수 11월 마감",
+          "소프트웨어 개발 해커톤 대학생 일반인 참가자 모집 2026 12월 개최"
+        ],
+        "backendApiCloudDevOps": [
+          "클라우드 DevOps API 개발 대회 2026 해커톤 참가 신청 마감 11월",
+          "오픈소스 백엔드 개발 경진대회 2026 접수 중 상금"
+        ],
+        "security": [
+          "정보보호 사이버보안 해킹방어대회 CTF 2026 참가 접수 11월 12월",
+          "보안 취약점 버그바운티 개발 경진대회 2026 모집 마감"
+        ],
+        "fintech": [
+          "핀테크 개발 공모전 금융 데이터 활용 앱 서비스 경진대회 2026 접수 11월",
+          "보험 결제 블록체인 해커톤 개발 대회 2026 참가자 모집 마감"
+        ],
+        "publicDataGovTech": [
+          "공공데이터 활용 창업경진대회 아이디어 개발 2026 접수 11월 12월 마감",
+          "시빅테크 GovTech 정부 서비스 개발 해커톤 2026 공모 접수중"
+        ],
+        "productBuild": [
+          "스타트업 프로덕트 빌딩 해커톤 MVP 제작 대회 2026 참가자 모집 11월",
+          "바이브코딩 해커톤 게임 개발 공모전 2026 접수 마감 12월"
+        ]
+      },
+      "rawCandidates": [
+        {
+          "title": "2026 NASA International Space Apps Challenge Seoul",
+          "url": "https://www.spaceappschallenge.org/2026/",
+          "disposition": "EXISTING",
+          "reason": "공식 페이지 열람, 11/15까지 등록"
+        },
+        {
+          "title": "Korea Local Marketing Hackathon 2026",
+          "url": "https://hackon.kr/e/002e1704",
+          "disposition": "EXISTING",
+          "reason": "해커온 행사 페이지 열람, 개인전, 신청 11/16"
+        },
+        {
+          "title": "현대자동차그룹 차량용 앱 개발 공모전",
+          "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=111802",
+          "disposition": "EXISTING",
+          "reason": "hyundai-in-vehicle-app-dev-2026"
+        },
+        {
+          "title": "Capture, Explain, Defend AI Cybersecurity Hackathon",
+          "url": "https://koreahackathons.com/events/capture-explain-defend-ai-cybersecurity-hackathon",
+          "disposition": "EXISTING",
+          "reason": "capture-explain-defend-ai-cybersecurity-hackathon-2026"
+        },
+        {
+          "title": "MAWD START-UP HACKATHON",
+          "url": "https://koreahackathons.com/events/mawd-start-up-hackathon",
+          "disposition": "EXISTING",
+          "reason": "mawd-startup-hackathon-2026"
+        },
+        {
+          "title": "KUK Virtual Hackathon",
+          "url": "https://koreahackathons.com/events/kuk-virtual-hackathon",
+          "disposition": "EXISTING",
+          "reason": "kuln-kuk-virtual-hackathon-2026"
+        },
+        {
+          "title": "제7회 한경국립대 AI보안경진대회",
+          "url": "https://www.hknu.ac.kr/bbs/kor/69/99505/artclView.do",
+          "disposition": "INELIGIBLE",
+          "reason": "한경국립대 재학생·교직원 한정(공식 공지 검색 요약 기준), 접수 11/11"
+        },
+        {
+          "title": "2026 스페이스 해커톤",
+          "url": "https://www.space-hackathon.kr/sh_page/page33.php",
+          "disposition": "EXISTING",
+          "reason": "space-hackathon-2026"
+        },
+        {
+          "title": "2026 청도 바이브코딩 해커톤",
+          "url": "https://linkareer.com/activity/359305",
+          "disposition": "CLOSED",
+          "reason": "신청 11/3 종료"
+        },
+        {
+          "title": "SoftBank Hackathon 2026 in Korea",
+          "url": "https://cse.snu.ac.kr/en/community/notice/25347",
+          "disposition": "CLOSED",
+          "reason": "접수 9/22 종료"
+        },
+        {
+          "title": "2026 GovTech 창업경진대회",
+          "url": "https://www.digitaltoday.co.kr/en/view/94419/",
+          "disposition": "CLOSED",
+          "reason": "접수 9/21 종료"
+        },
+        {
+          "title": "나랏돈 50조 찾기 나라장터 해커톤",
+          "url": "https://www.digitaltoday.co.kr/en/view/94419/",
+          "disposition": "CLOSED",
+          "reason": "참여 10/25 종료"
+        },
+        {
+          "title": "고용24 국민참여 AI 고용서비스 발굴 온라인 해커톤",
+          "url": "https://www.theteams.kr/activities/page/352470/lc",
+          "disposition": "CLOSED",
+          "reason": "접수 10/13 종료"
+        },
+        {
+          "title": "제9회 핀테크 아이디어 공모전",
+          "url": "https://www.theteams.kr/activities/page/340055/lc",
+          "disposition": "CLOSED",
+          "reason": "접수 10/8 종료"
+        },
+        {
+          "title": "일본 IT 기업 주최 채용연계형 해커톤(DigiMan)",
+          "url": "https://cafe.naver.com/koreccafe/13755",
+          "disposition": "NOT_RELEVANT",
+          "reason": "공식 페이지 미확인(네이버 카페 열람 불가), 접수 11/11, 일본 취업 연계"
+        },
+        {
+          "title": "2026 오픈소스 개발자대회",
+          "url": "https://thinkyou.co.kr/mobile/contest/64270/",
+          "disposition": "CLOSED",
+          "reason": "접수 7/17 종료"
+        },
+        {
+          "title": "2026 블록체인 AI 해커톤",
+          "url": "https://view.asiae.co.kr/article/2026063008581891394",
+          "disposition": "CLOSED",
+          "reason": "접수 5/30 종료"
+        },
+        {
+          "title": "공군 창의혁신 아이디어 공모 해커톤",
+          "url": "https://mediahub.seoul.go.kr/gongmo/2000736",
+          "disposition": "CLOSED",
+          "reason": "접수 6/27 종료"
+        },
+        {
+          "title": "링커리어 358536 HTML 게임 공모(후보 마감 12/20)",
+          "url": "https://linkareer.com/activity/358536",
+          "disposition": "NOT_RELEVANT",
+          "reason": "검색 요약만 확인, 공식 페이지 미확인"
+        },
+        {
+          "title": "2026 AI 활용 전국 대학생 창업 해커톤",
+          "url": "https://www.hknu.ac.kr/",
+          "disposition": "EXISTING",
+          "reason": "keris-ai-startup-hackathon-2026"
+        },
+        {
+          "title": "2026 NASA International Space Apps Challenge Seoul",
+          "url": "https://www.spaceappschallenge.org/2026/",
+          "disposition": "PUBLISHED",
+          "id": "nasa-space-apps-seoul-2026"
+        },
+        {
+          "title": "Korea Local Marketing Hackathon 2026",
+          "url": "https://hackon.kr/e/002e1704",
+          "disposition": "PUBLISHED",
+          "id": "korea-local-marketing-hackathon-2026"
+        }
+      ]
+    },
+    "publicIdea": {
+      "status": "DONE",
+      "queriesByAxis": {
+        "governmentPublic": [
+          "국민 아이디어 공모전 정부 부처 공공기관 2026년 11월 접수 국민 누구나",
+          "정책 제안 공모전 서비스 기획 공모 2026 11월 마감 공단 공사"
+        ],
+        "industrySpecialized": [
+          "산업 특화 아이디어 공모전 기업 신제품 서비스 제안 2026 11월 12월 접수 개인 참가",
+          "에너지 교통 관광 스포츠 문화 아이디어 공모전 2026 접수중 상금"
+        ],
+        "individualPrize": [
+          "개인 참가 가능 아이디어 공모전 상금 100만원 이상 2026 11월 마감 누구나",
+          "혁신 아이디어 공모전 대국민 2026 12월 마감 신규 공고"
+        ]
+      },
+      "rawCandidates": [
+        {
+          "title": "[모두의 KISA] 슬로건·캐릭터·국민참여예산 아이디어 공모",
+          "url": "https://www.kisa.or.kr/401/form?postSeq=3791&page=1",
+          "disposition": "EXISTING",
+          "reason": "KISA 공식 공지 열람, 아이디어 부문만 범위 내, 마감 11/10"
+        },
+        {
+          "title": "2026 K-Petro 대국민 혁신 아이디어 공모전(한국석유관리원)",
+          "url": "https://www.kpetro.or.kr/lay1/bbs/S1T52C254/A/1/view.do?article_seq=14904",
+          "disposition": "NOT_RELEVANT",
+          "reason": "공식 페이지 미확인(ECONNRESET), 씽유 요약: 11/9~11/27, 국민 누구나, 최우수 30만원"
+        },
+        {
+          "title": "2026 KEIT 대국민 혁신아이디어 공모전",
+          "url": "https://modu.go.kr/front/epilogue/epilogueBbsViewPage.do?bbs_id=0ce40f7915ea4508b0adb486129eef9c",
+          "disposition": "EXISTING",
+          "reason": "keit-public-innovation-idea-2026"
+        },
+        {
+          "title": "강원특별자치도 톡톡 Idea 공모전",
+          "url": "https://modu.go.kr/front/epilogue/epilogueBbsViewPage.do?bbs_id=c73a0a9081bf48378808e142562daec6",
+          "disposition": "EXISTING",
+          "reason": "gangwon-toktok-idea-2026"
+        },
+        {
+          "title": "2026 대학생 정책 아이디어 공모전(한국정책분석평가학회)",
+          "url": "https://sungshin.ac.kr/bbs/family/3501/112959/download.do",
+          "disposition": "EXISTING",
+          "reason": "kapae-univ-student-policy-idea-2026"
+        },
+        {
+          "title": "2026 의왕시 청년 e-Room 창업아이디어 공모전",
+          "url": "https://www.venturesquare.net/announcement/1121670",
+          "disposition": "EXISTING",
+          "reason": "uiwang-youth-eroom-startup-idea-2026"
+        },
+        {
+          "title": "소상공인 성장 및 재도약을 위한 정책 아이디어 공모전",
+          "url": "https://thinkyou.co.kr/contest/67505/",
+          "disposition": "EXISTING",
+          "reason": "gcgf-small-biz-policy-idea-2026"
+        },
+        {
+          "title": "2026 대한민국 물산업 혁신 창업대전 아이디어 부문",
+          "url": "https://www.theteams.kr/activities/page/337835/lc",
+          "disposition": "CLOSED",
+          "reason": "모집 10/19 종료(검색 요약)"
+        },
+        {
+          "title": "2026 정부광고 아이디어 공모전",
+          "url": "https://www.theteams.kr/activities/page/338153/lc",
+          "disposition": "CLOSED",
+          "reason": "접수 9/21 종료, 투표 단계"
+        },
+        {
+          "title": "산업통상부 계열 국민 제품·서비스 아이디어 공모(10/6~11/2)",
+          "url": "https://linkareer.com/activity/355751",
+          "disposition": "CLOSED",
+          "reason": "접수 11/2 종료"
+        },
+        {
+          "title": "LG 어나더 아이디어 챌린지",
+          "url": "https://thinkyou.co.kr/contest/67979/",
+          "disposition": "INELIGIBLE",
+          "reason": "서울대·한양대·부산대·UNIST 재학생 한정, 마케팅·영상 포함"
+        },
+        {
+          "title": "2026 주민참여 혁신 아이디어 공모전(동작구시설관리공단)",
+          "url": "https://www.theteams.kr/activities/page/339683/lc",
+          "disposition": "NOT_RELEVANT",
+          "reason": "마감일·공식 페이지 미확인"
+        },
+        {
+          "title": "2026 혁신 아이디어 공모전(서울특별시농수산식품공사)",
+          "url": "https://thinkyou.co.kr/contest/60462",
+          "disposition": "NOT_RELEVANT",
+          "reason": "D+8 표기로 마감 지난 것으로 보임, 공식 페이지 미확인"
+        },
+        {
+          "title": "경산시 AI 미디어 콘텐츠 공모전",
+          "url": "https://modu.go.kr/front/epilogue/epilogueBbsViewPage.do?bbs_id=bc239c48e8be4a58b4b397526cc41d73",
+          "disposition": "NOT_RELEVANT",
+          "reason": "미디어 콘텐츠형(영상·콘텐츠)"
+        },
+        {
+          "title": "국립청주해양과학관 개관 기념 대국민 슬로건 공모전",
+          "url": "https://modu.go.kr/front/epilogue/epilogueBbsViewPage.do?bbs_id=f2db9e90960f47e2a8dbec3377cdf33e",
+          "disposition": "NOT_RELEVANT",
+          "reason": "슬로건 공모(범위 밖)"
+        },
+        {
+          "title": "안산 4·16세월호참사 추모시설 명칭 공모전",
+          "url": "https://modu.go.kr/front/epilogue/epilogueBbsViewPage.do?bbs_id=8037a14302ac4da2b612886023875e5d",
+          "disposition": "NOT_RELEVANT",
+          "reason": "명칭 공모(범위 밖)"
+        },
+        {
+          "title": "2026 내가 소개하는 서울 숏폼 공모전",
+          "url": "https://modu.go.kr/front/epilogue/epilogueBbsViewPage.do?bbs_id=1e7d47e2ad6b4669b97c94e3550f695d",
+          "disposition": "NOT_RELEVANT",
+          "reason": "숏폼 영상(범위 밖)"
+        },
+        {
+          "title": "2026 AI·디지털 활용 연구·선도학교 우수사례 공모전(KERIS)",
+          "url": "https://modu.go.kr/front/epilogue/epilogueBbsViewPage.do?bbs_id=66d5fbc860b6499892b4770dacbe2641",
+          "disposition": "NOT_RELEVANT",
+          "reason": "교원 우수사례 공모, 아이디어·개발 공모 아님"
+        },
+        {
+          "title": "토마토들 학생회 아이디어톤",
+          "url": "https://thinkyou.co.kr/contest/68001/",
+          "disposition": "NOT_RELEVANT",
+          "reason": "학생회 대상, 공식 페이지 미확인"
+        },
+        {
+          "title": "체육관련 규제개선 대국민 아이디어 공모전",
+          "url": "https://www.kspo.or.kr/kspo/bbs/B0000027/view.do?menuNo=200149&nttId=64358",
+          "disposition": "EXISTING",
+          "id": "kspo-sports-regulation-improve-2026",
+          "reason": "국민체육진흥공단 체육 규제개선 공모전, 기존 항목(공식 원문은 worker가 열람 못함)"
+        },
+        {
+          "title": "용산국제업무지구 AI 스마트도시 아이디어 공모전",
+          "url": "https://mediahub.seoul.go.kr/archives/2019848",
+          "disposition": "EXISTING",
+          "id": "yongsan-smart-city-idea-2026",
+          "reason": "용산국제업무지구 스마트도시 아이디어 공모전 기존 항목"
+        },
+        {
+          "title": "2026-2학기 융합학부 미디어콘텐츠테크놀로지 & K-콘텐츠 전공 아이디어 경진대회",
+          "url": "https://www.sungkyul.ac.kr/fusion/3760/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGZnVzaW9uJTJGMTI1NCUyRjQzODg4JTJGYXJ0Y2xWaWV3LmRvJTNG",
+          "disposition": "NOT_RELEVANT",
+          "reason": "미디어콘텐츠(방송영상·영화·SNS) 기획 대회, 학과 재학생 한정(영상·콘텐츠 범위 밖)"
+        },
+        {
+          "title": "2026년 경상북도 도민 대상 규제개선 공모전",
+          "url": "https://www.gb.go.kr/page/10107/10004.do?boardNo=1370219",
+          "disposition": "PUBLISHED",
+          "id": "gyeongbuk-regulation-reform-idea-2026"
+        },
+        {
+          "title": "대전지역 대학생과 함께하는 시민체감 교통 아이디어 공모전",
+          "url": "https://www.djtc.kr/kor/board.do?menuIdx=361&bbsIdx=22010",
+          "disposition": "PUBLISHED",
+          "id": "daejeon-transit-citizen-idea-2026"
+        },
+        {
+          "title": "[모두의 KISA] 슬로건·캐릭터·국민참여예산 아이디어 공모",
+          "url": "https://www.kisa.or.kr/401/form?postSeq=3791&page=1",
+          "disposition": "PUBLISHED",
+          "id": "kisa-modu-idea-contest-2026"
+        }
+      ]
+    },
+    "startupSupport": {
+      "status": "DONE",
+      "queriesByAxis": {
+        "kstartupBusinessInfo": [
+          "K-Startup 예비창업자 모집 공고 2026년 11월 접수 마감 12월 창업진흥원",
+          "초기창업 예비창업 사업화 지원 참여기업 모집 2026 접수중 12월 마감"
+        ],
+        "sbaSeoul": [
+          "서울경제진흥원 SBA 예비창업자 모집 2026 11월 접수",
+          "서울시 창업 지원 프로그램 입주기업 모집 2026 12월 마감 창업허브"
+        ],
+        "nipaKisa": [
+          "NIPA 정보통신산업진흥원 AI 스타트업 지원사업 공고 2026 11월 모집",
+          "KISA 한국인터넷진흥원 정보보호 창업 스타트업 지원 모집 2026 접수"
+        ],
+        "fintechSupport": [
+          "핀테크 스타트업 지원사업 참여기업 모집 2026 11월 금융 혁신 한국핀테크지원센터",
+          "금융권 오픈이노베이션 스타트업 모집 2026 신한 우리 하나 KB 접수 12월"
+        ],
+        "credits": [
+          "스타트업 클라우드 크레딧 지원 모집 2026 AWS 구글 마이크로소프트 네이버클라우드 접수",
+          "AI API 크레딧 GPU 지원 프로그램 스타트업 개발자 신청 2026 11월 모집"
+        ]
+      },
+      "rawCandidates": [
+        {
+          "title": "NEST G밸리 4기 입주기업 모집",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179733",
+          "disposition": "EXISTING",
+          "reason": "공고 열람, 예비창업자 가능, 11/20"
+        },
+        {
+          "title": "2027 1인 창조기업 지원센터 상반기 신규 입주기업 1차 모집(인천)",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179748",
+          "disposition": "EXISTING",
+          "reason": "공고 열람, 12/4"
+        },
+        {
+          "title": "2026 SVC Seoul 멤버십(확장형)",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178802",
+          "disposition": "EXISTING",
+          "reason": "공고 열람, 예비창업자는 협약 체결자 조건부, 12/11"
+        },
+        {
+          "title": "2026 SVC Seoul Membership(Global)",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do",
+          "disposition": "DUPLICATE",
+          "reason": "확장형 공고의 영문판(같은 사업)"
+        },
+        {
+          "title": "제4차 북부창업아카데미 및 북부창업멘토링 DAY",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179741",
+          "disposition": "EXISTING",
+          "reason": "공고 열람, 여성 (예비)창업자 대상, 11/18"
+        },
+        {
+          "title": "한국공항공사 창업보육센터 입주기업 모집",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179731",
+          "disposition": "EXISTING",
+          "reason": "공고 열람, 예비창업자 가능, 11/26"
+        },
+        {
+          "title": "2027 인천관광기업지원센터 입주기업 모집",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179738",
+          "disposition": "EXISTING",
+          "reason": "공고 열람, 11/25"
+        },
+        {
+          "title": "2027 고양인쇄문화허브센터 입주기업 모집",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179729",
+          "disposition": "EXISTING",
+          "reason": "공고 열람, 예비창업자 가능, 11/23"
+        },
+        {
+          "title": "용인시산업진흥원 제5차 창업지원센터 입주기업 모집(바이오헬스)",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179740",
+          "disposition": "EXISTING",
+          "reason": "공고 열람, 예비창업자 가능, 11/25"
+        },
+        {
+          "title": "노원 청년가게 3·4호점 청년창업자 모집",
+          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1003&q_bbscttSn=20261020144915274",
+          "disposition": "EXISTING",
+          "reason": "구청 공지 열람, 세부는 첨부 PDF라 일부 확인 필요 표기"
+        },
+        {
+          "title": "노원구 청년 팝업스토어 하계점 운영자 모집",
+          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1003&q_bbscttSn=20261020154610517",
+          "disposition": "EXISTING",
+          "reason": "구청 공지 열람, 세부는 첨부 PDF라 일부 확인 필요 표기"
+        },
+        {
+          "title": "2026 서울창업허브M+ 하반기 입주기업(11/13)",
+          "url": "https://www.sba.seoul.kr/Pages/ContentsMenu/Company_Support_Detail.aspx?RID=7c656f5e-9bd6-f111-b404-d4f5ef4a1e33",
+          "disposition": "NOT_RELEVANT",
+          "reason": "공식 페이지 미확인(상세 페이지가 메뉴만 노출), 메인 요약은 창업 7년 미만 기업 대상"
+        },
+        {
+          "title": "서울게임콘텐츠센터 게임랩 신규 입주기업(11/10)",
+          "url": "https://www.sba.seoul.kr/Pages/ContentsMenu/Company_Support_Detail.aspx?RID=a6b13075-ebcd-f111-b404-d4f5ef4a1e33",
+          "disposition": "NOT_RELEVANT",
+          "reason": "공식 페이지 미확인(상세 페이지가 메뉴만 노출)"
+        },
+        {
+          "title": "키친인큐베이터 개별·공유주방 25기·제조주방 13기",
+          "url": "https://www.sba.seoul.kr/",
+          "disposition": "EXISTING",
+          "reason": "seoul-kitchen-incubator-25-13"
+        },
+        {
+          "title": "서울창업허브 공덕 하반기 입주기업",
+          "url": "https://mediahub.seoul.go.kr/archives/2019651",
+          "disposition": "CLOSED",
+          "reason": "접수 10/16 종료"
+        },
+        {
+          "title": "서울창업허브 공덕 AI 솔로창업단",
+          "url": "https://hubgongdeok.startup-plus.kr/project/PRJ007261",
+          "disposition": "CLOSED",
+          "reason": "접수 7/15 종료"
+        },
+        {
+          "title": "2026 하반기 서울 AI 허브 고성능 컴퓨팅 인프라 지원사업",
+          "url": "https://www.startup-plus.kr/project/PRJ006680",
+          "disposition": "CLOSED",
+          "reason": "접수 6/19 종료"
+        },
+        {
+          "title": "2026 아산 스타트업 등 기존 등록 항목",
+          "url": "https://www.k-startup.go.kr/",
+          "disposition": "EXISTING",
+          "reason": "기존 support 항목과 중복"
+        },
+        {
+          "title": "2027 고양 외 인천 UniVest Scale-up 참여기업(인천 대학 청년 창업펀드 2호)",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do",
+          "disposition": "INELIGIBLE",
+          "reason": "펀드 투자 대상 기업 모집(사업자 보유 기업 전제 추정, 공고 미열람)"
+        },
+        {
+          "title": "2027 팁스 추천 화성산업진흥원 성장 자원 확보 패키지",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do",
+          "disposition": "NOT_RELEVANT",
+          "reason": "공고 미열람, 팁스 추천 기업 대상으로 추정, 공식 페이지 미확인"
+        },
+        {
+          "title": "2027년 초기창업·창업도약 패키지 신규 주관기관 모집",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do",
+          "disposition": "NOT_RELEVANT",
+          "reason": "수행 주관기관 모집(창업자 대상 아님)"
+        },
+        {
+          "title": "첨단 GPU 활용 지원 사업(NIPA) 수시 모집",
+          "url": "https://cse.snu.ac.kr/ko/community/notice/25036",
+          "disposition": "NOT_RELEVANT",
+          "reason": "산·학·연 대상 수시 모집, 공식 페이지 미확인"
+        },
+        {
+          "title": "부산 클라우드 혁신센터 멤버십(4/10~11/30)",
+          "url": "https://grant-documents.thevc.kr/297844",
+          "disposition": "NOT_RELEVANT",
+          "reason": "부산 지역, 공식 페이지 미확인"
+        },
+        {
+          "title": "한국기술교육대 K-Tech 창업성장아카데미(~11/27)",
+          "url": "https://www.theteams.kr/activities/page/348035/le",
+          "disposition": "NOT_RELEVANT",
+          "reason": "검색 요약만 확인, 공식 페이지 미확인"
+        },
+        {
+          "title": "대전 스타트업 원스톱 지원센터 아카데미 4차(~11/22)",
+          "url": "https://www.venturesquare.net/announcement/1099041",
+          "disposition": "NOT_RELEVANT",
+          "reason": "검색 요약만 확인, 공식 페이지 미확인"
+        },
+        {
+          "title": "KB 오픈이노베이션 / 피노베이션 챌린지 / 서울핀테크위크 데모데이",
+          "url": "https://futurechosun.com/archives/146760",
+          "disposition": "CLOSED",
+          "reason": "접수 4~8월 종료"
+        },
+        {
+          "title": "2026 NVIDIA 글로벌기업협업프로그램(K-Startup)",
+          "url": "https://hoyjckszljqxplxxpzcl.supabase.co/storage/v1/object/public/program-attachments/crawl/kstartup/6b/6b89a7efdd3f8d52b71564408652bf4eb6dcecab43e51617a38fec1026c62154.pdf",
+          "disposition": "NOT_RELEVANT",
+          "reason": "접수 기간 미확인, 공식 페이지 미확인"
+        },
+        {
+          "title": "2026 정보보호 신기술 지원사업(KISA)",
+          "url": "https://byline.network/2026/02/10-607/",
+          "disposition": "CLOSED",
+          "reason": "4월까지 선정 종료"
+        },
+        {
+          "title": "진도군 2027 청년어촌정착",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127732",
+          "disposition": "PUBLISHED",
+          "id": "jindo-youth-fishing-village-settlement-2027"
+        },
+        {
+          "title": "완도군 2027 청년어촌정착",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127729",
+          "disposition": "PUBLISHED",
+          "id": "wando-youth-fishing-village-settlement-2027"
+        },
+        {
+          "title": "충북 2027 청년농업인 스마트팜 창업",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127669",
+          "disposition": "PUBLISHED",
+          "id": "chungbuk-youth-farmer-smartfarm-startup-2027"
+        },
+        {
+          "title": "2027 초기창업·창업도약 패키지 신규 주관기관 **수정**",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127641",
+          "disposition": "NOT_RELEVANT",
+          "reason": "창업 지원기관(주관기관) 모집, 창업자 신청 아님"
+        },
+        {
+          "title": "전남광주 3기 지역자원 연계 청년창업 연장",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127616",
+          "disposition": "EXISTING",
+          "id": "jeonnam-gwangju-regional-resource-youth-startup-3",
+          "reason": "전남광주 3기 지역자원 연계 청년창업 연장 기존 항목"
+        },
+        {
+          "title": "인천 대학 청년 창업펀드 UniVest Scale-Up",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127603",
+          "disposition": "INELIGIBLE",
+          "reason": "인천 지정 대학 구성원이 창업한 법인 대상(법인 설립 필수)"
+        },
+        {
+          "title": "서울 키친인큐베이터 25기·제조주방13기",
+          "url": "https://www.startup-plus.kr/project/PRJ007656",
+          "disposition": "EXISTING",
+          "id": "seoul-kitchen-incubator-25-13",
+          "reason": "서울 키친인큐베이터 25기·제조주방13기 기존 항목"
+        },
+        {
+          "title": "창업도시 조성 프로젝트 창업도시 모집",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127435",
+          "disposition": "NOT_RELEVANT",
+          "reason": "광역자치단체 대상 창업도시 선정 모집(창업자 신청 아님)"
+        },
+        {
+          "title": "TEL VENTURE CAPITAL × 충남창조경제혁신센터 Nexus Connect 투자 밋업",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200View.do?cpage=2&hashCode=09&rows=15",
+          "disposition": "EXISTING",
+          "id": "tel-vc-nexus-connect-chungnam-2026",
+          "reason": "TEL VC 충남 Nexus Connect 기존 항목"
+        },
+        {
+          "title": "대전 창업도시 프로젝트 대학형·통합형 창업실행",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200View.do?cpage=2&hashCode=09&rows=15",
+          "disposition": "EXISTING",
+          "id": "daejeon-univ-integrated-startup-execution-2026",
+          "reason": "대전 대학형·통합형 창업실행 기존 항목"
+        },
+        {
+          "title": "충북 4분기 청년 소상공인 창업응원금",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126978",
+          "disposition": "INELIGIBLE",
+          "reason": "충북 내 사업장 운영 중인 창업 7년 이내 소상공인 대상(사업자 보유 전제)"
+        },
+        {
+          "title": "당진 청년 취·창업 디자인 개선 지원",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126349",
+          "disposition": "PUBLISHED",
+          "id": "dangjin-youth-design-improvement-2026"
+        },
+        {
+          "title": "경남 진주시 발달장애인 가족창업 컨설팅",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125974",
+          "disposition": "PUBLISHED",
+          "id": "jinju-disabled-family-startup-consulting-2026"
+        },
+        {
+          "title": "경기도 중장년 생애 최초 창업 경영안정화 교육",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124471",
+          "disposition": "NOT_RELEVANT",
+          "reason": "2026-05-22 공고로 지금도 접수 중인지 공식 확인 못 함"
+        },
+        {
+          "title": "제주 해양수산 창업투자센터 수혜기업 재공고",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123091",
+          "disposition": "INELIGIBLE",
+          "reason": "사업자등록 필수(제주 해양수산 중소기업)"
+        },
+        {
+          "title": "전남 3D프린팅 모형설계·후가공",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121247",
+          "disposition": "PUBLISHED",
+          "id": "jeonnam-3d-printing-prototype-ip-2026"
+        },
+        {
+          "title": "울산 창업의 꿈 울산이 이루어 드림",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121148",
+          "disposition": "INELIGIBLE",
+          "reason": "2024-07-01 이전 개업 기존 소상공인 한정"
+        },
+        {
+          "title": "강진군 소상공인 창업 임대료",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000117365",
+          "disposition": "INELIGIBLE",
+          "reason": "강진군 사업자등록·주소 보유 소상공인 한정"
+        },
+        {
+          "title": "하동군 소상공인 생애 첫 창업",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000117277",
+          "disposition": "INELIGIBLE",
+          "reason": "하동군 사업자등록 완료 정상영업 점포 한정"
+        },
+        {
+          "title": "서울창업허브 M+ 하반기 입주기업",
+          "url": "https://mplus.startup-plus.kr/project/PRJ007682",
+          "disposition": "PUBLISHED",
+          "id": "seoul-startup-hub-mplus-second-half-2026"
+        },
+        {
+          "title": "인탑스 액셀러레이팅 6기",
+          "url": "https://paperprogram.imweb.me/apply-accelerating",
+          "disposition": "PUBLISHED",
+          "id": "intops-accelerating-6th-2026"
+        },
+        {
+          "title": "서울창업허브 공덕 입주기업 협업 지원",
+          "url": "https://www.startup-plus.kr/project/PRJ007496",
+          "disposition": "INELIGIBLE",
+          "reason": "서울창업허브 공덕 입주기업 2개사 이상 협업팀 한정"
+        },
+        {
+          "title": "[서초창업스테이션] 11월 창업 교육 - 초기 스타트업을 위한 브랜드 만들기",
+          "url": "https://www.xn--2i4bieu3bszgvtc6wlunby2r.com/sub_program/operate_view.php?idx=70",
+          "disposition": "PUBLISHED",
+          "id": "seocho-startup-station-brand-edu-2026-11"
+        },
+        {
+          "title": "진도군 2027년 청년어촌정착지원사업 모집",
+          "url": "https://www.jindo.go.kr/home/gosi/general.cs?act=view&notAncmtMgtNo=26376",
+          "disposition": "PUBLISHED",
+          "id": "jindo-youth-fishing-village-settlement-2027"
+        },
+        {
+          "title": "완도군 2027년 청년어촌정착지원 사업자 모집",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127729",
+          "disposition": "PUBLISHED",
+          "id": "wando-youth-fishing-village-settlement-2027"
+        },
+        {
+          "title": "2027년 충북 청년농업인 스마트팜 창업 지원사업 공모",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127669",
+          "disposition": "PUBLISHED",
+          "id": "chungbuk-youth-farmer-smartfarm-startup-2027"
+        },
+        {
+          "title": "당진 청년 취·창업 디자인 개선 지원",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126349",
+          "disposition": "PUBLISHED",
+          "id": "dangjin-youth-design-improvement-2026"
+        },
+        {
+          "title": "경남 진주시 발달장애인 가족창업 컨설팅",
+          "url": "https://www.debc.or.kr/cop/bbs/selectBoardArticle.do?bbsId=BIZ_PBANC_BBS&menuNo=311&nttId=90410&pageIndex=3",
+          "disposition": "PUBLISHED",
+          "id": "jinju-disabled-family-startup-consulting-2026"
+        },
+        {
+          "title": "전남 3D프린팅 모형설계·후가공 지원",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121247",
+          "disposition": "PUBLISHED",
+          "id": "jeonnam-3d-printing-prototype-ip-2026"
+        },
+        {
+          "title": "(하반기) 2026년 서울창업허브 M+ 입주기업 모집",
+          "url": "https://mplus.startup-plus.kr/project/PRJ007682",
+          "disposition": "PUBLISHED",
+          "id": "seoul-startup-hub-mplus-second-half-2026"
+        },
+        {
+          "title": "인탑스 액셀러레이팅 6기",
+          "url": "https://paperprogram.imweb.me/apply-accelerating",
+          "disposition": "PUBLISHED",
+          "id": "intops-accelerating-6th-2026"
+        },
+        {
+          "title": "NEST G밸리 4기 입주기업 모집",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179733",
+          "disposition": "PUBLISHED",
+          "id": "nest-gvalley-4th-2026"
+        },
+        {
+          "title": "2027 1인 창조기업 지원센터 상반기 신규 입주기업 1차 모집(인천)",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179748",
+          "disposition": "PUBLISHED",
+          "id": "itp-one-person-creative-center-2027h1-1st"
+        },
+        {
+          "title": "2026 SVC Seoul 멤버십(확장형) 모집",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178802",
+          "disposition": "PUBLISHED",
+          "id": "svc-seoul-membership-expansion-2026"
+        },
+        {
+          "title": "2026 제4차 북부창업아카데미 및 북부창업멘토링 DAY(여성 예비창업자)",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179741",
+          "disposition": "PUBLISHED",
+          "id": "seoul-north-women-startup-academy-4th-2026"
+        },
+        {
+          "title": "한국공항공사 창업보육센터 입주기업 모집(서울 강서)",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179731",
+          "disposition": "PUBLISHED",
+          "id": "kac-startup-incubator-2027"
+        },
+        {
+          "title": "2027 인천관광기업지원센터 입주기업 모집",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179738",
+          "disposition": "PUBLISHED",
+          "id": "incheon-tourism-biz-center-2027"
+        },
+        {
+          "title": "2027 고양인쇄문화허브센터 입주기업 모집",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179729",
+          "disposition": "PUBLISHED",
+          "id": "goyang-print-culture-hub-2027"
+        },
+        {
+          "title": "용인시산업진흥원 2026년 제5차 창업지원센터 입주기업 모집(바이오헬스)",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179740",
+          "disposition": "PUBLISHED",
+          "id": "yongin-startup-center-fifth-biohealth-2026"
+        },
+        {
+          "title": "노원 청년가게 3호점·4호점 청년창업자 모집",
+          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1003&q_bbscttSn=20261020144915274&q_estnColumn7=&q_estnColumn1=11&q_ntceSiteCode=11&q_clCode=0&q_rowPerPage=10&q_currPage=1",
+          "disposition": "PUBLISHED",
+          "id": "nowon-youth-shop-3-4-founders-2026"
+        },
+        {
+          "title": "노원구 청년 팝업스토어 하계점 신규 운영자 모집(2027)",
+          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1003&q_bbscttSn=20261020154610517&q_estnColumn1=11&q_ntceSiteCode=11&q_clCode=0",
+          "disposition": "PUBLISHED",
+          "id": "nowon-youth-popup-store-summer-2027"
+        }
+      ]
+    },
+    "upcomingOpenings": {
+      "status": "DONE",
+      "queriesByAxis": {
+        "announcedNotOpen": [
+          "접수 예정 공모전 해커톤 11월 중순 오픈 사전 알림 2026",
+          "창업지원사업 모집 예정 공고 사전 안내 2026년 11월 중 접수 시작"
+        ],
+        "firstComeCountdown": [
+          "선착순 모집 해커톤 신청 오픈 11월 11일 11월 12일 11월 13일 2026",
+          "참가 신청 시작 D-day 공모전 창업 프로그램 선착순 마감 이번 주 2026 11월"
+        ]
+      },
+      "rawCandidates": [
+        {
+          "title": "2026 대구 로컬AI그라운드(wevity 접수예정 표기)",
+          "url": "https://www.dgucenter.or.kr/bbs/board.php?bo_table=notice&wr_id=744",
+          "disposition": "DUPLICATE",
+          "reason": "11/6부터 접수 중이라 OPEN 공모전으로 게시(tracks aiData)"
+        },
+        {
+          "title": "제2회 대한민국 AI 창조공모대전(접수예정)",
+          "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=111837",
+          "disposition": "NOT_RELEVANT",
+          "reason": "미술협회 주최 AI 창작(아트·디자인) 공모, 범위 밖"
+        },
+        {
+          "title": "안양시 유망기업 육성 지원사업(11/16 접수 시작)",
+          "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127714",
+          "disposition": "EXISTING",
+          "reason": "11-06 조사에서 확인(지역 제한 가능), 공식 페이지 이번 조사 미열람"
+        },
+        {
+          "title": "대전 스타트업 원스톱 지원센터 아카데미 4차(선착순 30명)",
+          "url": "https://www.venturesquare.net/announcement/1099041",
+          "disposition": "NOT_RELEVANT",
+          "reason": "공식 페이지 미확인, 대전 소재 기업 대상"
+        },
+        {
+          "title": "2026 서울 펀테크·서울핀테크위크 후속",
+          "url": "https://www.innoforest.co.kr/growth-bridge/OI00000777/",
+          "disposition": "CLOSED",
+          "reason": "신청 8월 종료"
+        },
+        {
+          "title": "코리아 핀테크 위크 2026(11/25~27)",
+          "url": "https://www.fintechtimes.co.kr/mobile/article.html?no=57175",
+          "disposition": "NOT_RELEVANT",
+          "reason": "박람회 행사, 공모·지원 아님"
+        }
+      ]
+    },
+    "aiNews": {
+      "status": "DONE",
+      "queriesByAxis": {
+        "officialProduct": [
+          "Goldman Sachs restricts Claude Code traders bankers engineers Bloomberg",
+          "Anthropic Claude announcement November 2026",
+          "OpenAI announces new model or product this week"
+        ],
+        "githubReleases": [
+          "GitHub Trending 캐시 열람(llama-modchip, billion-context README 직접 확인)",
+          "llama.cpp release notes November 2026 new model support",
+          "Ollama vLLM GitHub release November 2026"
+        ],
+        "huggingFace": [
+          "HF 캐시 열람 후 Qwen/Qwen3.8-27B 모델 카드 열람",
+          "Hugging Face trending model release Qwen3.8 Nemotron 3.5 Transcribe November 2026",
+          "허깅페이스 오픈 모델 공개 이번 주 11월 2026"
+        ],
+        "researchLabs": [
+          "arXiv new paper LLM agents November 2026 DeepMind OpenAI research blog",
+          "AI 연구소 신규 논문 발표 2026년 11월 모델 평가"
+        ],
+        "communities": [
+          "HN 상위 30 캐시 스캔",
+          "news.hada.io 첫 화면 직접 열람",
+          "Apiiro Claude Code Don't Ask Again settings.local.json 1,122 GitHub files"
+        ]
+      },
+      "rawCandidates": [
+        {
+          "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
+          "url": "https://news.ycombinator.com/item?id=50415628",
+          "disposition": "EXISTING",
+          "id": "goldman-claude-code-restriction-2026-11",
+          "communityEvidence": [
+            {
+              "platform": "Hacker News",
+              "url": "https://news.ycombinator.com/item?id=50415628",
+              "observedAt": "2026-11-09T12:54:32+09:00",
+              "discussionDate": "2026-11-08",
+              "metrics": "HN top stories rank 15, 657 points/379 comments (캐시)",
+              "attentionReason": "기업의 코딩 에이전트 접근 제한 논쟁"
+            },
+            {
+              "platform": "GeekNews",
+              "url": "https://news.hada.io/topic?id=36827",
+              "observedAt": "2026-11-09T12:54:32+09:00",
+              "discussionDate": "2026-11-09",
+              "metrics": "첫 화면 3위, 6포인트/1댓글",
+              "attentionReason": "한국 커뮤니티 두 번째 확인"
+            }
+          ],
+          "verificationUrls": [
+            "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers"
+          ],
+          "verificationNote": "Bloomberg 원문은 열지 못함. State of AI 기사와 검색 결과의 2차 보도가 핵심 사실(10월 지침, 엔지니어 한정, strats 예외)에서 일치. 사유·인원수는 불확실.",
+          "reason": "이미 있는 공고"
+        },
+        {
+          "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+          "url": "https://news.ycombinator.com/item?id=50407882",
+          "disposition": "EXISTING",
+          "id": "claude-code-settings-local-secrets-2026-11",
+          "communityEvidence": [
+            {
+              "platform": "Hacker News",
+              "url": "https://news.ycombinator.com/item?id=50407882",
+              "observedAt": "2026-11-09T12:54:32+09:00",
+              "discussionDate": "2026-11-07",
+              "metrics": "rank 29, 595 points/404 comments (캐시)",
+              "attentionReason": "보안 이슈에 Claude Code 팀원이라 밝힌 작성자가 직접 답변"
+            }
+          ],
+          "verificationUrls": [
+            "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again"
+          ],
+          "verificationNote": "Apiiro 원문은 403/Cloudflare로 열지 못함. 1,122 수치는 HN 제목만 근거. Anthropic 측 답변은 HN 댓글(bcherny)로 확인, 계정 진위는 미확인.",
+          "reason": "이미 있는 공고"
+        },
+        {
+          "title": "Goodbye Claude, hello Pi",
+          "url": "https://news.ycombinator.com/item?id=50410107",
+          "disposition": "EXISTING",
+          "id": "goodbye-claude-hello-pi-2026-11",
+          "communityEvidence": [
+            {
+              "platform": "Hacker News",
+              "url": "https://news.ycombinator.com/item?id=50410107",
+              "observedAt": "2026-11-09T12:54:32+09:00",
+              "discussionDate": "2026-11-08",
+              "metrics": "rank 23, 713 points/443 comments (캐시)",
+              "attentionReason": "하네스 선택 경험담과 반론"
+            },
+            {
+              "platform": "GeekNews",
+              "url": "https://news.hada.io/topic?id=36795",
+              "observedAt": "2026-11-09T12:54:32+09:00",
+              "discussionDate": "2026-11-09",
+              "metrics": "첫 화면 11위, 2포인트/1댓글",
+              "attentionReason": "한국 커뮤니티 확인"
+            }
+          ],
+          "verificationUrls": [
+            "https://caleb.software/posts/claude-to-pi.html"
+          ],
+          "verificationNote": "원문 요약 확인. 글 날짜 표기가 9월 21일로 읽혀 HN 제출일(11-08)과 불일치, 미해결. 수치는 글쓴이 자체 집계.",
+          "reason": "이미 있는 공고"
+        },
+        {
+          "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+          "url": "https://news.ycombinator.com/item?id=50411961",
+          "disposition": "EXISTING",
+          "id": "llama-modchip-284b-64gb-2026-11",
+          "communityEvidence": [
+            {
+              "platform": "Hacker News",
+              "url": "https://news.ycombinator.com/item?id=50411961",
+              "observedAt": "2026-11-09T12:54:32+09:00",
+              "discussionDate": "2026-11-08",
+              "metrics": "rank 17, 386 points/172 comments (캐시)",
+              "attentionReason": "로컬 실행 하한 및 양자화 품질 논쟁"
+            }
+          ],
+          "verificationUrls": [
+            "https://github.com/synchopate/llama-modchip"
+          ],
+          "verificationNote": "README 주장 확인. 속도·품질은 자체 보고, 직접 재현 안 함.",
+          "reason": "이미 있는 공고"
+        },
+        {
+          "title": "Qwen3.8-27B",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+          "disposition": "NOT_RELEVANT",
+          "reason": "HF 트렌딩 목록에만 있고 커뮤니티 논의 미확인; 모델 카드에 출시일 없음."
+        },
+        {
+          "title": "How I Fight AI Brain Fry",
+          "url": "https://news.ycombinator.com/item?id=50416363",
+          "disposition": "NOT_RELEVANT",
+          "reason": "HN 22위(179점)이나 본문·댓글을 열어 보지 못함; 시간상 미검토."
+        },
+        {
+          "title": "NVIDIA Nemotron 3.5 Transcribe",
+          "url": "https://zeli.app/story/50275128",
+          "disposition": "NOT_RELEVANT",
+          "reason": "검색 결과 기준 공개일이 10월 28~30일로 최근 72시간 밖이며 1차 출처(HF 모델 카드)를 열어 확인하지 못함."
+        },
+        {
+          "title": "Can LLM Agents Be Forward-Deployed Engineers? (arXiv 2611.03551)",
+          "url": "https://papers.cool/arxiv/2611.03551",
+          "disposition": "NOT_RELEVANT",
+          "reason": "검색 결과에서 11-02 게재만 확인, 커뮤니티 반응 증거 없음."
+        }
+      ]
+    },
+    "aiDiscovery": {
+      "status": "DONE",
+      "queriesByAxis": {
+        "sitesDirectories": [
+          "awesome list curated AI agent skills MCP servers directory November 2026",
+          "AI 도구 디렉토리 큐레이션 사이트 신규 2026"
+        ],
+        "github": [
+          "GitHub Trending 캐시 열람",
+          "GitHub trending open source AI coding agent repository this week stars"
+        ],
+        "skillsMcpAgents": [
+          "new MCP server release agent skills Claude Code plugin marketplace November 2026",
+          "MCP 서버 에이전트 스킬 신규 공개 오픈소스 2026년 11월"
+        ],
+        "workflows": [
+          "multi-agent coding workflow worktree tutorial recipe 2026",
+          "AI 에이전트 업무 자동화 워크플로 사례 공유 2026"
+        ],
+        "communities": [
+          "HN 상위 30 캐시 스캔",
+          "Show HN AI tool open source launched this week November 2026"
+        ],
+        "sourceRadar": [
+          "best AI newsletter weekly roundup new tools to follow 2026",
+          "AI 뉴스레터 커뮤니티 구독 추천 한국어 AI 소식 2026"
+        ]
+      },
+      "rawCandidates": [
+        {
+          "title": "llama-modchip",
+          "url": "https://github.com/synchopate/llama-modchip",
+          "disposition": "EXISTING",
+          "id": "synchopate-llama-modchip",
+          "reason": "이미 있는 공고"
+        },
+        {
+          "title": "billion-context",
+          "url": "https://github.com/ranxianglei/billion-context",
+          "disposition": "EXISTING",
+          "id": "ranxianglei-billion-context",
+          "reason": "이미 있는 공고"
+        },
+        {
+          "title": "meta/astryx",
+          "url": "https://github.com/meta/astryx",
+          "disposition": "EXISTING",
+          "id": "meta-astryx",
+          "reason": "이미 있는 공고"
+        },
+        {
+          "title": "KetchUp/BenchUp",
+          "url": "https://ketchup3d.github.io/app/",
+          "disposition": "NOT_RELEVANT",
+          "reason": "AI 도구가 아닌 3D 모델러."
+        },
+        {
+          "title": "anthropics/skills, vercel-labs/agent-browser",
+          "url": "https://github.com/anthropics/skills",
+          "disposition": "NOT_RELEVANT",
+          "reason": "이미 카탈로그에 있거나 신규 변경 미확인(agent-browser는 11-06 등재)."
+        },
+        {
+          "title": "Sx (package manager for AI skills, MCPs, commands)",
+          "url": "https://news.ycombinator.com/shownew",
+          "disposition": "NOT_RELEVANT",
+          "reason": "Show HN 미러 목록에서만 확인, 게시일·1차 출처 미검증."
+        },
+        {
+          "title": "awesome-agent-skills / awesome-claude-code 등 큐레이션 목록",
+          "url": "https://github.com/heilcheng/awesome-agent-skills",
+          "disposition": "NOT_RELEVANT",
+          "reason": "검색 결과가 11월 이전 제3자 글 위주이고 새 변화 근거 없음; 직접 열람하지 않음."
+        }
+      ]
+    }
+  },
+  "fixedSources": {
+    "Hackathon Korea": {
+      "status": "CHECKED",
+      "urls": [
+        "https://koreahackathons.com/"
+      ],
+      "coverageNote": "예정 해커톤 3건 확인(MAWD 11/14~15, KUK 11/16~23, AI 보안 12/11), 모두 기존 항목. 등록 마감일은 목록에 없음"
+    },
+    "Grantly": {
+      "status": "CHECKED",
+      "urls": [
+        "https://grantly.kr/opportunities/support"
+      ],
+      "coverageNote": "화면에 보인 22건은 모두 마감일 11/9. 11/10 이후 마감 필터(내일~7일 194건, 8일 이후 472건)는 열지 못함"
+    },
+    "링커리어": {
+      "status": "CHECKED",
+      "urls": [
+        "https://linkareer.com/list/contest?filterBy_status=OPEN&filterType=CATEGORY&orderBy_direction=ASC&orderBy_field=RECRUIT_CLOSE_AT&page=1"
+      ],
+      "coverageNote": "마감 임박순 앞 20건(전체 448건)만 확인. KISA 공모(361292) 확인"
+    },
+    "요즘것들": {
+      "status": "FAILED",
+      "urls": [
+        "https://www.allforyoung.com/"
+      ],
+      "reason": "11-06 조사에서 robots.txt가 AI 봇을 막는 것으로 확인되어 이번에도 열지 않음",
+      "coverageNote": "열지 않음"
+    },
+    "ContestKorea": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.contestkorea.com/sub/list.php?int_gbn=1&Txt_bcode=030510001"
+      ],
+      "coverageNote": "IT 목록 중 2건만 노출(Korea Local Marketing Hackathon, AX인재전쟁), 접수기간은 목록에 없음"
+    },
+    "소통24": {
+      "status": "CHECKED",
+      "urls": [
+        "https://modu.go.kr/front/epilogue/epilogueBbsList.do"
+      ],
+      "coverageNote": "전체 262쪽 중 1쪽 9건 확인. 범위 내 후보는 모두 기존 항목(KEIT, 강원 톡톡)"
+    },
+    "정책브리핑": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.korea.kr/briefing/policyBriefingList.do"
+      ],
+      "coverageNote": "1쪽(10/29~11/9) 공모·공고·모집 관련 보도자료 없음"
+    },
+    "AI_TOP_100": {
+      "status": "CHECKED",
+      "urls": [
+        "https://aitop100.org/"
+      ],
+      "coverageNote": "접수 10/21 마감, 본선 11/21. 새 접수 일정 없음, 페이지에 예선 종료 문구 혼재"
+    },
+    "EventUs/Luma/온오프믹스": {
+      "status": "CHECKED",
+      "urls": [
+        "https://event-us.kr/search?keyword=해커톤",
+        "https://www.onoffmix.com/event/main?s=해커톤"
+      ],
+      "coverageNote": "메인 세션이 13:24에 직접 열람. 이벤터스 검색 결과는 템플릿만 와서 목록 없음. 온오프믹스 해커톤 검색 1쪽 약 20건은 모두 모집 마감 또는 종료(대구 AI 드래프톤·NASA Space Apps Seoul 등 기존·트랙 항목). Luma는 luma.com으로 이동만 확인."
+    },
+    "Meetup": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.meetup.com/find/?keywords=hackathon&location=kr--Seoul&source=EVENTS"
+      ],
+      "coverageNote": "메인 세션이 13:24에 직접 열람. 서울 해커톤 검색 결과 12건은 언어 교환·코워킹·기술 모임이고 공모·해커톤 모집 없음."
+    },
+    "K-Startup": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do"
+      ],
+      "coverageNote": "진행중 공고 1쪽 18건 확인 및 7건 상세 열람. 2쪽 이후는 pageNum 파라미터가 먹지 않아 열지 못함"
+    },
+    "기업마당": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.bizinfo.go.kr/sii/siia/selectSIIA200View.do?pblancArea=400"
+      ],
+      "coverageNote": "최신 10건 확인, 창업·예비창업 태그 항목 없음, 서울 항목은 패션위크 참여브랜드 1건"
+    },
+    "SBA": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.sba.seoul.kr/"
+      ],
+      "coverageNote": "메인에서 공고 10건 확인(M+ 11/13, 게임랩 11/10 등). 상세 페이지는 메뉴 틀만 열려 내용 확인 못 함"
+    },
+    "NIPA": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.nipa.kr/home/2-2"
+      ],
+      "coverageNote": "현재 접수중 1건(월드프렌즈 자문단 운영기관, 창업자 대상 아님). 창업·AI 공고는 대부분 종료"
+    },
+    "KISA": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.kisa.or.kr/401/form?postSeq=3791&page=1"
+      ],
+      "coverageNote": "모두의 KISA 공모 열람. 창업 전용 모집은 검색에서 확인 안 됨"
+    },
+    "fintech": {
+      "status": "CHECKED",
+      "urls": [
+        "https://fintech.or.kr/"
+      ],
+      "coverageNote": "메인 세션이 13:24에 핀테크지원센터 첫 화면 열람. 첫 화면에 사업공고 목록 본문이 실리지 않아 공고는 확인 못 함(공지 목록 주소는 404). 트랙 작업 메모: 웹 검색만 수행(핀테크 아이디어 공모전 10/8 종료, 오픈이노베이션 상반기 종료). fintechcenter 직접 열람은 이번에 하지 않음"
+    },
+    "DACON": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.dacon.io/competitions",
+        "https://daker.ai/public/hackathons"
+      ],
+      "coverageNote": "Playwright 캐시로 DACON과 DAKER 목록을 읽었다. DACON 접수 중 0건.",
+      "competitionsInventory": [],
+      "dakerInventory": [
+        {
+          "title": "소재연구데이터 AI 활용 해커톤",
+          "url": "https://daker.ai/public/hackathons/2026-materials-ai-hackathon",
+          "disposition": "EXISTING",
+          "id": "daker-materials-ai-hackathon-2026",
+          "reason": "이전 발행에서 이미 올린 공고"
+        },
+        {
+          "title": "제주 AI·빅데이터 활용 AI Agent 개발 챌린지",
+          "url": "https://daker.ai/public/hackathons/jeju-ai-bigdata-agent-challenge",
+          "disposition": "EXISTING",
+          "id": "jeju-ai-bigdata-agent-challenge-2026",
+          "reason": "이전 발행에서 이미 올린 공고"
+        },
+        {
+          "title": "국부펀드 KIC, AI 에이전트 공모전",
+          "url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
+          "disposition": "EXISTING",
+          "id": "kic-ai-agent-competition-2026",
+          "reason": "기존 브리핑에 있음"
+        }
+      ]
+    }
+  },
+  "machineSources": {
+    "contestKorea": [
+      {
+        "title": "학문•과학•IT 2026 GSA 영어 말하기 대회 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202605150002",
+        "disposition": "NOT_RELEVANT",
+        "reason": "영어 말하기 대회(강연·발표류)"
+      },
+      {
+        "title": "학문•과학•IT 2026 산업통상부 ISTANS 논문경진대회 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202606230008",
+        "disposition": "NOT_RELEVANT",
+        "reason": "논문경진대회"
+      },
+      {
+        "title": "아이디어•건축•창업 내 생각대로 돌아가는 자원순환 아이디어 공모 3",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202606240053",
+        "disposition": "EXISTING",
+        "id": "mcee-resource-circulation-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 [방송미디어통신위원회, 한국인터넷진흥원] 2026 위치정보 맞춤형 컨설팅 참여기업 모집 (상시) 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202608120002",
+        "disposition": "EXISTING",
+        "id": "korealbs-location-info-consulting-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "학문•과학•IT 제32회 도시연구세미나 발표공모 - AI와 도시 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202608270057",
+        "disposition": "NOT_RELEVANT",
+        "reason": "학술 세미나 발표공모(논문·학술 발표, 대학원생 대상)"
+      },
+      {
+        "title": "아이디어•건축•창업 2027 KT&G 국제 대학생 창업교류전(ASVF) 한국대표 모집 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202609010071",
+        "disposition": "EXISTING",
+        "id": "ktng-asvf-korea-rep-2027",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 사진•영상•영화제 유스업(Youth UP!) 제1회 SDGs 실천 아이디어·숏츠 공모전 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202609020032",
+        "disposition": "NOT_RELEVANT",
+        "reason": "SDGs 숏츠(영상) 제출형 공모전"
+      },
+      {
+        "title": "아이디어•건축•창업 제2회 양평군 건축문화상 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202609020095",
+        "disposition": "NOT_RELEVANT",
+        "reason": "건축문화상(건축상)"
+      },
+      {
+        "title": "아이디어•건축•창업 [상주시] 상주시 대표축제 대국민 아이디어 공모전 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202609070047",
+        "disposition": "EXISTING",
+        "id": "sangju-festival-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 2026년 금연 정책제안 연구공모전 4",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202609100015",
+        "disposition": "EXISTING",
+        "id": "seoul-quit-smoking-policy-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "학문•과학•IT The 다양한 분야 2026기후에너지어워드 공모전 3",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202609150064",
+        "disposition": "NOT_RELEVANT",
+        "reason": "기후에너지 우수사례 어워드(시상형), 개발·아이디어 대회 아님"
+      },
+      {
+        "title": "학문•과학•IT 제1회 전국 대학생 AI 재무설계 콘테스트 'AFPK 영 플래너 챌린지 2026' 2",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202609160045",
+        "disposition": "NOT_RELEVANT",
+        "reason": "재무설계 경연으로 아이디어·개발 대회가 아님(모음 사이트 정보 기준, 공식 형식 미확인)"
+      },
+      {
+        "title": "학문•과학•IT The 다양한 분야 제 9 회 법학경시대회 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202609210004",
+        "disposition": "NOT_RELEVANT",
+        "reason": "법학 경시(시험)형 대회"
+      },
+      {
+        "title": "아이디어•건축•창업 사장님을 위한 금융 아이디어 공모전 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202609280040",
+        "disposition": "EXISTING",
+        "id": "kbank-kakaobank-owner-finance-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "학문•과학•IT [데이콘] 국부펀드 KIC, AI 에이전트 공모전 2",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610010016",
+        "disposition": "EXISTING",
+        "id": "kic-ai-agent-competition-2026",
+        "reason": "EXISTING"
+      },
+      {
+        "title": "학문•과학•IT [NUR-CONNECT: 삶 전반을 잇는 간호] 공모전 1",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610010096",
+        "disposition": "INELIGIBLE",
+        "reason": "전국 간호대학 재·휴학생 한정"
+      },
+      {
+        "title": "학문•과학•IT [학술정보국_ 「NUR-CONNECT: 삶 전반을 잇는 간호」 공모전 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610060040",
+        "disposition": "DUPLICATE",
+        "reason": "21번(NUR-CONNECT 간호 공모전)과 같은 공고"
+      },
+      {
+        "title": "사진•영상•영화제 아이디어•건축•창업 2026년 2차 외국발 허위정보 대응 대학생 아이디어 공모전 1",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610120005",
+        "disposition": "EXISTING",
+        "id": "kaist-foreign-disinfo-idea-2026-2",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "학문•과학•IT 2026 대구광역시 기후·환경·탄소중립 공공데이터 AI 활용대회 2",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610120053",
+        "disposition": "EXISTING",
+        "id": "daegu-public-data-ai-climate-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 2026년「청소년이 바꾸는 서울」인스타툰 공모전 1",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610130040",
+        "disposition": "NOT_RELEVANT",
+        "reason": "인스타툰(웹툰) 공모전, 서울 청소년 대상"
+      },
+      {
+        "title": "아이디어•건축•창업 2026년 신규 MICE 행사 아이디어 공모전 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610130042",
+        "disposition": "EXISTING",
+        "id": "kapco-new-mice-event-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "학문•과학•IT 2026학년도 연세대학교 교육대학원 총장배 수업시연대회 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610140013",
+        "disposition": "NOT_RELEVANT",
+        "reason": "수업시연대회(강연·발표류)"
+      },
+      {
+        "title": "아이디어•건축•창업 서울특별시 행정서식, 뚝딱뚝딱! 개선 아이디어 공모전 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610140022",
+        "disposition": "EXISTING",
+        "id": "seoul-admin-form-improve-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "학문•과학•IT 제3회 생성형 AI 경진대회 (초·중·고 학생문화경진대회) 3",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610140076",
+        "disposition": "INELIGIBLE",
+        "reason": "초·중·고 학생 한정"
+      },
+      {
+        "title": "아이디어•건축•창업 이거 바뀌면 어때유? (대전 시민 생활·관계 개선 아이디어 공모전) 1",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610190014",
+        "disposition": "EXISTING",
+        "id": "daejeon-living-relation-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 소상공인 성장 및 재도약을 위한 정책 아이디어 공모전 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610190020",
+        "disposition": "EXISTING",
+        "id": "gcgf-small-biz-policy-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 용산국제업무지구 스마트도시 아이디어 공모전 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610190032",
+        "disposition": "EXISTING",
+        "id": "yongsan-smart-city-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "학문•과학•IT 2026 K-AWARDS DIGITAL EXCELLENCE AWARDS 2",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610190053",
+        "disposition": "NOT_RELEVANT",
+        "reason": "디지털 어워드(고등·대학생 시상), 개발·아이디어 대회로 확인되지 않음(모음 사이트 정보 기준)"
+      },
+      {
+        "title": "학문•과학•IT 현대자동차그룹 차량용 앱 개발 공모전 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610200005",
+        "disposition": "EXISTING",
+        "id": "hyundai-in-vehicle-app-dev-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 2026 대경권 캠퍼스 IR 챔피언십 (창업 공모전) 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610200007",
+        "disposition": "INELIGIBLE",
+        "reason": "대구·경북 소재 학생 및 졸업 3년 이내 한정"
+      },
+      {
+        "title": "아이디어•건축•창업 2026 대학생 정책 아이디어 공모전 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610210006",
+        "disposition": "EXISTING",
+        "id": "kapae-univ-student-policy-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "학문•과학•IT 2026 한국세라믹기술원 AI 영상 공모전 「세라믹이 사라진 세상」 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610210038",
+        "disposition": "NOT_RELEVANT",
+        "reason": "AI 영상 공모전"
+      },
+      {
+        "title": "아이디어•건축•창업 사회보장 데이터를 활용한 AI 혁신 아이디어 경진대회 4",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610210040",
+        "disposition": "EXISTING",
+        "id": "ssis-social-security-ai-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 [제10회 모모전] 현대모비스 창립 50주년 굿즈 아이디어 공모전 2",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610220027",
+        "disposition": "EXISTING",
+        "id": "hyundai-mobis-momojeon-50th-goods-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 「상급종합병원 구조전환 지원사업」 2026년 진료협력 우수사례 공모전 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610230013",
+        "disposition": "INELIGIBLE",
+        "reason": "상급종합병원·진료협력병원 등 지정 기관 한정"
+      },
+      {
+        "title": "아이디어•건축•창업 [접수기간연장]「제 2회 전국 대학생 사회적기업 우수사례발굴 경진대회」 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610250001",
+        "disposition": "NOT_RELEVANT",
+        "reason": "사회적기업 우수사례 발굴·보고서형 경진대회"
+      },
+      {
+        "title": "아이디어•건축•창업 2026 스마트시티(지식서비스산업) 아이디어 경진대회 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610250002",
+        "disposition": "INELIGIBLE",
+        "reason": "HUSS 디지털경제 컨소시엄 5개 대학·세종앵커 참여 대학 재학생 한정"
+      },
+      {
+        "title": "아이디어•건축•창업 2026년 해양 창업아이디어 공모전 「Spark-up 1876」 1",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610260008",
+        "disposition": "EXISTING",
+        "id": "busan-marine-startup-spark-up-1876-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 2026 체육관련 규제개선 공모전 1",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610260014",
+        "disposition": "EXISTING",
+        "id": "kspo-sports-regulation-improve-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "학문•과학•IT 하나은행 『하나원픽 CUP AI 게임창작대회』 1",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610260029",
+        "disposition": "INELIGIBLE",
+        "reason": "만 14~18세 하나은행 고객 한정"
+      },
+      {
+        "title": "아이디어•건축•창업 2026 지역문제해결 아이디어 발굴 부여 솔버톤 대회 1",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610260036",
+        "disposition": "EXISTING",
+        "id": "buyeo-community-solverthon-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 [햇반 30주년] 갓 지은 AI디어 공모전 3",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610260051",
+        "disposition": "EXISTING",
+        "id": "cj-hetbahn-30th-ai-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 2026년 ESG 대국민 아이디어 공모전 3",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610260053",
+        "disposition": "EXISTING",
+        "id": "nibp-esg-public-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "학문•과학•IT 아이디어•건축•창업 2026 사회보장 데이터를 활용한 AI 혁신 아이디어 경진대회 4",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610270001",
+        "disposition": "DUPLICATE",
+        "reason": "48번(사회보장 데이터 AI 혁신 아이디어 경진대회)과 같은 공고"
+      },
+      {
+        "title": "학문•과학•IT [한국프로세스혁신협회] 2026 AI 서비스 기획 공모전 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610270002",
+        "disposition": "INELIGIBLE",
+        "reason": "협회 지정 KDT 교육과정 신규 등록자만 참가, 재직자·기존 등록자 제외"
+      },
+      {
+        "title": "아이디어•건축•창업 2026 의왕시 청년 e-Room 창업 아이디어 공모전 참여자 모집 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610270025",
+        "disposition": "EXISTING",
+        "id": "uiwang-youth-eroom-startup-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 보령시 웰니스 정책 제안 공모전 1",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610270044",
+        "disposition": "EXISTING",
+        "id": "boryeong-wellness-policy-proposal-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 국회 미래세대 미래의제 공모전 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610280013",
+        "disposition": "EXISTING",
+        "id": "nafi-future-generation-agenda-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "학문•과학•IT The 다양한 분야 2026 제18회 전국청소년 모형항공기대회 1",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610280017",
+        "disposition": "NOT_RELEVANT",
+        "reason": "모형항공기 대회(스포츠·경기, 청소년 대상)"
+      },
+      {
+        "title": "아이디어•건축•창업 2026 「다시, 다리다」 유휴공간 활성화 아이디어 공모전 3",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610280053",
+        "disposition": "EXISTING",
+        "id": "daridari-idle-space-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 2026 차세대통신 X 융합 창업 아이디어 경진대회 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610280057",
+        "disposition": "EXISTING",
+        "id": "next-gen-comm-fusion-startup-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "학문•과학•IT 2026 대구 대학(원) AI 드래프톤 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610290006",
+        "disposition": "EXISTING",
+        "id": "daegu-univ-ai-draftthon-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "학문•과학•IT 아이디어•건축•창업 2026 AI활용 전국 대학생 창업 해커톤 대회 1",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610290007",
+        "disposition": "EXISTING",
+        "id": "keris-ai-startup-hackathon-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 미술•디자인•웹툰 2026년도 KDN Eco-Life 대국민 환경 공모전 1",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610290012",
+        "disposition": "NOT_RELEVANT",
+        "reason": "환경 공모전, 모음 사이트 분류가 미술·디자인·웹툰"
+      },
+      {
+        "title": "아이디어•건축•창업 2026년 완도군 지방소멸 대응 아이디어 공모전 2",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610290024",
+        "disposition": "EXISTING",
+        "id": "wando-depopulation-response-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 제1회 메치니코프 신제품 공모전 3",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610290028",
+        "disposition": "EXISTING",
+        "id": "hy-metchnikoff-new-product-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 2026년 대국민 재정교육 아이디어 공모전 3",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610300003",
+        "disposition": "EXISTING",
+        "id": "mpb-public-finance-education-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "학문•과학•IT 2026 성평등 AI 벤치마크 챌린지 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610300005",
+        "disposition": "EXISTING",
+        "id": "mogef-gender-equality-ai-benchmark-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 국가무형유산 상설공연 창작 콘텐츠 개발을 위한 대국민 아이디어 발굴대회 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610300011",
+        "disposition": "EXISTING",
+        "id": "national-intangible-heritage-performance-idea-2026",
+        "reason": "이미 접수 예정 공고로 있음"
+      },
+      {
+        "title": "아이디어•건축•창업 [무료 참가] 선도기업·투자자·전문가와 만나는 1:1 비즈니스 미팅｜2026 KOREA LBS Day 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610300012",
+        "disposition": "NOT_RELEVANT",
+        "reason": "비즈니스 미팅 참가 행사로 공모전·대회 아님"
+      },
+      {
+        "title": "아이디어•건축•창업 2026년 굿에어스쿨 공모전 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610300027",
+        "disposition": "NOT_RELEVANT",
+        "reason": "공식 공고 본문에 마감·대상 없음(변경 공고문 PDF 미확인), 공식 페이지 미확인"
+      },
+      {
+        "title": "학문•과학•IT 2026 현장문제 AX 업무혁신 아이디어 해커톤 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611020001",
+        "disposition": "EXISTING",
+        "id": "chungnam-manufacturing-ax-hackathon-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "사진•영상•영화제 학문•과학•IT <AI 달인 꿀팁 챌린지 시즌 4> 당신의 AI 활용 꿀팁을 공유해주세요! 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611020003",
+        "disposition": "NOT_RELEVANT",
+        "reason": "AI 활용 팁 숏폼 영상 공모"
+      },
+      {
+        "title": "아이디어•건축•창업 제1회 하나증권 청년 금융 아이디어 공모전 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611020014",
+        "disposition": "EXISTING",
+        "id": "hana-securities-youth-finance-idea-2026",
+        "reason": "이미 있음"
+      },
+      {
+        "title": "아이디어•건축•창업 제 2회 Nitto Open Innovation Challenge 2",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611020015",
+        "disposition": "EXISTING",
+        "id": "nitto-open-innovation-challenge-2nd-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 2026년 경상북도 도민 대상 규제개선 공모전 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611020027",
+        "disposition": "PUBLISHED",
+        "id": "gyeongbuk-regulation-reform-idea-2026"
+      },
+      {
+        "title": "아이디어•건축•창업 2026년 공공데이터 활용 경진대회 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611020029",
+        "disposition": "EXISTING",
+        "id": "kspo-industry-public-data-contest-2026",
+        "reason": "이미 있음"
+      },
+      {
+        "title": "학문•과학•IT 2026 제4회 전남광주 북구청장배 전국 아마추어 e스포츠 대회 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611020032",
+        "disposition": "NOT_RELEVANT",
+        "reason": "e스포츠 대회(범위 밖)"
+      },
+      {
+        "title": "학문•과학•IT 2027 동계 청소년 IT학술대회 및 대학생 IT논문경진대회 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611020040",
+        "disposition": "NOT_RELEVANT",
+        "reason": "학술대회·논문경진대회"
+      },
+      {
+        "title": "아이디어•건축•창업 서울 앵커 지역현안문제해결 로컬크리에이터 발굴기초 캠프 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611030025",
+        "disposition": "EXISTING",
+        "id": "seoul-anchor-local-creator-camp-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "학문•과학•IT AX인재전쟁 온라인 x 삼일PwC: 스펙·학력 없이 AI 역량으로 채용까지 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611030035",
+        "disposition": "EXISTING",
+        "id": "jocoding-ax-pwc-hiring-challenge-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 [산림청] 산림공공데이터 활용 사례 공모 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611040027",
+        "disposition": "EXISTING",
+        "id": "forest-public-data-use-case-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "아이디어•건축•창업 2026 청년의 시간(성남 청년 참여 예산제) 참가팀 모집 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611050035",
+        "disposition": "EXISTING",
+        "id": "seongnam-youth-time-participatory-budget-2026",
+        "reason": "이미 있음"
+      },
+      {
+        "title": "아이디어•건축•창업 LG 어나더 아이디어 챌린지 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611060004",
+        "disposition": "NOT_RELEVANT",
+        "reason": "공식 페이지 미확인(주최 요강은 대학 인증 로그인 필요, 마감·대상 미확인)"
+      },
+      {
+        "title": "학문•과학•IT Korea Local Marketing Hackathon 2026 0",
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611070021",
+        "disposition": "DUPLICATE",
+        "id": "korea-local-marketing-hackathon-2026",
+        "reason": "오늘 다른 작업이 이미 작성한 카드"
+      }
+    ],
+    "grantlySupport": [
+      {
+        "title": "11월 9일 마감",
+        "url": "https://grantly.kr/opportunities/17333",
+        "disposition": "NOT_RELEVANT",
+        "reason": "구글 제미나이 무료 특강 행사(공모·지원 아님)"
+      },
+      {
+        "title": "동국대학교 창업보육센터(서울) 신규 입주기업 모집 공고",
+        "url": "https://grantly.kr/opportunities/19389",
+        "disposition": "CLOSED",
+        "reason": "마감 2026-11-09 11:00 지남(기존 dongguk-seoul-bi-sep-2026도 CLOSED)"
+      },
+      {
+        "title": "2026년 안산정보산업진흥센터(경기TP안산창업보육센터) 제4차 신규 입주자 모집 공고",
+        "url": "https://grantly.kr/opportunities/19772",
+        "disposition": "CLOSED",
+        "reason": "마감 2026-11-09 13:00 지남"
+      },
+      {
+        "title": "[서초창업스테이션] 11월 창업 교육 프로그램 - 초기 스타트업을 위한 브랜드 만들기",
+        "url": "https://grantly.kr/opportunities/20087",
+        "disposition": "PUBLISHED",
+        "id": "seocho-startup-station-brand-edu-2026-11"
+      },
+      {
+        "title": "[숭실대학교 캠퍼스타운] 스타트업 인턴십 참여기업 모집(외국인 유학생 인턴형)",
+        "url": "https://grantly.kr/opportunities/20637",
+        "disposition": "INELIGIBLE",
+        "reason": "창업 7년 이내·상시근로자 2인 이상 창업기업 대상(사업자 보유 기업 한정), 14시 마감"
+      },
+      {
+        "title": "대덕 원스톱 Bridge 연계 제 108회 대전창업포럼 참가 모집",
+        "url": "https://grantly.kr/opportunities/20640",
+        "disposition": "NOT_RELEVANT",
+        "reason": "창업 포럼 참가 행사(지원사업 아님)"
+      },
+      {
+        "title": "[숭실대학교 캠퍼스타운] 스타트업 인턴십 참여기업 모집(외국인 유학생 인턴형) *11/9(월) 14시까지",
+        "url": "https://grantly.kr/opportunities/20835",
+        "disposition": "DUPLICATE",
+        "reason": "82번과 같은 공고"
+      },
+      {
+        "title": "[ 모 집 ] GVC AI Platform Startup Enabling Program 및 스마트워크·쇼핑몰 창업지원 및 AI 전환 지원",
+        "url": "https://grantly.kr/opportunities/20841",
+        "disposition": "NOT_RELEVANT",
+        "reason": "공식 페이지 미확인(운영기관 본문 직접 확인 못함)"
+      },
+      {
+        "title": "2026년 스타트업 법률지원사업 전남광주통합특별시 법률상담회 참여기업 모집",
+        "url": "https://grantly.kr/opportunities/21033",
+        "disposition": "NOT_RELEVANT",
+        "reason": "공식 페이지 미확인(worker 답변 없음)"
+      },
+      {
+        "title": "[벤처기업협회] 2026년 예비창업패키지 특화분야(소셜벤처)「임팩트스타 IR 데모데이」개최 (11/10)",
+        "url": "https://grantly.kr/opportunities/21525",
+        "disposition": "NOT_RELEVANT",
+        "reason": "예비창업패키지 참여기업 대상 IR 행사 개최 안내"
+      }
+    ],
+    "hackathonKorea": [
+      {
+        "title": "32일 후",
+        "url": "https://koreahackathons.com/events/capture-explain-defend-ai-cybersecurity-hackathon",
+        "disposition": "EXISTING",
+        "id": "capture-explain-defend-ai-cybersecurity-hackathon-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "7일 후",
+        "url": "https://koreahackathons.com/events/kuk-virtual-hackathon",
+        "disposition": "NOT_RELEVANT",
+        "reason": "Devpost 주관 온라인 가상 해커톤(Devpost 제외 규칙)"
+      },
+      {
+        "title": "5일 후",
+        "url": "https://koreahackathons.com/events/mawd-start-up-hackathon",
+        "disposition": "EXISTING",
+        "id": "mawd-startup-hackathon-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      }
+    ],
+    "kStartupHighlights": [
+      {
+        "title": "2026년 안산정보산업진흥센터(경기TP안산창업보육센터) 제4차 신규 입주자 모집 공고 오늘마감",
+        "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179606&schM=view",
+        "disposition": "DUPLICATE",
+        "reason": "80번과 같은 공고"
+      },
+      {
+        "title": "서울디자인재단 「2026 서울디자인런 포럼」 참가 신청 오늘마감",
+        "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179637&schM=view",
+        "disposition": "NOT_RELEVANT",
+        "reason": "디자인 포럼 참가 신청(범위 밖)"
+      },
+      {
+        "title": "[숭실대학교 캠퍼스타운] 스타트업 인턴십 참여기업 모집(외국인 유학생 인턴형) 오늘마감",
+        "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179669&schM=view",
+        "disposition": "DUPLICATE",
+        "reason": "82번과 같은 공고"
+      },
+      {
+        "title": "2026년 스타트업 법률지원사업 전남광주통합특별시 법률상담회 참여기업 모집 오늘마감",
+        "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179708&schM=view",
+        "disposition": "DUPLICATE",
+        "reason": "86번과 같은 공고"
+      },
+      {
+        "title": "2026년 중동 상황 대응 규격 컨설팅 지원사업「수혜기업 모집」 오늘마감",
+        "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179723&schM=view",
+        "disposition": "NOT_RELEVANT",
+        "reason": "공식 페이지 미확인(worker 답변 없음), 규격 컨설팅 수혜기업 모집·당일 마감"
+      },
+      {
+        "title": "2027년 고양인쇄문화허브센터 입주기업 모집 공고 ( ~ 2026.11.23.(월)까지)",
+        "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179729&schM=view",
+        "disposition": "DUPLICATE",
+        "id": "goyang-print-culture-hub-2027",
+        "reason": "오늘 다른 작업이 이미 작성한 카드"
+      },
+      {
+        "title": "2027년 1인 창조기업 지원센터 상반기 신규 입주기업 1차 모집 공고",
+        "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=179748&schM=view",
+        "disposition": "DUPLICATE",
+        "id": "itp-one-person-creative-center-2027h1-1st",
+        "reason": "오늘 다른 작업이 이미 작성한 카드"
+      }
+    ],
+    "sotong24Contests": [
+      {
+        "title": "[2026-11-04 14:00 ~ 2026-11-17 18:00] 【한국산업기술기획평가원】 2026년 KEIT 대국민 혁신아이디어 공모전 한국산업기술기획평가원 의견 작성 수0 공유 수0",
+        "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=0ce40f7915ea4508b0adb486129eef9c&menu_id=527&pagetype=bbs",
+        "disposition": "EXISTING",
+        "id": "keit-public-innovation-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "[2026-11-09 00:00 ~ 2026-11-27 17:00] 【서울특별시】 2026 내가 소개하는 서울 숏폼 공모전 서울특별시 홍보기획관 홍보담당관 의견 작성 수0 공유 수1",
+        "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=1e7d47e2ad6b4669b97c94e3550f695d&menu_id=527&pagetype=bbs",
+        "disposition": "NOT_RELEVANT",
+        "reason": "숏폼 영상 공모전(영상 범위 밖)"
+      },
+      {
+        "title": "[2026-11-04 09:00 ~ 2026-11-27 18:00] 【한국교육학술정보원】 2026년 AI·디지털 활용 연구·선도학교 우수사례 공모전 한국교육학술정보원 의견 작성 수0 공유 수0",
+        "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=66d5fbc860b6499892b4770dacbe2641&menu_id=527&pagetype=bbs",
+        "disposition": "NOT_RELEVANT",
+        "reason": "AI·디지털 활용 연구·선도학교 소속 교원 대상 우수사례 공모(개발·아이디어 공모 아님)"
+      },
+      {
+        "title": "[2026-11-09 00:00 ~ 2026-11-23 23:59] 【경산시】 AI 미디어 콘텐츠 공모전 2026 「AI·스마트도시·YOUR STORY」 경상북도 경산시 건설안전국 도시과 의견 작성 수0 공유 수1",
+        "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=bc239c48e8be4a58b4b397526cc41d73&menu_id=527&pagetype=bbs",
+        "disposition": "NOT_RELEVANT",
+        "reason": "AI 미디어 콘텐츠(영상·이미지 제작) 공모전, 접수 11/09 시작"
+      },
+      {
+        "title": "[2026-11-05 09:00 ~ 2026-11-23 18:00] 【강원특별자치도】 2026년도「톡톡 Idea 공모전」 강원특별자치도 기획조정실 정책기획관 의견 작성 수0 공유 수0",
+        "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=c73a0a9081bf48378808e142562daec6&menu_id=527&pagetype=bbs",
+        "disposition": "EXISTING",
+        "id": "gangwon-toktok-idea-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      }
+    ],
+    "wevity": [
+      {
+        "title": "7th Da-Ho Award Asian International Short Film Competition(단편영화 공모전) SPECIAL IDEA",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=110179",
+        "disposition": "NOT_RELEVANT",
+        "reason": "단편영화 공모전(영상) 및 해외 주최(bhuntr)"
+      },
+      {
+        "title": "제1회 한아전 게임 시나리오·그래픽 공모전",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=110305",
+        "disposition": "NOT_RELEVANT",
+        "reason": "게임 시나리오·그래픽 공모전(문학·미술 성격, 프로그램 개발 아님)"
+      },
+      {
+        "title": "상주시 대표축제 대국민 아이디어 공모전",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=110750",
+        "disposition": "DUPLICATE",
+        "reason": "인덱스 11(콘테스트코리아 상주시 대표축제 대국민 아이디어 공모전)과 동일"
+      },
+      {
+        "title": "2026년 2차 외국발 허위정보 대응 대학생 아이디어 공모전",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=111506",
+        "disposition": "DUPLICATE",
+        "reason": "인덱스 27(2026년 2차 외국발 허위정보 대응 대학생 아이디어 공모전)과 동일"
+      },
+      {
+        "title": "미래에셋금융서비스 TAMS 글로벌금융인양성과정 17기 모집 SPECIAL",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=111546",
+        "disposition": "NOT_RELEVANT",
+        "reason": "TAMS 글로벌금융인양성과정 17기 — 교육과정 모집(공모전·창업 신청 기회 아님)"
+      },
+      {
+        "title": "2026 대구광역시 기후·환경·탄소중립 공공 데이터 AI 활용대회",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=111567",
+        "disposition": "DUPLICATE",
+        "reason": "인덱스 28(대구광역시 기후·환경·탄소중립 공공데이터 AI 활용대회)과 동일"
+      },
+      {
+        "title": "서울특별시 행정서식, 뚝딱뚝딱! 개선 아이디어 공모전",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=111574",
+        "disposition": "DUPLICATE",
+        "reason": "인덱스 33(서울특별시 행정서식 뚝딱뚝딱 개선 아이디어 공모전)과 동일"
+      },
+      {
+        "title": "2026 조달청 AI 게임·콘텐츠 공모전",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=111628",
+        "disposition": "EXISTING",
+        "id": "pps-ai-game-content-contest-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "2026년 한국정책분석평가학회 대학생 정책아이디어공모전",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=111756",
+        "disposition": "DUPLICATE",
+        "reason": "인덱스 46(2026 대학생 정책 아이디어 공모전, 한국정책분석평가학회)과 동일"
+      },
+      {
+        "title": "2026 AI 플레이 콘텐츠 제작 공모전",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=111800",
+        "disposition": "NOT_RELEVANT",
+        "reason": "AI 플레이 콘텐츠 제작 공모전 — 콘텐츠 제작형으로 보이고 대상은 중앙대 K-MOOC 이수자, 개발·아이디어 공모로 특정할 수 없음(정보 부족)"
+      },
+      {
+        "title": "공모전 준비 중이라면? AI 교정 서비스 [교정의 신]과 함께! SPECIAL",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=111812",
+        "disposition": "NOT_RELEVANT",
+        "reason": "AI 교정 서비스 홍보 이벤트(공모전 준비 서비스 안내, 공모전 아님)"
+      },
+      {
+        "title": "2026 사회보장 데이터를 활용한 AI 혁신 아이디어 경진대회",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=111847",
+        "disposition": "DUPLICATE",
+        "reason": "인덱스 48·62(사회보장 데이터를 활용한 AI 혁신 아이디어 경진대회)와 동일"
+      },
+      {
+        "title": "2026년 체육관련 규제개선 대국민 아이디어 공모전",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=111861",
+        "disposition": "DUPLICATE",
+        "reason": "인덱스 56(2026 체육관련 규제개선 공모전)과 동일"
+      },
+      {
+        "title": "제6회 인천공항 여행 공모전 (내가 만드는 한국여행)",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=111863",
+        "disposition": "NOT_RELEVANT",
+        "reason": "인천공항 여행 공모전(내가 만드는 한국여행) — 여행 콘텐츠 성격으로 보이고 아이디어·개발 공모로 특정할 수 없음(정보 부족)"
+      },
+      {
+        "title": "현대모비스 창립 50주년 굿즈 아이디어 공모전",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=111865",
+        "disposition": "DUPLICATE",
+        "reason": "인덱스 49(현대모비스 창립 50주년 굿즈 아이디어 공모전)와 동일"
+      },
+      {
+        "title": "국가무형유산 상설공연 창작 콘텐츠 개발을 위한 대국민 아이디어 발굴대회",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=111934",
+        "disposition": "EXISTING",
+        "id": "national-intangible-heritage-performance-idea-2026",
+        "reason": "이미 접수 예정 공고로 있음"
+      },
+      {
+        "title": "[완도군] 2026년 지방소멸 대응 아이디어 공모전",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=111935",
+        "disposition": "DUPLICATE",
+        "reason": "인덱스 74(완도군 지방소멸 대응 아이디어 공모전)와 동일"
+      },
+      {
+        "title": "한국공학한림원 공학의 가치 숏폼 콘테스트",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=111941",
+        "disposition": "NOT_RELEVANT",
+        "reason": "숏폼 영상 콘테스트(영상)"
+      },
+      {
+        "title": "2026 성평등 AI 벤치마크 챌린지 참가팀 모집",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=112029",
+        "disposition": "DUPLICATE",
+        "reason": "인덱스 77(성평등 AI 벤치마크 챌린지)과 동일"
+      },
+      {
+        "title": "2026년 대국민 재정교육 아이디어 공모전",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=112031",
+        "disposition": "DUPLICATE",
+        "reason": "인덱스 76(대국민 재정교육 아이디어 공모전)과 동일"
+      },
+      {
+        "title": "AI 달인의 꿀팁 챌린지 시즌4",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=112049",
+        "disposition": "DUPLICATE",
+        "reason": "인덱스 80(AI 달인 꿀팁 챌린지 시즌 4)과 동일"
+      },
+      {
+        "title": "제1회 홍제천 상상더하기 공모전",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=112055",
+        "disposition": "EXISTING",
+        "id": "hongjecheon-imagination-contest-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "제1회 메치니코프 신제품 공모전",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=112072",
+        "disposition": "DUPLICATE",
+        "reason": "인덱스 75(제1회 메치니코프 신제품 공모전)와 동일"
+      },
+      {
+        "title": "[제3회] 매경 AI 광고 공모전 대한민국 AI 광고대상 SPECIAL",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=112073",
+        "disposition": "NOT_RELEVANT",
+        "reason": "AI 광고 영상·이미지 제작 공모(영상·디자인 범위 밖)"
+      },
+      {
+        "title": "[한국산업기술기획평가원] 2026 KEIT 대국민 혁신 아이디어 공모전",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=112076",
+        "disposition": "DUPLICATE",
+        "reason": "인덱스 114(소통24 KEIT 대국민 혁신아이디어 공모전)와 동일 — 카드는 114로 작성"
+      },
+      {
+        "title": "국회 미래세대 미래의제 공모전",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=112078",
+        "disposition": "DUPLICATE",
+        "reason": "인덱스 66(국회 미래세대 미래의제 공모전)과 동일"
+      },
+      {
+        "title": "제2회 Nitto Open Innovation Challenge",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=112082",
+        "disposition": "DUPLICATE",
+        "reason": "인덱스 81(제2회 Nitto Open Innovation Challenge)과 동일"
+      },
+      {
+        "title": "[강원특별자치도] 2026년 톡톡 Idea 공모전",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=112084",
+        "disposition": "DUPLICATE",
+        "reason": "인덱스 118(소통24 강원 톡톡 Idea 공모전)과 동일 — 카드는 118로 작성"
+      },
+      {
+        "title": "대전지역 대학생과 함께하는 시민체감 교통 아이디어 공모전",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=112147",
+        "disposition": "PUBLISHED",
+        "id": "daejeon-transit-citizen-idea-2026"
+      },
+      {
+        "title": "[한국체육산업개발(주)] 공공데이터 활용 경진대회",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=112160",
+        "disposition": "EXISTING",
+        "id": "kspo-industry-public-data-contest-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "2026 청년의 시간(성남 청년 참여 예산제) 참가팀 모집",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=112181",
+        "disposition": "EXISTING",
+        "id": "seongnam-youth-time-participatory-budget-2026",
+        "reason": "이전 발행에서 이미 올린 공고"
+      },
+      {
+        "title": "2026 차세대통신 X 융합 창업 아이디어 경진대회",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=112183",
+        "disposition": "DUPLICATE",
+        "reason": "인덱스 69(2026 차세대통신 X 융합 창업 아이디어 경진대회)와 동일"
+      },
+      {
+        "title": "2026년 K-Petro 대국민 혁신 아이디어 공모전",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=112194",
+        "disposition": "NOT_RELEVANT",
+        "reason": "공식 페이지 미확인(K-Petro 원문 열람 실패, 위비티 정보만 확인)"
+      },
+      {
+        "title": "LG 어나더 캠퍼스 아이디어 콘테스트",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=112206",
+        "disposition": "DUPLICATE",
+        "reason": "73번 LG 어나더 아이디어 챌린지와 같은 공고"
+      },
+      {
+        "title": "2026 대구 로컬AI그라운드 - 지역문제 해결형 AI활용 경진대회",
+        "url": "https://www.wevity.com/?c=find&gbn=view&ix=112236",
+        "disposition": "DUPLICATE",
+        "id": "daegu-local-ai-ground-2026",
+        "reason": "오늘 다른 작업이 이미 작성한 카드"
+      }
+    ]
+  },
+  "districts": {
+    "nowon": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.nowon.kr/www/index.do"
+      ],
+      "coverageNote": "메인 앞 100,000자 확인: 청년가게 청년창업자(11/10), 팝업스토어 운영자(11/11), 청년성장프로젝트(11/10) 확인 후 앞 둘을 게시. 두 공지 페이지는 열었으나 세부는 첨부 PDF. 뒤 23,460자는 읽지 못함"
+    },
+    "dobong": {
+      "status": "CHECKED",
+      "urls": [
+        "https://www.dobong.go.kr/"
+      ],
+      "coverageNote": "메인 확인: 창업·공모전 모집 없음. 2007년생 청년 사회첫출발 지원금(11/24), 중장년 자격증 응시료, 생성형 AI 첫걸음(선착순) 등은 범위 밖"
+    },
+    "gangbuk": {
+      "status": "FAILED",
+      "urls": [
+        "https://www.gangbuk.go.kr/",
+        "https://www.gangbuk.go.kr/www/index.do"
+      ],
+      "reason": "WebFetch는 빈 응답, curl은 모든 경로에서 441바이트만 반환(메인 포함)",
+      "coverageNote": "강북구청 공식 사이트 목록을 읽지 못함"
+    }
+  },
+  "reverifiedIds": [
+    "seoul-quit-smoking-policy-2026",
+    "kbank-kakaobank-owner-finance-idea-2026",
+    "kaist-foreign-disinfo-idea-2026-2",
+    "kapco-new-mice-event-idea-2026",
+    "seoul-admin-form-improve-idea-2026",
+    "daejeon-living-relation-idea-2026",
+    "gcgf-small-biz-policy-idea-2026",
+    "hyundai-in-vehicle-app-dev-2026",
+    "kspo-sports-regulation-improve-2026",
+    "buyeo-community-solverthon-2026",
+    "cj-hetbahn-30th-ai-idea-2026",
+    "nibp-esg-public-idea-2026",
+    "uiwang-youth-eroom-startup-idea-2026",
+    "boryeong-wellness-policy-proposal-2026",
+    "next-gen-comm-fusion-startup-idea-2026",
+    "daegu-univ-ai-draftthon-2026",
+    "wando-depopulation-response-idea-2026",
+    "mogef-gender-equality-ai-benchmark-2026",
+    "chungnam-manufacturing-ax-hackathon-2026",
+    "forest-public-data-use-case-2026",
+    "daker-materials-ai-hackathon-2026",
+    "keit-public-innovation-idea-2026",
+    "national-intangible-heritage-performance-idea-2026",
+    "gangwon-toktok-idea-2026",
+    "expressway-ai-idea-contest-2026",
+    "soulmate-pioneers-startup-contest-2026",
+    "msit-elice-ai-challenge-2026",
+    "kic-ai-agent-competition-2026",
+    "seoul-anchor-local-creator-camp-2026",
+    "samyook-bi-2026-11",
+    "jeonnam-gwangju-regional-resource-youth-startup-3",
+    "seoul-youth-cook-foodtech-2027",
+    "seoul-youth-cook-business-2027",
+    "gumi-culture-road-startup-2026",
+    "daegu-startup-city-medbio-2026",
+    "lgd-dream-play-9",
+    "anseong-urban-regeneration-startup-2026",
+    "chungnam-tourism-startup-2026",
+    "gangwon-rnd-special-zone-batch-1-2026",
+    "ibk-changgong-2027h1",
+    "tel-vc-nexus-connect-chungnam-2026",
+    "daegu-namgu-youth-startup-2026"
+  ],
+  "reverificationEvidence": [
+    {
+      "id": "seoul-quit-smoking-policy-2026",
+      "primarySourceUrl": "https://www.stcc.kr/news/notice_view/177",
+      "verifiedAt": "2026-11-09T13:01:27+09:00",
+      "verificationNote": "공식 공고 열람: 접수 2026.10.01~11.13(시각 명시 없음), 만 19세 이상 개인·팀, 총 5팀 200만원. 연장 언급 없음."
+    },
+    {
+      "id": "kbank-kakaobank-owner-finance-idea-2026",
+      "primarySourceUrl": "https://2bank.spectory.net/idea/contest?bno=61054",
+      "verifiedAt": "2026-11-09T13:01:27+09:00",
+      "verificationNote": "공식 공고(spectory) 열람: 접수 2026.09.28~11.16 18:00, 전국 대학(원)생 개인 또는 2~4인 팀, 대상 2,000만원·최우수 500만원·우수 200만원. 연장 언급 없음."
+    },
+    {
+      "id": "kaist-foreign-disinfo-idea-2026-2",
+      "primarySourceUrl": "https://isc.kaist.ac.kr/sub0501/view/id/256",
+      "verifiedAt": "2026-11-09T13:01:27+09:00",
+      "verificationNote": "KAIST 공고 열람: 접수 10.06~11.17 18:00, 국내 대학(원) 재학생(휴학생 포함), 총 1,200만원(대상 300만원). 연장 언급 없음."
+    },
+    {
+      "id": "kapco-new-mice-event-idea-2026",
+      "primarySourceUrl": "https://kapco.or.kr/news/noticeView.php?notice_seq=3500",
+      "verifiedAt": "2026-11-09T13:01:27+09:00",
+      "verificationNote": "KAPCO 공고 열람: 접수 09.01~11.15(시각 명시 없음), 대학(원)생 2인 이상 팀, 대상 150만원·최우수 100만원·우수 80만원·장려 3팀 각 50만원·특별상 4팀 별도. 연장 언급 없음."
+    },
+    {
+      "id": "seoul-admin-form-improve-idea-2026",
+      "primarySourceUrl": "https://mediahub.seoul.go.kr/gongmo/2000785",
+      "verifiedAt": "2026-11-09T13:01:27+09:00",
+      "verificationNote": "서울시 미디어허브 공고 열람: 접수 10.13~11.20 23:59, 행정서식 이용 경험 있는 국민 누구나 개인 자격(팀 불가), 우수상 10명 각 50만원. 연장 언급 없음."
+    },
+    {
+      "id": "daejeon-living-relation-idea-2026",
+      "primarySourceUrl": "https://www.commonz042.kr/bbs/board.php?bo_table=public_apply&wr_id=57",
+      "verifiedAt": "2026-11-09T13:01:27+09:00",
+      "verificationNote": "공식 페이지 열람: 접수 2026.10.02 00:00~11.13 18:00 확인, 연장 언급 없음. 참가대상·상금은 본문에 없고 첨부 PDF에 있어 이번에 확인하지 못함(기존 기재 유지)."
+    },
+    {
+      "id": "gcgf-small-biz-policy-idea-2026",
+      "primarySourceUrl": "https://www.gcgfcontest.co.kr/info.asp",
+      "verifiedAt": "2026-11-09T13:01:27+09:00",
+      "verificationNote": "공식 사이트 열람: 접수 10.19~11.16(시각 명시 없음), 소상공인 정책에 관심 있는 누구나 개인 또는 3인 이내 팀, 총 700만원(최우수 300만원). 연장 언급 없음."
+    },
+    {
+      "id": "hyundai-in-vehicle-app-dev-2026",
+      "primarySourceUrl": "http://appdevchallenge.auto-hmg.io/",
+      "verifiedAt": "2026-11-09T13:01:27+09:00",
+      "verificationNote": "공식 사이트 열람: 접수 10.21~11.15(시각 명시 없음), 대학생 부문과 일반(스타트업 포함) 부문 개인·팀, 총상금 5,100만원(대상 1,000만원). 연장 언급 없음."
+    },
+    {
+      "id": "kspo-sports-regulation-improve-2026",
+      "primarySourceUrl": "http://kspo.or.kr/contest",
+      "verifiedAt": "2026-11-09T13:01:27+09:00",
+      "verificationNote": "KSPO 공고 열람: 접수 10.26~11.22, 대한민국 국민이면 개인 누구나, 최우수 50만원·우수 3건 각 30만원·장려 6건 각 20만원. 연장 언급 없음."
+    },
+    {
+      "id": "buyeo-community-solverthon-2026",
+      "primarySourceUrl": "http://buyeostartup.kr/",
+      "verifiedAt": "2026-11-09T13:01:27+09:00",
+      "verificationNote": "공식 사이트 열람: 접수 10.26~11.11 17:00(한국시간) 확인, 총지원금 3,000만원(상금 900만원 선발 15팀, 실증비 2,100만원 상위 3팀). 참가자격은 사이트에 없고 PDF 공고에 있음. 선발팀은 11.21~22 캠프·피칭 필수."
+    },
+    {
+      "id": "cj-hetbahn-30th-ai-idea-2026",
+      "primarySourceUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfbdn6XHYLkAMdo2-K8EN--QB6H2RYXYV9snzJCvPRe-KBQpA/viewform",
+      "verifiedAt": "2026-11-09T13:01:27+09:00",
+      "verificationNote": "공식 구글폼 열람: 접수 10.26~11.13 23:59, 만 14세 이상 대한민국 거주자 개인 또는 최대 4인 팀, 총 3,000만원(대상 1,000만원). 연장 언급 없음."
+    },
+    {
+      "id": "nibp-esg-public-idea-2026",
+      "primarySourceUrl": "https://nibp.kr/dtc/notices/detail?bbsOid=479",
+      "verifiedAt": "2026-11-09T13:01:27+09:00",
+      "verificationNote": "국가생명윤리정책원 공지 열람: 공모기간 10.26~11.13 확인. 마감 시각·참가자격·상품은 첨부파일에 있어 확인하지 못함(기존 기재 유지). 연장 언급 없음."
+    },
+    {
+      "id": "uiwang-youth-eroom-startup-idea-2026",
+      "primarySourceUrl": "https://www.uiwang.go.kr/UWKORINFO0101/7006130",
+      "verifiedAt": "2026-11-09T13:01:27+09:00",
+      "verificationNote": "의왕시 공고 열람: 접수 10.16~11.11 18:00, 만 19~39세 청년, 거주 요건은 공고에 명시 없음, 대상 100만원·최우수 50만원·우수 30만원(총 180만원) 및 시장 표창. 연장 언급 없음."
+    },
+    {
+      "id": "boryeong-wellness-policy-proposal-2026",
+      "primarySourceUrl": "https://www.brcn.go.kr/prog/eminwon/kor/BB/sub04_03_01/view.do?mgtno=57363",
+      "verifiedAt": "2026-11-09T13:01:27+09:00",
+      "verificationNote": "보령시 공고 열람: 접수 10.12~11.11(시각 명시 없음), 보령 시정에 관심 있는 누구나, 시장 표창 및 부상금(금액 명시 없음). 연장 언급 없음."
+    },
+    {
+      "id": "next-gen-comm-fusion-startup-idea-2026",
+      "primarySourceUrl": "https://sport.kookmin.ac.kr/sports/notice/calendar02.do?mode=view&pid=12560",
+      "verifiedAt": "2026-11-09T13:01:27+09:00",
+      "verificationNote": "국민대 차세대통신사업단 공고 열람: 예선 접수 ~11.18(시작일·시각 명시 없음), 전국 대학·전문대 재학생(휴학생·대학원생 제외) 개인 또는 2~4인 팀, 대상 300만원·최우수 150만원·우수 2팀 각 100만원·후원기업특별상. 연장 언급 없음."
+    },
+    {
+      "id": "daegu-univ-ai-draftthon-2026",
+      "primarySourceUrl": "http://drafthon.ai.kr/",
+      "verifiedAt": "2026-11-09T13:01:27+09:00",
+      "verificationNote": "공식 사이트 열람: 접수 ~11.15 23:59(시작일 명시 없음), 전국 대학(전문대 포함)·대학원 재학생 및 휴학생(거주지 제한 없음) 개인 또는 2~4인 팀, 11.25~26 무박 2일 전 일정 참석, 총 950만원(대상 500만원). 연장 언급 없음."
+    },
+    {
+      "id": "wando-depopulation-response-idea-2026",
+      "primarySourceUrl": "http://www.wando.go.kr/wando/sub.cs?m=1031&nttId=31614",
+      "verifiedAt": "2026-11-09T13:01:27+09:00",
+      "verificationNote": "완도군 공고 열람: 접수 10.29~11.18 18:00, 완도군 발전에 관심 있는 누구나. 상금은 본문에 없고 첨부 hwpx에 있어 확인하지 못함(기존 기재 유지). 연장 확인 불가."
+    },
+    {
+      "id": "mogef-gender-equality-ai-benchmark-2026",
+      "primarySourceUrl": "https://mogefdatacontest.co.kr/info.jsp",
+      "verifiedAt": "2026-11-09T13:01:27+09:00",
+      "verificationNote": "공식 사이트 열람: 접수 11.02~11.20(시각 명시 없음), 학력·직업 제한 없음, 개인 또는 5인 이내 팀, 외국인 단독 참가 불가(팀장은 한국 국적), 총 540만원(최우수 150만원). 연장 언급 없음(심사일정만 연장 가능 명시)."
+    },
+    {
+      "id": "chungnam-manufacturing-ax-hackathon-2026",
+      "primarySourceUrl": "https://www.blaybus.com/program/1148/landing",
+      "verifiedAt": "2026-11-09T13:01:27+09:00",
+      "verificationNote": "Blaybus 프로그램 페이지(주관 신청 페이지) 열람: 접수 10.30~11.17 23:59, 전공·경력 무관, 본선 11.27~28 전 일정 참석 가능자, 총상금 200만원. 연장 언급 없음."
+    },
+    {
+      "id": "forest-public-data-use-case-2026",
+      "primarySourceUrl": "https://www.forest.go.kr/kfsweb/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_1855&mn=NKFS_06_08_07&nttId=3225569",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "산림청 공고 열람: 공모기간 2026.11.02~11.20, 개인 또는 팀(산림청 공공데이터 창업경진대회 및 타기관 공모전 수상작 제외), 240만원 규모 시상품, 결과 12.08, 연장 언급 없음."
+    },
+    {
+      "id": "daker-materials-ai-hackathon-2026",
+      "primarySourceUrl": "https://daker.ai/public/hackathons/2026-materials-ai-hackathon",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "DAKER 대회 페이지 열람(주최 한국화학연구원): 상태 모집중, 참가 신청 10/30 10:00~11/13 12:00, 예선 11/16~17, 본선 11/26~27. 참가자격: 소재 분야 국내 대학(원) 재학생·박사후연구원 또는 국내 연구기관 학생·연수직, 팀당 2~4인, 11/04 추가 안내는 게시판 공지(미열람). 상금 0원, 시상은 과학기술부총리상·한국연구재단 이사장상·한국화학연구원 원장상 각 1팀."
+    },
+    {
+      "id": "keit-public-innovation-idea-2026",
+      "primarySourceUrl": "https://modu.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=0ce40f7915ea4508b0adb486129eef9c&menu_id=527&pagetype=bbs",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "소통24(모두의 광장) 공고 열람(리다이렉트된 modu.go.kr): 접수 2026.11.04(수)~11.17(화) 18시, 대한민국 국민 누구나 개인 또는 팀(팀은 최대 3명), 분야 참여소통·기본사회·공직혁신·공공AX, KEIT 국민제안함 PDF 등록. 상금은 공고 본문에 없음(안내 hwp 미열람)."
+    },
+    {
+      "id": "national-intangible-heritage-performance-idea-2026",
+      "primarySourceUrl": "https://modu.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=10cd564877b04abcb22c35cf62054cb6&menu_id=527&pagetype=bbs",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "국가유산청 공고(모두의 광장) 열람: 접수 2026.11.09(월) 09:00~11.18(수) 17:00, 네이버폼 접수, 대한민국 국민 누구나(개인 또는 단체), 문의 마감 11.18 10:00. 접수 시작 시각이 지나 OPEN으로 전환(신청 폼 자체의 작동은 미확인). 시상내역은 본문에 없음(붙임 공고문 PDF 미열람)."
+    },
+    {
+      "id": "gangwon-toktok-idea-2026",
+      "primarySourceUrl": "https://modu.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=c73a0a9081bf48378808e142562daec6&menu_id=527&pagetype=bbs",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "강원특별자치도 공고(모두의 광장) 열람: 공모기간 11.23(월) 18:00까지, 대상 강원특별자치도에 관심 있는 주민 누구나, 이메일 접수. 시작일과 시상 내용은 본문에 없음(도청 공고/고시 참조로 안내)."
+    },
+    {
+      "id": "expressway-ai-idea-contest-2026",
+      "primarySourceUrl": "https://www.epeople.go.kr/idea/ex/1AE-2610-0000546/detail.npaid",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "국민생각함(epeople.go.kr) 공고 열람: 접수 2026.10.19(월)~11.15(일), 대한민국 국민 누구나 개인 또는 3인 이내 팀, 총 5건 총상금 250만원(최우수 100만 1건, 우수 50만 2건, 장려 25만 2건). 기존 표기 상금 100만원과 다름."
+    },
+    {
+      "id": "soulmate-pioneers-startup-contest-2026",
+      "primarySourceUrl": "https://search.skku.edu/skku/campus/skk_comm/notice01.do?articleNo=140948&mode=view",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "성균관대 공지 열람(최종 수정 2026.11.06): 제목에 ~11/15, 총 상금 900만원 표기. 본문은 포스터 이미지뿐이라 참가자격·세부 일정은 텍스트로 확인 못함(기존 기재 유지)."
+    },
+    {
+      "id": "msit-elice-ai-challenge-2026",
+      "primarySourceUrl": "https://ai-challenge.elice.page/home/main",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "엘리스 AI 챌린지 공식 페이지 열람: 참가 접수 10.23~11.13, 기획안·PoC 제출 11.22 23:59:59, 발표 12.11. 대한민국 국민 개인 또는 최대 4인(만19세 미만 청소년/이상 성인 부문 분리, 혼합 팀 불가). 시상 4팀(청소년 2·성인 2), 우수작 약 100만원 상당 크레딧, 참가자 전원 헬피챗 500만 토큰 등(API 사용 불가). 접수 마감 시각은 페이지에 명시 없음."
+    },
+    {
+      "id": "kic-ai-agent-competition-2026",
+      "primarySourceUrl": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "DAKER 대회 페이지 열람(주최 한국투자공사): 모집중, 참가 접수·기획서 제출 10/1 10:00~11/12 10:00, 누구나 참가(만 14세 미만 사전 문의), 개인 또는 최대 5인, 상금 15,000,000원, 본선 산출물 12/22 10:00, 연장 언급 없음."
+    },
+    {
+      "id": "seoul-anchor-local-creator-camp-2026",
+      "primarySourceUrl": "https://seoullocalcamp.imweb.me/",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "공식 캠프 사이트 열람: 신청 10.27~11.15, 결과 11.17 개별 안내, 참가대상 로컬창업에 관심 있는 누구나(1인 구성 신청 가능, 30명), 총상금 200만원·최대 100만원 시상. 팝업으로 캠프 일정이 11.28~29에서 12.05(토)~12.06(일)(서울시립대 창의혁신관)로 변경 안내됨. 신청 마감 11.15는 이미지에서 확인(시각 23:55는 미확인)."
+    },
+    {
+      "id": "samyook-bi-2026-11",
+      "primarySourceUrl": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancSn=178799&schM=view",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "K-Startup 공고 열람: 접수 2026.11.04 00:00~11.15 23:59(이메일 접수), 예비창업자 또는 창업 7년 이내, 입주 후 주사업장을 센터로 이전, 동일 업태·업종 창업 3년 이상 기존 사업자 보유자 등 제외, 1차 서류·2차 발표평가. 보육료 연 4,752,000원(30㎡ 1실), 관리비 월 6만원 등 입주 비용 있음. 지원: 시설·네트워킹·교육·사업화."
+    },
+    {
+      "id": "jeonnam-gwangju-regional-resource-youth-startup-3",
+      "primarySourceUrl": "https://jcia.or.kr/cf/Board/9950/detailView.do",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "전남정보문화산업진흥원 연장공고 열람: 접수 2026.10.30~11.12(마감 시각 명시 없음), 구글폼 접수. 신청자격·지원내용은 첨부 PDF에만 있어 열람 못함(기존 기재 유지)."
+    },
+    {
+      "id": "seoul-youth-cook-foodtech-2027",
+      "primarySourceUrl": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127618",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "기업마당 공고 열람(서울특별시 / 청년쿡푸드테크센터): 신청 2026.11.02~11.20, 공고일 기준 대표자 만19~39세 푸드테크 창업자, 제품·서비스 보유 스케일업 창업기업, 서울 사업장 또는 협약 후 2개월 내 이전. 지원: 초기사업화자금·멘토링·R&D·공간. 사업자등록 필수 여부는 본문에서 불명확해 확인 필요."
+    },
+    {
+      "id": "seoul-youth-cook-business-2027",
+      "primarySourceUrl": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127617",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "기업마당 공고 열람(서울특별시 / 청년쿡비즈니스센터): 신청 2026.11.02~11.20, 식품제조 분야 (예비)창업자, 대표자 만19~39세, 입주·비입주 조건 상이(공고문 확인). 지원: 기업당 1석 공간·시설, 사업화 자금 최대 100만원, 보육 프로그램."
+    },
+    {
+      "id": "gumi-culture-road-startup-2026",
+      "primarySourceUrl": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127657",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "기업마당 공고 열람(경상북도/구미시): 신청 2026.11.02~11.11(이메일 접수), 문화로 자율상권구역 내 점포 창업 청년 로컬크리에이터·신중년(예비창업자 포함). 지원: 교육·컨설팅·사업화 자금 최대 5천만원 이하."
+    },
+    {
+      "id": "daegu-startup-city-medbio-2026",
+      "primarySourceUrl": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127529",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "기업마당 공고 열람(대구광역시/대구경북첨단의료산업진흥재단): 신청 2026.10.27~11.09(이메일 접수), 의료·바이오 예비창업자 및 창업기업. 지원: 기술지원(인증시험 분석, 기업당 최대 800만원), 창업사업화(제품고도화, 최대 900만원). 마감일이 오늘이라 오늘 자정까지 OPEN, 연장 언급 없음."
+    },
+    {
+      "id": "lgd-dream-play-9",
+      "primarySourceUrl": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127514",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "기업마당 공고 열람(서울특별시/서울경제진흥원, 엔슬파트너스 공동 운영): 신청 2026.10.22~11.13, 디스플레이 혁신 기술·아이템 보유 스타트업(Display 부문·신사업 부문). 지원: LG디스플레이 PoC 협업, PoC 지원금 기업당 최대 5,000만원, 엑셀러레이팅."
+    },
+    {
+      "id": "anseong-urban-regeneration-startup-2026",
+      "primarySourceUrl": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127498",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "기업마당 공고 열람(경기도/안성시): 신청 2026.10.23~11.13, 성남·옥천지구 지정 구역 내 사업장 보유 또는 이전(창업) 창업가. 지원: 공실 리모델링·인테리어 사업화 자금 1명(팀)당 최대 2,000만원, 고도화 컨설팅."
+    },
+    {
+      "id": "chungnam-tourism-startup-2026",
+      "primarySourceUrl": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127475",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "기업마당 공고 열람(충청남도/충남문화관광재단): 신청 2026.10.22~11.16(온라인 투어라즈), 관광 분야 예비창업자(충남 도내 신규 등록 예정) 또는 창업 7년 이내 사업자. 지원: 사업화자금 1,000만~3,000만원, 역량강화."
+    },
+    {
+      "id": "gangwon-rnd-special-zone-batch-1-2026",
+      "primarySourceUrl": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127411",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "기업마당 공고 열람(강원특별자치도/강원창조경제혁신센터): 신청 2026.10.21~11.11, 강원연구개발특구(춘천·원주·강릉) 소재 또는 이전·설립 예정 투자유치 준비·진행 (예비)창업기업. 지원: 기업진단, 모의 IR·피드백, 센터 투자심의 등."
+    },
+    {
+      "id": "ibk-changgong-2027h1",
+      "primarySourceUrl": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127358",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "기업마당 공고 열람(금융위원회/IBK기업은행): 신청 2026.10.19~11.13, 공고 마감일 기준 업력 7년 이내 혁신기술·아이디어 보유 중소기업, 마포·구로·대전·부산·전남광주·대구 소재 센터. 지원: 투자·대출, 전용 오피스, 액셀러레이팅, 1:1 멘토링, 판로·해외진출. 사업자등록 필수 여부는 본문에서 불명확해 확인 필요."
+    },
+    {
+      "id": "tel-vc-nexus-connect-chungnam-2026",
+      "primarySourceUrl": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127328",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "기업마당 공고 열람(충청남도/충남창조경제혁신센터): 신청 2026.10.16~11.10, 업력 10년 미만 전국 소재 반도체 분야 비상장 창업기업, 영어 또는 일본어 대면 발표·질의응답 가능. 지원: TEL VC 1:1 투자 밋업·전략적 투자 검토, 후속 프로그램 연계. 마감 11.10은 내일."
+    },
+    {
+      "id": "daegu-namgu-youth-startup-2026",
+      "primarySourceUrl": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127126",
+      "verifiedAt": "2026-11-09T13:03:48+09:00",
+      "verificationNote": "기업마당 공고 열람(대구광역시 남구): 신청 2026.10.02~11.12, 남구를 본사 소재지로 하는 창업 예정자·팀, 2026.10.02 기준 만 39세 이하(팀원 전원). 지원: 사업화 지원금 최대 2,000만원, 협업프로젝트 최대 3,000만원, 로컬브랜드 개발비 최대 3,000만원."
+    }
+  ],
+  "reverificationFailures": [
+    {
+      "id": "daegu-public-data-ai-climate-2026",
+      "primarySourceUrl": "https://www.dcnc.or.kr/bbs/board.php?bo_table=notice&wr_id=193",
+      "reason": "https://www.dcnc.or.kr/bbs/board.php?bo_table=notice&wr_id=193 열람했으나 본문이 공고문 이미지 1장과 hwp 첨부뿐이라 접수기간·자격·상금을 텍스트로 확인 불가(등록일 26-10-12 확인)."
+    },
+    {
+      "id": "yongsan-smart-city-idea-2026",
+      "primarySourceUrl": "http://project.seoul.go.kr/view/viewDetailCptt.do",
+      "reason": "http://project.seoul.go.kr/view/viewDetailCptt.do WebFetch 결과 HTTP 404 Not Found. 참고(공식 아님): WebSearch 결과 서울시 보도 인용에 참가등록 10/20~11/20 17:00, 작품접수 11/2~11/20 17:00, 19~39세, 총 700만원 13팀 — 공식 페이지로 확인 못 함."
+    },
+    {
+      "id": "ssis-social-security-ai-idea-2026",
+      "primarySourceUrl": "https://wma.co.kr/ax",
+      "reason": "https://wma.co.kr/ax WebFetch 결과 대회 제목과 메뉴만 있고 접수기간·자격·상금 정보 없음(상세 공고문 미포함)."
+    },
+    {
+      "id": "hyundai-mobis-momojeon-50th-goods-idea-2026",
+      "primarySourceUrl": "http://mobislive.com/category/6/view?momoid=114&id=3095&type=notice",
+      "reason": "http://mobislive.com/category/6/view?momoid=114&id=3095&type=notice WebFetch 결과 '공모전 참여작을 삭제하시겠습니까' 확인창 문구만 반환되어 접수기간·자격·상금 확인 불가."
+    },
+    {
+      "id": "busan-marine-startup-spark-up-1876-2026",
+      "primarySourceUrl": "http://www.go-simsa.com/recruit/Jozu4OXw",
+      "reason": "http://www.go-simsa.com/recruit/Jozu4OXw WebFetch 결과 제목만 반환되어 접수기간·자격·상금 확인 불가. WebSearch로도 해당 공모 공고를 찾지 못함."
+    },
+    {
+      "id": "hy-metchnikoff-new-product-idea-2026",
+      "primarySourceUrl": "https://litt.ly/hy.official.kr",
+      "reason": "https://litt.ly/hy.official.kr WebFetch 결과 '공모전 접수하러 가기' 링크(naver.me → form.naver.com 리다이렉트)만 있고 기간·자격·상금 정보 없음."
+    },
+    {
+      "id": "daridari-idle-space-idea-2026",
+      "primarySourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610280053",
+      "reason": "공식 공고 링크가 없고 등록된 링크는 콘테스트코리아(모음 사이트)뿐. 해당 페이지는 접수 10.28~11.09 16:00, 주최 문화정원, 전국 누구나, 총상금 현금 180만원(전체 210만원 상당)이라고 하나 공식 페이지 확인 불가. 오늘 마감일."
+    },
+    {
+      "id": "keris-ai-startup-hackathon-2026",
+      "primarySourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610290007",
+      "reason": "공식 공고 링크가 없고 등록된 링크는 콘테스트코리아뿐. 해당 페이지는 주최 교육부·KERIS, 접수 10.27~11.11 17:00, 대학교 재학생 2~4인 팀, 총상금 1,500만원이라고 하나 공식 공고는 확인 불가."
+    },
+    {
+      "id": "jocoding-ax-pwc-hiring-challenge-2026",
+      "primarySourceUrl": "http://jocodingax.ai",
+      "reason": "http://jocodingax.ai 및 https://hackathon.jocodingax.ai 열람: 페이지는 1기(접수 6/23~7/10, 종료 배너) 정보이며 현재 회차 접수기간·자격·혜택을 확인할 수 없음. 별도 신청 페이지 axacademy.ai/axwar는 미확인."
+    },
+    {
+      "id": "pps-ai-game-content-contest-2026",
+      "primarySourceUrl": "https://blog.naver.com/ppspr/224439199284",
+      "reason": "WebFetch가 blog.naver.com 차단(Claude Code is unable to fetch from blog.naver.com), 브라우저 창도 https://blog.naver.com is not allowed due to safety restrictions. 공식 블로그를 열지 못함. 참고(비공식): 웹검색 결과는 접수 10.12~11.22, 총상금 550만원/대상 200만원으로 기존 표기와 상금 총액이 다를 수 있으나 미확인."
+    },
+    {
+      "id": "hongjecheon-imagination-contest-2026",
+      "primarySourceUrl": "https://www.sdm.go.kr/news/notice/notice.do?mode=view&sdmBoardConfSeq=82&sdmBoardSeq=316576",
+      "reason": "서대문구 고시공고(공고 제2026-1537호, 2026.11.03) 열람은 성공했으나 본문에 접수기간·자격·상금이 없고 공고문이 hwpx 첨부([별첨1])라 열람하지 못함. 마감 11.23은 공식 페이지에서 미확인."
+    },
+    {
+      "id": "seongnam-youth-time-participatory-budget-2026",
+      "primarySourceUrl": "https://www.snyouth.or.kr/fmcs/289?action=read&action-value=79dc727035b9c04bee890ecabb8bc95b",
+      "reason": "성남시청소년청년재단 공고 열람: 공고일 10.27, 행사 11.28 14:00~17:00(판교유스센터), 10팀, 3~6인 팀(전원 성남 거주·재학·재직·활동 만19~39세)은 확인. 접수기간(마감일)과 시상은 본문에 없고 hwp 첨부라 마감 11.22를 공식 확인하지 못함."
+    },
+    {
+      "id": "seoul-climatetech-mentoring-2026",
+      "primarySourceUrl": "https://hub.kaia.re.kr/organSupportHub.do/view?orgKind=ORG_KIND_2&rltdId=117645",
+      "reason": "국토교통 기업지원허브 페이지 열람: 공고 정보에 신청기간 상시만 표시되고 사업명·자격·지원내용·마감 표기 없음(본문은 이용 안내뿐). 기존 기재(2026.07.07~12.31)와 달라 공식 확인 불가, 서울시 원 공고 미확인."
+    }
+  ],
+  "publishedIds": [
+    "chungbuk-youth-farmer-smartfarm-startup-2027",
+    "daegu-local-ai-ground-2026",
+    "daejeon-transit-citizen-idea-2026",
+    "dangjin-youth-design-improvement-2026",
+    "goyang-print-culture-hub-2027",
+    "gyeongbuk-regulation-reform-idea-2026",
+    "incheon-tourism-biz-center-2027",
+    "intops-accelerating-6th-2026",
+    "itp-one-person-creative-center-2027h1-1st",
+    "jeonnam-3d-printing-prototype-ip-2026",
+    "jindo-youth-fishing-village-settlement-2027",
+    "jinju-disabled-family-startup-consulting-2026",
+    "kac-startup-incubator-2027",
+    "kisa-modu-idea-contest-2026",
+    "korea-local-marketing-hackathon-2026",
+    "kpii-ai-service-planning-2026",
+    "nasa-space-apps-seoul-2026",
+    "nest-gvalley-4th-2026",
+    "nowon-youth-popup-store-summer-2027",
+    "nowon-youth-shop-3-4-founders-2026",
+    "seocho-startup-station-brand-edu-2026-11",
+    "seoul-north-women-startup-academy-4th-2026",
+    "seoul-startup-hub-mplus-second-half-2026",
+    "svc-seoul-membership-expansion-2026",
+    "wando-youth-fishing-village-settlement-2027",
+    "yongin-startup-center-fifth-biohealth-2026",
+    "goldman-claude-code-restriction-2026-11",
+    "claude-code-settings-local-secrets-2026-11",
+    "goodbye-claude-hello-pi-2026-11",
+    "llama-modchip-284b-64gb-2026-11",
+    "synchopate-llama-modchip",
+    "ranxianglei-billion-context",
+    "meta-astryx"
+  ],
+  "sourceGaps": [
+    "강북구청(gangbuk.go.kr) 목록 추출 실패: curl 200 응답 441바이트(메인·게시판 경로 모두)",
+    "요즘것들(allforyoung.com)은 11-06에 robots.txt가 AI 봇을 막는 것으로 확인되어 열지 않음",
+    "EventUs, Luma, 온오프믹스, Meetup은 이번에 열지 않음",
+    "Grantly는 마감일 11/9 항목만 노출되어 11/10 이후 마감 목록을 보지 못함",
+    "K-Startup 진행중 공고는 1쪽만 확인(2쪽 이후 파라미터 불가)",
+    "SBA 상세 페이지(M+, 게임랩)는 메뉴 틀만 열려 내용을 못 읽어 게시하지 못함",
+    "노원구 청년가게·팝업스토어 공지의 대상·거주·사업자등록·지원 금액은 첨부 PDF에 있어 읽지 못함",
+    "대구 로컬AI그라운드 공고 본문은 hwpx 첨부에 제출물·평가·상금이 있어 읽지 못함",
+    "NASA Space Apps 서울 로컬 이벤트 페이지는 열지 못하고(서울대 컴퓨터공학부 안내문으로 대체), 한국석유관리원 공고는 ECONNRESET, 네이버 카페 공고는 열람 불가",
+    "WebSearch 결과 요약은 검색 도구가 만든 문장이며 공식 페이지를 직접 연 항목만 PUBLISHED로 분류함",
+    "wevity는 IT 카테고리 정렬 1쪽(15건)만 확인, thinkyou는 IT 목록 1쪽만 확인"
+  ],
+  "researchLimitations": [
+    "재확인은 Claude 하위 작업이 했다. 본문이 첨부·이미지뿐인 공고는 확인하지 못해 실패로 남겼다.",
+    "새 후보 43건은 GPT worker가 공식 페이지와 대조했다.",
+    "마감이 지난 공고는 publish 단계에서 날짜로 닫는다."
+  ]
+}
