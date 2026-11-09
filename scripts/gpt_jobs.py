@@ -17,7 +17,8 @@ from free_explore import BROWSER_RULES, ExploreFailed, ask
 from research_rules import normalize_url
 
 SEOUL = ZoneInfo("Asia/Seoul")
-ITEMS_PER_WORKER = 5
+# No page is opened at the check (user decision 2026-11-09 "공식 확인을 쳐내"), so a worker takes more.
+ITEMS_PER_WORKER = 10
 NEXT_CANDIDATES_IN_PROMPT = 10
 JSON_BLOCK = re.compile(r"```json\s*\n(.*?)```", re.S)
 # Validator names (validate_research_audit.py TRACKS, REQUIRED_SOURCES); answers must use them exactly.
@@ -92,36 +93,21 @@ NEWS_PROMPT = """오늘은 {today}이다. 지난 브리핑({last}) 이후의 AI 
 - 뉴스 카드 {{"kind":"aiNews","card":{{"id","categoryLabel":"AI 뉴스","icon","title","summary","description","why","tags":[...],"ideas":[2개],"links":[{{"label","url"}}],"communityEvidence":[{{"source","url","signal"}}],"verificationUrls":[...],"verificationNote":"..."}}}}
 - 도구 카드 {{"kind":"aiDiscovery","card":{{"id","title","summary","description","why","discoveryType":"site|github|skill|mcp|agent|workflow|directory|discussion|platform","categories":[...],"signals":[...],"discoveryReason","links":[...],"related":[],"awareness":"WELL_KNOWN|SPECIALIZED|EARLY","trend":"HOT|RISING|STEADY|RESURFACED","newsState":"NEW_RELEASE|NEWLY_DISCOVERED|UPDATED|BASELINE"}}}}"""
 
-CHECK_PROMPT = """오늘은 {today}이다. 아래 공고 후보 {count}건을 주최 기관의 공식 정보와 대조하고, 사이트에 올릴지 정하고, 올릴 것은 카드로 써라. 파일을 만들지 마라.
+CHECK_PROMPT = """오늘은 {today}이다. 아래 공고 후보 {count}건을 사이트에 올릴지 정하고, 올릴 것은 카드로 써라. 파일을 만들지 마라.
+웹 검색과 브라우저를 쓰지 마라. 페이지를 열지 말고, 아래 후보 줄에 적힌 정보만으로 판단하고 써라. 적혀 있지 않은 사실은 "명시 없음" 또는 "확인 필요"로 쓴다.
 
 {scope}
 {deadline_rule}
 이미 사이트에 있는 접수 중 공고(같은 공고면 EXISTING): {existing}
 같은 공고가 이 목록 안에 두 번 있으면 하나만 PUBLISHED로 하고 나머지는 DUPLICATE로 적는다. 지난 회차가 끝난 대회라도 이번 회차 공고면 새 공고다.
-{browser_rules}
-
 후보:
 {items}
 
 {answer_rules}
 번호마다 반드시 한 줄을 적어라:
 {{"n":번호,"disposition":"PUBLISHED|EXISTING|DUPLICATE|INELIGIBLE|CLOSED|NOT_RELEVANT","reason":"PUBLISHED가 아니면 이유","id":"EXISTING·DUPLICATE이면 같은 공고의 id나 번호","official":true 또는 false,"officialUrl":"확인한 공식 주소","track":"aiData|generalSoftware|publicIdea|startupSupport","card":{{...PUBLISHED일 때만...}}}}
-official은 주최 측 공식 페이지에서 마감일을 직접 확인했으면 true다. 공식 페이지를 못 찾았거나 본문이 첨부·이미지뿐이라 못 읽었으면 false로 하고, 모음 사이트 정보로 카드를 써라.
+official은 후보 줄의 주소나 홈페이지가 주최 기관 자신의 페이지면 true, 모음 사이트(콘테스트코리아, 위비티, 그랜틀리 등)뿐이면 false다.
 {card_fields}"""
-
-REVERIFY_PROMPT = """오늘은 {today}이다. 이미 사이트에 올린 공고 {count}건이 아직 맞는지 주최 기관의 공식 페이지에서 다시 확인해라. 저장된 공식 링크부터 열어라. 파일을 만들지 마라.
-상태(접수중/마감/예정), 마감일(연장 여부), 참가 대상, 혜택을 지금 적힌 값과 비교해라.
-{deadline_rule}
-{browser_rules}
-
-공고:
-{items}
-
-{answer_rules}
-번호마다 반드시 한 줄을 적어라:
-{{"n":번호,"result":"VERIFIED 또는 FAILED","primarySourceUrl":"실제로 확인한 주소","note":"무엇을 봤는지 한국어로","changes":{{바뀐 칸만: "status","deadline","deadlineText","period","participation","reward","openingAt"}}}}
-공식 페이지를 열지 못했거나 본문이 첨부·이미지뿐이라 확인하지 못했으면 result를 FAILED로 하고 note에 이유를 적어라. 바뀐 것이 없으면 changes는 {{}}이다."""
-
 
 def now_iso():
     return datetime.now(SEOUL).isoformat(timespec="seconds")
@@ -158,7 +144,13 @@ def parse_lines(text):
 
 
 def run_chat(client, prompt, answer_path, log, wait_seconds, poll_seconds):
-    session_id, _, missing_workers = ask(client, prompt, answer_path, wait_seconds, poll_seconds, log)
+    try:
+        session_id, _, missing_workers = ask(client, prompt, answer_path, wait_seconds, poll_seconds, log)
+    except ExploreFailed as error:
+        if "no worker started" not in str(error):
+            raise
+        log.event("chat_reopened", answer=answer_path.name, reason=str(error))
+        session_id, _, missing_workers = ask(client, prompt, answer_path, wait_seconds, poll_seconds, log)
     rows, bad = parse_lines(answer_path.read_text(encoding="utf-8"))
     if bad:
         log.event("unparsed_lines", answer=answer_path.name, count=len(bad), sample=bad[:3])
@@ -317,8 +309,8 @@ def build_candidates(root, today, details, find_rows, earlier):
     open_urls = {normalize_url(l["url"]) for x in open_items for l in x.get("links", []) if l.get("url")}
     open_titles = {title_key(x["title"]) for x in open_items}
     rows, seen = [], set()
-    sources = [{"source": r["source"], "index": i, "title": r["title"], "url": r["url"], "details": r.get("details") or {}}
-               for i, r in enumerate(details)]
+    sources = [{"source": r["source"], "index": i, "title": r["title"], "url": r["url"], "details": r.get("details") or {},
+                "listing": r.get("listing")} for i, r in enumerate(details)]
     sources += [{"source": "gpt-" + r.get("job", "find"), "track": r.get("track"), "title": r.get("title"),
                  "url": r.get("url"), "details": {"host": r.get("host"), "deadline": r.get("deadline"), "via": r.get("via")}}
                 for r in find_rows if r.get("kind") == "candidate" and r.get("url") and r.get("title")]
@@ -343,13 +335,8 @@ def build_candidates(root, today, details, find_rows, earlier):
 
 def describe_candidate(item):
     facts = ", ".join(f"{k}: {v}" for k, v in (item.get("details") or {}).items() if v)
-    return f"{clean_title(item['title'])} | {item['url']} | {facts}"
-
-
-def describe_existing(item):
-    links = " ".join(l.get("url", "") for l in item.get("links", [])[:2])
-    return (f"{item['title']} | 저장된 링크: {links} | 지금 값: 상태 {item['status']}, deadline {item.get('deadline')}, "
-            f"마감 {item.get('deadlineText')}, 대상 {str(item.get('participation'))[:80]}, 혜택 {str(item.get('reward'))[:80]}")
+    listing = " ".join(str(item.get("listing") or "").split())[:300]
+    return f"{clean_title(item['title'])} | {item['url']} | {facts} | 목록 문구: {listing}"
 
 
 def run_check(root, today, candidates, client, log, wait_seconds, poll_seconds):
@@ -359,20 +346,8 @@ def run_check(root, today, candidates, client, log, wait_seconds, poll_seconds):
 
     def build(chunk):
         return CHECK_PROMPT.format(today=today, count=len(chunk), scope=SCOPE_RULES, deadline_rule=DEADLINE_RULE,
-                                   existing=existing, browser_rules=BROWSER_RULES, answer_rules=ANSWER_RULES,
+                                   existing=existing, answer_rules=ANSWER_RULES,
                                    items=numbered(chunk, describe_candidate), card_fields=CARD_FIELDS)
 
     answers, batches = run_numbered(client, candidates, build, stem, log, wait_seconds, poll_seconds)
     return {"answers": {str(k): v for k, v in answers.items()}, "batches": batches}
-
-
-def run_reverify(root, today, due, client, log, wait_seconds, poll_seconds):
-    stem = root / f"artifacts/daily/{today}-reverify"
-
-    def build(chunk):
-        return REVERIFY_PROMPT.format(today=today, count=len(chunk), deadline_rule=DEADLINE_RULE,
-                                      browser_rules=BROWSER_RULES, answer_rules=ANSWER_RULES,
-                                      items=numbered(chunk, describe_existing))
-
-    answers, batches = run_numbered(client, due, build, stem, log, wait_seconds, poll_seconds)
-    return {"answers": {str(k): v for k, v in answers.items()}, "batches": batches, "checkedAt": now_iso()}

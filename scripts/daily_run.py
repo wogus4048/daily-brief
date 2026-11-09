@@ -498,13 +498,9 @@ def run_research(root, today, client_factory=TitanClient, wait_seconds=WAIT_SECO
             with log.stage("check"):
                 state["check"] = gpt_jobs.run_check(root, today, state["candidates"], client, log, wait_seconds, poll_seconds)
                 save()
-        if "reverify" not in state:
-            latest = json.loads((root / "data/latest.json").read_text(encoding="utf-8"))
-            by_id = {x["id"]: x for g in ("contests", "support") for x in latest[g]}
-            with log.stage("reverify"):
-                state["reverify"] = gpt_jobs.run_reverify(root, today, [by_id[i] for i in state["due"]], client, log,
-                                                          wait_seconds, poll_seconds)
-                save()
+        # Existing items are no longer re-checked; passed deadlines close by date at publish.
+        state["reverify"] = {"skipped": "재확인 생략(사용자 결정 2026-11-09 \"둘 다 빼기\")"}
+        save()
         with log.stage("assemble"):
             result["brief"] = assemble(root, today)
         result.update(status="OK", candidates=len(state["candidates"]), due=len(state["due"]),

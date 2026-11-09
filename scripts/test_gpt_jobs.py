@@ -86,6 +86,27 @@ class WorkerReportTest(unittest.TestCase):
         self.assertNotIn("not for prime", text)
 
 
+class StuckChatTest(unittest.TestCase):
+    def test_chat_without_workers_fails_fast(self):
+        # Goal 7: on 2026-11-09 a chat that never started its workers held the run for 30 minutes.
+        import free_explore
+
+        class Idle:
+            def session(self, session_id):
+                return {"conversationId": "c", "activeTurnId": "t"}
+
+            def agents(self):
+                return []
+
+        original = free_explore.SPAWN_SECONDS
+        free_explore.SPAWN_SECONDS = 0
+        try:
+            with self.assertRaisesRegex(free_explore.ExploreFailed, "no worker started"):
+                free_explore.wait_for_workers(Idle(), "s", 1800, 0, FakeLog())
+        finally:
+            free_explore.SPAWN_SECONDS = original
+
+
 class PromptTest(unittest.TestCase):
     def test_find_prompt_lists_annual_contests_and_new_listing_pages(self):
         # Goal 5: recurring contests and newly learned listing pages are checked every run.
@@ -162,6 +183,8 @@ class AssembleTest(unittest.TestCase):
                  "reverify": {"answers": {str(i): {"n": i + 1, "result": "VERIFIED", "primarySourceUrl": "https://example.org/v",
                                                    "note": "시험", "changes": {}} for i in range(len(due))},
                               "checkedAt": "2026-11-09T10:00:00+09:00"}}
+        if not with_records:  # user decision 2026-11-09: existing items are not re-checked
+            state["reverify"] = {"skipped": "재확인 생략"}
         (root / f"artifacts/daily/{TODAY}-gpt.json").write_text(json.dumps(state, ensure_ascii=False), encoding="utf-8")
 
     def validate(self, root):

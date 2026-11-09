@@ -503,24 +503,52 @@ export async function crawlContestKorea(page) {
   );
 }
 
-async function crawlKStartup(page) {
-  const url = "https://www.k-startup.go.kr/web/main/mainSection0.do";
-  await gotoWithRetry(page, url);
-  await waitForListing(page, 'a[href*="bizpbanc-ongoing.do"]', 1800);
-  const items = (await collectAnchors(page, "a[href]", "K-Startup"))
-    .filter(item => {
-      const u = new URL(item.url);
-      const text = cleanText(item.rawText);
-      return u.hostname.endsWith("k-startup.go.kr")
-        && u.pathname.includes("/web/contents/bizpbanc-ongoing.do")
-        && u.searchParams.get("pbancSn")
-        && u.searchParams.get("schM") === "view"
-        && /(모집|공고|창업|마감|경진대회|챌린지|프로그램)/.test(text)
-        && text.length >= 8;
-    });
-  if (!items.length) throw new Error("K-Startup crawler returned zero highlighted announcements");
+// The ongoing list has a public (PBC010) and a private (PBC020) tab, 15 calls a page; the
+// main page shows only a few highlights, which missed 5 calls on 2026-11-09 (findings).
+const K_STARTUP_LIST = "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do";
+const K_STARTUP_CLASSES = ["PBC010", "PBC020"];
+const K_STARTUP_MAX_PAGES = 40;
+
+export async function crawlKStartup(page) {
+  const byId = new Map();
+  const coverage = [];
+  for (const cls of K_STARTUP_CLASSES) {
+    let pagesRead = 0;
+    let stoppedBy = "maxPages";
+    for (let n = 1; n <= K_STARTUP_MAX_PAGES; n += 1) {
+      await gotoWithRetry(page, `${K_STARTUP_LIST}?page=${n}&pbancClssCd=${cls}`);
+      await waitForListing(page, 'a[href*="go_view("]', 800);
+      const rows = await page.evaluate(() =>
+        [...document.querySelectorAll('a[href*="go_view("]')].map(a => ({
+          id: (a.getAttribute("href").match(/go_view\((\d+)\)/) || [])[1],
+          text: a.innerText || a.textContent || "",
+        })));
+      pagesRead = n;
+      let added = 0;
+      for (const row of rows) {
+        if (!row.id || byId.has(row.id)) continue;
+        const rawText = cleanText(row.text);
+        const lines = row.text.split(String.fromCharCode(10)).map(line => line.trim()).filter(Boolean);
+        // Lines: category and D-day, "마감일자 YYYY-MM-DD", title, title again, organization, views.
+        const after = lines.findIndex(line => line.startsWith("마감일자"));
+        const title = (after >= 0 && lines[after + 1]) || rawText.slice(0, 80);
+        byId.set(row.id, {
+          source: "K-Startup",
+          title,
+          url: `${K_STARTUP_LIST}?schM=view&pbancSn=${row.id}`,
+          rawText,
+        });
+        added += 1;
+      }
+      // Each page repeats a fixed slider; a page that adds nothing is past the end.
+      if (!added) { stoppedBy = "empty"; break; }
+    }
+    coverage.push({ url: `${K_STARTUP_LIST}?pbancClssCd=${cls}`, pagesRead, reachedEnd: stoppedBy === "empty", stoppedBy });
+  }
+  const items = [...byId.values()];
+  if (!items.length) throw new Error("K-Startup crawler returned zero announcements");
   return withActionable(
-    { key: "kStartupHighlights", status: "OK", url, items },
+    { key: "kStartupHighlights", status: "OK", url: K_STARTUP_LIST, items, coverage },
     ACTIONABLE.kStartupHighlights
   );
 }

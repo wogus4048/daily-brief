@@ -20,6 +20,8 @@ from research_rules import normalize_url
 
 WAIT_SECONDS = 1800
 POLL_SECONDS = 15
+# 2026-11-09 a chat never started its workers and the run waited the full 30 minutes.
+SPAWN_SECONDS = 180
 # Titan refuses a fourth live worker (config multiAgent.maxWorkers = 3).
 VERIFY_WORKERS = 3
 EXPLORE_WORKERS = 2
@@ -229,7 +231,8 @@ def read_worker_report(folder):
 
 def wait_for_workers(client, session_id, wait_seconds, poll_seconds, log):
     """Return the worker conversations of this Prime once none is still working."""
-    deadline = time.monotonic() + wait_seconds
+    started = time.monotonic()
+    deadline = started + wait_seconds
     run_id = None
     conversations = []
     while True:
@@ -247,6 +250,8 @@ def wait_for_workers(client, session_id, wait_seconds, poll_seconds, log):
         if conversations and not busy and not session.get("activeTurnId"):
             log.event("workers_finished", conversations=conversations)
             return conversations
+        if not conversations and time.monotonic() - started >= min(SPAWN_SECONDS, wait_seconds):
+            raise ExploreFailed(f"no worker started within {SPAWN_SECONDS} seconds")
         if time.monotonic() >= deadline:
             raise ExploreFailed(f"workers not finished within {wait_seconds} seconds (seen {len(conversations)})")
         time.sleep(poll_seconds)

@@ -148,7 +148,7 @@ def assemble(root, today):
                 item.update(changes)
                 item["lastUpdatedDate"] = today
         else:
-            reason = str((answer or {}).get("note") or "") or "GPT worker 답 없음"
+            reason = str((answer or {}).get("note") or "") or reverify.get("skipped") or "GPT worker 답 없음"
             url = (answer or {}).get("primarySourceUrl")
             failures.append({"id": item_id, "primarySourceUrl": url if valid_url(url) else stored, "reason": reason})
 
@@ -279,7 +279,7 @@ def assemble(root, today):
         "reverifiedIds": reverified, "reverificationEvidence": evidence, "reverificationFailures": failures,
         "publishedIds": published, "sourceGaps": failed_parts,
         "researchLimitations": [
-            "조사·확인·카드 작성은 GPT worker가 했고 사람이 보지 않았다.",
+            "찾기와 카드 작성은 GPT worker가 했고 사람이 보지 않았다. 새 공고는 주최 측 페이지를 열어 확인하지 않았고, 기존 공고 재확인도 하지 않았다(사용자 결정 2026-11-09).",
             f"주최 측 확인 전으로 올린 공고 {sum(1 for g in new_cards.values() for c in g if c.get('officialCheck'))}건.",
             f"GPT 기록이 비어 FAILED로 남긴 칸 {len(failed_parts)}개.",
         ],
