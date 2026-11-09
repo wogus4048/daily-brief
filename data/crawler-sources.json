@@ -131,6 +131,24 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "agentscouthq-com",
+      "name": "agentscouthq.com",
+      "url": "https://agentscouthq.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "aiDiscovery",
+      "sourceTracks": [
+        "aiDiscovery"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://agentscouthq.com/new.html"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "ai-challenge-elice-page",
       "name": "ai-challenge.elice.page",
       "url": "https://ai-challenge.elice.page/",
@@ -160,6 +178,17 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "aichallenge4all-or-kr",
+      "name": "모두의 AI를 위한 전국민 AI 경진대회 목록",
+      "url": "https://aichallenge4all.or.kr/competitions",
+      "reason": "정부·민간 대회 60건 통합 목록, 엘리스 AI 챌린지 등 접수중 대회 포함",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "aik-board-d001",
       "name": "AIK 게시판 d001",
       "url": "https://www.aik.or.kr/board/?ncode=d001",
@@ -178,6 +207,17 @@
       "status": "WATCH_ONLY",
       "score": 0,
       "recommendation": "WATCH_ONLY"
+    },
+    {
+      "key": "all-con-co-kr",
+      "name": "올콘 공모전 상세·연결 목록",
+      "url": "https://www.all-con.co.kr/view/contest/544469",
+      "reason": "올콘 홈은 웹 열람 시 502 오류였으나 개별 상세 페이지는 검색으로 정상 확인",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
       "key": "allforyoung",
@@ -199,6 +239,24 @@
         "https://amazonappdev2026.devpost.com/"
       ],
       "score": 14,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "anthropic-com",
+      "name": "anthropic.com",
+      "url": "https://anthropic.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "aiNews",
+      "sourceTracks": [
+        "aiNews"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.anthropic.com/research/components-of-agent-memory"
+      ],
+      "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -234,7 +292,7 @@
       "evidenceUrls": [
         "https://www.asvf.or.kr/notice/26"
       ],
-      "score": 25,
+      "score": 33,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -276,6 +334,17 @@
       }
     },
     {
+      "key": "bizinfo-go-kr",
+      "name": "기업마당 입주기업 모집공고",
+      "url": "https://www.bizinfo.go.kr/biz/bizb/selectBIZB200List.do",
+      "reason": "기업마당 지원사업 외 창업보육센터 입주 공고 별도 반복 등록",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "bizinfo-startup-list",
       "name": "기업마당 지원사업 공고 - 창업 분야",
       "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200View.do?hashCode=09&rows=15",
@@ -303,7 +372,7 @@
       "evidenceUrls": [
         "https://www.blaybus.com/v2/activity/1122/landing"
       ],
-      "score": 14,
+      "score": 22,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -334,7 +403,7 @@
         "https://blog.naver.com/nitto_official/224458090500",
         "https://blog.naver.com/ppspr/224439199284"
       ],
-      "score": 42,
+      "score": 50,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -352,7 +421,7 @@
       "evidenceUrls": [
         "https://www.brcn.go.kr/prog/eminwon/kor/BB/sub04_03_01/view.do?mgtno=57363"
       ],
-      "score": 25,
+      "score": 33,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -374,6 +443,17 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "campustown-seoul-go-kr",
+      "name": "서울캠퍼스타운 캠타프로그램",
+      "url": "https://campustown.seoul.go.kr/site/main/board/university_news/list?bcId=university_news&cp=1&listType=list&pageSize=5&sortDirection=DESC&sortOrder=BA_REGDATE",
+      "reason": "대학별 창업지원·창업경진대회 게시; 페이지 cp로 이전 게시물 이동",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "cbpm-cbnu-ac-kr",
       "name": "cbpm.cbnu.ac.kr",
       "url": "https://cbpm.cbnu.ac.kr/",
@@ -389,6 +469,17 @@
         "https://cbpm.cbnu.ac.kr/notice/notice/?mod=document&uid=1258"
       ],
       "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "chchclub-com",
+      "name": "청춘클럽 모집 중 창업 지원사업",
+      "url": "https://chchclub.com/notice/",
+      "reason": "2026-11-09 기준 모집중 전체 약 200건을 한 페이지에서 마감일순 끝 항목까지 확인; 민간 주최 필터에 활용 가능한 반복 목록",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -488,6 +579,17 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "daker-ai",
+      "name": "DAKER 공식 해커톤 전체 목록",
+      "url": "https://daker.ai/public/hackathons",
+      "reason": "2026-11-09 기준 모집 중 KIC AI Agent·제주 AI Agent·소재연구데이터 AI 세 건을 공식 본문으로 확인 가능; 과거 대회도 혼재",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "datathon-kr",
       "name": "datathon.kr",
       "url": "https://datathon.kr/",
@@ -537,6 +639,17 @@
         "https://dmcportal.kr/dic"
       ],
       "score": 14,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "dobongstartup-com",
+      "name": "도봉구청년창업센터 창업 프로그램",
+      "url": "https://www.dobongstartup.com/program/programlist.php",
+      "reason": "창업교육·입주연장·멘토링·오픈 창업스쿨 모집 지속 게시",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -590,6 +703,24 @@
       "autoDiscovered": true,
       "evidenceUrls": [
         "http://www.e-junggu.or.kr/"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "eli-so",
+      "name": "eli.so",
+      "url": "https://eli.so/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "aiData"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://eli.so/apply_form"
       ],
       "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
@@ -657,6 +788,24 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "frontier-replit-com",
+      "name": "frontier.replit.com",
+      "url": "https://frontier.replit.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "aiNews",
+      "sourceTracks": [
+        "aiNews"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://frontier.replit.com/sandbox-engine-microvms-part-1/"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "galuxium-nexus-v2-29411-devpost-com",
       "name": "galuxium-nexus-v2-29411.devpost.com",
       "url": "https://galuxium-nexus-v2-29411.devpost.com/",
@@ -703,6 +852,24 @@
       "autoDiscovered": true,
       "evidenceUrls": [
         "https://www.gcgfcontest.co.kr/info.asp"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "gcontest-co-kr",
+      "name": "gcontest.co.kr",
+      "url": "https://gcontest.co.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://gcontest.co.kr/front/m/comp/view/38038"
       ],
       "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
@@ -759,7 +926,7 @@
         "limit": 30
       },
       "recommendation": "CONTINUE_SHADOW",
-      "score": 20
+      "score": 30
     },
     {
       "key": "gitlab-transcend-devpost-com",
@@ -776,6 +943,24 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "global-venture-center",
+      "name": "global.venture.center",
+      "url": "https://global.venture.center/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "startupSupport",
+      "sourceTracks": [
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://global.venture.center/launchpad"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "go-simsa-com",
       "name": "go-simsa.com",
       "url": "https://go-simsa.com/",
@@ -789,6 +974,35 @@
       "autoDiscovered": true,
       "evidenceUrls": [
         "http://www.go-simsa.com/recruit/Jozu4OXw"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "gtp-or-kr",
+      "name": "경기테크노파크 공지사항",
+      "url": "https://www.gtp.or.kr/web/bbs/noticeList.jsp",
+      "reason": "2026-11-03 디지털전환허브 창업실 입주기업 공고 등 지속 갱신; 목록 최신 4014부터 과거 공고까지 페이지 제공",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "gttc-gtp-or-kr",
+      "name": "gttc.gtp.or.kr",
+      "url": "https://gttc.gtp.or.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "startupSupport",
+      "sourceTracks": [
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://gttc.gtp.or.kr/web/bbs/noticeView.jsp?cPage=1&gubun=&no=29848"
       ],
       "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
@@ -865,6 +1079,17 @@
       "score": 78
     },
     {
+      "key": "hackon-kr",
+      "name": "HACK:ON 해커톤 모집 목록",
+      "url": "https://hackon.kr/hackathons",
+      "reason": "2026 Korea Local Marketing Hackathon 11/16 모집 확인, 국내외 해커톤 일정 확인 가능",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "hanaw-com",
       "name": "hanaw.com",
       "url": "https://hanaw.com/",
@@ -878,6 +1103,42 @@
       "autoDiscovered": true,
       "evidenceUrls": [
         "https://www.hanaw.com/contest/contest.html"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "hobanspark-com",
+      "name": "hobanspark.com",
+      "url": "https://hobanspark.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "startupSupport",
+      "sourceTracks": [
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.hobanspark.com/support-programs/3029"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "hongik-ac-kr",
+      "name": "hongik.ac.kr",
+      "url": "https://hongik.ac.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.hongik.ac.kr/kr/newscenter/notice.do?mode=view&articleNo=159505"
       ],
       "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
@@ -897,7 +1158,7 @@
       "evidenceUrls": [
         "https://hub.kaia.re.kr/organSupportHub.do/view?orgKind=ORG_KIND_2&rltdId=95259"
       ],
-      "score": 25,
+      "score": 33,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -990,7 +1251,7 @@
       "evidenceUrls": [
         "https://jcia.or.kr/cf/Board/9950/detailView.do"
       ],
-      "score": 25,
+      "score": 33,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -1013,6 +1274,25 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "job-gg-go-kr",
+      "name": "job.gg.go.kr",
+      "url": "https://job.gg.go.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "startupSupport",
+      "sourceTracks": [
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://job.gg.go.kr/entSprt/detail.do?seq=5103",
+        "https://job.gg.go.kr/entSprt/detail.do?seq=5171"
+      ],
+      "score": 42,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "jocodingax-ai",
       "name": "jocodingax.ai",
       "url": "https://jocodingax.ai/",
@@ -1028,6 +1308,28 @@
         "http://jocodingax.ai"
       ],
       "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "k-ctf-org",
+      "name": "K-CTF 국내 정보보안 대회 목록",
+      "url": "https://k-ctf.org/contests",
+      "reason": "2026 Layer7 CTF 11/20 모집 마감 확인; 2026년 여타 CTF는 대체로 접수 마감",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "k-startup-go-kr",
+      "name": "K-Startup 분야별 최신 공고",
+      "url": "https://www.k-startup.go.kr/web/main/mainSectionChNaviList.do",
+      "reason": "사업화·입주·교육 등 다수 새 모집 공고 지속 갱신",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -1087,6 +1389,17 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "keit-re-kr",
+      "name": "한국산업기술기획평가원 아이디어 공모전 안내",
+      "url": "https://www.keit.re.kr/board.es?bid=0049&mid=a10606030000",
+      "reason": "연도별 KEIT 혁신 아이디어 공모 공식 목록",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "keitNotices",
       "name": "한국산업기술기획평가원(KEIT) 공지사항",
       "url": "https://www.keit.re.kr/board.es?bid=0009&mid=a10301010000",
@@ -1133,6 +1446,17 @@
         "https://www.kinfa.or.kr/customerService/exhibitionDetail.do?seq=30532"
       ],
       "score": 14,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "kingospring-com",
+      "name": "킹고스프링 PROGRAM·NEWS",
+      "url": "https://kingospring.com/",
+      "reason": "민간 AC가 배치·LIPS 프로그램 및 모집마감 정보를 지속 게시, 메인 프로그램 목록과 최신 뉴스까지 확인",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -1200,6 +1524,35 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "koreahackathons-com",
+      "name": "Hackathon Korea",
+      "url": "https://koreahackathons.com/",
+      "reason": "예정 해커톤 개별 상세 페이지 3건 반복 게시",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "kpetro-or-kr",
+      "name": "kpetro.or.kr",
+      "url": "https://kpetro.or.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.kpetro.or.kr/lay1/bbs/S1T52C254/A/1/view.do?article_seq=14904"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "kspo-or-kr",
       "name": "kspo.or.kr",
       "url": "https://kspo.or.kr/",
@@ -1215,6 +1568,17 @@
         "http://kspo.or.kr/contest"
       ],
       "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "ksponco-or-kr",
+      "name": "한국체육산업개발 공식 공지",
+      "url": "https://www.ksponco.or.kr/board.es?bid=0001&mid=a50301000000",
+      "reason": "11월 2일자 공공데이터 활용 경진대회 반복 공지",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -1255,6 +1619,17 @@
       "reason": "structured contest/activity catalog but pagination and anti-bot behavior need inspection",
       "status": "NEEDS_SPEC",
       "score": 0,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "linkareer-com",
+      "name": "링커리어 공모전 목록",
+      "url": "https://linkareer.com/list/contest",
+      "reason": "검색결과 449건, 개별 공모전 게시",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -1410,7 +1785,7 @@
         "https://modu.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=10cd564877b04abcb22c35cf62054cb6&menu_id=527&pagetype=bbs",
         "https://modu.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=c73a0a9081bf48378808e142562daec6&menu_id=527&pagetype=bbs"
       ],
-      "score": 44,
+      "score": 52,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -1506,6 +1881,35 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "newkidsinvest-kr",
+      "name": "뉴키즈인베스트먼트 프로그램 공고 목록",
+      "url": "https://www.newkidsinvest.kr/program",
+      "reason": "민간 액셀러레이터 투자·보육·해커톤 반복 공고 19건 전체 및 모집 중 1건 표시, 하단 과거 공고 끝까지 확인",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "news-bucheon-go-kr",
+      "name": "news.bucheon.go.kr",
+      "url": "https://news.bucheon.go.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "contest",
+      "sourceTracks": [
+        "publicIdea"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://news.bucheon.go.kr/home/kor/M337742440/board.do?act=detail&deleteAt=N&idx=cb00d1a0008a85e71a41b8741facbffea42baa08efaf4356fbc3aa29c6cd9cf6"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "nia-or-kr",
       "name": "nia.or.kr",
       "url": "https://nia.or.kr/",
@@ -1562,6 +1966,24 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "nowon-kr",
+      "name": "nowon.kr",
+      "url": "https://nowon.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "startupSupport",
+      "sourceTracks": [
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1003&q_bbscttSn=20261102172206676&q_clCode=0&q_estnColumn1=11&q_ntceSiteCode=11"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "onoffmix",
       "name": "온오프믹스",
       "url": "https://www.onoffmix.com/event/main",
@@ -1587,6 +2009,35 @@
         "https://opencv26.devpost.com/"
       ],
       "score": 12,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "orangepark-or-kr",
+      "name": "오렌지플래닛 오렌지파크 캠퍼스·프로그램",
+      "url": "https://www.orangepark.or.kr/",
+      "reason": "민간 재단 창업교육 러닝메이트 Part1/Part2/F&B 및 온라인 해커톤 프로그램 지속 모집 페이지",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "paper-program-com",
+      "name": "paper-program.com",
+      "url": "https://paper-program.com/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "startupSupport",
+      "sourceTracks": [
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://paper-program.com/program-coachingday?utm_source=startupsite&utm_medium=kstartup&utm_campaign=coaching2611"
+      ],
+      "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -1683,6 +2134,17 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "roundup-zuzu-network",
+      "name": "ZUZU 라운드업 모집 중 공고·투자 집중검토",
+      "url": "https://roundup.zuzu.network/",
+      "reason": "민간 AC/기업 투자기업 집중검토 모집을 주기적으로 갱신; 11월 마크앤컴퍼니·삼성화재 건 확인",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "sangjufestival-com",
       "name": "sangjufestival.com",
       "url": "https://sangjufestival.com/",
@@ -1764,6 +2226,24 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "seoul-go-kr",
+      "name": "seoul.go.kr",
+      "url": "https://seoul.go.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "startupSupport",
+      "sourceTracks": [
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://www.seoul.go.kr/news/news_notice.do?bbsNo=277&nttNo=469331"
+      ],
+      "score": 25,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "seoullocalcamp-imweb-me",
       "name": "seoullocalcamp.imweb.me",
       "url": "https://seoullocalcamp.imweb.me/",
@@ -1818,6 +2298,17 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "startup-kangwon-ac-kr",
+      "name": "강원대 KNU창업혁신원 공지사항",
+      "url": "https://startup.kangwon.ac.kr/Home/H60000/H60100/boardList",
+      "reason": "강원권 창업교육·대학 창업프로그램 지속 모집 게시",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "startup-plus-kr",
       "name": "startup-plus.kr",
       "url": "https://startup-plus.kr/",
@@ -1833,7 +2324,25 @@
       "evidenceUrls": [
         "https://www.startup-plus.kr/project/PRJ007528"
       ],
-      "score": 42,
+      "score": 50,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "startup-postech-ac-kr",
+      "name": "startup.postech.ac.kr",
+      "url": "https://startup.postech.ac.kr/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "startupSupport",
+      "sourceTracks": [
+        "startupSupport"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://startup.postech.ac.kr/bbs/board.php?bo_table=sub2_2&status=&wr_id=128"
+      ],
+      "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -1891,6 +2400,17 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
+      "key": "thinkcontest-com",
+      "name": "씽굿 공모전 전체 목록",
+      "url": "https://www.thinkcontest.com/thinkgood/user/contest/index.do",
+      "reason": "홈페이지보다 구체적인 접수 상태·분야·기간을 제공하는 반복 공고 목록",
+      "category": "unclassified",
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
       "key": "thinkyou-contest-2026",
       "name": "싱크유 2026 공모전 목록",
       "url": "https://thinkyou.co.kr/contest/2026.asp",
@@ -1899,6 +2419,24 @@
       "status": "NEEDS_SPEC",
       "discoveredAt": "2026-11-06",
       "score": 8,
+      "recommendation": "NEEDS_CRAWLER_SPEC"
+    },
+    {
+      "key": "toollist-ai",
+      "name": "toollist.ai",
+      "url": "https://toollist.ai/",
+      "reason": "Auto-discovered from recurring/relevant daily research candidates",
+      "category": "aiDiscovery",
+      "sourceTracks": [
+        "aiDiscovery"
+      ],
+      "status": "NEEDS_SPEC",
+      "discoveredAt": "2026-11-09",
+      "autoDiscovered": true,
+      "evidenceUrls": [
+        "https://toollist.ai/"
+      ],
+      "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -2042,6 +2580,6 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     }
   ],
-  "lastEvolvedDate": "2026-11-06",
-  "lastEvolvedAt": "2026-11-05T16:31:58.029587Z"
+  "lastEvolvedDate": "2026-11-09",
+  "lastEvolvedAt": "2026-11-09T07:42:58.544555Z"
 }
