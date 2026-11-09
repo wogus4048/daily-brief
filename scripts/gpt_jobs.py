@@ -17,8 +17,8 @@ from free_explore import BROWSER_RULES, ExploreFailed, ask
 from research_rules import normalize_url
 
 SEOUL = ZoneInfo("Asia/Seoul")
-# No page is opened at the check (user decision 2026-11-09 "공식 확인을 쳐내"), so a worker takes more.
-ITEMS_PER_WORKER = 10
+# Short chats: one that stalls loses less work (user 2026-11-10 "하나의 채팅에 너무 오래 일시키면 멈출 가능성이 높아").
+ITEMS_PER_WORKER = 5
 NEXT_CANDIDATES_IN_PROMPT = 10
 JSON_BLOCK = re.compile(r"```json\s*\n(.*?)```", re.S)
 # Validator names (validate_research_audit.py TRACKS, REQUIRED_SOURCES); answers must use them exactly.
@@ -210,7 +210,7 @@ def existing_open(snapshot):
 
 
 def find_jobs(root, today):
-    """Three chats: two track groups (with fixed sources, districts, annual contests) and free exploration."""
+    """Six short chats, one after another (user 2026-11-10: 2 workers at a time, short chats)."""
     manifest = json.loads((root / "data/crawler-sources.json").read_text(encoding="utf-8"))
     annual = json.loads((root / "data/annual-contests.json").read_text(encoding="utf-8"))["contests"]
     crawled = ", ".join(entry.get("name") or entry["key"] for entry in manifest.get("active", []))
@@ -221,29 +221,34 @@ def find_jobs(root, today):
     def axes(tracks):
         return "; ".join(f"{t}({', '.join(TRACK_AXES[t])})" for t in tracks)
 
-    group_a = ("aiData", "generalSoftware", "publicIdea")
+    group_dev = ("aiData", "generalSoftware")
     group_b = ("startupSupport", "upcomingOpenings")
     pages_a = ("- 링커리어 공모전 https://linkareer.com/list/contest\n- 씽굿 https://www.thinkcontest.com/\n"
                "- 올콘 https://www.all-con.co.kr/\n- 데이콘·DAKER·AI팩토리 https://aifactory.space/\n- 소통24 https://sotong.go.kr/")
-    pages_b = ("- K-Startup 진행 중 공고 https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do (모든 쪽)\n"
-               "- 기업마당 https://www.bizinfo.go.kr/\n- 서울창업허브·SBA https://www.startup-plus.kr/\n"
-               "아래 정기 대회와 창업 모집은 매번 공식 주소를 열어 이번 회차 공고가 있는지 봐라:\n"
-               + "\n".join(f"- {a['name']}: {a['url']}" for a in annual))
+    # K-Startup's whole ongoing list is crawled (crawl_sources.mjs crawlKStartup), so it is not repeated here.
+    pages_b = "- 기업마당 https://www.bizinfo.go.kr/\n- 서울창업허브·SBA https://www.startup-plus.kr/"
+    annual_lines = "\n".join(f"- {a['name']}: {a['url']}" for a in annual)
     fixed = "\n".join(f'- "{name}": {url}' for name, url in FIXED_SOURCES.items())
     districts = "\n".join(f'- "{key}": {name} 공식 고시·공고와 일자리경제·창업 공지' for key, name in DISTRICTS.items())
-    extra_b = (f"고정 출처(이름 그대로) 각각을 열어 확인해라:\n{fixed}\n구청 세 곳(키 그대로):\n{districts}\n"
-               f"최근 발견된 목록 페이지도 열어 봐라:\n{watch}")
-    record_b = ('- 고정 출처마다 {"kind":"fixedSource","name":"이름 그대로","urls":["연 주소"],"status":"CHECKED 또는 FAILED","note":"본 범위와 결과"}\n'
-                '- 구청마다 {"kind":"district","key":"nowon|dobong|gangbuk","urls":[...],"status":"CHECKED 또는 FAILED","note":"..."}\n'
-                '- 정기 대회마다 {"kind":"annual","name":"목록 이름 그대로","url":"연 주소","status":"OPEN|UPCOMING|CLOSED|NONE|FAILED","note":"..."}\n')
+    extra_fixed = f"고정 출처(이름 그대로) 각각을 열어 확인해라:\n{fixed}\n구청 세 곳(키 그대로):\n{districts}"
+    record_fixed = ('- 고정 출처마다 {"kind":"fixedSource","name":"이름 그대로","urls":["연 주소"],"status":"CHECKED 또는 FAILED","note":"본 범위와 결과"}\n'
+                    '- 구청마다 {"kind":"district","key":"nowon|dobong|gangbuk","urls":[...],"status":"CHECKED 또는 FAILED","note":"..."}\n')
+    extra_annual = (f"아래 정기 대회와 창업 모집은 매번 공식 주소를 열어 이번 회차 공고가 있는지 봐라:\n{annual_lines}\n"
+                    f"최근 발견된 목록 페이지도 열어 봐라:\n{watch}")
+    record_annual = '- 정기 대회마다 {"kind":"annual","name":"목록 이름 그대로","url":"연 주소","status":"OPEN|UPCOMING|CLOSED|NONE|FAILED","note":"..."}\n'
+    no_axes = "(트랙 구분 없음, queries 줄은 생략)"
     common = dict(today=today, scope=SCOPE_RULES, browser_rules=BROWSER_RULES, answer_rules=ANSWER_RULES)
     free = (f"위 트랙 구분 없이, 아래 사이트는 이미 다른 수집이 맡으니 출처로 쓰지 말고 여기에 없을 만한 공고를 스스로 찾아라: {crawled}. "
             "대학·공공기관·기업 자체 공고, 지역 창업센터, 해외 기관의 한국 대상 대회를 넓게 찾아라. 후보의 track은 가장 가까운 것을 골라라.")
     return [
-        ("find-a", FIND_PROMPT.format(axes=axes(group_a), pages=pages_a, extra="", record_lines="", **common)),
-        ("find-b", FIND_PROMPT.format(axes=axes(group_b), pages=pages_b, extra=extra_b, record_lines=record_b, **common)),
-        ("find-free", FIND_PROMPT.format(axes="(트랙 구분 없음, queries 줄은 생략)", pages="(지정 없음)",
-                                         extra=free, record_lines="", **common)),
+        ("find-dev", FIND_PROMPT.format(axes=axes(group_dev), pages=pages_a, extra="", record_lines="", **common)),
+        ("find-idea", FIND_PROMPT.format(axes=axes(("publicIdea",)), pages=pages_a, extra="", record_lines="", **common)),
+        ("find-startup", FIND_PROMPT.format(axes=axes(group_b), pages=pages_b, extra="", record_lines="", **common)),
+        ("find-fixed", FIND_PROMPT.format(axes=no_axes, pages="(아래 고정 출처)", extra=extra_fixed,
+                                          record_lines=record_fixed, **common)),
+        ("find-annual", FIND_PROMPT.format(axes=no_axes, pages="(아래 정기 대회)", extra=extra_annual,
+                                           record_lines=record_annual, **common)),
+        ("find-free", FIND_PROMPT.format(axes=no_axes, pages="(지정 없음)", extra=free, record_lines="", **common)),
     ]
 
 

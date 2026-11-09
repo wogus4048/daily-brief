@@ -113,14 +113,14 @@ class PromptTest(unittest.TestCase):
         jobs = dict(gpt_jobs.find_jobs(ROOT, TODAY))
         annual = json.loads((ROOT / "data/annual-contests.json").read_text(encoding="utf-8"))["contests"]
         for contest in annual:
-            self.assertIn(contest["url"], jobs["find-b"])
+            self.assertIn(contest["url"], jobs["find-annual"])
         manifest = json.loads((ROOT / "data/crawler-sources.json").read_text(encoding="utf-8"))
         with_url = [c for c in manifest["nextCandidates"] if c.get("url")]
         if with_url:
             newest = max(with_url, key=lambda c: c.get("discoveredAt") or "")
-            self.assertIn(newest["url"], jobs["find-b"])
+            self.assertIn(newest["url"], jobs["find-annual"])
         for name in gpt_jobs.FIXED_SOURCES:
-            self.assertIn(f'"{name}"', jobs["find-b"])
+            self.assertIn(f'"{name}"', jobs["find-fixed"])
 
 
 class CandidateTest(unittest.TestCase):
