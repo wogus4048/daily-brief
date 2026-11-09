@@ -11,9 +11,11 @@ from zoneinfo import ZoneInfo
 
 
 SEOUL = ZoneInfo("Asia/Seoul")
-DATE_PATTERN = re.compile(r"(?<!\d)(?:(20\d{2})[.\-/])?(\d{1,2})[.\-/](\d{1,2})(?!\d)")
 TRACKING_KEYS = {"fbclid", "gclid", "dclid", "msclkid", "mc_cid", "mc_eid"}
 OUT_OF_SCOPE_HOSTS = {"devpost.com"}
+ROLLING_LABELS = ("상시", "수시", "예산 소진 시", "선착순")
+UNKNOWN_DEADLINE = "확인 필요"
+ISO_DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 
 def normalize_url(value):
@@ -43,45 +45,52 @@ def parse_seoul_date(value):
     return dt.date()
 
 
-def _dates_in(text, today):
-    matches = []
-    for year_text, month_text, day_text in DATE_PATTERN.findall(text or ""):
-        year, month, day = int(year_text or today.year), int(month_text), int(day_text)
+def deadline_info(item):
+    """Read the writer's structured deadline (decisions in docs/archive/review-2026-11-06-dday.md and
+    review-2026-11-09-dday-implementation.md). The code never guesses a deadline from prose.
+
+    DATE: list of YYYY-MM-DD application deadlines; open until the last one passes.
+    ROLLING: one of ROLLING_LABELS, no fixed deadline.
+    UNKNOWN: "확인 필요" or missing; kept off the open lists until confirmed.
+    INVALID: anything else; validate_data.py refuses it.
+    """
+    value = item.get("deadline")
+    if value is None or value == UNKNOWN_DEADLINE:
+        return {"kind": "UNKNOWN"}
+    if value in ROLLING_LABELS:
+        return {"kind": "ROLLING", "label": value}
+    if isinstance(value, list) and value and all(isinstance(entry, str) and ISO_DATE.match(entry) for entry in value):
         try:
-            value = date(year, month, day)
+            return {"kind": "DATE", "dates": sorted({date.fromisoformat(entry) for entry in value})}
         except ValueError:
-            continue
-        # An unqualified January date in late December commonly refers to
-        # the upcoming year. Do NOT roll arbitrary expired dates a year ahead.
-        if not year_text and today.month == 12 and month == 1:
-            value = date(today.year + 1, month, day)
-        matches.append(value)
-    return matches
+            pass
+    return {"kind": "INVALID"}
 
 
-def _deadline_dates(item, today):
-    deadline_dates = _dates_in(str(item.get("deadlineText") or ""), today)
-    if not deadline_dates:
-        period = str(item.get("period") or "")
-        if re.search(r"접수|모집|신청|응모|등록|제출|마감", period):
-            period_dates = _dates_in(period, today)
-            # Periods commonly list application start then end.
-            deadline_dates = [max(period_dates)] if period_dates else []
-    return deadline_dates
+def deadline_label(info, today):
+    if info["kind"] == "ROLLING":
+        return info["label"]
+    if info["kind"] != "DATE":
+        return "마감 확인 필요"
+    upcoming = [value for value in info["dates"] if value >= today]
+    if not upcoming:
+        return "마감"
+    days = (min(upcoming) - today).days
+    return "오늘 마감" if days == 0 else f"D-{days}"
 
 
 def nearest_deadline_date(item, today):
-    """Prefer explicitly advertised deadlines, not unrelated event/start dates."""
-    deadline_dates = _deadline_dates(item, today)
-    if not deadline_dates:
+    """The next application deadline, or the last one once all have passed."""
+    info = deadline_info(item)
+    if info["kind"] != "DATE":
         return None
-    upcoming = [d for d in deadline_dates if d >= today]
-    return min(upcoming) if upcoming else max(deadline_dates)
+    upcoming = [value for value in info["dates"] if value >= today]
+    return min(upcoming) if upcoming else max(info["dates"])
 
 
 def all_deadlines_passed(item, today):
-    deadline_dates = _deadline_dates(item, today)
-    return bool(deadline_dates) and max(deadline_dates) < today
+    info = deadline_info(item)
+    return info["kind"] == "DATE" and max(info["dates"]) < today
 
 
 def is_out_of_scope(item):
@@ -94,12 +103,37 @@ def is_out_of_scope(item):
 
 
 def can_close_without_verification(previous, current, today):
-    return (
-        is_out_of_scope(previous)
-        and previous.get("status") in ("OPEN", "UPCOMING")
-        and current.get("status") == "CLOSED"
-        and all_deadlines_passed(previous, today)
-    )
+    if previous.get("status") not in ("OPEN", "UPCOMING") or current.get("status") != "CLOSED":
+        return False
+    if is_out_of_scope(previous):
+        return all_deadlines_passed(previous, today)
+    # apply_deadlines closed it today because every stated deadline has passed.
+    return current.get("autoClosedDate") == today.isoformat() and all_deadlines_passed(current, today)
+
+
+def apply_deadlines(snapshot, snapshot_date):
+    """Write dDay from the structured deadline and close OPEN items whose deadlines all passed.
+
+    The site recomputes D-day from `deadline` on the reader's day, so a missed
+    publish no longer leaves a frozen D-day (review-2026-11-06-dday.md, A and B).
+    """
+    today = date.fromisoformat(snapshot_date)
+    closed = []
+    for group in ("contests", "support"):
+        for item in snapshot.get(group, []):
+            # Items written before the field existed keep their text until a researcher fills `deadline`.
+            if item.get("status") != "OPEN" or "deadline" not in item:
+                continue
+            info = deadline_info(item)
+            item.pop("autoClosedDate", None)
+            if info["kind"] == "DATE" and max(info["dates"]) < today:
+                item["status"] = "CLOSED"
+                item["autoClosedDate"] = snapshot_date
+                item["lastUpdatedDate"] = snapshot_date
+                closed.append(item["id"])
+            else:
+                item["dDay"] = deadline_label(info, today)
+    return closed
 
 
 def close_expired_out_of_scope(snapshot, snapshot_date):

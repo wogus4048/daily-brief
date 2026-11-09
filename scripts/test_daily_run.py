@@ -410,7 +410,7 @@ class PrepareTest(RepoCase):
 
     def test_expired_devpost_is_closed(self):
         write_json(self.root / "data/latest.json", {"date": "2026-11-04", "support": [], "contests": [{
-            "id": "gone", "status": "OPEN", "deadlineText": "10.31",
+            "id": "gone", "status": "OPEN", "deadline": ["2026-10-31"],
             "links": [{"url": "https://x.devpost.com/"}],
         }]})
         code = daily_run.run_prepare(
@@ -492,6 +492,21 @@ class PublishTest(RepoCase):
         self.assertEqual(json.loads(self.origin_file("data/latest.json"))["date"], TODAY)
         self.assertEqual(json.loads(self.origin_file(f"data/source-cache/{TODAY}.json"))["date"], TODAY)
         self.assertEqual(self.report()["publish"]["status"], "OK")
+
+    def test_publish_closes_passed_deadlines(self):
+        self.write_brief()
+        snapshot = {"date": TODAY, "contests": [
+            {"id": "passed", "status": "OPEN", "deadline": ["2026-11-04"], "dDay": "D-1"},
+            {"id": "open", "status": "OPEN", "deadline": ["2026-11-07"], "dDay": "D-9"},
+        ], "support": []}
+        write_json(self.root / "data/latest.json", snapshot)
+        write_json(self.root / f"data/archive/{TODAY}.json", snapshot)
+        self.assertEqual(self.publish(checks=daily_run.check_files), 0)
+        published = json.loads(self.origin_file("data/latest.json"))
+        self.assertEqual([item["status"] for item in published["contests"]], ["CLOSED", "OPEN"])
+        self.assertEqual(published["contests"][1]["dDay"], "D-2")
+        self.assertEqual(published, json.loads(self.origin_file(f"data/archive/{TODAY}.json")))
+        self.assertEqual(self.report()["publish"]["closedByDeadline"], ["passed"])
 
     def test_other_tracked_change_is_refused(self):
         self.write_brief()

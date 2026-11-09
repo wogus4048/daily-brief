@@ -46,7 +46,7 @@ try {
  assert.equal(new Set(summaryIds).size,summaryIds.length,'Daily summary does not repeat an item across sections');
  assert.ok(await page.locator('.briefing-section').evaluateAll(sections=>sections.every(section=>section.querySelectorAll('.product-row').length<=5)),'Each summary section stays short');
  const closingIds=await page.locator('[data-briefing-section="urgent"] .product-row').evaluateAll(rows=>rows.map(row=>row.dataset.id));
- const closingDays=closingIds.map(id=>{const item=[...data.contests,...data.support].find(i=>i.id===id);return item.dDay==='오늘 마감'?0:Number(item.dDay.match(/D-(\d+)/)[1]);});
+ const closingDays=closingIds.map(id=>{const item=[...data.contests,...data.support].find(i=>i.id===id);return /오늘|D-?DAY/i.test(item.dDay)?0:Number(item.dDay.match(/D-(\d+)/)[1]);});
  assert.ok(closingDays.every((n,i)=>n<=7 && (!i || n>=closingDays[i-1])),'Closing section orders actual upcoming deadlines');
  const rowSurfaces=await page.locator('#homeFeed .product-row').evaluateAll(rows=>rows.slice(0,5).map(row=>{
    const style=getComputedStyle(row);
@@ -103,5 +103,20 @@ try {
  assert.ok(await page.locator('[data-briefing-section="new"] .briefing-empty').isVisible(),'Quiet days show an explicit empty summary');
  assert.deepEqual(await page.locator('[data-briefing-section="updated"] [data-id]').evaluateAll(rows=>rows.map(row=>row.dataset.id)),[quiet.aiNews[0].id],'Updated summary contains only actual snapshot-day changes');
  assert.equal(await page.locator('#homeFeed [data-id="'+quiet.contests[0].id+'"]').count(),0,'Closed opportunities cannot enter the daily summary');
+ // A brief published on 11-06 and read on 11-09: D-day follows the reader's day (review-2026-11-06-dday.md).
+ const stale=structuredClone(data);stale.date='2026-11-06';
+ const [soon,gone,unknown]=stale.contests;
+ Object.assign(soon,{status:'OPEN',deadline:['2026-11-10'],dDay:'D-4'});
+ Object.assign(gone,{status:'OPEN',deadline:['2026-11-07'],dDay:'D-1'});
+ Object.assign(unknown,{status:'OPEN',deadline:'확인 필요',dDay:'마감 확인 필요'});
+ const reader=await browser.newPage({viewport:{width:1440,height:900}});
+ await reader.clock.setFixedTime(new Date('2026-11-09T12:00:00+09:00'));
+ await reader.route('https://api.github.com/repos/**',r=>r.fulfill({json:{stargazers_count:1234,forks_count:10}}));
+ await reader.route('**/data/latest.json?*',r=>r.fulfill({json:stale}));
+ await reader.goto(host.base+'/?ux-test=stale#/contests');await ready(reader);
+ assert.equal(await reader.locator('ion-card[data-id="'+soon.id+'"] .opportunity-card-v2-status').innerText(),'D-1','D-day counts from the reader\'s day');
+ assert.equal(await reader.locator('ion-card[data-id="'+gone.id+'"]').count(),0,'A passed deadline leaves the open list');
+ assert.equal(await reader.locator('[data-id="'+unknown.id+'"]').count(),0,'An unstated deadline stays off the site');
+ await reader.close();
  console.log('PASS: filters, navigation, search, upcoming status, daily summary, deadline completeness, comparison facts and compact desktop layout');
 } finally {await browser.close();await host.close();}

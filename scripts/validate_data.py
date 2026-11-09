@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-import json, pathlib, sys, re
+import copy, json, pathlib, sys, re
+
+from research_rules import ROLLING_LABELS, UNKNOWN_DEADLINE, apply_deadlines, deadline_info
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
+DEADLINE_FIELDS_FROM = '2026-11-10'
 path = pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / 'data/latest.json'
 data = json.loads(path.read_text(encoding='utf-8'))
 
@@ -52,6 +55,24 @@ for item in data['aiDiscovery']:
     assert item['trend'] in ('HOT', 'RISING', 'STEADY', 'RESURFACED'), f"aiDiscovery.{item['id']}.trend invalid"
     assert item['newsState'] in ('NEW_RELEASE', 'NEWLY_DISCOVERED', 'UPDATED', 'BASELINE'), f"aiDiscovery.{item['id']}.newsState invalid"
     ids.append(item['id'])
+
+# From this snapshot on, every OPEN opportunity carries a structured `deadline` written by the
+# researcher, and `dDay` comes from research_rules.apply_deadlines (review-2026-11-09-dday-implementation.md).
+if data['date'] >= DEADLINE_FIELDS_FROM:
+    expected = copy.deepcopy(data)
+    closed = apply_deadlines(expected, data['date'])
+    assert not closed, f'OPEN items whose deadlines all passed: {closed}'
+    for group in ('contests', 'support'):
+        for item, want in zip(data[group], expected[group]):
+            if item['status'] != 'OPEN':
+                continue
+            assert 'deadline' in item, f"{group}.{item['id']} missing deadline"
+            assert deadline_info(item)['kind'] != 'INVALID', (
+                f"{group}.{item['id']}.deadline must be a list of YYYY-MM-DD dates, one of {ROLLING_LABELS} or {UNKNOWN_DEADLINE!r}"
+            )
+            assert item.get('dDay') == want.get('dDay'), (
+                f"{group}.{item['id']}.dDay is {item.get('dDay')!r}, deadline gives {want.get('dDay')!r}"
+            )
 
 assert len(ids) == len(set(ids)), 'duplicate item id'
 for d in data['archive']:

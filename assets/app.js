@@ -81,12 +81,47 @@ function requestedDate() {
   return /^\d{4}-\d{2}-\d{2}$/.test(v || "") ? v : null;
 }
 
+// D-day is counted from the structured deadline on the viewer's day, so a missed publish
+// cannot freeze it (docs/archive/review-2026-11-06-dday.md). Older snapshots only carry dDay text.
+function referenceDate() {
+  if (requestedDate() || !state.data) return state.data ? state.data.date : null;
+  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Seoul" }).format(new Date());
+  return today > state.data.date ? today : state.data.date;
+}
+
+function daysBetween(from, to) {
+  return Math.round((Date.parse(to + "T00:00:00Z") - Date.parse(from + "T00:00:00Z")) / 86400000);
+}
+
+function nextDeadline(item) {
+  const ref = referenceDate();
+  return item.deadline.filter(d => !ref || d >= ref).sort()[0] || null;
+}
+
 function ddayNumber(item) {
-  if (!item || !item.dDay) return null;
+  if (!item) return null;
+  if (Array.isArray(item.deadline)) {
+    const next = nextDeadline(item);
+    return next ? daysBetween(referenceDate(), next) : null;
+  }
+  if (!item.dDay) return null;
   const v = String(item.dDay);
-  if (v.includes("오늘")) return 0;
+  if (v.includes("오늘") || /D-?DAY/i.test(v)) return 0;
   const m = v.match(/D-(\d+)/i);
   return m ? Number(m[1]) : null;
+}
+
+function ddayText(item) {
+  if (!item) return "";
+  if (Array.isArray(item.deadline)) {
+    const n = ddayNumber(item);
+    return n === null ? "마감" : n === 0 ? "오늘 마감" : "D-" + n;
+  }
+  return item.dDay;
+}
+
+function deadlinePassed(item) {
+  return Array.isArray(item.deadline) && item.deadline.length > 0 && !nextDeadline(item);
 }
 
 function isToday(item) { return ddayNumber(item) === 0; }
@@ -103,7 +138,7 @@ function upcomingWeek(item) {
 function briefNames(items, emptyText, max = 2) {
   if (!items.length) return emptyText;
   const labels = items.slice(0, max).map(item => {
-    const suffix = item.deadlineText ? " · " + item.deadlineText : item.dDay ? " · " + item.dDay : "";
+    const suffix = item.deadlineText ? " · " + item.deadlineText : ddayText(item) ? " · " + ddayText(item) : "";
     return item.title + suffix;
   });
   const rest = items.length - labels.length;
@@ -117,7 +152,7 @@ function shortDate(s) {
 }
 
 function isOpenItem(item) {
-  return String(item.status || "OPEN").toUpperCase() !== "CLOSED";
+  return String(item.status || "OPEN").toUpperCase() !== "CLOSED" && !deadlinePassed(item);
 }
 
 function isNewToday(item) {
@@ -196,7 +231,11 @@ async function loadData() {
   if (!res.ok) throw new Error("브리핑 데이터를 불러오지 못했습니다.");
 
   state.data = await res.json();
-  state.all = [].concat(state.data.contests || [], state.data.aiNews || [], state.data.aiDiscovery || [], state.data.support || []);
+  // An open call whose deadline is not stated stays off the site until it is confirmed (user decision 2026-11-09).
+  const listed = item => !(item.deadline === "확인 필요" && String(item.status || "OPEN").toUpperCase() === "OPEN");
+  state.data.contests = (state.data.contests || []).filter(listed);
+  state.data.support = (state.data.support || []).filter(listed);
+  state.all = [].concat(state.data.contests, state.data.aiNews || [], state.data.aiDiscovery || [], state.data.support);
   renderShared();
   route();
 }
@@ -421,7 +460,7 @@ function homeSignalStatus(item) {
     if (isUpdatedToday(item)) return "최근 업데이트";
     return "확인 완료";
   }
-  return !isOpenItem(item) ? "종료" : (item.dDay || "진행 중");
+  return !isOpenItem(item) ? "종료" : (ddayText(item) || "진행 중");
 }
 
 function homeSignalMeta(item) {
@@ -430,7 +469,7 @@ function homeSignalMeta(item) {
     return [discoveryPurposeLabel(item), (item.categories || []).slice(0,2).join(" · ")].filter(Boolean).join(" · ");
   }
   if (kind === "ai") return (item.tags || []).slice(0,3).join(" · ") || "AI";
-  return item.deadlineText || item.dDay || item.categoryLabel || "";
+  return item.deadlineText || ddayText(item) || item.categoryLabel || "";
 }
 
 function rankedHomeSignals(limit) {
@@ -508,7 +547,7 @@ function renderHomeRightUpcoming() {
     .sort((a,b) => ddayNumber(a) - ddayNumber(b))
     .slice(0,5);
   el.innerHTML = items.map(item =>
-    '<a class="right-row" href="' + itemRoute(item) + '"><strong>' + esc(item.dDay || "진행 중") + '</strong><span>' + esc(item.title) + '</span></a>'
+    '<a class="right-row" href="' + itemRoute(item) + '"><strong>' + esc(ddayText(item) || "진행 중") + '</strong><span>' + esc(item.title) + '</span></a>'
   ).join("") || '<div class="right-empty">확인된 마감이 없습니다.</div>';
 }
 
@@ -665,7 +704,7 @@ function renderHomeUpcoming() {
     return;
   }
   el.innerHTML = items.map(item =>
-    '<a class="upcoming-row" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '"><span class="upcoming-date">' + esc(item.dDay || "진행 중") + '</span><strong>' + esc(item.title) + '</strong><span class="upcoming-kind">' + (itemKind(item) === "support" ? "지원사업" : "공모전") + '</span><span class="signal-arrow">↗</span></a>'
+    '<a class="upcoming-row" href="' + itemRoute(item) + '" data-id="' + esc(item.id) + '"><span class="upcoming-date">' + esc(ddayText(item) || "진행 중") + '</span><strong>' + esc(item.title) + '</strong><span class="upcoming-kind">' + (itemKind(item) === "support" ? "지원사업" : "공모전") + '</span><span class="signal-arrow">↗</span></a>'
   ).join("");
   wireHomeRows(el);
 }
@@ -693,13 +732,13 @@ function renderFeatured(contests, support) {
   el.innerHTML =
     '<div class="featured-flow">' +
       '<div class="featured-kicker">' +
-        (item.dDay ? '<span class="featured-badge ' + dangerClass(item) + '">' + esc(item.dDay) + '</span>' : '') +
+        (ddayText(item) ? '<span class="featured-badge ' + dangerClass(item) + '">' + esc(ddayText(item)) + '</span>' : '') +
         '<span class="featured-meta">' + category + '</span>' +
       '</div>' +
       '<h3 class="featured-title">' + esc(item.title) + '</h3>' +
       '<p class="featured-summary">' + esc(item.summary || "") + '</p>' +
       '<div class="featured-facts">' +
-        '<div class="flow-fact"><span>마감</span><strong>' + esc(txt(item.deadlineText || item.dDay)) + '</strong></div>' +
+        '<div class="flow-fact"><span>마감</span><strong>' + esc(txt(item.deadlineText || ddayText(item))) + '</strong></div>' +
         '<div class="flow-fact"><span>' + (kind === "support" ? "지원 / 혜택" : "상금 / 보상") + '</span><strong>' + esc(cut(item.reward || item.aiSupport, 90)) + '</strong></div>' +
         '<div class="flow-fact"><span>' + (kind === "support" ? "지원 대상" : "참가") + '</span><strong>' + esc(cut(item.participation, 90)) + '</strong></div>' +
       '</div>' +
@@ -724,13 +763,13 @@ function renderCompact(sel, items, kind) {
       ? ""
       : isDiscovery
         ? (item.trend ? '<span class="compact-status signal">' + esc(discoveryLabel(DISCOVERY_TREND_LABELS, item.trend)) + '</span>' : "")
-        : '<span class="compact-status ' + dangerClass(item) + '">' + esc(!isOpenItem(item) ? "종료" : (item.dDay || "접수중")) + '</span>';
+        : '<span class="compact-status ' + dangerClass(item) + '">' + esc(!isOpenItem(item) ? "종료" : (ddayText(item) || "접수중")) + '</span>';
 
     const foot = isAi
       ? ((item.tags || []).slice(0,3).join(" · ") || "AI")
       : isDiscovery
         ? [discoveryPurposeLabel(item), discoveryLabel(DISCOVERY_AWARENESS_LABELS, item.awareness)].filter(Boolean).join(" · ")
-        : "마감 " + txt(item.deadlineText || item.dDay);
+        : "마감 " + txt(item.deadlineText || ddayText(item));
 
     return '<article class="compact-item compact-flow" data-id="' + esc(item.id) + '">' +
       '<div class="card-meta-row">' +
@@ -1119,10 +1158,10 @@ function renderCategoryList(type) {
     const iconName = kind === "support" ? "briefcase-outline" : "trophy-outline";
 
     el.innerHTML = '<div class="opportunity-grid-inner">' + items.map(item => {
-      const status = !isOpenItem(item) ? "종료" : String(item.status).toUpperCase() === "UPCOMING" ? "접수 예정" : (item.dDay || "접수 중");
+      const status = !isOpenItem(item) ? "종료" : String(item.status).toUpperCase() === "UPCOMING" ? "접수 예정" : (ddayText(item) || "접수 중");
       const category = kind === "support" ? "창업 · 지원사업" : contestTopicLabel(item);
       const tags = (item.tags || []).slice(0, 3);
-      const deadline = item.deadlineText || item.dDay || "일정 확인";
+      const deadline = item.deadlineText || ddayText(item) || "일정 확인";
 
       return '<ion-card href="' + itemRoute(item) + '" class="opportunity-card-v2 ' + (!isOpenItem(item) ? "is-closed" : "") + '" button="true" mode="ios" data-id="' + esc(item.id) + '">' +
         '<ion-card-header>' +
@@ -1401,13 +1440,13 @@ function renderOpportunityDetail(item, kind) {
   $("#detailHeader").innerHTML =
     '<div class="detail-kicker">' +
       changeBadge(item, kind) +
-      '<span class="IssueLabel detail-pill">' + esc(!isOpenItem(item) ? "종료" : String(item.status).toUpperCase() === "UPCOMING" ? "접수 예정" : (item.dDay || "접수 중")) + '</span>' +
+      '<span class="IssueLabel detail-pill">' + esc(!isOpenItem(item) ? "종료" : String(item.status).toUpperCase() === "UPCOMING" ? "접수 예정" : (ddayText(item) || "접수 중")) + '</span>' +
       '<span class="IssueLabel detail-pill">' + category + '</span>' +
     '</div><h1>' + esc(item.title) + '</h1><p>' + esc(item.description || item.summary || "") + '</p>' +
     '<div class="detail-date-line"><span><b>등록일</b> ' + esc(item.firstSeenDate) + '</span><span><b>확인일</b> ' + esc(item.lastVerifiedDate || item.firstSeenDate) + '</span>' +
     (item.lastUpdatedDate ? '<span><b>수정일</b> ' + esc(item.lastUpdatedDate) + '</span>' : '') + '</div>';
 
-  const decisionFacts = [["마감", item.deadlineText || item.dDay], ["대상", item.participation], [kind === "support" ? "지원 내용" : "상금", item.reward]].filter(([,value]) => value);
+  const decisionFacts = [["마감", item.deadlineText || ddayText(item)], ["대상", item.participation], [kind === "support" ? "지원 내용" : "상금", item.reward]].filter(([,value]) => value);
   $("#detailHeader").insertAdjacentHTML("beforeend", '<dl class="decision-facts">' + decisionFacts.map(([label,value]) => '<div><dt>' + label + '</dt><dd>' + esc(value) + '</dd></div>').join("") + '</dl>');
 
   $("#detailTopActions").innerHTML = links.slice(0,2).map((l,i) =>
@@ -1415,7 +1454,7 @@ function renderOpportunityDetail(item, kind) {
   ).join("");
 
   const core = [
-    ["마감", item.deadlineText || item.dDay],
+    ["마감", item.deadlineText || ddayText(item)],
     ["접수 / 일정", item.period],
     ["참가 조건", item.participation],
     ["상금 / 지원", item.reward]

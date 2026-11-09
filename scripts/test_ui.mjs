@@ -67,7 +67,11 @@ try {
  check(new URL(page.url()).hash==='#/contests' && await page.locator('#mainContent').evaluate(e=>document.activeElement===e),'Skip link focuses current page without changing route');
  await page.locator('#categoryFilters [data-filter="closed"]').focus();await page.keyboard.press('Enter');
  const closed=await ids('#categoryList [data-id]');
- check(closed.length>0 && closed.every(id=>data.contests.find(i=>i.id===id).status==='CLOSED'),'Keyboard status filter shows closed contests');
+ // A contest is closed when marked so or when every deadline date has passed on the reader's day.
+ const seoulToday=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul'}).format(new Date());
+ const refDay=seoulToday>data.date?seoulToday:data.date;
+ const isClosed=i=>i.status==='CLOSED'||(Array.isArray(i.deadline)&&i.deadline.length>0&&i.deadline.every(d=>d<refDay));
+ check(closed.length>0 && closed.every(id=>isClosed(data.contests.find(i=>i.id===id))),'Keyboard status filter shows closed contests');
  const firstCard=page.locator('#categoryList ion-card').first();
  const selectedId=await firstCard.getAttribute('data-id');
  await firstCard.locator('a').focus();await page.keyboard.press('Enter');

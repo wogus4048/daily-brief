@@ -420,12 +420,17 @@ Do not finish the opportunity refresh until all applicable gates pass:
 - If a major source family could not be checked because of a tool/site failure, preserve existing verified data and record the gap rather than silently treating it as empty.
 - Do not satisfy a raw-candidate quota by counting obvious duplicates; candidate counts refer to materially distinct opportunities.
 
-### Multi-deadline display rule
-- Never combine different deadline states into one `dDay` string such as `오늘 마감 / D-15`.
-- For opportunities with multiple tracks/topics/deadlines, `dDay` must represent only the nearest currently actionable deadline and include its scope when needed, e.g. `주제1·2 오늘 마감`.
-- Keep all track/topic deadlines in `deadlineText` and `period`.
-- After the nearest deadline passes, advance `dDay` to the next still-open deadline instead of leaving a stale mixed status.
-- Keep the overall opportunity `OPEN` while at least one eligible track/topic is still accepting submissions.
+### Deadline field `deadline` (required on OPEN items from 2026-11-10)
+- Whoever reads the official page writes the application deadline as data in `deadline`. The code never reads a deadline out of `deadlineText`; that text is for people. Decisions: `docs/archive/review-2026-11-06-dday.md`, `docs/archive/review-2026-11-09-dday-implementation.md`.
+- Allowed values (`research_rules.deadline_info`, checked by `validate_data.py`):
+  - A list of `YYYY-MM-DD` dates, always with the year: the dates by which a newcomer must apply. Several tracks give several dates; the item stays `OPEN` until the last one passes and D-day shows the next one.
+  - When newcomers must register before a later submission date, list only the registration date. That date closes the item.
+  - Do not list event, judging, announcement or submission-only dates.
+  - `"상시"`, `"수시"`, `"예산 소진 시"` or `"선착순"` for calls without a fixed deadline. Use one only when the official page gives no closing date. A date from a portal beside it does not count. First-come calls with a stated closing date take that date.
+  - `"확인 필요"` when the official page does not state the deadline. Such an item is kept but not shown until the deadline is confirmed.
+- Do not write `dDay` or `autoClosedDate`. `daily_run.py publish` writes `dDay` from `deadline` and closes OPEN items whose dates all passed (`research_rules.apply_deadlines`). The site counts D-day from `deadline` on the reader's day.
+- An item closed by date carries `autoClosedDate`. If an official page later shows an extension, set it `OPEN` with the new `deadline`.
+- Changing `deadline` is a material change and needs official re-verification like `deadlineText`.
 
 ### 9. Final consistency check
 Before writing data:

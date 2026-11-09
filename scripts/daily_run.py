@@ -28,7 +28,7 @@ from zoneinfo import ZoneInfo
 
 from free_explore import run_explore, run_verify
 from read_details import write_details
-from research_rules import close_expired_out_of_scope
+from research_rules import apply_deadlines, close_expired_out_of_scope
 
 ROOT = Path(__file__).resolve().parents[1]
 SEOUL = ZoneInfo("Asia/Seoul")
@@ -194,6 +194,17 @@ def close_expired(root, today):
     return closed
 
 
+def write_deadlines(root, date):
+    """The site's deadline fields come from code, not from the writer (review-2026-11-06-dday.md)."""
+    path = root / "data/latest.json"
+    snapshot = json.loads(path.read_text(encoding="utf-8"))
+    closed = apply_deadlines(snapshot, date)
+    data = (json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
+    path.write_bytes(data)
+    (root / f"data/archive/{date}.json").write_bytes(data)
+    return closed
+
+
 def run_crawl(root, log):
     code, _ = run_command(log, "crawl", ["node", "scripts/crawl_sources.mjs"], root)
     return code
@@ -355,6 +366,11 @@ def run_publish(
         baseline = root / f"artifacts/daily/baseline-{date}.json"
         baseline.parent.mkdir(parents=True, exist_ok=True)
         baseline.write_bytes(main_bytes)
+        with log.stage("deadlines"):
+            # Compare first: rewriting both files would hide a writer's mismatch.
+            check_files(root, date, baseline, log)
+            result["closedByDeadline"] = write_deadlines(root, date)
+            log.event("deadlines", closed=result["closedByDeadline"])
         with log.stage("checks"):
             checks(root, date, baseline, log)
         if no_push:

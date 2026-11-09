@@ -13,10 +13,12 @@ from pathlib import Path
 
 from research_rules import (
     all_deadlines_passed,
+    apply_deadlines,
+    can_close_without_verification,
     close_expired_out_of_scope,
+    deadline_info,
     is_out_of_scope,
     is_reverification_due,
-    nearest_deadline_date,
     normalize_url,
     parse_seoul_date,
 )
@@ -39,22 +41,13 @@ class RiskRulesTest(unittest.TestCase):
             normalize_url("https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=b"),
         )
 
-    def test_deadline_priority_and_no_false_rollover(self):
-        today = date(2026, 10, 11)
-        item = {"deadlineText": "10.24 04:00 KST", "period": "접수 10.01~10.23"}
-        self.assertEqual(nearest_deadline_date(item, today), date(2026, 10, 24))
-        self.assertEqual(nearest_deadline_date({"deadlineText": "10.08 16:00", "period": "행사 10.30"}, today), date(2026, 10, 8))
-        self.assertIsNone(nearest_deadline_date({"deadlineText": "승인제 접수 중", "period": "행사 10.24"}, today))
-        self.assertEqual(nearest_deadline_date({"deadlineText": "10.10 / 10.20"}, today), date(2026, 10, 20))
-        self.assertEqual(nearest_deadline_date({"deadlineText": "01.02"}, date(2026, 12, 31)), date(2027, 1, 2))
-
     def test_risk_cadence_and_seoul_timezone(self):
         self.assertEqual(parse_seoul_date("2026-10-10T16:00:00Z"), date(2026, 10, 11))
         self.assertTrue(is_reverification_due(
-            {"status": "OPEN", "lastVerifiedDate": "2026-10-10", "deadlineText": "10.10"}, "2026-10-11"
+            {"status": "OPEN", "lastVerifiedDate": "2026-10-10", "deadline": ["2026-10-10"]}, "2026-10-11"
         ))
         self.assertFalse(is_reverification_due(
-            {"status": "OPEN", "lastVerifiedDate": "2026-10-10", "deadlineText": "10.24"}, "2026-10-11"
+            {"status": "OPEN", "lastVerifiedDate": "2026-10-10", "deadline": ["2026-10-24"]}, "2026-10-11"
         ))
         self.assertTrue(is_reverification_due(
             {"status": "UPCOMING", "lastVerifiedDate": "2026-10-10", "openingAt": "2026-10-12T08:00:00+09:00"},
@@ -71,18 +64,59 @@ class RiskRulesTest(unittest.TestCase):
         self.assertFalse(is_out_of_scope(korean))
         self.assertTrue(is_reverification_due(korean, "2026-11-05"))
 
-    def test_all_deadlines_must_pass(self):
-        mixed = {"deadlineText": "10.31 23:59 KST 등록 마감 · 11.22 23:59 KST 결과물 제출"}
-        self.assertFalse(all_deadlines_passed(mixed, date(2026, 11, 22)))
-        self.assertTrue(all_deadlines_passed(mixed, date(2026, 11, 23)))
-        self.assertFalse(all_deadlines_passed({"deadlineText": "승인제 접수 중"}, date(2026, 11, 23)))
+    def test_structured_deadline_is_read_as_written(self):
+        # The researcher writes `deadline`; prose in deadlineText is never parsed
+        # (review-2026-11-09-dday-implementation.md: guessing from prose misread real items).
+        self.assertEqual(deadline_info({"deadline": ["2026-10-26", "2026-10-22"]}),
+                         {"kind": "DATE", "dates": [date(2026, 10, 22), date(2026, 10, 26)]})
+        self.assertEqual(deadline_info({"deadline": "예산 소진 시", "deadlineText": "11.30"}), {"kind": "ROLLING", "label": "예산 소진 시"})
+        for value in ("확인 필요", None):
+            self.assertEqual(deadline_info({"deadline": value, "deadlineText": "행사 12.11"})["kind"], "UNKNOWN")
+        for value in ("11.20", ["11.20"], ["2026-02-30"], [], "연중"):
+            self.assertEqual(deadline_info({"deadline": value})["kind"], "INVALID", value)
+        tracks = {"deadline": ["2026-10-22", "2026-10-26"]}
+        self.assertFalse(all_deadlines_passed(tracks, date(2026, 10, 26)))
+        self.assertTrue(all_deadlines_passed(tracks, date(2026, 10, 27)))
+
+    def test_publish_writes_dday_and_closes_passed(self):
+        snapshot = {"contests": [
+            {"id": "passed", "status": "OPEN", "deadline": ["2026-11-05"], "dDay": "D-3"},
+            {"id": "today", "status": "OPEN", "deadline": ["2026-11-06"], "dDay": "D-1"},
+            {"id": "tracks", "status": "OPEN", "deadline": ["2026-11-01", "2026-11-20"], "dDay": "D-1"},
+            {"id": "rolling", "status": "OPEN", "deadline": "상시", "dDay": "D-24"},
+            {"id": "upcoming", "status": "UPCOMING", "deadline": ["2026-11-01"], "dDay": "접수 예정"},
+            {"id": "unfilled", "status": "OPEN", "deadlineText": "11.01", "dDay": "D-5"},
+        ], "support": []}
+        self.assertEqual(apply_deadlines(snapshot, "2026-11-06"), ["passed"])
+        passed, today, tracks, rolling, upcoming, unfilled = snapshot["contests"]
+        self.assertEqual((passed["status"], passed["autoClosedDate"], passed["lastUpdatedDate"]), ("CLOSED", "2026-11-06", "2026-11-06"))
+        self.assertEqual([today["dDay"], tracks["dDay"], rolling["dDay"]], ["오늘 마감", "D-14", "상시"])
+        self.assertEqual(upcoming, {"id": "upcoming", "status": "UPCOMING", "deadline": ["2026-11-01"], "dDay": "접수 예정"})
+        self.assertEqual(unfilled, {"id": "unfilled", "status": "OPEN", "deadlineText": "11.01", "dDay": "D-5"})
+        # The audit accepts today's date closure without an official check.
+        self.assertTrue(can_close_without_verification({"status": "OPEN"}, passed, date(2026, 11, 6)))
+        self.assertFalse(can_close_without_verification({"status": "OPEN"}, {**passed, "autoClosedDate": None}, date(2026, 11, 6)))
+
+    def test_validator_rejects_hand_written_deadlines(self):
+        base = json.loads((ROOT / "data/archive/2026-10-07.json").read_text(encoding="utf-8"))
+        snapshot = {**base, "date": "2026-11-10", "contests": [], "support": []}
+        good = {"id": "x", "title": "t", "summary": "s", "firstSeenDate": "2026-11-01",
+                "lastVerifiedDate": "2026-11-10", "status": "OPEN", "deadline": ["2026-11-20"]}
+        apply_deadlines({"contests": [good]}, "2026-11-10")
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "latest.json"
+            bad = ({**good, "dDay": "D-30"}, {**good, "deadline": "11.20"}, {k: v for k, v in good.items() if k != "deadline"})
+            for item, ok in ((good, True), *((item, False) for item in bad)):
+                path.write_text(json.dumps({**snapshot, "contests": [item]}, ensure_ascii=False), encoding="utf-8")
+                run = subprocess.run([sys.executable, str(ROOT / "scripts/validate_data.py"), str(path)], **UTF8_RUN)
+                self.assertEqual(run.returncode == 0, ok, run.stderr)
 
     def test_only_expired_out_of_scope_items_close(self):
         link = [{"url": "https://x.devpost.com/"}]
         snapshot = {"contests": [
-            {"id": "gone", "status": "OPEN", "deadlineText": "10.31", "links": link},
-            {"id": "live", "status": "OPEN", "deadlineText": "11.13", "links": link},
-            {"id": "korean", "status": "OPEN", "deadlineText": "10.31", "links": [{"url": "https://example.org/"}]},
+            {"id": "gone", "status": "OPEN", "deadline": ["2026-10-31"], "links": link},
+            {"id": "live", "status": "OPEN", "deadline": ["2026-11-13"], "links": link},
+            {"id": "korean", "status": "OPEN", "deadline": ["2026-10-31"], "links": [{"url": "https://example.org/"}]},
         ], "support": []}
         self.assertEqual(close_expired_out_of_scope(snapshot, "2026-11-05"), ["gone"])
         closed, live, korean = snapshot["contests"]
@@ -100,6 +134,12 @@ class RiskRulesTest(unittest.TestCase):
                 ("data/source-cache/2026-10-11.json", "data/source-cache/2026-10-11.json"),
             ):
                 (root / target).write_bytes((ROOT / source).read_bytes())
+            # Snapshots before 2026-11-10 carry no structured deadline; give the 10.08 item its own.
+            fixture = json.loads((root / "data/latest.json").read_text(encoding="utf-8"))
+            for row in fixture["contests"]:
+                if row["id"] == "fintech-idea-contest-2026":
+                    row["deadline"] = ["2026-10-08"]
+            (root / "data/latest.json").write_text(json.dumps(fixture, ensure_ascii=False), encoding="utf-8")
             sample_cache = json.loads((root / "data/source-cache/2026-10-11.json").read_text(encoding="utf-8"))
             fixture_manifest = {
                 "active": [
@@ -520,7 +560,7 @@ class EvidenceGateIntegrationTest(unittest.TestCase):
             snapshot, baseline = self.closed_pair(data_path)
             old, new = baseline["contests"][0], snapshot["contests"][0]
             for row in (old, new):
-                row.update(deadlineText="10.05", lastVerifiedDate="2026-10-04")
+                row.update(deadline=["2026-10-05"], lastVerifiedDate="2026-10-04")
                 row["links"] = [{"label": "Official", "url": "https://x.devpost.com/"}]
             old["status"] = "OPEN"
             new["lastUpdatedDate"] = "2026-10-11"

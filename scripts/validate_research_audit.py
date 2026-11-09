@@ -409,6 +409,7 @@ if baseline is not None:
     same_day_material_fields = (
         "status",
         "openingAt",
+        "deadline",
         "deadlineText",
         "period",
         "title",

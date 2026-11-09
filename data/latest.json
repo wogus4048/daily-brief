@@ -37,7 +37,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "상시"
     },
     {
       "id": "zyxcad-ax-contest-2026",
@@ -75,7 +76,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-08"
+      ]
     },
     {
       "id": "ktng-asvf-korea-rep-2027",
@@ -113,7 +117,11 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-30",
+        "2026-12-11"
+      ]
     },
     {
       "id": "sangju-festival-idea-2026",
@@ -151,7 +159,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2027-01-15"
+      ]
     },
     {
       "id": "seoul-quit-smoking-policy-2026",
@@ -189,7 +200,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-13"
+      ]
     },
     {
       "id": "seongnam-creative-city-plan-2026",
@@ -226,7 +240,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-06"
+      ]
     },
     {
       "id": "kbank-kakaobank-owner-finance-idea-2026",
@@ -264,7 +281,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-16"
+      ]
     },
     {
       "id": "jeonju-taekwondo-goods-idea-2026",
@@ -301,7 +321,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-08"
+      ]
     },
     {
       "id": "kaist-foreign-disinfo-idea-2026-2",
@@ -339,7 +362,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-17"
+      ]
     },
     {
       "id": "daegu-public-data-ai-climate-2026",
@@ -377,7 +403,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-20"
+      ]
     },
     {
       "id": "kapco-new-mice-event-idea-2026",
@@ -414,7 +443,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-15"
+      ]
     },
     {
       "id": "seoul-urban-trash-prescription-2026",
@@ -452,7 +484,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-08"
+      ]
     },
     {
       "id": "seoul-admin-form-improve-idea-2026",
@@ -489,7 +524,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-20"
+      ]
     },
     {
       "id": "daejeon-living-relation-idea-2026",
@@ -526,7 +564,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-13"
+      ]
     },
     {
       "id": "gcgf-small-biz-policy-idea-2026",
@@ -563,7 +604,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-16"
+      ]
     },
     {
       "id": "yongsan-smart-city-idea-2026",
@@ -600,7 +644,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-20"
+      ]
     },
     {
       "id": "hyundai-in-vehicle-app-dev-2026",
@@ -637,7 +684,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-15"
+      ]
     },
     {
       "id": "hf-public-innovation-idea-2026",
@@ -674,7 +724,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-06"
+      ]
     },
     {
       "id": "kosha-hazard-site-investigation-tech-idea-2026",
@@ -711,7 +764,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-08"
+      ]
     },
     {
       "id": "kapae-univ-student-policy-idea-2026",
@@ -747,7 +803,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-26"
+      ]
     },
     {
       "id": "ssis-social-security-ai-idea-2026",
@@ -784,7 +843,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-20"
+      ]
     },
     {
       "id": "hyundai-mobis-momojeon-50th-goods-idea-2026",
@@ -821,7 +883,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-18"
+      ]
     },
     {
       "id": "nia-carbon-neutral-innovation-idea-2026",
@@ -858,7 +923,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-08"
+      ]
     },
     {
       "id": "gbtc-local-tourism-innovation-content-2026",
@@ -895,7 +963,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-06"
+      ]
     },
     {
       "id": "busan-marine-startup-spark-up-1876-2026",
@@ -933,7 +1004,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-16"
+      ]
     },
     {
       "id": "kspo-sports-regulation-improve-2026",
@@ -970,7 +1044,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-22"
+      ]
     },
     {
       "id": "junggu-facility-esg-innovation-idea-2026",
@@ -1007,7 +1084,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-08"
+      ]
     },
     {
       "id": "buyeo-community-solverthon-2026",
@@ -1044,7 +1124,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-11"
+      ]
     },
     {
       "id": "cj-hetbahn-30th-ai-idea-2026",
@@ -1082,7 +1165,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-13"
+      ]
     },
     {
       "id": "nibp-esg-public-idea-2026",
@@ -1119,7 +1205,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-13"
+      ]
     },
     {
       "id": "uiwang-youth-eroom-startup-idea-2026",
@@ -1156,7 +1245,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-11"
+      ]
     },
     {
       "id": "boryeong-wellness-policy-proposal-2026",
@@ -1193,7 +1285,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-11"
+      ]
     },
     {
       "id": "nafi-future-generation-agenda-2026",
@@ -1230,7 +1325,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-25"
+      ]
     },
     {
       "id": "daridari-idle-space-idea-2026",
@@ -1267,7 +1365,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-09"
+      ]
     },
     {
       "id": "next-gen-comm-fusion-startup-idea-2026",
@@ -1305,7 +1406,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-18"
+      ]
     },
     {
       "id": "daegu-univ-ai-draftthon-2026",
@@ -1342,7 +1446,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-15"
+      ]
     },
     {
       "id": "keris-ai-startup-hackathon-2026",
@@ -1380,7 +1487,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-11"
+      ]
     },
     {
       "id": "kepco-enc-future-biz-idea-2026",
@@ -1417,7 +1527,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-06"
+      ]
     },
     {
       "id": "wando-depopulation-response-idea-2026",
@@ -1454,7 +1567,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-18"
+      ]
     },
     {
       "id": "hy-metchnikoff-new-product-idea-2026",
@@ -1491,7 +1607,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-17"
+      ]
     },
     {
       "id": "mpb-public-finance-education-idea-2026",
@@ -1528,7 +1647,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-27"
+      ]
     },
     {
       "id": "mogef-gender-equality-ai-benchmark-2026",
@@ -1565,7 +1687,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-20"
+      ]
     },
     {
       "id": "chungnam-manufacturing-ax-hackathon-2026",
@@ -1603,7 +1728,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-17"
+      ]
     },
     {
       "id": "nitto-open-innovation-challenge-2nd-2026",
@@ -1641,7 +1769,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-30"
+      ]
     },
     {
       "id": "jocoding-ax-pwc-hiring-challenge-2026",
@@ -1678,7 +1809,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-15"
+      ]
     },
     {
       "id": "forest-public-data-use-case-2026",
@@ -1715,7 +1849,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-20"
+      ]
     },
     {
       "id": "daker-materials-ai-hackathon-2026",
@@ -1754,7 +1891,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-13"
+      ]
     },
     {
       "id": "jeju-ai-bigdata-agent-challenge-2026",
@@ -1792,7 +1932,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "확인 필요"
     },
     {
       "id": "tech-gpt-service-contest-2-2026",
@@ -1830,7 +1971,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-06"
+      ]
     },
     {
       "id": "ai-healthcare-hackathon-2027h1-jobseekers",
@@ -1869,7 +2013,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "확인 필요"
     },
     {
       "id": "capture-explain-defend-ai-cybersecurity-hackathon-2026",
@@ -1913,7 +2058,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "확인 필요"
     },
     {
       "id": "mawd-startup-hackathon-2026",
@@ -1956,7 +2102,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "확인 필요"
     },
     {
       "id": "keit-public-innovation-idea-2026",
@@ -1994,7 +2141,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-17"
+      ]
     },
     {
       "id": "national-intangible-heritage-performance-idea-2026",
@@ -2033,7 +2183,10 @@
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
       "lastUpdatedDate": "2026-11-06",
-      "openingAt": "2026-11-09T09:00:00+09:00"
+      "openingAt": "2026-11-09T09:00:00+09:00",
+      "deadline": [
+        "2026-11-18"
+      ]
     },
     {
       "id": "gangwon-toktok-idea-2026",
@@ -2071,7 +2224,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-23"
+      ]
     },
     {
       "id": "pps-ai-game-content-contest-2026",
@@ -2110,7 +2266,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-22"
+      ]
     },
     {
       "id": "expressway-ai-idea-contest-2026",
@@ -2148,7 +2307,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-15"
+      ]
     },
     {
       "id": "soulmate-pioneers-startup-contest-2026",
@@ -2186,7 +2348,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-15"
+      ]
     },
     {
       "id": "hongjecheon-imagination-contest-2026",
@@ -2227,7 +2392,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-23"
+      ]
     },
     {
       "id": "kspo-industry-public-data-contest-2026",
@@ -2264,7 +2432,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-12-01"
+      ]
     },
     {
       "id": "seongnam-youth-time-participatory-budget-2026",
@@ -2306,7 +2477,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-22"
+      ]
     },
     {
       "id": "hana-securities-youth-finance-idea-2026",
@@ -2344,7 +2518,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-30"
+      ]
     },
     {
       "id": "msit-elice-ai-challenge-2026",
@@ -2382,7 +2559,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-13"
+      ]
     },
     {
       "id": "catholic-univ-genai-contest-2026",
@@ -2419,7 +2599,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-08"
+      ]
     },
     {
       "id": "wanted-ai-championship-2026",
@@ -3139,7 +3322,11 @@
       "firstSeenDate": "2026-09-21",
       "status": "OPEN",
       "lastVerifiedDate": "2026-10-13",
-      "lastUpdatedDate": "2026-10-11"
+      "lastUpdatedDate": "2026-10-11",
+      "deadline": [
+        "2026-10-22",
+        "2026-10-26"
+      ]
     },
     {
       "id": "public-web-illegal-ad-detector-2026",
@@ -3311,7 +3498,10 @@
       "firstSeenDate": "2026-09-21",
       "status": "OPEN",
       "lastVerifiedDate": "2026-10-13",
-      "lastUpdatedDate": "2026-09-21"
+      "lastUpdatedDate": "2026-09-21",
+      "deadline": [
+        "2026-11-05"
+      ]
     },
     {
       "id": "maplestory-worlds-global-dev-contest-2026",
@@ -3586,7 +3776,10 @@
       "firstSeenDate": "2026-10-01",
       "status": "OPEN",
       "lastVerifiedDate": "2026-10-13",
-      "lastUpdatedDate": "2026-10-01"
+      "lastUpdatedDate": "2026-10-01",
+      "deadline": [
+        "2026-11-02"
+      ]
     },
     {
       "id": "gitlab-life-after-code-2026",
@@ -3798,7 +3991,10 @@
       "firstSeenDate": "2026-10-01",
       "status": "OPEN",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-10-01"
+      "lastUpdatedDate": "2026-10-01",
+      "deadline": [
+        "2026-11-06"
+      ]
     },
     {
       "id": "qloo-agentic-hackathon-2026",
@@ -3888,7 +4084,10 @@
       "firstSeenDate": "2026-10-03",
       "status": "OPEN",
       "lastVerifiedDate": "2026-10-13",
-      "lastUpdatedDate": "2026-10-03"
+      "lastUpdatedDate": "2026-10-03",
+      "deadline": [
+        "2026-11-13"
+      ]
     },
     {
       "id": "pqc-transition-challenge-hackathon-2026",
@@ -4427,7 +4626,10 @@
       "firstSeenDate": "2026-10-06",
       "status": "OPEN",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-10-06"
+      "lastUpdatedDate": "2026-10-06",
+      "deadline": [
+        "2026-11-08"
+      ]
     },
     {
       "id": "kic-ai-agent-competition-2026",
@@ -4467,7 +4669,10 @@
       "firstSeenDate": "2026-10-06",
       "status": "OPEN",
       "lastVerifiedDate": "2026-10-13",
-      "lastUpdatedDate": "2026-10-06"
+      "lastUpdatedDate": "2026-10-06",
+      "deadline": [
+        "2026-11-12"
+      ]
     },
     {
       "id": "ai-platform-build-challenge-2026",
@@ -4507,7 +4712,10 @@
       "firstSeenDate": "2026-10-06",
       "status": "OPEN",
       "lastVerifiedDate": "2026-10-13",
-      "lastUpdatedDate": "2026-10-06"
+      "lastUpdatedDate": "2026-10-06",
+      "deadline": [
+        "2026-10-25"
+      ]
     },
     {
       "id": "daker-synthetic-microstructure-ai-2026",
@@ -4547,7 +4755,10 @@
       "firstSeenDate": "2026-10-06",
       "status": "OPEN",
       "lastVerifiedDate": "2026-10-13",
-      "lastUpdatedDate": "2026-10-06"
+      "lastUpdatedDate": "2026-10-06",
+      "deadline": [
+        "2026-10-19"
+      ]
     },
     {
       "id": "korea-clinical-datathon-2026",
@@ -4715,7 +4926,10 @@
       "firstSeenDate": "2026-10-07",
       "status": "OPEN",
       "lastVerifiedDate": "2026-10-07",
-      "lastUpdatedDate": "2026-10-07"
+      "lastUpdatedDate": "2026-10-07",
+      "deadline": [
+        "2026-10-31"
+      ]
     },
     {
       "id": "kcti-cultural-tourism-research-idea-2026",
@@ -4871,7 +5085,10 @@
       "firstSeenDate": "2026-10-11",
       "status": "OPEN",
       "lastVerifiedDate": "2026-10-11",
-      "lastUpdatedDate": "2026-10-11"
+      "lastUpdatedDate": "2026-10-11",
+      "deadline": [
+        "2026-10-31"
+      ]
     },
     {
       "id": "youth-fishing-village-startup-idea-2026",
@@ -4907,7 +5124,10 @@
       "firstSeenDate": "2026-10-11",
       "status": "OPEN",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-10-11"
+      "lastUpdatedDate": "2026-10-11",
+      "deadline": [
+        "2026-11-08"
+      ]
     },
     {
       "id": "audit-office-public-audit-idea-2026",
@@ -4947,7 +5167,10 @@
       "firstSeenDate": "2026-10-11",
       "status": "OPEN",
       "lastVerifiedDate": "2026-10-11",
-      "lastUpdatedDate": "2026-10-11"
+      "lastUpdatedDate": "2026-10-11",
+      "deadline": [
+        "2026-10-31"
+      ]
     },
     {
       "id": "open-government-action-plan-seven-2026",
@@ -7808,7 +8031,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "상시"
     },
     {
       "id": "seoul-anchor-local-creator-camp-2026",
@@ -7846,7 +8070,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-15"
+      ]
     },
     {
       "id": "samyook-bi-2026-11",
@@ -7884,7 +8111,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-15"
+      ]
     },
     {
       "id": "daegu-content-support-center-3rd-2026",
@@ -7922,7 +8152,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-06"
+      ]
     },
     {
       "id": "chungbuk-promaker-ai-manufacturing-startup-edu-2026",
@@ -7961,7 +8194,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-06"
+      ]
     },
     {
       "id": "incheon-middle-aged-tech-startup-center-4th-2026",
@@ -8000,7 +8236,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-06"
+      ]
     },
     {
       "id": "business-plan-practical-startup-edu-2026",
@@ -8037,7 +8276,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-06"
+      ]
     },
     {
       "id": "asan-startup-scale-up-2026",
@@ -8074,7 +8316,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "확인 필요"
     },
     {
       "id": "asan-investment-build-up-2026",
@@ -8111,7 +8354,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "확인 필요"
     },
     {
       "id": "trail-new-industry-local-startup-2026",
@@ -8148,7 +8392,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "확인 필요"
     },
     {
       "id": "startup-clinical-expert-advisory-2026",
@@ -8186,7 +8431,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-06"
+      ]
     },
     {
       "id": "jeonnam-gwangju-regional-resource-youth-startup-3",
@@ -8224,7 +8472,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-12"
+      ]
     },
     {
       "id": "seoul-youth-cook-foodtech-2027",
@@ -8262,7 +8513,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-20"
+      ]
     },
     {
       "id": "seoul-youth-cook-business-2027",
@@ -8300,7 +8554,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-20"
+      ]
     },
     {
       "id": "seoul-kitchen-incubator-25-13",
@@ -8338,7 +8595,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-26"
+      ]
     },
     {
       "id": "daejeon-deeptech-studio-plus-2026",
@@ -8376,7 +8636,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-12-11"
+      ]
     },
     {
       "id": "gumi-culture-road-startup-2026",
@@ -8415,7 +8678,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-11"
+      ]
     },
     {
       "id": "daegu-startup-city-medbio-2026",
@@ -8453,7 +8719,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-09"
+      ]
     },
     {
       "id": "lgd-dream-play-9",
@@ -8491,7 +8760,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-13"
+      ]
     },
     {
       "id": "anseong-urban-regeneration-startup-2026",
@@ -8529,7 +8801,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-13"
+      ]
     },
     {
       "id": "chungnam-tourism-startup-2026",
@@ -8567,7 +8842,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-16"
+      ]
     },
     {
       "id": "cheongyang-nuguna-store-hq-2026",
@@ -8605,7 +8883,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-06"
+      ]
     },
     {
       "id": "seocheon-marine-bluebio-prestartup-2026",
@@ -8643,7 +8924,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "상시"
     },
     {
       "id": "gangwon-rnd-special-zone-batch-1-2026",
@@ -8681,7 +8963,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-11"
+      ]
     },
     {
       "id": "ibk-changgong-2027h1",
@@ -8719,7 +9004,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-13"
+      ]
     },
     {
       "id": "tel-vc-nexus-connect-chungnam-2026",
@@ -8757,7 +9045,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-10"
+      ]
     },
     {
       "id": "daejeon-univ-integrated-startup-execution-2026",
@@ -8795,7 +9086,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "상시"
     },
     {
       "id": "daegu-namgu-youth-startup-2026",
@@ -8833,7 +9125,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-11-12"
+      ]
     },
     {
       "id": "gyeonggi-paju-youth-mentoring-2026",
@@ -8871,7 +9166,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "예산 소진 시"
     },
     {
       "id": "hamyang-small-startup-seed-fund-3rd-2026",
@@ -8909,7 +9205,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "예산 소진 시"
     },
     {
       "id": "gangwon-women-early-startup-supplies-2026",
@@ -8947,7 +9244,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "예산 소진 시"
     },
     {
       "id": "ulsan-u-oasis-2026",
@@ -8985,7 +9283,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "상시"
     },
     {
       "id": "ansan-ict-sw-startup-consulting-2026",
@@ -9023,7 +9322,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-12-31"
+      ]
     },
     {
       "id": "incheon-prototype-workshop-2026",
@@ -9061,7 +9363,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "예산 소진 시"
     },
     {
       "id": "sejong-startup-bus-demand-investment-2026",
@@ -9099,7 +9402,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "상시"
     },
     {
       "id": "yongin-one-on-one-startup-mentoring-2026",
@@ -9137,7 +9441,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "수시"
     },
     {
       "id": "startup-legal-support-revised-2026",
@@ -9175,7 +9480,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "예산 소진 시"
     },
     {
       "id": "jeonnam-startup-bus-2026",
@@ -9214,7 +9520,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "선착순"
     },
     {
       "id": "gumi-startup-maker-center-2026",
@@ -9252,7 +9559,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "예산 소진 시"
     },
     {
       "id": "incheon-startup-bus-2026",
@@ -9290,7 +9598,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "상시"
     },
     {
       "id": "gwangju-startup-bus-2026",
@@ -9328,7 +9637,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "상시"
     },
     {
       "id": "agri-food-crowdfunding-2026",
@@ -9366,7 +9676,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-12-31"
+      ]
     },
     {
       "id": "gangwon-startup-bus-tuesday-ir-2026",
@@ -9404,7 +9717,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "상시"
     },
     {
       "id": "daejeon-startup-d-bus-2026",
@@ -9442,7 +9756,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "상시"
     },
     {
       "id": "gyeonggi-tech-transfer-startup-scouting-2026",
@@ -9480,7 +9795,10 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": [
+        "2026-12-31"
+      ]
     },
     {
       "id": "gyeongnam-capital-region-demoday-mentoring-2026",
@@ -9518,7 +9836,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "상시"
     },
     {
       "id": "gyeongbuk-startup-bus-2026",
@@ -9556,7 +9875,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "상시"
     },
     {
       "id": "disabled-founders-startup-consulting-2026",
@@ -9593,7 +9913,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "예산 소진 시"
     },
     {
       "id": "jeju-startup-bus-w-join-2026",
@@ -9631,7 +9952,8 @@
       "status": "OPEN",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-11-06"
+      "lastUpdatedDate": "2026-11-06",
+      "deadline": "예산 소진 시"
     },
     {
       "id": "seokyeong-bi-third-2026",
@@ -9834,7 +10156,10 @@
       "firstSeenDate": "2026-09-21",
       "status": "OPEN",
       "lastVerifiedDate": "2026-10-13",
-      "lastUpdatedDate": "2026-09-21"
+      "lastUpdatedDate": "2026-09-21",
+      "deadline": [
+        "2026-12-31"
+      ]
     },
     {
       "id": "modoo-startup-project-second-2026",
@@ -10044,7 +10369,10 @@
       "firstSeenDate": "2026-09-23",
       "status": "OPEN",
       "lastVerifiedDate": "2026-10-13",
-      "lastUpdatedDate": "2026-09-23"
+      "lastUpdatedDate": "2026-09-23",
+      "deadline": [
+        "2026-10-13"
+      ]
     },
     {
       "id": "ai-solo-founder-camp-7-2026",
@@ -10297,7 +10625,10 @@
       "firstSeenDate": "2026-10-01",
       "status": "OPEN",
       "lastVerifiedDate": "2026-10-13",
-      "lastUpdatedDate": "2026-10-01"
+      "lastUpdatedDate": "2026-10-01",
+      "deadline": [
+        "2026-10-28"
+      ]
     },
     {
       "id": "hongneung-venture-valley-bi-first-2026",
@@ -10379,7 +10710,10 @@
       "firstSeenDate": "2026-10-02",
       "status": "OPEN",
       "lastVerifiedDate": "2026-11-06",
-      "lastUpdatedDate": "2026-10-02"
+      "lastUpdatedDate": "2026-10-02",
+      "deadline": [
+        "2026-12-31"
+      ]
     },
     {
       "id": "gangbuk-youth-ai-service-course-2026",
@@ -10476,7 +10810,10 @@
       "firstSeenDate": "2026-10-04",
       "status": "OPEN",
       "lastVerifiedDate": "2026-10-13",
-      "lastUpdatedDate": "2026-10-11"
+      "lastUpdatedDate": "2026-10-11",
+      "deadline": [
+        "2026-10-22"
+      ]
     },
     {
       "id": "agile-pivot-startup-lecture-2026",
