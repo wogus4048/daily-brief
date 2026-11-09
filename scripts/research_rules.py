@@ -156,6 +156,9 @@ def is_reverification_due(item, snapshot_date):
     if is_out_of_scope(item):
         return False
     today = date.fromisoformat(snapshot_date)
+    # publish closes it by date (apply_deadlines); an official check would change nothing.
+    if item.get("status") == "OPEN" and all_deadlines_passed(item, today):
+        return False
     last = parse_seoul_date(item.get("lastVerifiedDate"))
     if last is None:
         return True

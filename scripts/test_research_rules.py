@@ -44,10 +44,14 @@ class RiskRulesTest(unittest.TestCase):
     def test_risk_cadence_and_seoul_timezone(self):
         self.assertEqual(parse_seoul_date("2026-10-10T16:00:00Z"), date(2026, 10, 11))
         self.assertTrue(is_reverification_due(
-            {"status": "OPEN", "lastVerifiedDate": "2026-10-10", "deadline": ["2026-10-10"]}, "2026-10-11"
+            {"status": "OPEN", "lastVerifiedDate": "2026-10-10", "deadline": ["2026-10-11"]}, "2026-10-11"
         ))
         self.assertFalse(is_reverification_due(
             {"status": "OPEN", "lastVerifiedDate": "2026-10-10", "deadline": ["2026-10-24"]}, "2026-10-11"
+        ))
+        # Passed deadlines are closed by publish, not re-checked.
+        self.assertFalse(is_reverification_due(
+            {"status": "OPEN", "lastVerifiedDate": "2026-10-01", "deadline": ["2026-10-10"]}, "2026-10-11"
         ))
         self.assertTrue(is_reverification_due(
             {"status": "UPCOMING", "lastVerifiedDate": "2026-10-10", "openingAt": "2026-10-12T08:00:00+09:00"},
@@ -134,11 +138,11 @@ class RiskRulesTest(unittest.TestCase):
                 ("data/source-cache/2026-10-11.json", "data/source-cache/2026-10-11.json"),
             ):
                 (root / target).write_bytes((ROOT / source).read_bytes())
-            # Snapshots before 2026-11-10 carry no structured deadline; give the 10.08 item its own.
+            # Snapshots before 2026-11-10 carry no structured deadline; give the item one a day ahead.
             fixture = json.loads((root / "data/latest.json").read_text(encoding="utf-8"))
             for row in fixture["contests"]:
                 if row["id"] == "fintech-idea-contest-2026":
-                    row["deadline"] = ["2026-10-08"]
+                    row["deadline"] = ["2026-10-12"]
             (root / "data/latest.json").write_text(json.dumps(fixture, ensure_ascii=False), encoding="utf-8")
             sample_cache = json.loads((root / "data/source-cache/2026-10-11.json").read_text(encoding="utf-8"))
             fixture_manifest = {
