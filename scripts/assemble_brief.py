@@ -111,6 +111,21 @@ def record(rows, kind, key_field, names, label):
     return out
 
 
+DEV_CATEGORY = re.compile(r"개발|소프트웨어|AI|데이터|앱|웹|보안|핀테크|해커톤|프로덕트")
+
+
+def open_by_category(latest):
+    """Daily report: idea calls vs development/AI calls (user 2026-11-09: "아이디어 공모전 밖에 없네")."""
+    counts = {"devAi": 0, "idea": 0, "other": 0}
+    for item in latest["contests"]:
+        if item.get("status") != "OPEN":
+            continue
+        label = str(item.get("categoryLabel") or "")
+        key = "devAi" if DEV_CATEGORY.search(label) else "idea" if "아이디어" in label else "other"
+        counts[key] += 1
+    return counts
+
+
 def assemble(root, today):
     state = json.loads((root / f"artifacts/daily/{today}-gpt.json").read_text(encoding="utf-8"))
     latest = json.loads((root / "data/latest.json").read_text(encoding="utf-8"))
@@ -285,7 +300,8 @@ def assemble(root, today):
         ],
     }
     (root / f"data/research/{today}.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    return {"newContests": len(new_cards["contests"]), "newSupport": len(new_cards["support"]),
+    return {"openContestsByCategory": open_by_category(latest),
+            "newContests": len(new_cards["contests"]), "newSupport": len(new_cards["support"]),
             "aiNews": len(news_cards["aiNews"]), "aiDiscovery": len(news_cards["aiDiscovery"]),
             "reverified": len(reverified), "reverifyFailed": len(failures), "failedRecords": failed_parts,
             "pendingOfficial": sum(1 for g in new_cards.values() for c in g if c.get("officialCheck"))}

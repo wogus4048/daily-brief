@@ -150,8 +150,12 @@ class AssembleTest(unittest.TestCase):
             shutil.copy(ROOT / "scripts" / name, root / "scripts" / name)
         for folder in ("data/archive", "data/research", "data/source-cache", "artifacts/daily"):
             (root / folder).mkdir(parents=True, exist_ok=True)
-        shutil.copy(ROOT / "data/crawler-sources.json", root / "data/crawler-sources.json")
         shutil.copy(ROOT / f"data/source-cache/{TODAY}.json", root / f"data/source-cache/{TODAY}.json")
+        # The fixture cache is from 2026-11-09; sources added later are not in it.
+        manifest = json.loads((ROOT / "data/crawler-sources.json").read_text(encoding="utf-8"))
+        cached = json.loads((ROOT / f"data/source-cache/{TODAY}.json").read_text(encoding="utf-8"))["sources"]
+        manifest["active"] = [e for e in manifest["active"] if e["key"] in cached]
+        (root / "data/crawler-sources.json").write_text(json.dumps(manifest, ensure_ascii=False), encoding="utf-8")
         baseline = json.loads((ROOT / "data/archive/2026-11-06.json").read_text(encoding="utf-8"))
         (root / "data/latest.json").write_text(json.dumps(baseline, ensure_ascii=False), encoding="utf-8")
         (root / "baseline.json").write_text(json.dumps(baseline, ensure_ascii=False), encoding="utf-8")

@@ -555,6 +555,8 @@ export async function crawlKStartup(page) {
 
 export async function crawlGeneric(page, key, name, spec) {
   if (spec.adapter) return crawlDiscoverySource(page, key, name, spec);
+  // Some sites refuse the default HeadlessChrome name; send an honest crawler name instead.
+  if (spec.userAgent) await page.setExtraHTTPHeaders({ "User-Agent": spec.userAgent });
   const url = spec.url || spec.pagination?.urls?.[0];
   if (!url || !spec.linkSelector) {
     throw new Error(`generic crawler ${key} missing url/linkSelector`);
@@ -593,9 +595,15 @@ export async function crawlGeneric(page, key, name, spec) {
     const rx = new RegExp(spec.excludeUrlRegex);
     items = items.filter(item => !rx.test(item.url));
   }
+  // A list that mixes ended and open calls (AI Factory marks each card "종료").
+  if (spec.excludeTextRegex) {
+    const rx = new RegExp(spec.excludeTextRegex);
+    items = items.filter(item => !rx.test(item.rawText || ""));
+  }
 
   if (!items.length) {
-    throw new Error(`generic crawler ${key} returned zero items`);
+    // A list that is legitimately empty today (AI Factory had no open contest on 2026-11-09).
+    if (!spec.allowEmpty) throw new Error(`generic crawler ${key} returned zero items`);
   }
 
   const predicate = spec.actionability === "all" ? () => true : isActionableByHints;
