@@ -65,6 +65,27 @@ class ParseTest(unittest.TestCase):
         self.assertEqual(len(bad), 1)
 
 
+class WorkerReportTest(unittest.TestCase):
+    def test_batched_messages_to_prime_are_read(self):
+        # 2026-11-09: workers sent {"messages":[...]} and every such answer was dropped.
+        from free_explore import read_worker_report
+        with tempfile.TemporaryDirectory() as temp:
+            folder = Path(temp)
+            calls = [
+                {"action": "message", "to": "prime", "text": answer_block([{"n": 1}])},
+                {"action": "message", "messages": [{"to": "prime", "text": answer_block([{"n": 2}])},
+                                                   {"to": "worker-2", "text": "not for prime"}]},
+            ]
+            with (folder / "events.jsonl").open("w", encoding="utf-8") as events:
+                for args in calls:
+                    events.write(json.dumps({"kind": "tool_call", "call": {"tool": "agents",
+                                             "args": {"text": json.dumps(args, ensure_ascii=False)}}}) + "\n")
+            text, _ = read_worker_report(folder)
+        rows, _ = gpt_jobs.parse_lines(text)
+        self.assertEqual([r["n"] for r in rows], [1, 2])
+        self.assertNotIn("not for prime", text)
+
+
 class PromptTest(unittest.TestCase):
     def test_find_prompt_lists_annual_contests_and_new_listing_pages(self):
         # Goal 5: recurring contests and newly learned listing pages are checked every run.

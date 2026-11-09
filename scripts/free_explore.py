@@ -204,8 +204,18 @@ def read_worker_report(folder):
                 args = json.loads((call.get("args") or {}).get("text") or "{}")
             except ValueError:
                 continue
-            if args.get("action") == "message" and args.get("to") == "prime":
-                parts.append(args.get("text") or "")
+            if args.get("action") == "message":
+                # Titan also takes several messages in one call: {"messages": [{"to", "text"}, ...]}.
+                # Reading only the single form lost whole batches on 2026-11-09 (findings).
+                batch = args.get("messages")
+                if isinstance(batch, str):
+                    try:
+                        batch = json.loads(batch)
+                    except ValueError:
+                        batch = None
+                for message in batch if isinstance(batch, list) else [args]:
+                    if isinstance(message, dict) and message.get("to") == "prime":
+                        parts.append(message.get("text") or "")
             elif args.get("action") == "finish":
                 parts.append(args.get("result") or "")
     try:
