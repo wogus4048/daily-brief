@@ -553,6 +553,65 @@ export async function crawlKStartup(page) {
   );
 }
 
+// Linkareer pages by clicking numbered buttons; the page in the URL is ignored on load
+// (2026-11-09: page=1 and page=2 gave the same 28 links). Open calls only.
+const LINKAREER_LIST = "https://linkareer.com/list/contest?filterBy_status=OPEN&filterType=CATEGORY&orderBy_direction=DESC&orderBy_field=CREATED_AT&page=1";
+const LINKAREER_MAX_PAGES = 40;
+
+export async function crawlLinkareer(page) {
+  await page.setExtraHTTPHeaders({ "User-Agent": "Mozilla/5.0 (compatible; daily-brief-crawler)" });
+  await gotoWithRetry(page, LINKAREER_LIST);
+  await waitForListing(page, "a[href*='/activity/']", 1500);
+  const byUrl = new Map();
+  let pagesRead = 0;
+  let stoppedBy = "maxPages";
+  for (let n = 1; n <= LINKAREER_MAX_PAGES; n += 1) {
+    if (n > 1) {
+      let target = page.locator("button.button-page-number", { hasText: new RegExp(`^${n}$`) }).first();
+      if (!(await target.count())) {
+        // Past page 10 the next group sits behind the button right after the last number.
+        const next = page.locator("button.button-page-number").last().locator("xpath=following-sibling::button[1]");
+        if (!(await next.count()) || await next.isDisabled()) { stoppedBy = "noNextButton"; break; }
+        await next.click();
+        await page.waitForTimeout(1500);
+        target = page.locator("button.button-page-number", { hasText: new RegExp(`^${n}$`) }).first();
+        if (!(await target.count())) { stoppedBy = "noNextButton"; break; }
+      }
+      await target.click();
+      await page.waitForTimeout(1500);
+    }
+    // The card is the largest ancestor that still holds links to this one call only.
+    const rows = await page.$$eval("a[href*='/activity/']", as => as.map(a => {
+      const id = a.href.split("?")[0];
+      let card = a;
+      while (card.parentElement) {
+        const links = new Set([...card.parentElement.querySelectorAll("a[href*='/activity/']")].map(x => x.href.split("?")[0]));
+        if (links.size > 1 || !links.has(id)) break;
+        card = card.parentElement;
+      }
+      return { href: a.href, text: card.innerText || "" };
+    }));
+    pagesRead = n;
+    let added = 0;
+    for (const row of rows) {
+      const url = row.href.split("?")[0];
+      if (!/\/activity\/\d+$/.test(url)) continue;
+      const rawText = cleanText(row.text);
+      if (!rawText || (byUrl.has(url) && byUrl.get(url).rawText.length >= rawText.length)) continue;
+      if (!byUrl.has(url)) added += 1;
+      byUrl.set(url, { source: "Linkareer", title: rawText.replace(/^\d+\s+/, "").replace(/\s*담당자 답변받기.*$/, "").slice(0, 120), url, rawText });
+    }
+    if (!added) { stoppedBy = "empty"; break; }
+  }
+  const items = [...byUrl.values()];
+  if (!items.length) throw new Error("Linkareer crawler returned zero items");
+  return withActionable(
+    { key: "linkareer", status: "OK", url: LINKAREER_LIST, items,
+      coverage: [{ url: LINKAREER_LIST, pagesRead, reachedEnd: stoppedBy !== "maxPages", stoppedBy }] },
+    isActionableByHints
+  );
+}
+
 export async function crawlGeneric(page, key, name, spec) {
   if (spec.adapter) return crawlDiscoverySource(page, key, name, spec);
   // Some sites refuse the default HeadlessChrome name; send an honest crawler name instead.
@@ -642,6 +701,7 @@ async function main() {
     ["devpostOpen", crawlDevpost],
     ["contestKorea", crawlContestKorea],
     ["kStartupHighlights", crawlKStartup],
+    ["linkareer", crawlLinkareer],
   ]);
 
   const browser = await chromium.launch({ headless: true });

@@ -147,6 +147,17 @@
         "userAgent": "Mozilla/5.0 (compatible; daily-brief-crawler)"
       },
       "promotedAt": "2026-11-09"
+    },
+    {
+      "key": "linkareer",
+      "name": "링커리어 공모전",
+      "url": "https://linkareer.com/list/contest?filterBy_status=OPEN",
+      "role": "접수 중 공모전 전체(약 460건). 쪽 번호 버튼을 눌러 끝까지 읽는다(crawl_sources.mjs crawlLinkareer)",
+      "required": false,
+      "managed": true,
+      "category": "contest",
+      "note": "2026-11-10 추가: 개발·AI 대회가 적다는 사용자 지적. robots.txt는 목록을 허용(Allow: /).",
+      "promotedAt": "2026-11-10"
     }
   ],
   "degraded": [],
@@ -1650,25 +1661,6 @@
         "https://learn-ai-basics.devpost.com/"
       ],
       "score": 12,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
-    },
-    {
-      "key": "linkareer",
-      "name": "링커리어",
-      "reason": "structured contest/activity catalog but pagination and anti-bot behavior need inspection",
-      "status": "NEEDS_SPEC",
-      "score": 0,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
-    },
-    {
-      "key": "linkareer-com",
-      "name": "링커리어 공모전 목록",
-      "url": "https://linkareer.com/list/contest",
-      "reason": "검색결과 449건, 개별 공모전 게시",
-      "category": "unclassified",
-      "status": "NEEDS_SPEC",
-      "discoveredAt": "2026-11-09",
-      "score": 8,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
