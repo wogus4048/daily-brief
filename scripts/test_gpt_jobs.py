@@ -143,6 +143,28 @@ class CandidateTest(unittest.TestCase):
         self.assertEqual(decided[0]["disposition"], "EXISTING")
 
 
+class DuplicateTest(unittest.TestCase):
+    # 2026-11-10: the same call reached the site up to three times (findings).
+    def test_look_alikes_meet_in_one_batch_with_their_open_twin(self):
+        open_items = [{"id": "heritage-2026", "title": "국가무형유산 상설공연 창작 콘텐츠 개발 대국민 아이디어 발굴대회",
+                       "deadline": ["2026-11-18"]}]
+        candidates = [{"title": f"다른 공모전 {n}", "url": f"https://x.org/{n}"} for n in range(12)]
+        candidates[1] = {"title": "아이디어•건축•창업 국가무형유산 상설공연 창작 콘텐츠 개발을 위한 대국민 아이디어 발굴대회 0",
+                         "url": "https://www.contestkorea.com/a"}
+        candidates[11] = {"title": "국가무형유산 상설공연 창작 콘텐츠 개발을 위한 대국민 아이디어 발굴대회",
+                          "url": "https://www.wevity.com/b"}
+        gpt_jobs.attach_similar(candidates, open_items)
+        self.assertIn("heritage-2026", gpt_jobs.describe_candidate(candidates[1]))
+        chunks = gpt_jobs.pack(list(range(12)), 10, gpt_jobs.look_alike_groups(candidates))
+        self.assertTrue(any(1 in c and 11 in c for c in chunks))
+
+    def test_nearly_identical_new_card_is_not_published_twice(self):
+        from assemble_brief import same_call
+        open_items = [{"id": "keit-2026", "title": "2026년 KEIT 대국민 혁신아이디어 공모전"}]
+        self.assertEqual(same_call({"title": "2026 KEIT 대국민 혁신 아이디어 공모전"}, open_items)["id"], "keit-2026")
+        self.assertIsNone(same_call({"title": "2026년 K-Petro 대국민 혁신 아이디어 공모전"}, open_items))
+
+
 class AssembleTest(unittest.TestCase):
     def build(self, root, with_records=True):
         for name in ("validate_data.py", "validate_research_audit.py", "research_rules.py"):

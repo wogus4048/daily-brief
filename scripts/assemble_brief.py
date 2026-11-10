@@ -11,7 +11,7 @@ import re
 from datetime import date
 from urllib.parse import urlsplit
 
-from gpt_jobs import DISTRICTS, FIXED_SOURCES, TRACK_AXES, clean_title, now_iso
+from gpt_jobs import DISTRICTS, FIXED_SOURCES, TRACK_AXES, clean_title, now_iso, similarity
 from research_rules import deadline_info, normalize_url
 
 OPPORTUNITY_TRACKS = ("aiData", "generalSoftware", "publicIdea", "startupSupport", "upcomingOpenings")
@@ -20,6 +20,16 @@ DISPOSITIONS = {"PUBLISHED", "EXISTING", "DUPLICATE", "INELIGIBLE", "CLOSED", "N
 # A RETRY reason marks a lead nobody could judge today; free_explore.earlier_decisions skips it.
 RETRY = "RETRY: "
 CHANGE_FIELDS = {"status", "deadline", "deadlineText", "period", "participation", "reward", "openingAt"}
+
+
+# On 2026-11-10 every open pair at or above 0.97 was the same call posted twice (10 pairs) and
+# no different call reached it; different calls such as K-Petro/KEIT stopped at 0.91.
+SAME_CALL_MIN = 0.97
+
+
+def same_call(card, others):
+    """Last guard after GPT: a card whose title is nearly identical to an open or new one."""
+    return next((o for o in others if similarity(card["title"], o["title"]) >= SAME_CALL_MIN), None)
 
 
 class AssembleFailed(Exception):
@@ -113,6 +123,7 @@ def assemble(root, today):
     checked_at = reverify.get("checkedAt") or now_iso()
     taken = {x["id"] for g in ("contests", "support") for x in latest.get(g, [])}
     by_id = {x["id"]: x for g in ("contests", "support") for x in latest[g]}
+    open_now = [x for x in by_id.values() if x.get("status") in ("OPEN", "UPCOMING")]
 
     # 1. Re-verification of existing items.
     reverified, evidence, failures = [], [], []
@@ -156,8 +167,12 @@ def assemble(root, today):
             try:
                 group, card = opportunity_card(answer.get("card"), candidate, answer.get("official") is not False,
                                                today, taken)
-                new_cards[group].append(card)
-                entry.update(disposition="PUBLISHED", id=card["id"])
+                twin = same_call(card, open_now + new_cards["contests"] + new_cards["support"])
+                if twin:
+                    entry.update(disposition="DUPLICATE", id=twin["id"], reason=f"제목이 거의 같은 공고가 이미 있음: {twin['id']}")
+                else:
+                    new_cards[group].append(card)
+                    entry.update(disposition="PUBLISHED", id=card["id"])
             except ValueError as error:
                 entry.update(disposition="NOT_RELEVANT", reason=RETRY + f"카드 형식 오류: {error}")
         else:

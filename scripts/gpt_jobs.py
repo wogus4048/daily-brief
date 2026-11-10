@@ -6,6 +6,7 @@ reads the results without a Claude step. Items sent by number come back by numbe
 numbers without an answer are sent once more, then recorded as missing.
 """
 
+import difflib
 import json
 import re
 import time
@@ -20,6 +21,11 @@ SEOUL = ZoneInfo("Asia/Seoul")
 # Short chats: one that stalls loses less work (user 2026-11-10 "하나의 채팅에 너무 오래 일시키면 멈출 가능성이 높아").
 ITEMS_PER_WORKER = 5
 NEXT_CANDIDATES_IN_PROMPT = 10
+# Look-alike titles are hints for GPT, not decisions: K-Petro/KEIT and 진도군/완도군 calls reach 0.87-0.93.
+SIMILAR_SHOWN = 3
+SIMILAR_SHOWN_MIN = 0.6
+SIMILAR_GROUP_MIN = 0.75
+LINE_LIMIT = 420
 JSON_BLOCK = re.compile(r"```json\s*\n(.*?)```", re.S)
 # Validator names (validate_research_audit.py TRACKS, REQUIRED_SOURCES); answers must use them exactly.
 TRACK_AXES = {
@@ -78,7 +84,7 @@ CHECK_PROMPT = """오늘은 {today}이다. 아래 공고 후보 {count}건을 �
 
 {scope}
 {deadline_rule}
-이미 사이트에 있는 접수 중 공고(같은 공고면 EXISTING): {existing}
+후보 줄의 "비슷한 기존 공고"가 같은 공고면 EXISTING으로 하고 id에 그 기존 id를 적는다. 사이트마다 제목이 조금 달라도 주최·마감이 같으면 같은 공고다.
 같은 공고가 이 목록 안에 두 번 있으면 하나만 PUBLISHED로 하고 나머지는 DUPLICATE로 적는다. 지난 회차가 끝난 대회라도 이번 회차 공고면 새 공고다.
 후보:
 {items}
@@ -137,7 +143,23 @@ def run_chat(client, prompt, answer_path, log, wait_seconds, poll_seconds):
     return rows, {"sessionId": session_id, "missingWorkers": missing_workers, "unparsed": len(bad)}
 
 
-def run_numbered(client, items, build, answer_stem, log, wait_seconds, poll_seconds):
+def pack(pending, size, group_of):
+    """Batches of `size` that keep each group together, so GPT sees look-alike candidates at once."""
+    groups = {}
+    for index in pending:
+        groups.setdefault(group_of.get(index, index), []).append(index)
+    chunks, current = [], []
+    for members in groups.values():
+        for start in range(0, len(members), size):
+            part = members[start:start + size]
+            if len(current) + len(part) > size:
+                chunks.append(current)
+                current = []
+            current += part
+    return chunks + ([current] if current else [])
+
+
+def run_numbered(client, items, build, answer_stem, log, wait_seconds, poll_seconds, group_of=None):
     """Send items in batches sized to the worker limit; resend missing numbers once.
 
     Returns ({index: row}, batch reports). Index is the item's position in `items`.
@@ -147,7 +169,7 @@ def run_numbered(client, items, build, answer_stem, log, wait_seconds, poll_seco
     answers, batches = {}, []
     pending = list(range(len(items)))
     for attempt in (1, 2):
-        chunks = [pending[i:i + size] for i in range(0, len(pending), size)]
+        chunks = pack(pending, size, group_of or {})
         for chunk in chunks:
             number = len(batches) + 1
             path = answer_stem.with_name(f"{answer_stem.name}-{number:02d}.md")
@@ -298,18 +320,57 @@ def build_candidates(root, today, details, find_rows, earlier):
 def describe_candidate(item):
     facts = ", ".join(f"{k}: {v}" for k, v in (item.get("details") or {}).items() if v)
     listing = " ".join(str(item.get("listing") or "").split())[:300]
-    return f"{clean_title(item['title'])} | {item['url']} | {facts} | 목록 문구: {listing}"
+    similar = "; ".join(item.get("similar") or []) or "없음"
+    # Five lines plus the rules must fit Titan's 4,000-character worker task; the tail is cut first.
+    line = f"{clean_title(item['title'])} | {item['url']} | 비슷한 기존 공고: {similar} | {facts} | 목록 문구: {listing}"
+    return line[:LINE_LIMIT]
+
+
+def similarity(a, b):
+    return difflib.SequenceMatcher(None, title_key(a), title_key(b)).ratio()
+
+
+def attach_similar(candidates, open_items):
+    """Give each candidate the few open items whose titles look alike.
+
+    The whole open list (187 items on 2026-11-09) does not fit the 4,000-character
+    worker task, and cutting it at 1,500 characters let duplicates through (findings 2026-11-10).
+    """
+    for item in candidates:
+        scored = sorted(((similarity(item["title"], x["title"]), x) for x in open_items), key=lambda p: -p[0])
+        item["similar"] = [f"{x['id']}={x['title'][:40]} (마감 {x.get('deadline')})"
+                           for score, x in scored[:SIMILAR_SHOWN] if score >= SIMILAR_SHOWN_MIN]
+    return candidates
+
+
+def look_alike_groups(candidates):
+    """Candidates whose titles look alike share a group (same contest from two sites)."""
+    parent = list(range(len(candidates)))
+
+    def root(i):
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    keys = [title_key(c["title"]) for c in candidates]
+    for i in range(len(candidates)):
+        for j in range(i + 1, len(candidates)):
+            if difflib.SequenceMatcher(None, keys[i], keys[j]).ratio() >= SIMILAR_GROUP_MIN:
+                parent[root(j)] = root(i)
+    return {i: root(i) for i in range(len(candidates))}
 
 
 def run_check(root, today, candidates, client, log, wait_seconds, poll_seconds):
     latest = json.loads((root / "data/latest.json").read_text(encoding="utf-8"))
-    existing = "; ".join(f"{x['id']}={x['title'][:30]}" for x in existing_open(latest))[:1500]
+    attach_similar(candidates, existing_open(latest))
     stem = root / f"artifacts/daily/{today}-check"
 
     def build(chunk):
         return CHECK_PROMPT.format(today=today, count=len(chunk), scope=SCOPE_RULES, deadline_rule=DEADLINE_RULE,
-                                   existing=existing, answer_rules=ANSWER_RULES,
+                                   answer_rules=ANSWER_RULES,
                                    items=numbered(chunk, describe_candidate), card_fields=CARD_FIELDS)
 
-    answers, batches = run_numbered(client, candidates, build, stem, log, wait_seconds, poll_seconds)
+    answers, batches = run_numbered(client, candidates, build, stem, log, wait_seconds, poll_seconds,
+                                    group_of=look_alike_groups(candidates))
     return {"answers": {str(k): v for k, v in answers.items()}, "batches": batches}
