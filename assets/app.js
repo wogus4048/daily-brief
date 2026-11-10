@@ -672,7 +672,48 @@ function contestTopicLabel(item) {
   return CONTEST_TOPIC_LABELS[contestTopic(item)] || "소프트웨어 개발";
 }
 
+// Support calls are grouped by kind (user 2026-11-10 "창업/지원사업 쪽이 좀 어렵네 … 분류해봐").
+// K-Startup's own category, kept in tags[0] by the crawler, decides first; other sources use title words.
+const SUPPORT_KIND_LABELS = {
+  "money": "자금 · 사업화",
+  "space": "공간 · 입주",
+  "mentor": "교육 · 멘토링",
+  "event": "투자 · 행사",
+  "market": "판로 · 해외 · 인력",
+  "other": "기타"
+};
+const SUPPORT_OFFICIAL = [
+  ["money", /^(사업화|기술개발|융자|정책자금)/],
+  ["space", /^시설ㆍ공간ㆍ보육/],
+  ["mentor", /^(멘토링ㆍ컨설팅ㆍ교육|창업교육)/],
+  ["event", /^행사ㆍ네트워크/],
+  ["market", /^(판로ㆍ해외진출|글로벌|인력)/]
+];
+const SUPPORT_WORDS = [
+  ["space", /입주|입점|보육|창업공간|공유주방|키친|오피스|임대|레지던시|제작센터|제작터|스튜디오/],
+  ["event", /투자|\bIR\b|IR |데모데이|피칭|펀드|엔젤|밋업|포럼|네트워킹|오픈이노베이션|팁스|TIPS|박람회|행사|개최/i],
+  ["market", /판로|해외|글로벌|global|수출|인력|채용|일자리|비자|visa/i],
+  ["mentor", /멘토|컨설팅|교육|아카데미|과정|캠프|스쿨|특강|워크숍|코칭|상담|클래스|세미나/],
+  ["money", /사업화|지원금|자금|패키지|바우처|R&D|융자|보증|응원금|물품|창업 ?지원|액셀러|육성|프로그램|챌린지|경진|공모|모집/i]
+];
+
+function supportKind(item) {
+  for (const tag of item.tags || []) {
+    for (const [key, re] of SUPPORT_OFFICIAL) if (re.test(tag)) return key;
+  }
+  const hay = [item.title].concat(item.tags || []).join(" ");
+  for (const [key, re] of SUPPORT_WORDS) if (re.test(hay)) return key;
+  return "other";
+}
+
+function categoryLabelFor(item, kind) {
+  return kind === "support" ? SUPPORT_KIND_LABELS[supportKind(item)] : contestTopicLabel(item);
+}
+
 function topicDefs(type) {
+  if (type === "support") {
+    return [["all","전체 종류"]].concat(Object.entries(SUPPORT_KIND_LABELS));
+  }
   if (type !== "contests") return [];
   return [
     ["all","전체 분야"],
@@ -798,6 +839,9 @@ function renderCategoryList(type) {
   if (type === "contests" && state.categoryTopicFilter !== "all") {
     items = items.filter(item => contestTopic(item) === state.categoryTopicFilter);
   }
+  if (type === "support" && state.categoryTopicFilter !== "all") {
+    items = items.filter(item => supportKind(item) === state.categoryTopicFilter);
+  }
 
   if (state.categorySort === "deadline") {
     items = items.slice().sort((a,b) => {
@@ -831,7 +875,7 @@ function renderCategoryList(type) {
 
     el.innerHTML = '<div class="opportunity-grid-inner">' + items.map(item => {
       const status = !isOpenItem(item) ? "종료" : String(item.status).toUpperCase() === "UPCOMING" ? "접수 예정" : (ddayText(item) || "접수 중");
-      const category = kind === "support" ? "창업 · 지원사업" : contestTopicLabel(item);
+      const category = categoryLabelFor(item, kind);
       const tags = (item.tags || []).slice(0, 3);
       const deadline = item.deadlineText || ddayText(item) || "일정 확인";
 
@@ -909,7 +953,7 @@ function renderDetail(item) {
 }
 
 function renderOpportunityDetail(item, kind) {
-  const category = kind === "support" ? "창업 · 지원사업" : contestTopicLabel(item);
+  const category = categoryLabelFor(item, kind);
   const links = item.links || [];
   const ideas = item.ideas || [];
 

@@ -119,6 +119,10 @@ class PromptTest(unittest.TestCase):
         if with_url:
             newest = max(with_url, key=lambda c: c.get("discoveredAt") or "")
             self.assertIn(newest["url"], jobs["find-annual"])
+        # The contest chat runs every day and also searches past the fixed list (user 2026-11-10).
+        import daily_run
+        self.assertEqual(daily_run.DAILY_FIND_CHATS, {"find-annual", "find-free"})
+        self.assertIn("이 목록에 없는 대회도 찾아라", jobs["find-annual"])
         for name in gpt_jobs.FIXED_SOURCES:
             self.assertIn(f'"{name}"', jobs["find-fixed"])
 

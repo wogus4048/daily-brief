@@ -77,7 +77,7 @@ def fields(row, today):
         # The crawler reads the organization line; otherwise the last word before the dates.
         words = host.split()
         out["host"] = row.get("host") or (words[-1].strip(" ·") if words else None)
-        found = re.search(r"(공공|민간)?\s*(\S+)\s+D-", raw)
+        found = re.search(r"(공공|민간|교육)?\s*(\S+)\s+(?:D-|오늘마감)", raw)
         out["tags"] = [found.group(2)] if found else []
     elif source == "linkareer":
         # "<n> title 담당자 답변받기|담당자 답변 <n> [팀원 모집 <n>] organization D-<n> 조회 …"

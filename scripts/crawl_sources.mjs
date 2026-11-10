@@ -542,7 +542,8 @@ export async function crawlKStartup(page) {
         // List rows: type, category, D-<n>, title, program name, organization, 등록일자 …
         // (the slider repeats the title instead of a program name). 2026-11-10: the repeated-line
         // rule picked categories on list rows.
-        const dday = lines.findIndex(line => /(^|\s)D-(\d+|DAY)$/i.test(line));
+        // A call due today shows "오늘마감" instead of D-<n> (2026-11-10: 9 titles began with the category).
+        const dday = lines.findIndex(line => /(^|\s)(D-(\d+|DAY)|오늘마감)$/i.test(line));
         const title = (dday >= 0 && lines[dday + 1]) || rawText.slice(0, 80);
         const registered = lines.findIndex(line => line.startsWith("등록일자"));
         const host = registered > 0 ? lines[registered - 1] : null;

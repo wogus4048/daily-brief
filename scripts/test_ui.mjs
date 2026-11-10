@@ -121,6 +121,12 @@ try {
   await go('#/ai/old-ai');await page.waitForFunction(()=>document.body.dataset.page==='home');
   await page.unroute('**/data/latest.json?*');
  }
+ // Support calls can be narrowed by kind (user 2026-11-10); each chip shows only cards of that kind.
+ await go('#/support');
+ check(await page.locator('#categoryTopicRow').isVisible(),'Support shows kind chips');
+ await page.locator('.topic-chip[data-topic="space"]').click();
+ const kinds=await page.locator('#categoryList ion-card-subtitle').allTextContents();
+ check(kinds.length>0 && kinds.every(k=>k.trim()==='공간 · 입주'),'Space chip shows only space calls: '+[...new Set(kinds)].join(','));
  check(errors.length===0,'No browser errors: '+errors.join('\n'));
  console.log(`PASS: ${checks} UI checks (three desktop sizes, compact fallback, real Ionic interactions, archive, scheduled JSON, no AI routes)`);
 } finally {await browser.close();await host.close();}

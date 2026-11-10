@@ -236,8 +236,12 @@ def find_jobs(root, today):
     record_fixed = ('- 고정 출처마다 {"kind":"fixedSource","name":"이름 그대로","urls":["연 주소"],"status":"CHECKED 또는 FAILED","note":"본 범위와 결과"}\n'
                     '- 구청마다 {"kind":"district","key":"nowon|dobong|gangbuk","urls":[...],"status":"CHECKED 또는 FAILED","note":"..."}\n')
     extra_annual = (f"아래 정기 대회와 창업 모집은 매번 공식 주소를 열어 이번 회차 공고가 있는지 봐라:\n{annual_lines}\n"
-                    f"최근 발견된 목록 페이지도 열어 봐라:\n{watch}")
-    record_annual = '- 정기 대회마다 {"kind":"annual","name":"목록 이름 그대로","url":"연 주소","status":"OPEN|UPCOMING|CLOSED|NONE|FAILED","note":"..."}\n'
+                    f"최근 발견된 목록 페이지도 열어 봐라:\n{watch}\n"
+                    # The contest chat looks past the fixed list too (user 2026-11-10: "정기대회 뿐만아니라 다른 대회같은것도 조사해보라해").
+                    "그다음 이 목록에 없는 대회도 찾아라. AI·데이터·소프트웨어 개발 대회와 해커톤, 창업 경진대회·창업 오디션이 중심이다. "
+                    "정부 부처·공공기관·지자체·대기업·대학이 직접 낸 공고와 보도자료를 검색해라. "
+                    f"아래 사이트는 이미 다른 수집이 맡으니 출처로 쓰지 마라: {crawled}. 새로 찾은 대회는 candidate 줄로 적어라.")
+    record_annual = '- 정기 대회의 이번 회차가 OPEN이나 UPCOMING이면 candidate 줄도 적는다\n- 정기 대회마다 {"kind":"annual","name":"목록 이름 그대로","url":"연 주소","status":"OPEN|UPCOMING|CLOSED|NONE|FAILED","note":"..."}\n'
     no_axes = "(트랙 구분 없음, queries 줄은 생략)"
     common = dict(today=today, scope=SCOPE_RULES, browser_rules=BROWSER_RULES, answer_rules=ANSWER_RULES)
     free = (f"위 트랙 구분 없이, 아래 사이트는 이미 다른 수집이 맡으니 출처로 쓰지 말고 여기에 없을 만한 공고를 스스로 찾아라: {crawled}. "
@@ -248,7 +252,7 @@ def find_jobs(root, today):
         ("find-startup", FIND_PROMPT.format(axes=axes(group_b), pages=pages_b, extra="", record_lines="", **common)),
         ("find-fixed", FIND_PROMPT.format(axes=no_axes, pages="(아래 고정 출처)", extra=extra_fixed,
                                           record_lines=record_fixed, **common)),
-        ("find-annual", FIND_PROMPT.format(axes=no_axes, pages="(아래 정기 대회)", extra=extra_annual,
+        ("find-annual", FIND_PROMPT.format(axes=no_axes, pages="(아래 정기 대회, 그다음 검색)", extra=extra_annual,
                                            record_lines=record_annual, **common)),
         ("find-free", FIND_PROMPT.format(axes=no_axes, pages="(지정 없음)", extra=free, record_lines="", **common)),
     ]

@@ -43,6 +43,8 @@ PUBLIC_LATEST_URL = "https://wogus4048.github.io/daily-brief/data/latest.json"
 # work, so it must never run in a development checkout.
 RUNNER_MARKER = ".daily-brief-runner"
 PUSH_ATTEMPTS = 3
+# Daily GPT chats: the contest chat (annual list + other contests) and free exploration (user 2026-11-10).
+DAILY_FIND_CHATS = {"find-annual", "find-free"}
 PUBLIC_WAIT_SECONDS = 600
 PUBLIC_POLL_SECONDS = 15
 OUTPUT_TAIL_CHARS = 2000
@@ -497,17 +499,20 @@ def run_research(root, today, use_gpt=False, client_factory=TitanClient, wait_se
             client = client_factory()
             result["workers"] = gpt_jobs.worker_limit(client)
         elif "find" not in state:
-            # GPT free exploration runs with every daily crawl (user 2026-11-10: "매일 크롤러 돌때 같이").
+            # GPT free exploration runs with every daily crawl (user 2026-11-10: "매일 크롤러 돌때 같이"),
+            # after the contest chat: annual contests (AI TOP 100, 모두의 창업) and other contests.
+            # The chats run one after another and share Titan's 2 workers.
             # Its leads become code cards and its listing pages become crawler candidates; if GPT
             # cannot run, the brief is still published from the crawl.
             with log.stage("free_explore"):
                 try:
                     preflight(log)
                     state["find"] = gpt_jobs.run_find(root, today, client_factory(), log, wait_seconds, poll_seconds,
-                                                      only={"find-free"})
+                                                      only=DAILY_FIND_CHATS)
                 except (StepFailed, ExploreFailed) as error:
                     log.event("free_explore_failed", reason=str(error))
-                    state["find"] = {"rows": [], "jobs": [{"name": "find-free", "status": "FAILED", "reason": str(error)}]}
+                    state["find"] = {"rows": [], "jobs": [{"name": name, "status": "FAILED", "reason": str(error)}
+                                                          for name in sorted(DAILY_FIND_CHATS)]}
                 save()
         if "find" not in state:
             with log.stage("find"):
