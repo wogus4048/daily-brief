@@ -476,6 +476,7 @@ class PublishTest(RepoCase):
     def publish(self, **overrides):
         options = dict(
             checks=lambda root, date, baseline, log: None,
+            redeploy=lambda root, log: None,
             fetch_public=lambda: subprocess.run(
                 ["git", "show", "main:data/latest.json"], cwd=self.origin, check=True, capture_output=True,
             ).stdout,
@@ -558,9 +559,11 @@ class PublishTest(RepoCase):
         self.assertEqual(self.publish(), 1)
         self.assertIn("main", self.report()["publish"]["reason"])
 
-    def test_public_mismatch_fails(self):
+    def test_public_mismatch_redeploys_once_then_fails(self):
         self.write_brief()
-        self.assertEqual(self.publish(fetch_public=lambda: b"old"), 1)
+        redeploys = []
+        self.assertEqual(self.publish(fetch_public=lambda: b"old", redeploy=lambda root, log: redeploys.append(1)), 1)
+        self.assertEqual(redeploys, [1])
         self.assertIn("public", self.report()["publish"]["reason"])
         checks = [e for e in self.events() if e["event"] == "public_check"]
         self.assertFalse(checks[-1]["matched"])

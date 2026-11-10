@@ -353,9 +353,16 @@ def wait_for_public(root, fetch_public, wait_seconds, poll_seconds, log):
         time.sleep(poll_seconds)
 
 
+def redeploy_pages(root, log):
+    """Ask GitHub to run the Pages workflow again (it failed with "try again later" three times on 2026-11-10)."""
+    done = subprocess.run(["gh", "workflow", "run", "pages.yml", "--ref", "main"], cwd=root,
+                          capture_output=True, text=True, encoding="utf-8", errors="replace")
+    log.event("pages_redeploy", exitCode=done.returncode, stderr=done.stderr.strip()[-OUTPUT_TAIL_CHARS:])
+
+
 def run_publish(
     root, today, no_push=False, checks=run_checks, fetch_public=fetch_public_latest,
-    wait_seconds=PUBLIC_WAIT_SECONDS, poll_seconds=PUBLIC_POLL_SECONDS,
+    wait_seconds=PUBLIC_WAIT_SECONDS, poll_seconds=PUBLIC_POLL_SECONDS, redeploy=redeploy_pages,
 ):
     result = {"status": "FAILED", "noPush": no_push}
     log = RunLog(root, today, "publish")
@@ -391,7 +398,12 @@ def run_publish(
         with log.stage("push"):
             result["commit"] = push_main(root, date, log)
         with log.stage("public_check"):
-            wait_for_public(root, fetch_public, wait_seconds, poll_seconds, log)
+            try:
+                wait_for_public(root, fetch_public, wait_seconds, poll_seconds, log)
+            except StepFailed:
+                # A failed Pages deployment clears on a second run; one retry, then report.
+                redeploy(root, log)
+                wait_for_public(root, fetch_public, wait_seconds, poll_seconds, log)
         result["status"] = "OK"
         log.event("run_end", status="OK", commit=result["commit"])
         return 0
