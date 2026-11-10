@@ -68,6 +68,8 @@ def read_details(cache, fetch=fetch_page, gap_seconds=REQUEST_GAP_SECONDS):
     for key, source in cache.get("sources", {}).items():
         for item in source.get("actionableItems") or []:
             row = {"source": key, "title": item.get("title"), "url": item.get("url"), "listing": item.get("rawText")}
+            if item.get("host"):
+                row["host"] = item["host"]
             if key in DETAIL_SOURCES and item.get("url"):
                 try:
                     row["details"] = parse_details(fetch(item["url"]))

@@ -646,7 +646,8 @@ const CONTEST_TOPIC_LABELS = {
   "security": "보안",
   "fintech": "핀테크",
   "public-data": "공공데이터",
-  "startup-product": "스타트업 · 프로덕트"
+  "startup-product": "스타트업 · 프로덕트",
+  "idea": "아이디어"
 };
 
 function contestTopic(item) {
@@ -661,7 +662,10 @@ function contestTopic(item) {
   if (/스타트업|startup|프로덕트|product|vibe coding|창업 해커톤/.test(explicit + " " + hay)) return "startup-product";
   if (/\bai\b|llm|rag|생성형|머신러닝|machine learning|딥러닝|deep learning|데이터 분석|컴퓨터비전|딥보이스|음성 ai/.test(explicit + " " + hay)) return "ai-data";
   if (/앱|모바일|android|ios|웹서비스|웹 서비스|web service|frontend|프론트엔드/.test(explicit + " " + hay)) return "app-web";
-  return "software";
+  // Idea contests had no topic and fell through to software (2026-11-10).
+  const devWords = /개발|소프트웨어|코딩|프로그래밍|해커톤|hackathon|알고리즘/;
+  if (devWords.test(explicit.replace("공모전 · 해커톤", "") + " " + String(item.title || "").toLowerCase())) return "software";
+  return "idea";
 }
 
 function contestTopicLabel(item) {

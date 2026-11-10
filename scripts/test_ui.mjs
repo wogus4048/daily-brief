@@ -6,6 +6,8 @@ const host=await serve();
 const browser=await chromium.launch(launchOptions);
 const page=await browser.newPage();
 const data=JSON.parse(await readFile('data/latest.json','utf8'));
+// Calls whose deadline is 확인 필요 are hidden on the site (user decision 2026-11-09), so tests use shown ones.
+const shown=list=>list.find(item=>item.deadline!=='확인 필요');
 const all=[...data.contests,...data.support];
 const errors=[];page.on('pageerror',e=>errors.push(e.message));
 page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
@@ -45,7 +47,7 @@ try {
  check(await page.locator('.briefing-section').count()===3,'Home has new, updated and closing sections');
  await page.locator('#searchButton').click();
  check(await page.locator('#searchDialog').evaluate(e=>e.open),'Search opens');
- const searchTitle=data.contests[0].title;
+ const searchTitle=shown(data.contests).title;
  await page.locator('#searchInput input').fill(searchTitle);
  await page.waitForSelector('.search-result');
  check((await page.locator('.search-result').first().textContent()).includes(searchTitle),'Search returns actual JSON content');
@@ -80,7 +82,7 @@ try {
  await page.waitForFunction(()=>document.querySelector('#categorySort').value==='discovered');
  await page.locator('ion-popover').waitFor({state:'detached'});
  check(true,'Ionic sort popover works');
- for(const [kind,item] of [['contest',data.contests[0]],['support',data.support[0]]]) {
+ for(const [kind,item] of [['contest',shown(data.contests)],['support',shown(data.support)]]) {
   await go('#/'+kind+'/'+encodeURIComponent(item.id));
   check(await page.locator('#detailHeader h1').textContent()===item.title,`${kind} detail preserves title`);
   check(await page.locator('#detailContent').innerText()!=='',`${kind} detail has content`);

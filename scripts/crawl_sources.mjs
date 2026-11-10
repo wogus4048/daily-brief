@@ -539,15 +539,19 @@ export async function crawlKStartup(page) {
         if (byId.has(row.id) && byId.get(row.id).rawText.length >= rawText.length) continue;
         const fresh = !byId.has(row.id);
         const lines = row.text.split(String.fromCharCode(10)).map(line => line.trim()).filter(Boolean);
-        // The title is printed twice in each row (slider and list layouts both do this).
-        const title = lines.find((line, i) => line.length >= 6 && lines.indexOf(line) !== i)
-          || lines.find(line => line.length >= 8 && !/^(D-|마감일자|등록일자|시작일자|조회|공공|민간)/.test(line))
-          || rawText.slice(0, 80);
+        // List rows: type, category, D-<n>, title, program name, organization, 등록일자 …
+        // (the slider repeats the title instead of a program name). 2026-11-10: the repeated-line
+        // rule picked categories on list rows.
+        const dday = lines.findIndex(line => /(^|\s)D-(\d+|DAY)$/i.test(line));
+        const title = (dday >= 0 && lines[dday + 1]) || rawText.slice(0, 80);
+        const registered = lines.findIndex(line => line.startsWith("등록일자"));
+        const host = registered > 0 ? lines[registered - 1] : null;
         byId.set(row.id, {
           source: "K-Startup",
           title,
           url: `${K_STARTUP_LIST}?schM=view&pbancSn=${row.id}`,
           rawText,
+          ...(host ? { host } : {}),
         });
         if (fresh) added += 1;
       }

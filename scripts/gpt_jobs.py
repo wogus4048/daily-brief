@@ -326,8 +326,24 @@ def describe_candidate(item):
     return line[:LINE_LIMIT]
 
 
+GENERIC_WORDS = re.compile(r"참가자|참가팀|참여자|참여기업|모집|공고|수정|안내|대회|공모전|공모|20\d\d년?")
+
+
+def compare_key(title):
+    """Title without bracketed prefixes, years and words every call shares (모집, 공고, 대회 …).
+
+    On 2026-11-10 data, pairs at or above 0.97 on this key were the same call; the closest
+    different calls (노원 4차/5차) stopped at 0.95.
+    """
+    text = re.sub(r"\[[^\]]*\]|【[^】]*】|\([^)]*\)|[「」『』]", "", clean_title(title))
+    return re.sub(r"[^0-9a-z가-힣]", "", GENERIC_WORDS.sub("", text).lower())
+
+
 def similarity(a, b):
-    return difflib.SequenceMatcher(None, title_key(a), title_key(b)).ratio()
+    ka, kb = compare_key(a), compare_key(b)
+    if min(len(ka), len(kb)) < 6:
+        return difflib.SequenceMatcher(None, title_key(a), title_key(b)).ratio()
+    return difflib.SequenceMatcher(None, ka, kb).ratio()
 
 
 def attach_similar(candidates, open_items):

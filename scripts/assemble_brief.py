@@ -104,7 +104,7 @@ def open_by_category(latest):
     for item in latest["contests"]:
         if item.get("status") != "OPEN":
             continue
-        label = str(item.get("categoryLabel") or "")
+        label = str(item.get("categoryLabel") or "").replace("공모전 · 해커톤", "")
         key = "devAi" if DEV_CATEGORY.search(label) else "idea" if "아이디어" in label else "other"
         counts[key] += 1
     return counts

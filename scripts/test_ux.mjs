@@ -4,6 +4,8 @@ import {readFile} from 'node:fs/promises';
 import {serve,launchOptions,ready} from './ui_helpers.mjs';
 const host=await serve(),browser=await chromium.launch(launchOptions),page=await browser.newPage({viewport:{width:1440,height:900}});
 const data=JSON.parse(await readFile('data/latest.json','utf8'));
+// Calls whose deadline is 확인 필요 are hidden on the site (user decision 2026-11-09), so tests use shown ones.
+const shown=list=>list.find(item=>item.deadline!=='확인 필요');
 try {
  await page.goto(host.base+'/#/contests');await ready(page);
  await page.locator('#categoryFilters [data-filter="closed"]').click();
@@ -23,7 +25,7 @@ try {
  await page.waitForFunction(id=>!!document.querySelector('#searchResults [data-id="'+id+'"]'),institutionItem.id);
  await page.keyboard.press('Escape');
  // Direct detail entry must return to its catalog even without in-app history.
- await page.goto(host.base+'/#/support/'+data.support[0].id);await ready(page);
+ await page.goto(host.base+'/#/support/'+shown(data.support).id);await ready(page);
  await page.locator('#backButton').click();await ready(page);
  assert.equal(new URL(page.url()).hash,'#/support');
  const upcoming=structuredClone(data);upcoming.contests[0].status='UPCOMING';
