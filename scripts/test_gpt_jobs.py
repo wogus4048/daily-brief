@@ -165,6 +165,31 @@ class DuplicateTest(unittest.TestCase):
         self.assertIsNone(same_call({"title": "2026년 K-Petro 대국민 혁신 아이디어 공모전"}, open_items))
 
 
+class CodeCardTest(unittest.TestCase):
+    def test_cards_come_from_crawled_fields_and_scope_words(self):
+        # User 2026-11-10: write cards by code; what the crawl shows is written, the rest is 확인 필요.
+        import code_cards
+        rows = [
+            {"source": "kStartupHighlights", "title": "NEST G밸리 4기 입주기업 모집",
+             "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179700",
+             "listing": "공공 시설ㆍ공간ㆍ보육 D-10 NEST G밸리 4기 입주기업 모집 NEST G밸리 4기 입주기업 모집 신용보증기금 "
+                        "등록일자 2026-11-06 시작일자 2026-11-06 마감일자 2026-11-20 조회 5,198 스크랩"},
+            {"source": "linkareer", "title": "2026 내가 소개하는 서울 숏폼 공모전", "url": "https://linkareer.com/activity/1",
+             "listing": "2026 내가 소개하는 서울 숏폼 공모전 담당자 답변받기 서울특별시 D-17 조회 55 댓글 0"},
+            {"source": "linkareer", "title": "AI 해커톤 2026", "url": "https://linkareer.com/activity/2",
+             "listing": "AI 해커톤 2026 담당자 답변받기 한국정보원 D-0 조회 1"},
+        ]
+        rows[2]["listing"] = rows[2]["listing"].replace("D-0", "D-DAY")
+        got = code_cards.answers(rows, "2026-11-10")
+        card = got["0"]["card"]
+        self.assertEqual((card["deadline"], card["categoryLabel"]), (["2026-11-20"], "창업 · 지원사업"))
+        self.assertIn("신용보증기금", card["summary"])
+        self.assertEqual(card["participation"], "확인 필요")
+        self.assertEqual(got["1"]["disposition"], "NOT_RELEVANT")  # 숏폼 is out of scope
+        self.assertEqual(got["2"]["card"]["deadline"], ["2026-11-10"])
+        self.assertEqual(got["2"]["track"], "aiData")
+
+
 class AssembleTest(unittest.TestCase):
     def build(self, root, with_records=True):
         for name in ("validate_data.py", "validate_research_audit.py", "research_rules.py"):

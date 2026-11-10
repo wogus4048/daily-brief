@@ -517,27 +517,39 @@ export async function crawlKStartup(page) {
     for (let n = 1; n <= K_STARTUP_MAX_PAGES; n += 1) {
       await gotoWithRetry(page, `${K_STARTUP_LIST}?page=${n}&pbancClssCd=${cls}`);
       await waitForListing(page, 'a[href*="go_view("]', 800);
+      // A call has several links (title, button); read the largest block that holds only this call,
+      // which carries the deadline and the organization (2026-11-10: title-only text lost both).
       const rows = await page.evaluate(() =>
-        [...document.querySelectorAll('a[href*="go_view("]')].map(a => ({
-          id: (a.getAttribute("href").match(/go_view\((\d+)\)/) || [])[1],
-          text: a.innerText || a.textContent || "",
-        })));
+        [...document.querySelectorAll('a[href*="go_view("]')].map(a => {
+          const id = (a.getAttribute("href").match(/go_view\((\d+)\)/) || [])[1];
+          let card = a;
+          while (card.parentElement) {
+            const ids = new Set([...card.parentElement.querySelectorAll('a[href*="go_view("]')]
+              .map(x => (x.getAttribute("href").match(/go_view\((\d+)\)/) || [])[1]));
+            if (ids.size > 1) break;
+            card = card.parentElement;
+          }
+          return { id, text: card.innerText || card.textContent || "" };
+        }));
       pagesRead = n;
       let added = 0;
       for (const row of rows) {
-        if (!row.id || byId.has(row.id)) continue;
+        if (!row.id) continue;
         const rawText = cleanText(row.text);
+        if (byId.has(row.id) && byId.get(row.id).rawText.length >= rawText.length) continue;
+        const fresh = !byId.has(row.id);
         const lines = row.text.split(String.fromCharCode(10)).map(line => line.trim()).filter(Boolean);
-        // Lines: category and D-day, "마감일자 YYYY-MM-DD", title, title again, organization, views.
-        const after = lines.findIndex(line => line.startsWith("마감일자"));
-        const title = (after >= 0 && lines[after + 1]) || rawText.slice(0, 80);
+        // The title is printed twice in each row (slider and list layouts both do this).
+        const title = lines.find((line, i) => line.length >= 6 && lines.indexOf(line) !== i)
+          || lines.find(line => line.length >= 8 && !/^(D-|마감일자|등록일자|시작일자|조회|공공|민간)/.test(line))
+          || rawText.slice(0, 80);
         byId.set(row.id, {
           source: "K-Startup",
           title,
           url: `${K_STARTUP_LIST}?schM=view&pbancSn=${row.id}`,
           rawText,
         });
-        added += 1;
+        if (fresh) added += 1;
       }
       // Each page repeats a fixed slider; a page that adds nothing is past the end.
       if (!added) { stoppedBy = "empty"; break; }

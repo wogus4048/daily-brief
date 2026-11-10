@@ -29,6 +29,7 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+import code_cards
 import gpt_jobs
 from assemble_brief import assemble
 from free_explore import POLL_SECONDS, WAIT_SECONDS, ExploreFailed, TitanClient, earlier_decisions, run_explore, run_verify
@@ -462,8 +463,11 @@ def preflight(log, wait_seconds=BROWSER_WAIT_SECONDS):
     raise StepFailed("Titan browser bridge did not come up")
 
 
-def run_research(root, today, client_factory=TitanClient, wait_seconds=WAIT_SECONDS, poll_seconds=POLL_SECONDS):
-    """GPT find and check, then assemble. Each stage's result is saved as it ends."""
+def run_research(root, today, use_gpt=False, client_factory=TitanClient, wait_seconds=WAIT_SECONDS, poll_seconds=POLL_SECONDS):
+    """Cards from crawled fields by code, then assemble (user 2026-11-10: "코드로바꿔").
+
+    use_gpt runs the older GPT find and card writing instead; each stage's result is saved as it ends.
+    """
     result = {"status": "FAILED"}
     log = RunLog(root, today, "research")
     log_environment(log, root, {})
@@ -474,10 +478,15 @@ def run_research(root, today, client_factory=TitanClient, wait_seconds=WAIT_SECO
         state_path.write_text(json.dumps(state, ensure_ascii=False, indent=1) + chr(10), encoding="utf-8")
 
     try:
-        with log.stage("preflight"):
-            preflight(log)
-        client = client_factory()
-        result["workers"] = gpt_jobs.worker_limit(client)
+        client = None
+        if use_gpt:
+            with log.stage("preflight"):
+                preflight(log)
+            client = client_factory()
+            result["workers"] = gpt_jobs.worker_limit(client)
+        else:
+            state.setdefault("find", {"rows": [], "jobs": [{"name": "find", "status": "SKIPPED",
+                                                             "reason": "매일 실행은 코드만 쓴다(사용자 결정 2026-11-10)"}]})
         if "find" not in state:
             with log.stage("find"):
                 state["find"] = gpt_jobs.run_find(root, today, client, log, wait_seconds, poll_seconds)
@@ -492,7 +501,10 @@ def run_research(root, today, client_factory=TitanClient, wait_seconds=WAIT_SECO
             save()
         if "check" not in state:
             with log.stage("check"):
-                state["check"] = gpt_jobs.run_check(root, today, state["candidates"], client, log, wait_seconds, poll_seconds)
+                if use_gpt:
+                    state["check"] = gpt_jobs.run_check(root, today, state["candidates"], client, log, wait_seconds, poll_seconds)
+                else:
+                    state["check"] = {"answers": code_cards.answers(state["candidates"], today), "batches": []}
                 save()
         # Existing items are no longer re-checked; passed deadlines close by date at publish.
         state["reverify"] = {"skipped": "재확인 생략(사용자 결정 2026-11-09 \"둘 다 빼기\")"}
@@ -517,7 +529,7 @@ def main():
     commands.add_parser("explore")
     commands.add_parser("verify")
     commands.add_parser("publish").add_argument("--no-push", action="store_true", help="stop after the checks")
-    commands.add_parser("research")
+    commands.add_parser("research").add_argument("--gpt", action="store_true", help="GPT find and card writing")
     commands.add_parser("all")
     args = parser.parse_args()
     today = datetime.now(SEOUL).date().isoformat()
@@ -530,7 +542,7 @@ def main():
     if args.command == "verify":
         return run_verify_step(ROOT, today)
     if args.command == "research":
-        return run_research(ROOT, today)
+        return run_research(ROOT, today, use_gpt=args.gpt)
     if args.command == "all":
         for step in (lambda: run_prepare(ROOT, today), lambda: run_research(ROOT, today), lambda: run_publish(ROOT, today)):
             if step():
