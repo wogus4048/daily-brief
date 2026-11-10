@@ -254,9 +254,11 @@ def find_jobs(root, today):
     ]
 
 
-def run_find(root, today, client, log, wait_seconds, poll_seconds):
+def run_find(root, today, client, log, wait_seconds, poll_seconds, only=None):
     out = {"jobs": [], "rows": []}
     for name, work in find_jobs(root, today):
+        if only and name not in only:
+            continue
         path = root / f"artifacts/daily/{today}-{name}.md"
         job = {"name": name, "status": "FAILED"}
         started = time.monotonic()

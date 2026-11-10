@@ -484,9 +484,19 @@ def run_research(root, today, use_gpt=False, client_factory=TitanClient, wait_se
                 preflight(log)
             client = client_factory()
             result["workers"] = gpt_jobs.worker_limit(client)
-        else:
-            state.setdefault("find", {"rows": [], "jobs": [{"name": "find", "status": "SKIPPED",
-                                                             "reason": "매일 실행은 코드만 쓴다(사용자 결정 2026-11-10)"}]})
+        elif "find" not in state:
+            # GPT free exploration runs with every daily crawl (user 2026-11-10: "매일 크롤러 돌때 같이").
+            # Its leads become code cards and its listing pages become crawler candidates; if GPT
+            # cannot run, the brief is still published from the crawl.
+            with log.stage("free_explore"):
+                try:
+                    preflight(log)
+                    state["find"] = gpt_jobs.run_find(root, today, client_factory(), log, wait_seconds, poll_seconds,
+                                                      only={"find-free"})
+                except (StepFailed, ExploreFailed) as error:
+                    log.event("free_explore_failed", reason=str(error))
+                    state["find"] = {"rows": [], "jobs": [{"name": "find-free", "status": "FAILED", "reason": str(error)}]}
+                save()
         if "find" not in state:
             with log.stage("find"):
                 state["find"] = gpt_jobs.run_find(root, today, client, log, wait_seconds, poll_seconds)

@@ -94,6 +94,11 @@ def fields(row, today):
         out["period"] = f"{found[0]} ~ {found[1]}" if len(found) > 1 else None
         out["host"] = between(raw, "【", "】")
         out["title"] = re.sub(r"^\[.*?\]\s*【.*?】\s*", "", row["title"]).strip()
+    elif source.startswith("gpt-"):
+        # Free-exploration leads arrive with GPT's host and deadline (gpt_jobs FIND_PROMPT candidate line).
+        found = dates_in(str(detail.get("deadline") or ""))
+        out.update(host=detail.get("host"), deadline=found[-1] if found else None,
+                   homepage=row["url"] if official(row["url"]) else None)
     elif source == "dakerHackathons":
         out["deadline"] = d_day(raw, today)
         out["prize"] = between(raw, "총 상금", " ")
@@ -117,7 +122,7 @@ def category_label(support, title):
 
 
 def card_for(row, f, today):
-    support = row["source"] in SUPPORT_SOURCES
+    support = row["source"] in SUPPORT_SOURCES or row.get("track") == "startupSupport"
     deadline = [f["deadline"]] if f["deadline"] else "확인 필요"
     deadline_text = f["deadline"] or "확인 필요"
     host = f["host"] or "확인 필요"
@@ -153,6 +158,8 @@ def card_for(row, f, today):
 
 
 def track_for(row, f):
+    if row.get("track") in ("aiData", "generalSoftware", "publicIdea", "startupSupport", "upcomingOpenings"):
+        return row["track"]
     if row["source"] in SUPPORT_SOURCES:
         return "startupSupport"
     if DEV_AI.search(f["title"]):
@@ -165,7 +172,7 @@ def answers(candidates, today_text):
     today = date.fromisoformat(today_text)
     out = {}
     for position, row in enumerate(candidates):
-        if row["source"] in SKIP_SOURCES or row["source"].startswith("gpt-"):
+        if row["source"] in SKIP_SOURCES:
             out[str(position)] = {"disposition": "NOT_RELEVANT", "reason": "코드 카드 대상이 아닌 출처"}
             continue
         f = fields(row, today)

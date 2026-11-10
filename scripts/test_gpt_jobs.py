@@ -189,6 +189,17 @@ class CodeCardTest(unittest.TestCase):
         self.assertEqual(got["2"]["card"]["deadline"], ["2026-11-10"])
         self.assertEqual(got["2"]["track"], "aiData")
 
+    def test_free_exploration_leads_become_cards(self):
+        # User 2026-11-10: free exploration runs with every daily crawl; its leads are published too.
+        import code_cards
+        lead = {"source": "gpt-find-free", "track": "startupSupport", "title": "충북 4분기 청년 소상공인 창업응원금",
+                "url": "https://www.cbtp.or.kr/notice/1",
+                "details": {"host": "충북기업진흥원", "deadline": "2026-12-18", "via": "검색"}}
+        card = code_cards.answers([lead], "2026-11-10")["0"]["card"]
+        self.assertEqual((card["deadline"], card["categoryLabel"]), (["2026-12-18"], "창업 · 지원사업"))
+        self.assertIn("충북기업진흥원", card["summary"])
+        self.assertEqual(card["links"][0]["url"], "https://www.cbtp.or.kr/notice/1")
+
 
 class AssembleTest(unittest.TestCase):
     def build(self, root, with_records=True):
