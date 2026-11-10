@@ -682,7 +682,8 @@ function topicDefs(type) {
     ["security","보안"],
     ["fintech","핀테크"],
     ["public-data","공공데이터"],
-    ["startup-product","스타트업 · 프로덕트"]
+    ["startup-product","스타트업 · 프로덕트"],
+    ["idea","아이디어"]
   ];
 }
 
