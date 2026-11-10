@@ -181,24 +181,6 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
-      "key": "agentscouthq-com",
-      "name": "agentscouthq.com",
-      "url": "https://agentscouthq.com/",
-      "reason": "Auto-discovered from recurring/relevant daily research candidates",
-      "category": "aiDiscovery",
-      "sourceTracks": [
-        "aiDiscovery"
-      ],
-      "status": "NEEDS_SPEC",
-      "discoveredAt": "2026-11-09",
-      "autoDiscovered": true,
-      "evidenceUrls": [
-        "https://agentscouthq.com/new.html"
-      ],
-      "score": 25,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
-    },
-    {
       "key": "ai-challenge-elice-page",
       "name": "ai-challenge.elice.page",
       "url": "https://ai-challenge.elice.page/",
@@ -289,24 +271,6 @@
         "https://amazonappdev2026.devpost.com/"
       ],
       "score": 14,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
-    },
-    {
-      "key": "anthropic-com",
-      "name": "anthropic.com",
-      "url": "https://anthropic.com/",
-      "reason": "Auto-discovered from recurring/relevant daily research candidates",
-      "category": "aiNews",
-      "sourceTracks": [
-        "aiNews"
-      ],
-      "status": "NEEDS_SPEC",
-      "discoveredAt": "2026-11-09",
-      "autoDiscovered": true,
-      "evidenceUrls": [
-        "https://www.anthropic.com/research/components-of-agent-memory"
-      ],
-      "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -533,24 +497,6 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
-      "key": "cockroachlabs-com",
-      "name": "cockroachlabs.com",
-      "url": "https://cockroachlabs.com/",
-      "reason": "Auto-discovered from recurring/relevant daily research candidates",
-      "category": "aiNews",
-      "sourceTracks": [
-        "aiNews"
-      ],
-      "status": "NEEDS_SPEC",
-      "discoveredAt": "2026-10-11",
-      "autoDiscovered": true,
-      "evidenceUrls": [
-        "https://www.cockroachlabs.com/blog/experiment-running-hospital-code/"
-      ],
-      "score": 25,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
-    },
-    {
       "key": "commonz042-kr",
       "name": "commonz042.kr",
       "url": "https://commonz042.kr/",
@@ -590,24 +536,6 @@
         "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610290007"
       ],
       "score": 48,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
-    },
-    {
-      "key": "cookiesforai-app",
-      "name": "cookiesforai.app",
-      "url": "https://cookiesforai.app/",
-      "reason": "Auto-discovered from recurring/relevant daily research candidates",
-      "category": "aiDiscovery",
-      "sourceTracks": [
-        "aiDiscovery"
-      ],
-      "status": "NEEDS_SPEC",
-      "discoveredAt": "2026-10-07",
-      "autoDiscovered": true,
-      "evidenceUrls": [
-        "https://cookiesforai.app/"
-      ],
-      "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -794,24 +722,6 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
-      "key": "epoch-ai",
-      "name": "epoch.ai",
-      "url": "https://epoch.ai/",
-      "reason": "Auto-discovered from recurring/relevant daily research candidates",
-      "category": "aiNews",
-      "sourceTracks": [
-        "aiNews"
-      ],
-      "status": "NEEDS_SPEC",
-      "discoveredAt": "2026-10-11",
-      "autoDiscovered": true,
-      "evidenceUrls": [
-        "https://epoch.ai/publications/innovationeval"
-      ],
-      "score": 25,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
-    },
-    {
       "key": "eventus",
       "name": "이벤터스",
       "reason": "JS-heavy searchable event catalog; exact public search API/URL filtering needs inspection",
@@ -833,24 +743,6 @@
       "autoDiscovered": true,
       "evidenceUrls": [
         "https://www.forest.go.kr/kfsweb/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_1855&mn=NKFS_06_08_07&nttId=3225569"
-      ],
-      "score": 25,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
-    },
-    {
-      "key": "frontier-replit-com",
-      "name": "frontier.replit.com",
-      "url": "https://frontier.replit.com/",
-      "reason": "Auto-discovered from recurring/relevant daily research candidates",
-      "category": "aiNews",
-      "sourceTracks": [
-        "aiNews"
-      ],
-      "status": "NEEDS_SPEC",
-      "discoveredAt": "2026-11-09",
-      "autoDiscovered": true,
-      "evidenceUrls": [
-        "https://frontier.replit.com/sandbox-engine-microvms-part-1/"
       ],
       "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
@@ -923,60 +815,6 @@
       ],
       "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
-    },
-    {
-      "key": "geekNewsCommunity",
-      "name": "GeekNews",
-      "url": "https://news.hada.io/",
-      "category": "aiNews",
-      "sourceTracks": [
-        "aiNews"
-      ],
-      "status": "WATCH_ONLY",
-      "reason": "Browser collection returned HTTP 403 on 2026-10-08. Use accessible editorial discovery; do not bypass access controls.",
-      "recommendation": "WATCH_ONLY",
-      "score": 0
-    },
-    {
-      "key": "github-com",
-      "name": "github.com",
-      "url": "https://github.com/",
-      "reason": "Auto-discovered from recurring/relevant daily research candidates",
-      "category": "aiDiscovery",
-      "sourceTracks": [
-        "aiDiscovery"
-      ],
-      "status": "NEEDS_SPEC",
-      "discoveredAt": "2026-10-07",
-      "autoDiscovered": true,
-      "evidenceUrls": [
-        "https://github.com/Autumn-27/ARTEX",
-        "https://github.com/binibinibin123/geullint",
-        "https://github.com/evergreentree97/K-Humanizer",
-        "https://github.com/obra/superpowers"
-      ],
-      "score": 46,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
-    },
-    {
-      "key": "githubTrending",
-      "name": "GitHub daily trending",
-      "url": "https://github.com/trending?since=daily",
-      "category": "aiDiscovery",
-      "sourceTracks": [
-        "aiDiscovery",
-        "aiNews"
-      ],
-      "reason": "Public daily trending list; repository links, description, observed rank and visible stars/forks. AI relevance requires editorial review.",
-      "status": "SHADOW",
-      "discoveredAt": "2026-10-08",
-      "crawlerSpec": {
-        "adapter": "githubTrending",
-        "url": "https://github.com/trending?since=daily",
-        "limit": 30
-      },
-      "recommendation": "CONTINUE_SHADOW",
-      "score": 30
     },
     {
       "key": "gitlab-transcend-devpost-com",
@@ -1110,25 +948,6 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
-      "key": "hackerNewsTop",
-      "name": "Hacker News top stories",
-      "url": "https://news.ycombinator.com/",
-      "category": "aiNews",
-      "sourceTracks": [
-        "aiNews"
-      ],
-      "reason": "Official public API; preserves discussion URL, original URL, score, comments, publication time and observed rank.",
-      "status": "SHADOW",
-      "discoveredAt": "2026-10-08",
-      "crawlerSpec": {
-        "adapter": "hackerNewsTop",
-        "url": "https://news.ycombinator.com/",
-        "limit": 30
-      },
-      "recommendation": "CONTINUE_SHADOW",
-      "score": 78
-    },
-    {
       "key": "hackon-kr",
       "name": "HACK:ON 해커톤 모집 목록",
       "url": "https://hackon.kr/hackathons",
@@ -1210,45 +1029,6 @@
       ],
       "score": 33,
       "recommendation": "NEEDS_CRAWLER_SPEC"
-    },
-    {
-      "key": "huggingFaceModels",
-      "name": "Hugging Face trending models",
-      "url": "https://huggingface.co/models?sort=trending",
-      "category": "aiDiscovery",
-      "sourceTracks": [
-        "aiDiscovery",
-        "aiNews"
-      ],
-      "reason": "Public trending model inventory; original repository links and observed placement. No popularity growth inferred from one sample.",
-      "status": "SHADOW",
-      "discoveredAt": "2026-10-08",
-      "crawlerSpec": {
-        "adapter": "huggingFaceModels",
-        "url": "https://huggingface.co/models?sort=trending",
-        "limit": 30
-      },
-      "recommendation": "CONTINUE_SHADOW",
-      "score": 72
-    },
-    {
-      "key": "huggingFaceSpaces",
-      "name": "Hugging Face trending Spaces",
-      "url": "https://huggingface.co/spaces?sort=trending",
-      "category": "aiDiscovery",
-      "sourceTracks": [
-        "aiDiscovery"
-      ],
-      "reason": "Public trending demo/app inventory across creative and productivity tasks; each app needs usefulness/access verification.",
-      "status": "SHADOW",
-      "discoveredAt": "2026-10-08",
-      "crawlerSpec": {
-        "adapter": "huggingFaceSpaces",
-        "url": "https://huggingface.co/spaces?sort=trending",
-        "limit": 30
-      },
-      "recommendation": "CONTINUE_SHADOW",
-      "score": 30
     },
     {
       "key": "incheon-go-kr",
@@ -1709,24 +1489,6 @@
       "recommendation": "WATCH_ONLY"
     },
     {
-      "key": "manycp-com",
-      "name": "manycp.com",
-      "url": "https://manycp.com/",
-      "reason": "Auto-discovered from recurring/relevant daily research candidates",
-      "category": "aiDiscovery",
-      "sourceTracks": [
-        "aiDiscovery"
-      ],
-      "status": "NEEDS_SPEC",
-      "discoveredAt": "2026-10-11",
-      "autoDiscovered": true,
-      "evidenceUrls": [
-        "https://manycp.com/guides/mcp-server-directories"
-      ],
-      "score": 25,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
-    },
-    {
       "key": "mcee-go-kr",
       "name": "mcee.go.kr",
       "url": "https://mcee.go.kr/",
@@ -1740,24 +1502,6 @@
       "autoDiscovered": true,
       "evidenceUrls": [
         "https://www.mcee.go.kr/home/web/board/read.do?boardId=1874010&boardMasterId=713&menuId=10392"
-      ],
-      "score": 25,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
-    },
-    {
-      "key": "mcp-explained-com",
-      "name": "mcp-explained.com",
-      "url": "https://mcp-explained.com/",
-      "reason": "Auto-discovered from recurring/relevant daily research candidates",
-      "category": "aiDiscovery",
-      "sourceTracks": [
-        "aiDiscovery"
-      ],
-      "status": "NEEDS_SPEC",
-      "discoveredAt": "2026-11-06",
-      "autoDiscovered": true,
-      "evidenceUrls": [
-        "https://mcp-explained.com/"
       ],
       "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
@@ -1855,24 +1599,6 @@
         "https://www.mois.go.kr/frt/bbs/type013/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000006&nttId=129458"
       ],
       "score": 14,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
-    },
-    {
-      "key": "mosaiclab-net",
-      "name": "mosaiclab.net",
-      "url": "https://mosaiclab.net/",
-      "reason": "Auto-discovered from recurring/relevant daily research candidates",
-      "category": "aiDiscovery",
-      "sourceTracks": [
-        "aiDiscovery"
-      ],
-      "status": "NEEDS_SPEC",
-      "discoveredAt": "2026-10-07",
-      "autoDiscovered": true,
-      "evidenceUrls": [
-        "https://mosaiclab.net/"
-      ],
-      "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
@@ -1977,24 +1703,6 @@
       "score": 0,
       "recommendation": "NEEDS_CRAWLER_SPEC",
       "category": "startupSupport"
-    },
-    {
-      "key": "nishtahir-com",
-      "name": "nishtahir.com",
-      "url": "https://nishtahir.com/",
-      "reason": "Auto-discovered from recurring/relevant daily research candidates",
-      "category": "aiNews",
-      "sourceTracks": [
-        "aiNews"
-      ],
-      "status": "NEEDS_SPEC",
-      "discoveredAt": "2026-10-11",
-      "autoDiscovered": true,
-      "evidenceUrls": [
-        "https://nishtahir.com/build-your-own-decision-model/"
-      ],
-      "score": 25,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {
       "key": "nowon-kr",
@@ -2105,61 +1813,6 @@
       "autoDiscovered": true,
       "evidenceUrls": [
         "http://project.seoul.go.kr/view/viewDetailCptt.do"
-      ],
-      "score": 25,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
-    },
-    {
-      "key": "prompt-motion-com",
-      "name": "prompt-motion.com",
-      "url": "https://prompt-motion.com/",
-      "reason": "Auto-discovered from recurring/relevant daily research candidates",
-      "category": "aiDiscovery",
-      "sourceTracks": [
-        "aiDiscovery"
-      ],
-      "status": "NEEDS_SPEC",
-      "discoveredAt": "2026-10-07",
-      "autoDiscovered": true,
-      "evidenceUrls": [
-        "https://www.prompt-motion.com/"
-      ],
-      "score": 25,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
-    },
-    {
-      "key": "rea-tools",
-      "name": "rea.tools",
-      "url": "https://rea.tools/",
-      "reason": "Auto-discovered from recurring/relevant daily research candidates",
-      "category": "aiNews",
-      "sourceTracks": [
-        "aiDiscovery",
-        "aiNews"
-      ],
-      "status": "NEEDS_SPEC",
-      "discoveredAt": "2026-10-11",
-      "autoDiscovered": true,
-      "evidenceUrls": [
-        "https://rea.tools/"
-      ],
-      "score": 42,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
-    },
-    {
-      "key": "remotion-dev",
-      "name": "remotion.dev",
-      "url": "https://remotion.dev/",
-      "reason": "Auto-discovered from recurring/relevant daily research candidates",
-      "category": "aiDiscovery",
-      "sourceTracks": [
-        "aiDiscovery"
-      ],
-      "status": "NEEDS_SPEC",
-      "discoveredAt": "2026-10-07",
-      "autoDiscovered": true,
-      "evidenceUrls": [
-        "https://www.remotion.dev/prompts"
       ],
       "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
@@ -2450,24 +2103,6 @@
       "status": "NEEDS_SPEC",
       "discoveredAt": "2026-11-06",
       "score": 8,
-      "recommendation": "NEEDS_CRAWLER_SPEC"
-    },
-    {
-      "key": "toollist-ai",
-      "name": "toollist.ai",
-      "url": "https://toollist.ai/",
-      "reason": "Auto-discovered from recurring/relevant daily research candidates",
-      "category": "aiDiscovery",
-      "sourceTracks": [
-        "aiDiscovery"
-      ],
-      "status": "NEEDS_SPEC",
-      "discoveredAt": "2026-11-09",
-      "autoDiscovered": true,
-      "evidenceUrls": [
-        "https://toollist.ai/"
-      ],
-      "score": 25,
       "recommendation": "NEEDS_CRAWLER_SPEC"
     },
     {

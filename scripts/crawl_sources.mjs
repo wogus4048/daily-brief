@@ -3,7 +3,6 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { hasUsableCache } from "./pipeline_health.mjs";
-import { crawlDiscoverySource } from "./discovery_sources.mjs";
 import { ACTIONABLE } from "./actionability.mjs";
 
 const SEOUL_TZ = "Asia/Seoul";
@@ -613,7 +612,6 @@ export async function crawlLinkareer(page) {
 }
 
 export async function crawlGeneric(page, key, name, spec) {
-  if (spec.adapter) return crawlDiscoverySource(page, key, name, spec);
   // Some sites refuse the default HeadlessChrome name; send an honest crawler name instead.
   if (spec.userAgent) await page.setExtraHTTPHeaders({ "User-Agent": spec.userAgent });
   const url = spec.url || spec.pagination?.urls?.[0];

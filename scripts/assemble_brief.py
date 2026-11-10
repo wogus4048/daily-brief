@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build today's latest.json, dated archive and research audit from the GPT stage results.
 
-Input: artifacts/daily/DATE-gpt.json written by daily_run.py (find, news, candidates, check,
+Input: artifacts/daily/DATE-gpt.json written by daily_run.py (find, candidates, check,
 reverify). Facts come only from GPT answers and the crawl; a record GPT did not return is
 written as FAILED with its reason, never filled in (design 2026-11-09, user decision 2).
 """
@@ -20,12 +20,6 @@ DISPOSITIONS = {"PUBLISHED", "EXISTING", "DUPLICATE", "INELIGIBLE", "CLOSED", "N
 # A RETRY reason marks a lead nobody could judge today; free_explore.earlier_decisions skips it.
 RETRY = "RETRY: "
 CHANGE_FIELDS = {"status", "deadline", "deadlineText", "period", "participation", "reward", "openingAt"}
-DISCOVERY_ENUMS = {
-    "discoveryType": {"site", "github", "skill", "mcp", "agent", "workflow", "directory", "discussion", "platform"},
-    "awareness": {"WELL_KNOWN", "SPECIALIZED", "EARLY"},
-    "trend": {"HOT", "RISING", "STEADY", "RESURFACED"},
-    "newsState": {"NEW_RELEASE", "NEWLY_DISCOVERED", "UPDATED", "BASELINE"},
-}
 
 
 class AssembleFailed(Exception):
@@ -73,26 +67,6 @@ def opportunity_card(raw, candidate, official, today, taken):
     return group, card
 
 
-def news_card(raw, kind, today, taken):
-    if not isinstance(raw, dict) or not raw.get("title") or not raw.get("summary"):
-        raise ValueError("카드에 title·summary가 없음")
-    links = [l for l in raw.get("links") or [] if isinstance(l, dict) and valid_url(l.get("url"))]
-    if not links:
-        raise ValueError("확인 링크가 없음")
-    evidence = {k: raw.get(k) for k in ("communityEvidence", "verificationUrls", "verificationNote") if raw.get(k)}
-    card = {k: v for k, v in raw.items() if k not in evidence}
-    card.update(id=slug(raw.get("id") or raw["title"], taken), links=links, firstSeenDate=today, lastUpdatedDate=today)
-    if kind == "aiNews":
-        card.setdefault("categoryLabel", "AI 뉴스")
-        card["updatedAgo"] = "오늘"
-        card["updates"] = [{"date": today, "label": "처음 발견", "text": card["summary"]}]
-    else:
-        for field, allowed in DISCOVERY_ENUMS.items():
-            if card.get(field) not in allowed:
-                raise ValueError(f"{field} 값이 허용 목록에 없음: {card.get(field)!r}")
-    return card, evidence
-
-
 def record(rows, kind, key_field, names, label):
     """fixedSources/districts: GPT's line for each name, or FAILED when it sent none."""
     got = {r.get(key_field): r for r in rows if r.get("kind") == kind}
@@ -131,14 +105,13 @@ def assemble(root, today):
     latest = json.loads((root / "data/latest.json").read_text(encoding="utf-8"))
     cache = json.loads((root / f"data/source-cache/{today}.json").read_text(encoding="utf-8"))
     find_rows = state.get("find", {}).get("rows", [])
-    news_rows = state.get("news", {}).get("rows", [])
     candidates = state.get("candidates", [])
     decided = state.get("decided", [])
     check = state.get("check", {}).get("answers", {})
     reverify = state.get("reverify", {})
     due = state.get("due", [])
     checked_at = reverify.get("checkedAt") or now_iso()
-    taken = {x["id"] for g in ("contests", "support", "aiNews", "aiDiscovery") for x in latest.get(g, [])}
+    taken = {x["id"] for g in ("contests", "support") for x in latest.get(g, [])}
     by_id = {x["id"]: x for g in ("contests", "support") for x in latest[g]}
 
     # 1. Re-verification of existing items.
@@ -219,29 +192,8 @@ def assemble(root, today):
                          "title": item.get("title") or item["url"], "url": item["url"]})
         (inventories if key in inventories else machine)[key] = rows
 
-    # 4. News.
-    news_cards = {"aiNews": [], "aiDiscovery": []}
-    for row in news_rows:
-        kind = row.get("kind")
-        if kind in ("aiNews", "aiDiscovery"):
-            try:
-                card, proof = news_card(row.get("card"), kind, today, taken)
-            except ValueError as error:
-                raw = row.get("card") if isinstance(row.get("card"), dict) else {}
-                track_entries[kind].append({"title": raw.get("title") or "제목 없음", "url": first_link(raw) or "https://news.ycombinator.com/",
-                                            "disposition": "NOT_RELEVANT", "reason": f"카드 형식 오류: {error}"})
-                continue
-            news_cards[kind].append(card)
-            track_entries[kind].append({"title": card["title"], "url": card["links"][0]["url"], "disposition": "PUBLISHED",
-                                        "id": card["id"], **proof, "observedAt": now_iso()})
-        elif kind == "candidate" and row.get("track") in ("aiNews", "aiDiscovery") and row.get("disposition") != "PUBLISHED":
-            if row.get("title") and valid_url(row.get("url")):
-                track_entries[row["track"]].append({"title": row["title"], "url": row["url"],
-                                                    "disposition": row.get("disposition") if row.get("disposition") in DISPOSITIONS else "NOT_RELEVANT",
-                                                    "reason": str(row.get("reason") or "고르지 않음")})
-
     # 5. Tracks.
-    all_rows = find_rows + news_rows
+    all_rows = find_rows
     tracks = {}
     for track, axes in TRACK_AXES.items():
         queries = {axis: [] for axis in axes}
@@ -276,15 +228,15 @@ def assemble(root, today):
     latest["generatedAt"] = stamp
     latest["contests"] = new_cards["contests"] + latest["contests"]
     latest["support"] = new_cards["support"] + latest["support"]
-    latest["aiNews"] = news_cards["aiNews"] + latest["aiNews"]
-    latest["aiDiscovery"] = news_cards["aiDiscovery"] + latest["aiDiscovery"]
+    # AI news and AI Discovery left the service on 2026-11-10 (user decision).
+    latest.pop("aiNews", None)
+    latest.pop("aiDiscovery", None)
     if today not in latest["archive"]:
         latest["archive"].insert(0, today)
     blob = (json.dumps(latest, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
     (root / "data/latest.json").write_bytes(blob)
     (root / f"data/archive/{today}.json").write_bytes(blob)
-    published = [c["id"] for g in ("contests", "support") for c in new_cards[g]] + \
-                [c["id"] for g in ("aiNews", "aiDiscovery") for c in news_cards[g]]
+    published = [c["id"] for g in ("contests", "support") for c in new_cards[g]]
     failed_parts = [f"{name}: {e['reason']}" for name, e in {**fixed, **districts}.items() if e["status"] == "FAILED"]
     failed_parts += [f"{t}: {v['failureReason']}" for t, v in tracks.items() if v["status"] == "FAILED"]
     audit = {
@@ -302,6 +254,5 @@ def assemble(root, today):
     (root / f"data/research/{today}.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return {"openContestsByCategory": open_by_category(latest),
             "newContests": len(new_cards["contests"]), "newSupport": len(new_cards["support"]),
-            "aiNews": len(news_cards["aiNews"]), "aiDiscovery": len(news_cards["aiDiscovery"]),
             "reverified": len(reverified), "reverifyFailed": len(failures), "failedRecords": failed_parts,
             "pendingOfficial": sum(1 for g in new_cards.values() for c in g if c.get("officialCheck"))}

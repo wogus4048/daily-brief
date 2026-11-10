@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="개발자와 빌더를 위해 AI, 오픈소스, 공모전, 창업·지원사업의 새 소식과 자료를 매일 골라 정리하는 공개 브리핑" />
+  <meta name="description" content="공모전·해커톤과 창업·지원사업의 새 공고와 마감 일정을 매일 정리하는 공개 브리핑" />
   <meta name="theme-color" content="#ffffff" />
   <title>daily-brief</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -18,14 +18,12 @@
       <header class="site-header">
         <div class="header-row">
           <a class="brand" href="#/" aria-label="Daily Brief 홈"><ion-icon name="albums-outline" aria-hidden="true"></ion-icon><strong>Daily Brief</strong></a>
-          <p class="brand-description">AI · 개발 정보</p>
+          <p class="brand-description">공모전 · 창업 지원</p>
           <div class="topbar-date"><span>자료 기준일</span><time id="topbarDate">불러오는 중</time></div>
           <button class="search-trigger" id="searchButton" type="button" aria-haspopup="dialog"><ion-icon name="search-outline" aria-hidden="true"></ion-icon><span>전체 검색</span><kbd>Ctrl K</kbd></button>
         </div>
         <nav class="main-nav" aria-label="주요 메뉴">
           <a class="nav-item active" href="#/" data-route="home"><ion-icon name="today-outline" aria-hidden="true"></ion-icon>오늘의 브리핑</a>
-          <a class="nav-item" href="#/ai-news" data-route="ai-news"><ion-icon name="newspaper-outline" aria-hidden="true"></ion-icon>AI 뉴스</a>
-          <a class="nav-item" href="#/ai-discovery" data-route="ai-discovery" data-discovery-filter="all"><ion-icon name="compass-outline" aria-hidden="true"></ion-icon>Discovery</a>
           <a class="nav-item" href="#/contests" data-route="contests"><ion-icon name="trophy-outline" aria-hidden="true"></ion-icon>공모전 · 해커톤</a>
           <a class="nav-item" href="#/support" data-route="support"><ion-icon name="briefcase-outline" aria-hidden="true"></ion-icon>창업 · 지원사업</a>
           <a class="nav-item archive-nav" href="#/archive" data-route="archive"><ion-icon name="time-outline" aria-hidden="true"></ion-icon>아카이브</a>
@@ -40,7 +38,7 @@
                 <div>
                   <p class="section-eyebrow briefing-date"><span class="edition-mark"></span><span id="homeDateLabel">—</span> 브리핑</p>
                   <h1>오늘의 브리핑</h1>
-                  <p class="page-intro">새 소식, 달라진 내용, 놓치면 안 되는 기회.</p>
+                  <p class="page-intro">새 공고, 달라진 내용, 놓치면 안 되는 마감.</p>
                   <p class="feed-sub">신규 <strong id="homeNewTotal">0</strong>개 <span class="meta-divider"></span> 전체 <span id="homeTotalCount">0</span>개</p>
                 </div>
               </header>
@@ -78,10 +76,6 @@
                 <ion-button id="resetCategoryFilters" mode="ios" fill="clear" size="small"><ion-icon name="refresh-outline" slot="start" aria-hidden="true"></ion-icon>필터 초기화</ion-button>
               </div>
               <ion-list class="category-list" id="categoryList" mode="ios" inset="true"></ion-list>
-            </section>
-
-            <section class="view discovery-view" id="discoveryView" hidden>
-              <div id="discoveryHub"></div>
             </section>
 
             <section class="view archive-view" id="archiveView" hidden>
@@ -127,7 +121,7 @@
       </main>
 
       <footer>
-        <span><strong>Daily Brief</strong> AI·개발 소식과 공모전·지원사업</span>
+        <span><strong>Daily Brief</strong> 공모전·해커톤과 창업·지원사업</span>
         <span>© <span id="year"></span></span>
       </footer>
     </div>
@@ -136,10 +130,10 @@
 
   <dialog id="searchDialog" class="search-dialog" aria-label="전체 브리핑 검색">
     <div class="search-head">
-      <ion-searchbar class="search-field" id="searchInput" mode="ios" placeholder="제목, 도구 이름, 기관명 검색" inputmode="search" autocomplete="off" show-clear-button="focus" show-cancel-button="never"></ion-searchbar>
+      <ion-searchbar class="search-field" id="searchInput" mode="ios" placeholder="제목, 기관명 검색" inputmode="search" autocomplete="off" show-clear-button="focus" show-cancel-button="never"></ion-searchbar>
       <ion-button class="search-close" id="searchClose" mode="ios" fill="clear" size="small" aria-label="닫기">닫기</ion-button>
     </div>
-    <div id="searchResults" class="search-results" aria-live="polite"><div class="search-guidance"><ion-icon name="search-outline" aria-hidden="true"></ion-icon><strong>찾으시는 정보를 검색하세요</strong><p>AI 뉴스, 개발 도구, 공모전, 지원사업을 검색할 수 있습니다.</p></div></div>
+    <div id="searchResults" class="search-results" aria-live="polite"><div class="search-guidance"><ion-icon name="search-outline" aria-hidden="true"></ion-icon><strong>찾으시는 정보를 검색하세요</strong><p>공모전, 해커톤, 창업·지원사업을 검색할 수 있습니다.</p></div></div>
   </dialog>
 
   <script>window.Ionic = {config: {mode: "ios"}};</script>

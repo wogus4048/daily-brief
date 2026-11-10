@@ -1,78 +1,38 @@
 # Daily Brief 일일 실행 절차
 
-09:00 예약 실행이 처음부터 끝까지 따르는 순서다. 이 파일은 끝까지 전부 읽는다. 세부 규칙은 각 단계에 적힌 `AUTOMATION.md`의 절을 그 단계를 시작할 때 찾아서 그 절 전체를 읽는다. `AUTOMATION.md`를 앞뒤만 추려 읽고 끝난 것으로 보지 않는다.
+2026-11-10 기준이다. 서비스는 "공모전 · 해커톤"과 "창업 · 지원사업" 두 분야만 다룬다. 설계는 `docs/superpowers/specs/2026-11-09-gpt-research-design.md`이다.
 
-## 계속 진행 원칙
+## 실행
 
-캐시 확인은 1단계일 뿐이다. 아래 "중단 조건"이 실제로 발생하지 않았다면 9단계 발행 확인까지 실제 도구 호출로 진행한다. 검색·열람·작성·검증을 하지 않은 채 "미완료"로 보고하고 끝내지 않는다.
+실행 폴더 `D:\Dev\daily-brief-runner`에서 한 번에 돌린다. 한 시간 가까이 걸릴 수 있으므로 백그라운드로 돌리고 완료 알림을 기다린다.
 
-중단 조건은 다음뿐이다.
-- 필수 크롤러 캐시가 10분 대기 후에도 없거나 필수 출처가 실패했다.
-- 도구 오류로 작업을 계속할 수 없고, 재시도해도 같은 오류가 난다.
-- GitHub 쓰기가 도구 안전 검사에서 거부됐다.
-- 검증 스크립트가 실패했는데, 실제로 수행한 조사만으로는 정직하게 고칠 수 없다.
-- 실행 시간·도구 호출·컨텍스트 한도에 실제로 도달했다.
+```
+python scripts/daily_run.py all
+```
 
-중단하면 다음을 보고한다. 마지막으로 완료한 단계 번호, 단계별 처리 건수(예: 재검증 18/42), 중단 원인이 된 도구 호출과 오류·거부 문구 원문, 복구 묶음이 있으면 위치와 해시.
+`all`은 아래 순서로 돈다. 어느 단계든 실패하면 거기서 멈추고, 그 이유를 `artifacts/daily/날짜.json`에 남긴다.
 
-## 1. 입력 읽기와 캐시 확인
-- current main의 `data/latest.json`, `data/crawler-sources.json`, 가능하면 `data/crawler-source-state.json`을 읽는다.
-- `data/source-cache/YYYY-MM-DD.json`을 확인한다. 날짜가 오늘이고 `crawler.engine == playwright-chromium`이며 필수 출처가 `OK`이면 바로 2단계로 간다. 크롤러는 다시 실행하지 않는다.
-- 캐시가 없거나 필수 출처가 `FAILED`일 때만 `AUTOMATION.md` → "Source crawler preflight"를 따른다. 그동안 4단계 웹 조사는 먼저 진행할 수 있다.
-- 비필수 출처가 `FAILED`이면 `sourceGaps`에 기록하고 계속 진행한다. 비필수 출처 실패는 중단 사유가 아니다.
+1. **prepare (프로그램):** 최신 main을 받고 크롤러를 돌린다. 크롤러는 콘테스트코리아, 위비티, K-Startup 진행 중 목록 전체, 링커리어, 캠퍼스픽, AI팩토리, 그랜틀리, 소통24, 해커톤코리아, DACON, DAKER를 읽는다. 콘테스트코리아와 위비티는 상세 페이지까지 읽는다.
+2. **research (GPT worker와 프로그램):**
+   - 시작 점검: Titan 앱과 이 프로젝트 전용 크롬(`D:\daily-brief-ops\chrome-titan`)이 꺼져 있으면 켠다.
+   - 찾기: 짧은 GPT 채팅 6개를 차례로 연다. 개발·AI, 아이디어, 창업 지원, 고정 출처·구청, 정기 대회(`data/annual-contests.json`), 자유 탐색이다. 동시에 일하는 worker는 2개다.
+   - 후보 고르기: 프로그램이 이미 있는 공고와 최근 14일 안에 처분한 공고를 뺀다.
+   - 카드 쓰기: GPT가 크롤러와 찾기 결과만 보고 올릴지 정하고 카드를 쓴다. 공고 페이지는 열지 않는다. 보이지 않는 칸은 "확인 필요"라고 적는다.
+   - 조립: 프로그램이 `data/latest.json`, 그날 보관본, 조사 기록을 쓴다. GPT가 빠뜨린 기록은 "실패, 사유"로 남긴다.
+3. **publish (프로그램):** 마감이 지난 공고를 날짜로 닫는다. 검사기를 돌리고 main에 올린 뒤, 공개 사이트 파일이 올린 파일과 같은지 확인한다.
 
-## 2. 작업 목록 만들기
-- 셸이 있으면 `python3 scripts/research_worklist.py --date YYYY-MM-DD --json`을 실행한다. 셸이 없으면 같은 목록을 main과 캐시에서 직접 계산한다. 계산 기준은 `AUTOMATION.md` → "Daily research checklist" §1.
-- 이 목록은 할 일 목록일 뿐 확인 증거가 아니다. 목록의 항목을 확인한 것으로 기록하지 않는다.
-- 이후 단계의 완료 기준은 이 목록의 재검증 대상 수와 actionable URL 수다.
+## 결과 보고
 
-## 3. 기존 공고 재검증
-- 참조: "Daily research checklist" §1.
-- 재검증 대상마다 공식 페이지를 실제로 열어 상태·마감·자격·혜택을 확인한다. `lastVerifiedDate`를 오늘로 하고 id를 `reverifiedIds`에 넣는다. 확인하지 못한 항목은 `reverificationFailures`에 사유와 함께 남긴다.
-- 완료 기준: 재검증 대상 전부가 `reverifiedIds` 또는 `reverificationFailures`에 있다.
+`artifacts/daily/날짜.json`과 `날짜.log.jsonl`을 읽고 다음을 보고한다.
+- 단계별 걸린 시간
+- 새로 올린 공고 수
+- 분야별 접수 중 건수(`openContestsByCategory`: 개발·AI, 아이디어, 기타)
+- 실패한 기록과 그 사유
 
-## 4. 독립 검색 트랙
-- 참조: "Discovery", "Daily research checklist" §2·§4, "AI news", "AI Discovery / Source Radar".
-- 트랙: `aiData`(후보 10개 이상), `generalSoftware`(15개 이상), `publicIdea`(10개 이상), `startupSupport`(15개 이상), `upcomingOpenings`, `aiNews`, `aiDiscovery`.
-- 검색 축마다 서로 다른 검색어를 2개 이상 실행한다. 각 트랙에는 한국어 검색어와 영어 등 비한국어 검색어를 함께 넣는다(`aiNews`, `aiDiscovery` 외 공모전·지원사업 트랙은 한국어만). 10-14부터 검증 스크립트가 이 기준을 확인한다.
-- `aiNews`는 날짜를 넣은 검색으로 시작하지 않는다. 오늘자 캐시의 `shadowSources.hackerNewsTop` 목록 전부를 먼저 훑고, GeekNews 첫 화면을 직접 연다. 그다음 다른 축으로 원문을 확인한다.
-- 네이밍·슬로건·표어·캐릭터, 문학(백일장·신춘문예·수기), 영상·사진, 미술·디자인·웹툰 공모전은 수집하지 않는다.
-- `artifacts/daily/YYYY-MM-DD-carried.json`은 최근 14일 안에 이미 판단한 공고다. 다시 열지 않고 그 처분을 오늘 조사 기록에 옮겨 적는다.
-- `artifacts/daily/YYYY-MM-DD-explore.md`의 자유 탐색 답변은 후보로 넣어 공식 페이지로 확인하고, 새 목록 페이지는 `sourceDiscoveries`에 `key`와 `crawlerSpec`까지 적는다.
-- 후보 수를 채우지 못하면 소진 사유를 기록하고 넘어가는 것이 기본 경로다. 후보를 억지로 채우지 않는다. `aiNews`는 `officialProduct`, `githubReleases`, `huggingFace`, `researchLabs`, `communities` 축의 실제 검색어를 모두 기록한다.
-- 한 트랙에서 후보가 많이 나와도 다른 트랙은 생략하지 않는다.
-- 검색 결과 페이지는 열렸는데 추출된 결과가 0건이면 "후보 없음"으로 처리하지 않는다. 다른 검색 도구, 검색어 변형, 해당 사이트의 자체 검색으로 다시 시도한다. 그래도 결과를 얻지 못하면 그 검색어를 `sourceGaps`에 추출 실패로 기록한다.
-- 완료 기준: 모든 트랙에 실제 검색어, 후보 제목·URL, 처분(`PUBLISHED`/`EXISTING`/`DUPLICATE`/`INELIGIBLE`/`CLOSED`/`NOT_RELEVANT`)이 있다.
+데이터를 손으로 고치지 않는다. 실패하면 원인을 `docs/system/findings.md`에 적는다.
 
-## 5. 고정 출처, 크롤러 목록, 지역 점검
-- 참조: "Structured source enumeration", "Daily research checklist" §3, "Mandatory Seoul northeast district-source track".
-- 성공한 active 크롤러의 `actionableItems[]` 전부를 `machineSources.<key>[]`에 `title`·`url`·`disposition`으로 기록한다.
-- DACON·DAKER의 `actionableItems[]` 전부를 `fixedSources.DACON.competitionsInventory[]`·`dakerInventory[]`에 기록한다. 하나라도 빠지면 발행이 막힌다.
-- 고정 출처 묶음마다 확인한 URL 또는 구체적인 실패 사유를 남긴다.
-- 노원·도봉·강북은 각각 공식 페이지를 확인하고 결과를 `districts`에 기록한다.
-- 성공한 `shadowSources`는 추가 후보로 검토하고, 쓸모가 있었으면 `sourceDiscoveries`에 기록한다.
+## 하지 않는 것 (사용자 결정 2026-11-09, 11-10)
 
-## 6. 1차 출처 확인, 중복 정리, 누락 점검
-- 참조: "Daily research checklist" §5–§8, "Eligibility".
-- 발행할 후보는 공식 공고·신청 페이지로 확인한다. 명시되지 않은 사실은 `명시 없음`·`확인 필요`로 쓴다.
-- 기존 항목과 같은 대상이면 병합한다. §8의 누락 점검 조건에 해당하면 해당 트랙을 다시 검색한다.
-
-## 7. 데이터 작성
-- 참조: "Data model", "Editorial selection", "Daily research checklist" §9, "Today indicators".
-- `data/latest.json`과 `data/archive/YYYY-MM-DD.json`을 바이트 단위로 같은 내용으로 쓰고, `data/research/YYYY-MM-DD.json`을 쓴다.
-- 기존 id와 `firstSeenDate`를 보존한다. 단순 재확인은 `lastVerifiedDate`만 바꾼다. GitHub 별·포크 수는 손대지 않는다.
-
-## 8. 검증과 복구 묶음
-- 검증 전에 research 기록의 서술을 최종 상태에 맞춘다. `status`는 `COMPLETE`로 쓰거나 생략한다. `DRAFT_NOT_VALIDATED` 같은 초안 표시가 남아 있으면 발행이 막힌다. `researchLimitations`에는 실제로 남은 한계만 남긴다.
-- 기준선: current main의 `data/latest.json` 사본을 `baseline-latest.json`으로 저장한다.
-- `python3 scripts/validate_data.py data/latest.json`
-- `python3 scripts/validate_research_audit.py data/research/YYYY-MM-DD.json data/latest.json baseline-latest.json`
-- 실패하면 실제 조사로 빠진 증거를 보완하고 다시 검증한다. 증거를 지어내서 통과시키지 않는다.
-- 통과하면 `python3 scripts/publication_bundle.py pack --date YYYY-MM-DD --latest data/latest.json --archive data/archive/YYYY-MM-DD.json --research data/research/YYYY-MM-DD.json --baseline baseline-latest.json --out <묶음 경로>`를 실행한다. 임시 환경 밖에 사본을 보관하고 위치를 확인한다.
-
-## 9. staging 발행과 확인
-- 참조: "Daily research checklist" §10.
-- 오늘자 캐시 커밋이 포함된 최신 main에서 `automation/daily-brief-YYYY-MM-DD-data`를 만든다. 세 파일만 하나의 커밋으로 push한다.
-- push가 거부되면 우회하지 않는다. 중단 조건에 따라 보고한다.
-- `Promote daily brief staging snapshot` 실행 성공, 이어진 Pages 배포 성공, 공개 사이트의 `data/latest.json` 날짜가 오늘인지까지 확인해야 완료다.
-- 정상 완료는 조용히 끝낸다.
+- 공고 페이지를 열어 하는 공식 확인과 기존 공고 재확인
+- AI 뉴스와 AI Discovery 수집
+- GPT 채팅을 동시에 여러 개 여는 것

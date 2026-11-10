@@ -28,8 +28,6 @@ TRACK_AXES = {
     "publicIdea": ["governmentPublic", "industrySpecialized", "individualPrize"],
     "startupSupport": ["kstartupBusinessInfo", "sbaSeoul", "nipaKisa", "fintechSupport", "credits"],
     "upcomingOpenings": ["announcedNotOpen", "firstComeCountdown"],
-    "aiNews": ["officialProduct", "githubReleases", "huggingFace", "researchLabs", "communities"],
-    "aiDiscovery": ["sitesDirectories", "github", "skillsMcpAgents", "workflows", "communities", "sourceRadar"],
 }
 FIXED_SOURCES = {
     "Hackathon Korea": "https://koreahackathons.com/",
@@ -74,24 +72,6 @@ FIND_PROMPT = """오늘은 {today}이다. 지금 접수 중이거나 곧 접수�
 - 후보마다 {{"kind":"candidate","track":"트랙","title":"...","url":"공식이나 찾은 주소","host":"주최","deadline":"YYYY-MM-DD나 문구","via":"찾은 경로"}}
 - 축마다 {{"kind":"queries","track":"트랙","axis":"축","queries":["실제로 돌린 검색어",...]}}
 {record_lines}- 공고가 반복해서 올라오는, 위 목록에 없는 새 목록 페이지마다 {{"kind":"listingPage","url":"...","name":"...","reason":"..."}}"""
-
-NEWS_PROMPT = """오늘은 {today}이다. 지난 브리핑({last}) 이후의 AI 뉴스와 쓸 만한 AI 도구·저장소를 골라 카드로 써라. 파일을 만들지 마라.
-
-먼저 아래 해커뉴스 상위 글 목록 전부와 GeekNews 첫 화면(https://news.hada.io/)을 훑어라. 그다음 축마다 서로 다른 검색어를 2개 이상 돌려라. 트랙마다 한국어 검색어와 영어 검색어를 함께 써라.
-축(이름을 그대로 써라): {axes}
-해커뉴스 상위 글:
-{hn}
-이미 있는 카드(다시 쓰지 마라): {existing}
-
-뉴스 카드는 커뮤니티에서 실제로 화제가 된 것만 고르고, 1차 출처(공식 블로그, 릴리스 노트, 저장소, 모델 카드)를 열어 확인한 사실만 쓴다. 숫자는 출처에 적힌 것만 인용한다. 확인 못 한 점은 그렇다고 쓴다.
-{browser_rules}
-
-{answer_rules}
-한 줄 형식:
-- 축마다 {{"kind":"queries","track":"aiNews 또는 aiDiscovery","axis":"축","queries":[...]}}
-- 검토한 후보마다 {{"kind":"candidate","track":"aiNews 또는 aiDiscovery","title":"...","url":"...","disposition":"PUBLISHED 또는 NOT_RELEVANT","reason":"고르지 않은 이유"}}
-- 뉴스 카드 {{"kind":"aiNews","card":{{"id","categoryLabel":"AI 뉴스","icon","title","summary","description","why","tags":[...],"ideas":[2개],"links":[{{"label","url"}}],"communityEvidence":[{{"source","url","signal"}}],"verificationUrls":[...],"verificationNote":"..."}}}}
-- 도구 카드 {{"kind":"aiDiscovery","card":{{"id","title","summary","description","why","discoveryType":"site|github|skill|mcp|agent|workflow|directory|discussion|platform","categories":[...],"signals":[...],"discoveryReason","links":[...],"related":[],"awareness":"WELL_KNOWN|SPECIALIZED|EARLY","trend":"HOT|RISING|STEADY|RESURFACED","newsState":"NEW_RELEASE|NEWLY_DISCOVERED|UPDATED|BASELINE"}}}}"""
 
 CHECK_PROMPT = """오늘은 {today}이다. 아래 공고 후보 {count}건을 사이트에 올릴지 정하고, 올릴 것은 카드로 써라. 파일을 만들지 마라.
 웹 검색과 브라우저를 쓰지 마라. 페이지를 열지 말고, 아래 후보 줄에 보이는 정보만 그대로 적어라. 보이지 않는 칸은 "확인 필요"라고 적는다(사용자 결정 2026-11-09). 속도가 중요하니 문장은 짧게 쓴다.
@@ -271,29 +251,6 @@ def run_find(root, today, client, log, wait_seconds, poll_seconds):
         job["seconds"] = round(time.monotonic() - started, 1)
         out["jobs"].append(job)
     return out
-
-
-def run_news(root, today, client, log, wait_seconds, poll_seconds):
-    cache = json.loads((root / f"data/source-cache/{today}.json").read_text(encoding="utf-8"))
-    latest = json.loads((root / "data/latest.json").read_text(encoding="utf-8"))
-    top = (cache.get("shadowSources", {}).get("hackerNewsTop", {}) or {}).get("items") or []
-    hn = "\n".join(f"- {i.get('title')} {json.dumps(i.get('metrics') or {}, ensure_ascii=False)} "
-                   f"{i.get('primaryUrl') or ''} {i.get('discussionUrl') or ''}" for i in top[:40])
-    existing = ", ".join(x["title"][:40] for x in (latest["aiNews"][:15] + latest["aiDiscovery"][:15]))
-    work = NEWS_PROMPT.format(today=today, last=latest["date"], hn=hn or "(캐시 없음)", existing=existing,
-                              axes="; ".join(f"{t}({', '.join(TRACK_AXES[t])})" for t in ("aiNews", "aiDiscovery")),
-                              browser_rules=BROWSER_RULES, answer_rules=ANSWER_RULES)
-    path = root / f"artifacts/daily/{today}-news.md"
-    started = time.monotonic()
-    try:
-        rows, meta = run_chat(client, PRIME.format(workers=worker_limit(client), work=work), path, log,
-                              wait_seconds, poll_seconds)
-        result = {"status": "OK", "rows": rows, **meta}
-    except ExploreFailed as error:
-        result = {"status": "FAILED", "reason": str(error), "rows": []}
-        log.event("news_failed", reason=str(error))
-    result["seconds"] = round(time.monotonic() - started, 1)
-    return result
 
 
 def clean_title(title):

@@ -281,16 +281,6 @@ class EvidenceGateIntegrationTest(unittest.TestCase):
             self.assertNotEqual(bad.returncode, 0)
             self.assertIn(f"aiData.{axis} needs at least 2 distinct queries", bad.stderr)
 
-            korean_only = copy.deepcopy(audit)
-            korean_only["tracks"]["aiNews"]["queriesByAxis"] = {
-                axis: [f"{axis} 인기 글", f"{axis} 화제 토론"]
-                for axis in korean_only["tracks"]["aiNews"]["queriesByAxis"]
-            }
-            audit_path.write_text(json.dumps(korean_only, ensure_ascii=False), encoding="utf-8")
-            bad = self.validate(data_path, audit_path)
-            self.assertNotEqual(bad.returncode, 0)
-            self.assertIn("aiNews needs both Korean and non-Korean query variants", bad.stderr)
-
     def test_material_change_cannot_skip_official_verification(self):
         with tempfile.TemporaryDirectory() as temp:
             directory = Path(temp)
@@ -360,8 +350,8 @@ class EvidenceGateIntegrationTest(unittest.TestCase):
             baseline = copy.deepcopy(snapshot)
             baseline_path = directory / "baseline.json"
             baseline_path.write_text(json.dumps(baseline, ensure_ascii=False), encoding="utf-8")
-            snapshot["aiDiscovery"].append({
-                "id": "synthetic-unreported-item",
+            snapshot["contests"].append({
+                "id": "synthetic-unreported-item", "status": "CLOSED",
                 "firstSeenDate": "2026-10-01",
                 "title": "Synthetic test fixture only",
             })
@@ -386,7 +376,7 @@ class EvidenceGateIntegrationTest(unittest.TestCase):
                 for row in baseline[group]:
                     row["status"] = "CLOSED"
             new_id = "synthetic-unvalidated-track"
-            snapshot["aiNews"].append({"id": new_id, "firstSeenDate": "2026-10-11"})
+            snapshot["contests"].append({"id": new_id, "firstSeenDate": "2026-10-11", "status": "CLOSED"})
             audit["publishedIds"] = [new_id]
             audit["tracks"]["unchecked"] = {"rawCandidates": [{"id": new_id}]}
             baseline_path = directory / "baseline.json"

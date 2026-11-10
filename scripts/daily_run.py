@@ -463,7 +463,7 @@ def preflight(log, wait_seconds=BROWSER_WAIT_SECONDS):
 
 
 def run_research(root, today, client_factory=TitanClient, wait_seconds=WAIT_SECONDS, poll_seconds=POLL_SECONDS):
-    """GPT find, news, check and re-verify, then assemble. Each stage's result is saved as it ends."""
+    """GPT find and check, then assemble. Each stage's result is saved as it ends."""
     result = {"status": "FAILED"}
     log = RunLog(root, today, "research")
     log_environment(log, root, {})
@@ -481,10 +481,6 @@ def run_research(root, today, client_factory=TitanClient, wait_seconds=WAIT_SECO
         if "find" not in state:
             with log.stage("find"):
                 state["find"] = gpt_jobs.run_find(root, today, client, log, wait_seconds, poll_seconds)
-                save()
-        if "news" not in state:
-            with log.stage("news"):
-                state["news"] = gpt_jobs.run_news(root, today, client, log, wait_seconds, poll_seconds)
                 save()
         if "candidates" not in state:
             details = json.loads((root / f"artifacts/daily/{today}-details.json").read_text(encoding="utf-8"))

@@ -65,21 +65,9 @@ TRACKS = {
         "axes": ["announcedNotOpen", "firstComeCountdown"],
         "min_candidates": 0,
     },
-    "aiNews": {
-        "axes": ["officialProduct", "githubReleases", "huggingFace", "researchLabs", "communities"],
-        "min_candidates": 0,
-    },
-    "aiDiscovery": {
-        "axes": ["sitesDirectories", "github", "skillsMcpAgents", "workflows", "communities", "sourceRadar"],
-        "min_candidates": 0,
-    },
 }
 
-# AI Discovery was introduced on 2026-10-07 after that day's scheduled evidence
-# had already completed. Before 10-08 the track is optional, but if submitted
-# it MUST pass the normal track validation before its candidate IDs count.
-if snapshot_date < "2026-10-08" and not isinstance(audit.get("tracks", {}).get("aiDiscovery"), dict):
-    TRACKS.pop("aiDiscovery", None)
+# AI news and AI Discovery left the service on 2026-11-10 (user decision); their tracks are no longer checked.
 
 # The 2026-10-13 run passed with one generic query per axis and missed
 # candidates. From 10-14 each axis needs two distinct queries, and each track
@@ -274,13 +262,13 @@ assert len(published_ids) == len(set(published_ids)), "research audit publishedI
 
 candidate_ids = {
     item["id"]
-    for group in ("contests", "support", "aiNews", "aiDiscovery")
+    for group in ("contests", "support")
     for item in data.get(group, [])
     if item.get("id")
 }
 
 if baseline is not None:
-    for group in ("contests", "support", "aiNews", "aiDiscovery"):
+    for group in ("contests", "support"):
         old_by_id = {x["id"]: x for x in baseline.get(group, []) if x.get("id")}
         new_by_id = {x["id"]: x for x in data.get(group, []) if x.get("id")}
         removed = set(old_by_id) - set(new_by_id)
@@ -292,13 +280,13 @@ if baseline is not None:
         assert not changed_first_seen, f"{group}: firstSeenDate changed: {sorted(changed_first_seen)}"
     baseline_ids = {
         item["id"]
-        for group in ("contests", "support", "aiNews", "aiDiscovery")
+        for group in ("contests", "support")
         for item in baseline.get(group, [])
         if item.get("id")
     }
     added_items = [
         item
-        for group in ("contests", "support", "aiNews", "aiDiscovery")
+        for group in ("contests", "support")
         for item in data.get(group, [])
         if item.get("id") and item["id"] not in baseline_ids
     ]
@@ -313,7 +301,7 @@ if baseline is not None:
     if baseline.get("date") == snapshot_date:
         same_day_baseline_ids = {
             item["id"]
-            for group in ("contests", "support", "aiNews", "aiDiscovery")
+            for group in ("contests", "support")
             for item in baseline.get(group, [])
             if item.get("id") and item.get("firstSeenDate") == snapshot_date
         }

@@ -179,10 +179,7 @@ class AssembleTest(unittest.TestCase):
                      for n, u in gpt_jobs.FIXED_SOURCES.items()]
             rows += [{"kind": "district", "key": k, "urls": ["https://www.nowon.kr/"], "status": "CHECKED", "note": "시험"}
                      for k in gpt_jobs.DISTRICTS]
-        news = [{"kind": "aiNews", "card": {"id": "test-news", "title": "시험 뉴스", "summary": "시험", "description": "d",
-                                            "why": "w", "tags": ["t"], "ideas": ["i"],
-                                            "links": [{"label": "원문", "url": "https://example.org/n"}]}}]
-        state = {"find": {"rows": rows}, "news": {"rows": news}, "candidates": candidates, "decided": [],
+        state = {"find": {"rows": rows}, "candidates": candidates, "decided": [],
                  "check": {"answers": check}, "due": due,
                  "reverify": {"answers": {str(i): {"n": i + 1, "result": "VERIFIED", "primarySourceUrl": "https://example.org/v",
                                                    "note": "시험", "changes": {}} for i in range(len(due))},

@@ -5,9 +5,8 @@ import { serve,launchOptions,ready } from './ui_helpers.mjs';
 const host=await serve();
 const browser=await chromium.launch(launchOptions);
 const page=await browser.newPage();
-await page.route('https://api.github.com/repos/**',r=>r.fulfill({json:{stargazers_count:1234,forks_count:10}}));
 const data=JSON.parse(await readFile('data/latest.json','utf8'));
-const all=[...data.contests,...data.aiNews,...data.aiDiscovery,...data.support];
+const all=[...data.contests,...data.support];
 const errors=[];page.on('pageerror',e=>errors.push(e.message));
 page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
 let checks=0;
@@ -17,7 +16,7 @@ async function go(route){await page.goto(host.base+'/'+route);await ready(page);
 try {
  for (const [width,height] of [[1920,1080],[1440,900],[1280,800]]) {
   await page.setViewportSize({width,height});
-  for(const route of ['#/','#/ai-news','#/ai-discovery','#/contests','#/support','#/archive']) {
+  for(const route of ['#/','#/contests','#/support','#/archive']) {
    await go(route);
    check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${route} must not overflow at ${width}`);
    const frame=await page.locator('.workspace').boundingBox();
@@ -31,10 +30,6 @@ try {
     const body=await page.locator('.product-body').first().boundingBox();
     const row=await page.locator('.product-row').first().boundingBox();
     check(body.width>=250 && title.width>=80 && title.x>=row.x && title.x+title.width<=row.x+row.width+1,'Home title fits inside its clickable row');
-   }
-   if(route==='#/ai-news') {
-    const title=await page.locator('.category-item-title').first().boundingBox();
-    check(title.width>=400,'News title does not collapse into a narrow column');
    }
    if(['#/contests','#/support'].includes(route)) {
     const boxes=await page.locator('.opportunity-card-v2').evaluateAll(es=>es.slice(0,4).map(e=>({x:e.getBoundingClientRect().x,y:e.getBoundingClientRect().y,w:e.getBoundingClientRect().width})));
@@ -79,17 +74,13 @@ try {
  check((await page.locator('#detailHeader h1').textContent())===data.contests.find(i=>i.id===selectedId).title,'Native Ionic card link opens correct detail');
  await page.locator('#backButton').click();await page.waitForFunction(()=>document.body.dataset.page==='contests');
  check(await page.locator('#categoryFilters [data-filter="closed"]').evaluate(e=>e.classList.contains('active')),'Back navigation preserves filter');
- await go('#/ai-news');await page.locator('#categoryFilters [data-filter="security"]').click();
- check((await ids('#categoryList [data-id]')).length>0,'News topic filter has results');
+ await go('#/contests');
  await page.locator('#categorySort').click();
  await page.getByRole('radio',{name:'등록일순',exact:true}).click();
  await page.waitForFunction(()=>document.querySelector('#categorySort').value==='discovered');
  await page.locator('ion-popover').waitFor({state:'detached'});
  check(true,'Ionic sort popover works');
- await go('#/ai-discovery');await page.locator('#discoveryFilters [data-filter="github"]').click();
- const github=await ids('#discoveryAllList [data-id]');
- check(github.length>0&&github.every(id=>data.aiDiscovery.find(i=>i.id===id).links.some(link=>/^https:\/\/github.com\/[^/]+\/[^/]+\/?$/.test(link.url))),'Discovery GitHub filter works: '+JSON.stringify(github));
- for(const [kind,item] of [['ai',data.aiNews[0]],['discovery',data.aiDiscovery[0]],['contest',data.contests[0]],['support',data.support[0]]]) {
+ for(const [kind,item] of [['contest',data.contests[0]],['support',data.support[0]]]) {
   await go('#/'+kind+'/'+encodeURIComponent(item.id));
   check(await page.locator('#detailHeader h1').textContent()===item.title,`${kind} detail preserves title`);
   check(await page.locator('#detailContent').innerText()!=='',`${kind} detail has content`);
@@ -103,13 +94,31 @@ try {
  check(await page.evaluate(()=>getComputedStyle(document.body).backgroundColor)===lightBackground && await page.evaluate(()=>getComputedStyle(document.documentElement).colorScheme)==='light','OS dark mode keeps light product UI');
  await page.emulateMedia({colorScheme:'light'});
  await page.setViewportSize({width:390,height:844});
- for(const r of ['#/','#/ai-news','#/ai-discovery','#/contests','#/support']){await go(r);check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`Compact fallback does not overflow: ${r}`);}
+ for(const r of ['#/','#/contests','#/support']){await go(r);check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`Compact fallback does not overflow: ${r}`);}
  // A new scheduled snapshot must render without rebuilding the frontend.
- const next=structuredClone(data);next.aiNews[0].title='예약 데이터 갱신 검증';
+ const next=structuredClone(data);next.contests[0].title='예약 데이터 갱신 검증';
  await page.route('**/data/latest.json?*',route=>route.fulfill({json:next}));
  await page.reload();await ready(page);
- await go('#/ai/'+encodeURIComponent(next.aiNews[0].id));
+ await go('#/contest/'+encodeURIComponent(next.contests[0].id));
  check(await page.locator('#detailHeader h1').textContent()==='예약 데이터 갱신 검증','Updated scheduled JSON renders without a frontend build');
+ // The service covers only contests and support: no AI news or discovery navigation, and old routes land on home.
+ await page.setViewportSize({width:1440,height:900});
+ await page.unroute('**/data/latest.json?*');
+ const navHrefs=await page.locator('.nav-item, .mobile-tab, .briefing-browse a, .right-head a').evaluateAll(es=>es.map(e=>e.getAttribute('href')||''));
+ check(navHrefs.length>0 && navHrefs.every(h=>!/ai-news|ai-discovery|discovery/.test(h)) && !/AI 뉴스|Discovery/.test(await page.locator('.main-nav').innerText()),'No AI news or discovery navigation exists');
+ for(const old of ['#/ai-news','#/ai-discovery']) {await go(old);await page.waitForFunction(()=>document.body.dataset.page==='home');check(new URL(page.url()).hash==='#/','Old route '+old+' falls back to home');}
+ // Snapshots with or without the removed AI keys render the same two categories.
+ for(const withKeys of [false,true]) {
+  const snap=structuredClone(data);delete snap.aiNews;delete snap.aiDiscovery;
+  if(withKeys){snap.aiNews=[{id:'old-ai',title:'옛 AI 뉴스',summary:'x',firstSeenDate:snap.date}];snap.aiDiscovery=[{id:'old-disc',title:'옛 디스커버리',summary:'x',firstSeenDate:snap.date}];}
+  await page.route('**/data/latest.json?*',route=>route.fulfill({json:snap}));
+  await go('#/');
+  check(await page.locator('#homeFeed [data-id]').count()>0 && await page.locator('#homeFeed [data-id="old-ai"],#homeFeed [data-id="old-disc"]').count()===0,'Home ignores AI keys (present='+withKeys+')');
+  await go('#/contests');check(await page.locator('#categoryList ion-card').count()>0,'Contests render (AI keys present='+withKeys+')');
+  await go('#/support');check(await page.locator('#categoryList ion-card').count()>0,'Support renders (AI keys present='+withKeys+')');
+  await go('#/ai/old-ai');await page.waitForFunction(()=>document.body.dataset.page==='home');
+  await page.unroute('**/data/latest.json?*');
+ }
  check(errors.length===0,'No browser errors: '+errors.join('\n'));
- console.log(`PASS: ${checks} UI checks (three desktop sizes, compact fallback, real Ionic interactions, archive, scheduled JSON)`);
+ console.log(`PASS: ${checks} UI checks (three desktop sizes, compact fallback, real Ionic interactions, archive, scheduled JSON, no AI routes)`);
 } finally {await browser.close();await host.close();}

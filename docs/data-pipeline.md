@@ -47,15 +47,12 @@ Once a valid staging branch already exists remotely, a failed promotion can be r
 
 ## Repository metrics
 
-`collect-github-metrics.yml` runs after inventory collection or candidate promotion completes, and supports manual dispatch. It reads repository links from the published discovery catalog, uses the Actions token to collect stars/forks, saves `data/github-metrics.json`, and explicitly dispatches Pages (bot pushes alone do not trigger another push workflow).
-
-Metrics remain separate from editorial snapshots. Each repository has a last successful `fetchedAt`, an attempted `checkedAt`, and `OK`, `STALE`, or `FAILED` status. On failure the collector retains valid previous counts, never inventing zero. Cards show the collection time and indicate failed refreshes or data older than 36 hours. Archived briefings do not show today's counts. Browsers fetch only the hosted JSON, not the GitHub API.
+Removed on 2026-11-10 with AI Discovery (user decision). `collect-github-metrics.yml`, `collect_github_metrics.mjs` and `data/github-metrics.json` no longer exist.
 
 Run locally:
 
 ```sh
 node scripts/test_pipeline.mjs
-node scripts/collect_github_metrics.mjs
 node scripts/pipeline_health.mjs
 npm test
 ```

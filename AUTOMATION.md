@@ -6,13 +6,13 @@ The run order, per-step completion criteria and the only valid stop conditions a
 
 ## Data model
 
+The service covers only two categories since 2026-11-10 (user decision: "공모전 · 해커톤, 창업 · 지원사업 이 카테고리만 집중"). AI news and AI Discovery were removed; old snapshots may still carry `aiNews`/`aiDiscovery`, which nothing reads.
+
 The main file is `data/latest.json` with:
 - `date`
 - `generatedAt`
-- `contests`
-- `aiNews`
-- `aiDiscovery`
-- `support`
+- `contests` (공모전 · 해커톤)
+- `support` (창업 · 지원사업)
 - `archive`
 
 All content arrays are cumulative catalogs, not replace-every-day feeds.
@@ -22,12 +22,9 @@ All content arrays are cumulative catalogs, not replace-every-day feeds.
 Select information for the decision it helps the reader make:
 - `contests`: collect all discoverable idea/proposal competitions and all competitions/hackathons involving program/software development, regardless of industry, AI relevance, prize size, or perceived portfolio value. Include app, web, game, automation, data/software and prototype-building events. Naming/slogan/표어/character contests, literary contests (백일장, 신춘문예, 수기, 글쓰기), video/photo/film contests and art/design/webtoon contests are out of scope (user decision, 2026-10-13). Record eligibility, team requirements, region, submissions, dates and rewards; these are visible conditions, not implicit personal-fit exclusion filters. Do not claim exhaustive coverage of the entire web; record the sources searched and gaps.
 - `support`: collect all discoverable startup/pre-startup application opportunities except programs explicitly restricted to applicants who already have business registration at application time. Include recruitment/application programs such as 모두의창업, founder selection, pre-startup education, incubation, mentoring, commercialization, funding, workspace and developer credits, including programs without cash grants. Mixed pre-startup/existing-business programs qualify through the pre-startup track. Record regional, age, employment and other requirements rather than silently excluding on those grounds. Distinguish registration required at application from registration required after selection; the latter is not an exclusion. Mark unclear registration eligibility as requiring confirmation instead of guessing. Generic non-startup events remain outside this category.
-- `aiNews`: a recent AI topic attracting observable community attention, with an explanation of what happened, why people are discussing it, and what is verified. Follow the community-first policy below.
-- `aiDiscovery`: a reusable tool, repository, skill, MCP, agent, workflow, or curated collection the reader can actually inspect or try. State its specific use, entry point, availability/cost when known, and material limitations. Popularity alone is insufficient.
 
 Meaningful updates include changed eligibility, opening/deadline, submission rules, prize/support, application availability, actual release/access, material pricing/license changes, reproducible new capabilities, corrections, or consequential changes in an ongoing story. A routine re-check, increased likes/stars, another repost, or unchanged marketing copy is not an update. Preserve `firstSeenDate`; use `lastUpdatedDate` only for substantive changes.
 
-When one event deserves both news and discovery coverage, news explains the current discussion and discovery explains the enduring practical asset. Cross-link them and avoid duplicating the same summary. Preserve historical catalog entries; do not relabel old news as newly hot or reset dates to fit the new policy.
 
 ## Research evidence gate
 
@@ -39,7 +36,7 @@ The audit must record:
 - `sourceDiscoveries`: an array (possibly empty) of credible recurring/list-source discoveries considered during the current run
 - `reverifiedIds`: every previously OPEN/UPCOMING contest/support id actually re-opened and checked
 - `publishedIds`: every newly published contest/support/AI-news id for the snapshot date
-- independent track evidence for `aiData`, `generalSoftware`, `publicIdea`, `startupSupport`, `upcomingOpenings`, and `aiNews`
+- independent track evidence for `aiData`, `generalSoftware`, `publicIdea`, `startupSupport`, and `upcomingOpenings`
 - for each track, the actual queries grouped by required search axis (from 2026-10-14: at least two distinct queries per axis, and Korean plus non-Korean variants in every track except Korea-only `publicIdea`), raw candidate titles/URLs, and disposition (`PUBLISHED`, `EXISTING`, `DUPLICATE`, `INELIGIBLE`, `CLOSED`, `NOT_RELEVANT`)
 - fixed-source evidence for every mandatory source family, including checked URLs or a concrete failure reason
 - district evidence for 노원, 도봉, 강북, including checked URLs or a concrete failure reason
@@ -66,130 +63,6 @@ Classification:
 - `support` is a separate catalog for startup/support opportunities such as pre-startup programs, commercialization funding, incubation/education, accelerators, PoC/validation, office/space support, cloud/GPU/API credits, and developer/startup benefit programs.
 
 Do not delete an opportunity just because today's search did not surface it. Re-check the official source. Use `UPCOMING` when an officially announced opportunity is not accepting applications yet but has a known future opening time/date and is relevant to act on in advance, especially same-day/next-24-hour or first-come openings. Change `UPCOMING` to `OPEN` after the official opening time is reached and the application page is available. When registration closes or the deadline passes, set `status: CLOSED` and keep it in the cumulative catalog so history remains searchable.
-
-### AI Discovery / Source Radar
-
-`aiDiscovery` is a cumulative asset catalog for reusable AI ecosystem discoveries, separate from `aiNews`.
-
-### Discovery browsing taxonomy: work category and asset form
-
-The user wants broad, expandable task-oriented categories with parent/child navigation. Keep the work category separate from asset form (MCP, plugin, prompt, site, etc.) and from popularity/recency signals. A video tool can be a site, a plugin or an MCP; a well-established asset can also be trending.
-
-Use the following Korean task categories as an initial expandable vocabulary:
-- Creative: `디자인`, `이미지`, `영상`, `글쓰기`, `음악·오디오`, `음성·더빙`, `프레젠테이션`.
-- Publishing and communication: `마케팅·광고`, `SNS·콘텐츠 운영`, `번역·현지화`.
-- Building and productivity: `코딩·개발`, `업무 자동화`, `문서·PDF`, `데이터 분석`, `리서치·검색`, `학습·교육`, `생산성·일정 관리`.
-- Specialized creation: `에셋`, `게임 제작`, `웹사이트 제작`.
-
-Confirmed parent/child structure:
-- `영상` is the parent category for short-form and other video work. `쇼츠` is a child of video, not a competing top-level category.
-- `에셋` is the parent category for reusable creative assets. `2D` and `3D` are its initial children. Examples include sprites, icons, illustrations and textures for 2D; models, materials, rigs and animations for 3D. Classify the actual reusable output or library, not just whether a marketing screenshot looks two- or three-dimensional.
-- A parent selection should cover both directly classified items and all descendants. Selecting a child narrows that parent. Assets supporting both 2D and 3D may have both child memberships. General image/video creation and asset creation may overlap when actual capabilities justify both.
-- During editorial collection, keep compatible parent labels in `categories[]` and record child proposals explicitly in the research candidate evidence, such as `categoryPaths: [["에셋", "2D"]]`. This is audit metadata, not a new required published-data field. Do not invent an unsupported published schema or UI behavior.
-
-Classification rules:
-- Classify by evidenced capabilities and user tasks, not words appearing in marketing copy. Multiple work categories are allowed; do not force a multi-purpose asset into one bucket.
-- `디자인` covers UI/UX, layout, branding, typography and visual communication. `이미지` covers image generation, editing, restoration and manipulation. Add both only when both capabilities are supported.
-- `영상` covers video generation, editing and post-production, including shorts. Propose the `영상 > 쇼츠` child when there are concrete short-form features such as clip extraction, vertical reframing, short-form captioning or short-form production workflows; not every video tool belongs in that child.
-- `글쓰기` covers drafting, rewriting, editing, scripts and long-form writing. A script-writing asset may also belong in shorts/video when that use is specifically supported. Distinguish audio/music creation from speech synthesis, dubbing and transcription.
-- Preserve existing technical tags such as MCP, Skill or Automation where applicable. Add the work-category labels to `categories[]` without changing the existing `discoveryType` enum or forcing a schema migration during editorial refresh.
-- On every refresh, assess newly discovered assets for missing categories. Add a category label when there is a distinct useful task/output that existing categories cannot describe; one clearly evidenced discovery can justify it, and an arbitrary minimum item count is not required. Prefer a child when the new concept belongs under an existing parent. Reuse canonical labels for synonyms and avoid adding product/vendor names or temporary trends as categories. Record proposed parent, name, definition, reason and example item IDs in the research evidence. Categories may grow as discoveries warrant them; do not force all discoveries into the initial vocabulary or fill categories merely for completeness.
-- For each discovery, explain the supported task, asset form/host environment, actual entry point, cost/access limits when known, and evidence for established/trending/newly discovered status. Do not infer popularity from category membership.
-
-This vocabulary and expansion policy guide collection immediately. Parent/child filters, automatic navigation from collected categories, and first-class plugin/prompt asset forms still require a coordinated UI/schema change; scheduled editorial tasks must not change UI or invent enum values to implement them.
-
-Discovery types:
-- `site`: standalone service/showcase/tool website
-- `github`: GitHub repository or project
-- `skill`: reusable agent skill/instruction package
-- `mcp`: MCP server/tool integration
-- `agent`: agent framework/runtime
-- `workflow`: reproducible multi-tool workflow or recipe
-- `directory`: curated catalog/showcase/index
-- `discussion`: high-signal community thread that reveals a reusable technique/tool
-- `platform`: broader developer/model platform
-
-Required fields:
-- `id`, `title`, `summary`, `discoveryType`
-- `description`, `why`
-- `firstSeenDate`, `lastUpdatedDate`
-- `links[]` with typed labels such as Official, GitHub, Docs, Demo, X, Reddit, HN, Video
-- `categories[]` using stable tags such as Agent, Skill, MCP, Prompt, Video, Dev Tool, Research, Directory, Showcase, Automation
-- `signals[]`: why it surfaced (e.g. GitHub star velocity, repeated Reddit/X mentions, official showcase inclusion, dependency/reference from a tracked repo)
-- `discoveryReason`: compact explanation of the discovery evidence
-- `awareness`: one of `WELL_KNOWN`, `SPECIALIZED`, `EARLY`
-- `trend`: one of `HOT`, `RISING`, `STEADY`, `RESURFACED`
-- `newsState`: one of `NEW_RELEASE`, `NEWLY_DISCOVERED`, `UPDATED`, `BASELINE`
-- optional `related[]` references to related sites/repos/skills/workflows
-
-Collection policy:
-- For every new discovery, verify a working official/repository/demo/docs entry point and identify at least one concrete task it helps accomplish. Record setup/access requirements, price or free-tier limits, license and maintenance/release evidence when available; mark unknowns rather than guessing. Do not claim to have tested a tool unless it was actually tested.
-- Prefer a specific useful capability, a reproducible workflow, or a material improvement over an existing option. Exclude empty landing pages, duplicate wrappers with no evidenced distinction, broken/unavailable assets, and unsupported promotional claims. A small or unfamiliar project can qualify without high star counts.
-- A directory is a curated collection, not a catch-all category. Describe its subject, selection value and useful navigation. A discussion belongs in Discovery only when it contains a reusable technique or artifact; current debate belongs in AI news.
-- Optimize for coverage at ingestion time; do not discard lower-priority discoveries merely because they are not Top Finds.
-- Search independently across official ecosystem showcases/directories, GitHub, Hacker News, Product Hunt, X/public social results when accessible, and official developer/platform channels.
-- Keep the existing broad-web principle: do not reduce discovery to a fixed whitelist. Credible newly found recurring sources must be recorded in `sourceDiscoveries` and evaluated for the source lifecycle.
-- Merge duplicate mentions into one entity while preserving independent signal counts/sources. A website and its GitHub repository may remain separate linked entities when each has independent utility.
-- Keep the three status axes separate:
-  - what it is: `discoveryType` / `categories[]`
-  - awareness: how broadly known it is (`awareness`)
-  - trend: how attention is changing now (`trend`)
-  - news state: why it appears in today's brief (`newsState`)
-- Do not infer popularity from the fact that the user only just discovered an item. Do not mark an item `NEWLY_DISCOVERED` merely because it was newly added to this catalog. Use `BASELINE` for important projects the user/system already knew before cataloging. A long-popular but newly cataloged project may be `WELL_KNOWN · HOT · BASELINE`.
-- Every daily refresh must produce both a ranked Top Finds view and the full discovery catalog; ranking may hide nothing from storage.
-- High-value recurring sources discovered through an item should feed back into Source Radar: discovery -> candidate -> SHADOW -> ACTIVE, using the existing source lifecycle engine where technically crawlable.
-- Rank by signal strength, novelty, practical usefulness, reproducibility, openness and maintenance activity. This ranking is for presentation only and must not become an internal adoption/status field.
-- Do not turn ordinary AI product announcements into Discovery unless there is a reusable asset (site/repo/skill/workflow/directory) worth cataloging.
-
-Suggested brief grouping:
-- Top Finds
-- New Sites
-- GitHub Radar
-- Skills · MCP · Agents
-- Interesting Workflows
-- Trending Discussions
-- Model & Platform Changes (link to AI news when primarily news)
-- Established but Important
-- Everything Else
-- Source Radar (new recurring information sources discovered today)
-
-### AI news
-
-AI news is a **community-first collection of hot/popular AI posts and currently discussed AI topics**, not a chronological feed of vendor announcements. Popular posts, hands-on reports, tips, opinion pieces, comparisons and discussions qualify even without a new product announcement. Include model/tool releases, useful experiments, research results, pricing/access changes, and controversies when recent community attention is evidenced. An official announcement alone does not qualify as community-hot news.
-
-Discovery and recency:
-- Search recent community discussions first. Starting points include Hacker News, GeekNews, and accessible public developer/AI discussions on X, GitHub, Hugging Face and other relevant communities. These are starting points, not a whitelist. Cover both Korean-language and international discussion; record inaccessible sources and use accessible alternatives without bypassing access controls.
-- Prioritize discussions published or meaningfully revived within the last 72 hours of the run. Expand to 7 days when needed, explicitly stating the dates and current reason for renewed interest. Keep the original event date separate from the discussion date. Do not present an old release as new because a post about it is new.
-- Search results and summaries are leads. Open the actual discussion and inspect substantive comments or responses whenever accessible. A blocked thread or a search snippet alone is insufficient evidence to describe its reception.
-
-Evidence of community attention:
-- A topic qualifies with either (a) independently observed discussion in at least two distinct communities, or (b) an observed hot/popular placement or clear popularity indicator in one relevant community. For (b), record the actual listing/rank or visible popularity indicator; a second community is not required. Inspect substantive responses where available to describe reception accurately, but lack of comments alone does not disqualify a popular post. Mere appearance in a latest/new feed does not qualify.
-- Record the concrete reason for selection: observed placement, points/upvotes, comments, independent hands-on reports, or cross-community discussion. Use only visible metrics, with an observation timestamp; unavailable metrics remain unknown, never zero. Do not sum or directly compare raw counts across platforms. Do not infer momentum or growth from a single observation.
-- Reposts by the same author, syndicated copies, promotional replies, and duplicate links are not independent confirmation. A single viral promotional post or many low-information reactions is insufficient by itself.
-- Prefer topics with practical consequences for AI use, development, creative work, cost, availability, or understanding capabilities. Do not select pure engagement bait, repetitive brand arguments, or unsupported speculation merely because they attract reactions. Do not force a daily quota or fill a quiet day with older announcements.
-
-Verification and writing:
-- Distinguish community attention from factual confidence. Verify release, pricing, access and capability claims against official announcements, repositories, papers, documentation, or the original experiment when available. For user experiments, report the author's method, limitations and what was actually shown; do not generalize a personal result into a proven product capability.
-- For a debate, accurately report the existence and substance of the debate. Attribute disputed claims and distinguish them from confirmed facts. Do not invent a community consensus from a few comments. Uncorroborated rumors do not qualify for publication as factual news.
-- Each news item should let the reader answer: what happened; why it is being discussed now; what it means in practice; and what remains uncertain. Use `summary` for the event, `why` for the evidenced reason it matters/is discussed, `description` for context and differing substantive reactions, and typed `links` for both the discussion and the primary source. Keep headlines factual and in natural Korean.
-- In each selected `tracks.aiNews.rawCandidates[]` audit entry, include `communityEvidence[]` with `platform`, `url`, `observedAt`, `discussionDate` when known, visible `metrics`/`placement` when available, and a concrete `attentionReason`. Include `verificationUrls` and `verificationNote` explaining which claims were checked and which remain uncertain. These are editorial evidence fields; the current validator does not independently verify attention quality or enforce these additional fields.
-- Retain the existing audit query axes (`officialProduct`, `githubReleases`, `huggingFace`, `researchLabs`, `communities`) for compatibility. Use community searches to discover topics and the other axes to find original evidence and relevant context. Execute and record actual queries for all required axes; those searches do not require publishing an item from every source type. Never fabricate a query to satisfy the validator.
-
-AI news is also cumulative. Do not create a second card for the same underlying product/release/topic when a follow-up appears.
-
-Required tracking fields:
-- `firstSeenDate`
-- `lastUpdatedDate`
-- `updates[]`
-
-Each update entry has at least:
-- `date`
-- `label`
-- `text`
-
-When a meaningful follow-up appears, update the existing item's summary/description/why/links as needed, append a new `updates[]` entry, and advance `lastUpdatedDate`. Do not append an update for a routine daily re-check when nothing changed.
-
-Treat duplicate titles, official URLs, product/project names, and topic continuity as signals for merge instead of creating a new item.
 
 ## Source crawler preflight
 
@@ -226,8 +99,6 @@ Review `data/crawler-sources.json -> nextCandidates` continuously as part of the
 - When broad search or a fixed-source pass reveals a recurring/list-style domain that could reduce future omission risk, add a discovery entry with `key` when known, `name`, `domain`, `listUrl` or `url`, `reason`, `relevantUrls`, `publishedIds`, and optional `crawlerSpec`.
 - A `crawlerSpec` may be proposed only for a public, read-only listing page. Do not create crawler specs that require login, user data, destructive actions, or bypassing access controls.
 - Generic `crawlerSpec` fields may include `url`, `linkSelector`, `hostSuffix`, `urlContains`, `urlRegex`, `excludeUrlRegex`, `expand`, `scrollRounds`, `waitMs`, `actionability` (`all` or `hints`), and `pagination` (`urls`, `param`, `maxPages`, optional `closedRunLimit` and `keepParams`). A paginated source keeps only open rows, ignores `expand`, `scrollRounds` and `actionability`, and records `coverage` for each listing in the source cache: `stoppedBy` is `empty`, `repeated`, `closedRun`, `blank`, `error` or `maxPages`, and `reachedEnd: false` means the listing was not read to its end, and the source health summary warns about it. A blank page after the first is read twice before it counts as the end. `lastOpenPage` and `longestClosedRun` show how close `closedRunLimit` came to cutting off open rows. `keepParams` lists the query keys that identify an item, so one contest stays one item across pages and categories.
-- Tested inventory adapters may use `crawlerSpec.adapter`: `hackerNewsTop`, `githubTrending`, `huggingFaceModels`, or `huggingFaceSpaces`, with a bounded `limit` of at most 50. These collect public first-page/top-list inventories with observed placement and timestamps, plus visible structured metrics where supported; they do not establish AI relevance, factual correctness, popularity growth, or exhaustive coverage.
-- Inspect successful `shadowSources` in the current-day cache as additional research leads for AI news/Discovery. For a useful shadow source, record its exact manifest key, `category`, checked `relevantUrls` and actual `publishedIds` in `sourceDiscoveries` so usefulness can be evaluated. Only record URLs actually reviewed and IDs actually published. New-source promotion still requires multiple daily observations, successful shadow runs and real publication yield; do not promote merely because a live connectivity test passed.
 - When reading collected news leads, follow `discussionUrl` and `primaryUrl` when present. For repository/model/app leads, verify the original item. Hot/trending listing placement is evidence of that listing at `observedAt`, not proof of launch date, universal popularity or a daily growth rate. Keep blocked sources as reported gaps; do not bypass access controls.
 - Even if GPT does not explicitly nominate a source, `scripts/evolve_crawler_sources.py` automatically inspects relevant/published raw-candidate domains and registers recurring/high-yield domains as `NEEDS_SPEC` candidates.
 - Candidate lifecycle is `NEEDS_SPEC -> SHADOW -> ACTIVE`. A candidate with a crawler spec runs in shadow without affecting required coverage until it proves stable.
@@ -308,12 +179,6 @@ Search these three districts independently every refresh even when unrestricted 
 Apply the same broad contest/startup scope to district sources: include idea/software competitions and startup recruitment/support admitting applicants without existing business registration. Record local, age and other conditions visibly instead of excluding for an assumed user profile. Generic festivals, leisure classes, unrelated welfare notices and generic exam-fee reimbursements remain outside the contest/startup scope. If a district has no relevant OPEN item after checking its official pages, record the check rather than silently skipping it.
 
 Adjacent Seoul district sites may be explored when broad discovery surfaces a relevant opportunity, but 노원·도봉·강북 remain the mandatory local baseline.
-
-For AI news:
-- Start from recent Korean and international community discussion, applying the recency and observable-attention criteria in the AI news policy above.
-- Begin with popularity listings rather than dated search-engine queries: review every item of the current-day `shadowSources.hackerNewsTop` inventory, and open the GeekNews front page directly. Search engines rarely index what is popular right now.
-- Follow selected topics to GitHub releases/repos, Hugging Face, arXiv/research labs, official product updates, and original experiments for verification. These are evidence sources, not an automatic publication queue.
-- Do not limit discovery to major AI vendors; include independently useful experiments and discussions about smaller or open projects when they meet the same evidence standard.
 
 Discovery/community sources are for finding leads. Final published facts should be verified against primary official sources whenever available.
 

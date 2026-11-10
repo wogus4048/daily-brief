@@ -3,7 +3,6 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {serve,launchOptions,ready} from './ui_helpers.mjs';
 const host=await serve(),browser=await chromium.launch(launchOptions),page=await browser.newPage({viewport:{width:1440,height:900}});
-await page.route('https://api.github.com/repos/**',r=>r.fulfill({json:{stargazers_count:1234,forks_count:10}}));
 const data=JSON.parse(await readFile('data/latest.json','utf8'));
 try {
  await page.goto(host.base+'/#/contests');await ready(page);
@@ -14,11 +13,6 @@ try {
  await page.locator('#resetCategoryFilters').click();
  assert.equal(await page.locator('#categoryFilters [data-filter="open"]').getAttribute('aria-pressed'),'true');
  assert.equal(await page.locator('#resetCategoryFilters').evaluate(e=>e.disabled),true);
- await page.goto(host.base+'/#/ai-discovery');await ready(page);
- await page.locator('#discoveryFilters [data-axis="status"][data-filter="recommended"]').click();
- assert.equal(await page.locator('.catalog-card').count(),3,'Recommendation filter retains curated set');
- await page.locator('#resetDiscoveryFilters').click();
- assert.equal(await page.locator('.catalog-card').count(),data.aiDiscovery.length,'Reset restores full catalog');
  await page.locator('#searchButton').click();
  assert.ok(await page.locator('.search-guidance').isVisible(),'Empty search offers guidance');
  await page.locator('#searchInput input').fill('zz-no-such-item-zz');
@@ -53,7 +47,8 @@ try {
    return ['backgroundColor','borderTopWidth','borderRadius','boxShadow'].map(key=>style[key]).concat(style.getPropertyValue('--background'),style.getPropertyValue('--padding-start'));
  }));
  assert.ok(rowSurfaces.every(surface=>JSON.stringify(surface)===JSON.stringify(rowSurfaces[0])),'Peer briefing rows share the same surface regardless of list position');
- const closingToday=[...data.contests,...data.support].find(item=>item.dDay==='오늘 마감');
+ const seoulToday=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul'}).format(new Date());const refDay=seoulToday>data.date?seoulToday:data.date;
+ const closingToday=[...data.contests,...data.support].find(item=>item.status!=='CLOSED'&&Array.isArray(item.deadline)&&item.deadline.length===1&&item.deadline[0]===refDay);
  if(closingToday) assert.ok((await page.locator('#homeRightUpcoming').innerText()).includes(closingToday.title),'Deadline list includes today even when repeated in the feed');
  await page.goto(host.base+'/#/contests');await ready(page);
  const firstCard=page.locator('.opportunity-card-v2').first();
@@ -64,44 +59,15 @@ try {
  assert.ok(await page.locator('.opportunity-facts dd').evaluateAll(fields=>fields.every(field=>field.scrollHeight<=field.clientHeight+1)),'Eligibility and rewards are never clipped');
  await firstCard.click();await ready(page);
  assert.equal(await page.locator('.decision-facts dd').nth(1).innerText(),original.participation);
- await page.goto(host.base+'/#/ai-discovery');await ready(page);
- await page.locator('#discoveryFilters [data-axis="source"][data-filter="github"]').click();
- assert.equal(await page.locator('#discoveryFilters [data-filter="github"]').getAttribute('aria-pressed'),'true');
- assert.equal(await page.locator('#discoveryAllList .discovery-row').count(),data.aiDiscovery.filter(item=>item.links.some(link=>/^https:\/\/github.com\/[^/]+\/[^/]+\/?$/.test(link.url))).length);
- await page.locator('#discoveryFilters [data-axis="status"][data-filter="new"]').click();
- assert.equal(await page.locator('#discoveryFilters [data-filter="github"]').getAttribute('aria-pressed'),'true','Status filtering preserves type selection');
- await page.locator('#resetDiscoveryFilters').click();
- for(const width of [1920,1440,1280]) {
-  await page.setViewportSize({width,height:900});
-  const boxes=await page.locator('.catalog-card').evaluateAll(nodes=>nodes.slice(0,4).map(node=>({x:node.getBoundingClientRect().x,y:node.getBoundingClientRect().y})));
-  const columns=3;
-  assert.equal(boxes.filter(box=>box.y===boxes[0].y).length,columns,'Catalog columns at '+width);
- }
- await page.setViewportSize({width:1280,height:800});
- assert.ok((await page.locator('.catalog-card').first().boundingBox()).y<=480,'Larger-type catalog and three filter rows begin within the first 480px');
- await page.locator('#discoveryFilters [data-filter="workflow"]').click();
- assert.ok((await page.locator('#discoveryAllList').innerText()).includes('Remotion'),'Workflow catalog retains showcase directories');
- const singleWidth=(await page.locator('.catalog-card').first().boundingBox()).width;
- assert.ok(singleWidth<600,'A small result set does not stretch across the catalog');
- await page.locator('#discoveryFilters [data-filter="recommended"]').click();
- await page.locator('#discoveryFilters [data-filter="collections"]').click();
- await page.locator('#discoveryFilters [data-filter="github"]').click();
- assert.ok(await page.locator('#discoveryAllList .empty-state').isVisible(),'Empty intersection offers clear feedback');
- await page.locator('#resetDiscoveryFilters').click();
- await page.locator('.catalog-card').first().click();await ready(page);
- await page.locator('#backButton').click();await ready(page);
- assert.equal(new URL(page.url()).hash,'#/ai-discovery','Catalog links return to their parent');
- await page.goto(host.base+'/#/ai-news');await ready(page);
- const newsBoxes=await page.locator('.ai-category-card').evaluateAll(nodes=>nodes.slice(0,3).map(node=>({x:node.getBoundingClientRect().x,y:node.getBoundingClientRect().y})));
- assert.equal(newsBoxes[0].y,newsBoxes[1].y);assert.ok(newsBoxes[2].y>newsBoxes[0].y,'News follows row-major two-column reading order');
  const quiet=structuredClone(data);
- for(const key of ['aiNews','aiDiscovery','contests','support']) for(const item of quiet[key]) {item.firstSeenDate='2026-01-01';item.lastUpdatedDate='2026-01-01';}
- quiet.aiNews[0].lastUpdatedDate=quiet.date;
+ for(const key of ['contests','support']) for(const item of quiet[key]) {item.firstSeenDate='2026-01-01';item.lastUpdatedDate='2026-01-01';}
+ const quietDay=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul'}).format(new Date());
+ const changed=quiet.contests.slice(1).find(i=>i.status!=='CLOSED'&&Array.isArray(i.deadline)&&i.deadline.some(d=>d>=quietDay&&d>=quiet.date));assert.ok(changed,'An open contest exists to mark as updated');changed.lastUpdatedDate=quiet.date;
  quiet.contests[0].status='CLOSED';quiet.contests[0].dDay='오늘 마감';
  await page.route('**/data/latest.json?*',r=>r.fulfill({json:quiet}));
  await page.goto(host.base+'/?ux-test=quiet#/');await ready(page);
  assert.ok(await page.locator('[data-briefing-section="new"] .briefing-empty').isVisible(),'Quiet days show an explicit empty summary');
- assert.deepEqual(await page.locator('[data-briefing-section="updated"] [data-id]').evaluateAll(rows=>rows.map(row=>row.dataset.id)),[quiet.aiNews[0].id],'Updated summary contains only actual snapshot-day changes');
+ assert.deepEqual(await page.locator('[data-briefing-section="updated"] [data-id]').evaluateAll(rows=>rows.map(row=>row.dataset.id)),[changed.id],'Updated summary contains only actual snapshot-day changes');
  assert.equal(await page.locator('#homeFeed [data-id="'+quiet.contests[0].id+'"]').count(),0,'Closed opportunities cannot enter the daily summary');
  // A brief published on 11-06 and read on 11-09: D-day follows the reader's day (review-2026-11-06-dday.md).
  const stale=structuredClone(data);stale.date='2026-11-06';
@@ -111,7 +77,6 @@ try {
  Object.assign(unknown,{status:'OPEN',deadline:'확인 필요',dDay:'마감 확인 필요'});
  const reader=await browser.newPage({viewport:{width:1440,height:900}});
  await reader.clock.setFixedTime(new Date('2026-11-09T12:00:00+09:00'));
- await reader.route('https://api.github.com/repos/**',r=>r.fulfill({json:{stargazers_count:1234,forks_count:10}}));
  await reader.route('**/data/latest.json?*',r=>r.fulfill({json:stale}));
  await reader.goto(host.base+'/?ux-test=stale#/contests');await ready(reader);
  assert.equal(await reader.locator('ion-card[data-id="'+soon.id+'"] .opportunity-card-v2-status').innerText(),'D-1','D-day counts from the reader\'s day');
