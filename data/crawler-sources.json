@@ -16,6 +16,27 @@
   },
   "active": [
     {
+      "key": "aiFactory",
+      "name": "AI팩토리 경진대회",
+      "url": "https://aifactory.space/ko/competition",
+      "role": "AI·데이터 경진대회 목록(한 쪽에 전체, 종료 표시 제외)",
+      "required": false,
+      "managed": true,
+      "category": "contest",
+      "note": "2026-11-09 추가: 개발·AI 대회가 적다는 사용자 지적. robots.txt는 * 에 금지 규칙 없음.",
+      "crawlerSpec": {
+        "url": "https://aifactory.space/ko/competition",
+        "linkSelector": "a[href*='/competitions/']",
+        "urlRegex": "/competitions/\\d+",
+        "excludeTextRegex": "종료",
+        "actionability": "all",
+        "scrollRounds": 10,
+        "userAgent": "Mozilla/5.0 (compatible; daily-brief-crawler)",
+        "allowEmpty": true
+      },
+      "promotedAt": "2026-11-09"
+    },
+    {
       "key": "contestKorea",
       "name": "ContestKorea",
       "url": "https://contestkorea.kr/",
@@ -71,6 +92,17 @@
       "category": "startupSupport"
     },
     {
+      "key": "linkareer",
+      "name": "링커리어 공모전",
+      "url": "https://linkareer.com/list/contest?filterBy_status=OPEN",
+      "role": "접수 중 공모전 전체(약 460건). 쪽 번호 버튼을 눌러 끝까지 읽는다(crawl_sources.mjs crawlLinkareer)",
+      "required": false,
+      "managed": true,
+      "category": "contest",
+      "note": "2026-11-10 추가: 개발·AI 대회가 적다는 사용자 지적. robots.txt는 목록을 허용(Allow: /).",
+      "promotedAt": "2026-11-10"
+    },
+    {
       "key": "sotong24Contests",
       "name": "소통24 공모전",
       "url": "https://sotong.go.kr/front/epilogue/epilogueBbsList.do",
@@ -108,38 +140,6 @@
         }
       },
       "promotedAt": "2026-11-05"
-    },
-    {
-      "key": "aiFactory",
-      "name": "AI팩토리 경진대회",
-      "url": "https://aifactory.space/ko/competition",
-      "role": "AI·데이터 경진대회 목록(한 쪽에 전체, 종료 표시 제외)",
-      "required": false,
-      "managed": true,
-      "category": "contest",
-      "note": "2026-11-09 추가: 개발·AI 대회가 적다는 사용자 지적. robots.txt는 * 에 금지 규칙 없음.",
-      "crawlerSpec": {
-        "url": "https://aifactory.space/ko/competition",
-        "linkSelector": "a[href*='/competitions/']",
-        "urlRegex": "/competitions/\\d+",
-        "excludeTextRegex": "종료",
-        "actionability": "all",
-        "scrollRounds": 10,
-        "userAgent": "Mozilla/5.0 (compatible; daily-brief-crawler)",
-        "allowEmpty": true
-      },
-      "promotedAt": "2026-11-09"
-    },
-    {
-      "key": "linkareer",
-      "name": "링커리어 공모전",
-      "url": "https://linkareer.com/list/contest?filterBy_status=OPEN",
-      "role": "접수 중 공모전 전체(약 460건). 쪽 번호 버튼을 눌러 끝까지 읽는다(crawl_sources.mjs crawlLinkareer)",
-      "required": false,
-      "managed": true,
-      "category": "contest",
-      "note": "2026-11-10 추가: 개발·AI 대회가 적다는 사용자 지적. robots.txt는 목록을 허용(Allow: /).",
-      "promotedAt": "2026-11-10"
     }
   ],
   "degraded": [],
@@ -2228,6 +2228,6 @@
       "recommendation": "NEEDS_CRAWLER_SPEC"
     }
   ],
-  "lastEvolvedDate": "2026-11-09",
-  "lastEvolvedAt": "2026-11-09T07:42:58.544555Z"
+  "lastEvolvedDate": "2026-11-10",
+  "lastEvolvedAt": "2026-11-10T01:55:58.255886Z"
 }
