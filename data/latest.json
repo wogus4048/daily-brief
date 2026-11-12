@@ -1,7 +1,1008 @@
 {
-  "date": "2026-11-10",
-  "generatedAt": "2026-11-10T11:44:07+09:00",
+  "date": "2026-11-12",
+  "generatedAt": "2026-11-12T12:56:34+09:00",
   "contests": [
+    {
+      "id": "contestkorea-202611100065",
+      "title": "[2026 서울관광 프롬프톤] 참가자모집",
+      "summary": "주최 서울관광재단/서울관광재단 · 마감 2026-11-29 · 상금(총상금 : 1,400만원 / 1위 : 500만원)",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "2026.11.09 ~ 2026.11.29",
+      "deadlineText": "2026-11-29",
+      "deadline": [
+        "2026-11-29"
+      ],
+      "participation": "대학생 , 대학원생 , 일반인 , 외국인",
+      "reward": "상금(총상금 : 1,400만원 / 1위 : 500만원)",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611100065"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-17"
+    },
+    {
+      "id": "hackathonkorea-1",
+      "title": "2일 후",
+      "summary": "주최 확인 필요 · 마감 확인 필요",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "확인 필요",
+      "deadline": "확인 필요",
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://koreahackathons.com/events/1-nipa"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "마감 확인 필요"
+    },
+    {
+      "id": "hackathonkorea-2",
+      "title": "9일 후",
+      "summary": "주최 확인 필요 · 마감 확인 필요",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "확인 필요",
+      "deadline": "확인 필요",
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://koreahackathons.com/events/2-nipa"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "마감 확인 필요"
+    },
+    {
+      "id": "hackathonkorea-item",
+      "title": "10일 후",
+      "summary": "주최 확인 필요 · 마감 확인 필요",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "확인 필요",
+      "deadline": "확인 필요",
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://koreahackathons.com/events/future-commerce-challenge"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "마감 확인 필요"
+    },
+    {
+      "id": "hackathonkorea-item-2",
+      "title": "13일 후",
+      "summary": "주최 확인 필요 · 마감 확인 필요",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "확인 필요",
+      "deadline": "확인 필요",
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://koreahackathons.com/events/uk-korea-ai-futures-forum-hackathon-launch-korea"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "마감 확인 필요"
+    },
+    {
+      "id": "linkareer-363779",
+      "title": "광명상생플랫폼 로고 공모전",
+      "summary": "주최 광명시 · 마감 2026-11-17",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-17",
+      "deadline": [
+        "2026-11-17"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://linkareer.com/activity/363779"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-5"
+    },
+    {
+      "id": "linkareer-363778",
+      "title": "POSTECH 테크데이",
+      "summary": "주최 과학기술정보통신부 · 마감 2026-11-18",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-18",
+      "deadline": [
+        "2026-11-18"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://linkareer.com/activity/363778"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-6"
+    },
+    {
+      "id": "linkareer-363777",
+      "title": "제 20회 백석 글판 공모전",
+      "summary": "주최 백석예술대학교 · 마감 2026-11-23",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-23",
+      "deadline": [
+        "2026-11-23"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://linkareer.com/activity/363777"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-11"
+    },
+    {
+      "id": "linkareer-363772",
+      "title": "핵 없는 세상을 위한 전국행동! 마스코트 이름 짓기 대회",
+      "summary": "주최 신규핵발전소저지와 핵없는사회를위한전국행동 · 마감 2026-11-17",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-17",
+      "deadline": [
+        "2026-11-17"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://linkareer.com/activity/363772"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-5"
+    },
+    {
+      "id": "linkareer-363771",
+      "title": "(가칭)과천지식정보타운 도서관 명칭 시민 공모",
+      "summary": "주최 과천시 · 마감 2026-11-22",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-22",
+      "deadline": [
+        "2026-11-22"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://linkareer.com/activity/363771"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-10"
+    },
+    {
+      "id": "linkareer-363762",
+      "title": "2027년 목포KR갤러리 전시 작가 대관 공고",
+      "summary": "주최 KR갤러리 · 마감 2026-12-04",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "2026-12-04",
+      "deadline": [
+        "2026-12-04"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://linkareer.com/activity/363762"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-22"
+    },
+    {
+      "id": "linkareer-363758",
+      "title": "아티스타트 참여 작가 모집",
+      "summary": "주최 KT&G 상상마당 부산 · 마감 2026-12-20",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "2026-12-20",
+      "deadline": [
+        "2026-12-20"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://linkareer.com/activity/363758"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-38"
+    },
+    {
+      "id": "linkareer-363721",
+      "title": "[이벤트] 롤잉(RoleEng) 인스타 팔로우하고 1개월 구독권 받아가자!!",
+      "summary": "주최 인투인미디어 · 마감 2026-11-30",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-30",
+      "deadline": [
+        "2026-11-30"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://linkareer.com/activity/363721"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-18"
+    },
+    {
+      "id": "linkareer-363634",
+      "title": "[현대경제신문] 2027 현대경제신문 신춘문예 공모",
+      "summary": "주최 현대경제신문 · 마감 2026-11-30",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-30",
+      "deadline": [
+        "2026-11-30"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://linkareer.com/activity/363634"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-18"
+    },
+    {
+      "id": "linkareer-363478",
+      "title": "2026「김천시 삼색이수자율상권 유튜브 공모전」",
+      "summary": "주최 삼색이수자율상권상인 협동조합 · 마감 2026-11-30",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-30",
+      "deadline": [
+        "2026-11-30"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://linkareer.com/activity/363478"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-18"
+    },
+    {
+      "id": "linkareer-363438",
+      "title": "[이벤트] VLLO 인스타 팔로우하고 프리미엄 1개월권 받아볼텨?!",
+      "summary": "주최 인투인미디어 · 마감 2026-11-29",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-29",
+      "deadline": [
+        "2026-11-29"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://linkareer.com/activity/363438"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-17"
+    },
+    {
+      "id": "linkareer-363354",
+      "title": "[SCENE] 2026 SCENE AI·실사 웹드라마 공모전",
+      "summary": "주최 SCENE · 마감 2026-12-31",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "AI · 데이터",
+      "icon": "🏆",
+      "tags": [
+        "개발·AI"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "2026-12-31",
+      "deadline": [
+        "2026-12-31"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://linkareer.com/activity/363354"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-49"
+    },
+    {
+      "id": "linkareer-363343",
+      "title": "[세종사이버대학교] 2026 전국민 AI 공모전 AI 불씨",
+      "summary": "주최 세종사이버대학교 · 마감 2026-12-20",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "AI · 데이터",
+      "icon": "🏆",
+      "tags": [
+        "개발·AI"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "2026-12-20",
+      "deadline": [
+        "2026-12-20"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://linkareer.com/activity/363343"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-38"
+    },
+    {
+      "id": "linkareer-363330",
+      "title": "2026년도 강원특별자치도 톡톡 Idea 공모전",
+      "summary": "주최 강원특별자치도 · 마감 2026-11-23",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-23",
+      "deadline": [
+        "2026-11-23"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://linkareer.com/activity/363330"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-11"
+    },
+    {
+      "id": "linkareer-363329",
+      "title": "2026년 제5회 석포마을 공모전",
+      "summary": "주최 (주)영풍 석포제련소 · 마감 2026-12-04",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "2026-12-04",
+      "deadline": [
+        "2026-12-04"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://linkareer.com/activity/363329"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-22"
+    },
+    {
+      "id": "linkareer-363324",
+      "title": "JTI 글로벌 아이디어 공모전",
+      "summary": "주최 제이티인터내셔널코리아 · 마감 2026-11-20",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-20",
+      "deadline": [
+        "2026-11-20"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://linkareer.com/activity/363324"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-8"
+    },
+    {
+      "id": "linkareer-363244",
+      "title": "(재)양산문화재단 CI 재공모",
+      "summary": "주최 재단법인 양산문화재단 · 마감 2026-11-20",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-20",
+      "deadline": [
+        "2026-11-20"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://linkareer.com/activity/363244"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-8"
+    },
+    {
+      "id": "linkareer-363236",
+      "title": "『2026 SVC Seoul AI 해커톤』 | 현대건설과 함께하는 주거생활 AI 아이디어 도전",
+      "summary": "주최 앤에이솔루션(주) · 마감 2026-11-29",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "AI · 데이터",
+      "icon": "🏆",
+      "tags": [
+        "개발·AI"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-29",
+      "deadline": [
+        "2026-11-29"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://linkareer.com/activity/363236"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-17"
+    },
+    {
+      "id": "sotong24contests-516752146527",
+      "title": "2026년 저출생·인구감소 대응 아이디어 공모전 포천도시공사 의견 작성 수0 공유 수0",
+      "summary": "주최 포천도시공사 · 마감 2026-11-23",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "2026-11-09 ~ 2026-11-23",
+      "deadlineText": "2026-11-23",
+      "deadline": [
+        "2026-11-23"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=16fb8760be314506a45bde167c52c146&menu_id=527&pagetype=bbs"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-11"
+    },
+    {
+      "id": "wevity-112217",
+      "title": "[포천도시공사] 2026년 저출생·인구감소 대응 아이디어 공모전",
+      "summary": "주최 포천도시공사 · 마감 2026-11-23 · 10만원",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "2026-11-09 ~ 2026-11-23 D-12",
+      "deadlineText": "2026-11-23",
+      "deadline": [
+        "2026-11-23"
+      ],
+      "participation": "기타",
+      "reward": "10만원",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공식 홈페이지",
+          "url": "https://www.pcuc.kr/boardList/idea"
+        },
+        {
+          "label": "공고",
+          "url": "https://www.wevity.com/?c=find&gbn=view&ix=112217"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "dDay": "D-11"
+    },
+    {
+      "id": "wevity-112220",
+      "title": "2026년 제2회 구리시 정책제안 공모전",
+      "summary": "주최 구리시 · 마감 2026-11-25 · 200만원",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "2026-11-12 ~ 2026-11-25 D-14",
+      "deadlineText": "2026-11-25",
+      "deadline": [
+        "2026-11-25"
+      ],
+      "participation": "제한없음",
+      "reward": "200만원",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공식 홈페이지",
+          "url": "https://www.epeople.go.kr/cmmn/idea/redirect.do?ideaRegNo=1AE-2611-0000423"
+        },
+        {
+          "label": "공고",
+          "url": "https://www.wevity.com/?c=find&gbn=view&ix=112220"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "dDay": "D-13"
+    },
+    {
+      "id": "wevity-112294",
+      "title": "2026 서울관광 프롬프톤",
+      "summary": "주최 서울관광재단 · 마감 2026-11-29 · 500만원",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "2026-11-10 ~ 2026-11-29 D-18",
+      "deadlineText": "2026-11-29",
+      "deadline": [
+        "2026-11-29"
+      ],
+      "participation": "일반인, 대학생",
+      "reward": "500만원",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공식 홈페이지",
+          "url": "https://sto.or.kr/unitrcrit/AI%ED%98%81%EC%8B%A0%ED%8C%80-2026-%EC%84%9C%EC%9A%B8%EA%B4%80%EA%B4%91-%ED%94%84%EB%A1%AC%ED%94%84%ED%86%A4-%EC%B0%B8%EA%B0%80%EC%9E%90-%EB%AA%A8%EC%A7%91-%EA%B3%B5%EA%B3%A0-119~1129_/16809#qopen"
+        },
+        {
+          "label": "공고",
+          "url": "https://www.wevity.com/?c=find&gbn=view&ix=112294"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "dDay": "D-17"
+    },
+    {
+      "id": "wevity-112313",
+      "title": "디어비 글로벌 런칭 공모전 신규",
+      "summary": "주최 DEARBE Corp. · 마감 2026-11-22 · 500만원",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "공모전 · 아이디어",
+      "icon": "🏆",
+      "tags": [],
+      "period": "2026-11-02 ~ 2026-11-22 D-11",
+      "deadlineText": "2026-11-22",
+      "deadline": [
+        "2026-11-22"
+      ],
+      "participation": "일반인, 대학생",
+      "reward": "500만원",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공식 홈페이지",
+          "url": "https://www.dearbe.me/"
+        },
+        {
+          "label": "공고",
+          "url": "https://www.wevity.com/?c=find&gbn=view&ix=112313"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "dDay": "D-10"
+    },
+    {
+      "id": "wevity-112316",
+      "title": "포항시 지역사회 문제 해결을 위한 AI 솔루션 아이디어 경진대회 신규",
+      "summary": "주최 포항시 / 경북ICT융합산업진흥협회 · 마감 2026-11-25 · 300만원",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "AI · 데이터",
+      "icon": "🏆",
+      "tags": [
+        "개발·AI"
+      ],
+      "period": "2026-11-09 ~ 2026-11-25 D-14",
+      "deadlineText": "2026-11-25",
+      "deadline": [
+        "2026-11-25"
+      ],
+      "participation": "기타",
+      "reward": "300만원",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공식 홈페이지",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLScvo0AU03GtMCI1SI-SXwsB7sLo4ToORE1QZ7N9N9q7v3VSFA/viewform"
+        },
+        {
+          "label": "공고",
+          "url": "https://www.wevity.com/?c=find&gbn=view&ix=112316"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "dDay": "D-13"
+    },
     {
       "id": "gpt-find-free-422396307809",
       "title": "용산국제업무지구 AI 스마트도시 아이디어 공모",
@@ -39,7 +1040,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "gpt-find-free-2123",
@@ -78,7 +1079,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-8"
+      "dDay": "D-6"
     },
     {
       "id": "gpt-find-free-238971",
@@ -115,7 +1116,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "gpt-find-free-2339",
@@ -152,7 +1153,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "gpt-find-free-04257",
@@ -189,7 +1190,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "gpt-find-free-181814671",
@@ -228,7 +1229,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "gpt-find-free-449959886725",
@@ -265,7 +1266,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "gpt-find-free-item",
@@ -302,7 +1303,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "gpt-find-free-25501",
@@ -339,7 +1340,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-16"
+      "dDay": "D-14"
     },
     {
       "id": "gpt-find-free-item-3",
@@ -376,7 +1377,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-15"
+      "dDay": "D-13"
     },
     {
       "id": "gpt-find-free-item-4",
@@ -410,7 +1411,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-13"
+      "dDay": "D-11"
     },
     {
       "id": "gpt-find-free-395985",
@@ -447,7 +1448,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "gpt-find-free-item-5",
@@ -484,7 +1485,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "gpt-find-free-item-6",
@@ -521,7 +1522,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-21"
+      "dDay": "D-19"
     },
     {
       "id": "gpt-find-free-item-7",
@@ -558,7 +1559,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "gpt-find-free-item-8",
@@ -595,7 +1596,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-7"
+      "dDay": "D-5"
     },
     {
       "id": "gpt-find-free-item-9",
@@ -632,7 +1633,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-21"
+      "dDay": "D-19"
     },
     {
       "id": "gpt-find-free-item-10",
@@ -669,7 +1670,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-17"
+      "dDay": "D-15"
     },
     {
       "id": "gpt-find-free-16967",
@@ -706,7 +1707,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-7"
+      "dDay": "D-5"
     },
     {
       "id": "gpt-find-free-9945",
@@ -743,7 +1744,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-7"
+      "dDay": "D-5"
     },
     {
       "id": "gpt-find-free-000013322110",
@@ -780,7 +1781,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-7"
+      "dDay": "D-5"
     },
     {
       "id": "gpt-find-free-4177",
@@ -817,7 +1818,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "gpt-find-free-15312733",
@@ -854,7 +1855,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "gpt-find-free-202611050001",
@@ -891,7 +1892,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "gpt-find-free-179703",
@@ -925,7 +1926,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "gpt-find-free-39154",
@@ -964,7 +1965,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-8"
+      "dDay": "D-6"
     },
     {
       "id": "gpt-find-free-01121012280",
@@ -1001,7 +2002,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "gpt-find-free-261023100002",
@@ -1034,11 +2035,12 @@
           "url": "https://www.smes.go.kr/binet/board/editView.do?boardID=RECRUIT&boardVO.postSeq=999827860&boardVO.registDate=20261023100002&boardVO.viewFlag=view&frefaceCode=ENTERPRISERECRUIT"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "오늘 마감"
+      "dDay": "오늘 마감",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "gpt-find-free-16266",
@@ -1075,7 +2077,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-16"
+      "dDay": "D-14"
     },
     {
       "id": "wevity-112250",
@@ -1112,7 +2114,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-17"
+      "dDay": "D-15"
     },
     {
       "id": "wevity-112270",
@@ -1149,7 +2151,7 @@
       "firstSeenDate": "2026-11-10",
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
-      "dDay": "D-13"
+      "dDay": "D-11"
     },
     {
       "id": "linkareer-363233",
@@ -1183,7 +2185,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-15"
+      "dDay": "D-13"
     },
     {
       "id": "linkareer-363178",
@@ -1217,7 +2219,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "linkareer-363168",
@@ -1251,7 +2253,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "linkareer-363167",
@@ -1285,7 +2287,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "linkareer-363165",
@@ -1319,7 +2321,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-17"
+      "dDay": "D-15"
     },
     {
       "id": "linkareer-363164",
@@ -1353,7 +2355,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "linkareer-363147",
@@ -1387,7 +2389,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-13"
+      "dDay": "D-11"
     },
     {
       "id": "linkareer-363111",
@@ -1421,7 +2423,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "linkareer-363047",
@@ -1455,7 +2457,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-15"
+      "dDay": "D-13"
     },
     {
       "id": "linkareer-363010",
@@ -1489,7 +2491,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "linkareer-362973",
@@ -1523,7 +2525,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "linkareer-362972",
@@ -1557,7 +2559,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-21"
+      "dDay": "D-19"
     },
     {
       "id": "linkareer-362868",
@@ -1591,7 +2593,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "linkareer-362686",
@@ -1625,7 +2627,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "linkareer-362624",
@@ -1659,7 +2661,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "linkareer-362618",
@@ -1693,7 +2695,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-69"
+      "dDay": "D-67"
     },
     {
       "id": "linkareer-362575",
@@ -1727,7 +2729,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "linkareer-362573",
@@ -1761,7 +2763,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-15"
+      "dDay": "D-13"
     },
     {
       "id": "linkareer-362570",
@@ -1797,7 +2799,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "linkareer-362566",
@@ -1831,7 +2833,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-8"
+      "dDay": "D-6"
     },
     {
       "id": "linkareer-362552",
@@ -1865,7 +2867,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "linkareer-362530",
@@ -1899,7 +2901,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "linkareer-362464",
@@ -1933,7 +2935,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "linkareer-362454",
@@ -1967,7 +2969,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-15"
+      "dDay": "D-13"
     },
     {
       "id": "linkareer-362196",
@@ -2001,7 +3003,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "linkareer-362191",
@@ -2035,7 +3037,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "linkareer-362190",
@@ -2069,7 +3071,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "linkareer-362189",
@@ -2105,7 +3107,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-17"
+      "dDay": "D-15"
     },
     {
       "id": "linkareer-362188",
@@ -2139,7 +3141,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-34"
+      "dDay": "D-32"
     },
     {
       "id": "linkareer-362186",
@@ -2173,7 +3175,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "linkareer-362184",
@@ -2207,7 +3209,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "linkareer-362181",
@@ -2241,7 +3243,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-19"
+      "dDay": "D-17"
     },
     {
       "id": "linkareer-362001",
@@ -2275,7 +3277,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "linkareer-361942",
@@ -2309,7 +3311,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-16"
+      "dDay": "D-14"
     },
     {
       "id": "linkareer-361801",
@@ -2345,7 +3347,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "linkareer-361774",
@@ -2379,7 +3381,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-8"
+      "dDay": "D-6"
     },
     {
       "id": "linkareer-361611",
@@ -2413,7 +3415,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "linkareer-361499",
@@ -2447,7 +3449,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-23"
+      "dDay": "D-21"
     },
     {
       "id": "linkareer-361498",
@@ -2481,7 +3483,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "linkareer-361494",
@@ -2515,7 +3517,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-138"
+      "dDay": "D-136"
     },
     {
       "id": "linkareer-361485",
@@ -2549,7 +3551,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "linkareer-361356",
@@ -2585,7 +3587,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-13"
+      "dDay": "D-11"
     },
     {
       "id": "linkareer-361293",
@@ -2621,7 +3623,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "linkareer-361067",
@@ -2655,7 +3657,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-8"
+      "dDay": "D-6"
     },
     {
       "id": "linkareer-361061",
@@ -2689,7 +3691,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-2"
+      "dDay": "오늘 마감"
     },
     {
       "id": "linkareer-361060",
@@ -2723,7 +3725,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-8"
+      "dDay": "D-6"
     },
     {
       "id": "linkareer-361059",
@@ -2757,7 +3759,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-13"
+      "dDay": "D-11"
     },
     {
       "id": "linkareer-361058",
@@ -2791,7 +3793,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "linkareer-361049",
@@ -2825,7 +3827,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-82"
+      "dDay": "D-80"
     },
     {
       "id": "linkareer-361048",
@@ -2859,7 +3861,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-38"
+      "dDay": "D-36"
     },
     {
       "id": "linkareer-361047",
@@ -2893,7 +3895,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "linkareer-360963",
@@ -2927,7 +3929,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "linkareer-360954",
@@ -2961,7 +3963,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-14"
+      "dDay": "D-12"
     },
     {
       "id": "linkareer-360877",
@@ -2995,7 +3997,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "linkareer-360855",
@@ -3029,7 +4031,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "linkareer-360851",
@@ -3058,12 +4060,13 @@
           "url": "https://linkareer.com/activity/360851"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-1"
+      "dDay": "D-1",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "linkareer-360841",
@@ -3097,7 +4100,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "linkareer-360714",
@@ -3131,7 +4134,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "linkareer-360695",
@@ -3165,7 +4168,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "linkareer-360600",
@@ -3199,7 +4202,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "linkareer-360570",
@@ -3235,7 +4238,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-18"
+      "dDay": "D-16"
     },
     {
       "id": "linkareer-360534",
@@ -3269,7 +4272,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-82"
+      "dDay": "D-80"
     },
     {
       "id": "linkareer-360529",
@@ -3303,7 +4306,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-9"
+      "dDay": "D-7"
     },
     {
       "id": "linkareer-360524",
@@ -3339,7 +4342,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "linkareer-360521",
@@ -3373,7 +4376,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-26"
+      "dDay": "D-24"
     },
     {
       "id": "linkareer-360519",
@@ -3407,7 +4410,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-4"
+      "dDay": "D-2"
     },
     {
       "id": "linkareer-360404",
@@ -3441,7 +4444,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-4"
+      "dDay": "D-2"
     },
     {
       "id": "linkareer-360403",
@@ -3475,7 +4478,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-27"
+      "dDay": "D-25"
     },
     {
       "id": "linkareer-360339",
@@ -3509,7 +4512,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "linkareer-360283",
@@ -3543,7 +4546,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "linkareer-360083",
@@ -3577,7 +4580,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "linkareer-360022",
@@ -3606,12 +4609,13 @@
           "url": "https://linkareer.com/activity/360022"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-1"
+      "dDay": "D-1",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "linkareer-360017",
@@ -3645,7 +4649,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "linkareer-359946",
@@ -3679,7 +4683,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-19"
+      "dDay": "D-17"
     },
     {
       "id": "linkareer-359912",
@@ -3713,7 +4717,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "linkareer-359824",
@@ -3747,7 +4751,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "linkareer-359823",
@@ -3781,7 +4785,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "linkareer-359792",
@@ -3815,7 +4819,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "linkareer-359785",
@@ -3844,12 +4848,13 @@
           "url": "https://linkareer.com/activity/359785"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-1"
+      "dDay": "D-1",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "linkareer-359674",
@@ -3883,7 +4888,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "linkareer-359672",
@@ -3917,7 +4922,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-21"
+      "dDay": "D-19"
     },
     {
       "id": "linkareer-359668",
@@ -3951,7 +4956,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "linkareer-359654",
@@ -3985,7 +4990,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "linkareer-359653",
@@ -4019,7 +5024,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "linkareer-359552",
@@ -4055,7 +5060,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "linkareer-359547",
@@ -4089,7 +5094,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "linkareer-359542",
@@ -4123,7 +5128,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-69"
+      "dDay": "D-67"
     },
     {
       "id": "linkareer-359538",
@@ -4159,7 +5164,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "linkareer-359533",
@@ -4193,7 +5198,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-69"
+      "dDay": "D-67"
     },
     {
       "id": "linkareer-359362",
@@ -4229,7 +5234,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "linkareer-359206",
@@ -4263,7 +5268,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "linkareer-359205",
@@ -4297,7 +5302,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-13"
+      "dDay": "D-11"
     },
     {
       "id": "linkareer-359172",
@@ -4331,7 +5336,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-71"
+      "dDay": "D-69"
     },
     {
       "id": "linkareer-359156",
@@ -4367,7 +5372,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-17"
+      "dDay": "D-15"
     },
     {
       "id": "linkareer-359011",
@@ -4401,7 +5406,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-17"
+      "dDay": "D-15"
     },
     {
       "id": "linkareer-358740",
@@ -4430,12 +5435,13 @@
           "url": "https://linkareer.com/activity/358740"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-1"
+      "dDay": "D-1",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "linkareer-358718",
@@ -4469,7 +5475,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-17"
+      "dDay": "D-15"
     },
     {
       "id": "linkareer-358669",
@@ -4503,7 +5509,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "linkareer-358667",
@@ -4537,7 +5543,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-2"
+      "dDay": "오늘 마감"
     },
     {
       "id": "linkareer-358658",
@@ -4571,7 +5577,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "linkareer-358536",
@@ -4607,7 +5613,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-40"
+      "dDay": "D-38"
     },
     {
       "id": "linkareer-358486",
@@ -4641,7 +5647,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "linkareer-358358",
@@ -4677,7 +5683,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "linkareer-358190",
@@ -4711,7 +5717,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "linkareer-358160",
@@ -4742,12 +5748,13 @@
           "url": "https://linkareer.com/activity/358160"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-1"
+      "dDay": "D-1",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "linkareer-358118",
@@ -4781,7 +5788,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-111"
+      "dDay": "D-109"
     },
     {
       "id": "linkareer-358067",
@@ -4815,7 +5822,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-7"
+      "dDay": "D-5"
     },
     {
       "id": "linkareer-358047",
@@ -4849,7 +5856,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "linkareer-358042",
@@ -4883,7 +5890,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "linkareer-357821",
@@ -4917,7 +5924,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-8"
+      "dDay": "D-6"
     },
     {
       "id": "linkareer-357811",
@@ -4951,7 +5958,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-13"
+      "dDay": "D-11"
     },
     {
       "id": "linkareer-357799",
@@ -4985,7 +5992,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "linkareer-357640",
@@ -5019,7 +6026,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "linkareer-357638",
@@ -5053,7 +6060,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "linkareer-356979",
@@ -5087,7 +6094,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "linkareer-356724",
@@ -5121,7 +6128,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-15"
+      "dDay": "D-13"
     },
     {
       "id": "linkareer-356521",
@@ -5155,7 +6162,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-61"
+      "dDay": "D-59"
     },
     {
       "id": "linkareer-356514",
@@ -5189,7 +6196,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "linkareer-356303",
@@ -5223,7 +6230,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-22"
+      "dDay": "D-20"
     },
     {
       "id": "linkareer-356297",
@@ -5257,7 +6264,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-8"
+      "dDay": "D-6"
     },
     {
       "id": "linkareer-356293",
@@ -5291,7 +6298,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "linkareer-356288",
@@ -5325,7 +6332,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-97"
+      "dDay": "D-95"
     },
     {
       "id": "linkareer-356284",
@@ -5359,7 +6366,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-108"
+      "dDay": "D-106"
     },
     {
       "id": "linkareer-356251",
@@ -5393,7 +6400,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "linkareer-356001",
@@ -5427,7 +6434,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "linkareer-355997",
@@ -5463,7 +6470,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-61"
+      "dDay": "D-59"
     },
     {
       "id": "linkareer-355928",
@@ -5497,7 +6504,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "linkareer-355511",
@@ -5531,7 +6538,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "linkareer-355504",
@@ -5565,7 +6572,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "linkareer-354706",
@@ -5599,7 +6606,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "linkareer-354420",
@@ -5633,7 +6640,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-8"
+      "dDay": "D-6"
     },
     {
       "id": "linkareer-354213",
@@ -5667,7 +6674,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "linkareer-354190",
@@ -5701,7 +6708,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-30"
+      "dDay": "D-28"
     },
     {
       "id": "linkareer-353759",
@@ -5735,7 +6742,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-27"
+      "dDay": "D-25"
     },
     {
       "id": "linkareer-353664",
@@ -5771,7 +6778,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-48"
+      "dDay": "D-46"
     },
     {
       "id": "linkareer-353346",
@@ -5805,7 +6812,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-47"
+      "dDay": "D-45"
     },
     {
       "id": "linkareer-353201",
@@ -5839,7 +6846,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "linkareer-352918",
@@ -5873,7 +6880,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-40"
+      "dDay": "D-38"
     },
     {
       "id": "linkareer-352794",
@@ -5907,7 +6914,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "linkareer-352503",
@@ -5941,7 +6948,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "linkareer-352463",
@@ -5975,7 +6982,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-59"
+      "dDay": "D-57"
     },
     {
       "id": "linkareer-352396",
@@ -6009,7 +7016,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-42"
+      "dDay": "D-40"
     },
     {
       "id": "linkareer-352004",
@@ -6043,7 +7050,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "linkareer-351221",
@@ -6079,7 +7086,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "linkareer-350787",
@@ -6113,7 +7120,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "linkareer-350245",
@@ -6147,7 +7154,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "linkareer-350089",
@@ -6181,7 +7188,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "linkareer-350009",
@@ -6215,7 +7222,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "linkareer-349733",
@@ -6249,7 +7256,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "linkareer-348846",
@@ -6283,7 +7290,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-82"
+      "dDay": "D-80"
     },
     {
       "id": "linkareer-348415",
@@ -6317,7 +7324,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-23"
+      "dDay": "D-21"
     },
     {
       "id": "linkareer-348399",
@@ -6351,7 +7358,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "linkareer-347984",
@@ -6387,7 +7394,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-8"
+      "dDay": "D-6"
     },
     {
       "id": "linkareer-347593",
@@ -6421,7 +7428,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-28"
+      "dDay": "D-26"
     },
     {
       "id": "linkareer-347107",
@@ -6455,7 +7462,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-15"
+      "dDay": "D-13"
     },
     {
       "id": "linkareer-345081",
@@ -6489,7 +7496,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "linkareer-344560",
@@ -6523,7 +7530,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-36"
+      "dDay": "D-34"
     },
     {
       "id": "linkareer-344513",
@@ -6557,7 +7564,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-22"
+      "dDay": "D-20"
     },
     {
       "id": "linkareer-344185",
@@ -6591,7 +7598,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "linkareer-344134",
@@ -6625,7 +7632,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-66"
+      "dDay": "D-64"
     },
     {
       "id": "linkareer-343626",
@@ -6659,7 +7666,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "linkareer-343589",
@@ -6693,7 +7700,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "linkareer-343281",
@@ -6727,7 +7734,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-26"
+      "dDay": "D-24"
     },
     {
       "id": "linkareer-342955",
@@ -6761,7 +7768,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-29"
+      "dDay": "D-27"
     },
     {
       "id": "linkareer-342528",
@@ -6795,7 +7802,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-15"
+      "dDay": "D-13"
     },
     {
       "id": "linkareer-342146",
@@ -6829,7 +7836,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-66"
+      "dDay": "D-64"
     },
     {
       "id": "linkareer-342131",
@@ -6863,7 +7870,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "linkareer-342034",
@@ -6899,7 +7906,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-15"
+      "dDay": "D-13"
     },
     {
       "id": "linkareer-341929",
@@ -6933,7 +7940,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-16"
+      "dDay": "D-14"
     },
     {
       "id": "linkareer-341927",
@@ -6967,7 +7974,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "linkareer-340069",
@@ -7001,7 +8008,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "linkareer-339681",
@@ -7035,7 +8042,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-82"
+      "dDay": "D-80"
     },
     {
       "id": "linkareer-339328",
@@ -7071,7 +8078,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "linkareer-338658",
@@ -7105,7 +8112,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-176"
+      "dDay": "D-174"
     },
     {
       "id": "linkareer-338415",
@@ -7139,7 +8146,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "linkareer-337774",
@@ -7173,7 +8180,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "linkareer-334819",
@@ -7207,7 +8214,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "linkareer-334310",
@@ -7241,7 +8248,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "linkareer-332168",
@@ -7275,7 +8282,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-86"
+      "dDay": "D-84"
     },
     {
       "id": "linkareer-330183",
@@ -7309,7 +8316,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "linkareer-328241",
@@ -7343,7 +8350,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "linkareer-314746",
@@ -7377,7 +8384,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-56"
+      "dDay": "D-54"
     },
     {
       "id": "linkareer-311199",
@@ -7411,7 +8418,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "linkareer-310916",
@@ -7445,7 +8452,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "linkareer-304006",
@@ -7479,7 +8486,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "linkareer-299469",
@@ -7513,7 +8520,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "lg-another-idea-challenge-2026",
@@ -7576,7 +8583,7 @@
       "lastUpdatedDate": "2026-11-09",
       "lastVerifiedDate": "2026-11-09",
       "officialCheck": "PENDING",
-      "dDay": "D-7"
+      "dDay": "D-5"
     },
     {
       "id": "kpetro-innovation-idea-2026",
@@ -7618,7 +8625,7 @@
       "firstSeenDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-09",
       "lastVerifiedDate": "2026-11-09",
-      "dDay": "D-17"
+      "dDay": "D-15"
     },
     {
       "id": "hongik-huss-smart-city-ideas-2026",
@@ -7779,11 +8786,12 @@
           "url": "https://mois.go.kr/frt/bbs/type013/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000006&nttId=130237"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-09",
-      "lastUpdatedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-09",
-      "dDay": "D-1"
+      "dDay": "D-1",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "gyeongbuk-regulation-reform-idea-2026",
@@ -7823,7 +8831,7 @@
       "deadline": [
         "2026-11-16"
       ],
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "kpii-ai-service-planning-2026",
@@ -7863,7 +8871,7 @@
       "deadline": [
         "2026-11-30"
       ],
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "daejeon-transit-citizen-idea-2026",
@@ -7904,7 +8912,7 @@
       "deadline": [
         "2026-11-29"
       ],
-      "dDay": "D-19"
+      "dDay": "D-17"
     },
     {
       "firstSeenDate": "2026-11-09",
@@ -7945,13 +8953,13 @@
           "url": "https://www.dgucenter.or.kr/bbs/board.php?bo_table=notice&wr_id=744"
         }
       ],
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "firstSeenDate": "2026-11-09",
-      "lastUpdatedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-09",
-      "status": "OPEN",
+      "status": "CLOSED",
       "id": "kisa-modu-idea-contest-2026",
       "categoryLabel": "공모전 · 아이디어",
       "icon": "🛡️",
@@ -7986,7 +8994,8 @@
           "url": "https://www.kisa.or.kr/401/form?postSeq=3791&page=1"
         }
       ],
-      "dDay": "오늘 마감"
+      "dDay": "오늘 마감",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "firstSeenDate": "2026-11-09",
@@ -8032,7 +9041,7 @@
           "url": "https://cse.snu.ac.kr/ko/community/notice/25514"
         }
       ],
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "firstSeenDate": "2026-11-09",
@@ -8078,7 +9087,7 @@
           "url": "https://contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=030310001&str_no=202611070021"
         }
       ],
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "mcee-resource-circulation-idea-2026",
@@ -8167,7 +9176,7 @@
       "title": "2027 KT&G 국제 대학생 창업교류전(ASVF) 한국대표 모집",
       "summary": "한국경제신문이 여는 국제 대학생 창업교류전의 한국대표 팀을 뽑는 공모입니다",
       "description": "일반부문은 12.11 14시, 군장병부문은 별도로 11.30 14시에 마감합니다. 두 부문 모두 전체 일정에 참여할 수 있어야 합니다.",
-      "dDay": "D-20",
+      "dDay": "D-18",
       "deadlineText": "12.11 14:00",
       "tags": [
         "대학생 창업",
@@ -8209,7 +9218,7 @@
       "title": "상주시 대표축제 대국민 아이디어 공모전",
       "summary": "상주시 대표 축제를 키울 아이디어를 받는 대형 상금 공모전입니다",
       "description": "주최 전용 사이트에서 온라인으로 접수하며, 법인·단체로 참가할 때는 사업자등록증 등을 내야 합니다. 마감이 2027.01.15라 시간 여유가 큽니다.",
-      "dDay": "D-66",
+      "dDay": "D-64",
       "deadlineText": "2027.01.15 18:00",
       "tags": [
         "축제",
@@ -8250,7 +9259,7 @@
       "title": "2026년 금연 정책제안 연구공모전",
       "summary": "서울금연지원센터가 받는 금연 정책 제안 연구 공모전입니다",
       "description": "접수는 이메일로 하며 전공·직업 제한이 없습니다. 연구형 제안서이므로 근거 자료를 함께 정리하는 것이 좋습니다.",
-      "dDay": "D-3",
+      "dDay": "D-1",
       "deadlineText": "11.13",
       "tags": [
         "금연",
@@ -8332,7 +9341,7 @@
       "title": "사장님을 위한 금융 아이디어 공모전",
       "summary": "케이뱅크와 카카오뱅크가 함께 여는 소상공인 금융 아이디어 공모전입니다",
       "description": "공식 공모요강에서 접수 기간 11.16 18:00까지, 대상 전국 대학(원)생으로 확인됐습니다.",
-      "dDay": "D-6",
+      "dDay": "D-4",
       "deadlineText": "11.16 18:00",
       "tags": [
         "금융",
@@ -8414,7 +9423,7 @@
       "title": "2026년 2차 외국발 허위정보 대응 대학생 아이디어 공모전",
       "summary": "KAIST 안보융합원이 여는 외국발 허위정보 대응 아이디어 공모전입니다",
       "description": "공식 공고에서 공모 기간 11.17 18:00까지, 참여 대상 국내 대학(원) 재학·휴학생으로 확인됐습니다.",
-      "dDay": "D-7",
+      "dDay": "D-5",
       "deadlineText": "11.17 18:00",
       "tags": [
         "허위정보",
@@ -8455,7 +9464,7 @@
       "title": "2026 대구광역시 기후·환경·탄소중립 공공데이터 AI 활용대회",
       "summary": "대구 탄소중립지원센터가 여는 공공데이터·AI 활용 대회입니다",
       "description": "센터 공지 포스터에서 접수 기간 11.20 17:00까지, 대상 국민 누구나(개인)로 확인됐고, 양식을 내려받아 이메일로 접수합니다.",
-      "dDay": "D-10",
+      "dDay": "D-8",
       "deadlineText": "11.20 17:00",
       "tags": [
         "공공데이터",
@@ -8496,7 +9505,7 @@
       "title": "2026년 신규 MICE 행사 아이디어 공모전",
       "summary": "한국PCO협회가 받는 새 MICE 행사 기획 아이디어 공모전입니다",
       "description": "한국PCO협회 공지에서 공모 기간 11.15까지, 대상 대학(원)생 2인 이상 팀으로 확인됐습니다.",
-      "dDay": "D-5",
+      "dDay": "D-3",
       "deadlineText": "11.15",
       "tags": [
         "MICE",
@@ -8578,7 +9587,7 @@
       "title": "서울특별시 행정서식 뚝딱뚝딱 개선 아이디어 공모전",
       "summary": "서울시 행정서식을 더 쉽게 고칠 개선 아이디어를 받는 공모전입니다",
       "description": "서울시 공고에서 응모 기간 11.20 23:59까지, 개인 자격만 가능하며 팀 제출은 안 된다고 안내돼 있습니다.",
-      "dDay": "D-10",
+      "dDay": "D-8",
       "deadlineText": "11.20 23:59",
       "tags": [
         "행정서식",
@@ -8618,7 +9627,7 @@
       "title": "이거 바뀌면 어때유? 대전 시민 생활·관계 개선 아이디어 공모전",
       "summary": "대전사회혁신센터가 시민 생활·관계를 좋게 할 아이디어를 받는 공모전입니다",
       "description": "주최 사이트에서 모집중과 신청 기간 11.13 18:00까지가 확인됐습니다. 상세 내용이 이미지·PDF라 참가 대상은 확인하지 못했습니다.",
-      "dDay": "D-3",
+      "dDay": "D-1",
       "deadlineText": "11.13 18:00",
       "tags": [
         "대전",
@@ -8658,7 +9667,7 @@
       "title": "소상공인 성장 및 재도약을 위한 정책 아이디어 공모전",
       "summary": "경기신용보증재단이 소상공인 재도약 정책 아이디어를 받는 공모전입니다",
       "description": "재단 전용 사이트에서 공모 기간 11.16까지, 대상 전 국민 개인 또는 3인 이내 팀으로 확인됐습니다.",
-      "dDay": "D-6",
+      "dDay": "D-4",
       "deadlineText": "11.16",
       "tags": [
         "소상공인",
@@ -8698,7 +9707,7 @@
       "title": "용산국제업무지구 스마트도시 아이디어 공모전",
       "summary": "서울시와 한국도시설계학회가 용산국제업무지구 스마트도시 아이디어를 받는 공모입니다",
       "description": "이번 자료에는 공식 확인 결과가 없어 모든 값은 모음 사이트 기준입니다. 접수 기간과 참가 자격은 공식 페이지에서 확인해야 합니다.",
-      "dDay": "D-10",
+      "dDay": "D-8",
       "deadlineText": "11.20",
       "tags": [
         "스마트도시",
@@ -8738,7 +9747,7 @@
       "title": "현대자동차그룹 차량용 앱 개발 공모전",
       "summary": "현대자동차그룹이 여는 차량용 앱 개발 대회입니다",
       "description": "이번 자료에는 공식 확인 결과가 없어 값은 모음 사이트 기준입니다. 공식 사이트(appdevchallenge.auto-hmg.io)에서 개발 환경과 제출 방식을 확인해야 합니다.",
-      "dDay": "D-5",
+      "dDay": "D-3",
       "deadlineText": "11.15",
       "tags": [
         "차량용 앱",
@@ -8860,7 +9869,7 @@
       "title": "2026 대학생 정책 아이디어 공모전",
       "summary": "한국정책분석평가학회가 받는 대학생 정책 아이디어 공모전입니다",
       "description": "주최 학회 사이트가 보안 오류로 열리지 않아 공식 확인은 못 했습니다. 마감 11.26 23:59와 대상은 외부 공고 기준입니다.",
-      "dDay": "D-16",
+      "dDay": "D-14",
       "deadlineText": "11.26 23:59",
       "tags": [
         "정책 아이디어",
@@ -8899,7 +9908,7 @@
       "title": "2026 사회보장 데이터를 활용한 AI 혁신 아이디어 경진대회",
       "summary": "한국사회보장정보원과 대구가톨릭대가 여는 사회보장 데이터 AI 아이디어 대회입니다",
       "description": "경기도청 공식 게시물에서 공모 기간 10.21~11.20, 참가 자격 국민 누구나(개인 또는 팀), 접수 wma.co.kr/ax로 확인됐습니다. 운영 페이지 본문은 읽히지 않았습니다.",
-      "dDay": "D-10",
+      "dDay": "D-8",
       "deadlineText": "11.20",
       "tags": [
         "사회보장 데이터",
@@ -8939,7 +9948,7 @@
       "title": "[제10회 모모전] 현대모비스 창립 50주년 굿즈 아이디어 공모전",
       "summary": "현대모비스 창립 50주년 굿즈 아이디어를 받는 공모전입니다",
       "description": "공식 안내 페이지를 직접 열지 못해 접수 기간과 대상은 모음 사이트·외부 공고 기준입니다. 공식 페이지는 로그인 후 참여할 수 있다고 안내됩니다.",
-      "dDay": "D-8",
+      "dDay": "D-6",
       "deadlineText": "11.18",
       "tags": [
         "굿즈 아이디어",
@@ -9061,7 +10070,7 @@
       "title": "2026년 해양 창업아이디어 공모전 Spark-up 1876",
       "summary": "부산항만공사 등이 여는 해양 분야 창업 아이디어 공모전입니다",
       "description": "이번 자료에는 공식 확인 결과가 없어 값은 모음 사이트 기준입니다. 창업 1년 미만 초기창업자도 참가 대상으로 안내돼 있습니다.",
-      "dDay": "D-6",
+      "dDay": "D-4",
       "deadlineText": "11.16",
       "tags": [
         "해양",
@@ -9102,7 +10111,7 @@
       "title": "2026 체육관련 규제개선 공모전",
       "summary": "국민체육진흥공단이 체육 분야 규제 개선 제안을 받는 공모전입니다",
       "description": "이번 자료에는 공식 확인 결과가 없어 값은 모음 사이트 기준입니다. 제출 방식은 공식 페이지에서 확인해야 합니다.",
-      "dDay": "D-12",
+      "dDay": "D-10",
       "deadlineText": "11.22",
       "tags": [
         "규제개선",
@@ -9208,13 +10217,14 @@
           "url": "http://buyeostartup.kr/"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-09",
-      "lastUpdatedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-12",
       "deadline": [
         "2026-11-11"
-      ]
+      ],
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "cj-hetbahn-30th-ai-idea-2026",
@@ -9223,7 +10233,7 @@
       "title": "[햇반 30주년] 갓 지은 AI디어 공모전",
       "summary": "CJ제일제당이 햇반 30주년을 맞아 여는 AI 활용 아이디어 공모전입니다",
       "description": "실제 접수 구글폼에서 참가 자격과 접수 기간 11.13 23:59까지가 확인됐습니다. 제출물의 구체적 형식은 확인하지 못했습니다.",
-      "dDay": "D-3",
+      "dDay": "D-1",
       "deadlineText": "11.13 23:59",
       "tags": [
         "햇반",
@@ -9264,7 +10274,7 @@
       "title": "2026년 ESG 대국민 아이디어 공모전",
       "summary": "국가생명윤리정책원이 ESG 관점 아이디어를 국민에게 받는 공모전입니다",
       "description": "정책원 공식 게시물에서 공모 기간 10.26~11.13이 확인됐습니다. 참가 자격 세부는 첨부 공고문 확인이 필요합니다.",
-      "dDay": "D-3",
+      "dDay": "D-1",
       "deadlineText": "11.13",
       "tags": [
         "ESG",
@@ -9329,13 +10339,14 @@
           "url": "https://www.uiwang.go.kr/UWKORINFO0101/7006130"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-09",
-      "lastUpdatedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-12",
       "deadline": [
         "2026-11-11"
-      ]
+      ],
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "boryeong-wellness-policy-proposal-2026",
@@ -9369,13 +10380,14 @@
           "url": "https://www.brcn.go.kr/prog/eminwon/kor/BB/sub04_03_01/view.do?mgtno=57363"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-09",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-12",
       "deadline": [
         "2026-11-11"
-      ]
+      ],
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "nafi-future-generation-agenda-2026",
@@ -9384,7 +10396,7 @@
       "title": "국회 미래세대 미래의제 공모전",
       "summary": "국회미래연구원이 청년 세대가 제안하는 미래 의제를 받는 공모전입니다",
       "description": "국회미래연구원 공식 공지에서 제안 기간 11.25 15:00까지, 자격 만 19~39세 개인 또는 팀(최대 5인)으로 확인됐습니다.",
-      "dDay": "D-15",
+      "dDay": "D-13",
       "deadlineText": "11.25 15:00",
       "tags": [
         "미래의제",
@@ -9465,7 +10477,7 @@
       "title": "2026 차세대통신 X 융합 창업 아이디어 경진대회",
       "summary": "차세대통신 혁신융합대학사업단이 여는 통신 융합 창업 아이디어 경진대회입니다",
       "description": "국민대 공식 공지에서 예선 온라인 접수 11.18까지, 대상 전국 대학·전문대 재학생(휴학생·대학원생 제외)으로 확인됐습니다.",
-      "dDay": "D-8",
+      "dDay": "D-6",
       "deadlineText": "11.18",
       "tags": [
         "차세대통신",
@@ -9506,7 +10518,7 @@
       "title": "2026 대구 대학(원) AI 드래프톤",
       "summary": "대구광역시와 대구테크노파크가 여는 대학(원)생 AI 대회입니다",
       "description": "이번 자료에는 공식 확인 결과가 없어 값은 모음 사이트 기준입니다. 이름에 대구가 붙어 있어 대구 소재 대학 한정인지 공식 공고 확인이 필요합니다.",
-      "dDay": "D-5",
+      "dDay": "D-3",
       "deadlineText": "11.15 23:59",
       "tags": [
         "AI",
@@ -9572,13 +10584,14 @@
           "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610290007"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-09",
-      "lastUpdatedDate": "2026-11-06",
+      "lastUpdatedDate": "2026-11-12",
       "deadline": [
         "2026-11-11"
-      ]
+      ],
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "kepco-enc-future-biz-idea-2026",
@@ -9628,7 +10641,7 @@
       "title": "2026년 완도군 지방소멸 대응 아이디어 공모전",
       "summary": "완도군이 지방소멸에 맞설 아이디어를 받는 공모전입니다",
       "description": "이번 자료에는 공식 확인 결과가 없어 값은 모음 사이트 기준입니다.",
-      "dDay": "D-8",
+      "dDay": "D-6",
       "deadlineText": "11.18 18:00",
       "tags": [
         "지방소멸",
@@ -9668,7 +10681,7 @@
       "title": "제1회 메치니코프 신제품 공모전",
       "summary": "hy(한국야쿠르트)가 신제품 아이디어를 받는 공모전입니다",
       "description": "공식 프로필의 접수 링크는 네이버 로그인이 필요해 마감일과 참가 자격을 공식 원문으로 확인하지 못했습니다. 날짜는 모음 사이트 기준입니다.",
-      "dDay": "D-7",
+      "dDay": "D-5",
       "deadlineText": "11.17",
       "tags": [
         "신제품",
@@ -9708,7 +10721,7 @@
       "title": "2026년 대국민 재정교육 아이디어 공모전",
       "summary": "기획예산처가 쉽고 유익한 재정교육 콘텐츠·프로그램 아이디어를 받는 공모전입니다",
       "description": "기획예산처 공식 보도자료와 정책브리핑에서 기간 10.30~11.27이 확인됐습니다. 팀 인원 조건은 첨부 확인이 필요합니다.",
-      "dDay": "D-17",
+      "dDay": "D-15",
       "deadlineText": "11.27",
       "tags": [
         "재정교육",
@@ -9748,7 +10761,7 @@
       "title": "2026 성평등 AI 벤치마크 챌린지",
       "summary": "성평등가족부가 생성형 AI의 성평등 안전성을 평가하는 챌린지입니다",
       "description": "공식 대회 소개에서 접수 11.02~11.20, 개인 또는 5인 이내 팀으로 확인됐습니다. 외국인은 한국 국적자와 팀으로만 참여할 수 있습니다.",
-      "dDay": "D-10",
+      "dDay": "D-8",
       "deadlineText": "11.20",
       "tags": [
         "생성형 AI",
@@ -9788,7 +10801,7 @@
       "title": "2026 현장문제 AX 업무혁신 아이디어 해커톤",
       "summary": "충청남도 등이 여는 제조 현장 문제의 AI 전환(AX) 아이디어 해커톤입니다",
       "description": "공식 접수 사이트에서 신청 기간 11.17 23:59까지, AI·코딩 경험이 없어도 지원 가능하다고 확인됐습니다. 주관은 KAIST입니다.",
-      "dDay": "D-7",
+      "dDay": "D-5",
       "deadlineText": "11.17 23:59",
       "tags": [
         "제조 AX",
@@ -9829,7 +10842,7 @@
       "title": "제2회 Nitto Open Innovation Challenge",
       "summary": "한국닛또덴꼬(Nitto)가 여는 오픈이노베이션 아이디어 공모전입니다",
       "description": "공식 블로그에서 공모 기간 11.02~11.30, 참가 자격 누구나(최대 3인 1팀)로 확인됐고 아이디어는 구글폼으로 제출합니다. 주최는 한국 법인으로 표기돼 있습니다.",
-      "dDay": "D-20",
+      "dDay": "D-18",
       "deadlineText": "11.30",
       "tags": [
         "오픈이노베이션",
@@ -9870,7 +10883,7 @@
       "title": "AX인재전쟁 온라인 x 삼일PwC",
       "summary": "조코딩AX파트너스가 여는, AI 활용 역량으로 삼일PwC 채용까지 이어지는 온라인 대회입니다",
       "description": "이번 자료에는 공식 확인 결과가 없어 값은 모음 사이트 기준입니다. 과제 형식이 개발인지 평가형인지 확인하지 못했으므로 공식 사이트 확인이 필요합니다.",
-      "dDay": "D-5",
+      "dDay": "D-3",
       "deadlineText": "11.15",
       "tags": [
         "AI 역량",
@@ -9910,7 +10923,7 @@
       "title": "[산림청] 산림공공데이터 활용 사례 공모",
       "summary": "산림청이 산림 공공데이터를 활용한 사례를 받는 공모입니다",
       "description": "산림청 산림빅데이터팀 공식 게시에서 공모 기간 11.02~11.20, 대상 개인·팀으로 확인됐습니다.",
-      "dDay": "D-10",
+      "dDay": "D-8",
       "deadlineText": "11.20",
       "tags": [
         "공공데이터",
@@ -9950,7 +10963,7 @@
       "title": "소재연구데이터 AI 활용 해커톤",
       "summary": "한국화학연구원 프리미엄 소재연구데이터를 AI로 활용하는 DAKER 해커톤(과기정통부 주최, 데이콘 운영)",
       "description": "과학기술정보통신부 주최·한국연구재단/한국화학연구원 주관·데이콘 운영으로 열리는 소재 분야 AI 해커톤입니다. 참가 신청서 제출 기간은 10/30~11/13이며, 11/04에 참가자격 관련 추가 안내가 공지되어 신청 전 확인이 필요합니다.",
-      "dDay": "D-3",
+      "dDay": "D-1",
       "deadlineText": "11.13 12:00",
       "tags": [
         "AI",
@@ -10202,7 +11215,7 @@
       "title": "2026년 KEIT 대국민 혁신아이디어 공모전",
       "summary": "한국산업기술기획평가원이 국민에게 산업기술 혁신 아이디어를 받는 공모전",
       "description": "소통24에 올라온 KEIT 대국민 공모전입니다. 접수 기간 11/04 14:00 ~ 11/17 18:00, 상금 50만원(위비티 표기), 대상 제한 없음으로 확인했습니다. 공식 상세 본문은 이번에 읽지 못했습니다.",
-      "dDay": "D-7",
+      "dDay": "D-5",
       "deadlineText": "11.17 18:00",
       "tags": [
         "대국민",
@@ -10243,7 +11256,7 @@
       "title": "국가무형유산 상설공연 창작 콘텐츠 개발 대국민 아이디어 발굴대회",
       "summary": "국가유산청이 국가무형유산 상설공연에 쓸 창작 콘텐츠 아이디어를 국민에게 받는 대회(접수 11/09 시작)",
       "description": "국가유산청 무형유산예능과 공고 본문은 접수 기간을 11/09 09:00 ~ 11/18 17:00으로 적었습니다. 크롤러는 10/29 시작으로 읽었고 사이트 상단은 '진행 중'이라 시작일 표기가 엇갈립니다. 11/06 기준 접수 예정으로 처리했습니다.",
-      "dDay": "D-8",
+      "dDay": "D-6",
       "deadlineText": "11.09 09:00 ~ 11.18 17:00",
       "tags": [
         "대국민",
@@ -10285,7 +11298,7 @@
       "title": "강원특별자치도 2026년도 「톡톡 Idea 공모전」",
       "summary": "강원특별자치도 도정에 관심 있는 주민 누구나 낼 수 있는 아이디어 공모전",
       "description": "강원특별자치도 기획조정실 정책기획관 공고입니다. 본문에는 11/23 18:00 마감만 표기되어 있고 시작일(11/05)은 크롤러 값이라 공식 본문으로는 확인하지 못했습니다.",
-      "dDay": "D-13",
+      "dDay": "D-11",
       "deadlineText": "11.23 18:00",
       "tags": [
         "강원",
@@ -10326,7 +11339,7 @@
       "title": "2026 조달청 AI 게임·콘텐츠 공모전",
       "summary": "조달청이 대한민국 국민 누구나(개인/팀) 대상으로 여는 AI 게임·콘텐츠 공모전(상금 200만원)",
       "description": "조달청 공식 블로그에서 접수 기간 10/12 ~ 11/22, 대상 대한민국 국민 누구나(개인/팀)를 확인했습니다. 제출물이 게임 개발인지 콘텐츠 제작인지 등 세부 부문은 이번에 읽지 못했습니다.",
-      "dDay": "D-12",
+      "dDay": "D-10",
       "deadlineText": "11.22",
       "tags": [
         "조달청",
@@ -10368,7 +11381,7 @@
       "title": "[한국도로공사] AI 활용 아이디어 공모전",
       "summary": "한국도로공사가 국민에게 AI 활용 아이디어를 받는 공모전(개인 또는 3인 이내 팀, 상금 100만원)",
       "description": "한국도로공사 국민생각함 공식 게시에서 공모 기간 10/19 ~ 11/15, 대상 대한민국 국민 누구나(개인 또는 3인 이내 팀)를 확인했습니다.",
-      "dDay": "D-5",
+      "dDay": "D-3",
       "deadlineText": "11.15",
       "tags": [
         "한국도로공사",
@@ -10409,7 +11422,7 @@
       "title": "2026 글로벌 창업경진대회 Soulmate Pioneers 참가팀 모집",
       "summary": "서울 소재 대학 재학·휴학생이 대표인 2~5인 팀이 창업 아이디어로 겨루는 대회(총 상금 900만원, 성균관대 공지 기준)",
       "description": "서울앵커센터·성균관대 앵커사업단이 모집합니다(연세대 공지에는 캠퍼스타운사업단·카카오모빌리티 협력 표기). 서류 접수는 10/30 ~ 11/15이며, 기창업자는 사업자등록증을 내야 하고 법인 설립 6개월 이상 팀은 참가할 수 없습니다. 위비티는 상금 500만원으로 적어 표기가 엇갈립니다.",
-      "dDay": "D-5",
+      "dDay": "D-3",
       "deadlineText": "11.15",
       "tags": [
         "창업경진대회",
@@ -10450,7 +11463,7 @@
       "title": "제1회 홍제천 상상더하기 공모전",
       "summary": "서대문구청이 홍제천을 주제로 여는 제1회 아이디어 공모전(상금 50만원)",
       "description": "위비티 상세(기획/아이디어 분야)와 서대문구청 공지 링크만 확인했습니다. 구체 제출물과 평가 기준은 이번에 읽지 못했습니다.",
-      "dDay": "D-13",
+      "dDay": "D-11",
       "deadlineText": "2026.11.23.(월) 18:00 마감",
       "tags": [
         "서대문구",
@@ -10494,7 +11507,7 @@
       "title": "[한국체육산업개발(주)] 공공데이터 활용 경진대회",
       "summary": "한국체육산업개발이 여는 공공데이터 활용 경진대회(상금 300만원, 대상 제한 없음)",
       "description": "위비티 상세로만 확인했습니다. 접수 11/02 ~ 12/01, 상금 300만원, 대상 제한 없음이며 홈페이지 링크가 위비티 자체여서 공식 공고 위치와 제출물은 확인이 필요합니다.",
-      "dDay": "D-21",
+      "dDay": "D-19",
       "deadlineText": "12.01",
       "tags": [
         "공공데이터",
@@ -10534,7 +11547,7 @@
       "title": "2026 청년의 시간(성남 청년 참여 예산제) 참가팀 모집",
       "summary": "성남시청소년청년재단이 청년 참여 예산제에 쓸 사업 제안 팀을 모집(상금 100만원)",
       "description": "위비티 상세 기준으로 접수 10/30 ~ 11/22, 대상 일반인·대학생·기타입니다. 제안 형식·팀 규모는 이번에 읽지 못했습니다.",
-      "dDay": "D-12",
+      "dDay": "D-10",
       "deadlineText": "2026.11.22.(일) 23:59 마감",
       "tags": [
         "성남",
@@ -10579,7 +11592,7 @@
       "title": "제1회 하나증권 청년 금융 아이디어 공모전",
       "summary": "하나증권이 만 19세 이상 고졸 이상 개인에게 청년 금융 아이디어를 받는 공모전",
       "description": "자유 탐색에서 하나증권 공식 페이지로 확인했습니다. 마감은 11/30 17:00이며 개인 참가만 가능합니다.",
-      "dDay": "D-20",
+      "dDay": "D-18",
       "deadlineText": "11.30 17:00",
       "tags": [
         "하나증권",
@@ -10620,7 +11633,7 @@
       "title": "과학기술정보통신부 × 엘리스 AI 챌린지",
       "summary": "과기정통부·NIA·엘리스가 여는 AI 챌린지(개인 또는 최대 4인 팀, 청소년·성인 부문 분리)",
       "description": "자유 탐색에서 공식 페이지로 확인했습니다. 마감은 11/13(온오프믹스 23:59)이며 청소년과 성인이 분리되어 진행됩니다. 세부 과제와 시상은 확인하지 못했습니다.",
-      "dDay": "D-3",
+      "dDay": "D-1",
       "deadlineText": "11.13",
       "tags": [
         "과기정통부",
@@ -12143,7 +13156,7 @@
       "title": "PayPal AI Hackathon",
       "summary": "PayPal 개발자 플랫폼과 AI를 함께 사용해 결제·커머스·에이전트 경험을 만드는 글로벌 온라인 해커톤",
       "description": "PayPal의 무료 sandbox와 AI 도구·모델을 결합해 실제 동작하는 앱·에이전트·자동화 서비스를 구현하는 글로벌 온라인 해커톤입니다. 개인 참가가 가능하고, 공개 GitHub 저장소·실행 가능한 데모·3분 미만 데모 영상을 제출해야 합니다.",
-      "dDay": "D-3",
+      "dDay": "D-1",
       "deadlineText": "11.13 07:00 KST",
       "tags": [
         "PayPal",
@@ -12734,7 +13747,7 @@
       "title": "국부펀드 KIC, AI 에이전트 공모전",
       "summary": "투자·금융 업무 혁신용 AI Agent를 기획하고 본선에서 실제 작동하는 MVP로 구현하는 한국투자공사 공모전",
       "description": "한국투자공사(KIC)가 투자·금융 현장의 리서치·분석·문서 검색·업무 자동화를 위한 AI Agent를 공모합니다. 예선은 10페이지 이내 기획서, 본선은 실행 코드·데모 URL·발표자료를 제출하며 개인 참가도 가능합니다.",
-      "dDay": "D-2",
+      "dDay": "오늘 마감",
       "deadlineText": "11.12 10:00",
       "tags": [
         "AI Agent",
@@ -13383,6 +14396,744 @@
   ],
   "support": [
     {
+      "id": "grantlysupport-17926",
+      "title": "[대구] 남구 2026년 남구다운 청년 창업 지원사업 통합공고",
+      "summary": "주최 확인 필요 · 마감 확인 필요",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "확인 필요",
+      "deadline": "확인 필요",
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://grantly.kr/opportunities/17926"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "마감 확인 필요"
+    },
+    {
+      "id": "grantlysupport-18596",
+      "title": "2026 지역·산업 융합 네트워크 공동 프로그램 - 「아이디어가 일이 되기까지」 - 좋아하는 것에서 시작하는 작은 창업 이야기",
+      "summary": "주최 확인 필요 · 마감 확인 필요",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "확인 필요",
+      "deadline": "확인 필요",
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://grantly.kr/opportunities/18596"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "마감 확인 필요"
+    },
+    {
+      "id": "grantlysupport-18809",
+      "title": "[HI-5 AI 2026] 30 seconds 릴스 챌린지 참가자 모집!",
+      "summary": "주최 블루웨일 · 마감 2026-11-12",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [
+        "개발·AI"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-12",
+      "deadline": [
+        "2026-11-12"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://grantly.kr/opportunities/18809"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "오늘 마감"
+    },
+    {
+      "id": "grantlysupport-19169",
+      "title": "제23회 차세대 테크 리더십포럼 - AI-Native System: 지능화로 다시 설계되는 공학",
+      "summary": "주최 한국공학한림원 차세대공학리더 YEHS · 마감 2026-11-12",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [
+        "개발·AI"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-12",
+      "deadline": [
+        "2026-11-12"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://grantly.kr/opportunities/19169"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "오늘 마감"
+    },
+    {
+      "id": "grantlysupport-20620",
+      "title": "[경기] 고양시 2026년 DXㆍICT 일본 투자유치 특화사업 참가기업 모집 공고",
+      "summary": "주최 확인 필요 · 마감 확인 필요",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "확인 필요",
+      "deadline": "확인 필요",
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://grantly.kr/opportunities/20620"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "마감 확인 필요"
+    },
+    {
+      "id": "grantlysupport-20813",
+      "title": "2026년 2차 무기체계 부품국산화개발 지원사업 연구개발기관 모집 3차 재공고",
+      "summary": "주최 확인 필요 · 마감 확인 필요",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [
+        "개발·AI"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "확인 필요",
+      "deadline": "확인 필요",
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://grantly.kr/opportunities/20813"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "마감 확인 필요"
+    },
+    {
+      "id": "grantlysupport-20833",
+      "title": "2026 NCI 민/관/학 창업포럼",
+      "summary": "주최 확인 필요 · 마감 확인 필요",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [],
+      "period": "확인 필요",
+      "deadlineText": "확인 필요",
+      "deadline": "확인 필요",
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://grantly.kr/opportunities/20833"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "마감 확인 필요"
+    },
+    {
+      "id": "kstartuphighlights-179776",
+      "title": "호서대학교 서울창업보육센터 신규입주모집 공고",
+      "summary": "주최 호서대학교산학협력단 · 마감 2026-11-20",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [
+        "시설ㆍ공간ㆍ보육"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-20",
+      "deadline": [
+        "2026-11-20"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179776"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-8"
+    },
+    {
+      "id": "kstartuphighlights-179771",
+      "title": "2026 강남구 미래산업 기반 기업 활성화 지원사업 데모데이 참관",
+      "summary": "주최 더인벤션랩 · 마감 2026-11-19",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [
+        "행사ㆍ네트워크"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-19",
+      "deadline": [
+        "2026-11-19"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179771"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-7"
+    },
+    {
+      "id": "kstartuphighlights-179775",
+      "title": "2026 여성벤처활성화사업 「여성벤처&스타트업 혁신성장 포럼」참여자 모집",
+      "summary": "주최 (사)한국여성벤처협회 · 마감 2026-11-26",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [
+        "창업교육"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-26",
+      "deadline": [
+        "2026-11-26"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179775"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-14"
+    },
+    {
+      "id": "kstartuphighlights-179769",
+      "title": "스타트업을 위한 B2B 영업 전략 특강",
+      "summary": "주최 산학협력단 · 마감 2026-11-17",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [
+        "창업교육"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-17",
+      "deadline": [
+        "2026-11-17"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179769"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-5"
+    },
+    {
+      "id": "kstartuphighlights-179690",
+      "title": "2026년 경희대학교 캠퍼스타운 제6회 데모데이: 刮目相對괄목상대",
+      "summary": "주최 창업보육센터(서울) · 마감 2026-11-19",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [
+        "행사ㆍ네트워크"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-19",
+      "deadline": [
+        "2026-11-19"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179690"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-7"
+    },
+    {
+      "id": "kstartuphighlights-179761",
+      "title": "2026년 한라대학교 창업보육센터 11월 신규입주기업 모집 공고",
+      "summary": "주최 한라대학교산학협력단 · 마감 2026-11-30",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [
+        "시설ㆍ공간ㆍ보육"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-30",
+      "deadline": [
+        "2026-11-30"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179761"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-18"
+    },
+    {
+      "id": "kstartuphighlights-179760",
+      "title": "[2026년 대전창업문화주간] 제 3회 대전창업문화 주간(창업의 시작과 끝)",
+      "summary": "주최 대전창조경제혁신센터 · 마감 2026-11-13",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [
+        "행사ㆍ네트워크"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-13",
+      "deadline": [
+        "2026-11-13"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179760"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-1"
+    },
+    {
+      "id": "kstartuphighlights-179764",
+      "title": "[알파브라더스] 「2026 충청 스타트업 벤처포럼」 2회차-오픈이노베이션 교류회 참가 안내의 건",
+      "summary": "주최 창업중심대학사업단 · 마감 2026-11-17",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [
+        "행사ㆍ네트워크"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-17",
+      "deadline": [
+        "2026-11-17"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179764"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-5"
+    },
+    {
+      "id": "kstartuphighlights-179766",
+      "title": "[강동구 청년해냄센터] 2027년 정부 지원 사업 대비 성공 창업 스쿨 참가자 모집 공고",
+      "summary": "주최 청년해냄센터 · 마감 2026-11-23",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [
+        "멘토링ㆍ컨설팅ㆍ교육"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-23",
+      "deadline": [
+        "2026-11-23"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179766"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-11"
+    },
+    {
+      "id": "kstartuphighlights-179626",
+      "title": "세종창업키움센터 운영 민간위탁 수탁기관 모집 재공고",
+      "summary": "주최 세종특별자치시청 · 마감 2026-11-23",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [
+        "시설ㆍ공간ㆍ보육"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-23",
+      "deadline": [
+        "2026-11-23"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179626"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-11"
+    },
+    {
+      "id": "kstartuphighlights-179765",
+      "title": "STARTUP STARRY NIGHT in Seoul 1:1 밋업(투자, O.I.) 참여기업 모집(11월 허브아워)",
+      "summary": "주최 서울경제진흥원 · 마감 2026-11-17",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [
+        "시설ㆍ공간ㆍ보육"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-17",
+      "deadline": [
+        "2026-11-17"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179765"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-5"
+    },
+    {
+      "id": "kstartuphighlights-179774",
+      "title": "2026 인수창업 설명회 - 당신의 성장을 지원합니다.",
+      "summary": "주최 디유파트너스 · 마감 2026-11-18",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [
+        "행사ㆍ네트워크"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-18",
+      "deadline": [
+        "2026-11-18"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179774"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-6"
+    },
+    {
+      "id": "kstartuphighlights-179682",
+      "title": "2026 방탈출 공간 게임 제작 지원사업",
+      "summary": "주최 에픽로그협동조합 · 마감 2026-11-30",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [
+        "사업화"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-30",
+      "deadline": [
+        "2026-11-30"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179682"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-18"
+    },
+    {
+      "id": "kstartuphighlights-179767",
+      "title": "2026 스타트업 언론홍보·미디어 콘텐츠 확산 지원사업 11월 모집 공고",
+      "summary": "주최 다임 · 마감 2026-11-30",
+      "description": "모음 사이트에 적힌 정보로 만든 카드입니다. 자세한 조건은 공고 링크에서 확인하세요.",
+      "categoryLabel": "창업 · 지원사업",
+      "icon": "💼",
+      "tags": [
+        "사업화"
+      ],
+      "period": "확인 필요",
+      "deadlineText": "2026-11-30",
+      "deadline": [
+        "2026-11-30"
+      ],
+      "participation": "확인 필요",
+      "reward": "확인 필요",
+      "businessRegistration": "확인 필요",
+      "preStartup": "확인 필요",
+      "employment": "확인 필요",
+      "evaluation": "확인 필요",
+      "aiSupport": "확인 필요",
+      "ideas": [],
+      "links": [
+        {
+          "label": "공고",
+          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179767"
+        }
+      ],
+      "status": "OPEN",
+      "firstSeenDate": "2026-11-12",
+      "lastUpdatedDate": "2026-11-12",
+      "lastVerifiedDate": "2026-11-12",
+      "officialCheck": "PENDING",
+      "dDay": "D-18"
+    },
+    {
       "id": "grantlysupport-19183",
       "title": "2026년 TEL VENTURE CAPITAL X 충남창조경제혁신센터 Nexus Connect 투자 밋업 데이 참여기업 모집 공고",
       "summary": "주최 확인 필요 · 마감 확인 필요",
@@ -13441,12 +15192,13 @@
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179636"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "오늘 마감"
+      "dDay": "오늘 마감",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "kstartuphighlights-179629",
@@ -13475,12 +15227,13 @@
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179629"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "오늘 마감"
+      "dDay": "오늘 마감",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "kstartuphighlights-179545",
@@ -13511,12 +15264,13 @@
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179545"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "오늘 마감"
+      "dDay": "오늘 마감",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "kstartuphighlights-177357",
@@ -13552,7 +15306,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-177837",
@@ -13588,7 +15342,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "grantlysupport-19158",
@@ -13854,7 +15608,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-13"
+      "dDay": "D-11"
     },
     {
       "id": "kstartuphighlights-178803",
@@ -13890,7 +15644,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-31"
+      "dDay": "D-29"
     },
     {
       "id": "kstartuphighlights-176076",
@@ -13926,7 +15680,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-175783",
@@ -13962,7 +15716,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-171419",
@@ -13998,7 +15752,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-50"
+      "dDay": "D-48"
     },
     {
       "id": "kstartuphighlights-179762",
@@ -14034,7 +15788,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "kstartuphighlights-179698",
@@ -14070,7 +15824,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-31"
+      "dDay": "D-29"
     },
     {
       "id": "kstartuphighlights-179758",
@@ -14106,7 +15860,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-26"
+      "dDay": "D-24"
     },
     {
       "id": "kstartuphighlights-179759",
@@ -14142,7 +15896,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "kstartuphighlights-179756",
@@ -14178,7 +15932,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-23"
+      "dDay": "D-21"
     },
     {
       "id": "kstartuphighlights-179754",
@@ -14214,7 +15968,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-9"
+      "dDay": "D-7"
     },
     {
       "id": "kstartuphighlights-179579",
@@ -14243,12 +15997,13 @@
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179579"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "오늘 마감"
+      "dDay": "오늘 마감",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "kstartuphighlights-179717",
@@ -14284,7 +16039,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-34"
+      "dDay": "D-32"
     },
     {
       "id": "kstartuphighlights-179744",
@@ -14320,7 +16075,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-13"
+      "dDay": "D-11"
     },
     {
       "id": "kstartuphighlights-179742",
@@ -14356,7 +16111,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-16"
+      "dDay": "D-14"
     },
     {
       "id": "kstartuphighlights-179732",
@@ -14392,7 +16147,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-9"
+      "dDay": "D-7"
     },
     {
       "id": "kstartuphighlights-179736",
@@ -14428,7 +16183,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "kstartuphighlights-179728",
@@ -14464,7 +16219,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "kstartuphighlights-179722",
@@ -14500,7 +16255,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "kstartuphighlights-179710",
@@ -14536,7 +16291,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-13"
+      "dDay": "D-11"
     },
     {
       "id": "kstartuphighlights-179725",
@@ -14572,7 +16327,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-13"
+      "dDay": "D-11"
     },
     {
       "id": "kstartuphighlights-179694",
@@ -14608,7 +16363,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "kstartuphighlights-179683",
@@ -14644,7 +16399,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-8"
+      "dDay": "D-6"
     },
     {
       "id": "kstartuphighlights-179701",
@@ -14680,7 +16435,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-17"
+      "dDay": "D-15"
     },
     {
       "id": "kstartuphighlights-179714",
@@ -14716,7 +16471,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-17"
+      "dDay": "D-15"
     },
     {
       "id": "kstartuphighlights-179696",
@@ -14752,7 +16507,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "kstartuphighlights-179712",
@@ -14788,7 +16543,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "kstartuphighlights-179707",
@@ -14824,7 +16579,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-14"
+      "dDay": "D-12"
     },
     {
       "id": "kstartuphighlights-179695",
@@ -14860,7 +16615,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "kstartuphighlights-179704",
@@ -14896,7 +16651,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-179700",
@@ -14932,7 +16687,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "kstartuphighlights-179699",
@@ -14968,7 +16723,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-14"
+      "dDay": "D-12"
     },
     {
       "id": "kstartuphighlights-179687",
@@ -15004,7 +16759,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "kstartuphighlights-179709",
@@ -15040,7 +16795,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "kstartuphighlights-179688",
@@ -15076,7 +16831,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "kstartuphighlights-179691",
@@ -15112,7 +16867,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "kstartuphighlights-179680",
@@ -15148,7 +16903,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-8"
+      "dDay": "D-6"
     },
     {
       "id": "kstartuphighlights-179678",
@@ -15184,7 +16939,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-2"
+      "dDay": "오늘 마감"
     },
     {
       "id": "kstartuphighlights-179685",
@@ -15220,7 +16975,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-141"
+      "dDay": "D-139"
     },
     {
       "id": "kstartuphighlights-179638",
@@ -15256,7 +17011,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-8"
+      "dDay": "D-6"
     },
     {
       "id": "kstartuphighlights-179679",
@@ -15287,12 +17042,13 @@
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179679"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-1"
+      "dDay": "D-1",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "kstartuphighlights-179677",
@@ -15323,12 +17079,13 @@
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179677"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-1"
+      "dDay": "D-1",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "kstartuphighlights-179675",
@@ -15364,7 +17121,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-179661",
@@ -15400,7 +17157,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "kstartuphighlights-179662",
@@ -15436,7 +17193,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-17"
+      "dDay": "D-15"
     },
     {
       "id": "kstartuphighlights-179656",
@@ -15472,7 +17229,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-110"
+      "dDay": "D-108"
     },
     {
       "id": "kstartuphighlights-179654",
@@ -15508,7 +17265,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-7"
+      "dDay": "D-5"
     },
     {
       "id": "kstartuphighlights-179653",
@@ -15544,7 +17301,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-16"
+      "dDay": "D-14"
     },
     {
       "id": "kstartuphighlights-179642",
@@ -15580,7 +17337,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "kstartuphighlights-179595",
@@ -15616,7 +17373,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-82"
+      "dDay": "D-80"
     },
     {
       "id": "kstartuphighlights-179630",
@@ -15652,7 +17409,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "kstartuphighlights-179635",
@@ -15688,7 +17445,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-2"
+      "dDay": "오늘 마감"
     },
     {
       "id": "kstartuphighlights-179631",
@@ -15724,7 +17481,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-17"
+      "dDay": "D-15"
     },
     {
       "id": "kstartuphighlights-179623",
@@ -15760,7 +17517,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-8"
+      "dDay": "D-6"
     },
     {
       "id": "kstartuphighlights-179612",
@@ -15789,12 +17546,13 @@
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179612"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "오늘 마감"
+      "dDay": "오늘 마감",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "kstartuphighlights-179615",
@@ -15830,7 +17588,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "kstartuphighlights-179611",
@@ -15866,7 +17624,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "kstartuphighlights-179603",
@@ -15902,7 +17660,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "kstartuphighlights-179596",
@@ -15933,12 +17691,13 @@
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179596"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-1"
+      "dDay": "D-1",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "kstartuphighlights-179559",
@@ -15974,7 +17733,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-9"
+      "dDay": "D-7"
     },
     {
       "id": "kstartuphighlights-179582",
@@ -16010,7 +17769,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "kstartuphighlights-179590",
@@ -16041,12 +17800,13 @@
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179590"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-1"
+      "dDay": "D-1",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "kstartuphighlights-179586",
@@ -16082,7 +17842,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-9"
+      "dDay": "D-7"
     },
     {
       "id": "kstartuphighlights-179591",
@@ -16118,7 +17878,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-8"
+      "dDay": "D-6"
     },
     {
       "id": "kstartuphighlights-179562",
@@ -16154,7 +17914,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-8"
+      "dDay": "D-6"
     },
     {
       "id": "kstartuphighlights-179555",
@@ -16190,7 +17950,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-7"
+      "dDay": "D-5"
     },
     {
       "id": "kstartuphighlights-179554",
@@ -16219,12 +17979,13 @@
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179554"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "오늘 마감"
+      "dDay": "오늘 마감",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "kstartuphighlights-179552",
@@ -16260,7 +18021,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "kstartuphighlights-179543",
@@ -16289,12 +18050,13 @@
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179543"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "오늘 마감"
+      "dDay": "오늘 마감",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "kstartuphighlights-179533",
@@ -16330,7 +18092,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-2"
+      "dDay": "오늘 마감"
     },
     {
       "id": "kstartuphighlights-179528",
@@ -16366,7 +18128,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "kstartuphighlights-179520",
@@ -16395,12 +18157,13 @@
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179520"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "오늘 마감"
+      "dDay": "오늘 마감",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "kstartuphighlights-179514",
@@ -16436,7 +18199,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-19"
+      "dDay": "D-17"
     },
     {
       "id": "kstartuphighlights-179497",
@@ -16472,7 +18235,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "kstartuphighlights-179486",
@@ -16508,7 +18271,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-2"
+      "dDay": "오늘 마감"
     },
     {
       "id": "kstartuphighlights-179458",
@@ -16544,7 +18307,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-2"
+      "dDay": "오늘 마감"
     },
     {
       "id": "kstartuphighlights-179417",
@@ -16580,7 +18343,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "kstartuphighlights-179441",
@@ -16616,7 +18379,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "kstartuphighlights-179386",
@@ -16652,7 +18415,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "kstartuphighlights-179365",
@@ -16688,7 +18451,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-27"
+      "dDay": "D-25"
     },
     {
       "id": "kstartuphighlights-179353",
@@ -16724,7 +18487,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "kstartuphighlights-179348",
@@ -16760,7 +18523,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-14"
+      "dDay": "D-12"
     },
     {
       "id": "kstartuphighlights-179251",
@@ -16791,12 +18554,13 @@
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179251"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "오늘 마감"
+      "dDay": "오늘 마감",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "kstartuphighlights-179267",
@@ -16832,7 +18596,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-41"
+      "dDay": "D-39"
     },
     {
       "id": "kstartuphighlights-179184",
@@ -16868,7 +18632,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "kstartuphighlights-179018",
@@ -16904,7 +18668,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-178489",
@@ -16940,7 +18704,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-178527",
@@ -16976,7 +18740,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-178453",
@@ -17012,7 +18776,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-50"
+      "dDay": "D-48"
     },
     {
       "id": "kstartuphighlights-178445",
@@ -17048,7 +18812,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-178289",
@@ -17084,7 +18848,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-177844",
@@ -17120,7 +18884,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-177957",
@@ -17156,7 +18920,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-178113",
@@ -17192,7 +18956,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-178017",
@@ -17228,7 +18992,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-177681",
@@ -17264,7 +19028,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "kstartuphighlights-177944",
@@ -17300,7 +19064,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-200"
+      "dDay": "D-198"
     },
     {
       "id": "kstartuphighlights-177922",
@@ -17336,7 +19100,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-177563",
@@ -17372,7 +19136,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "kstartuphighlights-177493",
@@ -17408,7 +19172,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-416"
+      "dDay": "D-414"
     },
     {
       "id": "kstartuphighlights-177328",
@@ -17444,7 +19208,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-177278",
@@ -17480,7 +19244,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-35"
+      "dDay": "D-33"
     },
     {
       "id": "kstartuphighlights-177275",
@@ -17516,7 +19280,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-177241",
@@ -17552,7 +19316,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-537"
+      "dDay": "D-535"
     },
     {
       "id": "kstartuphighlights-177152",
@@ -17588,7 +19352,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-17"
+      "dDay": "D-15"
     },
     {
       "id": "kstartuphighlights-177113",
@@ -17624,7 +19388,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-82"
+      "dDay": "D-80"
     },
     {
       "id": "kstartuphighlights-177060",
@@ -17660,7 +19424,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-177072",
@@ -17696,7 +19460,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-176953",
@@ -17732,7 +19496,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-176952",
@@ -17768,7 +19532,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-176978",
@@ -17804,7 +19568,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-176940",
@@ -17840,7 +19604,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-176938",
@@ -17876,7 +19640,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-176855",
@@ -17912,7 +19676,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-176856",
@@ -17948,7 +19712,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-176810",
@@ -17984,7 +19748,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-176755",
@@ -18020,7 +19784,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-13"
+      "dDay": "D-11"
     },
     {
       "id": "kstartuphighlights-176566",
@@ -18056,7 +19820,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-176563",
@@ -18092,7 +19856,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-176494",
@@ -18128,7 +19892,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-15"
+      "dDay": "D-13"
     },
     {
       "id": "kstartuphighlights-176497",
@@ -18164,7 +19928,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-176442",
@@ -18200,7 +19964,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-176406",
@@ -18236,7 +20000,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "kstartuphighlights-176224",
@@ -18272,7 +20036,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-176248",
@@ -18308,7 +20072,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "kstartuphighlights-176208",
@@ -18344,7 +20108,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "kstartuphighlights-176129",
@@ -18380,7 +20144,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-176090",
@@ -18416,7 +20180,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "kstartuphighlights-176085",
@@ -18452,7 +20216,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-82"
+      "dDay": "D-80"
     },
     {
       "id": "kstartuphighlights-175849",
@@ -18488,7 +20252,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-173424",
@@ -18524,7 +20288,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-179757",
@@ -18560,7 +20324,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-7"
+      "dDay": "D-5"
     },
     {
       "id": "kstartuphighlights-179753",
@@ -18596,7 +20360,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "kstartuphighlights-179749",
@@ -18632,7 +20396,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-7"
+      "dDay": "D-5"
     },
     {
       "id": "kstartuphighlights-179716",
@@ -18668,7 +20432,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "kstartuphighlights-179727",
@@ -18704,7 +20468,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-13"
+      "dDay": "D-11"
     },
     {
       "id": "kstartuphighlights-179719",
@@ -18740,7 +20504,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-14"
+      "dDay": "D-12"
     },
     {
       "id": "kstartuphighlights-179702",
@@ -18776,7 +20540,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-9"
+      "dDay": "D-7"
     },
     {
       "id": "kstartuphighlights-179673",
@@ -18812,7 +20576,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-13"
+      "dDay": "D-11"
     },
     {
       "id": "kstartuphighlights-179651",
@@ -18848,7 +20612,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-2"
+      "dDay": "오늘 마감"
     },
     {
       "id": "kstartuphighlights-179663",
@@ -18884,7 +20648,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "kstartuphighlights-179659",
@@ -18920,7 +20684,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "kstartuphighlights-179658",
@@ -18956,7 +20720,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "kstartuphighlights-179657",
@@ -18987,12 +20751,13 @@
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179657"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-1"
+      "dDay": "D-1",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "kstartuphighlights-179655",
@@ -19028,7 +20793,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "kstartuphighlights-179650",
@@ -19064,7 +20829,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-15"
+      "dDay": "D-13"
     },
     {
       "id": "kstartuphighlights-179641",
@@ -19100,7 +20865,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "kstartuphighlights-179647",
@@ -19136,7 +20901,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "kstartuphighlights-179644",
@@ -19172,7 +20937,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "kstartuphighlights-179617",
@@ -19208,7 +20973,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "kstartuphighlights-179614",
@@ -19244,7 +21009,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "id": "kstartuphighlights-179621",
@@ -19275,12 +21040,13 @@
           "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179621"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-10",
-      "lastUpdatedDate": "2026-11-10",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-1"
+      "dDay": "D-1",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "kstartuphighlights-179530",
@@ -19316,7 +21082,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-6"
+      "dDay": "D-4"
     },
     {
       "id": "kstartuphighlights-179542",
@@ -19352,7 +21118,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "kstartuphighlights-177721",
@@ -19388,7 +21154,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-202"
+      "dDay": "D-200"
     },
     {
       "id": "kstartuphighlights-179302",
@@ -19424,7 +21190,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-35"
+      "dDay": "D-33"
     },
     {
       "id": "kstartuphighlights-179207",
@@ -19460,7 +21226,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-27"
+      "dDay": "D-25"
     },
     {
       "id": "kstartuphighlights-179208",
@@ -19496,7 +21262,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-17"
+      "dDay": "D-15"
     },
     {
       "id": "kstartuphighlights-179258",
@@ -19532,7 +21298,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-179115",
@@ -19568,7 +21334,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-178990",
@@ -19604,7 +21370,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-179024",
@@ -19640,7 +21406,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "kstartuphighlights-178850",
@@ -19676,7 +21442,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-177432",
@@ -19712,7 +21478,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-178234",
@@ -19748,7 +21514,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "kstartuphighlights-176739",
@@ -19784,7 +21550,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-176741",
@@ -19820,7 +21586,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "kstartuphighlights-175817",
@@ -19856,7 +21622,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-89"
+      "dDay": "D-87"
     },
     {
       "id": "kstartuphighlights-175366",
@@ -19892,7 +21658,7 @@
       "lastUpdatedDate": "2026-11-10",
       "lastVerifiedDate": "2026-11-10",
       "officialCheck": "PENDING",
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "dongguk-bi-seoul-tenant-recruitment-2026",
@@ -20178,7 +21944,7 @@
       "firstSeenDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-09",
       "lastVerifiedDate": "2026-11-09",
-      "dDay": "D-2"
+      "dDay": "오늘 마감"
     },
     {
       "id": "mapo-naroo-store-location-class-2026",
@@ -20224,7 +21990,7 @@
       "lastUpdatedDate": "2026-11-09",
       "lastVerifiedDate": "2026-11-09",
       "officialCheck": "PENDING",
-      "dDay": "D-13"
+      "dDay": "D-11"
     },
     {
       "id": "jindo-young-fishers-settlement-2027",
@@ -20270,7 +22036,7 @@
       "lastUpdatedDate": "2026-11-09",
       "lastVerifiedDate": "2026-11-09",
       "officialCheck": "PENDING",
-      "dDay": "D-20"
+      "dDay": "D-18"
     },
     {
       "id": "seocheon-bluebio-prestartup-support-2026",
@@ -20785,7 +22551,7 @@
       "lastUpdatedDate": "2026-11-09",
       "lastVerifiedDate": "2026-11-09",
       "officialCheck": "PENDING",
-      "dDay": "D-38"
+      "dDay": "D-36"
     },
     {
       "id": "jeju-marine-startup-investment-beneficiaries-2026",
@@ -20869,7 +22635,7 @@
       "lastUpdatedDate": "2026-11-09",
       "lastVerifiedDate": "2026-11-09",
       "officialCheck": "PENDING",
-      "dDay": "D-38"
+      "dDay": "D-36"
     },
     {
       "id": "hadong-first-smallbiz-startup-support-2026",
@@ -21289,7 +23055,7 @@
       "firstSeenDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-09",
       "lastVerifiedDate": "2026-11-09",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "zuzu-markncompany-deeptech-investment-2026",
@@ -21331,11 +23097,12 @@
           "url": "https://roundup.zuzu.network/"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-09",
-      "lastUpdatedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-09",
-      "dDay": "D-1"
+      "dDay": "D-1",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "zuzu-samsungfire-investment-review-2026",
@@ -21381,7 +23148,7 @@
       "firstSeenDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-09",
       "lastVerifiedDate": "2026-11-09",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "kingo-springboard-program-9-2026-2",
@@ -21427,7 +23194,7 @@
       "firstSeenDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-09",
       "lastVerifiedDate": "2026-11-09",
-      "dDay": "D-5"
+      "dDay": "D-3"
     },
     {
       "id": "kosa-itcen-douzone-ir-day-2026",
@@ -21469,7 +23236,7 @@
       "firstSeenDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-09",
       "lastVerifiedDate": "2026-11-09",
-      "dDay": "D-2"
+      "dDay": "오늘 마감"
     },
     {
       "id": "intops-hardware-startup-coachingday-2026",
@@ -21511,7 +23278,7 @@
       "firstSeenDate": "2026-11-09",
       "lastUpdatedDate": "2026-11-09",
       "lastVerifiedDate": "2026-11-09",
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "id": "wando-youth-fishing-village-settlement-2027",
@@ -21547,7 +23314,7 @@
       "deadline": [
         "2026-12-02"
       ],
-      "dDay": "D-22"
+      "dDay": "D-20"
     },
     {
       "id": "chungbuk-youth-farmer-smartfarm-startup-2027",
@@ -21583,7 +23350,7 @@
       "deadline": [
         "2026-12-31"
       ],
-      "dDay": "D-51"
+      "dDay": "D-49"
     },
     {
       "id": "dangjin-youth-design-improvement-2026",
@@ -21689,7 +23456,7 @@
       "deadline": [
         "2026-11-13"
       ],
-      "dDay": "D-3"
+      "dDay": "D-1"
     },
     {
       "id": "intops-accelerating-6th-2026",
@@ -21725,7 +23492,7 @@
       "deadline": [
         "2026-11-22"
       ],
-      "dDay": "D-12"
+      "dDay": "D-10"
     },
     {
       "firstSeenDate": "2026-11-09",
@@ -21766,7 +23533,7 @@
       "categoryLabel": "창업 · 지원사업",
       "aiSupport": "AI 도구·크레딧 지원 명시 없음",
       "employment": "재직자 제한 명시 없음",
-      "dDay": "D-10"
+      "dDay": "D-8"
     },
     {
       "firstSeenDate": "2026-11-09",
@@ -21807,7 +23574,7 @@
       ],
       "categoryLabel": "창업 · 지원사업",
       "aiSupport": "AI 도구·크레딧 지원 명시 없음",
-      "dDay": "D-24"
+      "dDay": "D-22"
     },
     {
       "firstSeenDate": "2026-11-09",
@@ -21848,7 +23615,7 @@
       "categoryLabel": "창업 · 지원사업",
       "aiSupport": "AI 도구·크레딧 지원 명시 없음",
       "employment": "재직자 제한 명시 없음",
-      "dDay": "D-31"
+      "dDay": "D-29"
     },
     {
       "firstSeenDate": "2026-11-09",
@@ -21889,7 +23656,7 @@
       "categoryLabel": "창업 · 지원사업",
       "aiSupport": "AI 도구·크레딧 지원 명시 없음",
       "employment": "재직자 제한 명시 없음",
-      "dDay": "D-8"
+      "dDay": "D-6"
     },
     {
       "firstSeenDate": "2026-11-09",
@@ -21930,7 +23697,7 @@
       "categoryLabel": "창업 · 지원사업",
       "aiSupport": "AI 도구·크레딧 지원 명시 없음",
       "employment": "재직자 제한 명시 없음",
-      "dDay": "D-16"
+      "dDay": "D-14"
     },
     {
       "firstSeenDate": "2026-11-09",
@@ -21971,7 +23738,7 @@
       "categoryLabel": "창업 · 지원사업",
       "aiSupport": "AI 도구·크레딧 지원 명시 없음",
       "employment": "재직자 제한 명시 없음",
-      "dDay": "D-15"
+      "dDay": "D-13"
     },
     {
       "firstSeenDate": "2026-11-09",
@@ -22012,7 +23779,7 @@
       "categoryLabel": "창업 · 지원사업",
       "aiSupport": "AI 도구·크레딧 지원 명시 없음",
       "employment": "재직자 제한 명시 없음",
-      "dDay": "D-13"
+      "dDay": "D-11"
     },
     {
       "firstSeenDate": "2026-11-09",
@@ -22053,13 +23820,13 @@
       "categoryLabel": "창업 · 지원사업",
       "aiSupport": "AI 도구·크레딧 지원 명시 없음",
       "employment": "재직자 제한 명시 없음",
-      "dDay": "D-15"
+      "dDay": "D-13"
     },
     {
       "firstSeenDate": "2026-11-09",
-      "lastUpdatedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-09",
-      "status": "OPEN",
+      "status": "CLOSED",
       "id": "nowon-youth-shop-3-4-founders-2026",
       "icon": "🏪",
       "title": "노원 청년가게 3호점·4호점 청년창업자 모집",
@@ -22094,13 +23861,14 @@
       "categoryLabel": "창업 · 지원사업",
       "aiSupport": "AI 도구·크레딧 지원 명시 없음",
       "employment": "재직자 제한 명시 없음",
-      "dDay": "오늘 마감"
+      "dDay": "오늘 마감",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "firstSeenDate": "2026-11-09",
-      "lastUpdatedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-12",
       "lastVerifiedDate": "2026-11-09",
-      "status": "OPEN",
+      "status": "CLOSED",
       "id": "nowon-youth-popup-store-summer-2027",
       "icon": "🛍️",
       "title": "노원구 청년 팝업스토어 하계점 신규 운영자 모집(2027)",
@@ -22135,7 +23903,8 @@
       "categoryLabel": "창업 · 지원사업",
       "aiSupport": "AI 도구·크레딧 지원 명시 없음",
       "employment": "재직자 제한 명시 없음",
-      "dDay": "D-1"
+      "dDay": "D-1",
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "korealbs-location-info-consulting-2026",
@@ -22183,7 +23952,7 @@
       "title": "서울 앵커 지역현안문제해결 로컬크리에이터 발굴기초 캠프",
       "summary": "서울시립대 창업지원단이 여는 로컬 창업 입문 캠프로, 지역 현안 해결 아이디어를 겨룹니다",
       "description": "운영 접수 사이트와 행사 등록 페이지에서 신청 마감 11.15 23:55가 확인됐습니다. 운영 사이트 본문은 이미지 중심이라 날짜는 행사 등록 정보와 교차 확인했습니다.",
-      "dDay": "D-5",
+      "dDay": "D-3",
       "deadlineText": "11.15 23:55",
       "tags": [
         "로컬창업",
@@ -22224,7 +23993,7 @@
       "title": "2026년 삼육대학교 창업보육센터 입주기업 모집 공고",
       "summary": "삼육대 창업보육센터에 입주할 예비창업자·창업 7년 이내 기업 모집(입주 후 주사업장을 센터로 이전)",
       "description": "신청 기간은 11/04 00:00 ~ 11/15 23:59입니다. 예비창업자도 신청할 수 있고, 입주 후에는 주사업장 주소를 센터로 옮겨야 합니다. 기관 자체 최신 글은 확인하지 못해 K-Startup 게시와 벤처스퀘어 재게시를 대조했습니다.",
-      "dDay": "D-5",
+      "dDay": "D-3",
       "deadlineText": "11.15 23:59",
       "tags": [
         "예비창업자",
@@ -22590,7 +24359,7 @@
       "title": "전남광주 제3기 지역자원 연계 청년창업 연장",
       "summary": "전남정보문화산업진흥원의 전남광주 제3기 지역자원 연계 청년창업 연장 — 대상: 청년 지역창업 예비창업자 또는 창업 7년 이내(19~45세, 13개 군 창업·이전)",
       "description": "전남정보문화산업진흥원 공고입니다. 대상은 청년 지역창업 예비창업자 또는 창업 7년 이내(19~45세, 13개 군 창업·이전)이며 마감은 11.12입니다.",
-      "dDay": "D-2",
+      "dDay": "오늘 마감",
       "deadlineText": "11.12",
       "tags": [
         "청년창업",
@@ -22631,7 +24400,7 @@
       "title": "2027 청년쿡 푸드테크센터",
       "summary": "서울시·청년쿡푸드테크센터의 2027 청년쿡 푸드테크센터 — 대상: 만 19~39세 식품테크 기창업자, 서울 소재 또는 이전 기업",
       "description": "서울시·청년쿡푸드테크센터 공고입니다. 대상은 만 19~39세 식품테크 기창업자, 서울 소재 또는 이전 기업이며 마감은 11.20입니다.",
-      "dDay": "D-10",
+      "dDay": "D-8",
       "deadlineText": "11.20",
       "tags": [
         "푸드테크",
@@ -22672,7 +24441,7 @@
       "title": "2027 청년쿡 비즈니스센터",
       "summary": "서울시·청년쿡비즈니스센터의 2027 청년쿡 비즈니스센터 — 대상: 만 19~39세 식품제조 예비·기창업자 (입주 조건 별도)",
       "description": "서울시·청년쿡비즈니스센터 공고입니다. 대상은 만 19~39세 식품제조 예비·기창업자 (입주 조건 별도)이며 마감은 11.20입니다.",
-      "dDay": "D-10",
+      "dDay": "D-8",
       "deadlineText": "11.20",
       "tags": [
         "식품제조",
@@ -22713,7 +24482,7 @@
       "title": "서울 키친인큐베이터 25·13기",
       "summary": "서울경제진흥원의 서울 키친인큐베이터 25·13기 — 대상: 서울 소재 창업 7년 이내 F&B 예비·기창업자",
       "description": "서울경제진흥원 공고입니다. 대상은 서울 소재 창업 7년 이내 F&B 예비·기창업자이며 마감은 11.26입니다.",
-      "dDay": "D-16",
+      "dDay": "D-14",
       "deadlineText": "11.26",
       "tags": [
         "F&B",
@@ -22754,7 +24523,7 @@
       "title": "대전 딥테크 스튜디오 플러스",
       "summary": "대전창조경제혁신센터의 대전 딥테크 스튜디오 플러스 — 대상: 공공기술 이전 예정 프로젝트 Pool 소속 예비창업자 또는 창업 7년 이내(신산업 10년)",
       "description": "대전창조경제혁신센터 공고입니다. 대상은 공공기술 이전 예정 프로젝트 Pool 소속 예비창업자 또는 창업 7년 이내(신산업 10년)이며 마감은 12.11입니다.",
-      "dDay": "D-31",
+      "dDay": "D-29",
       "deadlineText": "12.11",
       "tags": [
         "딥테크",
@@ -22822,13 +24591,14 @@
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127657"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-09",
-      "lastUpdatedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-12",
       "deadline": [
         "2026-11-11"
-      ]
+      ],
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "daegu-startup-city-medbio-2026",
@@ -22879,7 +24649,7 @@
       "title": "LGD Dream Play 9기",
       "summary": "서울경제진흥원·엔슬파트너스의 LGD Dream Play 9기 — 대상: 디스플레이 기술·신사업 스타트업",
       "description": "서울경제진흥원·엔슬파트너스 공고입니다. 대상은 디스플레이 기술·신사업 스타트업이며 마감은 11.13입니다.",
-      "dDay": "D-3",
+      "dDay": "D-1",
       "deadlineText": "11.13",
       "tags": [
         "디스플레이",
@@ -22920,7 +24690,7 @@
       "title": "안성 도시재생 창업 추가모집",
       "summary": "안성시의 안성 도시재생 창업 추가모집 — 대상: 성남·옥천 지구 사업장 소재 또는 이전 예정 창업가",
       "description": "안성시 공고입니다. 대상은 성남·옥천 지구 사업장 소재 또는 이전 예정 창업가이며 마감은 11.13입니다.",
-      "dDay": "D-3",
+      "dDay": "D-1",
       "deadlineText": "11.13",
       "tags": [
         "도시재생",
@@ -22961,7 +24731,7 @@
       "title": "충남 관광스타트업",
       "summary": "충남문화관광재단의 충남 관광스타트업 — 대상: 관광 분야 예비창업자 또는 창업 7년 이내 기업",
       "description": "충남문화관광재단 공고입니다. 대상은 관광 분야 예비창업자 또는 창업 7년 이내 기업이며 마감은 11.16입니다.",
-      "dDay": "D-6",
+      "dDay": "D-4",
       "deadlineText": "11.16",
       "tags": [
         "관광",
@@ -23109,13 +24879,14 @@
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127411"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-09",
-      "lastUpdatedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-12",
       "deadline": [
         "2026-11-11"
-      ]
+      ],
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "ibk-changgong-2027h1",
@@ -23124,7 +24895,7 @@
       "title": "2027 상반기 IBK창공",
       "summary": "IBK기업은행의 2027 상반기 IBK창공 — 대상: 업력 7년 이하 혁신기술·아이디어 보유 중소기업",
       "description": "IBK기업은행 공고입니다. 대상은 업력 7년 이하 혁신기술·아이디어 보유 중소기업이며 마감은 11.13입니다.",
-      "dDay": "D-3",
+      "dDay": "D-1",
       "deadlineText": "11.13",
       "tags": [
         "액셀러레이팅",
@@ -23191,13 +24962,14 @@
           "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127328"
         }
       ],
-      "status": "OPEN",
+      "status": "CLOSED",
       "firstSeenDate": "2026-11-06",
       "lastVerifiedDate": "2026-11-09",
-      "lastUpdatedDate": "2026-11-09",
+      "lastUpdatedDate": "2026-11-12",
       "deadline": [
         "2026-11-10"
-      ]
+      ],
+      "autoClosedDate": "2026-11-12"
     },
     {
       "id": "daejeon-univ-integrated-startup-execution-2026",
@@ -23245,7 +25017,7 @@
       "title": "대구 남구다운 청년창업",
       "summary": "대구경북고용복지연구원의 대구 남구다운 청년창업 — 대상: 남구에 본사를 둘 창업 예정자·팀(대표·팀원 39세 이하)",
       "description": "대구경북고용복지연구원 공고입니다. 대상은 남구에 본사를 둘 창업 예정자·팀(대표·팀원 39세 이하)이며 마감은 11.12입니다.",
-      "dDay": "D-2",
+      "dDay": "오늘 마감",
       "deadlineText": "11.12",
       "tags": [
         "청년창업",
@@ -23442,7 +25214,7 @@
       "title": "안산 ICT·SW 창업 컨설팅",
       "summary": "경기테크노파크의 안산 ICT·SW 창업 컨설팅 — 대상: 안산 소재 ICT·SW 창업기업",
       "description": "경기테크노파크 공고입니다. 대상은 안산 소재 ICT·SW 창업기업이며 마감은 12.31입니다.",
-      "dDay": "D-51",
+      "dDay": "D-49",
       "deadlineText": "12.31",
       "tags": [
         "ICT",
@@ -23796,7 +25568,7 @@
       "title": "농식품 크라우드펀딩",
       "summary": "농업정책보험금융원의 농식품 크라우드펀딩 — 대상: 농식품 분야 예비창업자 또는 창업 7년 이내 기업",
       "description": "농업정책보험금융원 공고입니다. 대상은 농식품 분야 예비창업자 또는 창업 7년 이내 기업이며 마감은 12.31입니다.",
-      "dDay": "D-51",
+      "dDay": "D-49",
       "deadlineText": "12.31",
       "tags": [
         "농식품",
@@ -23915,7 +25687,7 @@
       "title": "경기 기술이전 창업지원 필요기술 발굴",
       "summary": "경기테크노파크의 경기 기술이전 창업지원 필요기술 발굴 — 대상: 경기도 예비창업자 또는 창업 7년 이내",
       "description": "경기테크노파크 공고입니다. 대상은 경기도 예비창업자 또는 창업 7년 이내이며 마감은 12.31입니다.",
-      "dDay": "D-51",
+      "dDay": "D-49",
       "deadlineText": "12.31",
       "tags": [
         "기술이전",
@@ -24275,7 +26047,7 @@
       "title": "2026년 서울 기후테크 기업 및 예비창업자 멘토링 지원사업",
       "summary": "서울 소재 기후테크 예비창업자·중소기업을 대상으로 전문가 맞춤형 멘토링을 무료 지원",
       "description": "국가녹색기술연구소 서울기후테크산업지원센터가 서울시 내 녹색분야 중소기업과 예비창업자에게 전문가 멘토링을 제공합니다.",
-      "dDay": "D-51",
+      "dDay": "D-49",
       "deadlineText": "상시 신청 (멘토링 지원 사업예산 소진 시 접수 마감)",
       "tags": [
         "예비창업자",
@@ -24829,7 +26601,7 @@
       "title": "2026 명지전문대학 MJC 창업보육(Ⅰ)센터 신규 입주기업 상시모집",
       "summary": "AI·SW·IT 등 기술기반 예비창업자와 10년 이내 기업을 위한 서울 서대문구 창업보육공간 상시 모집",
       "description": "명지전문대학 창업보육센터가 공실 11개 소진 시까지 예비창업자와 창업 10년 이내 기업을 모집합니다. AI·디지털전환 기반 기술·서비스를 우대하며 입주자는 입주 후 30일 이내 사업자등록증을 제출해야 합니다.",
-      "dDay": "D-51",
+      "dDay": "D-49",
       "deadlineText": "12.31 17:00 · 공실 소진 시 조기 마감",
       "tags": [
         "예비창업자",
@@ -25115,6 +26887,7 @@
     }
   ],
   "archive": [
+    "2026-11-12",
     "2026-11-10",
     "2026-11-09",
     "2026-11-06",
