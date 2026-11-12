@@ -804,8 +804,9 @@ def main():
     commands.add_parser("verify")
     commands.add_parser("publish").add_argument("--no-push", action="store_true", help="stop after the checks")
     commands.add_parser("research").add_argument("--gpt", action="store_true", help="GPT find and card writing")
-    commands.add_parser("all")
-    setup = commands.add_parser("setup", help="prepare this PC (runner folder, packages, Chrome profile); safe to rerun")
+    commands.add_parser("all").add_argument(
+        "--prepared", action="store_true", help="skip prepare (used when prepare pulled new code)")
+    setup =commands.add_parser("setup", help="prepare this PC (runner folder, packages, Chrome profile); safe to rerun")
     setup.add_argument("--runner", type=Path, help=f"runner folder (default {default_runner()})")
     setup.add_argument("--chrome-profile", type=Path, help=f"Chrome profile (default {default_chrome_profile()})")
     setup.add_argument("--no-launch", action="store_true", help="only check; do not start Titan or Chrome")
@@ -828,11 +829,32 @@ def main():
     if args.command == "research":
         return run_research(ROOT, today, use_gpt=args.gpt)
     if args.command == "all":
-        for step in (lambda: run_prepare(ROOT, today), lambda: run_research(ROOT, today), lambda: run_publish(ROOT, today)):
-            if step():
-                return 1
-        return 0
+        return run_all(ROOT, today, prepared=args.prepared)
     return run_publish(ROOT, today, no_push=args.no_push)
+
+
+def relaunch_after_prepare(root):
+    return subprocess.run([sys.executable, str(Path(__file__).resolve()), "all", "--prepared"], cwd=root).returncode
+
+
+def run_all(root, today, prepared=False, prepare=run_prepare, research=run_research, publish=run_publish,
+            relaunch=relaunch_after_prepare):
+    """prepare, research, publish.
+
+    prepare pulls main, but this process already holds the code it started with. When the pull
+    changed the code, research and publish run in a new process so the day uses the pulled code
+    (2026-11-12: a fix pushed that morning did not apply to that day's run).
+    """
+    if not prepared:
+        started = git_text(root, "rev-parse", "HEAD")
+        if prepare(root, today):
+            return 1
+        if git_text(root, "rev-parse", "HEAD") != started:
+            return relaunch(root)
+    for step in (research, publish):
+        if step(root, today):
+            return 1
+    return 0
 
 
 if __name__ == "__main__":

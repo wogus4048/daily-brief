@@ -553,6 +553,36 @@ class SetupTest(RepoCase):
         self.assertIn("candidates", done)
 
 
+class AllTest(RepoCase):
+    def run_all(self, pull):
+        calls = []
+
+        def prepare(root, today):
+            calls.append("prepare")
+            if pull:
+                (root / "README.md").write_text("new code\n", encoding="utf-8")
+                git(root, "commit", "-qam", "new code")
+            return 0
+
+        step = lambda name: lambda root, today: calls.append(name) or 0
+        code = daily_run.run_all(self.root, TODAY, prepare=prepare, research=step("research"),
+                                 publish=step("publish"), relaunch=lambda root: calls.append("relaunch") or 0)
+        return code, calls
+
+    def test_pulled_code_runs_the_rest_in_a_new_process(self):
+        self.assertEqual(self.run_all(pull=True), (0, ["prepare", "relaunch"]))
+
+    def test_unchanged_code_runs_the_rest_here(self):
+        self.assertEqual(self.run_all(pull=False), (0, ["prepare", "research", "publish"]))
+
+    def test_prepared_run_skips_prepare(self):
+        calls = []
+        step = lambda name: lambda root, today: calls.append(name) or 0
+        daily_run.run_all(self.root, TODAY, prepared=True, prepare=step("prepare"),
+                          research=step("research"), publish=step("publish"))
+        self.assertEqual(calls, ["research", "publish"])
+
+
 class PublishTest(RepoCase):
     def write_brief(self, date=TODAY):
         snapshot = {"date": date, "contests": [], "support": []}
