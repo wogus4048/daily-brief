@@ -51,6 +51,8 @@ PUBLIC_POLL_SECONDS = 15
 OUTPUT_TAIL_CHARS = 2000
 TITAN_EXE = Path(os.environ.get("LOCALAPPDATA", "")) / "Programs/Titan/Titan.exe"
 TITAN_EXTENSION = TITAN_EXE.parent / "resources/extension"
+# By full path: a PC's PATH can lack the PowerShell folder (found 2026-11-12 on a second PC).
+POWERSHELL = Path(os.environ.get("SYSTEMROOT", r"C:\Windows")) / "System32/WindowsPowerShell/v1.0/powershell.exe"
 # This project's own Chrome profile with the Titan extension (not the Naver one; findings 2026-11-09).
 # Each PC keeps its path in the runner marker; an empty marker means the first PC's path.
 LEGACY_CHROME_PROFILE = Path(r"D:\daily-brief-ops\chrome-titan")
@@ -495,7 +497,7 @@ def titan_status():
 
 
 def chrome_running(profile):
-    out = subprocess.run(["powershell", "-NoProfile", "-Command",
+    out = subprocess.run([str(POWERSHELL), "-NoProfile", "-Command",
                           "Get-CimInstance Win32_Process -Filter \"Name='chrome.exe'\" | ForEach-Object { $_.CommandLine }"],
                          capture_output=True, text=True, encoding="utf-8", errors="replace").stdout
     return str(profile).lower() in out.lower()
