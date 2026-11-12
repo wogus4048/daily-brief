@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Regression tests for the local prepare and publish steps."""
 
+import contextlib
+import io
 import json
 import subprocess
 import sys
@@ -462,6 +464,66 @@ class PrepareTest(RepoCase):
         event = next(e for e in self.events() if e["event"] == "command")
         self.assertEqual(event["exitCode"], 3)
         self.assertIn("hello", (self.root / event["output"]).read_text(encoding="utf-8"))
+
+
+class SetupTest(RepoCase):
+    def setup(self, runner, profile=None):
+        with contextlib.redirect_stdout(io.StringIO()):
+            return daily_run.run_setup(self.root, TODAY, runner=runner, profile=profile,
+                                       deps=lambda root, log: None, launch=False)
+
+    def test_new_pc_gets_a_marked_clone_with_its_profile(self):
+        runner = Path(self.temp.name) / "pc2/runner"
+        profile = Path(self.temp.name) / "pc2/chrome"
+        self.setup(runner, profile)
+        self.assertEqual((runner / "README.md").read_text(encoding="utf-8"), "x\n")
+        self.assertEqual(daily_run.chrome_profile(runner), profile)
+        daily_run.sync_main(runner)  # the marker lets the daily run refresh it
+
+    def test_rerun_keeps_the_folder_and_its_profile(self):
+        runner = Path(self.temp.name) / "runner"
+        profile = Path(self.temp.name) / "chrome"
+        self.setup(runner, profile)
+        (runner / "data/keep.txt").write_text("run output\n", encoding="utf-8")
+        self.setup(runner)
+        self.assertTrue((runner / "data/keep.txt").exists())
+        self.assertEqual(daily_run.chrome_profile(runner), profile)
+
+    def test_unmarked_checkout_is_not_adopted(self):
+        (self.root / "README.md").write_text("edited\n", encoding="utf-8")
+        with self.assertRaises(daily_run.StepFailed):
+            self.setup(self.root)
+        self.assertFalse((self.root / daily_run.RUNNER_MARKER).exists())
+
+    def test_empty_marker_keeps_the_first_pc_profile(self):
+        (self.root / daily_run.RUNNER_MARKER).write_text("", encoding="utf-8")
+        self.assertEqual(daily_run.chrome_profile(self.root), daily_run.LEGACY_CHROME_PROFILE)
+
+    def test_broken_marker_is_reported(self):
+        (self.root / daily_run.RUNNER_MARKER).write_text("{oops", encoding="utf-8")
+        with self.assertRaises(daily_run.StepFailed):
+            daily_run.chrome_profile(self.root)
+
+    def test_outdated_playwright_counts_as_missing(self):
+        write_json(self.root / "package-lock.json", {"packages": {"node_modules/playwright": {"version": "1.63.0"}}})
+        self.assertFalse(daily_run.playwright_matches_lock(self.root))
+        write_json(self.root / "node_modules/playwright/package.json", {"version": "1.56.0"})
+        self.assertFalse(daily_run.playwright_matches_lock(self.root))
+        write_json(self.root / "node_modules/playwright/package.json", {"version": "1.63.0"})
+        self.assertTrue(daily_run.playwright_matches_lock(self.root))
+
+    def test_titan_extension_is_found_in_the_profile(self):
+        profile = Path(self.temp.name) / "chrome"
+        extension = Path(self.temp.name) / "ext"
+        extension.mkdir()
+        (extension / "browser-control.js").write_text("", encoding="utf-8")
+        self.assertFalse(daily_run.titan_extension_loaded(profile))
+        write_json(profile / "Default/Secure Preferences",
+                   {"extensions": {"settings": {"a": {"path": str(extension), "disable_reasons": [1]}}}})
+        self.assertFalse(daily_run.titan_extension_loaded(profile))
+        write_json(profile / "Default/Secure Preferences",
+                   {"extensions": {"settings": {"a": {"path": str(extension)}}}})
+        self.assertTrue(daily_run.titan_extension_loaded(profile))
 
 
 class PublishTest(RepoCase):

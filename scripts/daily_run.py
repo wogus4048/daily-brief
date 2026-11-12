@@ -6,6 +6,7 @@ research: GPT workers find, check, re-verify and write; a program assembles the 
   (docs/superpowers/specs/2026-11-09-gpt-research-design.md).
 publish: check the brief, push it straight to main, confirm the public site.
 all: prepare, research, publish in one run.
+setup: make a PC able to run all (runner clone, packages, Chrome profile); safe to run again.
 
 Everything needed to debug or improve a run stays in artifacts/daily/ (not in git):
   YYYY-MM-DD.json             latest outcome of each step
@@ -49,9 +50,11 @@ PUBLIC_WAIT_SECONDS = 600
 PUBLIC_POLL_SECONDS = 15
 OUTPUT_TAIL_CHARS = 2000
 TITAN_EXE = Path(os.environ.get("LOCALAPPDATA", "")) / "Programs/Titan/Titan.exe"
-CHROME_EXE = Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe")
+TITAN_EXTENSION = TITAN_EXE.parent / "resources/extension"
 # This project's own Chrome profile with the Titan extension (not the Naver one; findings 2026-11-09).
-CHROME_PROFILE = Path(r"D:\daily-brief-ops\chrome-titan")
+# Each PC keeps its path in the runner marker; an empty marker means the first PC's path.
+LEGACY_CHROME_PROFILE = Path(r"D:\daily-brief-ops\chrome-titan")
+CHATGPT_URL = "https://chatgpt.com/"
 BROWSER_WAIT_SECONDS = 120
 
 
@@ -185,10 +188,43 @@ def sync_main(root):
     git(root, "clean", "-fd", "data")
 
 
+def runner_settings(root):
+    """This PC's settings, kept in the runner marker (JSON; empty for the first PC)."""
+    marker = root / RUNNER_MARKER
+    text = marker.read_text(encoding="utf-8").strip() if marker.exists() else ""
+    try:
+        settings = json.loads(text) if text else {}
+    except ValueError:
+        raise StepFailed(f"{RUNNER_MARKER} is not JSON: run setup again") from None
+    if not isinstance(settings, dict):
+        raise StepFailed(f"{RUNNER_MARKER} is not a JSON object: run setup again")
+    return settings
+
+
+def chrome_profile(root):
+    return Path(runner_settings(root).get("chromeProfile") or LEGACY_CHROME_PROFILE)
+
+
+def chrome_exe():
+    folders = [os.environ.get(name) for name in ("PROGRAMFILES", "PROGRAMFILES(X86)", "LOCALAPPDATA")]
+    candidates = [Path(folder) / "Google/Chrome/Application/chrome.exe" for folder in folders if folder]
+    return next((path for path in candidates if path.exists()), None)
+
+
+def playwright_matches_lock(root):
+    """node_modules must hold the Playwright version package-lock.json names, not just any version."""
+    installed = root / "node_modules/playwright/package.json"
+    if not installed.exists():
+        return False
+    lock = json.loads((root / "package-lock.json").read_text(encoding="utf-8"))
+    wanted = lock.get("packages", {}).get("node_modules/playwright", {}).get("version")
+    return json.loads(installed.read_text(encoding="utf-8")).get("version") == wanted
+
+
 def check_dependencies(root, log):
     if importlib.util.find_spec("tzdata") is None:
         raise StepFailed("Python package tzdata is missing")
-    if not (root / "node_modules/playwright").exists():
+    if not playwright_matches_lock(root):
         npm = shutil.which("npm")
         if not npm:
             raise StepFailed("npm is missing")
@@ -196,6 +232,12 @@ def check_dependencies(root, log):
         code, tail = run_command(log, "npm-ci", [npm, "ci"], root)
         if code:
             raise StepFailed(f"npm ci failed: {tail}")
+    # The crawler launches Playwright's own Chromium; a new PC or a Playwright update needs its build.
+    # This returns quickly when the build is already there.
+    code, tail = run_command(log, "playwright-install",
+                             ["node", "node_modules/playwright/cli.js", "install", "chromium"], root)
+    if code:
+        raise StepFailed(f"playwright install chromium failed: {tail}")
 
 
 def close_expired(root, today):
@@ -459,14 +501,26 @@ def chrome_running(profile):
     return str(profile).lower() in out.lower()
 
 
-def preflight(log, wait_seconds=BROWSER_WAIT_SECONDS):
+def start_chrome(profile, *urls):
+    chrome = chrome_exe()
+    if chrome is None:
+        raise StepFailed("Chrome is not installed")
+    subprocess.Popen([str(chrome), f"--user-data-dir={profile}", "--no-first-run", *(urls or ["about:blank"])])
+
+
+def preflight(log, root, wait_seconds=BROWSER_WAIT_SECONDS):
     """Start Titan and this project's Chrome when they are off, then wait for the browser bridge (user: "켜")."""
+    profile = chrome_profile(root)
     if titan_status() is None:
+        if not TITAN_EXE.exists():
+            raise StepFailed(f"Titan is not installed at {TITAN_EXE}")
         log.event("start_titan", path=str(TITAN_EXE))
         subprocess.Popen([str(TITAN_EXE)])
-    if not chrome_running(CHROME_PROFILE):
-        log.event("start_chrome", profile=str(CHROME_PROFILE))
-        subprocess.Popen([str(CHROME_EXE), f"--user-data-dir={CHROME_PROFILE}", "--no-first-run", "about:blank"])
+    if not chrome_running(profile):
+        if not profile.exists():
+            raise StepFailed(f"Chrome profile {profile} is missing: run setup")
+        log.event("start_chrome", profile=str(profile))
+        start_chrome(profile)
     deadline = time.monotonic() + wait_seconds
     while time.monotonic() < deadline:
         status = titan_status()
@@ -495,7 +549,7 @@ def run_research(root, today, use_gpt=False, client_factory=TitanClient, wait_se
         client = None
         if use_gpt:
             with log.stage("preflight"):
-                preflight(log)
+                preflight(log, root)
             client = client_factory()
             result["workers"] = gpt_jobs.worker_limit(client)
         elif "find" not in state:
@@ -506,7 +560,7 @@ def run_research(root, today, use_gpt=False, client_factory=TitanClient, wait_se
             # cannot run, the brief is still published from the crawl.
             with log.stage("free_explore"):
                 try:
-                    preflight(log)
+                    preflight(log, root)
                     state["find"] = gpt_jobs.run_find(root, today, client_factory(), log, wait_seconds, poll_seconds,
                                                       only=DAILY_FIND_CHATS)
                 except (StepFailed, ExploreFailed) as error:
@@ -548,6 +602,118 @@ def run_research(root, today, use_gpt=False, client_factory=TitanClient, wait_se
         write_report(root, today, "research", result)
 
 
+def default_runner():
+    return (Path("D:/Dev") if Path("D:/").exists() else Path.home()) / "daily-brief-runner"
+
+
+def default_chrome_profile():
+    # The first PC used D:\daily-brief-ops; a PC without a D: drive keeps the profile in its app data.
+    if Path("D:/").exists():
+        return LEGACY_CHROME_PROFILE
+    return Path(os.environ.get("LOCALAPPDATA") or Path.home()) / "daily-brief-ops/chrome-titan"
+
+
+def clone_runner(source, runner):
+    """Clone main into a dedicated runner folder and mark it.
+
+    An existing folder without the marker is never adopted: sync_main would discard the work in it.
+    """
+    if (runner / RUNNER_MARKER).exists():
+        return "kept"
+    if runner.exists() and any(runner.iterdir()):
+        raise StepFailed(f"{runner} already holds files without {RUNNER_MARKER}; choose another --runner")
+    url = git_text(source, "remote", "get-url", "origin")
+    runner.parent.mkdir(parents=True, exist_ok=True)
+    git(runner.parent, "clone", "--branch", "main", url, str(runner))
+    (runner / RUNNER_MARKER).write_text("{}\n", encoding="utf-8")
+    return "cloned"
+
+
+def save_settings(runner, **changes):
+    settings = {**runner_settings(runner), **changes}
+    (runner / RUNNER_MARKER).write_text(json.dumps(settings, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return settings
+
+
+def titan_extension_loaded(profile):
+    """True when the profile has Titan's extension (a folder with browser-control.js) loaded and enabled."""
+    try:
+        preferences = json.loads((profile / "Default/Secure Preferences").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return False
+    extensions = preferences.get("extensions", {}).get("settings", {})
+    return any(
+        isinstance(entry, dict) and entry.get("path") and not entry.get("disable_reasons")
+        and (Path(entry["path"]) / "browser-control.js").exists()
+        for entry in extensions.values()
+    )
+
+
+def run_setup(source, today, runner=None, profile=None, deps=check_dependencies, launch=True,
+              wait_seconds=BROWSER_WAIT_SECONDS):
+    """Make this PC able to run the daily brief. Safe to run again; returns 0 when nothing is left to do.
+
+    Signing in and loading the Titan extension stay with the user; setup opens the pages and names the folder.
+    """
+    if runner is None and (source / RUNNER_MARKER).exists():
+        runner = source
+    runner = Path(runner or default_runner())
+    todo = []
+    missing = [tool for tool in ("git", "node", "npm") if not shutil.which(tool)]
+    if missing:
+        raise StepFailed(f"not installed: {', '.join(missing)}")
+    state = clone_runner(source, runner)
+    print(f"[OK] 실행 폴더 {runner} ({'새로 받음' if state == 'cloned' else '이미 있음'})")
+    profile = Path(profile or runner_settings(runner).get("chromeProfile") or default_chrome_profile())
+    save_settings(runner, chromeProfile=str(profile))
+    print(f"[OK] 전용 크롬 프로필 {profile} ({RUNNER_MARKER}에 기록)")
+    if not git(runner, "config", "user.email", check=False).stdout.strip():
+        todo.append("발행 커밋에 쓸 git user.name과 user.email을 설정한다")
+
+    log = RunLog(runner, today, "setup")
+    log_environment(log, runner, {"profile": str(profile)})
+    deps(runner, log)
+    print("[OK] Python tzdata, npm 패키지, 크롤러용 Chromium")
+
+    chrome = chrome_exe()
+    if chrome is None:
+        todo.append("Chrome을 설치한다")
+    if not TITAN_EXE.exists():
+        todo.append(f"Titan 앱을 설치한다 (찾은 위치: {TITAN_EXE})")
+    if chrome and TITAN_EXE.exists():
+        profile.mkdir(parents=True, exist_ok=True)
+        extension = titan_extension_loaded(profile)
+        if launch and titan_status() is None:
+            log.event("start_titan", path=str(TITAN_EXE))
+            subprocess.Popen([str(TITAN_EXE)])
+        if launch and not chrome_running(profile):
+            log.event("start_chrome", profile=str(profile))
+            start_chrome(profile, *(([] if extension else ["chrome://extensions/"]) + [CHATGPT_URL]))
+        if not extension:
+            todo.append("방금 연 전용 크롬의 chrome://extensions에서 개발자 모드를 켜고 "
+                        f"'압축해제된 확장 프로그램 로드'로 {TITAN_EXTENSION} 를 고른다")
+        else:
+            print("[OK] 전용 크롬 프로필에 Titan 확장 설치됨")
+            deadline = time.monotonic() + (wait_seconds if launch else 0)
+            while not (titan_status() or {}).get("bridge", {}).get("present"):
+                if time.monotonic() >= deadline:
+                    todo.append("Titan 앱과 전용 크롬이 켜져 있는지 보고, 확장이 Titan에 연결됐는지 확인한다")
+                    break
+                time.sleep(5)
+            else:
+                print("[OK] Titan 브라우저 연결")
+        print("[확인 못 함] ChatGPT 로그인: 전용 크롬의 chatgpt.com 탭에서 로그인돼 있는지 직접 본다")
+
+    log.event("run_end", status="OK" if not todo else "TODO", todo=todo)
+    if todo:
+        print("\n남은 일 (끝낸 뒤 setup을 다시 실행해 확인한다):")
+        for number, item in enumerate(todo, 1):
+            print(f"  {number}. {item}")
+        return 2
+    print(f"\n준비 끝. 매일 실행: {runner} 에서 python scripts/daily_run.py all")
+    return 0
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
@@ -558,8 +724,18 @@ def main():
     commands.add_parser("publish").add_argument("--no-push", action="store_true", help="stop after the checks")
     commands.add_parser("research").add_argument("--gpt", action="store_true", help="GPT find and card writing")
     commands.add_parser("all")
+    setup = commands.add_parser("setup", help="prepare this PC (runner folder, packages, Chrome profile); safe to rerun")
+    setup.add_argument("--runner", type=Path, help=f"runner folder (default {default_runner()})")
+    setup.add_argument("--chrome-profile", type=Path, help=f"Chrome profile (default {default_chrome_profile()})")
+    setup.add_argument("--no-launch", action="store_true", help="only check; do not start Titan or Chrome")
     args = parser.parse_args()
     today = datetime.now(SEOUL).date().isoformat()
+    if args.command == "setup":
+        try:
+            return run_setup(ROOT, today, runner=args.runner, profile=args.chrome_profile, launch=not args.no_launch)
+        except StepFailed as error:
+            print(f"setup failed: {error}", file=sys.stderr)
+            return 1
     if args.command == "prepare":
         return run_prepare(ROOT, today, no_pull=args.no_pull)
     if args.command == "details":
