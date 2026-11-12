@@ -12,7 +12,8 @@ python scripts/daily_run.py setup
 
 - 미리 깔려 있어야 하는 것: Git(발행용 user.name·user.email과 push 권한 포함), Python 3.12와 `tzdata`, Node·npm, Chrome, Titan 앱.
 - setup이 하는 일: 실행 폴더를 main으로 새로 받고(D 드라이브가 있으면 `D:\Dev\daily-brief-runner`, 없으면 사용자 폴더 아래), 표시 파일 `.daily-brief-runner`에 이 PC의 전용 크롬 프로필 경로를 적는다(D 드라이브가 있으면 `D:\daily-brief-ops\chrome-titan`, 없으면 `%LOCALAPPDATA%\daily-brief-ops\chrome-titan`). npm 패키지와 크롤러용 Chromium을 설치하고, Titan과 전용 크롬을 켠다. 경로는 `--runner`, `--chrome-profile`로 바꿀 수 있다.
-- 사람이 하는 일: setup이 연 전용 크롬에서 Titan 확장을 로드하고(setup이 폴더를 알려 준다) ChatGPT에 로그인한다. 그다음 setup을 다시 돌려 확장과 Titan 연결을 확인한다. ChatGPT 로그인은 프로그램이 확인하지 못한다.
+- 사람이 하는 일: setup이 연 전용 크롬에서 Titan 확장을 로드하고 ChatGPT에 로그인한다. 확장 폴더는 setup이 알려 주는 곳을 쓴다. Titan이 격리 런타임(`%APPDATA%\Titan\runtime-profile.json`의 root)으로 돌면 그 root의 `extension` 사본만 연결되고, 설치본 `resources\extension`은 연결되지 않는다. 그다음 setup을 다시 돌려 확인한다. ChatGPT 로그인은 프로그램이 확인하지 못한다.
+- 다른 크롬(평소 쓰는 크롬 등)에 Titan 확장이 켜져 있으면 끈다. Titan은 브라우저를 브랜드로만 골라서 GPT 채팅이 그 크롬에 열릴 수 있다. setup이 이런 크롬을 찾아 알려 주고, 그동안은 Titan 연결을 확인했다고 하지 않는다.
 - 표시 파일이 없는 기존 폴더(개발 폴더 등)는 실행 폴더로 쓰지 않는다. 일일 실행이 그 폴더의 변경을 버리기 때문이다.
 
 ## 실행

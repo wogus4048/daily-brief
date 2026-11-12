@@ -19,6 +19,7 @@ import hashlib
 import importlib.util
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -50,7 +51,9 @@ PUBLIC_WAIT_SECONDS = 600
 PUBLIC_POLL_SECONDS = 15
 OUTPUT_TAIL_CHARS = 2000
 TITAN_EXE = Path(os.environ.get("LOCALAPPDATA", "")) / "Programs/Titan/Titan.exe"
-TITAN_EXTENSION = TITAN_EXE.parent / "resources/extension"
+TITAN_INSTALLED_EXTENSION = TITAN_EXE.parent / "resources/extension"
+TITAN_RUNTIME_PROFILE = Path(os.environ.get("APPDATA", "")) / "Titan/runtime-profile.json"
+USUAL_CHROME_DATA = Path(os.environ.get("LOCALAPPDATA", "")) / "Google/Chrome/User Data"
 # By full path: a PC's PATH can lack the PowerShell folder (found 2026-11-12 on a second PC).
 POWERSHELL = Path(os.environ.get("SYSTEMROOT", r"C:\Windows")) / "System32/WindowsPowerShell/v1.0/powershell.exe"
 # This project's own Chrome profile with the Titan extension (not the Naver one; findings 2026-11-09).
@@ -357,7 +360,11 @@ def run_checks(root, date, baseline, log):
 def push_main(root, date, log):
     if git_text(root, "rev-parse", "--abbrev-ref", "HEAD") != "main":
         raise StepFailed("publish must run on main")
-    git(root, "add", "--", *[name for name in allowed_paths(date) if (root / name).exists()])
+    # The program writes LF, as git stores these files. A PC with core.autocrlf and core.safecrlf
+    # on refuses that add ("LF would be replaced by CRLF"; second PC, 2026-11-12), so the check is
+    # off for this add only.
+    git(root, "-c", "core.safecrlf=false", "add", "--",
+        *[name for name in allowed_paths(date) if (root / name).exists()])
     if git(root, "diff", "--cached", "--quiet", check=False).returncode:
         git(root, "commit", "-m", f"Update daily brief for {date}")
     for attempt in range(1, PUSH_ATTEMPTS + 1):
@@ -496,11 +503,34 @@ def titan_status():
         return None
 
 
-def chrome_running(profile):
+def same_path(left, right):
+    return os.path.normcase(os.path.abspath(left)) == os.path.normcase(os.path.abspath(right))
+
+
+def chrome_user_data_dirs():
+    """User-data folders of the running Chrome instances; a main process without the flag is the usual Chrome."""
     out = subprocess.run([str(POWERSHELL), "-NoProfile", "-Command",
-                          "Get-CimInstance Win32_Process -Filter \"Name='chrome.exe'\" | ForEach-Object { $_.CommandLine }"],
+                          "Get-CimInstance Win32_Process -Filter \"Name='chrome.exe'\" | "
+                          "Where-Object { $_.CommandLine -notmatch '--type=' } | ForEach-Object { $_.CommandLine }"],
                          capture_output=True, text=True, encoding="utf-8", errors="replace").stdout
-    return str(profile).lower() in out.lower()
+    folders = []
+    for line in filter(str.strip, out.splitlines()):
+        match = re.search(r'--user-data-dir=(?:"([^"]+)"|(\S+))', line)
+        folders.append(Path(match.group(1) or match.group(2)) if match else USUAL_CHROME_DATA)
+    return folders
+
+
+def chrome_running(profile):
+    return any(same_path(folder, profile) for folder in chrome_user_data_dirs())
+
+
+def other_titan_chromes(profile):
+    """Running Chrome instances besides this project's that also carry an enabled Titan extension.
+
+    Titan picks a browser by brand only, so a new chat may open in any of them (findings 2026-11-09, 11-12).
+    """
+    return sorted({str(folder) for folder in chrome_user_data_dirs()
+                   if not same_path(folder, profile) and titan_extension_loaded(folder)})
 
 
 def start_chrome(profile, *urls):
@@ -523,6 +553,9 @@ def preflight(log, root, wait_seconds=BROWSER_WAIT_SECONDS):
             raise StepFailed(f"Chrome profile {profile} is missing: run setup")
         log.event("start_chrome", profile=str(profile))
         start_chrome(profile)
+    others = other_titan_chromes(profile)
+    if others:
+        log.event("other_titan_browsers", folders=others)
     deadline = time.monotonic() + wait_seconds
     while time.monotonic() < deadline:
         status = titan_status()
@@ -531,6 +564,19 @@ def preflight(log, root, wait_seconds=BROWSER_WAIT_SECONDS):
             return
         time.sleep(5)
     raise StepFailed("Titan browser bridge did not come up")
+
+
+def drop_failed_find(state):
+    """Forget a free exploration whose chats all failed, and what was built from its empty answer.
+
+    Otherwise a rerun reuses the failure and never asks GPT again (2026-11-12).
+    """
+    jobs = (state.get("find") or {}).get("jobs") or []
+    if not jobs or any(job.get("status") != "FAILED" for job in jobs):
+        return False
+    for key in ("find", "candidates", "decided", "due", "check"):
+        state.pop(key, None)
+    return True
 
 
 def run_research(root, today, use_gpt=False, client_factory=TitanClient, wait_seconds=WAIT_SECONDS, poll_seconds=POLL_SECONDS):
@@ -543,6 +589,8 @@ def run_research(root, today, use_gpt=False, client_factory=TitanClient, wait_se
     log_environment(log, root, {})
     state_path = root / f"artifacts/daily/{today}-gpt.json"
     state = json.loads(state_path.read_text(encoding="utf-8")) if state_path.exists() else {}
+    if not use_gpt and drop_failed_find(state):
+        log.event("free_explore_retry")
 
     def save():
         state_path.write_text(json.dumps(state, ensure_ascii=False, indent=1) + chr(10), encoding="utf-8")
@@ -637,18 +685,40 @@ def save_settings(runner, **changes):
     return settings
 
 
-def titan_extension_loaded(profile):
-    """True when the profile has Titan's extension (a folder with browser-control.js) loaded and enabled."""
+def titan_extension_folder(runtime_profile=None):
+    """The extension copy this PC's Titan accepts.
+
+    A Titan running an isolated runtime (runtime-profile.json naming its own root and port) only
+    accepts the copy it wrote into that root; the installed copy looks for the default ports and
+    never connects (second PC, 2026-11-12).
+    """
     try:
-        preferences = json.loads((profile / "Default/Secure Preferences").read_text(encoding="utf-8"))
-    except (OSError, ValueError):
-        return False
-    extensions = preferences.get("extensions", {}).get("settings", {})
-    return any(
-        isinstance(entry, dict) and entry.get("path") and not entry.get("disable_reasons")
-        and (Path(entry["path"]) / "browser-control.js").exists()
-        for entry in extensions.values()
-    )
+        runtime = json.loads(Path(runtime_profile or TITAN_RUNTIME_PROFILE).read_text(encoding="utf-8"))
+        folder = Path(runtime["root"]) / "extension"
+        if (folder / "manifest.json").exists():
+            return folder
+    except (OSError, KeyError, TypeError, ValueError):
+        pass
+    return TITAN_INSTALLED_EXTENSION
+
+
+def titan_extensions(data_dir):
+    """Enabled Titan extension folders (a folder with browser-control.js) in any profile of a Chrome data folder."""
+    found = []
+    for preferences in Path(data_dir).glob("*/Secure Preferences"):
+        try:
+            extensions = json.loads(preferences.read_text(encoding="utf-8")).get("extensions", {}).get("settings", {})
+        except (OSError, ValueError):
+            continue
+        found += [Path(entry["path"]) for entry in extensions.values()
+                  if isinstance(entry, dict) and entry.get("path") and not entry.get("disable_reasons")
+                  and (Path(entry["path"]) / "browser-control.js").exists()]
+    return found
+
+
+def titan_extension_loaded(data_dir, folder=None):
+    """Whether the Chrome data folder has Titan's extension enabled: the given copy, or any copy."""
+    return any(folder is None or same_path(found, folder) for found in titan_extensions(data_dir))
 
 
 def run_setup(source, today, runner=None, profile=None, deps=check_dependencies, launch=True,
@@ -684,18 +754,27 @@ def run_setup(source, today, runner=None, profile=None, deps=check_dependencies,
         todo.append(f"Titan 앱을 설치한다 (찾은 위치: {TITAN_EXE})")
     if chrome and TITAN_EXE.exists():
         profile.mkdir(parents=True, exist_ok=True)
-        extension = titan_extension_loaded(profile)
+        folder = titan_extension_folder()
+        extension = titan_extension_loaded(profile, folder)
+        wrong = [str(found) for found in titan_extensions(profile) if not same_path(found, folder)]
         if launch and titan_status() is None:
             log.event("start_titan", path=str(TITAN_EXE))
             subprocess.Popen([str(TITAN_EXE)])
         if launch and not chrome_running(profile):
             log.event("start_chrome", profile=str(profile))
-            start_chrome(profile, *(([] if extension else ["chrome://extensions/"]) + [CHATGPT_URL]))
+            start_chrome(profile, *(([] if extension and not wrong else ["chrome://extensions/"]) + [CHATGPT_URL]))
+        if wrong:
+            todo.append(f"전용 크롬의 chrome://extensions에서 이 Titan이 받지 않는 확장 사본을 제거한다: {', '.join(wrong)}")
         if not extension:
-            todo.append("방금 연 전용 크롬의 chrome://extensions에서 개발자 모드를 켜고 "
-                        f"'압축해제된 확장 프로그램 로드'로 {TITAN_EXTENSION} 를 고른다")
-        else:
-            print("[OK] 전용 크롬 프로필에 Titan 확장 설치됨")
+            todo.append("전용 크롬의 chrome://extensions에서 개발자 모드를 켜고 "
+                        f"'압축해제된 확장 프로그램 로드'로 {folder} 를 고른다")
+        others = other_titan_chromes(profile)
+        if others:
+            todo.append("다른 크롬에도 Titan 확장이 켜져 있어 채팅이 그쪽에 열릴 수 있다. "
+                        f"그 크롬의 Titan 확장을 끈다: {', '.join(others)}")
+        if extension and not wrong and not others:
+            print(f"[OK] 전용 크롬 프로필에 이 Titan의 확장 사본 설치됨 ({folder})")
+            # With no other Titan browser running, a present bridge can only be this profile.
             deadline = time.monotonic() + (wait_seconds if launch else 0)
             while not (titan_status() or {}).get("bridge", {}).get("present"):
                 if time.monotonic() >= deadline:
@@ -703,7 +782,7 @@ def run_setup(source, today, runner=None, profile=None, deps=check_dependencies,
                     break
                 time.sleep(5)
             else:
-                print("[OK] Titan 브라우저 연결")
+                print("[OK] Titan 브라우저 연결 (전용 크롬)")
         print("[확인 못 함] ChatGPT 로그인: 전용 크롬의 chatgpt.com 탭에서 로그인돼 있는지 직접 본다")
 
     log.event("run_end", status="OK" if not todo else "TODO", todo=todo)

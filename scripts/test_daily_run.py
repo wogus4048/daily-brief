@@ -524,6 +524,33 @@ class SetupTest(RepoCase):
         write_json(profile / "Default/Secure Preferences",
                    {"extensions": {"settings": {"a": {"path": str(extension)}}}})
         self.assertTrue(daily_run.titan_extension_loaded(profile))
+        # Any profile of the data folder counts, and a specific copy can be required.
+        write_json(profile / "Default/Secure Preferences", {})
+        write_json(profile / "Profile 1/Secure Preferences",
+                   {"extensions": {"settings": {"a": {"path": str(extension)}}}})
+        self.assertTrue(daily_run.titan_extension_loaded(profile, extension))
+        self.assertFalse(daily_run.titan_extension_loaded(profile, Path(self.temp.name) / "other"))
+
+    def test_isolated_titan_runtime_names_its_own_extension_copy(self):
+        runtime = Path(self.temp.name) / "titan-test"
+        write_json(runtime / "extension/manifest.json", {})
+        profile_file = Path(self.temp.name) / "runtime-profile.json"
+        write_json(profile_file, {"root": str(runtime), "port": 18765})
+        self.assertEqual(daily_run.titan_extension_folder(profile_file), runtime / "extension")
+        write_json(profile_file, {"root": str(Path(self.temp.name) / "no-copy")})
+        self.assertEqual(daily_run.titan_extension_folder(profile_file), daily_run.TITAN_INSTALLED_EXTENSION)
+        self.assertEqual(daily_run.titan_extension_folder(Path(self.temp.name) / "missing.json"),
+                         daily_run.TITAN_INSTALLED_EXTENSION)
+
+    def test_failed_free_exploration_is_retried(self):
+        failed = {"find": {"rows": [], "jobs": [{"name": "find-free", "status": "FAILED"}]},
+                  "candidates": [], "decided": [], "due": [], "check": {}}
+        self.assertTrue(daily_run.drop_failed_find(failed))
+        self.assertEqual(failed, {})
+        done = {"find": {"rows": [], "jobs": [{"name": "find-free", "status": "FAILED"},
+                                              {"name": "find-annual", "status": "OK"}]}, "candidates": []}
+        self.assertFalse(daily_run.drop_failed_find(done))
+        self.assertIn("candidates", done)
 
 
 class PublishTest(RepoCase):
@@ -555,6 +582,13 @@ class PublishTest(RepoCase):
         self.assertEqual(json.loads(self.origin_file("data/latest.json"))["date"], TODAY)
         self.assertEqual(json.loads(self.origin_file(f"data/source-cache/{TODAY}.json"))["date"], TODAY)
         self.assertEqual(self.report()["publish"]["status"], "OK")
+
+    def test_pc_with_strict_line_endings_still_publishes(self):
+        git(self.root, "config", "core.autocrlf", "true")
+        git(self.root, "config", "core.safecrlf", "true")
+        self.write_brief()
+        self.assertEqual(self.publish(), 0)
+        self.assertNotIn(b"\r", git(self.origin, "show", "main:data/latest.json").encode("utf-8"))
 
     def test_publish_closes_passed_deadlines(self):
         self.write_brief()
