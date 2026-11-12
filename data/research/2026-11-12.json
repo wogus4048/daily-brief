@@ -1,6 +1,6 @@
 {
   "date": "2026-11-12",
-  "completedAt": "2026-11-12T12:56:34+09:00",
+  "completedAt": "2026-11-12T14:07:19+09:00",
   "status": "COMPLETE",
   "sourceDiscoveries": [],
   "tracks": {
@@ -14,28 +14,10 @@
       },
       "rawCandidates": [
         {
-          "title": "[SCENE] 2026 SCENE AI·실사 웹드라마 공모전",
-          "url": "https://linkareer.com/activity/363354",
+          "title": "포항시 지역사회 문제 해결을 위한 AI 솔루션 아이디어 경진대회",
+          "url": "https://linkareer.com/activity/363898",
           "disposition": "PUBLISHED",
-          "id": "linkareer-363354"
-        },
-        {
-          "title": "[세종사이버대학교] 2026 전국민 AI 공모전 AI 불씨",
-          "url": "https://linkareer.com/activity/363343",
-          "disposition": "PUBLISHED",
-          "id": "linkareer-363343"
-        },
-        {
-          "title": "『2026 SVC Seoul AI 해커톤』 | 현대건설과 함께하는 주거생활 AI 아이디어 도전",
-          "url": "https://linkareer.com/activity/363236",
-          "disposition": "PUBLISHED",
-          "id": "linkareer-363236"
-        },
-        {
-          "title": "포항시 지역사회 문제 해결을 위한 AI 솔루션 아이디어 경진대회 신규",
-          "url": "https://www.wevity.com/?c=find&gbn=view&ix=112316",
-          "disposition": "PUBLISHED",
-          "id": "wevity-112316"
+          "id": "linkareer-363898"
         }
       ]
     },
@@ -62,154 +44,16 @@
       },
       "rawCandidates": [
         {
-          "title": "[2026 서울관광 프롬프톤] 참가자모집",
-          "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611100065",
+          "title": "[대전중구중독관리통합지원센터] 2026 중독예방 온라인 방탈출 캠페인 「닫힌 문 너머」",
+          "url": "https://linkareer.com/activity/363900",
           "disposition": "PUBLISHED",
-          "id": "contestkorea-202611100065"
+          "id": "linkareer-363900"
         },
         {
-          "title": "2일 후",
-          "url": "https://koreahackathons.com/events/1-nipa",
+          "title": "2026 청계천의 빛 ‘빛나는 나의 꿈’ 메시지 공모 이벤트",
+          "url": "https://linkareer.com/activity/363844",
           "disposition": "PUBLISHED",
-          "id": "hackathonkorea-1"
-        },
-        {
-          "title": "9일 후",
-          "url": "https://koreahackathons.com/events/2-nipa",
-          "disposition": "PUBLISHED",
-          "id": "hackathonkorea-2"
-        },
-        {
-          "title": "10일 후",
-          "url": "https://koreahackathons.com/events/future-commerce-challenge",
-          "disposition": "PUBLISHED",
-          "id": "hackathonkorea-item"
-        },
-        {
-          "title": "13일 후",
-          "url": "https://koreahackathons.com/events/uk-korea-ai-futures-forum-hackathon-launch-korea",
-          "disposition": "PUBLISHED",
-          "id": "hackathonkorea-item-2"
-        },
-        {
-          "title": "광명상생플랫폼 로고 공모전",
-          "url": "https://linkareer.com/activity/363779",
-          "disposition": "PUBLISHED",
-          "id": "linkareer-363779"
-        },
-        {
-          "title": "POSTECH 테크데이",
-          "url": "https://linkareer.com/activity/363778",
-          "disposition": "PUBLISHED",
-          "id": "linkareer-363778"
-        },
-        {
-          "title": "제 20회 백석 글판 공모전",
-          "url": "https://linkareer.com/activity/363777",
-          "disposition": "PUBLISHED",
-          "id": "linkareer-363777"
-        },
-        {
-          "title": "핵 없는 세상을 위한 전국행동! 마스코트 이름 짓기 대회",
-          "url": "https://linkareer.com/activity/363772",
-          "disposition": "PUBLISHED",
-          "id": "linkareer-363772"
-        },
-        {
-          "title": "(가칭)과천지식정보타운 도서관 명칭 시민 공모",
-          "url": "https://linkareer.com/activity/363771",
-          "disposition": "PUBLISHED",
-          "id": "linkareer-363771"
-        },
-        {
-          "title": "2027년 목포KR갤러리 전시 작가 대관 공고",
-          "url": "https://linkareer.com/activity/363762",
-          "disposition": "PUBLISHED",
-          "id": "linkareer-363762"
-        },
-        {
-          "title": "2027 아티스타트 참여 작가 모집",
-          "url": "https://linkareer.com/activity/363758",
-          "disposition": "PUBLISHED",
-          "id": "linkareer-363758"
-        },
-        {
-          "title": "[이벤트] 롤잉(RoleEng) 인스타 팔로우하고 1개월 구독권 받아가자!!",
-          "url": "https://linkareer.com/activity/363721",
-          "disposition": "PUBLISHED",
-          "id": "linkareer-363721"
-        },
-        {
-          "title": "[현대경제신문] 2027 현대경제신문 신춘문예 공모",
-          "url": "https://linkareer.com/activity/363634",
-          "disposition": "PUBLISHED",
-          "id": "linkareer-363634"
-        },
-        {
-          "title": "2026「김천시 삼색이수자율상권 유튜브 공모전」",
-          "url": "https://linkareer.com/activity/363478",
-          "disposition": "PUBLISHED",
-          "id": "linkareer-363478"
-        },
-        {
-          "title": "[이벤트] VLLO 인스타 팔로우하고 프리미엄 1개월권 받아볼텨?!",
-          "url": "https://linkareer.com/activity/363438",
-          "disposition": "PUBLISHED",
-          "id": "linkareer-363438"
-        },
-        {
-          "title": "2026년도 강원특별자치도 톡톡 Idea 공모전",
-          "url": "https://linkareer.com/activity/363330",
-          "disposition": "PUBLISHED",
-          "id": "linkareer-363330"
-        },
-        {
-          "title": "2026년 제5회 석포마을 공모전",
-          "url": "https://linkareer.com/activity/363329",
-          "disposition": "PUBLISHED",
-          "id": "linkareer-363329"
-        },
-        {
-          "title": "JTI 글로벌 아이디어 공모전",
-          "url": "https://linkareer.com/activity/363324",
-          "disposition": "PUBLISHED",
-          "id": "linkareer-363324"
-        },
-        {
-          "title": "(재)양산문화재단 CI 재공모",
-          "url": "https://linkareer.com/activity/363244",
-          "disposition": "PUBLISHED",
-          "id": "linkareer-363244"
-        },
-        {
-          "title": "[2026-11-09 09:00 ~ 2026-11-23 18:00] 【포천도시공사】 2026년 저출생·인구감소 대응 아이디어 공모전 포천도시공사 의견 작성 수0 공유 수0",
-          "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=16fb8760be314506a45bde167c52c146&menu_id=527&pagetype=bbs",
-          "disposition": "PUBLISHED",
-          "id": "sotong24contests-516752146527"
-        },
-        {
-          "title": "[포천도시공사] 2026년 저출생·인구감소 대응 아이디어 공모전",
-          "url": "https://www.wevity.com/?c=find&gbn=view&ix=112217",
-          "disposition": "PUBLISHED",
-          "id": "wevity-112217"
-        },
-        {
-          "title": "2026년 제2회 구리시 정책제안 공모전",
-          "url": "https://www.wevity.com/?c=find&gbn=view&ix=112220",
-          "disposition": "PUBLISHED",
-          "id": "wevity-112220"
-        },
-        {
-          "title": "2026 서울관광 프롬프톤",
-          "url": "https://www.wevity.com/?c=find&gbn=view&ix=112294",
-          "disposition": "PUBLISHED",
-          "id": "wevity-112294"
-        },
-        {
-          "title": "디어비 글로벌 런칭 공모전 신규",
-          "url": "https://www.wevity.com/?c=find&gbn=view&ix=112313",
-          "disposition": "PUBLISHED",
-          "id": "wevity-112313"
+          "id": "linkareer-363844"
         }
       ]
     },
@@ -223,134 +67,7 @@
         "fintechSupport": [],
         "credits": []
       },
-      "rawCandidates": [
-        {
-          "title": "[대구] 남구 2026년 남구다운 청년 창업 지원사업 통합공고",
-          "url": "https://grantly.kr/opportunities/17926",
-          "disposition": "PUBLISHED",
-          "id": "grantlysupport-17926"
-        },
-        {
-          "title": "2026 지역·산업 융합 네트워크 공동 프로그램 - 「아이디어가 일이 되기까지」 - 좋아하는 것에서 시작하는 작은 창업 이야기",
-          "url": "https://grantly.kr/opportunities/18596",
-          "disposition": "PUBLISHED",
-          "id": "grantlysupport-18596"
-        },
-        {
-          "title": "블루웨일",
-          "url": "https://grantly.kr/opportunities/18809",
-          "disposition": "PUBLISHED",
-          "id": "grantlysupport-18809"
-        },
-        {
-          "title": "한국공학한림원 차세대공학리더 YEHS",
-          "url": "https://grantly.kr/opportunities/19169",
-          "disposition": "PUBLISHED",
-          "id": "grantlysupport-19169"
-        },
-        {
-          "title": "[경기] 고양시 2026년 DXㆍICT 일본 투자유치 특화사업 참가기업 모집 공고",
-          "url": "https://grantly.kr/opportunities/20620",
-          "disposition": "PUBLISHED",
-          "id": "grantlysupport-20620"
-        },
-        {
-          "title": "2026년 2차 무기체계 부품국산화개발 지원사업 연구개발기관 모집 3차 재공고",
-          "url": "https://grantly.kr/opportunities/20813",
-          "disposition": "PUBLISHED",
-          "id": "grantlysupport-20813"
-        },
-        {
-          "title": "2026 NCI 민/관/학 창업포럼",
-          "url": "https://grantly.kr/opportunities/20833",
-          "disposition": "PUBLISHED",
-          "id": "grantlysupport-20833"
-        },
-        {
-          "title": "호서대학교 서울창업보육센터 신규입주모집 공고",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179776",
-          "disposition": "PUBLISHED",
-          "id": "kstartuphighlights-179776"
-        },
-        {
-          "title": "2026 강남구 미래산업 기반 기업 활성화 지원사업 데모데이 참관",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179771",
-          "disposition": "PUBLISHED",
-          "id": "kstartuphighlights-179771"
-        },
-        {
-          "title": "2026 여성벤처활성화사업 「여성벤처&스타트업 혁신성장 포럼」참여자 모집",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179775",
-          "disposition": "PUBLISHED",
-          "id": "kstartuphighlights-179775"
-        },
-        {
-          "title": "스타트업을 위한 B2B 영업 전략 특강",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179769",
-          "disposition": "PUBLISHED",
-          "id": "kstartuphighlights-179769"
-        },
-        {
-          "title": "2026년 경희대학교 캠퍼스타운 제6회 데모데이: 刮目相對괄목상대",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179690",
-          "disposition": "PUBLISHED",
-          "id": "kstartuphighlights-179690"
-        },
-        {
-          "title": "2026년 한라대학교 창업보육센터 11월 신규입주기업 모집 공고",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179761",
-          "disposition": "PUBLISHED",
-          "id": "kstartuphighlights-179761"
-        },
-        {
-          "title": "[2026년 대전창업문화주간] 제 3회 대전창업문화 주간(창업의 시작과 끝)",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179760",
-          "disposition": "PUBLISHED",
-          "id": "kstartuphighlights-179760"
-        },
-        {
-          "title": "[알파브라더스] 「2026 충청 스타트업 벤처포럼」 2회차-오픈이노베이션 교류회 참가 안내의 건",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179764",
-          "disposition": "PUBLISHED",
-          "id": "kstartuphighlights-179764"
-        },
-        {
-          "title": "[강동구 청년해냄센터] 2027년 정부 지원 사업 대비 성공 창업 스쿨 참가자 모집 공고",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179766",
-          "disposition": "PUBLISHED",
-          "id": "kstartuphighlights-179766"
-        },
-        {
-          "title": "세종창업키움센터 운영 민간위탁 수탁기관 모집 재공고",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179626",
-          "disposition": "PUBLISHED",
-          "id": "kstartuphighlights-179626"
-        },
-        {
-          "title": "STARTUP STARRY NIGHT in Seoul 1:1 밋업(투자, O.I.) 참여기업 모집(11월 허브아워)",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179765",
-          "disposition": "PUBLISHED",
-          "id": "kstartuphighlights-179765"
-        },
-        {
-          "title": "2026 인수창업 설명회 - 당신의 성장을 지원합니다.",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179774",
-          "disposition": "PUBLISHED",
-          "id": "kstartuphighlights-179774"
-        },
-        {
-          "title": "2026 방탈출 공간 게임 제작 지원사업",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179682",
-          "disposition": "PUBLISHED",
-          "id": "kstartuphighlights-179682"
-        },
-        {
-          "title": "2026 스타트업 언론홍보·미디어 콘텐츠 확산 지원사업 11월 모집 공고",
-          "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179767",
-          "disposition": "PUBLISHED",
-          "id": "kstartuphighlights-179767"
-        }
-      ]
+      "rawCandidates": []
     },
     "upcomingOpenings": {
       "status": "FAILED",
@@ -687,7 +404,7 @@
         "id": "busan-marine-startup-spark-up-1876-2026"
       },
       {
-        "title": "아이디어•건축•창업 2026 체육관련 규제개선 공모전 1",
+        "title": "아이디어•건축•창업 2026 체육관련 규제개선 공모전 2",
         "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610260014",
         "disposition": "EXISTING",
         "reason": "이미 있는 접수 중 공고"
@@ -723,7 +440,7 @@
         "reason": "협회 지정 KDT 교육과정 신규 등록자만 참가, 재직자·기존 등록자 제외"
       },
       {
-        "title": "아이디어•건축•창업 국회 미래세대 미래의제 공모전 0",
+        "title": "아이디어•건축•창업 국회 미래세대 미래의제 공모전 1",
         "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610280013",
         "disposition": "EXISTING",
         "reason": "이미 있는 접수 중 공고"
@@ -759,7 +476,7 @@
         "reason": "이미 있는 접수 중 공고"
       },
       {
-        "title": "아이디어•건축•창업 2026년 대국민 재정교육 아이디어 공모전 3",
+        "title": "아이디어•건축•창업 2026년 대국민 재정교육 아이디어 공모전 4",
         "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202610300003",
         "disposition": "EXISTING",
         "reason": "이미 있는 접수 중 공고"
@@ -858,7 +575,7 @@
         "id": "jocoding-ax-pwc-hiring-challenge-2026"
       },
       {
-        "title": "아이디어•건축•창업 [산림청] 산림공공데이터 활용 사례 공모 0",
+        "title": "아이디어•건축•창업 [산림청] 산림공공데이터 활용 사례 공모 1",
         "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611040027",
         "disposition": "EXISTING",
         "reason": "이미 있는 접수 중 공고"
@@ -899,14 +616,14 @@
       {
         "title": "학문•과학•IT [2026 서울관광 프롬프톤] 참가자모집 1",
         "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611100065",
-        "disposition": "PUBLISHED",
-        "id": "contestkorea-202611100065"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "학문•과학•IT POSTECH 테크데이 0",
-        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611110021"
+        "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&str_no=202611110021",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       }
     ],
     "grantlySupport": [
@@ -925,8 +642,8 @@
       {
         "title": "[대구] 남구 2026년 남구다운 청년 창업 지원사업 통합공고",
         "url": "https://grantly.kr/opportunities/17926",
-        "disposition": "PUBLISHED",
-        "id": "grantlysupport-17926"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "2026년 남구다운 청년 창업 지원사업 통합공고(수정)",
@@ -937,20 +654,20 @@
       {
         "title": "2026 지역·산업 융합 네트워크 공동 프로그램 - 「아이디어가 일이 되기까지」 - 좋아하는 것에서 시작하는 작은 창업 이야기",
         "url": "https://grantly.kr/opportunities/18596",
-        "disposition": "PUBLISHED",
-        "id": "grantlysupport-18596"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "블루웨일",
         "url": "https://grantly.kr/opportunities/18809",
-        "disposition": "PUBLISHED",
-        "id": "grantlysupport-18809"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "한국공학한림원 차세대공학리더 YEHS",
         "url": "https://grantly.kr/opportunities/19169",
-        "disposition": "PUBLISHED",
-        "id": "grantlysupport-19169"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "산업교육연구소님의 채널",
@@ -973,20 +690,20 @@
       {
         "title": "[경기] 고양시 2026년 DXㆍICT 일본 투자유치 특화사업 참가기업 모집 공고",
         "url": "https://grantly.kr/opportunities/20620",
-        "disposition": "PUBLISHED",
-        "id": "grantlysupport-20620"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "2026년 2차 무기체계 부품국산화개발 지원사업 연구개발기관 모집 3차 재공고",
         "url": "https://grantly.kr/opportunities/20813",
-        "disposition": "PUBLISHED",
-        "id": "grantlysupport-20813"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "2026 NCI 민/관/학 창업포럼",
         "url": "https://grantly.kr/opportunities/20833",
-        "disposition": "PUBLISHED",
-        "id": "grantlysupport-20833"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "[로컬창업트랙 2기]기억되는 브랜드가 되는 법",
@@ -999,14 +716,14 @@
       {
         "title": "2일 후",
         "url": "https://koreahackathons.com/events/1-nipa",
-        "disposition": "PUBLISHED",
-        "id": "hackathonkorea-1"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "9일 후",
         "url": "https://koreahackathons.com/events/2-nipa",
-        "disposition": "PUBLISHED",
-        "id": "hackathonkorea-2"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "29일 후",
@@ -1017,8 +734,8 @@
       {
         "title": "10일 후",
         "url": "https://koreahackathons.com/events/future-commerce-challenge",
-        "disposition": "PUBLISHED",
-        "id": "hackathonkorea-item"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "4일 후",
@@ -1035,8 +752,8 @@
       {
         "title": "13일 후",
         "url": "https://koreahackathons.com/events/uk-korea-ai-futures-forum-hackathon-launch-korea",
-        "disposition": "PUBLISHED",
-        "id": "hackathonkorea-item-2"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       }
     ],
     "kStartupHighlights": [
@@ -1091,14 +808,14 @@
       {
         "title": "호서대학교 서울창업보육센터 신규입주모집 공고",
         "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179776",
-        "disposition": "PUBLISHED",
-        "id": "kstartuphighlights-179776"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "2026 강남구 미래산업 기반 기업 활성화 지원사업 데모데이 참관",
         "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179771",
-        "disposition": "PUBLISHED",
-        "id": "kstartuphighlights-179771"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "2026 전북콘텐츠코리아랩 AI 활용 콘텐츠(캐릭터) 아이디어 발굴 캠프",
@@ -1109,32 +826,32 @@
       {
         "title": "2026 여성벤처활성화사업 「여성벤처&스타트업 혁신성장 포럼」참여자 모집",
         "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179775",
-        "disposition": "PUBLISHED",
-        "id": "kstartuphighlights-179775"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "스타트업을 위한 B2B 영업 전략 특강",
         "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179769",
-        "disposition": "PUBLISHED",
-        "id": "kstartuphighlights-179769"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "2026년 경희대학교 캠퍼스타운 제6회 데모데이: 刮目相對괄목상대",
         "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179690",
-        "disposition": "PUBLISHED",
-        "id": "kstartuphighlights-179690"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "2026년 한라대학교 창업보육센터 11월 신규입주기업 모집 공고",
         "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179761",
-        "disposition": "PUBLISHED",
-        "id": "kstartuphighlights-179761"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "[2026년 대전창업문화주간] 제 3회 대전창업문화 주간(창업의 시작과 끝)",
         "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179760",
-        "disposition": "PUBLISHED",
-        "id": "kstartuphighlights-179760"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "[행사 안내] 2026 경기도 R&D 성과공유회",
@@ -1145,26 +862,26 @@
       {
         "title": "[알파브라더스] 「2026 충청 스타트업 벤처포럼」 2회차-오픈이노베이션 교류회 참가 안내의 건",
         "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179764",
-        "disposition": "PUBLISHED",
-        "id": "kstartuphighlights-179764"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "[강동구 청년해냄센터] 2027년 정부 지원 사업 대비 성공 창업 스쿨 참가자 모집 공고",
         "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179766",
-        "disposition": "PUBLISHED",
-        "id": "kstartuphighlights-179766"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "세종창업키움센터 운영 민간위탁 수탁기관 모집 재공고",
         "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179626",
-        "disposition": "PUBLISHED",
-        "id": "kstartuphighlights-179626"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "STARTUP STARRY NIGHT in Seoul 1:1 밋업(투자, O.I.) 참여기업 모집(11월 허브아워)",
         "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179765",
-        "disposition": "PUBLISHED",
-        "id": "kstartuphighlights-179765"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "경기창업혁신공간(동부권역_하남) 2026년 11월 신규 입주기업 모집",
@@ -1983,20 +1700,20 @@
       {
         "title": "2026 인수창업 설명회 - 당신의 성장을 지원합니다.",
         "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179774",
-        "disposition": "PUBLISHED",
-        "id": "kstartuphighlights-179774"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "2026 방탈출 공간 게임 제작 지원사업",
         "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179682",
-        "disposition": "PUBLISHED",
-        "id": "kstartuphighlights-179682"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "2026 스타트업 언론홍보·미디어 콘텐츠 확산 지원사업 11월 모집 공고",
         "url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179767",
-        "disposition": "PUBLISHED",
-        "id": "kstartuphighlights-179767"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "2026년도 스타트업 및 중소기업 성장전략 세미나 참가기업 모집",
@@ -2315,40 +2032,40 @@
     ],
     "linkareer": [
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[대전중구중독관리통합지원센터] 2026 중독예방 온라인 방탈출 캠페인 「닫힌 문 너머」",
-        "url": "https://linkareer.com/activity/363900"
+        "url": "https://linkareer.com/activity/363900",
+        "disposition": "PUBLISHED",
+        "id": "linkareer-363900"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "포항시 지역사회 문제 해결을 위한 AI 솔루션 아이디어 경진대회",
-        "url": "https://linkareer.com/activity/363898"
+        "url": "https://linkareer.com/activity/363898",
+        "disposition": "PUBLISHED",
+        "id": "linkareer-363898"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026년 개인정보 보호 숏폼 콘텐츠 공모전",
-        "url": "https://linkareer.com/activity/363896"
+        "url": "https://linkareer.com/activity/363896",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[창업진흥원] 스타트업 원스톱 지원센터 슬로건 공모전",
-        "url": "https://linkareer.com/activity/363885"
+        "url": "https://linkareer.com/activity/363885",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 청계천의 빛 ‘빛나는 나의 꿈’ 메시지 공모 이벤트",
-        "url": "https://linkareer.com/activity/363844"
+        "url": "https://linkareer.com/activity/363844",
+        "disposition": "PUBLISHED",
+        "id": "linkareer-363844"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[공모전 TALK] AI 숏폼으로 상금 도전! 귀뚜라미 챌린지",
-        "url": "https://linkareer.com/activity/363787"
+        "url": "https://linkareer.com/activity/363787",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
         "title": "화포천습지 생물다양성 사진 공모전",
@@ -2359,20 +2076,20 @@
       {
         "title": "광명상생플랫폼 로고 공모전",
         "url": "https://linkareer.com/activity/363779",
-        "disposition": "PUBLISHED",
-        "id": "linkareer-363779"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "POSTECH 테크데이",
         "url": "https://linkareer.com/activity/363778",
-        "disposition": "PUBLISHED",
-        "id": "linkareer-363778"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "제 20회 백석 글판 공모전",
         "url": "https://linkareer.com/activity/363777",
-        "disposition": "PUBLISHED",
-        "id": "linkareer-363777"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "신월곡1구역 상업시설&공동주택 네이밍 공모전",
@@ -2395,14 +2112,14 @@
       {
         "title": "핵 없는 세상을 위한 전국행동! 마스코트 이름 짓기 대회",
         "url": "https://linkareer.com/activity/363772",
-        "disposition": "PUBLISHED",
-        "id": "linkareer-363772"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "(가칭)과천지식정보타운 도서관 명칭 시민 공모",
         "url": "https://linkareer.com/activity/363771",
-        "disposition": "PUBLISHED",
-        "id": "linkareer-363771"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "2026년 장애인식개선 표어공모전 「다름의 가치를 잇다」",
@@ -2431,11 +2148,11 @@
       {
         "title": "2027년 목포KR갤러리 전시 작가 대관 공고",
         "url": "https://linkareer.com/activity/363762",
-        "disposition": "PUBLISHED",
-        "id": "linkareer-363762"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "title": "2026 귀뚜라미 AI 숏폼 영상 챌린지 담당자 답변 1 귀뚜라미 보일러 D-18 조회 94 댓글 1",
+        "title": "2026 귀뚜라미 AI 숏폼 영상 챌린지 담당자 답변 1 귀뚜라미 보일러 D-18 조회 96 댓글 1",
         "url": "https://linkareer.com/activity/363760",
         "disposition": "NOT_RELEVANT",
         "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
@@ -2443,14 +2160,14 @@
       {
         "title": "2027 아티스타트 참여 작가 모집",
         "url": "https://linkareer.com/activity/363758",
-        "disposition": "PUBLISHED",
-        "id": "linkareer-363758"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "[이벤트] 롤잉(RoleEng) 인스타 팔로우하고 1개월 구독권 받아가자!!",
         "url": "https://linkareer.com/activity/363721",
-        "disposition": "PUBLISHED",
-        "id": "linkareer-363721"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "2027 서울국제정원박람회 작가정원 국제공모",
@@ -2473,8 +2190,8 @@
       {
         "title": "[현대경제신문] 2027 현대경제신문 신춘문예 공모",
         "url": "https://linkareer.com/activity/363634",
-        "disposition": "PUBLISHED",
-        "id": "linkareer-363634"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "[구로구] G구로수호대 기후행동 실천수기 공모전",
@@ -2503,14 +2220,14 @@
       {
         "title": "2026「김천시 삼색이수자율상권 유튜브 공모전」",
         "url": "https://linkareer.com/activity/363478",
-        "disposition": "PUBLISHED",
-        "id": "linkareer-363478"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[2026 서울관광 프롬프톤] 참가자모집",
-        "url": "https://linkareer.com/activity/363459"
+        "url": "https://linkareer.com/activity/363459",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "2026 인천 창의X디자인 위크",
@@ -2521,8 +2238,8 @@
       {
         "title": "[이벤트] VLLO 인스타 팔로우하고 프리미엄 1개월권 받아볼텨?!",
         "url": "https://linkareer.com/activity/363438",
-        "disposition": "PUBLISHED",
-        "id": "linkareer-363438"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "2026 다짐공모전 (뮤지컬 페치카 장부가, 출정가 등 독립군가 부르기 UCC영상공모전)",
@@ -2539,8 +2256,8 @@
       {
         "title": "[SCENE] 2026 SCENE AI·실사 웹드라마 공모전",
         "url": "https://linkareer.com/activity/363354",
-        "disposition": "PUBLISHED",
-        "id": "linkareer-363354"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "2026 충청남도 교통안전 콘텐츠(포스터 · 숏폼) 공모전",
@@ -2551,8 +2268,8 @@
       {
         "title": "[세종사이버대학교] 2026 전국민 AI 공모전 AI 불씨",
         "url": "https://linkareer.com/activity/363343",
-        "disposition": "PUBLISHED",
-        "id": "linkareer-363343"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "폰트 출시 기념 ㅂㅇㅅㅁ 디자인 공모전",
@@ -2563,20 +2280,20 @@
       {
         "title": "2026년도 강원특별자치도 톡톡 Idea 공모전",
         "url": "https://linkareer.com/activity/363330",
-        "disposition": "PUBLISHED",
-        "id": "linkareer-363330"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "2026년 제5회 석포마을 공모전",
         "url": "https://linkareer.com/activity/363329",
-        "disposition": "PUBLISHED",
-        "id": "linkareer-363329"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "JTI 글로벌 아이디어 공모전",
         "url": "https://linkareer.com/activity/363324",
-        "disposition": "PUBLISHED",
-        "id": "linkareer-363324"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "[안성시] 2026 안성여행 스마트폰 사진 공모전",
@@ -2597,22 +2314,22 @@
         "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[아이디씨티] uGPS™ 숏폼 영상 공모전 (~12/04)",
-        "url": "https://linkareer.com/activity/363255"
+        "url": "https://linkareer.com/activity/363255",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
         "title": "(재)양산문화재단 CI 재공모",
         "url": "https://linkareer.com/activity/363244",
-        "disposition": "PUBLISHED",
-        "id": "linkareer-363244"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "『2026 SVC Seoul AI 해커톤』 | 현대건설과 함께하는 주거생활 AI 아이디어 도전",
         "url": "https://linkareer.com/activity/363236",
-        "disposition": "PUBLISHED",
-        "id": "linkareer-363236"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "2026 K-콘텐츠 관광마케팅 기초 아카데미 모집 (~11/25)",
@@ -2796,7 +2513,7 @@
         "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "title": "토마토들 학생회 아이디어톤 담당자 답변 2 주식회사 리에이크 D-3 조회 970 댓글 2",
+        "title": "토마토들 학생회 아이디어톤 담당자 답변 2 주식회사 리에이크 D-3 조회 974 댓글 2",
         "url": "https://linkareer.com/activity/362868",
         "disposition": "EXISTING",
         "reason": "이미 있는 접수 중 공고"
@@ -3210,7 +2927,7 @@
         "reason": "이미 있는 접수 중 공고"
       },
       {
-        "title": "밀양 매운맛 쇼츠 공모전 담당자 답변 1 밀양시 D-3 조회 427 댓글 1",
+        "title": "밀양 매운맛 쇼츠 공모전 담당자 답변 1 밀양시 D-3 조회 428 댓글 1",
         "url": "https://linkareer.com/activity/361497",
         "disposition": "NOT_RELEVANT",
         "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
@@ -3312,7 +3029,7 @@
         "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "title": "2026 현장문제 AX 업무혁신 아이디어 해커톤 참가자 모집 담당자 답변 2 팀원 모집 3 주식회사 어치브모먼트 D-5 조회 3,542 댓글 2",
+        "title": "2026 현장문제 AX 업무혁신 아이디어 해커톤 참가자 모집 담당자 답변 2 팀원 모집 3 주식회사 어치브모먼트 D-5 조회 3,545 댓글 2",
         "url": "https://linkareer.com/activity/361137",
         "disposition": "DUPLICATE",
         "reason": "제목이 거의 같은 공고가 이미 있음: chungnam-manufacturing-ax-hackathon-2026",
@@ -3909,1248 +3626,1257 @@
         "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 화성 황금해안길 사진·숏폼 공모전",
-        "url": "https://linkareer.com/activity/359208"
+        "url": "https://linkareer.com/activity/359208",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[카페385] 2027 전시작가 공개모집",
-        "url": "https://linkareer.com/activity/359206"
+        "url": "https://linkareer.com/activity/359206",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "마이웨이북스 나도 이제 출간작가, 원고 모집",
-        "url": "https://linkareer.com/activity/359205"
+        "url": "https://linkareer.com/activity/359205",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[대한구강보건협회] 제59회 2026 구강보건 작품 공모전",
-        "url": "https://linkareer.com/activity/359172"
+        "url": "https://linkareer.com/activity/359172",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 제11회 장기려봉사상 청소년·대학생 자원봉사 체험수기 발표대회(10/23~11/30 접수)",
-        "url": "https://linkareer.com/activity/359166"
+        "url": "https://linkareer.com/activity/359166",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 제2회 대한민국 AI 창조공모대전",
-        "url": "https://linkareer.com/activity/359156"
+        "url": "https://linkareer.com/activity/359156",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제2회 잠실 미디어아트 공모전",
-        "url": "https://linkareer.com/activity/359011"
+        "url": "https://linkareer.com/activity/359011",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[익산지방국토관리청] 제8회 아름다운 해상교량 사진 공모전",
-        "url": "https://linkareer.com/activity/359003"
+        "url": "https://linkareer.com/activity/359003",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[한국사회보장정보원] 2026 사회보장 데이터를 활용한 AI 혁신 아이디어 경진대회",
-        "url": "https://linkareer.com/activity/359000"
+        "url": "https://linkareer.com/activity/359000",
+        "disposition": "DUPLICATE",
+        "reason": "제목이 거의 같은 공고가 이미 있음: ssis-social-security-ai-idea-2026",
+        "id": "ssis-social-security-ai-idea-2026"
       },
       {
+        "title": "현대모비스 창립 50주년 굿즈 아이디어 공모전 담당자 답변 4 팀원 모집 2 현대모비스 D-6 조회 3,060 댓글 4",
+        "url": "https://linkareer.com/activity/358971",
         "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
-        "title": "현대모비스 창립 50주년 굿즈 아이디어 공모전 담당자 답변 4 팀원 모집 2 현대모비스 D-6 조회 3,059 댓글 4",
-        "url": "https://linkareer.com/activity/358971"
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[국회미래연구원] 국회 미래세대 미래의제 공모전",
-        "url": "https://linkareer.com/activity/358929"
+        "url": "https://linkareer.com/activity/358929",
+        "disposition": "DUPLICATE",
+        "reason": "제목이 거의 같은 공고가 이미 있음: nafi-future-generation-agenda-2026",
+        "id": "nafi-future-generation-agenda-2026"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[한국인터넷기업협회] 건전한 사이버 세상 만들기 '디지털 공감' 숏폼 공모전",
-        "url": "https://linkareer.com/activity/358867"
+        "url": "https://linkareer.com/activity/358867",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "전국화물자동차공제조합 영상 콘텐츠 공모전",
-        "url": "https://linkareer.com/activity/358859"
+        "url": "https://linkareer.com/activity/358859",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 사회보장 데이터를 활용한 AI 혁신 아이디어 경진대회",
-        "url": "https://linkareer.com/activity/358856"
+        "url": "https://linkareer.com/activity/358856",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
+        "title": "실손24 영상 공모전 담당자 답변 2 팀원 모집 42 실손24 D-18 조회 4,939 댓글 2",
+        "url": "https://linkareer.com/activity/358840",
         "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
-        "title": "실손24 영상 공모전 담당자 답변 2 팀원 모집 42 실손24 D-18 조회 4,937 댓글 2",
-        "url": "https://linkareer.com/activity/358840"
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 광명시 올해의 책 독후감 공모전",
-        "url": "https://linkareer.com/activity/358827"
+        "url": "https://linkareer.com/activity/358827",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "(서울시 중구)관광콘텐츠(숏폼&아티클)공모전 '중구 하루 여행‘",
-        "url": "https://linkareer.com/activity/358736"
+        "url": "https://linkareer.com/activity/358736",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "서울특별시 행정서식, 뚝딱뚝딱! 개선 아이디어 공모전",
-        "url": "https://linkareer.com/activity/358723"
+        "url": "https://linkareer.com/activity/358723",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 대학생 정책 아이디어 공모전",
-        "url": "https://linkareer.com/activity/358719"
+        "url": "https://linkareer.com/activity/358719",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제10회 동아뮤지컬콩쿠르",
-        "url": "https://linkareer.com/activity/358718"
+        "url": "https://linkareer.com/activity/358718",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제1회 중앙일보 어린이 미술대회",
-        "url": "https://linkareer.com/activity/358716"
+        "url": "https://linkareer.com/activity/358716",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 한국세라믹기술원 AI 영상 공모전 「세라믹이 사라진 세상」",
-        "url": "https://linkareer.com/activity/358711"
+        "url": "https://linkareer.com/activity/358711",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026년 제주시 정책 아이디어 공모전",
-        "url": "https://linkareer.com/activity/358669"
+        "url": "https://linkareer.com/activity/358669",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[곽재선문화재단x할리스 제5회 아트공모전] 몽실 아트공모전",
-        "url": "https://linkareer.com/activity/358658"
+        "url": "https://linkareer.com/activity/358658",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[청도군] 제11회 전국 청도관광 사진공모전",
-        "url": "https://linkareer.com/activity/358653"
+        "url": "https://linkareer.com/activity/358653",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[한옥건축학회] 2026 제14회 한옥 디자인 국제 공모전",
-        "url": "https://linkareer.com/activity/358648"
+        "url": "https://linkareer.com/activity/358648",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "근로·자녀장려금 숏폼 영상 공모전",
-        "url": "https://linkareer.com/activity/358644"
+        "url": "https://linkareer.com/activity/358644",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[saaskr] 2026 saaskr 게임 어워드 — AI로 만든 웹게임 연말 시상",
-        "url": "https://linkareer.com/activity/358536"
+        "url": "https://linkareer.com/activity/358536",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026년 제 55회 충청남도 미술대전",
-        "url": "https://linkareer.com/activity/358512"
+        "url": "https://linkareer.com/activity/358512",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 연세노벨위크 제2회 연세국제창작공모전",
-        "url": "https://linkareer.com/activity/358486"
+        "url": "https://linkareer.com/activity/358486",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "나무엑스 AI 숏폼 공모전",
-        "url": "https://linkareer.com/activity/358366"
+        "url": "https://linkareer.com/activity/358366",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "중구지역 장애인식개선 영상 공모전 '함께하는 행복한 세상’",
-        "url": "https://linkareer.com/activity/358363"
+        "url": "https://linkareer.com/activity/358363",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "용산국제업무지구 스마트도시 아이디어 공모",
-        "url": "https://linkareer.com/activity/358360"
+        "url": "https://linkareer.com/activity/358360",
+        "disposition": "DUPLICATE",
+        "reason": "제목이 거의 같은 공고가 이미 있음: yongsan-smart-city-idea-2026",
+        "id": "yongsan-smart-city-idea-2026"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 AI 플레이 콘텐츠 제작 공모전 공모전",
-        "url": "https://linkareer.com/activity/358358"
+        "url": "https://linkareer.com/activity/358358",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 안산시 청렴숏폼 영상 공모전",
-        "url": "https://linkareer.com/activity/358233"
+        "url": "https://linkareer.com/activity/358233",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
-        "title": "현대자동차그룹 차량용 앱 개발 공모전 담당자 답변 1 팀원 모집 20 공모전 운영사무국 D-3 조회 8,132 댓글 1",
-        "url": "https://linkareer.com/activity/358198"
+        "title": "현대자동차그룹 차량용 앱 개발 공모전 담당자 답변 1 팀원 모집 20 공모전 운영사무국 D-3 조회 8,134 댓글 1",
+        "url": "https://linkareer.com/activity/358198",
+        "disposition": "DUPLICATE",
+        "reason": "제목이 거의 같은 공고가 이미 있음: hyundai-in-vehicle-app-dev-2026",
+        "id": "hyundai-in-vehicle-app-dev-2026"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "문익환 목사 창작희곡 공모전",
-        "url": "https://linkareer.com/activity/358190"
+        "url": "https://linkareer.com/activity/358190",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[알파사이츠]Asia Case Competition",
-        "url": "https://linkareer.com/activity/358118"
+        "url": "https://linkareer.com/activity/358118",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 제4회 강원랜드와 함께하는 스마트폰 환경영상 공모전",
-        "url": "https://linkareer.com/activity/358116"
+        "url": "https://linkareer.com/activity/358116",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 광주비엔날레 미디어파사드 신진 미디어아트 공모전",
-        "url": "https://linkareer.com/activity/358067"
+        "url": "https://linkareer.com/activity/358067",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 ACEL 전국 청소년 미술 공모전",
-        "url": "https://linkareer.com/activity/358065"
+        "url": "https://linkareer.com/activity/358065",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "이거 바뀌면 어때유? (대전 시민 생활·관계 개선 아이디어 공모전)",
-        "url": "https://linkareer.com/activity/358063"
+        "url": "https://linkareer.com/activity/358063",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제1회 웨이노벨 웹소설 공모전 FIRST STORY CHALLENGE 2026",
-        "url": "https://linkareer.com/activity/358054"
+        "url": "https://linkareer.com/activity/358054",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제2회 연세국제창작공모전",
-        "url": "https://linkareer.com/activity/358047"
+        "url": "https://linkareer.com/activity/358047",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 대경권 캠퍼스 IR 챔피언십 (창업 공모전)",
-        "url": "https://linkareer.com/activity/358042"
+        "url": "https://linkareer.com/activity/358042",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 MTN 대한민국 중소기업 광고 공모전",
-        "url": "https://linkareer.com/activity/357999"
+        "url": "https://linkareer.com/activity/357999",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 함안복합문학관 디카시 공모전",
-        "url": "https://linkareer.com/activity/357998"
+        "url": "https://linkareer.com/activity/357998",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제1회 우리학교 청소년 문학상 공모",
-        "url": "https://linkareer.com/activity/357887"
+        "url": "https://linkareer.com/activity/357887",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제21회 2026년 한국공간디자인 전국공모전",
-        "url": "https://linkareer.com/activity/357869"
+        "url": "https://linkareer.com/activity/357869",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제1회 꿈꾸미닷컴 꿈 수필 공모전",
-        "url": "https://linkareer.com/activity/357821"
+        "url": "https://linkareer.com/activity/357821",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[문화체육관광부] 2026년 충남 유교문화 사진·영상 공모전",
-        "url": "https://linkareer.com/activity/357817"
+        "url": "https://linkareer.com/activity/357817",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 남이섬 가을 단풍 사진 공모전 - 채록(採錄)",
-        "url": "https://linkareer.com/activity/357813"
+        "url": "https://linkareer.com/activity/357813",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026년 제주시 생활 속 안전문화운동 우수사례 공모전",
-        "url": "https://linkareer.com/activity/357811"
+        "url": "https://linkareer.com/activity/357811",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "「모두의 소통」 소상공인 성장 및 재도약을 위한 정책 아이디어 공모전",
-        "url": "https://linkareer.com/activity/357799"
+        "url": "https://linkareer.com/activity/357799",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 조달청 AI 게임·콘텐츠 공모전",
-        "url": "https://linkareer.com/activity/357796"
+        "url": "https://linkareer.com/activity/357796",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "「모두의 소통」 소상공인 성장 및 재도약을 위한 정책 아이디어 공모전",
-        "url": "https://linkareer.com/activity/357795"
+        "url": "https://linkareer.com/activity/357795",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 광주 비엔날레 미디어파사드 신진 미디어아트 공모전",
-        "url": "https://linkareer.com/activity/357673"
+        "url": "https://linkareer.com/activity/357673",
+        "disposition": "DUPLICATE",
+        "reason": "제목이 거의 같은 공고가 이미 있음: linkareer-358067",
+        "id": "linkareer-358067"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "「2026 서울라이트 광화문」미디어파사드 작품 공모전",
-        "url": "https://linkareer.com/activity/357640"
+        "url": "https://linkareer.com/activity/357640",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "New; Wave 2027 60SPACE 신진작가 소개전 공모",
-        "url": "https://linkareer.com/activity/357638"
+        "url": "https://linkareer.com/activity/357638",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[용산구시설관리공단] 2026 숏폼 영상 공모전",
-        "url": "https://linkareer.com/activity/357547"
+        "url": "https://linkareer.com/activity/357547",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 대한민국 제약바이오 산업 광고·PR 대상",
-        "url": "https://linkareer.com/activity/357418"
+        "url": "https://linkareer.com/activity/357418",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[창원특례시] 2026 주남저주지 환경사진 공모전",
-        "url": "https://linkareer.com/activity/357186"
+        "url": "https://linkareer.com/activity/357186",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026년 강화군 영상 ​공모전",
-        "url": "https://linkareer.com/activity/357138"
+        "url": "https://linkareer.com/activity/357138",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026년 서부산영상미디어센터 영화관람 에티켓 영상 공모",
-        "url": "https://linkareer.com/activity/357111"
+        "url": "https://linkareer.com/activity/357111",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "서울특별시 행정서식, 뚝딱뚝딱! 개선 아이디어 공모전",
-        "url": "https://linkareer.com/activity/357108"
+        "url": "https://linkareer.com/activity/357108",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "<내가 만난 원자력> 연구원 방문·체험수기 공모전",
-        "url": "https://linkareer.com/activity/356980"
+        "url": "https://linkareer.com/activity/356980",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2027 ART602 전시 지원 공모",
-        "url": "https://linkareer.com/activity/356979"
+        "url": "https://linkareer.com/activity/356979",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 미디어를 활용한 사회참여형 학생 대상 영상공모전",
-        "url": "https://linkareer.com/activity/356977"
+        "url": "https://linkareer.com/activity/356977",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "실상문학 신인문학상 작품 모집",
-        "url": "https://linkareer.com/activity/356960"
+        "url": "https://linkareer.com/activity/356960",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제19회 서울영상광고제 Young Creative Awards",
-        "url": "https://linkareer.com/activity/356959"
+        "url": "https://linkareer.com/activity/356959",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 대한민국 과일대전 숏폼 영상 공모전",
-        "url": "https://linkareer.com/activity/356768"
+        "url": "https://linkareer.com/activity/356768",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제2회 메디컬코리아 국제의료광고제",
-        "url": "https://linkareer.com/activity/356747"
+        "url": "https://linkareer.com/activity/356747",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026학년도 연세대학교 교육대학원 총장배 수업시연대회 개최 안내_공모전_모의수업_대학(원)",
-        "url": "https://linkareer.com/activity/356724"
+        "url": "https://linkareer.com/activity/356724",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[한국야쿠르트] 펫쿠르트 왈Rx 환승사료 숏폼 공모전",
-        "url": "https://linkareer.com/activity/356596"
+        "url": "https://linkareer.com/activity/356596",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026년 멘토링 수기공모전",
-        "url": "https://linkareer.com/activity/356564"
+        "url": "https://linkareer.com/activity/356564",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026년 서울특별시 어린이·청소년 시민발언대 「청소년이 바꾸는 서울」 인스타툰 공모전",
-        "url": "https://linkareer.com/activity/356549"
+        "url": "https://linkareer.com/activity/356549",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026년 신규 MICE 행사 아이디어 공모전",
-        "url": "https://linkareer.com/activity/356523"
+        "url": "https://linkareer.com/activity/356523",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "포스텍 2027 SF 어워드",
-        "url": "https://linkareer.com/activity/356521"
+        "url": "https://linkareer.com/activity/356521",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[국토연구원] 주거실태조사 대국민 공모전",
-        "url": "https://linkareer.com/activity/356514"
+        "url": "https://linkareer.com/activity/356514",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 대구광역시 기후·환경·탄소중립 공공데이터 AI 활용대회",
-        "url": "https://linkareer.com/activity/356503"
+        "url": "https://linkareer.com/activity/356503",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제28회 문학축제-'한양의시선'(구 시 이어짓기대회)",
-        "url": "https://linkareer.com/activity/356328"
+        "url": "https://linkareer.com/activity/356328",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2027 경상일보 신춘문예",
-        "url": "https://linkareer.com/activity/356303"
+        "url": "https://linkareer.com/activity/356303",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "광주대학교 제5회 전국 고교생 웹소설 공모전",
-        "url": "https://linkareer.com/activity/356299"
+        "url": "https://linkareer.com/activity/356299",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제17회 영 쏠로이스츠 콩쿠르",
-        "url": "https://linkareer.com/activity/356297"
+        "url": "https://linkareer.com/activity/356297",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[29역숏폼왕] 제1회 인스탁스 영화제",
-        "url": "https://linkareer.com/activity/356296"
+        "url": "https://linkareer.com/activity/356296",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 제 23회 고양호수만화축제 [청소년만화공모전] 담당자 답변 1 (사)한국청소년문화연대 조인핸드 D-18 조회 294 댓글 1",
-        "url": "https://linkareer.com/activity/356293"
+        "url": "https://linkareer.com/activity/356293",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제3회 ON MUSE 실용음악콩쿨",
-        "url": "https://linkareer.com/activity/356292"
+        "url": "https://linkareer.com/activity/356292",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제2회 블루카이트 창작 글쓰기 대회",
-        "url": "https://linkareer.com/activity/356288"
+        "url": "https://linkareer.com/activity/356288",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "농업가치 확산을 위한 농심천심 대학(원)생 논문 공모전",
-        "url": "https://linkareer.com/activity/356284"
+        "url": "https://linkareer.com/activity/356284",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 레진성인공모전",
-        "url": "https://linkareer.com/activity/356251"
+        "url": "https://linkareer.com/activity/356251",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026년 제 5회 한티가는길 사진공모전",
-        "url": "https://linkareer.com/activity/356163"
+        "url": "https://linkareer.com/activity/356163",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "모두가 함께 만드는 안전한 건설현장 건설안전문화 2차 공모전",
-        "url": "https://linkareer.com/activity/356001"
+        "url": "https://linkareer.com/activity/356001",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[청년 콘텐츠 공모전] 《인간인 줄 알았는데, AI였습니다.》",
-        "url": "https://linkareer.com/activity/355997"
+        "url": "https://linkareer.com/activity/355997",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "Me슐랭 가이드 | 경험 맛집을 찾아서",
-        "url": "https://linkareer.com/activity/355928"
+        "url": "https://linkareer.com/activity/355928",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[29역숏폼왕] 제1회 인스탁스 영화제",
-        "url": "https://linkareer.com/activity/355759"
+        "url": "https://linkareer.com/activity/355759",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[영천시] 오늘, 내 삶의 이름은 영천 (영천시 생활인구 수기·시·사진 공모전)",
-        "url": "https://linkareer.com/activity/355724"
+        "url": "https://linkareer.com/activity/355724",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "ÉLAN 2026 1st NATIONAL DANCE CONCOURS",
-        "url": "https://linkareer.com/activity/355511"
+        "url": "https://linkareer.com/activity/355511",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제2회 AI전자그림책 공모전 'AI 이야기 숲'",
-        "url": "https://linkareer.com/activity/355507"
+        "url": "https://linkareer.com/activity/355507",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "환경과 조경이 어우러지는 직촬 사진 공모전",
-        "url": "https://linkareer.com/activity/355506"
+        "url": "https://linkareer.com/activity/355506",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제 27회 청소년만화축제 만화작품 공모전",
-        "url": "https://linkareer.com/activity/355504"
+        "url": "https://linkareer.com/activity/355504",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 광주콘텐츠코리아랩 웹소설 원천 스토리 공모전",
-        "url": "https://linkareer.com/activity/355338"
+        "url": "https://linkareer.com/activity/355338",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제21회 건설사업관리(CM) 표어 온라인 공모전",
-        "url": "https://linkareer.com/activity/355326"
+        "url": "https://linkareer.com/activity/355326",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[한국보건복지인재원]「이런(e-Learn) 한 컷, 영상 공모전」 학습우수사례 영상공모전",
-        "url": "https://linkareer.com/activity/355290"
+        "url": "https://linkareer.com/activity/355290",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2027 제3회 소원문학상 공모전",
-        "url": "https://linkareer.com/activity/355277"
+        "url": "https://linkareer.com/activity/355277",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026년 2차 외국발 허위정보 대응 대학생 아이디어 공모전",
-        "url": "https://linkareer.com/activity/355254"
+        "url": "https://linkareer.com/activity/355254",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2027 제3회 소원문학상",
-        "url": "https://linkareer.com/activity/355215"
+        "url": "https://linkareer.com/activity/355215",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[NUR-CONNECT: 삶 전반을 잇는 간호] 공모전",
-        "url": "https://linkareer.com/activity/354706"
+        "url": "https://linkareer.com/activity/354706",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "대한민국 국제 어린이 미술 대회 (Korea International Children's Art Competition)",
-        "url": "https://linkareer.com/activity/354704"
+        "url": "https://linkareer.com/activity/354704",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제 6회 한미협회&포니정재단 주최 대학생 에세이 공모전",
-        "url": "https://linkareer.com/activity/354558"
+        "url": "https://linkareer.com/activity/354558",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 태권도 의류형 굿즈 . 체험형 굿즈 아이디어 공모전",
-        "url": "https://linkareer.com/activity/354473"
+        "url": "https://linkareer.com/activity/354473",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제36회 시장경제칼럼 공모전",
-        "url": "https://linkareer.com/activity/354420"
+        "url": "https://linkareer.com/activity/354420",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "서울에서 1시간대컷, 강원에 “___”있다 영상 캠페인",
-        "url": "https://linkareer.com/activity/354403"
+        "url": "https://linkareer.com/activity/354403",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[메타툰] 여성향 단편 노블코믹스 작화 모집 공모전",
-        "url": "https://linkareer.com/activity/354213"
+        "url": "https://linkareer.com/activity/354213",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "세상에 없던 스마일, 세상에 없던 레이스 ZEISS SMILE RACE",
-        "url": "https://linkareer.com/activity/354190"
+        "url": "https://linkareer.com/activity/354190",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026년 대전온배움 숏폼 영상 공모전",
-        "url": "https://linkareer.com/activity/354065"
+        "url": "https://linkareer.com/activity/354065",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 제3회 리아북스 그림책 공모전",
-        "url": "https://linkareer.com/activity/353991"
+        "url": "https://linkareer.com/activity/353991",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "5극3특 성장엔진 미래지도 AI 영상 공모전",
-        "url": "https://linkareer.com/activity/353862"
+        "url": "https://linkareer.com/activity/353862",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "CREPET AWARDS 2026 반려용품 디자인 공모전",
-        "url": "https://linkareer.com/activity/353820"
+        "url": "https://linkareer.com/activity/353820",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026년 제2회 부산RCY「HOLD ON」생명존중 자살예방 캠페인 공모전",
-        "url": "https://linkareer.com/activity/353759"
+        "url": "https://linkareer.com/activity/353759",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 CWNU SW-DNA² 챌린지 대학생 AI·SW 경진대회",
-        "url": "https://linkareer.com/activity/353664"
+        "url": "https://linkareer.com/activity/353664",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 레트로 퓨처 페스티벌 「G1 멘토 스테이지」 G1 엔지니어 오픈마이크 발표자 모집 안내",
-        "url": "https://linkareer.com/activity/353346"
+        "url": "https://linkareer.com/activity/353346",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 한국관광 콘텐츠랩 활용 우수사례 어워즈",
-        "url": "https://linkareer.com/activity/353201"
+        "url": "https://linkareer.com/activity/353201",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제4회 여강전국사진공모전",
-        "url": "https://linkareer.com/activity/352993"
+        "url": "https://linkareer.com/activity/352993",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 서울 한강 걷기대회",
-        "url": "https://linkareer.com/activity/352918"
+        "url": "https://linkareer.com/activity/352918",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 PBS 숏폼 영상 콘텐츠 공모전 담당자 답변 1 팀원 모집 2 방송편성국PBS D-1 조회 902 댓글 1",
-        "url": "https://linkareer.com/activity/352795"
+        "url": "https://linkareer.com/activity/352795",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[강원연구원 탄광지역발전지원센터] 2026 석탄산업전환지역 논문 공모전",
-        "url": "https://linkareer.com/activity/352794"
+        "url": "https://linkareer.com/activity/352794",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[Ise-Shima Art Company] 제7회 ISAC 국제 팝·미디어 음악 작곡 콩쿠르 2027",
-        "url": "https://linkareer.com/activity/352683"
+        "url": "https://linkareer.com/activity/352683",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제9회 법학경시대회",
-        "url": "https://linkareer.com/activity/352503"
+        "url": "https://linkareer.com/activity/352503",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제 9 회 법학경시대회",
-        "url": "https://linkareer.com/activity/352464"
+        "url": "https://linkareer.com/activity/352464",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제4회 국제청소년동화쓰기대회",
-        "url": "https://linkareer.com/activity/352463"
+        "url": "https://linkareer.com/activity/352463",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[국토연구원] 연구과제 상시 제안 이벤트",
-        "url": "https://linkareer.com/activity/352396"
+        "url": "https://linkareer.com/activity/352396",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 제43회 골든스케일디자인어워드",
-        "url": "https://linkareer.com/activity/352140"
+        "url": "https://linkareer.com/activity/352140",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 동남 버그바운티 대회",
-        "url": "https://linkareer.com/activity/352004"
+        "url": "https://linkareer.com/activity/352004",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제5회 시흥시전국청소년영상제",
-        "url": "https://linkareer.com/activity/351985"
+        "url": "https://linkareer.com/activity/351985",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 아주국제미술대전",
-        "url": "https://linkareer.com/activity/351359"
+        "url": "https://linkareer.com/activity/351359",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
-        "title": "제1회 전국 대학생 AI 재무설계 콘테스트 「AFPK 영 플래너 챌린지 2026」 담당자 답변 19 팀원 모집 41 사단법인 한국재무설계협회 D-4 조회 37,624 댓글 19",
-        "url": "https://linkareer.com/activity/351221"
+        "title": "제1회 전국 대학생 AI 재무설계 콘테스트 「AFPK 영 플래너 챌린지 2026」 담당자 답변 19 팀원 모집 41 사단법인 한국재무설계협회 D-4 조회 37,631 댓글 19",
+        "url": "https://linkareer.com/activity/351221",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "1인가구 건강식생활 실천 캠페인",
-        "url": "https://linkareer.com/activity/350787"
+        "url": "https://linkareer.com/activity/350787",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "AI 활용 옥외광고 간판 디자인 공모전",
-        "url": "https://linkareer.com/activity/350361"
+        "url": "https://linkareer.com/activity/350361",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제6회 플라이하이 AI 패션 디자인 고교 콘테스트",
-        "url": "https://linkareer.com/activity/350248"
+        "url": "https://linkareer.com/activity/350248",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제12회 대한민국모던아트대상전",
-        "url": "https://linkareer.com/activity/350245"
+        "url": "https://linkareer.com/activity/350245",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[강원도민일보] 2026 정선 국가문화유산 전국 디카시 공모전",
-        "url": "https://linkareer.com/activity/350089"
+        "url": "https://linkareer.com/activity/350089",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제5회 책읽는곰 어린이책 공모전",
-        "url": "https://linkareer.com/activity/350009"
+        "url": "https://linkareer.com/activity/350009",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[방송미디어통신위원회, 한국인터넷진흥원]2026 위치정보 맞춤형 컨설팅 참여기업 모집(상시)",
-        "url": "https://linkareer.com/activity/349870"
+        "url": "https://linkareer.com/activity/349870",
+        "disposition": "DUPLICATE",
+        "reason": "제목이 거의 같은 공고가 이미 있음: korealbs-location-info-consulting-2026",
+        "id": "korealbs-location-info-consulting-2026"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 기후에너지 어워드",
-        "url": "https://linkareer.com/activity/349733"
+        "url": "https://linkareer.com/activity/349733",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 청송군 SNS 숏폼 영상 공모전 「청송에 반하다」",
-        "url": "https://linkareer.com/activity/349558"
+        "url": "https://linkareer.com/activity/349558",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026년 금연 정책제안 연구공모전",
-        "url": "https://linkareer.com/activity/349531"
+        "url": "https://linkareer.com/activity/349531",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제2회 윈디 사진 공모전",
-        "url": "https://linkareer.com/activity/349336"
+        "url": "https://linkareer.com/activity/349336",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 제1회 KIBE 융합디자인 공모전",
-        "url": "https://linkareer.com/activity/349309"
+        "url": "https://linkareer.com/activity/349309",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "단편영화 공모전 : 7th Da-Ho Award Asian International Short Film Competition",
-        "url": "https://linkareer.com/activity/348846"
+        "url": "https://linkareer.com/activity/348846",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[상주시] 상주시 대표축제 대국민 아이디어 공모전",
-        "url": "https://linkareer.com/activity/348653"
+        "url": "https://linkareer.com/activity/348653",
+        "disposition": "DUPLICATE",
+        "reason": "제목이 거의 같은 공고가 이미 있음: sangju-festival-idea-2026",
+        "id": "sangju-festival-idea-2026"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 브릴리언트 뮤직 아카데미 콩쿠르",
-        "url": "https://linkareer.com/activity/348415"
+        "url": "https://linkareer.com/activity/348415",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 밀리로드 출간 공모전 시즌 4",
-        "url": "https://linkareer.com/activity/348399"
+        "url": "https://linkareer.com/activity/348399",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 국제사이버디자인 트렌드공모전",
-        "url": "https://linkareer.com/activity/348164"
+        "url": "https://linkareer.com/activity/348164",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "유스업(Youth UP!) 제1회 SDGs 실천 아이디어·숏츠 공모전[AI활용가능,최종 마감일 11.18정정]",
-        "url": "https://linkareer.com/activity/347984"
+        "url": "https://linkareer.com/activity/347984",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 어린이조선일보 글로벌 미술대회&루브르 박물관 전시대회",
-        "url": "https://linkareer.com/activity/347971"
+        "url": "https://linkareer.com/activity/347971",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 전국 대학생 스피치 대회",
-        "url": "https://linkareer.com/activity/347768"
+        "url": "https://linkareer.com/activity/347768",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 경기도한의사회 한의약 컨텐츠 공모전",
-        "url": "https://linkareer.com/activity/347593"
+        "url": "https://linkareer.com/activity/347593",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 경기도한의사회 한의약 컨텐츠 공모전",
-        "url": "https://linkareer.com/activity/347546"
+        "url": "https://linkareer.com/activity/347546",
+        "disposition": "DUPLICATE",
+        "reason": "제목이 거의 같은 공고가 이미 있음: linkareer-347593",
+        "id": "linkareer-347593"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2027 KT&G 국제 대학생 창업교류전(ASVF) 한국대표 모집",
-        "url": "https://linkareer.com/activity/347306"
+        "url": "https://linkareer.com/activity/347306",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 뇌전증 인식개선 공모전",
-        "url": "https://linkareer.com/activity/347107"
+        "url": "https://linkareer.com/activity/347107",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 의정부시 Sign-Up 간판 디자인 공모전",
-        "url": "https://linkareer.com/activity/346513"
+        "url": "https://linkareer.com/activity/346513",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[ABC-FSC] 에어-비트 시티 건축디자인 공모전",
-        "url": "https://linkareer.com/activity/345636"
+        "url": "https://linkareer.com/activity/345636",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "서울시-금융투자협회 공동개최 스케일업센터 공개IR 결선 Pitching",
-        "url": "https://linkareer.com/activity/345081"
+        "url": "https://linkareer.com/activity/345081",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[팔공산 케이블카] Four Seasons 사진영상 공모전",
-        "url": "https://linkareer.com/activity/344966"
+        "url": "https://linkareer.com/activity/344966",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[기간연장] 에어-비트 시티 건축디자인공모전",
-        "url": "https://linkareer.com/activity/344917"
+        "url": "https://linkareer.com/activity/344917",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 코리아 시즌 레이스",
-        "url": "https://linkareer.com/activity/344560"
+        "url": "https://linkareer.com/activity/344560",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제3회 긍정의힘 마라톤",
-        "url": "https://linkareer.com/activity/344513"
+        "url": "https://linkareer.com/activity/344513",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[신정문학&문인협회] 제1회 박위장군 문학상 전국 공모전",
-        "url": "https://linkareer.com/activity/344265"
+        "url": "https://linkareer.com/activity/344265",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제 2회 아담국제영화제",
-        "url": "https://linkareer.com/activity/344185"
+        "url": "https://linkareer.com/activity/344185",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제2회 WATER KOREA 대학(원)생 논문 공모전 담당자 답변 2 한국상하수도협회 D-64 조회 2,697 댓글 2",
-        "url": "https://linkareer.com/activity/344134"
+        "url": "https://linkareer.com/activity/344134",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 제7회 한국드로잉 공모대전",
-        "url": "https://linkareer.com/activity/343626"
+        "url": "https://linkareer.com/activity/343626",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 심곡동 아동·청소년 환경 주제 공모 프로젝트",
-        "url": "https://linkareer.com/activity/343589"
+        "url": "https://linkareer.com/activity/343589",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 AI 캐릭터창작공모전",
-        "url": "https://linkareer.com/activity/343445"
+        "url": "https://linkareer.com/activity/343445",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제5회 밤섬 마라톤",
-        "url": "https://linkareer.com/activity/343281"
+        "url": "https://linkareer.com/activity/343281",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제2회 청춘 릴레이 마라톤",
-        "url": "https://linkareer.com/activity/342955"
+        "url": "https://linkareer.com/activity/342955",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "(기간연장)2026년 품바재생예술체험촌 새활용·리폼 콘테스트",
-        "url": "https://linkareer.com/activity/342528"
+        "url": "https://linkareer.com/activity/342528",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "Allcon X 7th Da-Ho Awards",
-        "url": "https://linkareer.com/activity/342146"
+        "url": "https://linkareer.com/activity/342146",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 ISTANS 산업통계 우수활용사례 공모전",
-        "url": "https://linkareer.com/activity/342131"
+        "url": "https://linkareer.com/activity/342131",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
-        "title": "999+ [한국과학기술정보연구원] 2026 DATA·AI 분석 경진대회 담당자 답변 4 팀원 모집 34 한국과학기술정보연구원 D-13 조회 35,614 댓글 4",
-        "url": "https://linkareer.com/activity/342034"
+        "title": "999+ [한국과학기술정보연구원] 2026 DATA·AI 분석 경진대회 담당자 답변 4 팀원 모집 34 한국과학기술정보연구원 D-13 조회 35,615 댓글 4",
+        "url": "https://linkareer.com/activity/342034",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 하남 미사 호수 에너지런",
-        "url": "https://linkareer.com/activity/341929"
+        "url": "https://linkareer.com/activity/341929",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 평화의숲 마라톤",
-        "url": "https://linkareer.com/activity/341927"
+        "url": "https://linkareer.com/activity/341927",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제4회 현대문학x미래엔 청소년문학상 공모전",
-        "url": "https://linkareer.com/activity/341810"
+        "url": "https://linkareer.com/activity/341810",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "IN:SENSE Design Award 2027 국제 감각디자인 공모전",
-        "url": "https://linkareer.com/activity/340640"
+        "url": "https://linkareer.com/activity/340640",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제14회 안중근 평화 마라톤대회",
-        "url": "https://linkareer.com/activity/340069"
+        "url": "https://linkareer.com/activity/340069",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제14회 안중근 평화 마라톤 대회",
-        "url": "https://linkareer.com/activity/339787"
+        "url": "https://linkareer.com/activity/339787",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "7th Da-Ho Award Asian International Short Film Competition(단편영화)",
-        "url": "https://linkareer.com/activity/339681"
+        "url": "https://linkareer.com/activity/339681",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[AudAi] SETES 2차 창작 공모전 COSMIA 1",
-        "url": "https://linkareer.com/activity/339328"
+        "url": "https://linkareer.com/activity/339328",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2027 청주국제공예공모전",
-        "url": "https://linkareer.com/activity/338666"
+        "url": "https://linkareer.com/activity/338666",
+        "disposition": "DUPLICATE",
+        "reason": "제목이 거의 같은 공고가 이미 있음: linkareer-338658",
+        "id": "linkareer-338658"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[청주공예비엔날레] 2027 청주국제공예공모전",
-        "url": "https://linkareer.com/activity/338658"
+        "url": "https://linkareer.com/activity/338658",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "세종사이버대학교 정보보호학과 '나를 지키는 1분, 디지털 호신술 챌린지' 공모전",
-        "url": "https://linkareer.com/activity/338415"
+        "url": "https://linkareer.com/activity/338415",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "[레몬사운드] 게임 '추억의뢰소' BGM 음원 공모전 레모네이션",
-        "url": "https://linkareer.com/activity/337774"
+        "url": "https://linkareer.com/activity/337774",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제 2회 창비교육 동화 공모전 이야기친구상",
-        "url": "https://linkareer.com/activity/334819"
+        "url": "https://linkareer.com/activity/334819",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 COSS 차세대반도체 Microcontroller(MCU) 응용경진대회",
-        "url": "https://linkareer.com/activity/334310"
+        "url": "https://linkareer.com/activity/334310",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제1회 해냄 청소년 인문 사회 도서 공모전",
-        "url": "https://linkareer.com/activity/332168"
+        "url": "https://linkareer.com/activity/332168",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 산업통상부 ISTANS 논문경진대회",
-        "url": "https://linkareer.com/activity/330183"
+        "url": "https://linkareer.com/activity/330183",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제2회 영남대학교 LAW REVIEW 전국 논문 공모전",
-        "url": "https://linkareer.com/activity/328241"
+        "url": "https://linkareer.com/activity/328241",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 예천 홍보 영상·숏폼 공모전 개최 공고 담당자 답변 1 예천군 D-1 조회 594 댓글 1",
-        "url": "https://linkareer.com/activity/317239"
+        "url": "https://linkareer.com/activity/317239",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제10회 문경관광 사진공모전",
-        "url": "https://linkareer.com/activity/314995"
+        "url": "https://linkareer.com/activity/314995",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2027년 상상인 신춘문예 공모",
-        "url": "https://linkareer.com/activity/314746"
+        "url": "https://linkareer.com/activity/314746",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 통영관광개발공사 제5회 통영관광 전국사진 공모전",
-        "url": "https://linkareer.com/activity/314144"
+        "url": "https://linkareer.com/activity/314144",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 춘천관광 SNS공모전",
-        "url": "https://linkareer.com/activity/311199"
+        "url": "https://linkareer.com/activity/311199",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 춘천여행 SNS 공모전 '함께 가고 싶은 도시, Romantic 춘천'",
-        "url": "https://linkareer.com/activity/310916"
+        "url": "https://linkareer.com/activity/310916",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "제2회 생활 속 숨은 수학찾기 (사진 공모전)",
-        "url": "https://linkareer.com/activity/306951"
+        "url": "https://linkareer.com/activity/306951",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "현북스 2026년 1회 어린이·청소년 책 공모전",
-        "url": "https://linkareer.com/activity/304006"
+        "url": "https://linkareer.com/activity/304006",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "2026 정읍시 관광 유튜브 공모전",
-        "url": "https://linkareer.com/activity/299469"
+        "url": "https://linkareer.com/activity/299469",
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
-        "disposition": "NOT_RELEVANT",
-        "reason": "RETRY: 처분 기록 없음",
         "title": "팔공산케이블카 Four Season 사진 영상 공모전",
-        "url": "https://linkareer.com/activity/296803"
+        "url": "https://linkareer.com/activity/296803",
+        "disposition": "NOT_RELEVANT",
+        "reason": "범위 밖 분야(영상·디자인·네이밍·문학 등)"
       }
     ],
     "sotong24Contests": [
       {
         "title": "[2026-11-09 09:00 ~ 2026-11-23 18:00] 【포천도시공사】 2026년 저출생·인구감소 대응 아이디어 공모전 포천도시공사 의견 작성 수0 공유 수0",
         "url": "https://sotong.go.kr/front/epilogue/epilogueNewViewPage.do?bbs_id=16fb8760be314506a45bde167c52c146&menu_id=527&pagetype=bbs",
-        "disposition": "PUBLISHED",
-        "id": "sotong24contests-516752146527"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "[2026-11-09 00:00 ~ 2026-11-27 17:00] 【서울특별시】 2026 내가 소개하는 서울 숏폼 공모전 서울특별시 홍보기획관 홍보담당관 의견 작성 수0 공유 수2",
@@ -5338,14 +5064,14 @@
       {
         "title": "[포천도시공사] 2026년 저출생·인구감소 대응 아이디어 공모전",
         "url": "https://www.wevity.com/?c=find&gbn=view&ix=112217",
-        "disposition": "PUBLISHED",
-        "id": "wevity-112217"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "2026년 제2회 구리시 정책제안 공모전",
         "url": "https://www.wevity.com/?c=find&gbn=view&ix=112220",
-        "disposition": "PUBLISHED",
-        "id": "wevity-112220"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "2026 대구 로컬AI그라운드 - 지역문제 해결형 AI활용 경진대회",
@@ -5368,20 +5094,20 @@
       {
         "title": "2026 서울관광 프롬프톤",
         "url": "https://www.wevity.com/?c=find&gbn=view&ix=112294",
-        "disposition": "PUBLISHED",
-        "id": "wevity-112294"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "디어비 글로벌 런칭 공모전 신규",
         "url": "https://www.wevity.com/?c=find&gbn=view&ix=112313",
-        "disposition": "PUBLISHED",
-        "id": "wevity-112313"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       },
       {
         "title": "포항시 지역사회 문제 해결을 위한 AI 솔루션 아이디어 경진대회 신규",
         "url": "https://www.wevity.com/?c=find&gbn=view&ix=112316",
-        "disposition": "PUBLISHED",
-        "id": "wevity-112316"
+        "disposition": "EXISTING",
+        "reason": "이미 있는 접수 중 공고"
       }
     ]
   },
@@ -6733,56 +6459,9 @@
     }
   ],
   "publishedIds": [
-    "contestkorea-202611100065",
-    "hackathonkorea-1",
-    "hackathonkorea-2",
-    "hackathonkorea-item",
-    "hackathonkorea-item-2",
-    "linkareer-363779",
-    "linkareer-363778",
-    "linkareer-363777",
-    "linkareer-363772",
-    "linkareer-363771",
-    "linkareer-363762",
-    "linkareer-363758",
-    "linkareer-363721",
-    "linkareer-363634",
-    "linkareer-363478",
-    "linkareer-363438",
-    "linkareer-363354",
-    "linkareer-363343",
-    "linkareer-363330",
-    "linkareer-363329",
-    "linkareer-363324",
-    "linkareer-363244",
-    "linkareer-363236",
-    "sotong24contests-516752146527",
-    "wevity-112217",
-    "wevity-112220",
-    "wevity-112294",
-    "wevity-112313",
-    "wevity-112316",
-    "grantlysupport-17926",
-    "grantlysupport-18596",
-    "grantlysupport-18809",
-    "grantlysupport-19169",
-    "grantlysupport-20620",
-    "grantlysupport-20813",
-    "grantlysupport-20833",
-    "kstartuphighlights-179776",
-    "kstartuphighlights-179771",
-    "kstartuphighlights-179775",
-    "kstartuphighlights-179769",
-    "kstartuphighlights-179690",
-    "kstartuphighlights-179761",
-    "kstartuphighlights-179760",
-    "kstartuphighlights-179764",
-    "kstartuphighlights-179766",
-    "kstartuphighlights-179626",
-    "kstartuphighlights-179765",
-    "kstartuphighlights-179774",
-    "kstartuphighlights-179682",
-    "kstartuphighlights-179767"
+    "linkareer-363900",
+    "linkareer-363898",
+    "linkareer-363844"
   ],
   "sourceGaps": [
     "Hackathon Korea: GPT 답에 고정 출처 기록이 없음",
@@ -6812,7 +6491,7 @@
   ],
   "researchLimitations": [
     "찾기와 카드 작성은 GPT worker가 했고 사람이 보지 않았다. 새 공고는 주최 측 페이지를 열어 확인하지 않았고, 기존 공고 재확인도 하지 않았다(사용자 결정 2026-11-09).",
-    "주최 측 확인 전으로 올린 공고 45건.",
+    "주최 측 확인 전으로 올린 공고 3건.",
     "GPT 기록이 비어 FAILED로 남긴 칸 24개."
   ]
 }
