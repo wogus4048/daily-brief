@@ -54,6 +54,11 @@ FIXED_SOURCES = {
     "fintech": "https://fintech.or.kr/",
 }
 DISTRICTS = {"nowon": "노원구청", "dobong": "도봉구청", "gangbuk": "강북구청"}
+# Which find chat (find_jobs) reports each audit record. A record whose chat did not run that day
+# is "not run", not failed (2026-11-18: daily runs use only find-annual and find-free).
+TRACK_CHAT = {"aiData": "find-dev", "generalSoftware": "find-dev", "publicIdea": "find-idea",
+              "startupSupport": "find-startup", "upcomingOpenings": "find-startup"}
+FIXED_CHAT = "find-fixed"
 SCOPE_RULES = """범위: 공모전은 아이디어·제안 공모전과 프로그램·소프트웨어·AI·데이터 개발 대회, 해커톤, 창업 경진대회다. 지원사업은 창업·스타트업 지원 프로그램과 모집(입주, 액셀러레이팅, 사업화 자금, 교육)이다. 상금 규모나 개인 적합성으로 빼지 않는다. 수집하지 않는 것: 네이밍·슬로건·표어·캐릭터, 문학(백일장·수기), 영상·사진, 미술·디자인·웹툰 공모전, 공모가 아닌 행사·포럼·설명회."""
 ANSWER_RULES = """답 형식: 결과는 ```json 코드 블록 안에 한 줄에 JSON 객체 하나씩 적어라. Prime에게 보내는 메시지 하나는 3,500자를 넘기지 말고, 메시지마다 json 블록을 열고 닫아라. 블록 하나를 메시지 두 개에 걸쳐 쓰지 마라. 결과를 줄이거나 '등'으로 생략하지 마라."""
 DEADLINE_RULE = """deadline 칸: 신규 지원자가 신청해야 하는 날짜를 연도까지 "YYYY-MM-DD" 목록으로 적는다(부문마다 다르면 모두). 등록 마감 뒤 제출만 남으면 등록 마감일만 적는다. 행사·심사·발표일은 넣지 않는다. 고정 마감일이 없으면 "상시", "수시", "예산 소진 시", "선착순" 중 하나, 마감일을 알 수 없으면 "확인 필요"."""

@@ -275,6 +275,43 @@ class AssembleTest(unittest.TestCase):
                 if not with_records:
                     self.assertTrue(summary["failedRecords"])
 
+    def test_chats_and_reverify_not_run_today_are_not_counted_as_failures(self):
+        # 2026-11-18: only find-annual and find-free run daily and re-verification is skipped (user 11-09, 11-10).
+        # Records of chats that did not run were reported as 24 failures and every due item as a re-verify failure.
+        daily = [{"name": "find-annual", "status": "OK"}, {"name": "find-free", "status": "OK"}]
+        cases = {
+            "daily chats only": (daily, 0),
+            # A chat that ran and sent nothing still fails each of its records.
+            "fixed chat ran empty": (daily + [{"name": "find-fixed", "status": "FAILED"}],
+                                     len(gpt_jobs.FIXED_SOURCES) + len(gpt_jobs.DISTRICTS)),
+        }
+        for label, (jobs, failed) in cases.items():
+            with self.subTest(label), tempfile.TemporaryDirectory() as temp:
+                root = Path(temp)
+                self.build(root, with_records=False)
+                path = root / f"artifacts/daily/{TODAY}-gpt.json"
+                state = json.loads(path.read_text(encoding="utf-8"))
+                state["find"]["jobs"] = jobs
+                path.write_text(json.dumps(state, ensure_ascii=False), encoding="utf-8")
+                summary = assemble(root, TODAY)
+                data, audit = self.validate(root)
+                self.assertEqual(data.returncode, 0, data.stderr)
+                self.assertEqual(audit.returncode, 0, audit.stderr)
+                self.assertEqual(len(summary["failedRecords"]), failed, summary["failedRecords"])
+                self.assertEqual(summary["reverifyFailed"], 0)
+                self.assertIn("reverify", summary["notRun"])
+                self.assertIn("find-dev", summary["notRun"])
+                record = json.loads((root / f"data/research/{TODAY}.json").read_text(encoding="utf-8"))
+                self.assertEqual(record["tracks"]["aiData"]["status"], "NOT_RUN")
+                self.assertTrue(record["reverificationSkipped"])
+                self.assertEqual(record["reverificationFailures"], [])
+                record_path = root / f"data/research/{TODAY}.json"
+                for broken in ({"tracks": {**record["tracks"], "aiData": {**record["tracks"]["aiData"], "notRunReason": ""}}},
+                               {"fixedSources": {**record["fixedSources"], "SBA": {"status": "NOT_RUN", "urls": []}}},
+                               {"reverificationSkipped": ""}):
+                    record_path.write_text(json.dumps({**record, **broken}, ensure_ascii=False), encoding="utf-8")
+                    self.assertNotEqual(self.validate(root)[1].returncode, 0, broken)
+
 
 if __name__ == "__main__":
     unittest.main()

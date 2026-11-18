@@ -44,6 +44,7 @@ python scripts/daily_run.py all
 - 새로 올린 공고 수
 - 분야별 접수 중 건수(`openContestsByCategory`: 개발·AI, 아이디어, 기타)
 - 실패한 기록과 그 사유
+- 오늘 돌리지 않은 단계(`notRun`). 매일 돌리지 않는 찾기 채팅과 재확인이 여기 나오며 실패가 아니다. 실패(`failedRecords`)는 돌린 채팅이 답을 주지 않은 기록만이다.
 
 데이터를 손으로 고치지 않는다. 실패하면 원인을 `docs/system/findings.md`에 적는다.
 

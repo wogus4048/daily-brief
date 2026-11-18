@@ -94,12 +94,16 @@ for track_id, rule in TRACKS.items():
     track = tracks.get(track_id)
     assert isinstance(track, dict), f"research audit missing track {track_id}"
     status = track.get("status")
-    assert status in ("DONE", "EXHAUSTED", "FAILED"), f"{track_id}.status must be DONE, EXHAUSTED or FAILED"
+    assert status in ("DONE", "EXHAUSTED", "FAILED", "NOT_RUN"), (
+        f"{track_id}.status must be DONE, EXHAUSTED, FAILED or NOT_RUN"
+    )
     # A search the GPT worker did not report is recorded, not invented (design 2026-11-09, user decision 2).
-    failed_track = status == "FAILED"
+    # NOT_RUN: the chat that searches this track was not started that day (2026-11-18).
+    failed_track = status in ("FAILED", "NOT_RUN")
     if failed_track:
-        reason = track.get("failureReason")
-        assert isinstance(reason, str) and reason.strip(), f"{track_id} FAILED requires failureReason"
+        field = "failureReason" if status == "FAILED" else "notRunReason"
+        reason = track.get(field)
+        assert isinstance(reason, str) and reason.strip(), f"{track_id} {status} requires {field}"
 
     queries_by_axis = track.get("queriesByAxis")
     assert isinstance(queries_by_axis, dict), f"{track_id}.queriesByAxis must be an object"
@@ -170,12 +174,12 @@ for source in REQUIRED_SOURCES:
     evidence = sources.get(source)
     assert isinstance(evidence, dict), f"missing fixed-source evidence for {source}"
     status = evidence.get("status")
-    assert status in ("CHECKED", "FAILED"), f"{source}.status must be CHECKED or FAILED"
+    assert status in ("CHECKED", "FAILED", "NOT_RUN"), f"{source}.status must be CHECKED, FAILED or NOT_RUN"
     urls = evidence.get("urls")
-    assert isinstance(urls, list) and (urls or status == "FAILED"), f"{source} must record at least one checked URL"
-    if status == "FAILED":
+    assert isinstance(urls, list) and (urls or status != "CHECKED"), f"{source} must record at least one checked URL"
+    if status != "CHECKED":
         reason = evidence.get("reason")
-        assert isinstance(reason, str) and reason.strip(), f"{source} FAILED requires reason"
+        assert isinstance(reason, str) and reason.strip(), f"{source} {status} requires reason"
 
 dacon = sources["DACON"]
 assert dacon.get("status") == "CHECKED", "DACON must be CHECKED using the Playwright source cache"
@@ -249,12 +253,12 @@ for district in ("nowon", "dobong", "gangbuk"):
     evidence = districts.get(district)
     assert isinstance(evidence, dict), f"missing district evidence for {district}"
     status = evidence.get("status")
-    assert status in ("CHECKED", "FAILED"), f"{district}.status must be CHECKED or FAILED"
+    assert status in ("CHECKED", "FAILED", "NOT_RUN"), f"{district}.status must be CHECKED, FAILED or NOT_RUN"
     urls = evidence.get("urls")
-    assert isinstance(urls, list) and (urls or status == "FAILED"), f"{district} must record at least one checked URL"
-    if status == "FAILED":
+    assert isinstance(urls, list) and (urls or status != "CHECKED"), f"{district} must record at least one checked URL"
+    if status != "CHECKED":
         reason = evidence.get("reason")
-        assert isinstance(reason, str) and reason.strip(), f"{district} FAILED requires reason"
+        assert isinstance(reason, str) and reason.strip(), f"{district} {status} requires reason"
 
 published_ids = audit.get("publishedIds")
 assert isinstance(published_ids, list), "research audit publishedIds must be a list"
@@ -512,9 +516,15 @@ if baseline is not None:
     overlap = reverified_set & failed_ids
     assert not overlap, f"ids cannot be both reverified and failed: {sorted(overlap)}"
 
+    # Re-verification can be left out of a run by decision (user 2026-11-09); the audit then says why,
+    # and no item may claim to have been re-verified or to have failed it.
+    skipped = audit.get("reverificationSkipped")
+    if skipped is not None:
+        assert isinstance(skipped, str) and skipped.strip(), "reverificationSkipped must give the reason"
+        assert not reverified_set and not failed_ids, "a skipped re-verification cannot list reverified or failed ids"
     # An item that could not be opened today keeps its old verification date
     # and its recorded reason; one blocked page must not stop the whole brief.
-    missing = effective_due - reverified_set - failed_ids
+    missing = set() if skipped else effective_due - reverified_set - failed_ids
     assert not missing, (
         f"research audit did not re-verify due OPEN/UPCOMING ids: {sorted(missing)}; "
         f"recorded failures={sorted(failed_ids)}"
@@ -522,7 +532,7 @@ if baseline is not None:
 
     stale = [
         item_id
-        for item_id in effective_due - failed_ids
+        for item_id in (set() if skipped else effective_due - failed_ids)
         if current_by_id.get(item_id, {}).get("lastVerifiedDate") != snapshot_date
     ]
     assert not stale, f"due reverified items must set lastVerifiedDate to snapshot date: {sorted(stale)}"

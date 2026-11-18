@@ -11,7 +11,7 @@ import re
 from datetime import date
 from urllib.parse import urlsplit
 
-from gpt_jobs import DISTRICTS, FIXED_SOURCES, TRACK_AXES, clean_title, now_iso, similarity
+from gpt_jobs import DISTRICTS, FIXED_CHAT, FIXED_SOURCES, TRACK_AXES, TRACK_CHAT, clean_title, now_iso, similarity
 from research_rules import deadline_info, normalize_url
 
 OPPORTUNITY_TRACKS = ("aiData", "generalSoftware", "publicIdea", "startupSupport", "upcomingOpenings")
@@ -77,13 +77,19 @@ def opportunity_card(raw, candidate, official, today, taken):
     return group, card
 
 
-def record(rows, kind, key_field, names, label):
-    """fixedSources/districts: GPT's line for each name, or FAILED when it sent none."""
+def not_run(chat):
+    return {"status": "NOT_RUN", "reason": f"오늘 돌리지 않은 채팅({chat})"}
+
+
+def record(rows, kind, key_field, names, label, ran):
+    """fixedSources/districts: GPT's line for each name, FAILED when it sent none, NOT_RUN when its chat did not run."""
     got = {r.get(key_field): r for r in rows if r.get("kind") == kind}
     out = {}
     for name in names:
         row = got.get(name)
-        if row and row.get("status") in ("CHECKED", "FAILED"):
+        if not ran:
+            entry = {**not_run(FIXED_CHAT), "urls": []}
+        elif row and row.get("status") in ("CHECKED", "FAILED"):
             urls = [u for u in row.get("urls") or [] if valid_url(u)]
             entry = {"status": row["status"] if urls else "FAILED", "urls": urls,
                      "coverageNote": str(row.get("note") or "")}
@@ -115,6 +121,10 @@ def assemble(root, today):
     latest = json.loads((root / "data/latest.json").read_text(encoding="utf-8"))
     cache = json.loads((root / f"data/source-cache/{today}.json").read_text(encoding="utf-8"))
     find_rows = state.get("find", {}).get("rows", [])
+    # Chats started today, whatever their outcome. A state written before jobs were recorded
+    # counts every chat as run, so nothing missing is hidden.
+    jobs = state.get("find", {}).get("jobs")
+    ran = (lambda chat: True) if jobs is None else (lambda chat, names={j.get("name") for j in jobs}: chat in names)
     candidates = state.get("candidates", [])
     decided = state.get("decided", [])
     check = state.get("check", {}).get("answers", {})
@@ -127,7 +137,8 @@ def assemble(root, today):
 
     # 1. Re-verification of existing items.
     reverified, evidence, failures = [], [], []
-    for position, item_id in enumerate(due):
+    skipped = reverify.get("skipped")  # user decision 2026-11-09: not run, so no item failed it
+    for position, item_id in enumerate([] if skipped else due):
         item = by_id[item_id]
         answer = reverify.get("answers", {}).get(str(position))
         stored = first_link(item) or "https://example.invalid/"
@@ -217,7 +228,9 @@ def assemble(root, today):
                 queries[row["axis"]] += [q for q in row.get("queries") or [] if isinstance(q, str) and q.strip()]
         thin = [axis for axis, qs in queries.items() if len({q.lower().strip() for q in qs}) < 2]
         entries = track_entries[track]
-        if thin:
+        if not ran(TRACK_CHAT[track]):
+            status = {"status": "NOT_RUN", "notRunReason": not_run(TRACK_CHAT[track])["reason"]}
+        elif thin:
             status = {"status": "FAILED", "failureReason": f"GPT가 검색어 2개 이상을 적지 않은 축: {', '.join(thin)}"}
         elif len(entries) < MIN_CANDIDATES.get(track, 0):
             status = {"status": "EXHAUSTED",
@@ -227,11 +240,11 @@ def assemble(root, today):
         tracks[track] = {**status, "queriesByAxis": queries, "rawCandidates": entries}
 
     # 6. Fixed sources, districts, annual contests, new listing pages.
-    fixed = record(find_rows, "fixedSource", "name", list(FIXED_SOURCES), "고정 출처")
+    fixed = record(find_rows, "fixedSource", "name", list(FIXED_SOURCES), "고정 출처", ran(FIXED_CHAT))
     fixed["DACON"] = {"status": "CHECKED", "urls": ["https://www.dacon.io/competitions", "https://daker.ai/public/hackathons"],
                       "coverageNote": "Playwright 크롤러 캐시로 DACON과 DAKER 목록을 읽었다.",
                       "competitionsInventory": inventories["daconCompetitions"], "dakerInventory": inventories["dakerHackathons"]}
-    districts = record(find_rows, "district", "key", list(DISTRICTS), "구청")
+    districts = record(find_rows, "district", "key", list(DISTRICTS), "구청", ran(FIXED_CHAT))
     annual = [r for r in find_rows if r.get("kind") == "annual"]
     discoveries = [{"url": r["url"], "listUrl": r["url"], "name": r.get("name") or r["url"],
                     "reason": r.get("reason") or "GPT worker가 찾은 목록 페이지"}
@@ -254,20 +267,24 @@ def assemble(root, today):
     published = [c["id"] for g in ("contests", "support") for c in new_cards[g]]
     failed_parts = [f"{name}: {e['reason']}" for name, e in {**fixed, **districts}.items() if e["status"] == "FAILED"]
     failed_parts += [f"{t}: {v['failureReason']}" for t, v in tracks.items() if v["status"] == "FAILED"]
+    not_run_parts = sorted({c for c in (*TRACK_CHAT.values(), FIXED_CHAT) if not ran(c)}) + (["reverify"] if skipped else [])
     audit = {
         "date": today, "completedAt": stamp, "status": "COMPLETE",
         "sourceDiscoveries": discoveries, "tracks": tracks, "fixedSources": fixed,
         "machineSources": machine, "districts": districts, "annualContests": annual,
         "reverifiedIds": reverified, "reverificationEvidence": evidence, "reverificationFailures": failures,
+        **({"reverificationSkipped": skipped} if skipped else {}),
         "publishedIds": published, "sourceGaps": failed_parts,
         "researchLimitations": [
             "찾기와 카드 작성은 GPT worker가 했고 사람이 보지 않았다. 새 공고는 주최 측 페이지를 열어 확인하지 않았고, 기존 공고 재확인도 하지 않았다(사용자 결정 2026-11-09).",
             f"주최 측 확인 전으로 올린 공고 {sum(1 for g in new_cards.values() for c in g if c.get('officialCheck'))}건.",
             f"GPT 기록이 비어 FAILED로 남긴 칸 {len(failed_parts)}개.",
+            f"오늘 돌리지 않아 NOT_RUN으로 남긴 단계: {', '.join(not_run_parts) or '없음'}.",
         ],
     }
     (root / f"data/research/{today}.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return {"openContestsByCategory": open_by_category(latest),
             "newContests": len(new_cards["contests"]), "newSupport": len(new_cards["support"]),
             "reverified": len(reverified), "reverifyFailed": len(failures), "failedRecords": failed_parts,
+            "notRun": not_run_parts,
             "pendingOfficial": sum(1 for g in new_cards.values() for c in g if c.get("officialCheck"))}
